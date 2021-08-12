@@ -1,7 +1,7 @@
 from unittest import TestCase
 from unittest.mock import MagicMock, patch, ANY
 
-from dsm.data import (
+from dsm.core import (
     document_files,
     sps_package,
 )
@@ -17,7 +17,7 @@ class MockArticle:
 
 class Test_get_xml_to_zip(TestCase):
 
-    @patch("dsm.data.document_files.requests.requests_get_content")
+    @patch("dsm.core.document_files.requests.requests_get_content")
     def test__get_xml_to_zip(self, mock_get):
         with open("./tests/fixtures/document2.xml") as fp:
             mock_get.return_value = fp.read()
@@ -42,7 +42,7 @@ class Test_get_xml_to_zip(TestCase):
 
 class Test_get_assets_to_zip(TestCase):
 
-    @patch("dsm.data.document_files.requests.requests_get_content")
+    @patch("dsm.core.document_files.requests.requests_get_content")
     def test__get_assets_to_zip(self, mock_get):
         with open("./tests/fixtures/document2.xml") as fp:
             mock_get.return_value = fp.read()
@@ -68,7 +68,7 @@ class Test_get_assets_to_zip(TestCase):
 
 class Test_get_renditions_to_zip(TestCase):
 
-    @patch("dsm.data.document_files.requests.requests_get_content")
+    @patch("dsm.core.document_files.requests.requests_get_content")
     def test__get_renditions_to_zip(self, mock_get):
         with open("./tests/fixtures/document2.xml") as fp:
             mock_get.return_value = fp.read()
@@ -97,7 +97,7 @@ class Test_get_renditions_to_zip(TestCase):
 
 class Test_zip_files(TestCase):
 
-    @patch("dsm.data.document_files.requests.requests_get_content")
+    @patch("dsm.core.document_files.requests.requests_get_content")
     def test__zip_files(self, mock_get):
         xml_sps = sps_package.SPS_Package("./tests/fixtures/document2.xml")
         uris_and_filenames = [
@@ -138,7 +138,7 @@ class Test_register_file(TestCase):
             'document.xml',
         )
 
-    @patch("dsm.data.document_files.ZipFile")
+    @patch("dsm.core.document_files.ZipFile")
     def test__register_file_from_zipfile(self, mock_zipfile):
         mock_files_storage = MagicMock()
         mock_files_storage.register = MagicMock()
