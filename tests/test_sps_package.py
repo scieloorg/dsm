@@ -1,5 +1,5 @@
 
-from dsm.data.sps_package import (
+from dsm.core.sps_package import (
     NotAllowedtoChangeAttributeValueError,
     SPS_Package,
     Identity,
