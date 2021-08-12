@@ -6,6 +6,11 @@ with open(os.path.join(here, "README.md")) as f:
     README = f.read()
 
 requires = [
+    'scielo_v3_manager',
+    'opac_schema',
+    'sqlalchemy',
+    'psycopg2-binary~=2.8',
+    'requests',
 ]
 
 tests_require = [
