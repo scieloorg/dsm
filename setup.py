@@ -11,6 +11,7 @@ requires = [
     'sqlalchemy',
     'psycopg2-binary~=2.8',
     'requests',
+    'picles.plumber',
 ]
 
 tests_require = [
