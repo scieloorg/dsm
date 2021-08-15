@@ -178,7 +178,7 @@ class DocsManager:
         )
 
         # salva o documento
-        db.save_data(data)
+        db.save_data(document)
 
         return document._id
 
