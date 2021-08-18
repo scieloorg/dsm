@@ -49,6 +49,20 @@ def migrate_title_id(id_file_path):
             raise
 
 
+def migrate_issue_id(id_file_path):
+    _migration_manager.db_connect()
+
+    for _id, records in id2json.get_json_records(
+            id_file_path, id2json.issue_id):
+        try:
+            if _migration_manager.register_issue(_id, records[0]):
+                _migration_manager.migrate_issue(_id)
+        except:
+            print(_id)
+            print(f"Algum problema com {_id}")
+            raise
+
+
 def create_id_file_path(db_file_path, id_file_path):
     dirname = os.path.dirname(id_file_path)
     if not os.path.isdir(dirname):
@@ -79,6 +93,15 @@ def main():
         help="Path of ID file that will be migrated"
     )
 
+    migrate_issue_parser = subparsers.add_parser(
+        "migrate_issue",
+        help="Migrate ISIS DB to MongoDB")
+    migrate_issue_parser.add_argument(
+        "id_file_path",
+        # metavar="file",
+        help="Path of ID file that will be migrated"
+    )
+
     migrate_artigo_parser = subparsers.add_parser(
         "migrate_artigo",
         help="Migrate ISIS DB to MongoDB",
@@ -95,6 +118,8 @@ def main():
         migrate_artigo_id(args.id_file_path)
     elif args.command == "migrate_title":
         migrate_title_id(args.id_file_path)
+    elif args.command == "migrate_issue":
+        migrate_issue_id(args.id_file_path)
     else:
         parser.print_help()
 

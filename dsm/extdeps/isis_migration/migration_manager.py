@@ -277,13 +277,9 @@ def _migrate_journal_data(journal, migrated_journal):
     # journal.timeline = migrated_journal.attr
     # EmbeddedDocumentListField(Timeline)
 
-    # TODO
-    # journal.subject_categories = migrated_journal.attr
-    # ListField(field=StringField())
+    journal.subject_categories = migrated_journal.subject_categories
 
-    # TODO
-    # journal.study_areas = migrated_journal.attr
-    # ListField(field=StringField())
+    journal.study_areas = migrated_journal.study_areas
 
     # TODO
     # journal.social_networks = migrated_journal.attr
@@ -292,12 +288,10 @@ def _migrate_journal_data(journal, migrated_journal):
     journal.title = migrated_journal.title
 
     journal.title_iso = migrated_journal.iso_abbreviated_title
+
+    # TODO verificar conteúdo
     journal.next_title = migrated_journal.new_title
     journal.short_title = migrated_journal.abbreviated_title
-
-    # TODO
-    # journal.title_slug = migrated_journal.attr
-    # StringField()
 
     journal.acronym = migrated_journal.acronym
 
@@ -305,104 +299,50 @@ def _migrate_journal_data(journal, migrated_journal):
     journal.print_issn = migrated_journal.print_issn
     journal.eletronic_issn = migrated_journal.electronic_issn
 
-    # TODO
-    # journal.subject_descriptors = migrated_journal.attr
-    # ListField(field=StringField())
+    journal.subject_descriptors = migrated_journal.subject_descriptors
+    journal.copyrighter = migrated_journal.copyright_holder
+    journal.online_submission_url = migrated_journal.online_submission_url
 
-    # https://scielo.readthedocs.io/projects/scielo-pc-programs/en/latest/titlemanager_title.html#journal-form
-
-    # TODO
-    # journal.copyrighter = migrated_journal.attr
-    # StringField()
-
-    # TODO
-    # journal.online_submission_url = migrated_journal.attr
-    # StringField()
-
-    # TODO
+    # ausente na base isis
+    # journal.title_slug = migrated_journal.attr
     # journal.logo_url = migrated_journal.attr
-    # StringField()
 
     # TODO
-    # journal.previous_journal_ref = migrated_journal.attr
-    # StringField()
+    # journal.current_status = migrated_journal.current_status
+    journal.editor_email = migrated_journal.email
 
-    # TODO
-    # journal.other_titles = migrated_journal.attr
-    # EmbeddedDocumentListField(OtherTitle)
+    journal.index_at = migrated_journal.index_at
 
-    # TODO
-    # journal.publisher_name = migrated_journal.attr
-    # StringField()
+    journal.is_public = migrated_journal.publication_status == 'C'
 
-    # TODO
-    # journal.publisher_country = migrated_journal.attr
-    # StringField()
+    journal.mission = [
+        db.models.Mission(**{"language": lang, "description": text})
+        for lang, text in migrated_journal.mission.items()
+    ]
 
-    # TODO
-    # journal.publisher_state = migrated_journal.attr
-    # StringField()
+    # TODO EmbeddedDocumentListField(OtherTitle)
+    # nao usa no site?
+    # journal.other_titles = migrated_journal.other_titles
 
-    # TODO
-    # journal.publisher_city = migrated_journal.attr
-    # StringField()
+    # TODO ID or title
+    #journal.previous_journal_ref = migrated_journal.previous_journal_title
 
-    # TODO
-    # journal.publisher_address = migrated_journal.attr
-    # StringField()
+    journal.publisher_address = migrated_journal.publisher_address
+    journal.publisher_city = migrated_journal.publisher_city
+    journal.publisher_state = migrated_journal.publisher_state
+    journal.publisher_country = migrated_journal.publisher_country
 
-    # TODO
-    # journal.publisher_telephone = migrated_journal.attr
-    # StringField()
+    # TODO ver na base de dados do site
+    journal.publisher_name = migrated_journal.get_publisher_names()
 
-    # TODO
-    # journal.current_status = migrated_journal.attr
-    # StringField()
+    # journal.scimago_id = migrated_journal.scimago_id
 
-    # TODO
-    # journal.editor_email = migrated_journal.attr
-    # StringField()
+    journal.sponsors = migrated_journal.sponsors
 
-    # TODO
-    # journal.enable_contact = migrated_journal.attr
-    # BooleanField(default=False)
+    journal.study_areas = migrated_journal.study_areas
 
-    # TODO
-    # journal.mission = migrated_journal.attr
-    # EmbeddedDocumentListField(Mission)
+    # journal.timeline = migrated_journal.timeline
 
-    # TODO
-    # journal.index_at = migrated_journal.attr
-    # ListField(field=StringField())
+    journal.unpublish_reason = migrated_journal.unpublish_reason
 
-    # TODO
-    # journal.sponsors = migrated_journal.attr
-    # ListField(field=StringField())
-
-    # TODO
-    # journal.issue_count = migrated_journal.attr
-    # IntField()
-
-    # TODO
-    # journal.last_issue = migrated_journal.attr
-    # EmbeddedDocumentField(LastIssue)
-
-    # TODO
-    # journal.is_public = migrated_journal.attr
-    # BooleanField(required=True, default=True)
-
-    # TODO
-    # journal.unpublish_reason = migrated_journal.attr
-    # StringField()
-
-    # TODO
-    # journal.url_segment = migrated_journal.attr
-    # StringField()
-
-    # TODO
-    # journal.metrics = migrated_journal.attr
-    # EmbeddedDocumentField(JounalMetrics)
-
-    # TODO
-    # journal.scimago_id = migrated_journal.attr
-    # StringField()
+    # journal.url_segment = migrated_journal.url_segment

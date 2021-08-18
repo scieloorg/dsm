@@ -1,14 +1,31 @@
 """
+Module converts file.id in
+
+```
 !ID 000001
 !v002!1414-431X-bjmbr-1414-431X20165409.xml
-!v004!v49n8
-!v091!20190319
-!v092!1010
-!v093!20190319
-!v700!1
-!v701!1
-!v702!bjmbr/v49n8/1414-431X-bjmbr-1414-431X20165409.xml
-!v703!39
+!v012!New record of Blepharicnema splendens^len
+!v049!^cAA970^lpt^tBiodiversidade e Conservação
+!v049!^cAA970^len^tBiodiversity and Conservation
+```
+
+to JSON
+
+```
+[
+   "v002": [
+       {"_": "1414-431X-bjmbr-1414-431X20165409.xml"}
+   ],
+   "v012": [
+       {"_": "New record of Blepharicnema splendens", "l": "en"}
+   ],
+   "v049": [
+       {"c": "AA970", "l": "pt", "t": "Biodiversidade e Conservação"},
+       {"c": "AA970", "l": "en", "t": "Biodiversity and Conservation"},
+   ]
+]
+```
+
 """
 import json
 import os
@@ -109,10 +126,19 @@ def issue_id(data):
 
 
 def article_id(data):
+    record_type = _get_value(data, 'v706')
+    if record_type == "i":
+        return issue_id(data)
     try:
         return _get_value(data, 'v880')[:23]
     except (TypeError, IndexError, KeyError):
-        return issue_id(data)
+        return "".join([
+            "S",
+            _get_value(data, 'v035'),
+            _get_value(data, 'v036')[:4],
+            _get_value(data, 'v036')[4:].zfill(4),
+            _get_value(data, 'v121').zfill(5),
+        ])
 
 
 def _journal_filename(_id):
@@ -197,27 +223,5 @@ def save_json_files(records, output_file_path, get_file_path_function):
 
 def id2json_file(input_file_path, output_file_path, get_id_function,
                  get_file_path_function):
-    for records in get_json_docs(input_file_path, get_id_function):
+    for records in get_json_records(input_file_path, get_id_function):
         save_json_files(records, output_file_path, get_file_path_function)
-
-
-# def create_json(input_file_path, output_file_path, get_filename):
-#     content = files.read_file(input_file_path, encoding='iso-8859-1')
-
-#     records = []
-#     prev_filename = "", ""
-#     for record_content in ("\n" + content).split("\n!ID "):
-#         try:
-#             fields = _get_fields_and_their_content(record_content)
-#             data = _build_record(fields)
-#             if not data:
-#                 continue
-#             records.append(data)
-
-#             curr_filename = get_filename(data)
-#             records = _save_records(
-#                 records, curr_filename, prev_filename, output_file_path)
-#             prev_filename = curr_filename
-#         except:
-#             print(record_content)
-#             raise
