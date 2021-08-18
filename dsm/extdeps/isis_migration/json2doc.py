@@ -40,7 +40,10 @@ def _get_items(data, tag):
 
 
 class Document:
-
+    """
+    Interface amigável para obter os dados da base isis
+    que estão no formato JSON
+    """
     def __init__(self, _id, records):
         self._id = _id
         self._records = records
@@ -54,8 +57,8 @@ class Document:
     def _get_article_meta_items_(self, tag, formatted=False):
         if formatted:
             # record = f
-            return _get_items(self._records[2], tag)
-        return _get_items(self._records[1], tag)
+            return list(_get_items(self._records[2], tag))
+        return list(_get_items(self._records[1], tag))
 
     @property
     def records(self):
@@ -261,8 +264,9 @@ def complete_uri(text, website_url):
 
 
 class Journal:
-
     """
+    Interface amigável para obter os dados da base isis
+    que estão no formato JSON
     """
     def __init__(self, _id, record):
         self._id = _id
@@ -270,7 +274,7 @@ class Journal:
         self._issns = get_issns(self._record) or {}
 
     def _get_items_(self, tag):
-        return _get_items(self._record, tag)
+        return list(_get_items(self._record, tag))
 
     def _get_item_(self, tag):
         return _get_value(self._record, tag)
@@ -281,7 +285,6 @@ class Journal:
 
     @property
     def acronym(self):
-        # TODO
         return self._get_item_("v068").lower()
 
     @property
@@ -341,9 +344,104 @@ class Journal:
     def isis_updated_date(self):
         return self._get_item_("v941")
 
+    @property
+    def subject_descriptors(self):
+        return self._get_items_("v440")
+
+    @property
+    def subject_categories(self):
+        return self._get_items_("v854")
+
+    @property
+    def study_areas(self):
+        return self._get_items_("v441")
+
+    @property
+    def copyright_holder(self):
+        return self._get_item_("v062")
+
+    @property
+    def online_submission_url(self):
+        return self._get_item_("v692")
+
+    @property
+    def other_titles(self):
+        return self._get_item_("v240")
+
+    @property
+    def publisher_country(self):
+        return self._get_item_("v310")
+
+    @property
+    def publisher_address(self):
+        return self._get_item_("v063")
+
+    @property
+    def publication_status(self):
+        return self._get_item_("v050")
+
+    @property
+    def email(self):
+        return self._get_item_("v064")
+
+    @property
+    def mission(self):
+        return {
+            m['l']: m['_']
+            for m in self._get_items_("v901")
+        }
+
+    @property
+    def index_at(self):
+        # ListField(field=StringField())
+        return self._get_items_("v450")
+
+    @property
+    def sponsors(self):
+        return self._get_items_("v140")
+
+    @property
+    def status_history(self):
+        """
+        subfield a: initial date, ISO format
+        subfield b: status which value is C
+        subfield c: final date, ISO format
+        subfield d: status which value is D or S
+        """
+        for item in self._get_items_("v051"):
+            if item.get("a"):
+                yield {
+                    "date": item.get("a"),
+                    "status": item.get("b"),
+                }
+            if item.get("c"):
+                yield {
+                    "date": item.get("c"),
+                    "status": item.get("d"),
+                    "reason": item.get("e"),
+                }
+
+    @property
+    def current_status(self):
+        _hist = sorted([
+            (item.get("date"), item.get("status"))
+            for item in self.status_history
+        ])
+        return _hist[-1][1]
+
+    @property
+    def unpublish_reason(self):
+        _hist = sorted([
+            (item.get("date"), item.get("status"))
+            for item in self.status_history
+        ])
+        return _hist[-1][1] if _hist[-1][1] != 'C' else None
+
 
 class Issue:
     """
+    Interface amigável para obter os dados da base isis
+    que estão no formato JSON
     """
     def __init__(self, _id, record):
         self._id = _id
@@ -355,7 +453,7 @@ class Issue:
         return self._record
 
     def _get_items_(self, tag):
-        return _get_items(self._record, tag)
+        return list(_get_items(self._record, tag))
 
     def _get_item_(self, tag):
         return _get_value(self._record, tag)
