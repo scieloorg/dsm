@@ -178,7 +178,7 @@ class DocsManager:
         )
 
         # salva o documento
-        db.save_data(data)
+        db.save_data(document)
 
         return document._id
 
@@ -236,7 +236,8 @@ def add_other_pids(article, other_pids):
         article.scielo_pids.update(
             {
                 "other":
-                list(set(list(article.scielo_pids) + list(other_pids)))
+                list(set(list(article.scielo_pids.get("other") or []) +
+                     list(other_pids)))
             }
         )
 

@@ -32,3 +32,7 @@ class ReceivedPackageRegistrationError(Exception):
 
 class FilesStorageRegisterError(Exception):
     ...
+
+
+class DBFetchMigratedDocError(Exception):
+    ...

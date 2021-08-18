@@ -7,7 +7,6 @@ from minio import Minio
 from minio.error import ResponseError, NoSuchBucket
 
 from dsm.utils import files
-from dsm import config
 
 logger = logging.getLogger(__name__)
 
@@ -15,7 +14,8 @@ logger = logging.getLogger(__name__)
 class MinioStorage:
     def __init__(
         self, minio_host, minio_access_key, minio_secret_key,
-        minio_secure=True, minio_http_client=None
+        scielo_collection,
+        minio_secure=True, minio_http_client=None,
     ):
 
         self.bucket_name = "documentstore"
@@ -73,7 +73,7 @@ class MinioStorage:
     def _create_bucket(self):
         # Make a bucket with the make_bucket API call.
         self._client.make_bucket(
-            self.bucket_name, location=config.get("SCIELO_COLLECTION")
+            self.bucket_name, location=self.scielo_collection
         )
         self._set_public_bucket()
 
