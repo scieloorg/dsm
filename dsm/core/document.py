@@ -10,10 +10,7 @@ from dsm.utils import packages
 from dsm.core.sps_package import SPS_Package
 from dsm.core import document_files as docfiles
 
-from dsm.extdeps.doc_ids_manager import (
-    add_pids_to_xml,
-    add_scielo_pid_v2,
-)
+from dsm.extdeps.doc_ids_manager import add_pids_to_xml
 from dsm.extdeps import db
 from dsm import exceptions
 
