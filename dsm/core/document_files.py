@@ -387,7 +387,7 @@ def register_received_package(files_storage, pkg_path):
         ]
         zip_path = create_zip_file(zip_content, zip_name)
     if zip_path:
-        files_storage_folder = os.path.join(name, files.date_now_as_name())
+        files_storage_folder = os.path.join(name, files.date_now_as_folder_name())
         uri_and_name = files_storage_register(
             files_storage,
             files_storage_folder,
