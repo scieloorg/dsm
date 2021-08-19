@@ -39,7 +39,7 @@ def download_package(v3):
     return _docs_manager.get_zip_document_package(v3)
 
 
-def upload_package(source, pid_v2_items=None, old_filenames=None,
+def upload_package(source, pid_v2_items={}, old_filenames={},
                    issue_id=None):
     """
     Receive the package which is a folder or zip file
