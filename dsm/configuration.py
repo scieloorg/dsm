@@ -8,8 +8,8 @@ MINIO_SCIELO_COLLECTION = os.environ.get("MINIO_SCIELO_COLLECTION")
 MINIO_HOST = os.environ.get("MINIO_HOST")
 MINIO_ACCESS_KEY = os.environ.get("MINIO_ACCESS_KEY")
 MINIO_SECRET_KEY = os.environ.get("MINIO_SECRET_KEY")
-MINIO_SECURE = os.environ.get("MINIO_SECURE")
 MINIO_TIMEOUT = os.environ.get("MINIO_TIMEOUT")
+MINIO_SECURE = True if os.environ.get("MINIO_SECURE", "").lower() == 'true' else False
 
 # postgresql+psycopg2://user:password@uri:5432/pid_manager
 PID_DATABASE_DSN = os.environ.get("PID_DATABASE_DSN")
