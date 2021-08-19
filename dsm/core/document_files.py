@@ -323,7 +323,7 @@ def register_assets(files_storage, files_storage_folder,
                 doc_package.zip_file_path,
             )
             asset_in_xml.xlink_href = uri_and_name["uri"]
-        except FilesStorageRegisterError as e:
+        except exceptions.FilesStorageRegisterError as e:
             errors.append({"error": str(e)})
     return errors
 
