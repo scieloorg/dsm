@@ -203,7 +203,7 @@ def create_remote_and_local_file(local, remote, annotation=None):
             file["uri"] = remote
         if annotation:
             file["annotation"] = annotation
-        return models.RemoteAndLocalFile(**file)
+        return v2_models.RemoteAndLocalFile(**file)
     except Exception as e:
         raise exceptions.RemoteAndLocalFileError(
             "Unable to create RemoteAndLocalFile(%s, %s): %s" %
