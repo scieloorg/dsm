@@ -4,7 +4,7 @@ import os
 import json
 
 from minio import Minio
-from minio.error import ResponseError, NoSuchBucket
+from minio.error import S3Error
 
 from dsm.utils import files
 
