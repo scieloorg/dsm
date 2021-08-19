@@ -4,7 +4,7 @@ import os
 import json
 
 from minio import Minio
-from minio.error import ResponseError, NoSuchBucket
+from minio.error import S3Error
 
 from dsm.utils import files
 
@@ -116,10 +116,11 @@ class MinioStorage:
                 file_path=file_path,
             )
 
-        except NoSuchBucket as err:
+        except S3Error as err:
             logger.error(err)
-            self._create_bucket()
-            return self.register(file_path, prefix)
+            if err.code == "NoSuchBucket":
+                self._create_bucket()
+                return self.register(file_path, prefix)
 
         return self.get_urls(object_name)
 

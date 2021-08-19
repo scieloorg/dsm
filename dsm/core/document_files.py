@@ -360,7 +360,7 @@ def files_storage_register(files_storage, files_storage_folder,
         return {"uri": uri, "name": filename}
 
     except:
-        raise exception.FilesStorageRegisterError(
+        raise exceptions.FilesStorageRegisterError(
             f"Unable to register {file_path}"
         )
 
@@ -381,13 +381,13 @@ def register_received_package(files_storage, pkg_path):
         name, ext = os.path.splitext(basename)
     elif files.is_folder(pkg_path):
         zip_name = basename + ".zip"
-        files = [
+        zip_content = [
             os.path.join(pkg_path, f)
             for f in os.listdir(pkg_path)
         ]
-        zip_path = create_zip_file(files, zip_name)
+        zip_path = create_zip_file(zip_content, zip_name)
     if zip_path:
-        files_storage_folder = os.path.join(name, files.date_now_as_name())
+        files_storage_folder = os.path.join(name, files.date_now_as_folder_name())
         uri_and_name = files_storage_register(
             files_storage,
             files_storage_folder,
