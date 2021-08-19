@@ -194,7 +194,7 @@ def save_data(data):
         # exceptions.DBSaveDataError(e)
 
 
-def create_remote_and_local_file(local, remote, annotation=None):
+def create_remote_and_local_file(remote, local, annotation=None):
     try:
         file = {}
         if local:
@@ -207,7 +207,7 @@ def create_remote_and_local_file(local, remote, annotation=None):
     except Exception as e:
         raise exceptions.RemoteAndLocalFileError(
             "Unable to create RemoteAndLocalFile(%s, %s): %s" %
-            (local, remote, e)
+            (remote, local, e)
         )
 
 
