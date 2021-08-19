@@ -250,11 +250,11 @@ def _migrate_issue_data(issue, migrated_issue):
 
     # ID no site
     issue._id = get_bundle_id(
-        issue.journal,
+        issue.journal._id,
         issue.year,
         issue.volume,
         issue.number,
-        issue.suppl,
+        issue.suppl_text,
     )
 
 
