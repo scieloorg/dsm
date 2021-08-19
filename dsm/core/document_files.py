@@ -360,7 +360,7 @@ def files_storage_register(files_storage, files_storage_folder,
         return {"uri": uri, "name": filename}
 
     except:
-        raise exception.FilesStorageRegisterError(
+        raise exceptions.FilesStorageRegisterError(
             f"Unable to register {file_path}"
         )
 
