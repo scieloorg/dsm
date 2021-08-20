@@ -300,18 +300,23 @@ def set_languages(article, xml_sps):
 
 def set_article_titles(article, xml_sps):
     article.title = xml_sps.article_title
-    article.translated_titles = list(_get_translated_titles(xml_sps))
+    langs_and_titles = {
+        lang: title
+        for lang, title in xml_sps.article_titles.items()
+        if lang != xml_sps.lang
+    }
+    set_translate_titles(article, langs_and_titles)
 
 
 def set_article_sections(article, xml_sps):
     article.section = xml_sps.subject
-    article.trans_sections = list(_get_sections(xml_sps))
+    set_translated_sections(article, xml_sps.subjects)
 
 
 def set_article_abstracts(article, xml_sps):
     article.abstract = xml_sps.abstract
-    article.abstract_languages = list(_get_abstracts(xml_sps))
-    article.keywords = list(_get_keywords(xml_sps))
+    set_abstracts(article, xml_sps.abstracts)
+    set_keywords(article, xml_sps.keywords_groups)
 
 
 def set_article_publication_date(article, xml_sps):
@@ -326,75 +331,148 @@ def set_article_pages(article, xml_sps):
 
 
 def set_article_authors(article, xml_sps):
-    article.authors = _get_authors(xml_sps)
-    article.authors_meta = _get_authors_meta(xml_sps)
+    set_authors(article, xml_sps.authors)
+    set_authors_meta(article, xml_sps.authors)
 
 
-def _get_authors(xml_sps):
-    return [
-        "{}, {}".format(
-            a.get("surname") or '', a.get("given_names") or '')
-        for a in xml_sps.authors
+def set_authors(article, authors):
+    """
+    Update `opac_schema.v1.models.Article.authors`
+    with `authors`
+
+    Parameters
+    ----------
+    article: opac_schema.v1.models.Article
+    authors: dict which keys are ("surname", "given_names")
+    """
+    article.authors = [
+        f'{a.get("surname")}, {a.get("given_names")}'
+        for a in authors
     ]
 
 
-def _get_authors_meta(xml_sps):
-    return [
-        {
-            'name': "{}, {}".format(
-                a.get("surname") or '', a.get("given_names") or ''),
-            'orcid': a.get("orcid") or '',
-            'affiliation': a.get("aff")
-        }
-        for a in xml_sps.authors
-    ]
+def set_authors_meta(article, authors):
+    """
+    Update `opac_schema.v1.models.Article.authors_meta`
+    with `authors`
+
+    Parameters
+    ----------
+    article: opac_schema.v1.models.Article
+    authors: dict which keys are (
+        "surname", "given_names", "orcid", "affiliation", "suffix",
+    )
+    """
+    _authors = []
+    for a in authors:
+        if not a.get("orcid") and not a.get("affiliation"):
+            continue
+        author = {}
+        if a.get("orcid"):
+            author["orcid"] = a.get("orcid")
+        if a.get("aff"):
+            author["affiliation"] = a.get("aff")
+        if a.get("prefix"):
+            author["name"] = (
+                f'{a.get("surname")} {a.get("prefix")}, {a.get("given_names")}'
+            )
+        else:
+            author["name"] = (
+                f'{a.get("surname")}, {a.get("given_names")}'
+            )
+        _authors.append(models.AuthorMeta(**author))
+    article.authors_meta = _authors
 
 
-def _get_translated_titles(xml_sps):
+def set_translate_titles(article, langs_and_titles):
     """
-    Retorna somente os títulos traduzidos
+    Update `opac_schema.v1.models.Article.translated_titles`
+    with `langs_and_titles`
+
+    Parameters
+    ----------
+    article: opac_schema.v1.models.Article
+    langs_and_titles: dict
     """
-    for lang, title in xml_sps.article_titles.items():
-        if lang != xml_sps.lang:
-            yield models.TranslatedTitle(
+    translated_titles = []
+    for lang, title in langs_and_titles.items():
+        translated_titles.append(
+            models.TranslatedTitle(
                 **{
                     "name": title,
                     "language": lang,
                 }
             )
-
-
-def _get_sections(xml_sps):
-    """Recupera a lista de seções traduzidas a partir do document front"""
-    for lang, section in xml_sps.subjects.items():
-        yield models.TranslatedSection(
-            **{
-                "name": section,
-                "language": lang,
-            }
         )
+    article.translated_titles = translated_titles
 
 
-def _get_abstracts(xml_sps):
-    """Recupera todos os abstracts do artigo"""
-    for lang, abstr in xml_sps.items():
-        yield models.Abstract(
-            **{
-                "text": abstr,
-                "language": lang,
-            }
+def set_translated_sections(article, langs_and_sections):
+    """
+    Update `opac_schema.v1.models.Article.trans_sections`
+    with `langs_and_sections`
+
+    Parameters
+    ----------
+    article: opac_schema.v1.models.Article
+    langs_and_sections: dict
+    """
+    sections = []
+    for lang, section in langs_and_sections.items():
+        sections.append(
+            models.TranslatedSection(
+                **{
+                    "name": section,
+                    "language": lang,
+                }
+            )
         )
+    article.trans_sections = sections
 
 
-def _get_keywords(xml_sps):
-    """Retorna a lista de palavras chaves do artigo"""
-    for lang, kwds in xml_sps.keywords.items():
-        yield models.ArticleKeyword(
-            **{
-                "keywords": kwds,
-                "language": lang,
-            }
+def set_abstracts(article, langs_and_abstracts):
+    """
+    Update `opac_schema.v1.models.Article.abstracts` with `langs_and_abstracts`
+
+    Parameters
+    ----------
+    article: opac_schema.v1.models.Article
+    langs_and_abstracts: dict
+    """
+    abstracts = []
+    for lang, abstr in langs_and_abstracts.items():
+        abstracts.append(
+            models.Abstract(
+                **{
+                    "text": abstr,
+                    "language": lang,
+                }
+            )
         )
+    article.abstracts = abstracts
+    article.abstract_languages = list(langs_and_abstracts.keys())
+
+
+def set_keywords(article, langs_and_keywords):
+    """
+    Update `opac_schema.v1.models.Article.keywords` with `langs_and_keywords`
+
+    Parameters
+    ----------
+    article: opac_schema.v1.models.Article
+    langs_and_keywords: dict
+    """
+    keywords = []
+    for lang, kwds in langs_and_keywords.items():
+        keywords.append(
+            models.ArticleKeyword(
+                **{
+                    "keywords": kwds,
+                    "language": lang,
+                }
+            )
+        )
+    article.keywords = keywords
 
 
 def _get_order(xml_sps, document_order):
