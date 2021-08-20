@@ -1,5 +1,5 @@
 from datetime import datetime
-from mongoengine import connect
+from mongoengine import connect, Q
 from opac_schema.v1 import models
 from opac_schema.v2 import models as v2_models
 from dsm import exceptions
@@ -65,7 +65,6 @@ def convert_date(date):
     ]
 
     for template, func in formats:
-        print(template, date)
         try:
             _date = (
                 datetime.strptime(func(date.strip()), template).isoformat(
@@ -249,3 +248,24 @@ def register_document_package(v3, data):
     article_files.renditions = renditions
     save_data(article_files)
     return article_files
+
+
+def get_migrated_documents_by_date_range(
+        isis_updated_from=None, isis_updated_to=None):
+    if isis_updated_from and isis_updated_to:
+        return MigratedDoc.objects(
+            Q(isis_updated_date__gte=isis_updated_from) &
+            Q(isis_updated_date__lte=isis_updated_to)
+        )
+    if isis_updated_from:
+        return MigratedDoc.objects(
+            Q(isis_updated_date__gte=isis_updated_from)
+        )
+    if isis_updated_to:
+        return MigratedDoc.objects(
+            Q(isis_updated_date__lte=isis_updated_to)
+        )
+
+
+def get_migrated_documents_by_publication_year(year):
+    return MigratedDoc.objects(pub_year=year)
