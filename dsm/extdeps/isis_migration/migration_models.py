@@ -20,6 +20,7 @@ class MigratedDoc(Document):
     """
     _id = StringField(max_length=32, primary_key=True, required=True)
     doi = StringField()
+    pub_year = StringField()
 
     # datas no registro da base isis para identificar
     # se houve mudança durante a migração
@@ -39,6 +40,8 @@ class MigratedDoc(Document):
             'updated',
             'isis_updated_date',
             'doi',
+            'records',
+            'pub_year',
         ],
     }
 
