@@ -1,6 +1,15 @@
 from dsm.core.issue import get_bundle_id
+from dsm.core.document import (
+    set_translate_titles,
+    set_translated_sections,
+    set_abstracts,
+    set_keywords,
+    set_authors,
+    set_authors_meta,
+)
 from dsm.extdeps.isis_migration import json2doc
 from dsm.extdeps import db
+from scielo_v3_manager.v3_gen import generates
 
 
 class MigrationManager:
@@ -48,6 +57,8 @@ class MigrationManager:
         )
         migrated_document._id = doc._id
         migrated_document.doi = doc.doi
+        migrated_document.pub_year = doc.collection_pubdate[:4]
+
         migrated_document.isis_updated_date = doc.isis_updated_date
         migrated_document.isis_created_date = doc.isis_created_date
         migrated_document.records = doc.records
@@ -170,7 +181,7 @@ class MigrationManager:
 
         # interface mais amigável para obter os dados
         _migrated_issue = json2doc.Issue(
-            migrated_issue.id, migrated_issue.record)
+            migrated_issue._id, migrated_issue.record)
 
         # cria ou recupera o registro do website
         issue = db.fetch_issue(issue_id) or db.create_issue()
@@ -180,6 +191,203 @@ class MigrationManager:
 
         # salva os dados
         return db.save_data(issue)
+
+    def migrate_document(self, document_id):
+        """
+        Migrate isis document data to website
+
+        Parameters
+        ----------
+        document_id : str
+
+        Returns
+        -------
+        dict
+        """
+        # registro migrado formato json
+        migrated_document = db.fetch_migrated_document(document_id)
+
+        # interface mais amigável para obter os dados da base isis
+        # article
+        _migrated_document = json2doc.Document(
+            migrated_document._id, migrated_document.records)
+
+        # issue
+        migrated_issue = db.fetch_migrated_issue(
+            _migrated_document.issue_pid)
+        _migrated_issue = json2doc.Issue(
+            migrated_issue._id, migrated_issue.record)
+        _migrated_document.issue = _migrated_issue
+
+        # cria ou recupera o registro do website
+        document = db.fetch_document(document_id) or db.create_document()
+        bundle_id = get_bundle_id(
+            _migrated_document.journal_pid,
+            _migrated_document.collection_pubdate[:4],
+            _migrated_document.volume,
+            _migrated_document.number,
+            _migrated_document.suppl,
+        )
+
+        issue = db.fetch_issue(bundle_id) or db.create_issue()
+        # atualiza os dados
+        _migrate_document_data(document, _migrated_document, issue)
+
+        # salva os dados
+        return db.save_data(document)
+
+    def migrate_documents(self, pub_year, updated_from, updated_to):
+        """
+        Migrate isis document data to website
+
+        Parameters
+        ----------
+        pub_year: str
+        updated_from: str
+        update_to: str
+
+        Returns
+        -------
+        dict
+        """
+        # registro migrado formato json
+        print(f"{pub_year}, {updated_from}, {updated_to}")
+        if pub_year:
+            docs = db.get_migrated_documents_by_publication_year(pub_year)
+        elif updated_from or updated_to:
+            docs = db.get_migrated_documents_by_date_range(
+                updated_from, updated_to)
+
+        print(f"  Found {len(docs)}")
+        for doc in docs:
+            self.migrate_document(doc._id)
+
+
+def _migrate_document_data(document, migrated_document, issue):
+    """
+    Update the `document` attributes with `migrated_document` attributes
+
+    Parameters
+    ----------
+    document : opac_schema.v1.models.Document
+    migrated_document : dsm.extdeps.isis_migration.json2doc.Document
+    """
+    # usa a data de criação do registro no isis como data de criação
+    # do registro no site
+    # TODO save_data sobrescreve estes comandos, refatorar
+    document.created = db.convert_date(migrated_document.isis_created_date)
+    document.updated = db.convert_date(migrated_document.isis_updated_date)
+
+    _set_issue_data(document, issue)
+    _set_order(document, migrated_document)
+    # _set_renditions(document, registered_renditions)
+    # _set_xml_url(document, registered_xml)
+    _set_ids(document, migrated_document)
+    _set_is_public(document, is_public=True)
+    _set_languages(document, migrated_document)
+    _set_article_abstracts(document, migrated_document)
+    _set_article_authors(document, migrated_document)
+    _set_article_pages(document, migrated_document)
+    _set_article_publication_date(document, migrated_document)
+    _set_article_sections(document, migrated_document)
+    _set_article_titles(document, migrated_document)
+    _set_article_type(document, migrated_document)
+
+
+def _set_order(article, migrated_document):
+    article.order = int(migrated_document.order)
+
+
+def _set_renditions(article, renditions):
+    # TODO
+    article.pdfs = renditions
+
+
+def _set_xml_url(article, xml_url):
+    # TODO
+    article.xml = xml_url
+
+
+def _set_issue_data(article, issue):
+    # TODO verificar se faz sentido neste local
+    # if article.issue is not None and article.issue.number == "ahead":
+    #     if article.aop_url_segs is None:
+    #         url_segs = {
+    #             "url_seg_article": article.url_segment,
+    #             "url_seg_issue": article.issue.url_segment,
+    #         }
+    #         article.aop_url_segs = models.AOPUrlSegments(**url_segs)
+    article.issue = issue
+    article.journal = issue.journal
+
+
+def _set_is_public(article, is_public=True):
+    article.is_public = is_public
+
+
+def _set_ids(article, migrated_document):
+    article._id = (
+        article._id or migrated_document.scielo_pid_v3 or generates()
+    )
+    article.aid = article._id
+
+    article_pids = {}
+    if migrated_document.scielo_pid_v1:
+        article_pids["v1"] = migrated_document.scielo_pid_v1
+    if migrated_document.scielo_pid_v2:
+        article_pids["v2"] = migrated_document.scielo_pid_v2
+    if migrated_document.scielo_pid_v3:
+        article_pids["v3"] = migrated_document.scielo_pid_v3
+    article.scielo_pids = article_pids
+
+    article.aop_pid = migrated_document.ahead_of_print_pid
+    article.pid = migrated_document.scielo_pid_v2
+    article.doi = migrated_document.doi
+
+    # TODO
+    # doi por idioma / mudanca no opac_schema
+
+
+def _set_article_type(article, migrated_document):
+    article.type = migrated_document.article_type
+
+
+def _set_languages(article, migrated_document):
+    article.original_language = migrated_document.language
+    article.languages = migrated_document.languages
+    article.htmls = [{"lang": lang} for lang in migrated_document.languages]
+
+
+def _set_article_titles(article, migrated_document):
+    article.title = migrated_document.original_title
+    set_translate_titles(article, migrated_document.translated_titles)
+
+
+def _set_article_sections(article, migrated_document):
+    article.section = migrated_document.original_section
+    set_translated_sections(article, migrated_document.translated_sections)
+
+
+def _set_article_abstracts(article, migrated_document):
+    article.abstract = migrated_document.abstract
+    set_abstracts(article, migrated_document.abstracts)
+    set_keywords(article, migrated_document.keywords_groups)
+
+
+def _set_article_publication_date(article, migrated_document):
+    article.publication_date = migrated_document.document_pubdate
+
+
+def _set_article_pages(article, migrated_document):
+    article.elocation = migrated_document.elocation_id
+    article.fpage = migrated_document.fpage
+    article.fpage_sequence = migrated_document.fpage_seq
+    article.lpage = migrated_document.lpage
+
+
+def _set_article_authors(article, migrated_document):
+    set_authors(article, migrated_document.contrib_group)
+    set_authors_meta(article, migrated_document.contrib_group)
 
 
 def _migrate_issue_data(issue, migrated_issue):
@@ -194,7 +402,7 @@ def _migrate_issue_data(issue, migrated_issue):
     # e não o pid de fascículo do site antigo
     issue.iid = migrated_issue.iid
 
-    issue.journal = db.fetch_journal(migrated_issue.pid[:9])
+    issue.journal = db.fetch_journal(migrated_issue.journal_pid)
     # ReferenceField(Journal, reverse_delete_rule=CASCADE)
 
     # not available in isis
@@ -325,7 +533,7 @@ def _migrate_journal_data(journal, migrated_journal):
     # journal.other_titles = migrated_journal.other_titles
 
     # TODO ID or title
-    #journal.previous_journal_ref = migrated_journal.previous_journal_title
+    # journal.previous_journal_ref = migrated_journal.previous_journal_title
 
     journal.publisher_address = migrated_journal.publisher_address
     journal.publisher_city = migrated_journal.publisher_city
