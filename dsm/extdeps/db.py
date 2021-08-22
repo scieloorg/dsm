@@ -218,7 +218,9 @@ def register_received_package(uri, name, annotation=None):
 
 
 def fetch_document_package(v3):
-    return v2_models.ArticleFiles(_id=v3)
+    article_files = v2_models.ArticleFiles.objects(_id=v3)
+    if len(article_files) > 0:
+        return article_files[0]
 
 
 def register_document_package(v3, data):
