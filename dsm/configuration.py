@@ -10,6 +10,7 @@ MINIO_ACCESS_KEY = os.environ.get("MINIO_ACCESS_KEY")
 MINIO_SECRET_KEY = os.environ.get("MINIO_SECRET_KEY")
 MINIO_SECURE = True if os.environ.get("MINIO_SECURE", "").lower() == 'true' else False
 MINIO_TIMEOUT = int(os.environ.get("MINIO_TIMEOUT", "10000"))
+MINIO_SPF_DIR = os.environ.get("MINIO_SPF_DIR")
 
 # postgresql+psycopg2://user:password@uri:5432/pid_manager
 PID_DATABASE_DSN = os.environ.get("PID_DATABASE_DSN")
@@ -46,6 +47,7 @@ def get_files_storage():
         "MINIO_SECURE",
         "MINIO_TIMEOUT",
         "MINIO_SCIELO_COLLECTION",
+        "MINIO_SPF_DIR",
     )
     for var_name in VARNAME:
         if not os.environ.get(var_name):
