@@ -3,6 +3,8 @@
 
 import logging
 
+from mongoengine import document
+
 from opac_schema.v1 import models
 
 from dsm.utils import packages
@@ -38,6 +40,7 @@ class DocsManager:
 
     def db_connect(self):
         db.mk_connection(self._db_url)
+
 
     def get_zip_document_package(self, v3):
         """
@@ -78,6 +81,24 @@ class DocsManager:
                     "name": document_package.file.name,
                 }
 
+
+    def get_doc_packages(self, source):
+        """
+        Get documents' package
+
+        Parameters
+        ----------
+        source: str
+            zip file
+
+        Returns
+        -------
+        dict
+        """
+        # obtém do pacote os arquivos de cada documento
+        return packages.explore_source(source)
+
+
     def receive_package(self, source):
         """
         Receive package
@@ -85,17 +106,15 @@ class DocsManager:
         Parameters
         ----------
         source : str
-            folder or zip file
+            zip file
 
         Returns
         -------
         dict
         """
-        # obtém do pacote os arquivos de cada documento
-        source_content = packages.explore_source(source)
         # armazena o zip
         docfiles.register_received_package(self._files_storage, source)
-        return source_content
+
 
     def _fetch_document(self, xml_sps, pid_v2):
         _ids = (
@@ -111,6 +130,7 @@ class DocsManager:
             doc = db.fetch_document(_id)
             if doc:
                 return doc
+        
 
     def register_document(self, doc_pkg, pid_v2, old_name, issue_id):
         """
