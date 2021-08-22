@@ -14,6 +14,7 @@ from dsm.core.sps_package import (
 )
 from dsm.extdeps import db
 from dsm import exceptions
+from dsm import configuration
 
 
 def build_zip_package(files_storage, record):
@@ -24,9 +25,14 @@ def build_zip_package(files_storage, record):
     assets = _get_assets_to_zip(xml_sps)
     renditions = _get_renditions_to_zip(record)
 
-    files_storage_folder = _get_files_storage_folder(xml_sps)
+    files_storage_folder = _get_files_storage_folder(
+        issn=xml_sps.issn,
+        scielo_pid_v3=xml_sps.scielo_pid_v3,
+        prefix=configuration.MINIO_SPF_DIR)
     xml_uri_and_name = register_xml(
-        files_storage, files_storage_folder, xml_sps)
+        files_storage,
+        files_storage_folder,
+        xml_sps)
 
     uri_and_file_items = (
         [xml_uri_and_name] + assets + renditions
@@ -37,7 +43,7 @@ def build_zip_package(files_storage, record):
     # publish zip file in the files storage
     uri_and_name = files_storage_register(
         files_storage,
-        _get_files_storage_folder(xml_sps),
+        files_storage_folder,
         zip_file_path,
         os.path.basename(zip_file_path))
 
@@ -48,9 +54,8 @@ def build_zip_package(files_storage, record):
     data['xml'] = xml_uri_and_name
     data['assets'] = assets
     data['renditions'] = renditions
-    data['file'] = file
+    data['file'] = uri_and_name
 
-    # return data
     return data
 
 
@@ -158,10 +163,11 @@ def _zip_files(xml_sps, uri_and_file_items):
     """
 
     # create zip file
+    temp_dir = tempfile.mkdtemp()
     zip_file_path = os.path.join(temp_dir, f"{xml_sps.package_name}.zip")
-    download_files_and_create_zip_file(
-        zip_file_path, uri_and_file_items
-    )
+    files.download_files_and_create_zip_file(
+        zip_file_path,
+        uri_and_file_items)
     return zip_file_path
 
 
@@ -189,7 +195,10 @@ def register_document_files(files_storage, doc_package, xml_sps,
         assets_registration_result
             resultado do registro dos ativos digitais
     """
-    files_storage_folder = _get_files_storage_folder(xml_sps)
+    files_storage_folder = _get_files_storage_folder(
+        issn=xml_sps.issn,
+        scielo_pid_v3=xml_sps.scielo_pid_v3,
+        prefix=configuration.MINIO_SPF_DIR)
 
     assets_registration_result = register_assets(
         files_storage, files_storage_folder,
@@ -336,26 +345,15 @@ def register_assets(files_storage, files_storage_folder,
     return errors
 
 
-def _register_file(
-        files_storage, files_storage_folder, file_path, zip_file_path=None):
+def _register_file(files_storage, files_storage_folder, file_path, zip_file_path=None):
     basename = os.path.basename(file_path)
 
     if zip_file_path:
         with ZipFile(zip_file_path) as zf:
-            uri_and_name = files_storage_register(
-                files_storage,
-                files_storage_folder,
-                zf.read(file_path),
-                basename,
-            )
+            uri_and_name = files_storage_register(files_storage, files_storage_folder, zf.read(file_path), basename)
     else:
         # registra o arquivo no `files_storage`
-        uri_and_name = files_storage_register(
-            files_storage,
-            files_storage_folder,
-            file_path,
-            basename,
-        )
+        uri_and_name = files_storage_register(files_storage, files_storage_folder, file_path, basename)
     return uri_and_name
 
 
@@ -393,9 +391,10 @@ def register_received_package(files_storage, pkg_path):
             os.path.join(pkg_path, f)
             for f in os.listdir(pkg_path)
         ]
-        zip_path = create_zip_file(zip_content, zip_name)
+
+        zip_path = files.create_zip_file(zip_content, zip_name)
     if zip_path:
-        files_storage_folder = os.path.join(name, files.date_now_as_folder_name())
+        files_storage_folder = os.path.join(configuration.MINIO_SPF_DIR, os.path.join(name, files.date_now_as_folder_name()))
         uri_and_name = files_storage_register(
             files_storage,
             files_storage_folder,
