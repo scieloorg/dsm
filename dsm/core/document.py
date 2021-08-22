@@ -132,7 +132,7 @@ class DocsManager:
                 return doc
         
 
-    def register_document(self, doc_pkg, pid_v2, old_name, issue_id):
+    def register_document(self, doc_pkg, pid_v2, old_name, issue_id, is_new_document=False):
         """
         Register one package of XML documents + PDFs + images.
 
@@ -149,6 +149,8 @@ class DocsManager:
         issue_id : str
             issue id in the website database
             (it is required for new documents)
+        is_new_document: boolean
+            é documento novo?
         Returns
         -------
         str
@@ -164,26 +166,19 @@ class DocsManager:
         # obtém o XML
         xml_sps = SPS_Package(doc_pkg.xml_content)
 
-        # recupera documento ou cria se não existir
-        document = (
-            self._fetch_document(xml_sps, pid_v2) or
-            db.create_document()
-        )
+        if is_new_document:
+            document = db.create_document()
+            add_pids_to_xml(xml_sps, document, doc_pkg.xml, pid_v2, self._v3_manager)
+        else:
+            document = self._fetch_document(xml_sps, pid_v2)
 
-        # adiciona pids ao XML
-        add_pids_to_xml(
-            xml_sps, document, doc_pkg.xml, pid_v2, self._v3_manager)
-
-        # se não tem pid v3, retornar
         if not xml_sps.scielo_pid_v3:
             raise exceptions.MissingPidV3Error(
                 f"{doc_pkg.xml} missing v3"
             )
 
         # registra os arquivos do documento (XML, PDFs, imagens) no MINIO
-        result = docfiles.register_document_files(
-            self._files_storage, doc_pkg, xml_sps, old_name)
-        registered_xml, registered_renditions, assets_registration = result
+        registered_xml, registered_renditions, assets_registration = docfiles.register_document_files(self._files_storage, doc_pkg, xml_sps, old_name)
 
         # atualiza os dados de document com os dados do XML e demais dados
         update_document_data(
