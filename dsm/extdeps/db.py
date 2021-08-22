@@ -231,20 +231,32 @@ def register_document_package(v3, data):
     """
     article_files = v2_models.ArticleFiles()
     article_files._id = v3
-    article_files.xml = create_remote_and_local_file(**data['xml'])
-    article_files.file = create_remote_and_local_file(**data['file'])
+    article_files.xml = create_remote_and_local_file(
+        data['xml']['uri'],
+        data['xml']['name']
+    )
+    article_files.file = create_remote_and_local_file(
+        data['file']['uri'],
+        data['file']['name']
+    )
 
     assets = []
     for item in data["assets"]:
         assets.append(
-            create_remote_and_local_file(**item)
+            create_remote_and_local_file(
+                item['uri'], 
+                item['name']
+            )
         )
     article_files.assets = assets
 
     renditions = []
     for item in data["renditions"]:
         renditions.append(
-            create_remote_and_local_file(**item)
+            create_remote_and_local_file(
+                item['uri'],
+                item['name']
+            )
         )
     article_files.renditions = renditions
     save_data(article_files)
