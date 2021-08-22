@@ -54,20 +54,28 @@ def build_zip_package(files_storage, record):
     return data
 
 
-def _get_files_storage_folder(xml_sps):
+def _get_files_storage_folder(issn, scielo_pid_v3, prefix=''):
     """
     Get files storage folder
 
     Parameters
     ----------
-    xml_sps : dsm.data.sps_package.SPS_Package
+    issn : str
+        document's issn
+    scielo_pid_v3: str
+        document's identifier
+    prefix: str
+        root folder at files storage
 
     Returns
     -------
     str
         folder at files storage
     """
-    return f"{xml_sps.issn}/{xml_sps.scielo_pid_v3}"
+    if prefix:
+        return f"{prefix}/{issn}/{scielo_pid_v3}"
+
+    return f"{issn}/{scielo_pid_v3}"
 
 
 def _get_xml_to_zip(document):
