@@ -14,15 +14,15 @@ _v3_manager = configuration.get_pid_manager()
 _docs_manager = DocsManager(_files_storage, _db_url, _v3_manager)
 
 
-def download_package(v3):
+def get_package_uri_by_pid(scielo_pid_v3):
     """
     Get uri of zip document package or
     Build the zip document package and return uri
 
     Parameters
     ----------
-    v3 : str
-        PID v3
+    scielo_pid_v3 : str
+        document's identifier version 3
 
     Returns
     -------
@@ -36,7 +36,16 @@ def download_package(v3):
         dsm.exceptions.DBConnectError
     """
     _docs_manager.db_connect()
-    return _docs_manager.get_zip_document_package(v3)
+    
+    results = {'doc_pkg': [], 'errors': []}
+    try:
+        doc_pkg = _docs_manager.get_zip_document_package(scielo_pid_v3)
+        if doc_pkg:
+            results['doc_pkg'].append(doc_pkg)
+    except Exception as e:
+        results['errors'].append(str(e))
+
+    return results
 
 
 def upload_package(source, pid_v2_items={}, old_filenames={},
