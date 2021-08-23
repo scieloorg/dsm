@@ -13,6 +13,20 @@ CONTRIB_ROLES = {
 }
 
 
+def fix_windows_path(windows_path):
+    """
+    It can not handle `o`, `x`, `N`, `u`, `U`
+    For the combination of slash and this letters,
+    the correction have to be done manually
+    """
+    path = os.path.normpath(windows_path).replace("\\", "/")
+    special = ("\x08", "\a", "\b", "\f", "\n", "\r", "\t", "\v", )
+    correction = ("/b", "/a", "/b", "/f", "/n", "/r", "/t", "/v", )
+    for ch, correct in zip(special, correction):
+        path = path.replace(ch, correct)
+    return path
+
+
 def _get_value(data, tag):
     """
     Returns first value of field `tag`
@@ -54,6 +68,7 @@ class Document:
         self._pages = self._get_article_meta_item_("v014")
         if self._pages is None:
             raise ValueError(records[1])
+        self._set_file_name()
 
     def _get_article_meta_item_(self, tag, formatted=False):
         if formatted:
@@ -76,6 +91,24 @@ class Document:
         _data = {}
         _data["article"] = self._records
         return _data
+
+    @property
+    def raw_file_path(self):
+        return _get_article_meta_item_("v702")
+
+    def _set_file_name(self):
+        file_path = self.raw_file_path
+        file_path = fix_windows_path(file_path)
+        self._basename = os.path.basename(file_path)
+        self._filename, self._ext = os.path.splitext(self._basename)
+
+    @property
+    def file_name(self):
+        return self._filename
+
+    @property
+    def file_type(self):
+        return "xml" if self._ext == ".xml" else "html"
 
     @property
     def volume(self):
@@ -681,7 +714,7 @@ class Issue:
         return self._get_item_("v065")[:4]
 
     @property
-    def label(self):
+    def issue_folder(self):
         if self.number == "ahead":
             return self.year + "nahead"
 
