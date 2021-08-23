@@ -42,6 +42,7 @@ class MinioStorage:
         self.minio_secure = minio_secure
         self.http_client = minio_http_client
         self._client_instance = None
+        self.scielo_collection = scielo_collection
 
     @property
     def _client(self):

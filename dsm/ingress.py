@@ -14,15 +14,15 @@ _v3_manager = configuration.get_pid_manager()
 _docs_manager = DocsManager(_files_storage, _db_url, _v3_manager)
 
 
-def download_package(v3):
+def get_package_uri_by_pid(scielo_pid_v3):
     """
     Get uri of zip document package or
     Build the zip document package and return uri
 
     Parameters
     ----------
-    v3 : str
-        PID v3
+    scielo_pid_v3 : str
+        document's identifier version 3
 
     Returns
     -------
@@ -36,11 +36,20 @@ def download_package(v3):
         dsm.exceptions.DBConnectError
     """
     _docs_manager.db_connect()
-    return _docs_manager.get_zip_document_package(v3)
+    
+    results = {'doc_pkg': [], 'errors': []}
+    try:
+        doc_pkg = _docs_manager.get_zip_document_package(scielo_pid_v3)
+        if doc_pkg:
+            results['doc_pkg'].append(doc_pkg)
+    except Exception as e:
+        results['errors'].append(str(e))
+
+    return results
 
 
 def upload_package(source, pid_v2_items={}, old_filenames={},
-                   issue_id=None):
+                   issue_id=None, is_new_document=False):
     """
     Receive the package which is a folder or zip file
 
@@ -56,6 +65,8 @@ def upload_package(source, pid_v2_items={}, old_filenames={},
         value: classic website filename if HTML
     issue_id : str
         id do fascículo
+    is_new_document: boolean
+        é documento novo?
 
     Returns
     -------
@@ -67,13 +78,12 @@ def upload_package(source, pid_v2_items={}, old_filenames={},
     """
     _docs_manager.db_connect()
 
-    # obtém os arquivos de cada documento e registra o pacote recebido
-    doc_packages = _docs_manager.receive_package(source)
+    # obtém os arquivos de cada documento
+    doc_packages = _docs_manager.get_doc_packages(source)
 
     # processa cada documento contido no pacote
-    results = []
+    results = {'docs': [], 'errors': []}
     for name, doc_pkg in doc_packages.items():
-        result = {"name": name}
         try:
             docid = _docs_manager.register_document(
                 doc_pkg,
@@ -82,10 +92,15 @@ def upload_package(source, pid_v2_items={}, old_filenames={},
                 issue_id,
             )
             if docid:
-                result.update({"id": docid})
+                results['docs'].append({"name": name, "id": docid})
+
         except Exception as e:
-            result.update({"error": str(e)})
-        results.append(result)
+            results['errors'].append(str(e))
+
+    # registra o pacote recebido
+    if len(results['errors']) == 0:
+        _docs_manager.receive_package(source)
+
     return results
 
 
