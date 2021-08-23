@@ -12,6 +12,7 @@ from mongoengine import (
     DictField,
     ListField,
 )
+from opac_schema.v2.models import RemoteAndLocalFile
 
 
 class MigratedDoc(Document):
@@ -34,6 +35,16 @@ class MigratedDoc(Document):
     created = DateTimeField()
     updated = DateTimeField()
 
+    # dados dos arquivos do documento
+    file_name = StringField()
+    file_type = StringField()
+    acron = StringField()
+    issue_folder = StringField()
+    asset_files = ListField()
+    translations = DictField()
+    pdfs = DictField()
+    zipfile = EmbeddedDocumentField(RemoteAndLocalFile)
+
     meta = {
         'collection': 'migrated_doc',
         'indexes': [
@@ -42,6 +53,13 @@ class MigratedDoc(Document):
             'doi',
             'records',
             'pub_year',
+            'file_name',
+            'file_type',
+            'pdfs',
+            'acron',
+            'issue_folder',
+            'asset_files',
+            'translations',
         ],
     }
 
