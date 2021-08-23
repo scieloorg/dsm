@@ -22,6 +22,11 @@ DATABASE_CONNECT_URL = os.environ.get("DATABASE_CONNECT_URL")
 # /var/www/scielo/proc/cisis
 CISIS_PATH = os.environ.get("CISIS_PATH")
 
+BASES_XML_PATH = os.environ.get("BASES_XML_PATH")
+BASES_PDF_PATH = os.environ.get("BASES_PDF_PATH")
+BASES_TRANSLATION_PATH = os.environ.get("BASES_TRANSLATION_PATH")
+HTDOCS_IMG_REVISTAS_PATH = os.environ.get("HTDOCS_IMG_REVISTAS_PATH")
+
 
 def get_http_client():
     if not MINIO_TIMEOUT:
