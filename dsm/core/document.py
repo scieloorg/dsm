@@ -3,8 +3,6 @@
 
 import logging
 
-from mongoengine import document
-
 from opac_schema.v1 import models
 
 from dsm.utils import packages
