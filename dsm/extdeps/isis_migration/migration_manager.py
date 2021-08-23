@@ -9,7 +9,9 @@ from dsm.configuration import (
     BASES_PDF_PATH,
     BASES_TRANSLATION_PATH,
     HTDOCS_IMG_REVISTAS_PATH,
+    check_migration_sources,
     get_files_storage,
+    get_db_url,
 )
 from dsm.core.issue import get_bundle_id
 from dsm.core.document import (
@@ -28,18 +30,31 @@ from dsm.extdeps import db
 
 
 class MigrationManager:
+    """
+    Obtém os dados das bases ISIS: artigo, title e issue.
+    Registra-os, respectivamente nas coleções do mongodb:
+    migrated_doc, migrated_journal, migrated_issue
 
-    def __init__(self, db_url):
+    Obtém os arquivos de:
+    - bases/pdf
+    - bases/xml
+    - htdocs/img/revistas
+    Faz um pacote zip com os arquivos de cada documento e os registra no minio
+
+    # TODO
+    # Obtém os dados das bases artigo/p/ (registros de parágrafos)
+
+    # TODO
+    #    Obtém os arquivos de:
+    #     - bases/translation
+    """
+    def __init__(self):
         """
         Instancia objeto da classe MigrationManager
-
-        Parameters
-        ----------
-        db_url : str
-            Data to connect to a mongodb. Expected pattern:
-                "mongodb://my_user:my_password@127.0.0.1:27017/my_db"
         """
-        self._db_url = db_url
+        self._db_url = get_db_url()
+        self._files_storage = get_files_storage()
+        check_migration_sources()
 
     def db_connect(self):
         db.mk_connection(self._db_url)
@@ -295,7 +310,8 @@ class MigrationManager:
         zip_file_path = create_zip_file(files, migrated_doc.file_name + ".zip")
 
         # register in files storage (minio)
-        _register_migrated_document_files_zipfile(migrated_doc, zip_file_path)
+        _register_migrated_document_files_zipfile(
+            self._files_storage, migrated_doc, zip_file_path)
 
         # salva os dados
         return db.save_data(migrated_document)
@@ -361,9 +377,8 @@ def _get_document_files(migrated_doc, main_language, issn):
     )
 
 
-def _register_migrated_document_files_zipfile(migrated_doc, zip_file_path):
+def _register_migrated_document_files_zipfile(files_storage, migrated_doc, zip_file_path):
     try:
-        files_storage = get_files_storage()
         uri_and_name = files_storage_register(
             files_storage,
             os.path.join("migration", issn, migrated_doc.issue_folder),
@@ -378,8 +393,6 @@ def _register_migrated_document_files_zipfile(migrated_doc, zip_file_path):
 
 
 def _get_xml_location(subdir_acron_issue_folder, file_name):
-    if not BASES_XML_PATH:
-        raise ValueError("Missing configuration: BASES_XML_PATH")
     try:
         return glob.glob(
             os.path.join(
@@ -399,8 +412,6 @@ def _set_pdfs(migrated_doc, pdf_locations):
 
 
 def _get_pdf_files_locations(subdir_acron_issue_folder, file_name, main_lang):
-    if not BASES_PDF_PATH:
-        raise ValueError("Missing configuration: BASES_PDF_PATH")
     files = {}
     for pattern in (f"{file_name}.pdf", f"??_{file_name}.pdf"):
         paths = glob.glob(
@@ -432,8 +443,6 @@ def _set_assets(migrated_doc, asset_locations):
 
 
 def _get_asset_files_locations(subdir_acron_issue_folder, file_name):
-    if not HTDOCS_IMG_REVISTAS_PATH:
-        raise ValueError("Missing configuration: HTDOCS_IMG_REVISTAS_PATH")
     return glob.glob(
         os.path.join(
             HTDOCS_IMG_REVISTAS_PATH,

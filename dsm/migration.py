@@ -9,14 +9,10 @@ from dsm.extdeps.isis_migration import (
     id2json,
     migration_manager,
 )
-
-
 from dsm import configuration
 
 
-_db_url = configuration.get_db_url()
-print(_db_url)
-_migration_manager = migration_manager.MigrationManager(_db_url)
+_migration_manager = migration_manager.MigrationManager()
 
 
 def migrate_documents(pub_year=None, updated_from=None, updated_to=None):

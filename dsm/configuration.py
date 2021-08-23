@@ -99,3 +99,18 @@ def get_cisis_path():
             "CISIS_PATH=/var/www/scielo/proc/cisis"
         )
     return CISIS_PATH
+
+
+def check_migration_sources():
+    if not HTDOCS_IMG_REVISTAS_PATH:
+        raise ValueError("Missing configuration: HTDOCS_IMG_REVISTAS_PATH")
+    if not BASES_PDF_PATH:
+        raise ValueError("Missing configuration: BASES_PDF_PATH")
+    if not BASES_XML_PATH:
+        raise ValueError("Missing configuration: BASES_XML_PATH")
+    if not os.path.isdir(HTDOCS_IMG_REVISTAS_PATH):
+        raise ValueError("HTDOCS_IMG_REVISTAS_PATH must be a directory")
+    if not os.path.isdir(BASES_PDF_PATH):
+        raise ValueError("BASES_PDF_PATH must be a directory")
+    if not os.path.isdir(BASES_XML_PATH):
+        raise ValueError("BASES_XML_PATH must be a directory")
