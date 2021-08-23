@@ -22,13 +22,29 @@ _migration_manager = migration_manager.MigrationManager(_db_url)
 def migrate_documents(pub_year=None, updated_from=None, updated_to=None):
     _migration_manager.db_connect()
     if any((pub_year, updated_from, updated_to)):
-        _migration_manager.migrate_documents(
-            pub_year, updated_from, updated_to)
+        for doc in _migration_manager.list_documents(
+                    pub_year, updated_from, updated_to):
+            _migration_manager.migrate_document(doc._id)
     else:
         for y in range(1900, datetime.now().year):
             y = str(y).zfill(4)
-            _migration_manager.migrate_documents(
-                pub_year, f"{y}0000", f"{y}9999")
+            for doc in _migration_manager.list_documents(
+                        pub_year, f"{y}0000", f"{y}9999"):
+                _migration_manager.migrate_document(doc._id)
+
+
+def migrate_documents_files(pub_year=None, updated_from=None, updated_to=None):
+    _migration_manager.db_connect()
+    if any((pub_year, updated_from, updated_to)):
+        for doc in _migration_manager.list_documents(
+                    pub_year, updated_from, updated_to):
+            _migration_manager.migrate_document_files(doc._id)
+    else:
+        for y in range(1900, datetime.now().year):
+            y = str(y).zfill(4)
+            for doc in _migration_manager.list_documents(
+                        pub_year, f"{y}0000", f"{y}9999"):
+                _migration_manager.migrate_document_files(doc._id)
 
 
 def migrate_artigo_id(id_file_path):
@@ -142,6 +158,23 @@ def main():
         help="Updated to"
     )
 
+    migrate_documents_files_parser = subparsers.add_parser(
+        "migrate_documents_files",
+        help="Migrate XML packages",
+    )
+    migrate_documents_files_parser.add_argument(
+        "--pub_year",
+        help="Publication year",
+    )
+    migrate_documents_files_parser.add_argument(
+        "--updated_from",
+        help="Updated from"
+    )
+    migrate_documents_files_parser.add_argument(
+        "--updated_to",
+        help="Updated to"
+    )
+
     args = parser.parse_args()
 
     if args.command == "migrate_artigo":
@@ -152,6 +185,8 @@ def main():
         migrate_issue_id(args.id_file_path)
     elif args.command == "migrate_documents":
         migrate_documents(args.pub_year, args.updated_from, args.updated_to)
+    elif args.command == "migrate_documents_files":
+        migrate_documents_files(args.pub_year, args.updated_from, args.updated_to)
     else:
         parser.print_help()
 
