@@ -169,7 +169,7 @@ def _get_fields_and_their_content(content):
     rows = content.splitlines()
     return [
         _parse_field(row)
-        for row in rows[1:]
+        for row in rows
         if row
     ]
 
@@ -209,6 +209,8 @@ def read_id_file(input_file_path):
 def get_json_records(input_file_path, get_id_function):
     items = {}
     for record_content in read_id_file(input_file_path):
+        if not record_content:
+            continue
         try:
             fields = _get_fields_and_their_content(record_content)
             data = _build_record(fields)

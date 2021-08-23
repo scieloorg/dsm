@@ -2,6 +2,8 @@
 Not defined;coordinator;inventor;publisher;organizer;translator
 nd;coord;inventor;ed;org;tr
 """
+import os
+
 CONTRIB_ROLES = {
     "ND": "author",
     "nd": "author",
@@ -94,7 +96,7 @@ class Document:
 
     @property
     def raw_file_path(self):
-        return _get_article_meta_item_("v702")
+        return self._get_article_meta_item_("v702")
 
     def _set_file_name(self):
         file_path = self.raw_file_path

@@ -1,3 +1,4 @@
+import os
 import glob
 
 from scielo_v3_manager.v3_gen import generates
@@ -76,6 +77,7 @@ class MigrationManager:
         migrated_document.isis_updated_date = doc.isis_updated_date
         migrated_document.isis_created_date = doc.isis_created_date
         migrated_document.records = doc.records
+        migrated_document.status = "1"
 
         # salva o documento
         return db.save_data(migrated_document)
@@ -270,20 +272,30 @@ class MigrationManager:
         """
         # registro migrado formato json
         migrated_document = db.fetch_migrated_document(document_id)
-
         _document = json2doc.Document(
             migrated_document._id, migrated_document.records)
+
+        migrated_issue = db.fetch_migrated_issue(_document.issue_pid)
         _issue = json2doc.Issue(
-            migrated_document.issue._id, migrated_document.issue.records)
+            migrated_issue._id, migrated_issue.record)
+
+        migrated_journal = db.fetch_migrated_journal(_document.journal_pid)
         _journal = json2doc.Journal(
-            migrated_document.journal._id, migrated_document.journal.records)
+            migrated_journal._id, migrated_journal.record)
 
         migrated_document.file_name = _document.file_name
         migrated_document.file_type = _document.file_type
         migrated_document.acron = _journal.acronym
         migrated_document.issue_folder = _issue.issue_folder
 
-        _get_document_files(migrated_document, _document.language)
+        files = _get_document_files(
+            migrated_document, _document.language, _document.journal_pid)
+
+        # create zip file with document files
+        zip_file_path = create_zip_file(files, migrated_doc.file_name + ".zip")
+
+        # register in files storage (minio)
+        _register_migrated_document_files_zipfile(migrated_doc, zip_file_path)
 
         # salva os dados
         return db.save_data(migrated_document)
@@ -313,14 +325,15 @@ class MigrationManager:
         return docs
 
 
-def _get_document_files(migrated_doc, main_language):
+def _get_document_files(migrated_doc, main_language, issn):
     """
     BASES_XML_PATH,
     BASES_PDF_PATH,
     BASES_TRANSLATION_PATH,
     HTDOCS_IMG_REVISTAS_PATH,
     """
-    subdir = os.path.join(migrated_doc.acron, migrated_doc.issue_folder)
+    subdir_acron_issue_folder = os.path.join(
+        migrated_doc.acron, migrated_doc.issue_folder)
 
     pdf_locations = _get_pdf_files_locations(
         subdir_acron_issue_folder, migrated_doc.file_name, main_language)
@@ -334,32 +347,48 @@ def _get_document_files(migrated_doc, main_language):
     # migrated_doc.translations = DictField()
     translations_locations = []
     xml_location = []
-    if _document.file_type == "xml":
+    if migrated_doc.file_type == "xml":
         xml = _get_xml_location(
             subdir_acron_issue_folder, migrated_doc.file_name)
         if xml:
             xml_location.append(xml)
-
-    files = (
+    migrated_doc.status = "2"
+    return (
         list(pdf_locations.values()) +
         asset_locations +
         xml_location +
         translations_locations
     )
 
+
+def _register_migrated_document_files_zipfile(migrated_doc, zip_file_path):
     try:
-        zip_file_path = create_zip_file(files, migrated_doc.file_name + ".zip")
         files_storage = get_files_storage()
         uri_and_name = files_storage_register(
             files_storage,
-            os.path.join("migration", migrated_doc.journal._id, issue_folder),
+            os.path.join("migration", issn, migrated_doc.issue_folder),
             zip_file_path,
             os.path.basename(zip_file_path))
-        migrated_doc.zipfile = RemoteAndLocalFile(
-            uri=uri_and_name["uri"], name=uri_and_name["name"])
-    except:
+        migrated_doc.zipfile = db.create_remote_and_local_file(
+            remote=uri_and_name["uri"], local=uri_and_name["name"])
+        migrated_doc.status = "3"
+    except Exception as e:
         # TODO melhorar retorno sobre registro de pacote zip
-        pass
+        print(e)
+
+
+def _get_xml_location(subdir_acron_issue_folder, file_name):
+    if not BASES_XML_PATH:
+        raise ValueError("Missing configuration: BASES_XML_PATH")
+    try:
+        return glob.glob(
+            os.path.join(
+                BASES_PDF_PATH,
+                subdir_acron_issue_folder,
+                f"{file_name}.xml"
+            ))[0]
+    except IndexError:
+        return None
 
 
 def _set_pdfs(migrated_doc, pdf_locations):

@@ -12,6 +12,7 @@ requires = [
     'psycopg2-binary~=2.8',
     'requests',
     'picles.plumber',
+    'minio',
 ]
 
 tests_require = [

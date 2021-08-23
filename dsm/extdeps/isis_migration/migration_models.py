@@ -34,13 +34,14 @@ class MigratedDoc(Document):
     # data de criação e atualização da migração
     created = DateTimeField()
     updated = DateTimeField()
+    status = StringField()
 
     # dados dos arquivos do documento
     file_name = StringField()
     file_type = StringField()
     acron = StringField()
     issue_folder = StringField()
-    asset_files = ListField()
+    assets = ListField()
     translations = DictField()
     pdfs = DictField()
     zipfile = EmbeddedDocumentField(RemoteAndLocalFile)
@@ -58,8 +59,9 @@ class MigratedDoc(Document):
             'pdfs',
             'acron',
             'issue_folder',
-            'asset_files',
+            'assets',
             'translations',
+            'status',
         ],
     }
 
