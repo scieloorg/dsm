@@ -15,7 +15,7 @@ from mongoengine import (
 from opac_schema.v2.models import RemoteAndLocalFile
 
 
-class MigratedDoc(Document):
+class ISISDocument(Document):
     """
     Armazena documento (artigo) migrado
     """
@@ -47,7 +47,7 @@ class MigratedDoc(Document):
     zipfile = EmbeddedDocumentField(RemoteAndLocalFile)
 
     meta = {
-        'collection': 'migrated_doc',
+        'collection': 'isis_doc',
         'indexes': [
             'updated',
             'isis_updated_date',
@@ -69,13 +69,13 @@ class MigratedDoc(Document):
         if not self.created:
             self.created = datetime.now()
         self.updated = datetime.now()
-        return super(MigratedDoc, self).save(*args, **kwargs)
+        return super(ISISDocument, self).save(*args, **kwargs)
 
     def __unicode__(self):
         return '%s' % self._id
 
 
-class MigratedJournal(Document):
+class ISISJournal(Document):
     """
     Armazena journal migrado
     """
@@ -94,7 +94,7 @@ class MigratedJournal(Document):
     updated = DateTimeField()
 
     meta = {
-        'collection': 'migrated_journal',
+        'collection': 'isis_journal',
         'indexes': [
             'updated',
             'isis_updated_date',
@@ -105,13 +105,13 @@ class MigratedJournal(Document):
         if not self.created:
             self.created = datetime.now()
         self.updated = datetime.now()
-        return super(MigratedJournal, self).save(*args, **kwargs)
+        return super(ISISJournal, self).save(*args, **kwargs)
 
     def __unicode__(self):
         return '%s' % self._id
 
 
-class MigratedIssue(Document):
+class ISISIssue(Document):
     """
     Armazena issue migrado
     """
@@ -130,7 +130,7 @@ class MigratedIssue(Document):
     updated = DateTimeField()
 
     meta = {
-        'collection': 'migrated_issue',
+        'collection': 'isis_issue',
         'indexes': [
             'updated',
             'isis_updated_date',
@@ -141,7 +141,7 @@ class MigratedIssue(Document):
         if not self.created:
             self.created = datetime.now()
         self.updated = datetime.now()
-        return super(MigratedIssue, self).save(*args, **kwargs)
+        return super(ISISIssue, self).save(*args, **kwargs)
 
     def __unicode__(self):
         return '%s' % self._id

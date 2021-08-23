@@ -20,13 +20,13 @@ def migrate_documents(pub_year=None, updated_from=None, updated_to=None):
     if any((pub_year, updated_from, updated_to)):
         for doc in _migration_manager.list_documents(
                     pub_year, updated_from, updated_to):
-            _migration_manager.migrate_document(doc._id)
+            _migration_manager.update_website_document_data(doc._id)
     else:
         for y in range(1900, datetime.now().year):
             y = str(y).zfill(4)
             for doc in _migration_manager.list_documents(
                         pub_year, f"{y}0000", f"{y}9999"):
-                _migration_manager.migrate_document(doc._id)
+                _migration_manager.update_website_document_data(doc._id)
 
 
 def migrate_documents_files(pub_year=None, updated_from=None, updated_to=None):
@@ -34,13 +34,13 @@ def migrate_documents_files(pub_year=None, updated_from=None, updated_to=None):
     if any((pub_year, updated_from, updated_to)):
         for doc in _migration_manager.list_documents(
                     pub_year, updated_from, updated_to):
-            _migration_manager.migrate_document_files(doc._id)
+            _migration_manager.register_old_website_document_files(doc._id)
     else:
         for y in range(1900, datetime.now().year):
             y = str(y).zfill(4)
             for doc in _migration_manager.list_documents(
                         pub_year, f"{y}0000", f"{y}9999"):
-                _migration_manager.migrate_document_files(doc._id)
+                _migration_manager.register_old_website_document_files(doc._id)
 
 
 def migrate_artigo_id(id_file_path):
@@ -49,10 +49,10 @@ def migrate_artigo_id(id_file_path):
             id_file_path, id2json.article_id):
         try:
             if len(records) == 1:
-                if _migration_manager.register_issue(_id, records[0]):
-                    _migration_manager.migrate_issue(_id)
+                if _migration_manager.register_isis_issue(_id, records[0]):
+                    _migration_manager.update_website_issue_data(_id)
             else:
-                _migration_manager.register_document(_id, records)
+                _migration_manager.register_document_isis_records(_id, records)
         except:
             print(_id)
             print(f"Algum problema com {_id}")
@@ -66,8 +66,8 @@ def migrate_title_id(id_file_path):
     for _id, records in id2json.get_json_records(
             id_file_path, id2json.journal_id):
         try:
-            if _migration_manager.register_journal(_id, records[0]):
-                _migration_manager.migrate_journal(_id)
+            if _migration_manager.register_isis_journal(_id, records[0]):
+                _migration_manager.update_website_journal_data(_id)
         except:
             print(_id)
             print(f"Algum problema com {_id}")
@@ -80,8 +80,8 @@ def migrate_issue_id(id_file_path):
     for _id, records in id2json.get_json_records(
             id_file_path, id2json.issue_id):
         try:
-            if _migration_manager.register_issue(_id, records[0]):
-                _migration_manager.migrate_issue(_id)
+            if _migration_manager.register_isis_issue(_id, records[0]):
+                _migration_manager.update_website_issue_data(_id)
         except:
             print(_id)
             print(f"Algum problema com {_id}")
@@ -119,7 +119,7 @@ def main():
     )
 
     migrate_issue_parser = subparsers.add_parser(
-        "migrate_issue",
+        "update_website_issue_data",
         help="Migrate ISIS DB to MongoDB")
     migrate_issue_parser.add_argument(
         "id_file_path",
@@ -177,7 +177,7 @@ def main():
         migrate_artigo_id(args.id_file_path)
     elif args.command == "migrate_title":
         migrate_title_id(args.id_file_path)
-    elif args.command == "migrate_issue":
+    elif args.command == "update_website_issue_data":
         migrate_issue_id(args.id_file_path)
     elif args.command == "migrate_documents":
         migrate_documents(args.pub_year, args.updated_from, args.updated_to)

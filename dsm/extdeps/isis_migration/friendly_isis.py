@@ -59,7 +59,7 @@ def _get_items(data, tag):
         return []
 
 
-class Document:
+class FriendlyISISDocument:
     """
     Interface amigável para obter os dados da base isis
     que estão no formato JSON
@@ -455,7 +455,7 @@ def complete_uri(text, website_url):
     return text.replace("/img/revistas", f"{website_url}/img/revistas")
 
 
-class Journal:
+class FriendlyISISJournal:
     """
     Interface amigável para obter os dados da base isis
     que estão no formato JSON
@@ -630,7 +630,7 @@ class Journal:
         return _hist[-1][1] if _hist[-1][1] != 'C' else None
 
 
-class Issue:
+class FriendlyISISIssue:
     """
     Interface amigável para obter os dados da base isis
     que estão no formato JSON
