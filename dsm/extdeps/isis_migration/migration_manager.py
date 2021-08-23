@@ -1,3 +1,15 @@
+import glob
+
+from scielo_v3_manager.v3_gen import generates
+
+from dsm.utils.files import create_zip_file
+from dsm.configuration import (
+    BASES_XML_PATH,
+    BASES_PDF_PATH,
+    BASES_TRANSLATION_PATH,
+    HTDOCS_IMG_REVISTAS_PATH,
+    get_files_storage,
+)
 from dsm.core.issue import get_bundle_id
 from dsm.core.document import (
     set_translate_titles,
@@ -7,9 +19,11 @@ from dsm.core.document import (
     set_authors,
     set_authors_meta,
 )
+from dsm.core.document_files import (
+    files_storage_register,
+)
 from dsm.extdeps.isis_migration import json2doc
 from dsm.extdeps import db
-from scielo_v3_manager.v3_gen import generates
 
 
 class MigrationManager:
@@ -236,7 +250,45 @@ class MigrationManager:
         # salva os dados
         return db.save_data(document)
 
-    def migrate_documents(self, pub_year, updated_from, updated_to):
+    def migrate_document_files(self, document_id):
+        """
+        Migrate document files
+
+        Recover the files from
+            BASES_XML_PATH,
+            BASES_PDF_PATH,
+            BASES_TRANSLATION_PATH,
+            HTDOCS_IMG_REVISTAS_PATH,
+
+        Parameters
+        ----------
+        document_id : str
+
+        Returns
+        -------
+        dict
+        """
+        # registro migrado formato json
+        migrated_document = db.fetch_migrated_document(document_id)
+
+        _document = json2doc.Document(
+            migrated_document._id, migrated_document.records)
+        _issue = json2doc.Issue(
+            migrated_document.issue._id, migrated_document.issue.records)
+        _journal = json2doc.Journal(
+            migrated_document.journal._id, migrated_document.journal.records)
+
+        migrated_document.file_name = _document.file_name
+        migrated_document.file_type = _document.file_type
+        migrated_document.acron = _journal.acronym
+        migrated_document.issue_folder = _issue.issue_folder
+
+        _get_document_files(migrated_document, _document.language)
+
+        # salva os dados
+        return db.save_data(migrated_document)
+
+    def list_documents(self, pub_year, updated_from, updated_to):
         """
         Migrate isis document data to website
 
@@ -252,15 +304,114 @@ class MigrationManager:
         """
         # registro migrado formato json
         print(f"{pub_year}, {updated_from}, {updated_to}")
+        docs = []
         if pub_year:
             docs = db.get_migrated_documents_by_publication_year(pub_year)
         elif updated_from or updated_to:
             docs = db.get_migrated_documents_by_date_range(
                 updated_from, updated_to)
+        return docs
 
-        print(f"  Found {len(docs)}")
-        for doc in docs:
-            self.migrate_document(doc._id)
+
+def _get_document_files(migrated_doc, main_language):
+    """
+    BASES_XML_PATH,
+    BASES_PDF_PATH,
+    BASES_TRANSLATION_PATH,
+    HTDOCS_IMG_REVISTAS_PATH,
+    """
+    subdir = os.path.join(migrated_doc.acron, migrated_doc.issue_folder)
+
+    pdf_locations = _get_pdf_files_locations(
+        subdir_acron_issue_folder, migrated_doc.file_name, main_language)
+    _set_pdfs(migrated_doc, pdf_locations)
+
+    asset_locations = _get_asset_files_locations(
+        subdir_acron_issue_folder, migrated_doc.file_name)
+    _set_assets(migrated_doc, asset_locations)
+
+    # TODO
+    # migrated_doc.translations = DictField()
+    translations_locations = []
+    xml_location = []
+    if _document.file_type == "xml":
+        xml = _get_xml_location(
+            subdir_acron_issue_folder, migrated_doc.file_name)
+        if xml:
+            xml_location.append(xml)
+
+    files = (
+        list(pdf_locations.values()) +
+        asset_locations +
+        xml_location +
+        translations_locations
+    )
+
+    try:
+        zip_file_path = create_zip_file(files, migrated_doc.file_name + ".zip")
+        files_storage = get_files_storage()
+        uri_and_name = files_storage_register(
+            files_storage,
+            os.path.join("migration", migrated_doc.journal._id, issue_folder),
+            zip_file_path,
+            os.path.basename(zip_file_path))
+        migrated_doc.zipfile = RemoteAndLocalFile(
+            uri=uri_and_name["uri"], name=uri_and_name["name"])
+    except:
+        # TODO melhorar retorno sobre registro de pacote zip
+        pass
+
+
+def _set_pdfs(migrated_doc, pdf_locations):
+    pdfs = {}
+    for lang, pdf_path in pdf_locations.items():
+        pdfs[lang] = os.path.basename(pdf_path)
+    migrated_doc.pdfs = pdfs
+
+
+def _get_pdf_files_locations(subdir_acron_issue_folder, file_name, main_lang):
+    if not BASES_PDF_PATH:
+        raise ValueError("Missing configuration: BASES_PDF_PATH")
+    files = {}
+    for pattern in (f"{file_name}.pdf", f"??_{file_name}.pdf"):
+        paths = glob.glob(
+            os.path.join(
+                BASES_PDF_PATH,
+                subdir_acron_issue_folder,
+                pattern
+            )
+        )
+        if not paths:
+            continue
+        if "_" in pattern:
+            # translations
+            for path in paths:
+                basename = os.path.basename(path)
+                lang = basename[:2]
+                files[lang] = path
+        else:
+            # main pdf
+            files[main_lang] = paths[0]
+    return files
+
+
+def _set_assets(migrated_doc, asset_locations):
+    migrated_doc.assets = [
+        os.path.basename(asset_path)
+        for asset_path in asset_locations
+    ]
+
+
+def _get_asset_files_locations(subdir_acron_issue_folder, file_name):
+    if not HTDOCS_IMG_REVISTAS_PATH:
+        raise ValueError("Missing configuration: HTDOCS_IMG_REVISTAS_PATH")
+    return glob.glob(
+        os.path.join(
+            HTDOCS_IMG_REVISTAS_PATH,
+            subdir_acron_issue_folder,
+            f"{file_name}*.*"
+        )
+    )
 
 
 def _migrate_document_data(document, migrated_document, issue):
@@ -435,7 +586,7 @@ def _migrate_issue_data(issue, migrated_issue):
     issue.end_month = migrated_issue.end_month
 
     issue.year = int(migrated_issue.year)
-    issue.label = migrated_issue.label
+    issue.label = migrated_issue.issue_folder
 
     # TODO: no banco do site 20103 como int e isso está incorreto
     # TODO: verificar o uso no site
