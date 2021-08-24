@@ -710,6 +710,9 @@ class SPS_Asset:
         self._uri = None
         self._filename = None
 
+    def __str__(self):
+        return xml_utils.tostring(self._child)
+
     @property
     def tag(self):
         if self._parent is not None:

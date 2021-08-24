@@ -164,11 +164,24 @@ class DocsManager:
         # obtém o XML
         xml_sps = SPS_Package(doc_pkg.xml_content)
 
+        document = self._fetch_document(xml_sps, pid_v2)
+
+        if is_new_document and document:
+            raise ValueError(
+                "Document %s is already registered with v3=%s" %
+                (pid_v2, document._id)
+            )
+        if not is_new_document and not document:
+            raise ValueError(
+                "Unable to update document %s, which does not exists" %
+                pid_v2
+            )
+
         if is_new_document:
             document = db.create_document()
-            add_pids_to_xml(xml_sps, document, doc_pkg.xml, pid_v2, self._v3_manager)
-        else:
-            document = self._fetch_document(xml_sps, pid_v2)
+
+        # garante que o XML está completo com os PIDs esperados
+        add_pids_to_xml(xml_sps, document, doc_pkg.xml, pid_v2, self._v3_manager)
 
         if not xml_sps.scielo_pid_v3:
             raise exceptions.MissingPidV3Error(
@@ -227,7 +240,7 @@ def update_document_data(
     set_issue_data(document, issue_id)
     set_order(document, xml_sps, document_order)
     set_renditions(document, registered_renditions)
-    set_xml_url(document, registered_xml)
+    set_xml_url(document, registered_xml["uri"])
     set_ids(document, xml_sps)
     set_is_public(document, is_public=is_public)
     set_languages(document, xml_sps)
@@ -333,7 +346,7 @@ def set_article_abstracts(article, xml_sps):
 
 
 def set_article_publication_date(article, xml_sps):
-    article.publication_date = xml_sps.document_pubdate
+    article.publication_date = "-".join(xml_sps.document_pubdate)
 
 
 def set_article_pages(article, xml_sps):
