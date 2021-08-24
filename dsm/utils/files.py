@@ -1,7 +1,6 @@
 import os
 import shutil
 import logging
-import hashlib
 import tempfile
 from datetime import datetime
 from zipfile import ZipFile
@@ -85,18 +84,6 @@ def write_file(path, source, mode="w"):
 
     with open(path, mode, encoding="utf-8") as f:
         f.write(source)
-
-
-def sha1(path):
-    logger.debug("Lendo arquivo: %s", path)
-    _sum = hashlib.sha1()
-    with open(path, "rb") as file:
-        while True:
-            chunk = file.read(1024)
-            if not chunk:
-                break
-            _sum.update(chunk)
-    return _sum.hexdigest()
 
 
 def download_files_and_create_zip_file(

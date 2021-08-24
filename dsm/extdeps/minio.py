@@ -2,6 +2,7 @@
 import logging
 import os
 import json
+import hashlib
 
 from minio import Minio
 from minio.error import S3Error
@@ -9,6 +10,25 @@ from minio.error import S3Error
 from dsm.utils import files
 
 logger = logging.getLogger(__name__)
+
+
+class SHA1Error(Exception):
+    pass
+
+
+def sha1(path):
+    logger.debug("Lendo arquivo: %s", path)
+    _sum = hashlib.sha1()
+    try:
+        with open(path, "rb") as file:
+            while True:
+                chunk = file.read(1024)
+                if not chunk:
+                    break
+                _sum.update(chunk)
+        return _sum.hexdigest()
+    except (ValueError, FileNotFoundError) as e:
+        raise FileNotFoundError("%s: %s" % (path, e))
 
 
 class MinioStorage:
@@ -91,13 +111,11 @@ class MinioStorage:
             Var: Prefix
         O nome do arquivo sera alterado para soma SHA-1, para evitar duplicatas e conflitos em nomes.
         """
-        n_filename = files.sha1(file_path)
+        n_filename = sha1(file_path)
         _, file_extension = os.path.splitext(os.path.basename(file_path))
-
         return f"{prefix}/{n_filename}{file_extension}"
 
     def get_urls(self, media_path: str) -> str:
-
         url = self._client.presigned_get_object(self.bucket_name, media_path)
         return url.split("?")[0]
 
