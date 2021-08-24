@@ -103,7 +103,7 @@ class MinioStorage:
             self.bucket_name, json.dumps(self.POLICY_READ_ONLY)
         )
 
-    def _generator_object_name(self, file_path, prefix):
+    def _generator_object_name(self, file_path, prefix, preserve_name):
         """
         2 niveis de Pastas onde :
             * o primeiro representando o periódico por meio do ISSN+Acrônimo
@@ -111,16 +111,19 @@ class MinioStorage:
             Var: Prefix
         O nome do arquivo sera alterado para soma SHA-1, para evitar duplicatas e conflitos em nomes.
         """
-        n_filename = sha1(file_path)
-        _, file_extension = os.path.splitext(os.path.basename(file_path))
+        original_name, file_extension = os.path.splitext(os.path.basename(file_path))
+        if preserve_name:
+            n_filename = original_name
+        else:
+            n_filename = sha1(file_path)
         return f"{prefix}/{n_filename}{file_extension}"
 
     def get_urls(self, media_path: str) -> str:
         url = self._client.presigned_get_object(self.bucket_name, media_path)
         return url.split("?")[0]
 
-    def register(self, file_path, prefix="", original_uri=None) -> str:
-        object_name = self._generator_object_name(file_path, prefix)
+    def register(self, file_path, prefix="", original_uri=None, preserve_name=False) -> str:
+        object_name = self._generator_object_name(file_path, prefix, preserve_name)
         metadata = {"origin_name": os.path.basename(file_path)}
         if original_uri is not None:
             metadata.update({"origin_uri": original_uri})

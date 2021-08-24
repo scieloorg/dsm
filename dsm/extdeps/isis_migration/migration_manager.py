@@ -384,7 +384,8 @@ def _register_migrated_document_files_zipfile(
             files_storage,
             files_storage_folder,
             zip_file_path,
-            os.path.basename(zip_file_path))
+            os.path.basename(zip_file_path),
+            preserve_name=True)
         f_doc.zipfile = db.create_remote_and_local_file(
             remote=uri_and_name["uri"], local=uri_and_name["name"])
         f_doc.status = "3"

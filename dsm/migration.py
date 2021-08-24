@@ -50,10 +50,8 @@ def register_documents(pub_year=None, updated_from=None, updated_to=None):
 
     _migration_manager.db_connect()
     for doc in _select_docs(pub_year, updated_from, updated_to):
-        print(doc)
         zip_file_path = _migration_manager.register_old_website_document_files(
             doc._id)
-        print(zip_file_path)
         if os.path.isfile(zip_file_path) and doc.file_type == "xml":
             _register_package(_docs_manager, zip_file_path, doc)
         else:
