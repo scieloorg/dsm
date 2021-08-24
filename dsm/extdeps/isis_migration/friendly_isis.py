@@ -69,7 +69,7 @@ class FriendlyISISDocument:
         self._records = records
         self._pages = self._get_article_meta_item_("v014")
         if self._pages is None:
-            raise ValueError(records[1])
+            raise ValueError("missing v014: %s" % str(records[1]))
         self._set_file_name()
 
     def _get_article_meta_item_(self, tag, formatted=False):

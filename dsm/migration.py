@@ -8,42 +8,80 @@ from datetime import datetime
 from dsm.extdeps.isis_migration import (
     id2json,
     migration_manager,
+    friendly_isis,
 )
 from dsm import configuration
-
+from dsm.core.issue import get_bundle_id
+from dsm.core.document import DocsManager
 
 _migration_manager = migration_manager.MigrationManager()
 
 
-def migrate_documents(pub_year=None, updated_from=None, updated_to=None):
-    _migration_manager.db_connect()
+def _select_docs(pub_year=None, updated_from=None, updated_to=None):
     if any((pub_year, updated_from, updated_to)):
-        for doc in _migration_manager.list_documents(
-                    pub_year, updated_from, updated_to):
-            _migration_manager.update_website_document_data(doc._id)
+        yield from _migration_manager.list_documents(
+                    pub_year, updated_from, updated_to)
     else:
         for y in range(1900, datetime.now().year):
             y = str(y).zfill(4)
-            for doc in _migration_manager.list_documents(
-                        pub_year, f"{y}0000", f"{y}9999"):
-                _migration_manager.update_website_document_data(doc._id)
+            yield from _migration_manager.list_documents(
+                        pub_year, f"{y}0000", f"{y}9999")
 
 
-def migrate_documents_files(pub_year=None, updated_from=None, updated_to=None):
+def update_website_with_documents_metadata(pub_year=None, updated_from=None, updated_to=None):
     _migration_manager.db_connect()
-    if any((pub_year, updated_from, updated_to)):
-        for doc in _migration_manager.list_documents(
-                    pub_year, updated_from, updated_to):
-            _migration_manager.register_old_website_document_files(doc._id)
-    else:
-        for y in range(1900, datetime.now().year):
-            y = str(y).zfill(4)
-            for doc in _migration_manager.list_documents(
-                        pub_year, f"{y}0000", f"{y}9999"):
-                _migration_manager.register_old_website_document_files(doc._id)
+    for doc in _select_docs(pub_year, updated_from, updated_to):
+        _migration_manager.update_website_document_metadata(doc._id)
 
 
-def migrate_artigo_id(id_file_path):
+def register_old_website_files(pub_year=None, updated_from=None, updated_to=None):
+    _migration_manager.db_connect()
+    for doc in _select_docs(pub_year, updated_from, updated_to):
+        zip_file_path = _migration_manager.register_old_website_document_files(
+            doc._id)
+
+
+def register_documents(pub_year=None, updated_from=None, updated_to=None):
+    _files_storage = configuration.get_files_storage()
+    _db_url = configuration.get_db_url()
+    _v3_manager = configuration.get_pid_manager()
+
+    _docs_manager = DocsManager(_files_storage, _db_url, _v3_manager)
+
+    _migration_manager.db_connect()
+    for doc in _select_docs(pub_year, updated_from, updated_to):
+        print(doc)
+        zip_file_path = _migration_manager.register_old_website_document_files(
+            doc._id)
+        print(zip_file_path)
+        if os.path.isfile(zip_file_path) and doc.file_type == "xml":
+            _register_package(_docs_manager, zip_file_path, doc)
+        else:
+            print(doc._id)
+            _migration_manager.update_website_document_metadata(doc._id)
+
+
+def _register_package(_docs_manager, zip_file_path, doc):
+    fi_doc = friendly_isis.FriendlyISISDocument(doc._id, doc.records)
+    issue_id = get_bundle_id(
+        doc._id[1:10],
+        doc.pub_year,
+        fi_doc.volume,
+        fi_doc.number,
+        fi_doc.suppl,
+    )
+    packages = _docs_manager.get_doc_packages(zip_file_path)
+    doc_pkg = list(packages.values())[0]
+    res = _docs_manager.register_document(
+        doc_pkg,
+        doc._id,
+        doc.file_name,
+        issue_id,
+    )
+    print(res)
+
+
+def register_artigo_id_file_data(id_file_path):
     _migration_manager.db_connect()
     for _id, records in id2json.get_json_records(
             id_file_path, id2json.article_id):
@@ -52,7 +90,7 @@ def migrate_artigo_id(id_file_path):
                 if _migration_manager.register_isis_issue(_id, records[0]):
                     _migration_manager.update_website_issue_data(_id)
             else:
-                _migration_manager.register_document_isis_records(_id, records)
+                _migration_manager.register_isis_document(_id, records)
         except:
             print(_id)
             print(f"Algum problema com {_id}")
@@ -60,7 +98,7 @@ def migrate_artigo_id(id_file_path):
             raise
 
 
-def migrate_title_id(id_file_path):
+def migrate_title(id_file_path):
     _migration_manager.db_connect()
 
     for _id, records in id2json.get_json_records(
@@ -74,7 +112,7 @@ def migrate_title_id(id_file_path):
             raise
 
 
-def migrate_issue_id(id_file_path):
+def migrate_issue(id_file_path):
     _migration_manager.db_connect()
 
     for _id, records in id2json.get_json_records(
@@ -111,78 +149,106 @@ def main():
 
     migrate_title_parser = subparsers.add_parser(
         "migrate_title",
-        help="Migrate ISIS DB to MongoDB")
+        help=(
+            "Register the content of title.id in MongoDB and"
+            " update the website with journals data"
+        )
+    )
     migrate_title_parser.add_argument(
         "id_file_path",
-        # metavar="file",
-        help="Path of ID file that will be migrated"
+        help="Path of ID file that will be imported"
     )
 
     migrate_issue_parser = subparsers.add_parser(
-        "update_website_issue_data",
-        help="Migrate ISIS DB to MongoDB")
+        "migrate_issue",
+        help=(
+            "Register the content of issue.id in MongoDB and"
+            " update the website with issues data"
+        )
+    )
     migrate_issue_parser.add_argument(
         "id_file_path",
-        # metavar="file",
-        help="Path of ID file that will be migrated"
+        help="Path of ID file that will be imported"
     )
 
-    migrate_artigo_parser = subparsers.add_parser(
-        "migrate_artigo",
-        help="Migrate ISIS DB to MongoDB",
+    register_artigo_id_file_data_parser = subparsers.add_parser(
+        "register_artigo_id_file_data",
+        help="Register the content of artigo.id in MongoDB",
     )
-    migrate_artigo_parser.add_argument(
+    register_artigo_id_file_data_parser.add_argument(
         "id_file_path",
-        # metavar="file",
-        help="Path of ID file that will be migrated"
+        help="Path of ID file that will be imported"
     )
 
-    migrate_documents_parser = subparsers.add_parser(
-        "migrate_documents",
-        help="Migrate JSON to MongoDB (site)",
+    # update_website_with_documents_metadata_parser = subparsers.add_parser(
+    #     "update_website_with_documents_metadata",
+    #     help="Migrate JSON to MongoDB (site)",
+    # )
+    # update_website_with_documents_metadata_parser.add_argument(
+    #     "--pub_year",
+    #     help="Publication year",
+    # )
+    # update_website_with_documents_metadata_parser.add_argument(
+    #     "--updated_from",
+    #     help="Updated from"
+    # )
+    # update_website_with_documents_metadata_parser.add_argument(
+    #     "--updated_to",
+    #     help="Updated to"
+    # )
+
+    # register_old_website_files_parser = subparsers.add_parser(
+    #     "register_old_website_files",
+    #     help="Migrate XML packages",
+    # )
+    # register_old_website_files_parser.add_argument(
+    #     "--pub_year",
+    #     help="Publication year",
+    # )
+    # register_old_website_files_parser.add_argument(
+    #     "--updated_from",
+    #     help="Updated from"
+    # )
+    # register_old_website_files_parser.add_argument(
+    #     "--updated_to",
+    #     help="Updated to"
+    # )
+
+    register_documents_parser = subparsers.add_parser(
+        "register_documents",
+        help=(
+            "Update the website with documents (text available only for XML)"
+        ),
     )
-    migrate_documents_parser.add_argument(
+    register_documents_parser.add_argument(
         "--pub_year",
         help="Publication year",
     )
-    migrate_documents_parser.add_argument(
+    register_documents_parser.add_argument(
         "--updated_from",
         help="Updated from"
     )
-    migrate_documents_parser.add_argument(
-        "--updated_to",
-        help="Updated to"
-    )
-
-    migrate_documents_files_parser = subparsers.add_parser(
-        "migrate_documents_files",
-        help="Migrate XML packages",
-    )
-    migrate_documents_files_parser.add_argument(
-        "--pub_year",
-        help="Publication year",
-    )
-    migrate_documents_files_parser.add_argument(
-        "--updated_from",
-        help="Updated from"
-    )
-    migrate_documents_files_parser.add_argument(
+    register_documents_parser.add_argument(
         "--updated_to",
         help="Updated to"
     )
 
     args = parser.parse_args()
 
-    if args.command == "migrate_artigo":
-        migrate_artigo_id(args.id_file_path)
-    elif args.command == "migrate_title":
-        migrate_title_id(args.id_file_path)
-    elif args.command == "update_website_issue_data":
-        migrate_issue_id(args.id_file_path)
-    elif args.command == "migrate_documents":
-        migrate_documents(args.pub_year, args.updated_from, args.updated_to)
-    elif args.command == "migrate_documents_files":
-        migrate_documents_files(args.pub_year, args.updated_from, args.updated_to)
+    if args.command == "migrate_title":
+        migrate_title(args.id_file_path)
+    elif args.command == "migrate_issue":
+        migrate_issue(args.id_file_path)
+    elif args.command == "register_artigo_id_file_data":
+        register_artigo_id_file_data(args.id_file_path)
+    elif args.command == "register_documents":
+        register_documents(args.pub_year, args.updated_from, args.updated_to)
+    # elif args.command == "update_website_with_documents_metadata":
+    #     update_website_with_documents_metadata(
+    #         args.pub_year, args.updated_from, args.updated_to)
+    # elif args.command == "register_old_website_files":
+    #     register_old_website_files(
+    #         args.pub_year, args.updated_from, args.updated_to)
     else:
         parser.print_help()
 

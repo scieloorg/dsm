@@ -59,7 +59,7 @@ class MigrationManager:
     def db_connect(self):
         db.mk_connection(self._db_url)
 
-    def register_document_isis_records(self, _id, records):
+    def register_isis_document(self, _id, records):
         """
         Register migrated document data
 
@@ -223,9 +223,9 @@ class MigrationManager:
         # salva os dados
         return db.save_data(issue)
 
-    def update_website_document_data(self, document_id):
+    def update_website_document_metadata(self, document_id):
         """
-        Migrate isis document data to website
+        Update the website document
 
         Parameters
         ----------
@@ -235,22 +235,19 @@ class MigrationManager:
         -------
         dict
         """
-        # registro migrado formato json
+        # obtém os dados de artigo
         i_doc = db.fetch_isis_document(document_id)
+        fi_doc = friendly_isis.FriendlyISISDocument(i_doc._id, i_doc.records)
 
-        # interface mais amigável para obter os dados da base isis
-        # article
-        fi_doc = friendly_isis.FriendlyISISDocument(
-            i_doc._id, i_doc.records)
-
-        # issue
+        # obtém os dados de issue
         i_issue = db.fetch_isis_issue(fi_doc.issue_pid)
-        fi_issue = friendly_isis.FriendlyISISIssue(
-            i_issue._id, i_issue.record)
+        fi_issue = friendly_isis.FriendlyISISIssue(i_issue._id, i_issue.record)
         fi_doc.issue = fi_issue
 
-        # cria ou recupera o registro do website
+        # cria ou recupera o registro de documento do website
         document = db.fetch_document(document_id) or db.create_document()
+
+        # cria ou recupera o registro de issue do website
         bundle_id = get_bundle_id(
             fi_doc.journal_pid,
             fi_doc.collection_pubdate[:4],
@@ -258,8 +255,8 @@ class MigrationManager:
             fi_doc.number,
             fi_doc.suppl,
         )
-
         issue = db.fetch_issue(bundle_id) or db.create_issue()
+
         # atualiza os dados
         _update_document_with_isis_data(document, fi_doc, issue)
 
@@ -309,11 +306,14 @@ class MigrationManager:
         zip_file_path = create_zip_file(files, i_doc.file_name + ".zip")
 
         # register in files storage (minio)
-        _register_f_document_files_zipfile(
-            self._files_storage, i_doc, zip_file_path)
+        files_storage_folder = os.path.join(
+            "migration", f_doc.journal_pid, f_issue.issue_folder)
+        _register_migrated_document_files_zipfile(
+            self._files_storage, files_storage_folder, i_doc, zip_file_path)
 
         # salva os dados
-        return db.save_data(i_doc)
+        db.save_data(i_doc)
+        return zip_file_path
 
     def list_documents(self, pub_year, updated_from, updated_to):
         """
@@ -337,6 +337,7 @@ class MigrationManager:
         elif updated_from or updated_to:
             docs = db.get_isis_documents_by_date_range(
                 updated_from, updated_to)
+            print(len(docs))
         return docs
 
 
@@ -376,11 +377,12 @@ def _get_document_files(f_doc, main_language, issn):
     )
 
 
-def _register_f_document_files_zipfile(files_storage, f_doc, zip_file_path):
+def _register_migrated_document_files_zipfile(
+        files_storage, files_storage_folder, f_doc, zip_file_path):
     try:
         uri_and_name = files_storage_register(
             files_storage,
-            os.path.join("migration", issn, f_doc.issue_folder),
+            files_storage_folder,
             zip_file_path,
             os.path.basename(zip_file_path))
         f_doc.zipfile = db.create_remote_and_local_file(
@@ -393,14 +395,14 @@ def _register_f_document_files_zipfile(files_storage, f_doc, zip_file_path):
 
 def _get_xml_location(subdir_acron_issue_folder, file_name):
     try:
-        return glob.glob(
-            os.path.join(
-                BASES_PDF_PATH,
-                subdir_acron_issue_folder,
-                f"{file_name}.xml"
-            ))[0]
+        xml_file_path = os.path.join(
+            BASES_XML_PATH,
+            subdir_acron_issue_folder,
+            f"{file_name}.xml"
+        )
+        return glob.glob(xml_file_path)[0]
     except IndexError:
-        return None
+        raise FileNotFoundError("Not found %s" % xml_file_path)
 
 
 def _set_pdfs(f_doc, pdf_locations):
