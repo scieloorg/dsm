@@ -2,6 +2,8 @@
 Not defined;coordinator;inventor;publisher;organizer;translator
 nd;coord;inventor;ed;org;tr
 """
+import os
+
 CONTRIB_ROLES = {
     "ND": "author",
     "nd": "author",
@@ -13,13 +15,31 @@ CONTRIB_ROLES = {
 }
 
 
+def fix_windows_path(windows_path):
+    """
+    It can not handle `o`, `x`, `N`, `u`, `U`
+    For the combination of slash and this letters,
+    the correction have to be done manually
+    """
+    path = os.path.normpath(windows_path).replace("\\", "/")
+    special = ("\x08", "\a", "\b", "\f", "\n", "\r", "\t", "\v", )
+    correction = ("/b", "/a", "/b", "/f", "/n", "/r", "/t", "/v", )
+    for ch, correct in zip(special, correction):
+        path = path.replace(ch, correct)
+    return path
+
+
 def _get_value(data, tag):
     """
     Returns first value of field `tag`
     """
     # data['v880'][0]['_']
     try:
-        return data[tag][0]['_']
+        _data = data[tag][0]
+        if len(_data) > 1:
+            return _data
+        else:
+            return _data['_']
     except (KeyError, IndexError):
         return None
 
@@ -39,7 +59,7 @@ def _get_items(data, tag):
         return []
 
 
-class Document:
+class FriendlyISISDocument:
     """
     Interface amigável para obter os dados da base isis
     que estão no formato JSON
@@ -47,6 +67,10 @@ class Document:
     def __init__(self, _id, records):
         self._id = _id
         self._records = records
+        self._pages = self._get_article_meta_item_("v014")
+        if self._pages is None:
+            raise ValueError("missing v014: %s" % str(records[1]))
+        self._set_file_name()
 
     def _get_article_meta_item_(self, tag, formatted=False):
         if formatted:
@@ -69,6 +93,47 @@ class Document:
         _data = {}
         _data["article"] = self._records
         return _data
+
+    @property
+    def raw_file_path(self):
+        return self._get_article_meta_item_("v702")
+
+    def _set_file_name(self):
+        file_path = self.raw_file_path
+        file_path = fix_windows_path(file_path)
+        self._basename = os.path.basename(file_path)
+        self._filename, self._ext = os.path.splitext(self._basename)
+
+    @property
+    def file_name(self):
+        return self._filename
+
+    @property
+    def file_type(self):
+        return "xml" if self._ext == ".xml" else "html"
+
+    @property
+    def volume(self):
+        return self._get_article_meta_item_("v031")
+
+    @property
+    def number(self):
+        return self._get_article_meta_item_("v032")
+
+    @property
+    def suppl(self):
+        return (
+            self._get_article_meta_item_("v131") or
+            self._get_article_meta_item_("v132")
+        )
+
+    @property
+    def document_pubdate(self):
+        return self._get_article_meta_item_("v223")
+
+    @property
+    def collection_pubdate(self):
+        return self._get_article_meta_item_("v065")
 
     @property
     def doi(self):
@@ -152,6 +217,14 @@ class Document:
         pass
 
     @property
+    def journal_pid(self):
+        return self._get_article_meta_item_("v035")
+
+    @property
+    def issue_pid(self):
+        return self.scielo_pid_v2[1:18]
+
+    @property
     def journal(self):
         return self._journal
 
@@ -173,6 +246,18 @@ class Document:
         return self.issue.get_section(code, self.language)
 
     @property
+    def translated_sections(self):
+        return self.issue.get_section(self.section_code)
+
+    @property
+    def section_code(self):
+        return self._get_article_meta_item_("v049")
+
+    @property
+    def article_type(self):
+        return self._get_article_meta_item_("v071")
+
+    @property
     def scielo_pid_v1(self):
         return self._get_article_meta_item_("v002")
 
@@ -189,8 +274,30 @@ class Document:
         return self._get_article_meta_item_("v881")
 
     @property
+    def doi_with_lang(self):
+        return {
+            item.get("l"): item.get("d")
+            for item in self._get_article_meta_items_("v337")
+        }
+
+    @property
+    def doi(self):
+        return self.doi_with_lang.get(self.language)
+
+    @property
     def order(self):
-        return self._get_article_meta_item_("v121")
+        return self._get_article_meta_item_("v121").zfill(5)
+
+    @property
+    def languages(self):
+        return [self.language] + self.translated_languages
+
+    @property
+    def translated_languages(self):
+        return (
+            self._get_article_meta_items_("v601") or
+            list((self.translated_htmls() or {}).keys())
+        )
 
     @property
     def original_title(self):
@@ -237,15 +344,100 @@ class Document:
     @property
     def contrib_group(self):
         for item in self._get_article_meta_items_("v010"):
+            aff = None
+            xref_items = contrib_xref(item.get("1"))
+            for xref_type, xref in xref_items:
+                if xref_type == "aff":
+                    aff = self.affiliations.get(xref)
             yield (
                 {
                     "surname": item.get("s"),
                     "given_names": item.get("n"),
                     "role": CONTRIB_ROLES.get(item.get("r")),
-                    "xref": contrib_xref(item.get("1")),
+                    "xref": xref_items,
                     "orcid": item.get("k"),
+                    "affiliation": aff,
                 }
             )
+
+    @property
+    def affiliations(self):
+        """
+
+        """
+        affs = {}
+        for item in self._get_article_meta_items_("v070"):
+            aff = {
+                "label": item.get('l'),
+                "id": item.get('i'),
+                "email": item.get('e'),
+                "orgdiv3": item.get('3'),
+                "orgdiv2": item.get('2'),
+                "orgdiv1": item.get('1'),
+                "country": item.get('p'),
+                "city": item.get('c'),
+                "state": item.get('s'),
+                "orgname": item.get('_'),
+            }
+            affs[item.get('i')] = aff
+        return affs
+
+    @property
+    def norm_affiliations(self):
+        affs = {}
+        for item in self._get_article_meta_items_("v240"):
+            aff = {
+                "id": item.get('i'),
+                "country": item.get('p'),
+                "city": item.get('c'),
+                "state": item.get('s'),
+                "orgname": item.get('_'),
+            }
+            affs[item.get('i')] = aff
+        return affs
+
+    @property
+    def keywords_groups(self):
+        kwdg = {}
+        for item in self._get_article_meta_items_("v085", formatted=True):
+            if not item.get("k"):
+                continue
+            lang = item.get("l")
+            kwdg.setdefault(lang, [])
+            kwd = f'{item.get("k")} {item.get("s") or ""}'.strip()
+            kwdg[lang].append(kwd)
+        return kwdg
+
+    @property
+    def elocation_id(self):
+        return self._pages.get("e")
+
+    @property
+    def fpage(self):
+        return self._pages.get("f")
+
+    @property
+    def fpage_seq(self):
+        return self._pages.get("s")
+
+    @property
+    def lpage(self):
+        return self._pages.get("l")
+
+    @property
+    def body(self):
+        # TODO
+        return None
+
+    @property
+    def abstract(self):
+        # TODO
+        return None
+
+    @property
+    def abstracts(self):
+        # TODO
+        return {}
 
 
 def contrib_xref(xrefs):
@@ -263,7 +455,7 @@ def complete_uri(text, website_url):
     return text.replace("/img/revistas", f"{website_url}/img/revistas")
 
 
-class Journal:
+class FriendlyISISJournal:
     """
     Interface amigável para obter os dados da base isis
     que estão no formato JSON
@@ -438,7 +630,7 @@ class Journal:
         return _hist[-1][1] if _hist[-1][1] != 'C' else None
 
 
-class Issue:
+class FriendlyISISIssue:
     """
     Interface amigável para obter os dados da base isis
     que estão no formato JSON
@@ -467,9 +659,11 @@ class Issue:
                 self._sections[item["c"]][item["l"]] = item["t"]
         return self._sections
 
-    def get_section(self, code, lang):
+    def get_section(self, code, lang=None):
         try:
-            return self.sections[code][lang]
+            if lang:
+                return self.sections[code][lang]
+            return self.sections[code]
         except KeyError:
             return None
 
@@ -486,8 +680,16 @@ class Issue:
         return self._id
 
     @property
-    def journal(self):
+    def journal_pid(self):
         return self._get_item_("v035")
+
+    @property
+    def journal(self):
+        return self._journal
+
+    @journal.setter
+    def journal(self, value):
+        self._journal = value
 
     @property
     def volume(self):
@@ -514,7 +716,7 @@ class Issue:
         return self._get_item_("v065")[:4]
 
     @property
-    def label(self):
+    def issue_folder(self):
         if self.number == "ahead":
             return self.year + "nahead"
 
@@ -536,7 +738,7 @@ class Issue:
 
     @property
     def pid(self):
-        return f"{self.journal}{self.order}"
+        return self._id or f"{self.journal_pid}{self.order}"
 
     @property
     def unpublish_reason(self):

@@ -169,7 +169,7 @@ def _get_fields_and_their_content(content):
     rows = content.splitlines()
     return [
         _parse_field(row)
-        for row in rows[1:]
+        for row in rows
         if row
     ]
 
@@ -188,11 +188,29 @@ def _save_records(records, curr_filename, prev_filename, output_file_path):
     return records
 
 
-def get_json_records(input_file_path, get_id_function):
-    content = files.read_file(input_file_path, encoding='iso-8859-1')
+def read_large_file(input_file_path, encoding="utf-8"):
+    with open(input_file_path, "r", encoding=encoding) as fp:
+        for row in fp.read().splitlines():
+            yield row
 
+
+def read_id_file(input_file_path):
+    rows = []
+    for row in read_large_file(input_file_path, encoding="iso-8859-1"):
+        if row.startswith("!ID "):
+            if len(rows):
+                yield "\n".join(rows)
+                rows = []
+        else:
+            rows.append(row)
+    yield "\n".join(rows)
+
+
+def get_json_records(input_file_path, get_id_function):
     items = {}
-    for record_content in ("\n" + content).split("\n!ID "):
+    for record_content in read_id_file(input_file_path):
+        if not record_content:
+            continue
         try:
             fields = _get_fields_and_their_content(record_content)
             data = _build_record(fields)

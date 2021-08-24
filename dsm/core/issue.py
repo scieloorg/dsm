@@ -1,7 +1,6 @@
 import logging
 
 from dsm.extdeps import db
-from dsm.extdeps.isis_migration.json2doc import Issue
 from dsm import exceptions
 
 

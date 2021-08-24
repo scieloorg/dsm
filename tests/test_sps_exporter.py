@@ -2,7 +2,7 @@ from unittest import TestCase
 
 from dsm.extdeps.isis_migration import (
     sps_exporter,
-    json2doc,
+    friendly_isis,
 )
 from dsm.extdeps.isis_migration.sps_exporter import (
     SetupArticlePipe,
@@ -41,7 +41,7 @@ import json
 
 def get_document():
     content = files.read_file("./tests/fixtures/json_files/artigo.json")
-    return json2doc.Document("id", json.loads(content))
+    return friendly_isis.FriendlyISISDocument("id", json.loads(content))
 
 
 def get_journal():
@@ -64,7 +64,7 @@ def get_journal():
             "v150": [{"_": "Abbrev journal title"}],
         }]
     }
-    return json2doc.Journal("id", journal_json["records"][0])
+    return friendly_isis.FriendlyISISJournal("id", journal_json["records"][0])
 
 
 def get_issue():
@@ -77,7 +77,7 @@ def get_issue():
             ],
         }]
     }
-    return json2doc.Issue("id", issue_json["records"][0])
+    return friendly_isis.FriendlyISISIssue("id", issue_json["records"][0])
 
 
 class TestSPSExporter(TestCase):

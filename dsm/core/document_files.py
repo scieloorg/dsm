@@ -329,7 +329,9 @@ def register_assets(files_storage, files_storage_folder,
     for asset_in_xml in assets_in_xml:
         # asset_in_xml is instance of SPS_Asset
         asset_file_path = doc_package.get_asset(asset_in_xml.xlink_href)
-
+        # FIXME
+        # parece que há um bug que faz com que asset_file_path is None
+        # o xlink_href no XML não tem correspondente no pacote
         try:
             # atualiza os valores do atributo xlink:href dos ativos com a
             # uri do `files_storage`
@@ -349,23 +351,31 @@ def _register_file(files_storage, files_storage_folder, file_path, zip_file_path
     basename = os.path.basename(file_path)
 
     if zip_file_path:
-        with ZipFile(zip_file_path) as zf:
-            uri_and_name = files_storage_register(files_storage, files_storage_folder, zf.read(file_path), basename)
+        with tempfile.TemporaryDirectory() as tmpdirname:
+            with ZipFile(zip_file_path) as zf:
+                extracted_path = zf.extract(file_path, path=tmpdirname)
+                uri_and_name = files_storage_register(
+                    files_storage, files_storage_folder,
+                    extracted_path, basename)
+                files.delete_folder(tmpdirname)
     else:
         # registra o arquivo no `files_storage`
-        uri_and_name = files_storage_register(files_storage, files_storage_folder, file_path, basename)
+        uri_and_name = files_storage_register(
+            files_storage, files_storage_folder,
+            file_path, basename)
     return uri_and_name
 
 
 def files_storage_register(files_storage, files_storage_folder,
-                           file_path, filename):
+                           file_path, filename, preserve_name=False):
     try:
         uri = files_storage.register(
-            file_path, files_storage_folder, filename
+            file_path, files_storage_folder, filename, preserve_name
         )
         return {"uri": uri, "name": filename}
 
     except:
+        raise
         raise exceptions.FilesStorageRegisterError(
             f"Unable to register {file_path}"
         )

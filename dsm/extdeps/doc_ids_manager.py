@@ -47,7 +47,7 @@ def _add_document_pids_to_xml(xml_sps, document):
         # completa XML com os PIDs de artigos já publicados no site
         xml_sps.scielo_pid_v3 = xml_sps.scielo_pid_v3 or document._id
         xml_sps.aop_pid = xml_sps.aop_pid or document.aop_pid
-        if document.pid != xml_sps.pid:
+        if document.pid != xml_sps.scielo_pid_v2:
             xml_sps.aop_pid = document.pid
 
 

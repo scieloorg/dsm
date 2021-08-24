@@ -139,7 +139,7 @@ def explore_source(source):
     if not packages:
         packages = _explore_folder(source)
     if not packages:
-        raise ValueError("Invalid value for `source`")
+        raise ValueError("%s: Invalid value for `source`" % source)
     return packages
 
 

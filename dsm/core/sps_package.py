@@ -154,6 +154,15 @@ class SPS_Package:
         return data
 
     @property
+    def keywords_groups(self):
+        data = {}
+        for node, lang in self._nodes_with_lang(".//kwd-group"):
+            data[lang] = []
+            for kwd in node.findall(".//kwd"):
+                data[lang].append(formatted_text(kwd))
+        return data
+
+    @property
     def subject(self):
         """
         <article-categories>
@@ -700,6 +709,9 @@ class SPS_Asset:
         self._id = _id or self._parent.get("id")
         self._uri = None
         self._filename = None
+
+    def __str__(self):
+        return xml_utils.tostring(self._child)
 
     @property
     def tag(self):
