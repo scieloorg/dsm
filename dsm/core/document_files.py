@@ -23,12 +23,18 @@ def build_zip_package(files_storage, record):
 
     # get uri and filename of assets and renditions
     assets = _get_assets_to_zip(xml_sps)
+    print("")
+    print(assets)
+    
     renditions = _get_renditions_to_zip(record)
-
+    print("")
+    print(renditions)
+    
     files_storage_folder = _get_files_storage_folder(
         issn=xml_sps.issn,
         scielo_pid_v3=xml_sps.scielo_pid_v3,
         prefix=configuration.MINIO_SPF_DIR)
+
     xml_uri_and_name = register_xml(
         files_storage,
         files_storage_folder,
@@ -56,6 +62,7 @@ def build_zip_package(files_storage, record):
     data['renditions'] = renditions
     data['file'] = uri_and_name
 
+    print(data)
     return data
 
 
@@ -96,7 +103,9 @@ def _get_xml_to_zip(document):
     dsm.data.sps_package.SPS_Package
     """
     # get XML file
-    xml_sps = SPS_Package(requests.requests_get_content(document.xml))
+    content = requests.requests_get_content(document.xml)
+
+    xml_sps = SPS_Package(content)
 
     # change assets uri
     xml_sps.assets.remote_to_local(xml_sps.package_name)
@@ -381,7 +390,7 @@ def files_storage_register(files_storage, files_storage_folder,
         )
 
 
-def register_received_package(files_storage, pkg_path):
+def register_received_package(files_storage, pkg_path, _id, annotation=None):
     """
 
     Raises
@@ -411,7 +420,9 @@ def register_received_package(files_storage, pkg_path):
             zip_path,
             zip_name,
         )
-        db.register_received_package(**uri_and_name)
+        db.register_received_package(
+            _id, uri_and_name["uri"], uri_and_name["name"],
+            annotation=annotation)
     else:
         raise exceptions.ReceivedPackageRegistrationError(
             f"Unable to register {pkg_path}")

@@ -10,6 +10,10 @@ class FetchDocumentError(Exception):
     ...
 
 
+class DBFetchDocumentError(Exception):
+    ...
+
+
 class DBFetchDocumentPackageError(Exception):
     ...
 

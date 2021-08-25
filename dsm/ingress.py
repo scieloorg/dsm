@@ -1,6 +1,9 @@
 """
-API for the documents
+API to ingress documents
 """
+import argparse
+from datetime import datetime
+
 from dsm.core.document import DocsManager
 
 from dsm import configuration
@@ -43,12 +46,13 @@ def get_package_uri_by_pid(scielo_pid_v3):
         if doc_pkg:
             results['doc_pkg'].append(doc_pkg)
     except Exception as e:
+        raise
         results['errors'].append(str(e))
 
     return results
 
 
-def upload_package(source, pid_v2_items={}, old_filenames={},
+def upload_package(source, receipt_id=None, pid_v2_items={}, old_filenames={},
                    issue_id=None, is_new_document=False):
     """
     Receive the package which is a folder or zip file
@@ -76,6 +80,7 @@ def upload_package(source, pid_v2_items={}, old_filenames={},
     ------
         dsm.exceptions.ReceivedPackageRegistrationError
     """
+    receipt_id = receipt_id or datetime.now().isoformat()
     _docs_manager.db_connect()
 
     # obtém os arquivos de cada documento
@@ -95,11 +100,12 @@ def upload_package(source, pid_v2_items={}, old_filenames={},
                 results['docs'].append({"name": name, "id": docid})
 
         except Exception as e:
+            raise
             results['errors'].append(str(e))
 
     # registra o pacote recebido
     if len(results['errors']) == 0:
-        _docs_manager.receive_package(source)
+        _docs_manager.store_received_package(source, receipt_id)
 
     return results
 
@@ -108,3 +114,55 @@ def list_documents(**kwargs):
     # TODO
     _docs_manager.db_connect()
     return []
+
+
+def _download_package(v3):
+    print(get_package_uri_by_pid(v3))
+
+
+def _upload_package(path):
+    print(upload_package(path))
+
+
+def main():
+    parser = argparse.ArgumentParser(
+        description="Documents ingress tools")
+    subparsers = parser.add_subparsers(
+        title="Commands", metavar="", dest="command")
+
+    download_package_parser = subparsers.add_parser(
+        "download_package",
+        help=(
+            "Register the content of title.id in MongoDB and"
+            " update the website with journals data"
+        )
+    )
+    download_package_parser.add_argument(
+        "v3",
+        help="Path of ID file that will be imported"
+    )
+
+    upload_package_parser = subparsers.add_parser(
+        "upload_package",
+        help=(
+            "Register the content of issue.id in MongoDB and"
+            " update the website with issues data"
+        )
+    )
+    upload_package_parser.add_argument(
+        "source_path",
+        help="Path of ID file that will be imported"
+    )
+
+    args = parser.parse_args()
+
+    if args.command == "download_package":
+        _download_package(args.v3)
+    elif args.command == "upload_package":
+        _upload_package(args.source_path)
+    else:
+        parser.print_help()
+
+
+if __name__ == '__main__':
+    main()
