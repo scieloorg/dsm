@@ -9,12 +9,15 @@ from dsm.core.document import DocsManager
 from dsm import configuration
 
 
+"""
+Instancia DocsManager e conecta no banco de dados
+"""
 _files_storage = configuration.get_files_storage()
 _db_url = configuration.get_db_url()
 _v3_manager = configuration.get_pid_manager()
 
-
 _docs_manager = DocsManager(_files_storage, _db_url, _v3_manager)
+_docs_manager.db_connect()
 
 
 def get_package_uri_by_pid(scielo_pid_v3):
@@ -30,7 +33,7 @@ def get_package_uri_by_pid(scielo_pid_v3):
     Returns
     -------
     dict
-        {"uri": uri, "name": name} or {"error": error}
+        `{"uri": uri, "name": name} or {"error": error}`
 
     Raises
     ------
@@ -38,15 +41,12 @@ def get_package_uri_by_pid(scielo_pid_v3):
         dsm.exceptions.FetchDocumentError
         dsm.exceptions.DBConnectError
     """
-    _docs_manager.db_connect()
-    
     results = {'doc_pkg': [], 'errors': []}
     try:
         doc_pkg = _docs_manager.get_zip_document_package(scielo_pid_v3)
         if doc_pkg:
             results['doc_pkg'].append(doc_pkg)
     except Exception as e:
-        raise
         results['errors'].append(str(e))
 
     return results
@@ -75,19 +75,22 @@ def upload_package(source, receipt_id=None, pid_v2_items={}, old_filenames={},
     Returns
     -------
     dict
-
+        ```
+        {'receipt_id': receipt_id, 'docs': [], 'errors': []}
+        ```
     Raises
     ------
         dsm.exceptions.ReceivedPackageRegistrationError
     """
+
+    # create `receipt_id` if it does not exist
     receipt_id = receipt_id or datetime.now().isoformat()
-    _docs_manager.db_connect()
 
     # obtém os arquivos de cada documento
     doc_packages = _docs_manager.get_doc_packages(source)
 
     # processa cada documento contido no pacote
-    results = {'docs': [], 'errors': []}
+    results = {'receipt_id': receipt_id, 'docs': [], 'errors': []}
     for name, doc_pkg in doc_packages.items():
         try:
             docid = _docs_manager.register_document(
@@ -100,7 +103,6 @@ def upload_package(source, receipt_id=None, pid_v2_items={}, old_filenames={},
                 results['docs'].append({"name": name, "id": docid})
 
         except Exception as e:
-            raise
             results['errors'].append(str(e))
 
     # registra o pacote recebido
@@ -112,7 +114,6 @@ def upload_package(source, receipt_id=None, pid_v2_items={}, old_filenames={},
 
 def list_documents(**kwargs):
     # TODO
-    _docs_manager.db_connect()
     return []
 
 

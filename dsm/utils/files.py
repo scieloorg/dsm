@@ -5,9 +5,6 @@ import tempfile
 from datetime import datetime
 from zipfile import ZipFile
 
-from .requests import requests_get
-
-
 logger = logging.getLogger(__name__)
 
 
@@ -84,26 +81,6 @@ def write_file(path, source, mode="w"):
 
     with open(path, mode, encoding="utf-8") as f:
         f.write(source)
-
-
-def download_files_and_create_zip_file(
-        zip_path, uri_and_file_items, timeout=10):
-    results = []
-    zip_folder = os.path.dirname(zip_path)
-    with ZipFile(zip_path, 'w') as myzip:
-        for uri_and_name in uri_and_file_items:
-            # get uri content
-            local_path = os.path.join(zip_folder, uri_and_name["name"])
-            try:
-                result = uri_and_name
-                content = requests_get(uri_and_name["uri"], timeout=timeout)
-                write_file(local_path, content, "wb")
-                # add file to zip
-                myzip.write(local_path, uri_and_name["name"])
-            except Exception as e:
-                result.update({"error": str(e)})
-            results.append(result)
-    return results
 
 
 def create_zip_file(files, zip_name, zip_folder=None):

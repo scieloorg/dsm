@@ -13,6 +13,9 @@ requires = [
     'requests',
     'picles.plumber',
     'minio',
+    'tenacity',
+    'gevent',
+    'aiohttp',
 ]
 
 tests_require = [
