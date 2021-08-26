@@ -76,6 +76,8 @@ class DocsManager:
                 return {
                     "uri": document_package.file.uri,
                     "name": document_package.file.name,
+                    "created": document_package.created,
+                    "updated": document_package.updated
                 }
 
     def get_doc_packages(self, source):
