@@ -1,0 +1,1118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE article
+  PUBLIC "-//NLM//DTD JATS (Z39.96) FriendlyISISJournal Publishing DTD v1.1 20151215//EN" "JATS-journalpublishing1.dtd">
+<article article-type="brief-report" dtd-version="1.1" specific-use="sps-1.9" xml:lang="en" xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<front>
+		<journal-meta>
+			<journal-id journal-id-type="publisher-id">aa</journal-id>
+			<journal-title-group>
+				<journal-title>Acta Amazonica</journal-title>
+				<abbrev-journal-title abbrev-type="publisher">Acta Amaz.</abbrev-journal-title>
+			</journal-title-group>
+			<issn pub-type="ppub">0044-5967</issn>
+			<issn pub-type="epub">1809-4392</issn>
+			<publisher>
+				<publisher-name>Instituto Nacional de Pesquisas da Amazônia</publisher-name>
+			</publisher>
+		</journal-meta>
+		<article-meta>
+			<article-id pub-id-type="doi">10.1590/1809-4392201901061</article-id>
+			<article-categories>
+				<subj-group subj-group-type="heading">
+					<subject>Biodiversity and Conservation</subject>
+				</subj-group>
+			</article-categories>
+			<title-group>
+				<article-title>New record of the fringed leaf frog, <italic>Cruziohyla craspedopus</italic> (Anura: Phyllomedusidae) extends its eastern range limit</article-title>
+				<trans-title-group xml:lang="pt">
+					<trans-title>Novo registro de ocorrência da perereca-franjada, <italic>Cruziohyla craspedopus</italic> (Anura: Phyllomedusidae) estende o limite oriental de sua distribuição</trans-title>
+				</trans-title-group>
+			</title-group>
+			<contrib-group>
+				<contrib contrib-type="author">
+					<contrib-id contrib-id-type="orcid">0000-0002-9900-4276</contrib-id>
+					<name>
+						<surname>FRAGA</surname>
+						<given-names>Rafael de</given-names>
+					</name>
+					<xref ref-type="aff" rid="aff1"><sup>1</sup></xref>
+					<xref ref-type="corresp" rid="c1">*</xref>
+				</contrib>
+				<contrib contrib-type="author">
+					<name>
+						<surname>TORRALVO</surname>
+						<given-names>Kelly</given-names>
+					</name>
+					<xref ref-type="aff" rid="aff2"><sup>2</sup></xref>
+				</contrib>
+			</contrib-group>
+			<aff id="aff1">
+				<label>1</label>
+				<institution content-type="original">Universidade Federal do Oeste do Pará - UFOPA, Programa de Pós-Graduação em Recursos Naturais Amazônicos, Av. Mendonça Furtado, 2240, Aldeia, 68040-050, Santarém, Pará, Brazil</institution>
+				<institution content-type="normalized">Universidade Federal do Oeste do Pará</institution>
+				<institution content-type="orgname">Universidade Federal do Oeste do Pará - UFOPA</institution>
+				<institution content-type="orgdiv1">Programa de Pós-Graduação em Recursos Naturais Amazônicos</institution>
+				<addr-line>
+					<postal-code>68040-050</postal-code>
+					<city>Santarém</city>
+					<state>Pará</state>
+				</addr-line>
+				<country country="BR">Brazil</country>
+			</aff>
+			<aff id="aff2">
+				<label>2</label>
+				<institution content-type="original">Instituto Nacional de Pesquisas da Amazônia - INPA, Programa de Pós-Graduação em Ecologia, Av. Efigênio Sales, 2239, Aleixo, 69060-020, Manaus, Amazonas, Brazil</institution>
+				<institution content-type="normalized">Instituto Nacional de Pesquisas da Amazônia</institution>
+				<institution content-type="orgname">Instituto Nacional de Pesquisas da Amazônia - INPA</institution>
+				<institution content-type="orgdiv1">Programa de Pós-Graduação em Ecologia</institution>
+				<addr-line>
+					<postal-code>69060-020</postal-code>
+					<city>Manaus</city>
+					<state>Amazonas</state>
+				</addr-line>
+				<country country="BR">Brazil</country>
+			</aff>
+			<author-notes>
+				<corresp id="c1">* Corresponding author: <email>r.defraga@gmail.com</email>
+				</corresp>
+				<fn fn-type="edited-by" id="fn1">
+					<p>ASSOCIATE EDITOR: Claudia Keller</p>
+				</fn>
+			</author-notes>
+			<pub-date date-type="pub" publication-format="electronic">
+				<day>12</day>
+				<month>08</month>
+				<year>2019</year>
+			</pub-date>
+			<pub-date date-type="collection" publication-format="electronic">
+				<season>Jul-Sep</season>
+				<year>2019</year>
+			</pub-date>
+			<volume>49</volume>
+			<issue>3</issue>
+			<fpage>208</fpage>
+			<lpage>212</lpage>
+			<history>
+				<date date-type="received">
+					<day>15</day>
+					<month>03</month>
+					<year>2019</year>
+				</date>
+				<date date-type="accepted">
+					<day>22</day>
+					<month>05</month>
+					<year>2019</year>
+				</date>
+			</history>
+			<permissions>
+				<license license-type="open-access" xlink:href="https://creativecommons.org/licenses/by/4.0/" xml:lang="en">
+					<license-p>This is an open-access article distributed under the terms of the Creative Commons Attribution License</license-p>
+				</license>
+			</permissions>
+			<abstract>
+				<title>ABSTRACT </title>
+				<p>The fringed leaf frog, <italic>Cruziohyla craspedopus</italic> is rarely sampled in the Brazilian Amazon, probably due to low detection probability associated with its arboreal habit. The knowledge about the species’ distribution stems from successive additions of occasional occurrence records, which indicate that the species is widely distributed throughout Amazonia. We present new occurrence records to update the geographic range of the species, which is hereby extended 224 km to the northeast. We also present morphological data from collected specimens and discuss the updated range from the geographic and ecological points of view. We show that the range of the leaf frog crosses several main tributaries along the southern bank of the Amazonas River, although the species occurrence is apparently limited by a minimum tree cover of 70%.</p>
+			</abstract>
+			<trans-abstract xml:lang="pt">
+				<title>RESUMO</title>
+				<p>A perereca franjada, <italic>Cruziohyla craspedopus</italic> é raramente amostrada na Amazônia brasileira, provavelmente devido à baixa probabilidade de detecção associada ao seu hábito arborícola. A distribuição geográfica conhecida da espécie é resultado da adição sucessiva de registros ocasionais de ocorrência, que indicam que ela é amplamente distribuída na Amazônia. Nós apresentamos novos pontos de ocorrência para atualizar a distribuição geográfica da espécie, estendendo-a em 224 km na direção nordeste. Nós também apresentamos dados morfológicos dos espécimes coletados e discutimos a distribuição atualizada sob pontos de vista geográfico e ecológico. Mostramos que a distribuição de pererecas franjadas cruza vários tributários da margem sul do Rio Amazonas, embora esteja aparentemente limitada por cobertura arbórea mínima de 70%.</p>
+			</trans-abstract>
+			<kwd-group xml:lang="en">
+				<title>KEYWORDS:</title>
+				<kwd>Amazon Basin</kwd>
+				<kwd>detectability</kwd>
+				<kwd>Tapajós</kwd>
+				<kwd>tree cover</kwd>
+			</kwd-group>
+			<kwd-group xml:lang="pt">
+				<title>PALAVRAS-CHAVE:</title>
+				<kwd>Bacia Amazônica</kwd>
+				<kwd>cobertura arbórea</kwd>
+				<kwd>detectabilidade</kwd>
+				<kwd>Tapajós</kwd>
+			</kwd-group>
+			<counts>
+				<fig-count count="2"/>
+				<table-count count="2"/>
+				<equation-count count="0"/>
+				<ref-count count="23"/>
+				<page-count count="5"/>
+			</counts>
+		</article-meta>
+	</front>
+	<body>
+		<p>The genus <italic>Cruziohyla</italic> Faivovich, Haddad, Garcia, Frost, Campbell, and Wheeler 2005 comprises three species of moderate to large sized treefrogs, closely related to <italic>Agalychnis</italic> Cope, 1864 (<xref ref-type="bibr" rid="B7">Gray 2018</xref>). Among the <italic>Cruziohyla</italic> species, an impressive combination of colors, blotches, stripes and fringes makes the fringed leaf frog <italic>Cruziohyla craspedopus</italic> (<xref ref-type="bibr" rid="B6">Funkhouser 1957</xref>) easily distinguishable from <italic>C. calcarifer</italic> (Boulenger, 1902) and <italic>C. sylviae</italic> Gray, 2018. The species inhabits dense lowland-rainforests in Ecuador, Colombia, Peru and Brazil (<xref ref-type="bibr" rid="B5">Frost 2019</xref>), and photographic records (although not in formal voucher-based publications) exist for Bolivia (see &lt;http://sernap.gob.bo/blog/la-rana-de-los-arboles-habita-en-el-madidi/&gt; and &lt;https://www.facebook.com/groups/172267329493705/&gt;).</p>
+		<p><italic>Cruziohyla craspedopus</italic> has rarely been found in anuran surveys, probably due to its arboreal habits, as sampling frogs in high plant strata depends on climbing or surveying trees from suspended platforms (<xref ref-type="bibr" rid="B12">Lynch 2005</xref>). Despite lack of statistical support, it has been suggested that finding <italic>C. craspedopus</italic> is restricted to unpredictable breeding events, when individuals migrate vertically to low strata of the understory (<xref ref-type="bibr" rid="B9">Hoogmoed and Cadle 1991</xref>; <xref ref-type="bibr" rid="B3">Block <italic>et al</italic>. 2003</xref>; <xref ref-type="bibr" rid="B14">Moraes and Pavan 2017</xref>). The geographical range of the species has thus been determined through the publication of occasional occurrence data (<xref ref-type="bibr" rid="B18">Rodríguez and Duellman 1994</xref>; <xref ref-type="bibr" rid="B10">Lima <italic>et al</italic>. 2003</xref>; <xref ref-type="bibr" rid="B13">Meneghelli <italic>et al</italic>. 2011</xref>; <xref ref-type="bibr" rid="B17">Rodrigues <italic>et al</italic>. 2011</xref>; <xref ref-type="bibr" rid="B22">Venancio <italic>et al</italic>. 2014</xref>; <xref ref-type="bibr" rid="B2">Bitar <italic>et al</italic>. 2015</xref>; <xref ref-type="bibr" rid="B15">Núñez <italic>et al</italic>. 2015</xref>; Moraes and Pavan 2017), which indicate that <italic>C. craspedopus</italic> is widely distributed across Amazonia (Moraes and Pavan 2017), as had been predicted by Hoogmoed and Cadle (1991). </p>
+		<p>Here we report new distribution records of <italic>C. craspedopus</italic> that extend its easternmost distribution limit on the east bank of the Tapajós River (eastern Brazilian Amazon). Additionally, we present morphological data and discuss the distribution of <italic>C. craspedopus</italic> in relation to the main rivers of the Amazon Basin and a landsat-based tree cover distribution (<xref ref-type="bibr" rid="B20">Sexton <italic>et al</italic>. 2013</xref>). Tree cover is thought to be an important factor affecting species distribution and connectivity, as it determines availability of foraging, resting and reproductive sites. We used the raster R-package (<xref ref-type="bibr" rid="B8">Hijmans 2019</xref>) to extract data on the percentage of tree cover from each geographic coordinate.</p>
+		<p>On February 6-12 2019 we found three adult females of <italic>C. craspedopus</italic> in the Tapajós National Forest (3º21’21.0’’S, 54º57’01.7’’W, 204 m asl), a federal reserve covering about 527,000 ha of rainforest in the eastern Brazilian Amazon (municipality of Belterra, Pará state). The specimens were found close together (2-22 m apart), perched at about 2.5 m above ground in a non-floodable forest (25.9 ºC, 93% relative humidity). The perches were thin tree branches, located on the edge of a small unpaved road. Several puddles on the road were constantly used as calling and spawning sites by other frog species [e.g. <italic>Leptodactylus paraenesis</italic> Heyer, 2005; <italic>Rhinella major</italic> (Müller and Hellmich, 1936); <italic>Rhinella marina</italic> (Linnaeus, 1758); <italic>Pithecopus hypochondrialis</italic> (Daudin, 1800)], but we observed no reproductive activity of <italic>C. craspedopus</italic>. However, we found gravid females with mature oocytes, which suggests that individuals were reproductively active.</p>
+		<p>The species was identified by a combination of dark-green dorsal surface with gray-blueish irregular blotches (<xref ref-type="fig" rid="f1">Figure 1</xref>a), bright-orange ventral surface (<xref ref-type="fig" rid="f1">Figure 1</xref>b), vertical dark bars on a yellow background in the flanks, thighs and forearms, narrow dermal fringes on the lower jaw and on the outer edge of the forearm, and well-developed fringes on the outer edge of the tarsus (<xref ref-type="bibr" rid="B6">Funkhouser 1957</xref>; <xref ref-type="bibr" rid="B9">Hoogmoed and Cadle 1991</xref>; <xref ref-type="bibr" rid="B7">Gray 2018</xref>). Specimens were collected under IBAMA/SISBIO license nr. 67545-1/2019, and deposited in the herpetological collection of Universidade Federal do Oeste do Pará (UFOPA), Santarém, Pará, Brazil. Additional morphological data (based on <xref ref-type="bibr" rid="B14">Moraes and Pavan 2017</xref>) and voucher numbers of the specimens are provided in <xref ref-type="table" rid="t1">Table 1</xref>.</p>
+		<p>
+			<fig id="f1">
+				<label>Figure 1</label>
+				<caption>
+					<title>Dorsal (A) and ventral (B) views of <italic>Cruziohyla craspedopus</italic> from the Tapajós National Forest, eastern Brazilian Amazon. Female, 76.19 mm SVL, UFOPA-H 1486. This figure is in color in the electronic version.</title>
+				</caption>
+				<graphic xlink:href="1809-4392-aa-49-03-208-gf1.jpg"/>
+			</fig>
+		</p>
+		<p>
+			<table-wrap id="t1">
+				<label>Table 1</label>
+				<caption>
+					<title>Morphological data (mm) of three <italic>Cruziohyla craspedopus</italic> specimens from the Tapajós National Forest, Pará, Brazil (identified by their collection voucher numbers). SVL: snout-vent length, FAL: forearm length from distal edge of hand to outer edge of flexed elbow, HA: hand length from distal edge of hand to tip of finger III, TL: tibia length from proximal edge of flexed knee to heel, FL: foot length from proximal edge of inner metatarsal tubercle to tip of Toe IV, HW: head width at level of angle of jaw, HL: head length from angle of jaw to tip of snout, ED: eye diameter, IN: internarial distance, IO: interorbital distance, EN: eye-nostril distance, TD: tympanum diameter, WFD: finger III disc width, WTD: toe IV disc width, and THL: thigh length.</title>
+				</caption>
+				<table>
+					<colgroup>
+						<col/>
+						<col/>
+						<col/>
+						<col/>
+					</colgroup>
+					<thead>
+						<tr>
+							<th align="left">Parameter</th>
+							<th align="center">UFOPA-H 1486</th>
+							<th align="center">UFOPA-H 1487</th>
+							<th align="center">UFOPA-H 1488</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td align="left">Sex</td>
+							<td align="center">Female</td>
+							<td align="center">Female</td>
+							<td align="center">Female</td>
+						</tr>
+						<tr>
+							<td align="left">SVL</td>
+							<td align="center">76.19</td>
+							<td align="center">73.79</td>
+							<td align="center">74.84</td>
+						</tr>
+						<tr>
+							<td align="left">FAL</td>
+							<td align="center">15.82</td>
+							<td align="center">14.48</td>
+							<td align="center">14.46</td>
+						</tr>
+						<tr>
+							<td align="left">HA</td>
+							<td align="center">25.69</td>
+							<td align="center">24.72</td>
+							<td align="center">25.36</td>
+						</tr>
+						<tr>
+							<td align="left">TL</td>
+							<td align="center">41.96</td>
+							<td align="center">41.65</td>
+							<td align="center">40.30</td>
+						</tr>
+						<tr>
+							<td align="left">FL</td>
+							<td align="center">30.04</td>
+							<td align="center">28.64</td>
+							<td align="center">29.86</td>
+						</tr>
+						<tr>
+							<td align="left">HW</td>
+							<td align="center">25.15</td>
+							<td align="center">23.55</td>
+							<td align="center">25.12</td>
+						</tr>
+						<tr>
+							<td align="left">HL</td>
+							<td align="center">22.15</td>
+							<td align="center">22.97</td>
+							<td align="center">22.79</td>
+						</tr>
+						<tr>
+							<td align="left">ED</td>
+							<td align="center">4.84</td>
+							<td align="center">5.48</td>
+							<td align="center">5.56</td>
+						</tr>
+						<tr>
+							<td align="left">IN</td>
+							<td align="center">6.80</td>
+							<td align="center">7.12</td>
+							<td align="center">6.68</td>
+						</tr>
+						<tr>
+							<td align="left">IO</td>
+							<td align="center">19.11</td>
+							<td align="center">19.06</td>
+							<td align="center">19.23</td>
+						</tr>
+						<tr>
+							<td align="left">EN</td>
+							<td align="center">9.23</td>
+							<td align="center">8.53</td>
+							<td align="center">7.32</td>
+						</tr>
+						<tr>
+							<td align="left">TD</td>
+							<td align="center">4.63</td>
+							<td align="center">4.31</td>
+							<td align="center">5.16</td>
+						</tr>
+						<tr>
+							<td align="left">WFD</td>
+							<td align="center">5.85</td>
+							<td align="center">5.60</td>
+							<td align="center">5.62</td>
+						</tr>
+						<tr>
+							<td align="left">WTD</td>
+							<td align="center">4.86</td>
+							<td align="center">5.12</td>
+							<td align="center">4.58</td>
+						</tr>
+						<tr>
+							<td align="left">THL</td>
+							<td align="center">38.13</td>
+							<td align="center">36.15</td>
+							<td align="center">36.65</td>
+						</tr>
+					</tbody>
+				</table>
+			</table-wrap>
+		</p>
+		<p>This is the first record of <italic>C. craspedopus</italic> east of the Tapajós River, which extends the species’ range 224 km northeast from its previously known easternmost locality (Parque Nacional da Amazônia, Pará, Brazil; <xref ref-type="bibr" rid="B14">Moraes and Pavan 2017</xref>). The updated map (<xref ref-type="fig" rid="f2">Figure 2</xref>) and locality record list (<xref ref-type="table" rid="t2">Table 2</xref>) show that the species is widely distributed throughout the Amazonian lowland-forests, crossing several of the main southern tributaries of the Amazonas River. To the north, the species is apparently limited by the Japurá River, and has not been reported north of the Amazonas River from the border between Brazil and Colombia. Biogeographic studies should focus on testing the hypothesis that the strength of the Amazonas River as a barrier to the species dispersal increases downstream. To the east, the species reaches the interfluve between the Tapajós and Iriri rivers, and possibly extends to the west bank of the Xingu River. To the west, the species is limited by the Andes, and its southernmost record lies in the Andean piedmont of Madidi National Park, Bolivia (<xref ref-type="table" rid="t2">Table 2</xref>, <xref ref-type="fig" rid="f2">Figure 2</xref>). In Brazil, species is limited to the south by the contact zone between dense forests and Cerrado savannas and the agricultural frontier known as the arc of deforestation (<xref ref-type="bibr" rid="B4">Fearnside 2005</xref>). Although <italic>C. craspedopus</italic> has been classified as “Least Concern” by IUCN (<xref ref-type="bibr" rid="B1">Angulo <italic>et al</italic>. 2004</xref>), the southern region of its range, where accelerated habitat loss is occurring, should be prioritized for updating its conservation assessment.</p>
+		<p>
+			<fig id="f2">
+				<label>Figure 2</label>
+				<caption>
+					<title>Updated distribution of <italic>Cruziohyla craspedopus</italic> in Amazonia. The star is the type-locality, circles are literature data, squares are photographic records reported in newsfeeds with no voucher specimens, and the triangle represents the specimens reported in this study. Locality details are in <xref ref-type="table" rid="t2">Table 2</xref>. This figure is in color in the electronic version.</title>
+				</caption>
+				<graphic xlink:href="1809-4392-aa-49-03-208-gf2.jpg"/>
+			</fig>
+		</p>
+		<p>
+			<table-wrap id="t2">
+				<label>Table 2</label>
+				<caption>
+					<title>Occurrence records of <italic>Cruziohyla craspedopus</italic> in Amazonia (plotted in <xref ref-type="fig" rid="f2">Figure 2</xref>). The type locality is in bold; NV = photographic records in informal non-voucher-based electronic sources; <sup>#</sup> = coordinates are estimates for imprecise locality reports by the author(s) of the record.</title>
+				</caption>
+				<table>
+					<colgroup>
+						<col/>
+						<col/>
+						<col/>
+						<col/>
+					</colgroup>
+					<thead>
+						<tr>
+							<th align="left">Locality</th>
+							<th align="center">Longitude</th>
+							<th align="center">Latitude</th>
+							<th align="center">Reference</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td align="left">Kunsunts-Shuar Center, Zamora-Chinchipe, Ecuador</td>
+							<td align="center">-78.639200</td>
+							<td align="center">-4.316639</td>
+							<td align="center">
+								<xref ref-type="bibr" rid="B16">Read and Ron (2018</xref>)</td>
+						</tr>
+						<tr>
+							<td align="left">Morona-Santiago, Santiago River, Ecuador</td>
+							<td align="center">-78.072034</td>
+							<td align="center">-3.110383</td>
+							<td align="center">
+								<xref ref-type="bibr" rid="B9">Hoogmoed and Cadle (1991</xref>)</td>
+						</tr>
+						<tr>
+							<td align="left">Jatún Biological Station, Pastaza, Ecuador</td>
+							<td align="center">-77.616000</td>
+							<td align="center">-1.066600</td>
+							<td align="center">
+								<xref ref-type="bibr" rid="B16">Read and Ron (2018</xref>)</td>
+						</tr>
+						<tr>
+							<td align="left">Villano, Pastaza, Ecuador</td>
+							<td align="center">-77.534790</td>
+							<td align="center">-1.476040</td>
+							<td align="center">
+								<xref ref-type="bibr" rid="B16">Read and Ron (2018</xref>)</td>
+						</tr>
+						<tr>
+							<td align="left">Ishpingo River, Pastaza, Ecuador</td>
+							<td align="center">-76.858330</td>
+							<td align="center">-2.538666</td>
+							<td align="center">
+								<xref ref-type="bibr" rid="B16">Read and Ron (2018</xref>)</td>
+						</tr>
+						<tr>
+							<td align="left">Bobonaza River, Chicherota, Pastaza, Ecuador</td>
+							<td align="center">-76.633000</td>
+							<td align="center">-2.366600</td>
+							<td align="center">
+								<xref ref-type="bibr" rid="B6">Funkhouser (1957</xref>)</td>
+						</tr>
+						<tr>
+							<td align="left">Limoncocha, Orellana, Pastaza, Ecuador</td>
+							<td align="center">-76.625972</td>
+							<td align="center">-0.507551</td>
+							<td align="center">
+								<xref ref-type="bibr" rid="B9">Hoogmoed and Cadle (1991</xref>)</td>
+						</tr>
+						<tr>
+							<td align="left">Shiona, Pastaza, Ecuador</td>
+							<td align="center">-76.459999</td>
+							<td align="center">-2.010000</td>
+							<td align="center">
+								<xref ref-type="bibr" rid="B16">Read and Ron (2018</xref>)</td>
+						</tr>
+						<tr>
+							<td align="left">Yasuní National Park, Orellana, Ecuador</td>
+							<td align="center">-76.401167</td>
+							<td align="center">-0.677166</td>
+							<td align="center">
+								<xref ref-type="bibr" rid="B16">Read and Ron (2018</xref>)</td>
+						</tr>
+						<tr>
+							<td align="left">Cueva Boyopare, Orellana, Ecuador</td>
+							<td align="center">-76.399511</td>
+							<td align="center">-0.809494</td>
+							<td align="center">
+								<xref ref-type="bibr" rid="B16">Read and Ron (2018</xref>)</td>
+						</tr>
+						<tr>
+							<td align="left">Napo River, Sucumbíos, Ecuador</td>
+							<td align="center">-76.364930</td>
+							<td align="center">-0.508680</td>
+							<td align="center">
+								<xref ref-type="bibr" rid="B16">Read and Ron (2018</xref>)</td>
+						</tr>
+						<tr>
+							<td align="left">Cuyabeno Reserve, Sucumbíos, Ecuador</td>
+							<td align="center">-76.181660</td>
+							<td align="center">-0.009700</td>
+							<td align="center">
+								<xref ref-type="bibr" rid="B16">Read and Ron (2018</xref>)</td>
+						</tr>
+						<tr>
+							<td align="left">Tiputini Biodiversity Station, Sucumbíos, Ecuador</td>
+							<td align="center">-76.171944</td>
+							<td align="center">-0.618056</td>
+							<td align="center">
+								<xref ref-type="bibr" rid="B16">Read and Ron (2018</xref>)</td>
+						</tr>
+						<tr>
+							<td align="left">Comunidad Samona, Orelanna, Ecuador</td>
+							<td align="center">-75.967590</td>
+							<td align="center">-0.571890</td>
+							<td align="center">
+								<xref ref-type="bibr" rid="B16">Read and Ron (2018</xref>)</td>
+						</tr>
+						<tr>
+							<td align="left">Yasuní National Park, Orellana, Ecuador</td>
+							<td align="center">-75.964000</td>
+							<td align="center">-0.934000</td>
+							<td align="center">
+								<xref ref-type="bibr" rid="B16">Read and Ron (2018</xref>)</td>
+						</tr>
+						<tr>
+							<td align="left">Iquitos Region, Peru</td>
+							<td align="center">-73.487502</td>
+							<td align="center">-3.684978</td>
+							<td align="center">Rodríguez and Duellman (1993)</td>
+						</tr>
+						<tr>
+							<td align="left">Tarauacá, Acre, Brazil</td>
+							<td align="center">-71.451600</td>
+							<td align="center">-7.978100</td>
+							<td align="center">
+								<xref ref-type="bibr" rid="B22">Venancio <italic>et al.</italic> (2014</xref>)</td>
+						</tr>
+						<tr>
+							<td align="left">Cocha Cashu Biological Station, Madre de Dios, Peru</td>
+							<td align="center">-71.336928</td>
+							<td align="center">-11.970719</td>
+							<td align="center">
+								<xref ref-type="bibr" rid="B9">Hoogmoed and Cadle (1991</xref>)</td>
+						</tr>
+						<tr>
+							<td align="left">Leticia, Amazonas, Colombia #</td>
+							<td align="center">-69.960314</td>
+							<td align="center">-3.950472</td>
+							<td align="center">
+								<xref ref-type="bibr" rid="B19">Ruiz-Carranza <italic>et al.</italic> (1993)</xref>
+							</td>
+						</tr>
+						<tr>
+							<td align="left">Tambopata Reserve, Madre de Dios, Peru</td>
+							<td align="center">-69.275150</td>
+							<td align="center">-12.965263</td>
+							<td align="center">
+								<xref ref-type="bibr" rid="B9">Hoogmoed and Cadle (1991</xref>)</td>
+						</tr>
+						<tr>
+							<td align="left">Madidi National Park, La Paz, Bolivia #</td>
+							<td align="center">-68.350051</td>
+							<td align="center">-14.200972</td>
+							<td align="center">NV*</td>
+						</tr>
+						<tr>
+							<td align="left">El Sena, Pando, Bolivia #</td>
+							<td align="center">-67.252281</td>
+							<td align="center">-11.555366</td>
+							<td align="center">NV**</td>
+						</tr>
+						<tr>
+							<td align="left">Cuniã Ecological Station, Rondônia, Brazil</td>
+							<td align="center">-63.483300</td>
+							<td align="center">-8.106500</td>
+							<td align="center">
+								<xref ref-type="bibr" rid="B13">Meneghelli <italic>et al.</italic> (2011</xref>)</td>
+						</tr>
+						<tr>
+							<td align="left">Castanho, Amazonas, Brazil</td>
+							<td align="center">-59.860500</td>
+							<td align="center">-3.354600</td>
+							<td align="center">
+								<xref ref-type="bibr" rid="B10">Lima <italic>et al.</italic> (2003</xref>)</td>
+						</tr>
+						<tr>
+							<td align="left">São Nicolau Farm, Cotriguaçu, Mato Grosso, Brazil</td>
+							<td align="center">-58.249300</td>
+							<td align="center">-9.854600</td>
+							<td align="center">
+								<xref ref-type="bibr" rid="B17">Rodrigues <italic>et al.</italic> (2011</xref>)</td>
+						</tr>
+						<tr>
+							<td align="left">Jacareacanga, Pará, Brazil</td>
+							<td align="center">-57.683100</td>
+							<td align="center">-6.088500</td>
+							<td align="center">
+								<xref ref-type="bibr" rid="B2">Bitar et al. (2015</xref>)</td>
+						</tr>
+						<tr>
+							<td align="left">Amazonas National Park, Pará, Brazil</td>
+							<td align="center">-56.441400</td>
+							<td align="center">-4.707700</td>
+							<td align="center">
+								<xref ref-type="bibr" rid="B14">Moraes and Pavan (2017</xref>)</td>
+						</tr>
+						<tr>
+							<td align="left">Tapajós National Forest, Pará, Brazil</td>
+							<td align="center">-54.950472</td>
+							<td align="center">-3.357500</td>
+							<td align="center">this study</td>
+						</tr>
+						<tr>
+							<td align="left">Tapajós National Forest, Pará, Brazil</td>
+							<td align="center">-54.950308</td>
+							<td align="center">-3.357389</td>
+							<td align="center">this study</td>
+						</tr>
+						<tr>
+							<td align="left">Tapajós National Forest, Pará, Brazil</td>
+							<td align="center">-54.950306</td>
+							<td align="center">-3.357389</td>
+							<td align="center">this study</td>
+						</tr>
+					</tbody>
+				</table>
+				<table-wrap-foot>
+					<fn id="TFN1">
+						<p>* &lt;http://sernap.gob.bo/blog/la-rana-de-los-arboles-habita-en-el-madidi/&gt;; </p>
+					</fn>
+					<fn id="TFN2">
+						<p>** &lt;https://www.facebook.com/groups/172267329493705/&gt;)</p>
+					</fn>
+				</table-wrap-foot>
+			</table-wrap>
+		</p>
+		<p>Data from the landsat-based tree cover distribution showed that records of <italic>C. craspedopus</italic> are limited to localities with a minimum tree cover of 70% along a relatively wide altitudinal gradient (30-1600 m asl). This may be related to biological traits of the species, as the use of high plant strata during non-reproductive periods (<xref ref-type="bibr" rid="B14">Moraes and Pavan 2017</xref>), and the reproductive dependence on the availability of water accumulated in natural (<xref ref-type="bibr" rid="B21">Turell <italic>et al</italic>. 2016</xref>) or artificial (<xref ref-type="bibr" rid="B23">Wizen 2017</xref>) reservoirs. The fact that other species with a similar requirement [e.g. <italic>Osteocephalus</italic> aff. <italic>oophagus</italic>, <italic>Trachycephalus resinifictrix</italic> (Goeldi, 1907); <xref ref-type="bibr" rid="B11">Lima <italic>et al</italic>. 2012</xref>] were commonly sampled visually and acoustically during our field work suggests that the lack of reproductive sites is not a limiting factor for the occurrence of <italic>C. craspedopus</italic>. Additionally, tadpoles and metamorphs were observed in poor-quality human-made water reservoirs, suggesting that water quality does not limit the reproduction of the species (Wizen 2017). However, even reproductive sites with poor water quality were surrounded by trees, which suggests tree cover as a major factor affecting the species’ occurrence. Distribution modeling of <italic>C. craspedopus</italic> should focus on quantitative variables of vegetation structure, to explicitly test the effects of reproductive vertical migration from the canopy to the understory on detection probabilities (<xref ref-type="bibr" rid="B9">Hoogmoed and Cadle 1991</xref>; <xref ref-type="bibr" rid="B3">Block <italic>et al</italic>. 2003</xref>; Moraes and Pavan 2017), and the hypothesis that height and density of vegetation are positively correlated with frog densities.</p>
+	</body>
+	<back>
+		<ack>
+			<title>ACKNOWLEDGMENTS </title>
+			<p>We thank Edivaldo Farias, Jony Oliveira and the COOMFLONA for field assistance. Logistics was supported by Instituto Nacional de Pesquisas da Amazônia (INPA), Centro de Estudos Integrados da Biodiversidade Amazônica (CENBAM), Programa de Pesquisas em Biodiversidade (PPBio), Universidade Federal do Oeste do Pará (UFOPA), Fundação de Amparo à Pesquisas do Estado do Amazonas (FAPEAM), and Instituto Chico Mendes para Conservação da Biodiversidade (ICMBio). Coordenação de Aperfeiçoamento de Pessoal de Nível Superior (CAPES) and FAPEAM provided scholarships to RDF and KT, respectively.</p>
+		</ack>
+		<ref-list>
+			<ref id="B1">
+				<mixed-citation>Angulo, A.; Coloma, L.A.; Ron, S.R.; Hoogmoed, M.; Castro, F.; Rueda-Almonacid, J.V.; Cisneros-Heredia, D.F.; Icochea, M. 2004. <italic>Cruziohyla craspedopus</italic>. The IUCN Red List of Threatened Species 2004. (<comment> (<ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.2305/IUCN.UK.2004.RLTS.T55291A11275223.en">http://dx.doi.org/10.2305/IUCN.UK.2004.RLTS.T55291A11275223.en</ext-link>
+					</comment>). Accessed on 28 Feb 2019.</mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Angulo</surname>
+							<given-names>A.</given-names>
+						</name>
+						<name>
+							<surname>Coloma</surname>
+							<given-names>L.A.</given-names>
+						</name>
+						<name>
+							<surname>Ron</surname>
+							<given-names>S.R.</given-names>
+						</name>
+						<name>
+							<surname>Hoogmoed</surname>
+							<given-names>M.</given-names>
+						</name>
+						<name>
+							<surname>Castro</surname>
+							<given-names>F.</given-names>
+						</name>
+						<name>
+							<surname>Rueda-Almonacid</surname>
+							<given-names>J.V.</given-names>
+						</name>
+						<name>
+							<surname>Cisneros-Heredia</surname>
+							<given-names>D.F.</given-names>
+						</name>
+						<name>
+							<surname>Icochea</surname>
+							<given-names>M.</given-names>
+						</name>
+					</person-group>
+					<year>2004</year>
+					<article-title>Cruziohyla craspedopus</article-title>
+					<source>The IUCN Red List of Threatened Species 2004</source>
+					<comment> (<ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.2305/IUCN.UK.2004.RLTS.T55291A11275223.en">http://dx.doi.org/10.2305/IUCN.UK.2004.RLTS.T55291A11275223.en</ext-link>
+					</comment>
+					<date-in-citation content-type="access-date" iso-8601-date="2019-02-28">28 Feb 2019</date-in-citation>
+				</element-citation>
+			</ref>
+			<ref id="B2">
+				<mixed-citation>Bitar, Y.O.C.; Silva, K.R.A.; Filho, H.F.S.; Pinheiro, L.C. 2015. Amphibia, Anura, Hylidae, <italic>Cruziohyla craspedopus</italic> (Funkhouser, 1957): distribution extension and first record from the state of Pará, Brazil. <italic>Check List</italic>, 11: 1-3.</mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Bitar</surname>
+							<given-names>Y.O.C.</given-names>
+						</name>
+						<name>
+							<surname>Silva</surname>
+							<given-names>K.R.A.</given-names>
+						</name>
+						<name>
+							<surname>Filho</surname>
+							<given-names>H.F.S.</given-names>
+						</name>
+						<name>
+							<surname>Pinheiro</surname>
+							<given-names>L.C.</given-names>
+						</name>
+					</person-group>
+					<year>2015</year>
+					<article-title>Amphibia, Anura, Hylidae, Cruziohyla craspedopus (Funkhouser, 1957): distribution extension and first record from the state of Pará, Brazil</article-title>
+					<source>Check List</source>
+					<volume>11</volume>
+					<fpage>1</fpage>
+					<lpage>3</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B3">
+				<mixed-citation>Block, J.E.; Unser, S.L.; Mooney, J.K.; Wild, E.R. 2003. <italic>Agalychnis craspedopus</italic> (Amazon Leaf Frog). Reproduction. <italic>Herpetological Review</italic>, 34: 134-135.</mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Block</surname>
+							<given-names>J.E.</given-names>
+						</name>
+						<name>
+							<surname>Unser</surname>
+							<given-names>S.L.</given-names>
+						</name>
+						<name>
+							<surname>Mooney</surname>
+							<given-names>J.K.</given-names>
+						</name>
+						<name>
+							<surname>Wild</surname>
+							<given-names>E.R.</given-names>
+						</name>
+					</person-group>
+					<year>2003</year>
+					<article-title>Agalychnis craspedopus (Amazon Leaf Frog). Reproduction</article-title>
+					<source>Herpetological Review</source>
+					<volume>34</volume>
+					<fpage>134</fpage>
+					<lpage>135</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B4">
+				<mixed-citation>Fearnside, P. 2005. Deforestation in Brazilian Amazonia: history, rates, and consequences. <italic>Conservation Biology</italic>, 19: 680-688.</mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Fearnside</surname>
+							<given-names>P.</given-names>
+						</name>
+					</person-group>
+					<year>2005</year>
+					<article-title>Deforestation in Brazilian Amazonia: history, rates, and consequences</article-title>
+					<source>Conservation Biology</source>
+					<volume>19</volume>
+					<fpage>680</fpage>
+					<lpage>688</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B5">
+				<mixed-citation>Frost, D.R. 2019. Amphibian species of the world: an online reference. Version 6.0. Electronic database. American Museum of Natural History, New York. (<comment> (<ext-link ext-link-type="uri" xlink:href="http://research.amnh.org/herpetology/amphibia/index.html">http://research.amnh.org/herpetology/amphibia/index.html</ext-link>
+					</comment>). Accessed on 28 Feb 2019.</mixed-citation>
+				<element-citation publication-type="database">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Frost</surname>
+							<given-names>D.R.</given-names>
+						</name>
+					</person-group>
+					<year>2019</year>
+					<source>Amphibian species of the world: an online reference</source>
+					<version>6.0</version>
+					<comment>Electronic database</comment>
+					<publisher-name>American Museum of Natural History</publisher-name>
+					<publisher-loc>New York</publisher-loc>
+					<comment> (<ext-link ext-link-type="uri" xlink:href="http://research.amnh.org/herpetology/amphibia/index.html">http://research.amnh.org/herpetology/amphibia/index.html</ext-link>
+					</comment>
+					<date-in-citation content-type="access-date" iso-8601-date="2019-02-28">28 Feb 2019</date-in-citation>
+				</element-citation>
+			</ref>
+			<ref id="B6">
+				<mixed-citation>Funkhouser, A. 1957. A review of the Neotropical treefrogs of the genus <italic>Phyllomedusa</italic>. <italic>Occasional Papers of the Natural History Museum of Standford University</italic>, 5: 1-90.</mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Funkhouser</surname>
+							<given-names>A.</given-names>
+						</name>
+					</person-group>
+					<year>1957</year>
+					<article-title>A review of the Neotropical treefrogs of the genus Phyllomedusa</article-title>
+					<source>Occasional Papers of the Natural History Museum of Standford University</source>
+					<volume>5</volume>
+					<fpage>1</fpage>
+					<lpage>90</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B7">
+				<mixed-citation>Gray, A.R. 2018. Review of the genus <italic>Cruziohyla</italic> (Anura: Phyllomedusidae), with description of a new species. <italic>Zootaxa</italic>, 4450: 401-426.</mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Gray</surname>
+							<given-names>A.R.</given-names>
+						</name>
+					</person-group>
+					<year>2018</year>
+					<article-title>Review of the genus Cruziohyla (Anura: Phyllomedusidae), with description of a new species</article-title>
+					<source>Zootaxa</source>
+					<volume>4450</volume>
+					<fpage>401</fpage>
+					<lpage>426</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B8">
+				<mixed-citation>Hijmans, R.J. 2019. raster: Geographic data analysis and modeling. R package version 2.8-19. (<comment> (<ext-link ext-link-type="uri" xlink:href="https://CRAN.R-project.org/package=raster">https://CRAN.R-project.org/package=raster</ext-link>
+					</comment>). Accessed on 26 Apr 2019.</mixed-citation>
+				<element-citation publication-type="software">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Hijmans</surname>
+							<given-names>R.J.</given-names>
+						</name>
+					</person-group>
+					<year>2019</year>
+					<source>raster: Geographic data analysis and modeling</source>
+					<version>R package version 2.8-19</version>
+					<comment> (<ext-link ext-link-type="uri" xlink:href="https://CRAN.R-project.org/package=raster">https://CRAN.R-project.org/package=raster</ext-link>
+					</comment>
+					<date-in-citation content-type="access-date" iso-8601-date="2019-04-26">26 Apr 2019</date-in-citation>
+				</element-citation>
+			</ref>
+			<ref id="B9">
+				<mixed-citation>Hoogmoed, M.S., Cadle, J.E. 1991. Natural history and distribution of Agalychnis craspedopus (Funkhouser, 1957) (Amphibia: Anura: Hylidae). <italic>Zoologische Mededelingen</italic>, 65: 129-142.</mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Hoogmoed</surname>
+							<given-names>M.S.</given-names>
+						</name>
+						<name>
+							<surname>Cadle</surname>
+							<given-names>J.E.</given-names>
+						</name>
+					</person-group>
+					<year>1991</year>
+					<article-title>Natural history and distribution of Agalychnis craspedopus (Funkhouser, 1957) (Amphibia: Anura: Hylidae)</article-title>
+					<source>Zoologische Mededelingen</source>
+					<volume>65</volume>
+					<fpage>129</fpage>
+					<lpage>142</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B10">
+				<mixed-citation>Lima, A.P.; Guida, M.L.; Hödl, W. 2003. <italic>Agalycnhis craspedopus</italic>. Distribution. <italic>Herpetological Review</italic>, 34: 379.</mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Lima</surname>
+							<given-names>A.P.</given-names>
+						</name>
+						<name>
+							<surname>Guida</surname>
+							<given-names>M.L.</given-names>
+						</name>
+						<name>
+							<surname>Hödl</surname>
+							<given-names>W.</given-names>
+						</name>
+					</person-group>
+					<year>2003</year>
+					<article-title>Agalycnhis craspedopus. Distribution</article-title>
+					<source>Herpetological Review</source>
+					<volume>34</volume>
+					<fpage>379</fpage>
+					<lpage>379</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B11">
+				<mixed-citation>Lima, A.P; Magnusson, W.E.; Menin, M.; Erdtmann, L.K.; Rodrigues, D.J.; Keller, C.; Hödl, W. 2012. <italic>Guide to the frogs of Reserva Adolpho Ducke</italic>. 2nd ed. INPA, Manaus, 188p.</mixed-citation>
+				<element-citation publication-type="book">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Lima</surname>
+							<given-names>A.P</given-names>
+						</name>
+						<name>
+							<surname>Magnusson</surname>
+							<given-names>W.E.</given-names>
+						</name>
+						<name>
+							<surname>Menin</surname>
+							<given-names>M.</given-names>
+						</name>
+						<name>
+							<surname>Erdtmann</surname>
+							<given-names>L.K.</given-names>
+						</name>
+						<name>
+							<surname>Rodrigues</surname>
+							<given-names>D.J.</given-names>
+						</name>
+						<name>
+							<surname>Keller</surname>
+							<given-names>C.</given-names>
+						</name>
+						<name>
+							<surname>Hödl</surname>
+							<given-names>W</given-names>
+						</name>
+					</person-group>
+					<year>2012</year>
+					<source>Guide to the frogs of Reserva Adolpho Ducke</source>
+					<edition>2nd ed</edition>
+					<publisher-name>INPA</publisher-name>
+					<publisher-loc>Manaus</publisher-loc>
+					<size units="pages">188</size>
+				</element-citation>
+			</ref>
+			<ref id="B12">
+				<mixed-citation>Lynch, J.D. 2005. Discovery of the richest frog fauna in the world - an exploration of the forests to the north of Leticia. <italic>Revista de la Academia Colombiana de Ciencias Exactas, Físicas y Naturales</italic>, 29: 581-588. </mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Lynch</surname>
+							<given-names>J.D.</given-names>
+						</name>
+					</person-group>
+					<year>2005</year>
+					<article-title>Discovery of the richest frog fauna in the world - an exploration of the forests to the north of Leticia</article-title>
+					<source>Revista de la Academia Colombiana de Ciencias Exactas, Físicas y Naturales</source>
+					<volume>29</volume>
+					<fpage>581</fpage>
+					<lpage>588</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B13">
+				<mixed-citation>Meneghelli, D.; Messias, M.R.; Sampaio, P.R.M. 2011. Amphibia, Anura, Hylidae, <italic>Cruziohyla craspedopus</italic> (Funkhouser, 1957): distribution extension in southwestern Amazonia, state of Rondônia, Brazil. <italic>Check List</italic>, 7: 811-812.</mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Meneghelli</surname>
+							<given-names>D.</given-names>
+						</name>
+						<name>
+							<surname>Messias</surname>
+							<given-names>M.R.</given-names>
+						</name>
+						<name>
+							<surname>Sampaio</surname>
+							<given-names>P.R.M</given-names>
+						</name>
+					</person-group>
+					<year>2011</year>
+					<article-title>Amphibia, Anura, Hylidae, Cruziohyla craspedopus (Funkhouser, 1957): distribution extension in southwestern Amazonia, state of Rondônia, Brazil</article-title>
+					<source>Check List</source>
+					<volume>7</volume>
+					<fpage>811</fpage>
+					<lpage>812</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B14">
+				<mixed-citation>Moraes, L.J.C.L; Pavan, D. 2017. Another puzzle piece: new record of the Fringed Leaf Frog, <italic>Cruziohyla craspedopus</italic> (Funkhouser, 1957) (Anura: Phyllomedusidae), in the eastern Amazon rainforest. <italic>Check List</italic>, 13: 1-4.</mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Moraes</surname>
+							<given-names>L.J.C.L</given-names>
+						</name>
+						<name>
+							<surname>Pavan</surname>
+							<given-names>D.</given-names>
+						</name>
+					</person-group>
+					<year>2017</year>
+					<article-title>Another puzzle piece: new record of the Fringed Leaf Frog, Cruziohyla craspedopus (Funkhouser, 1957) (Anura: Phyllomedusidae), in the eastern Amazon rainforest</article-title>
+					<source>Check List</source>
+					<volume>13</volume>
+					<fpage>1</fpage>
+					<lpage>4</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B15">
+				<mixed-citation>Núñez, D; Riera-Vite, T., Orellana, F.; Brito, J. 2015. Upper altitudinal and southern geographic range extensions for <italic>Cruziohyla craspedopus</italic> (Anura: Hylidae) (Funkhouser, 1957) in Ecuador. <italic>Check List</italic>, 11: 1-3.</mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Núñez</surname>
+							<given-names>D</given-names>
+						</name>
+						<name>
+							<surname>Riera-Vite</surname>
+							<given-names>F.</given-names>
+						</name>
+						<name>
+							<surname>Brito</surname>
+							<given-names>J.</given-names>
+						</name>
+					</person-group>
+					<year>2015</year>
+					<article-title>Upper altitudinal and southern geographic range extensions for Cruziohyla craspedopus (Anura: Hylidae) (Funkhouser, 1957) in Ecuador</article-title>
+					<source>Check List</source>
+					<volume>11</volume>
+					<fpage>1</fpage>
+					<lpage>3</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B16">
+				<mixed-citation>Read, M; Ron, S. 2018. <italic>Cruziohyla craspedopus</italic>. (<comment> (<ext-link ext-link-type="uri" xlink:href="https://bioweb.bio/faunaweb/amphibiaweb/FichaEspecie/Cruziohyla%20craspedopus">https://bioweb.bio/faunaweb/amphibiaweb/FichaEspecie/Cruziohyla%20craspedopus</ext-link>
+					</comment>). Accessed on 24 Apr 2019.</mixed-citation>
+				<element-citation publication-type="webpage">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Read</surname>
+							<given-names>M</given-names>
+						</name>
+						<name>
+							<surname>Ron</surname>
+							<given-names>S.</given-names>
+						</name>
+					</person-group>
+					<year>2018</year>
+					<source>Cruziohyla craspedopus</source>
+					<comment> (<ext-link ext-link-type="uri" xlink:href="https://bioweb.bio/faunaweb/amphibiaweb/FichaEspecie/Cruziohyla%20craspedopus">https://bioweb.bio/faunaweb/amphibiaweb/FichaEspecie/Cruziohyla%20craspedopus</ext-link>
+					</comment>
+					<date-in-citation content-type="access-date" iso-8601-date="2019-04-24">24 Apr 2019</date-in-citation>
+				</element-citation>
+			</ref>
+			<ref id="B17">
+				<mixed-citation>Rodrigues, D.J.; Lima, M.M.; Kawashita-Ribeiro, R.A. 2011. Amphibia, Anura, Hylidae, <italic>Cruziohyla craspedopus</italic> (Funkhouser, 1957): distribution extension, new state record and distribution map in Brazil. <italic>Check List</italic>, 7: 149-150.</mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Rodrigues</surname>
+							<given-names>D.J.</given-names>
+						</name>
+						<name>
+							<surname>Lima</surname>
+							<given-names>M.M.</given-names>
+						</name>
+						<name>
+							<surname>Kawashita-Ribeiro</surname>
+							<given-names>R.A.</given-names>
+						</name>
+					</person-group>
+					<year>2011</year>
+					<article-title>Amphibia, Anura, Hylidae, Cruziohyla craspedopus (Funkhouser, 1957): distribution extension, new state record and distribution map in Brazil</article-title>
+					<source>Check List</source>
+					<volume>7</volume>
+					<fpage>149</fpage>
+					<lpage>150</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B18">
+				<mixed-citation>Rodríguez, L.O.; Duellman, W.E. 1994. <italic>Guide to the frogs of the Iquitos region, Amazonian Peru</italic>. Natural History Museum of the University of Kansas, Lawrence, 114p.</mixed-citation>
+				<element-citation publication-type="book">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Rodríguez</surname>
+							<given-names>L.O.</given-names>
+						</name>
+						<name>
+							<surname>Duellman</surname>
+							<given-names>W.E.</given-names>
+						</name>
+					</person-group>
+					<year>1994</year>
+					<source>Guide to the frogs of the Iquitos region, Amazonian Peru</source>
+					<publisher-name>Natural History Museum of the University of Kansas</publisher-name>
+					<publisher-loc>Lawrence</publisher-loc>
+					<size units="pages">114</size>
+				</element-citation>
+			</ref>
+			<ref id="B19">
+				<mixed-citation>Ruiz-Carranza, P.M.; Ardila-Robayo, M.C.; Lynch, J.D. 1996. Lista actualizada de la fauna de Amphibia de Colombia. <italic>Revista de la Academia Colombiana de Ciencias Exactas, Físicas y Naturales</italic>, 77: 365-415.</mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Ruiz-Carranza</surname>
+							<given-names>P.M.</given-names>
+						</name>
+						<name>
+							<surname>Ardila-Robayo</surname>
+							<given-names>M.C.</given-names>
+						</name>
+						<name>
+							<surname>Lynch</surname>
+							<given-names>J.D.</given-names>
+						</name>
+					</person-group>
+					<year>1996</year>
+					<article-title>Lista actualizada de la fauna de Amphibia de Colombia</article-title>
+					<source>Revista de la Academia Colombiana de Ciencias Exactas, Físicas y Naturales</source>
+					<volume>77</volume>
+					<fpage>365</fpage>
+					<lpage>415</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B20">
+				<mixed-citation>Sexton, J.O.; Song, X-P.; Feng, M.; Noojipady, P.; Anand, A.; Huang, C.; <italic>et al</italic>. 2013. Global, 30-m resolution continuous fields of tree cover: Landsat-based rescaling of MODIS Vegetation Continuous Fields with lidar-based estimates of error. <italic>International FriendlyISISJournal of Digital Earth</italic>, 6: 427-458.</mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Sexton</surname>
+							<given-names>J.O.</given-names>
+						</name>
+						<name>
+							<surname>Song</surname>
+							<given-names>X-P.</given-names>
+						</name>
+						<name>
+							<surname>Feng</surname>
+							<given-names>M.</given-names>
+						</name>
+						<name>
+							<surname>Noojipady</surname>
+							<given-names>P.</given-names>
+						</name>
+						<name>
+							<surname>Anand</surname>
+							<given-names>A.</given-names>
+						</name>
+						<name>
+							<surname>Huang</surname>
+							<given-names>C.</given-names>
+						</name>
+						<etal/>
+					</person-group>
+					<year>2013</year>
+					<article-title>Global, 30-m resolution continuous fields of tree cover: Landsat-based rescaling of MODIS Vegetation Continuous Fields with lidar-based estimates of error</article-title>
+					<source>International FriendlyISISJournal of Digital Earth</source>
+					<volume>6</volume>
+					<fpage>427</fpage>
+					<lpage>458</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B21">
+				<mixed-citation>Turell, C.; Crnobrna, B.; Smith-Bessen, M. 2016. Monitoring a population of <italic>Cruziohyla craspedopus</italic> (Anura: Hylidae) using an artificial breeding habitat. <italic>Amphibian and Reptile Conservation</italic>, 10: 1-6.</mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Turell</surname>
+							<given-names>C.</given-names>
+						</name>
+						<name>
+							<surname>Crnobrna</surname>
+							<given-names>B.</given-names>
+						</name>
+						<name>
+							<surname>Smith-Bessen</surname>
+							<given-names>M.</given-names>
+						</name>
+					</person-group>
+					<year>2016</year>
+					<article-title>Monitoring a population of Cruziohyla craspedopus (Anura: Hylidae) using an artificial breeding habitat</article-title>
+					<source>Amphibian and Reptile Conservation</source>
+					<volume>10</volume>
+					<fpage>1</fpage>
+					<lpage>6</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B22">
+				<mixed-citation>Venancio, N.M.; de Moura, A.L.B.; Brito, T.F.; de Melo, T.N.; de Souza, M.B. 2014. First record of <italic>Cruziohyla craspedopus</italic> (Anura: Hylidae) for the state of Acre, with an updated distribution map. <italic>Herpetology Notes</italic>, 7: 479-480.</mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Venancio</surname>
+							<given-names>N.M.</given-names>
+						</name>
+						<name>
+							<surname>de Moura</surname>
+							<given-names>A.L.B.</given-names>
+						</name>
+						<name>
+							<surname>Brito</surname>
+							<given-names>T.F.</given-names>
+						</name>
+						<name>
+							<surname>de Melo</surname>
+							<given-names>T.N.</given-names>
+						</name>
+						<name>
+							<surname>de Souza</surname>
+							<given-names>M.B.</given-names>
+						</name>
+					</person-group>
+					<year>2014</year>
+					<article-title>First record of Cruziohyla craspedopus (Anura: Hylidae) for the state of Acre, with an updated distribution map</article-title>
+					<source>Herpetology Notes</source>
+					<volume>7</volume>
+					<fpage>479</fpage>
+					<lpage>480</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B23">
+				<mixed-citation>Wizen, G. 2017. Consecutive breeding in human-made infrastructure by <italic>Cruziohyla craspedopus</italic> (Funkhouser, 1957) in Ecuador. <italic>Herpetology Notes</italic>, 10: 721-722.</mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Wizen</surname>
+							<given-names>G.</given-names>
+						</name>
+					</person-group>
+					<year>2017</year>
+					<article-title>Consecutive breeding in human-made infrastructure by Cruziohyla craspedopus (Funkhouser, 1957) in Ecuador</article-title>
+					<source>Herpetology Notes</source>
+					<volume>10</volume>
+					<fpage>721</fpage>
+					<lpage>722</lpage>
+				</element-citation>
+			</ref>
+		</ref-list>
+		<fn-group>
+			<fn fn-type="other" id="fn2">
+				<label>2</label>
+				<p>CITE AS: Fraga, R. de; Torralvo, K. 2019. New record of the fringed leaf frog, Cruziohyla craspedopus (Anura: Phyllomedusidae) extends its eastern range limit. <italic>Acta Amazonica</italic> 49: 208-212.</p>
+			</fn>
+		</fn-group>
+	</back>
+</article>

@@ -1,0 +1,990 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE article
+  PUBLIC "-//NLM//DTD JATS (Z39.96) FriendlyISISJournal Publishing DTD v1.1 20151215//EN" "JATS-journalpublishing1.dtd">
+<article article-type="brief-report" dtd-version="1.1" specific-use="sps-1.9" xml:lang="en" xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<front>
+		<journal-meta>
+			<journal-id journal-id-type="publisher-id">aa</journal-id>
+			<journal-title-group>
+				<journal-title>Acta Amazonica</journal-title>
+				<abbrev-journal-title abbrev-type="publisher">Acta Amaz.</abbrev-journal-title>
+			</journal-title-group>
+			<issn pub-type="ppub">0044-5967</issn>
+			<issn pub-type="epub">1809-4392</issn>
+			<publisher>
+				<publisher-name>Instituto Nacional de Pesquisas da Amazônia</publisher-name>
+			</publisher>
+		</journal-meta>
+		<article-meta>
+			<article-id pub-id-type="doi">10.1590/1809-4392201803161</article-id>
+			<article-categories>
+				<subj-group subj-group-type="heading">
+					<subject>Agronomy and Forestry</subject>
+				</subj-group>
+			</article-categories>
+			<title-group>
+				<article-title>First record of <italic>Thaumastocoris peregrinus</italic> (Hemiptera, Thaumastocoridae) in Pará state, Brazil</article-title>
+				<trans-title-group xml:lang="pt">
+					<trans-title>Primeiro registro de <italic>Thaumastocoris peregrinus</italic> (Hemiptera, Thaumastocoridae) no estado do Pará, Brasil</trans-title>
+				</trans-title-group>
+			</title-group>
+			<contrib-group>
+				<contrib contrib-type="author">
+					<name>
+						<surname>SALIBA</surname>
+						<given-names>Ivy Laura</given-names>
+					</name>
+					<xref ref-type="aff" rid="aff1">¹</xref>
+				</contrib>
+				<contrib contrib-type="author">
+					<name>
+						<surname>LUNZ</surname>
+						<given-names>Alexandre Mehl</given-names>
+					</name>
+					<xref ref-type="aff" rid="aff2">²</xref>
+				</contrib>
+				<contrib contrib-type="author">
+					<name>
+						<surname>BATISTA</surname>
+						<given-names>Telma Fátima</given-names>
+					</name>
+					<xref ref-type="aff" rid="aff1">¹</xref>
+				</contrib>
+				<contrib contrib-type="author">
+					<contrib-id contrib-id-type="orcid">0000-0002-1717-4491</contrib-id>
+					<name>
+						<surname>SCHWARTZ</surname>
+						<given-names>Gustavo</given-names>
+					</name>
+					<xref ref-type="aff" rid="aff2">²</xref>
+					<xref ref-type="corresp" rid="c1">*</xref>
+				</contrib>
+			</contrib-group>
+			<aff id="aff1">
+				<label>¹</label>
+				<institution content-type="original">Universidade Federal Rural da Amazônia (UFRA), Belém, PA, Brazil</institution>
+				<institution content-type="normalized">Universidade Federal Rural da Amazônia</institution>
+				<institution content-type="orgname">Universidade Federal Rural da Amazônia</institution>
+				<addr-line>
+					<city>Belém</city>
+					<state>PA</state>
+				</addr-line>
+				<country country="BR">Brazil</country>
+			</aff>
+			<aff id="aff2">
+				<label>²</label>
+				<institution content-type="original">Empresa Brasileira de Pesquisa Agropecuária (Embrapa), Embrapa Amazônia Oriental, Belém, PA, Brazil</institution>
+				<institution content-type="normalized">Embrapa Amazônia Oriental</institution>
+				<institution content-type="orgname">Embrapa Amazônia Oriental</institution>
+				<addr-line>
+					<city>Belém</city>
+					<state>PA</state>
+				</addr-line>
+				<country country="BR">Brazil</country>
+			</aff>
+			<author-notes>
+				<corresp id="c1">* Corresponding author: <email>Gustavo.Schwartz@embrapa.br</email>
+				</corresp>
+				<fn fn-type="edited-by" id="fn1">
+					<label>ASSOCIATE EDITOR:</label>
+					<p> Pitágoras C. Bispo</p>
+				</fn>
+			</author-notes>
+			<pub-date date-type="pub" publication-format="electronic">
+				<day>12</day>
+				<month>08</month>
+				<year>2019</year>
+			</pub-date>
+			<pub-date date-type="collection" publication-format="electronic">
+				<season>Jul-Sep</season>
+				<year>2019</year>
+			</pub-date>
+			<volume>49</volume>
+			<issue>3</issue>
+			<fpage>179</fpage>
+			<lpage>182</lpage>
+			<history>
+				<date date-type="received">
+					<day>13</day>
+					<month>08</month>
+					<year>2018</year>
+				</date>
+				<date date-type="accepted">
+					<day>12</day>
+					<month>05</month>
+					<year>2019</year>
+				</date>
+			</history>
+			<permissions>
+				<license license-type="open-access" xlink:href="https://creativecommons.org/licenses/by/4.0/" xml:lang="en">
+					<license-p>This is an open-access article distributed under the terms of the Creative Commons Attribution License</license-p>
+				</license>
+			</permissions>
+			<abstract>
+				<title>ABSTRACT</title>
+				<p><italic>Thaumastocoris peregrinus</italic> (Hemiptera, Thaumastocoridae) is a phytophagous pest of eucalyptus plantations. It was introduced in Brazil in 2008, and expanded rapidly due to its adaptive capacity to different climatic conditions. Eucalyptus has been planted in the Brazilian Amazon since the 1980s, being used in silvopastoral systems and for cellulose production. Since its introduction in the southernmost Brazilian state of Rio Grande do Sul, <italic>T. peregrinus</italic> has expanded its geographical distribution to 117 municipalities in states in the south (Rio Grande do Sul, Santa Catarina and Paraná), southeast (São Paulo, Espirito Santo, Rio de Janeiro and Minas Gerais), mid-west (Mato Grosso do Sul and Goiás) and northeast (Sergipe) of the country. Here we report the first record of <italic>T. peregrinus</italic> in the Brazilian Amazonian state of Pará.</p>
+			</abstract>
+			<trans-abstract xml:lang="pt">
+				<title>RESUMO</title>
+				<p><italic>Thaumastocoris peregrinus</italic> (Hemiptera, Thaumastocoridae) é uma praga fitófaga de plantios de eucalipto introduzida no Brasil em 2008. A espécie expandiu-se rapidamente devido à sua capacidade adaptativa a diferentes condições climáticas. O eucalipto vem se expandindo na Amazônia brasileira desde a década de 1980, sendo usado em sistemas silvipastoris e produção de celulose. Desde a sua introdução inicial no Rio Grande do Sul, <italic>T. peregrinus</italic> expandiu sua distribuição geográfica a 117 municípios nos estados sul (Rio Grande do Sul, Santa Catarina e Paraná), sudeste (São Paulo, Espirito Santo, Rio de Janeiro e Minas Gerais), centro-oeste (Mato Grosso do Sul e Goiás) e nordeste (Sergipe) do país. Aqui relatamos o primeiro registro de <italic>T. peregrinus</italic> no estado do Pará, Brasil.</p>
+			</trans-abstract>
+			<kwd-group xml:lang="en">
+				<title>KEYWORDS:</title>
+				<kwd>insect pest</kwd>
+				<kwd>bronze bug</kwd>
+				<kwd>occurrence</kwd>
+				<kwd>Eucalyptus</kwd>
+				<kwd>Brazilian Amazon</kwd>
+			</kwd-group>
+			<kwd-group xml:lang="pt">
+				<title>PALAVRAS-CHAVE:</title>
+				<kwd>praga agrícola</kwd>
+				<kwd>percevejo-bronzeado</kwd>
+				<kwd>ocorrência</kwd>
+				<kwd>Eucalyptus</kwd>
+				<kwd>Amazônia</kwd>
+			</kwd-group>
+			<funding-group>
+				<award-group award-type="contract">
+					<funding-source>Conselho Nacional de Desenvolvimento Científico e Tecnológico - CNPq</funding-source>
+					<award-id>474457/2013-3</award-id>
+				</award-group>
+				<award-group award-type="contract">
+					<funding-source>Empresa Brasileira de Pesquisa Agropecuária - Embrapa</funding-source>
+					<award-id>02.12.01.028.00.00</award-id>
+				</award-group>
+			</funding-group>
+			<counts>
+				<fig-count count="1"/>
+				<table-count count="1"/>
+				<equation-count count="0"/>
+				<ref-count count="22"/>
+				<page-count count="4"/>
+			</counts>
+		</article-meta>
+	</front>
+	<body>
+		<p><italic>Thaumastocoris peregrinus</italic> Carpintero &amp; Dellapé (Hemiptera, Thaumastocoridae) is a phytophagous pest in both immature and adult stages that occurs in eucalyptus plantations (Carpintero and Dellapé 2006). Attacked trees present symptoms such as drying and color change of the leaves, that change from their natural silvery color to brown-reddish. It is from this leaf color of infested trees, that the insect derives its common name, bronze bug (<xref ref-type="bibr" rid="B8">Jacobs and Nesser 2005</xref>; <xref ref-type="bibr" rid="B22">Wilcken <italic>et al.</italic> 2010</xref>). Intense <italic>T. peregrinus</italic> infestations cause partial or total defoliation that results in the reduction of the trees photosynthetic area (<xref ref-type="bibr" rid="B14">Penteado <italic>et al.</italic> 2014</xref>) and the consequent decrease in its productivity (<xref ref-type="bibr" rid="B10">Lunz and Azevedo 2016</xref>), eventually leading to the death of the tree.</p>
+		<p><italic>Thaumastocoris peregrinus</italic> feeds on eucalyptus by making small incisions on the leaves (<xref ref-type="bibr" rid="B9">Lorencetti <italic>et al.</italic> 2015</xref>; <xref ref-type="bibr" rid="B3">Cipriani <italic>et al.</italic> 2015</xref>). The adult insect is 3-4 mm long with a brown flattened body that varies according to the development phase (<xref ref-type="bibr" rid="B8">Jacobs and Nesser 2005</xref>; Lorencetti <italic>et al.</italic> 2015; <xref ref-type="bibr" rid="B10">Lunz and Azevedo 2016</xref>). Females of <italic>T. peregrinus</italic> lay an average of 60 black eggs on eucalyptus leaves. The development involves five nymph instars (Jacobs and Nesser 2005) and an approximate 60-day life cycle that can vary with climate conditions (<xref ref-type="bibr" rid="B14">Penteado <italic>et al.</italic> 2014</xref>). Generations overlap along the year, so that great numbers of nymphs and adults can occur simultaneously (<xref ref-type="bibr" rid="B13">Noack and Rose 2007</xref>).</p>
+		<p>Originated from Australia, <italic>T. peregrinus</italic> was first recorded in South America in November 2005, in the north of Buenos Aires, Argentina (<xref ref-type="bibr" rid="B12">Noack and Coviella 2006</xref>), and later in Uruguay, in January 2008 (<xref ref-type="bibr" rid="B11">Martínez and Bianchi 2010</xref>). In Brazil, the species was first recorded in early 2008, in the municipality of São Francisco de Assis, in the southern state of Rio Grande do Sul (<xref ref-type="table" rid="t1">Table 1</xref>), in hybrid clones of <italic>Eucalyptus urograndis</italic> and <italic>E. urophylla</italic> (<xref ref-type="bibr" rid="B22">Wilcken <italic>et al.</italic> 2010</xref>).</p>
+		<p>
+			<table-wrap id="t1">
+				<label>Table 1</label>
+				<caption>
+					<title>Chronological evolution of first records of the bronze bug, <italic>Thaumastocoris peregrinus</italic> in different Brazilian states. The first record in Brazil was in Rio Grande do Sul state in January 2008.</title>
+				</caption>
+				<table>
+					<colgroup>
+						<col/>
+						<col/>
+						<col/>
+						<col/>
+					</colgroup>
+					<thead>
+						<tr>
+							<th align="left">Date of first record</th>
+							<th align="center">Number of municipalities</th>
+							<th align="center">State</th>
+							<th align="center">Source</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td align="left">Early 2008</td>
+							<td align="center">1</td>
+							<td align="center">Rio Grande do Sul</td>
+							<td align="center">
+								<xref ref-type="bibr" rid="B22">Wilcken et al. (2010</xref>)</td>
+						</tr>
+						<tr>
+							<td align="left">January 2009</td>
+							<td align="center">9</td>
+							<td align="center">Rio Grande do Sul</td>
+							<td align="center">
+								<xref ref-type="bibr" rid="B22">Wilcken et al. (2010</xref>)</td>
+						</tr>
+						<tr>
+							<td align="left">April 2009</td>
+							<td align="center">13</td>
+							<td align="center">Rio Grande do Sul</td>
+							<td align="center">
+								<xref ref-type="bibr" rid="B19">Savaris et al. (2011</xref>
+							</td>
+						</tr>
+						<tr>
+							<td align="left">April 2009</td>
+							<td align="center">4</td>
+							<td align="center">Santa Catarina</td>
+							<td align="center">
+								<xref ref-type="bibr" rid="B19">Savaris et al. (2011</xref>)</td>
+						</tr>
+						<tr>
+							<td align="left">October 2009</td>
+							<td align="center">Not defined</td>
+							<td align="center">Paraná</td>
+							<td align="center">
+								<xref ref-type="bibr" rid="B1">Barbosa et al. (2010</xref>)</td>
+						</tr>
+						<tr>
+							<td align="left">2012</td>
+							<td align="center">1</td>
+							<td align="center">Paraná</td>
+							<td align="center">
+								<xref ref-type="bibr" rid="B9">Lorencetti et al. (2015</xref>)</td>
+						</tr>
+						<tr>
+							<td align="left">June 2008</td>
+							<td align="center">1</td>
+							<td align="center">São Paulo</td>
+							<td align="center">
+								<xref ref-type="bibr" rid="B21">Wilcken (2008</xref>)</td>
+						</tr>
+						<tr>
+							<td align="left">October 2009</td>
+							<td align="center">74</td>
+							<td align="center">São Paulo</td>
+							<td align="center">
+								<xref ref-type="bibr" rid="B22">Wilcken et al. (2010</xref>)</td>
+						</tr>
+						<tr>
+							<td align="left">July 2009</td>
+							<td align="center">1</td>
+							<td align="center">Espírito Santo</td>
+							<td align="center">
+								<xref ref-type="bibr" rid="B22">Wilcken et al. (2010</xref>)</td>
+						</tr>
+						<tr>
+							<td align="left">October 2009</td>
+							<td align="center">1</td>
+							<td align="center">Rio de Janeiro</td>
+							<td align="center">
+								<xref ref-type="bibr" rid="B22">Wilcken et al. (2010</xref>)</td>
+						</tr>
+						<tr>
+							<td align="left">December 2008</td>
+							<td align="center">2</td>
+							<td align="center">Minas Gerais</td>
+							<td align="center">
+								<xref ref-type="bibr" rid="B22">Wilcken et al. (2010</xref>)</td>
+						</tr>
+						<tr>
+							<td align="left">October 2009</td>
+							<td align="center">2</td>
+							<td align="center">Mato Grosso do Sul</td>
+							<td align="center">
+								<xref ref-type="bibr" rid="B22">Wilcken et al. (2010</xref>)</td>
+						</tr>
+						<tr>
+							<td align="left">November 2011</td>
+							<td align="center">3</td>
+							<td align="center">Goiás</td>
+							<td align="center">
+								<xref ref-type="bibr" rid="B15">Pereira et al. (2013</xref>)</td>
+						</tr>
+						<tr>
+							<td align="left">2015</td>
+							<td align="center">1</td>
+							<td align="center">Sergipe</td>
+							<td align="center">
+								<xref ref-type="bibr" rid="B17">Ribeiro et al. (2015</xref>)</td>
+						</tr>
+						<tr>
+							<td align="left">2015</td>
+							<td align="center">4</td>
+							<td align="center">Pará</td>
+							<td align="center">This study</td>
+						</tr>
+					</tbody>
+				</table>
+			</table-wrap>
+		</p>
+		<p>The insect rapidly dispersed over eucalyptus plantations throughout Brazil (<xref ref-type="fig" rid="f1">Figure 1</xref>) due to its adaptive capacity, since it can survive under different climate conditions (<xref ref-type="bibr" rid="B15">Pereira <italic>et al.</italic> 2013</xref>). Other favorable aspects for the rapid dispersion of <italic>T. peregrinus</italic> were the transport of infested vegetal material of eucalyptus across producing regions (<xref ref-type="bibr" rid="B22">Wilcken <italic>et al.</italic> 2010</xref>) and fragile phytosanitary barriers among producing states (<xref ref-type="bibr" rid="B10">Lunz and Azevedo 2016</xref>).</p>
+		<p>
+			<fig id="f1">
+				<label>Figure 1</label>
+				<caption>
+					<title>Distribution of the bronze bug, <italic>Thaumastocoris peregrinus</italic> in Brazil, showing in red the states with confirmed occurrences. The first record was in the southern state of Rio Grande do Sul in 2008 (see <xref ref-type="table" rid="t1">Table 1</xref> for first records in other states). The municipalities in Pará state where the species was first recorded (this study) are indicated in yellow. States in which the species has been reported, but no voucher-based records exist to date, are indicated in pink. This figure is in color in the electronic version</title>
+				</caption>
+				<graphic xlink:href="1809-4392-aa-49-03-179-gf1.jpg"/>
+			</fig>
+		</p>
+		<p>In the southeastern region of the state of Pará, in the eastern Brazilian Amazon, soil and climatic conditions are favorable to the development of eucalyptus plantations (<xref ref-type="bibr" rid="B5">Filgueiras <italic>et al.</italic> 2011</xref>). Today, Pará is the 10<sup>th</sup> Brazilian state in area planted with eucalyptus, with almost 134,000 ha, being mainly used to supply the energy and cellulose markets (<xref ref-type="bibr" rid="B7">IBA 2017</xref>). Reports on the occurrence of new dangerous biotic agents in these plantations are scarce, which is likely due to the lack of periodic monitoring by plantation owners.</p>
+		<p>Here we provide information on the occurrence of <italic>T. peregrinus</italic> in eucalyptus plantations from Pará state, extending the geographic distribution of this pest in Brazil. Sampling was carried out in 2015 and 2016, in areas of commercial plantations of <italic>Eucalyptus</italic> spp. in southeastern Pará, in the municipalities of Paragominas (03°20’07.08”S, 47°11’21.54”W), Ulianópolis (03°58’26.50”S, 47°33’01.96”W), Dom Eliseu (04°30’02.73”S, 47°49’31.50”W) and Rondon do Pará (04°36’32.91”S, 47°57’18.51”W) (<xref ref-type="fig" rid="f1">Figure 1</xref>). The climate type is Awi, according to the Köppen classification. Yellow sticky traps (ISCA Technologies, Brazil) were used in 32 georeferenced points. Traps were placed in the interior of the plantations, at least 100 m from the border. Each trap was located between two trees at 1.60 m from the soil. Traps were replaced monthly. Retrieved traps were analyzed at an entomology laboratory at Universidade Federal Rural da Amazônia, in Belém (Pará state, Brazil) under a stereoscopic microscope QM Q7714Z. Specimens of <italic>T. peregrinus</italic> were identified through the use of taxonomic keys by <xref ref-type="bibr" rid="B2">Carpintero and Dellapé (2006</xref>) and <xref ref-type="bibr" rid="B22">Wilcken <italic>et al.</italic> (2010</xref>). Voucher specimens of the collections were deposited in the entomological collection of Embrapa Amazônia Oriental in Belém, Pará, Brazil, under number 2444. Quantitative data of these samplings will be analyzed elsewhere.</p>
+		<p>A total of 1,358 individuals were collected, 438 (32.2%) in 2015 and 920 (67.8%) in 2016, in all four municipalities sampled. <italic>Thaumastocoris peregrinus</italic> occurred in clones of <italic>E. camaldulensis</italic>, <italic>E. urophylla</italic>, <italic>E. grandis</italic>, and in hybrid clones of <italic>E. camaldulensis</italic>. Nymphs and eggs were also observed in neighbor trees around the traps, but these trees showed no sign of serious damage. </p>
+		<p>Many eucalyptus species are attacked by <italic>T. peregrinus</italic>, especially <italic>E. camaldulensis</italic> and the hybrid <italic>E. urograndis</italic> (<xref ref-type="bibr" rid="B16">Queiroz 2009</xref>). Moreover, <italic>E. camaldulensis</italic> is considered as the most susceptible eucalyptus species to insect pests (<xref ref-type="bibr" rid="B21">Wilcken 2008</xref>). <italic>Thaumastocoris peregrinus</italic> also attacks <italic>E. tereticornis</italic> and the hybrid of <italic>E. camaldulensis</italic> x <italic>E. grandis</italic> (<xref ref-type="bibr" rid="B8">Jacobs and Nesser 2005</xref>). <italic>Eucalyptus urophylla</italic> and <italic>E. grandis</italic> were also very susceptible to <italic>T. peregrinus</italic> attacks (<xref ref-type="bibr" rid="B20">Soliman <italic>et al.</italic> 2012</xref>).</p>
+		<p>Increases in plantation areas normally result in increases in insect species that adapt themselves to the crops (<xref ref-type="bibr" rid="B4">Costa and Araldi 2014</xref>). Exotic insect pests in forest plantations can be a threat to forest productivity due to the economic losses coming from plantation damages caused by these insects (<xref ref-type="bibr" rid="B6">Garlet <italic>et al.</italic> 2016</xref>). There is scarce information regarding the efficient management of <italic>T. peregrinus</italic>. </p>
+		<p>Probably the <italic>T. peregrinus</italic> invasion in Pará started from eucalyptus plantations in the neighboring state of Maranhão, where the presence of <italic>T. peregrinus</italic> has been reported in newsfeeds (<xref ref-type="bibr" rid="B18">SAGRIMA 2014</xref>), although no voucher-based record exists yet of the occurrence of the species in this state. Eucalyptus has been cultivated in Pará for more than 30 years without adequate insect pest monitoring by plantation owners. Based on the pest’s first records in the mid-western state of Goiás (<xref ref-type="table" rid="t1">Table 1</xref>) it is reasonable to estimate that <italic>T. peregrinus</italic> is in Pará since 2013. Furthermore, <italic>T. peregrinus</italic> can also be present in eucalyptus plantations in Bahia, Piauí, Maranhão and Tocantins (<xref ref-type="fig" rid="f1">Figure 1</xref>), although there are no scientific records of its occurrence published for these states. </p>
+		<p>Our findings highlight the importance of using periodic and systematic monitoring methods to determine pest infestation levels and population dynamics in eucalyptus commercial plantations, and which eucalyptus species are more susceptible to pests. Systematic studies also help to identify possible native natural enemies of pest species that could favor the use of ecological pest management.</p>
+		<p>Since its first occurrence, and including the records we present in here, <italic>T. peregrinus</italic> has now been recorded in 117 Brazilian municipalities, and in 11 federal states (<xref ref-type="table" rid="t1">Table 1</xref>)</p>
+	</body>
+	<back>
+		<ack>
+			<title>ACKNOWLEDGMENTS</title>
+			<p>We are grateful to Conselho Nacional de Desenvolvimento Científico e Tecnológico - CNPq (project # 474457/2013-3 CNPq/Universal call for proposals nr. 14, Faixa B), and to Empresa Brasileira de Pesquisa Agropecuária - Embrapa (project # 02.12.01.028.00.00 Embrapa/Macroprograma 2) for funding, which made this work possible.</p>
+		</ack>
+		<ref-list>
+			<ref id="B1">
+				<mixed-citation>Barbosa, L.R.; Santos, F.; Wilcken, C.F.; Soliman, E.P. 2010. Registro de <italic>Thaumastocoris peregrinus</italic> (Hemiltera, Thaumastocoridae) no Estado do Paraná. <italic>Pesquisa Florestal Brasileira</italic>, 30: 75-77.</mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Barbosa</surname>
+							<given-names>L.R.</given-names>
+						</name>
+						<name>
+							<surname>Santos</surname>
+							<given-names>F.</given-names>
+						</name>
+						<name>
+							<surname>Wilcken</surname>
+							<given-names>C.F.</given-names>
+						</name>
+						<name>
+							<surname>Soliman</surname>
+							<given-names>E.P.</given-names>
+						</name>
+					</person-group>
+					<year>2010</year>
+					<article-title>Registro de Thaumastocoris peregrinus (Hemiltera, Thaumastocoridae) no Estado do Paraná</article-title>
+					<source>Pesquisa Florestal Brasileira</source>
+					<volume>30</volume>
+					<fpage>75</fpage>
+					<lpage>77</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B2">
+				<mixed-citation>Carpintero, D.L.; Dellapé, P.M. 2006. A new species of <italic>Thaumastocoris</italic> Kirkaldy from Argentina (Heteroptera: Thaumastocoridae: Thaumastocorinae). <italic>Zootaxa</italic>, 1228: 61-68.</mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Carpintero</surname>
+							<given-names>D.L.</given-names>
+						</name>
+						<name>
+							<surname>Dellapé</surname>
+							<given-names>P.M.</given-names>
+						</name>
+					</person-group>
+					<year>2006</year>
+					<article-title>A new species of Thaumastocoris Kirkaldy from Argentina (Heteroptera: Thaumastocoridae: Thaumastocorinae)</article-title>
+					<source>Zootaxa</source>
+					<volume>1228</volume>
+					<fpage>61</fpage>
+					<lpage>68</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B3">
+				<mixed-citation>Cipriani, H.N.; Vieira, A.H.; Rocha, R.B.; Costa, J.N.M.; Mendes, A.M.; Araújo, L.V.; Vieira Junior, J.R. 2015. <italic>Cultivo do eucalipto para madeira em Rondônia</italic>. Sistemas de Produção n. 35, Embrapa Rondônia, Porto Velho, 85p.</mixed-citation>
+				<element-citation publication-type="book">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Cipriani</surname>
+							<given-names>H.N.</given-names>
+						</name>
+						<name>
+							<surname>Vieira</surname>
+							<given-names>A.H.</given-names>
+						</name>
+						<name>
+							<surname>Rocha</surname>
+							<given-names>R.B.</given-names>
+						</name>
+						<name>
+							<surname>Costa</surname>
+							<given-names>J.N.M.</given-names>
+						</name>
+						<name>
+							<surname>Mendes</surname>
+							<given-names>A.M.</given-names>
+						</name>
+						<name>
+							<surname>Araújo</surname>
+							<given-names>L.V.</given-names>
+						</name>
+						<name>
+							<surname>Vieira</surname>
+							<given-names>J.R.</given-names>
+							<suffix>Junior</suffix>
+						</name>
+					</person-group>
+					<year>2015</year>
+					<source>Cultivo do eucalipto para madeira em Rondônia</source>
+					<comment>Sistemas de Produção</comment>
+					<volume>35</volume>
+					<publisher-name>Embrapa Rondônia</publisher-name>
+					<publisher-loc>Porto Velho</publisher-loc>
+				</element-citation>
+			</ref>
+			<ref id="B4">
+				<mixed-citation>Costa, C.E.; Araldi, D.B. 2014. Entomofauna florestal: uma visão holística. In: Cantarelli, E.B.; Costa, E.C. (Org.). <italic>Entomologia Florestal Aplicada</italic>. 1st ed., UFSM, Santa Maria, p.13-34.</mixed-citation>
+				<element-citation publication-type="book">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Costa</surname>
+							<given-names>C.E.</given-names>
+						</name>
+						<name>
+							<surname>Araldi</surname>
+							<given-names>D.B.</given-names>
+						</name>
+					</person-group>
+					<year>2014</year>
+					<chapter-title>Entomofauna florestal: uma visão holística</chapter-title>
+					<person-group person-group-type="compiler">
+						<name>
+							<surname>Cantarelli</surname>
+							<given-names>E.B.</given-names>
+						</name>
+						<name>
+							<surname>Costa</surname>
+							<given-names>E.C.</given-names>
+						</name>
+					</person-group>
+					<source>Entomologia Florestal Aplicada</source>
+					<edition>1st ed.</edition>
+					<publisher-name>UFSM</publisher-name>
+					<publisher-loc>Santa Maria</publisher-loc>
+					<fpage>13</fpage>
+					<lpage>34</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B5">
+				<mixed-citation>Filgueiras, G.C.; Mota Junior, K.J.A.; Silva, R.P.; Bentes, E.S. 2011. Análise e perspectivas para o desenvolvimento da Silvicultura no Estado do Pará. <italic>Amazônia: Ciência e Desenvolvimento</italic>, 7: 33-59.</mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Filgueiras</surname>
+							<given-names>G.C.</given-names>
+						</name>
+						<name>
+							<surname>Mota</surname>
+							<given-names>K.J.A.</given-names>
+							<suffix>Junior</suffix>
+						</name>
+						<name>
+							<surname>Silva</surname>
+							<given-names>R.P.</given-names>
+						</name>
+						<name>
+							<surname>Bentes</surname>
+							<given-names>E.S.</given-names>
+						</name>
+					</person-group>
+					<year>2011</year>
+					<article-title>Análise e perspectivas para o desenvolvimento da Silvicultura no Estado do Pará</article-title>
+					<source>Amazônia: Ciência e Desenvolvimento</source>
+					<volume>7</volume>
+					<fpage>33</fpage>
+					<lpage>59</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B6">
+				<mixed-citation>Garlet, J.; Costa, E.C.; Boscardin, J. 2016. Levantamento da entomofauna em plantios de <italic>Eucalyptus</italic> spp. por meio de armadilha luminosa em São Francisco de Assis - RS. <italic>Ciência Florestal</italic>, 26: 365-374.</mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Garlet</surname>
+							<given-names>J.</given-names>
+						</name>
+						<name>
+							<surname>Costa</surname>
+							<given-names>E.C.</given-names>
+						</name>
+						<name>
+							<surname>Boscardin</surname>
+							<given-names>J.</given-names>
+						</name>
+					</person-group>
+					<year>2016</year>
+					<article-title>Levantamento da entomofauna em plantios de Eucalyptus spp. por meio de armadilha luminosa em São Francisco de Assis - RS</article-title>
+					<source>Ciência Florestal</source>
+					<volume>26</volume>
+					<fpage>365</fpage>
+					<lpage>374</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B7">
+				<mixed-citation>IBA. 2017. <italic>Annual report</italic> . Indústria Brasileira de Árvores, Brasília, 80p. (<comment> (<ext-link ext-link-type="uri" xlink:href="https://iba.org/images/shared/Biblioteca/IBA_RelatorioAnual2017.pdf">https://iba.org/images/shared/Biblioteca/IBA_RelatorioAnual2017.pdf</ext-link>
+					</comment>). Accessed on 10 Apr 2018. </mixed-citation>
+				<element-citation publication-type="report">
+					<person-group person-group-type="author">
+						<collab>IBA</collab>
+					</person-group>
+					<year>2017</year>
+					<source>Annual report</source>
+					<publisher-name>Indústria Brasileira de Árvores</publisher-name>
+					<publisher-loc>Brasília</publisher-loc>
+					<size units="pages">80</size>
+					<comment> (<ext-link ext-link-type="uri" xlink:href="https://iba.org/images/shared/Biblioteca/IBA_RelatorioAnual2017.pdf">https://iba.org/images/shared/Biblioteca/IBA_RelatorioAnual2017.pdf</ext-link>
+					</comment>
+					<date-in-citation content-type="access-date" iso-8601-date="2018-04-10">10 Apr 2018</date-in-citation>
+				</element-citation>
+			</ref>
+			<ref id="B8">
+				<mixed-citation>Jacobs, D.H.; Neser, S. 2005. <italic>Thaumastocoris australicus</italic> Kirkaldy (Heteroptera: Thaumastocoridae): a new insect arrival in South Africa, damaging to <italic>Eucalyptus</italic> trees: research in action. <italic>South African FriendlyISISJournal of Science</italic>, 101: 233-236.</mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Jacobs</surname>
+							<given-names>D.H.</given-names>
+						</name>
+						<name>
+							<surname>Neser</surname>
+							<given-names>S.</given-names>
+						</name>
+					</person-group>
+					<year>2005</year>
+					<article-title>Thaumastocoris australicus Kirkaldy (Heteroptera: Thaumastocoridae): a new insect arrival in South Africa, damaging to Eucalyptus trees: research in action</article-title>
+					<source>South African FriendlyISISJournal of Science</source>
+					<volume>101</volume>
+					<fpage>233</fpage>
+					<lpage>236</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B9">
+				<mixed-citation>Lorencetti, G.A.T.; Potrich, M.; Silva, E.L.R.; Mazaro, S.M.; Barbosa, L.R. 2015. Registro de <italic>Thaumastocoris peregrinus</italic> Carpintero e Dellapé na Região Sudoeste do Paraná. <italic>Floresta e Ambiente</italic>, 22: 434-436.</mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Lorencetti</surname>
+							<given-names>G.A.T.</given-names>
+						</name>
+						<name>
+							<surname>Potrich</surname>
+							<given-names>M.</given-names>
+						</name>
+						<name>
+							<surname>Silva</surname>
+							<given-names>E.L.R.</given-names>
+						</name>
+						<name>
+							<surname>Mazaro</surname>
+							<given-names>S.M.</given-names>
+						</name>
+						<name>
+							<surname>Barbosa</surname>
+							<given-names>L.R.</given-names>
+						</name>
+					</person-group>
+					<year>2015</year>
+					<article-title>Registro de Thaumastocoris peregrinus Carpintero e Dellapé na Região Sudoeste do Paraná</article-title>
+					<source>Floresta e Ambiente</source>
+					<volume>22</volume>
+					<fpage>434</fpage>
+					<lpage>436</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B10">
+				<mixed-citation>Lunz, A.M.; Azevedo, R. 2016. Eucalipto. In: Silva, N.M.; Adaime, R.; Zucchi, R.A. (Eds.). <italic>Pragas agrícolas e florestais na Amazônia</italic>. Embrapa, Brasília, p.461-471.</mixed-citation>
+				<element-citation publication-type="book">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Lunz</surname>
+							<given-names>A.M.</given-names>
+						</name>
+						<name>
+							<surname>Azevedo</surname>
+							<given-names>R.</given-names>
+						</name>
+					</person-group>
+					<year>2016</year>
+					<chapter-title>Eucalipto</chapter-title>
+					<person-group person-group-type="editor">
+						<name>
+							<surname>Silva</surname>
+							<given-names>N.M.</given-names>
+						</name>
+						<name>
+							<surname>Adaime</surname>
+							<given-names>R.</given-names>
+						</name>
+						<name>
+							<surname>Zucchi</surname>
+							<given-names>R.A.</given-names>
+						</name>
+					</person-group>
+					<source>Pragas agrícolas e florestais na Amazônia</source>
+					<publisher-name>Embrapa</publisher-name>
+					<publisher-loc>Brasília</publisher-loc>
+					<fpage>461</fpage>
+					<lpage>471</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B11">
+				<mixed-citation>Martínez, G.; Bianchi, M. 2010. Primer registro para Uruguay de la chinche del eucalipto, Thaumastocoris peregrinus Carpintero y Dellappé, 2006 (Hemipera; Thaumastocoridae). <italic>Agrociencia</italic>, 14: 15-18.</mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Martínez</surname>
+							<given-names>G.</given-names>
+						</name>
+						<name>
+							<surname>Bianchi</surname>
+							<given-names>M.</given-names>
+						</name>
+					</person-group>
+					<year>2010</year>
+					<article-title>Primer registro para Uruguay de la chinche del eucalipto, Thaumastocoris peregrinus Carpintero y Dellappé, 2006 (Hemipera; Thaumastocoridae)</article-title>
+					<source>Agrociencia</source>
+					<volume>14</volume>
+					<fpage>15</fpage>
+					<lpage>18</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B12">
+				<mixed-citation>Noack, A.E.; Coviella, C.E. 2006. <italic>Thaumastocoris australicus</italic> Kirkaldy (Hemiptera: Thaumastocoridae): first Record of this invasive pest of Eucalyptus in the Americas. <italic>General and Applied Entomology</italic>, 35: 13-14.</mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Noack</surname>
+							<given-names>A.E.</given-names>
+						</name>
+						<name>
+							<surname>Coviella</surname>
+							<given-names>C.E.</given-names>
+						</name>
+					</person-group>
+					<year>2006</year>
+					<article-title>Thaumastocoris australicus Kirkaldy (Hemiptera: Thaumastocoridae): first Record of this invasive pest of Eucalyptus in the Americas</article-title>
+					<source>General and Applied Entomology</source>
+					<volume>35</volume>
+					<fpage>13</fpage>
+					<lpage>14</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B13">
+				<mixed-citation>Noack, A.E; Rose, H. 2007. Life-history of <italic>Thaumastocoris peregrinus</italic> and <italic>Thaumastocoris</italic> sp. in the laboratory with some observations on behaviour. <italic>General and Applied Entomology</italic>, 36: 27-33.</mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Noack</surname>
+							<given-names>A.E</given-names>
+						</name>
+						<name>
+							<surname>Rose</surname>
+							<given-names>H.</given-names>
+						</name>
+					</person-group>
+					<year>2007</year>
+					<article-title>Life-history of Thaumastocoris peregrinus and Thaumastocoris sp. in the laboratory with some observations on behaviour</article-title>
+					<source>General and Applied Entomology</source>
+					<volume>36</volume>
+					<fpage>27</fpage>
+					<lpage>33</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B14">
+				<mixed-citation>Penteado, S.R.C.; Queiróz, D.L.; Barbosa, L.R. 2014. Insetos sugadores em plantações de <italic>Pinus</italic> e <italic>Eucalyptus</italic> no Brasil. In: Cantarelli, E.B.; Costa, E.C. (Org.). <italic>Entomologia Florestal Aplicada</italic>. 3rd ed., UFSM, Santa Maria , p.71-99.</mixed-citation>
+				<element-citation publication-type="book">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Penteado</surname>
+							<given-names>S.R.C.</given-names>
+						</name>
+						<name>
+							<surname>Queiróz</surname>
+							<given-names>D.L.</given-names>
+						</name>
+						<name>
+							<surname>Barbosa</surname>
+							<given-names>L.R.</given-names>
+						</name>
+					</person-group>
+					<year>2014</year>
+					<chapter-title>Insetos sugadores em plantações de Pinus e Eucalyptus no Brasil</chapter-title>
+					<person-group person-group-type="compiler">
+						<name>
+							<surname>Cantarelli</surname>
+							<given-names>E.B.</given-names>
+						</name>
+						<name>
+							<surname>Costa</surname>
+							<given-names>E.C.</given-names>
+						</name>
+					</person-group>
+					<source>Entomologia Florestal Aplicada</source>
+					<edition>3rd ed.</edition>
+					<publisher-name>UFSM</publisher-name>
+					<publisher-loc>Santa Maria</publisher-loc>
+					<fpage>71</fpage>
+					<lpage>99</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B15">
+				<mixed-citation>Pereira, J.M.; Melo, A.P.C.; Fernandes, P.M.; Soliman, E.P. 2013. Ocorrência de <italic>Thaumastocoris peregrinus</italic> Carpintero &amp; Dellapé (Hemiptera: <italic>Thaumastocoridae</italic>) no Estado de Goiás. <italic>Ciência Rural</italic>, 43: 254-257.</mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Pereira</surname>
+							<given-names>J.M.</given-names>
+						</name>
+						<name>
+							<surname>Melo</surname>
+							<given-names>A.P.C.</given-names>
+						</name>
+						<name>
+							<surname>Fernandes</surname>
+							<given-names>P.M.</given-names>
+						</name>
+						<name>
+							<surname>Soliman</surname>
+							<given-names>E.P.</given-names>
+						</name>
+					</person-group>
+					<year>2013</year>
+					<article-title>Ocorrência de Thaumastocoris peregrinus Carpintero &amp; Dellapé (Hemiptera: Thaumastocoridae) no Estado de Goiás</article-title>
+					<source>Ciência Rural</source>
+					<volume>43</volume>
+					<fpage>254</fpage>
+					<lpage>257</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B16">
+				<mixed-citation>Queiroz, D.L. 2009. Pragas Exóticas e Potenciais à Eucaliptocultura no Brasil. In: Zacaroni, A.B.; Toyota, M.; Ferro, H.M.; Teixeira, G.A.; Almeida, J.E.M.; Fernandes, L.H.M.; Freire, E.S.; Pereira, V.F.; Carvalho, E.A.; Lelis, F.M.V. (Orgs.). <italic>Manejo Fitossanitário de Cultivos Agroenergéticos</italic>. Sociedade Brasileira de Fitopatologia, Brasília, p.239-249.</mixed-citation>
+				<element-citation publication-type="book">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Queiroz</surname>
+							<given-names>D.L.</given-names>
+						</name>
+					</person-group>
+					<year>2009</year>
+					<chapter-title>Pragas Exóticas e Potenciais à Eucaliptocultura no Brasil</chapter-title>
+					<person-group person-group-type="compiler">
+						<name>
+							<surname>Zacaroni</surname>
+							<given-names>A.B.</given-names>
+						</name>
+						<name>
+							<surname>Toyota</surname>
+							<given-names>M.</given-names>
+						</name>
+						<name>
+							<surname>Ferro</surname>
+							<given-names>H.M.</given-names>
+						</name>
+						<name>
+							<surname>Teixeira</surname>
+							<given-names>G.A.</given-names>
+						</name>
+						<name>
+							<surname>Almeida</surname>
+							<given-names>J.E.M.</given-names>
+						</name>
+						<name>
+							<surname>Fernandes</surname>
+							<given-names>L.H.M.</given-names>
+						</name>
+						<name>
+							<surname>Freire</surname>
+							<given-names>E.S.</given-names>
+						</name>
+						<name>
+							<surname>Pereira</surname>
+							<given-names>V.F.</given-names>
+						</name>
+						<name>
+							<surname>Carvalho</surname>
+							<given-names>E.A.</given-names>
+						</name>
+						<name>
+							<surname>Lelis</surname>
+							<given-names>F.M.V.</given-names>
+						</name>
+					</person-group>
+					<source>Manejo Fitossanitário de Cultivos Agroenergéticos</source>
+					<publisher-name>Sociedade Brasileira de Fitopatologia</publisher-name>
+					<publisher-loc>Brasília</publisher-loc>
+					<fpage>239</fpage>
+					<lpage>249</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B17">
+				<mixed-citation>Ribeiro, G.T.; Sá, J.S.; Rolim, G.S.; Correia-Oliveira, M.E.; Mendonça, M.C.; Poderoso, J.C.M. 2015. First report <italic>Thaumastocoris peregrinus</italic> in <italic>Eucalyptus</italic> plantations in the state of Sergipe, Brazil (Hemiptera: Thaumastocoridae). <italic>Entomologica Americana</italic>, 121: 23-26.</mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Ribeiro</surname>
+							<given-names>G.T.</given-names>
+						</name>
+						<name>
+							<surname>Sá</surname>
+							<given-names>J.S.</given-names>
+						</name>
+						<name>
+							<surname>Rolim</surname>
+							<given-names>G.S.</given-names>
+						</name>
+						<name>
+							<surname>Correia-Oliveira</surname>
+							<given-names>M.E.</given-names>
+						</name>
+						<name>
+							<surname>Mendonça</surname>
+							<given-names>M.C.</given-names>
+						</name>
+						<name>
+							<surname>Poderoso</surname>
+							<given-names>J.C.M.</given-names>
+						</name>
+					</person-group>
+					<year>2015</year>
+					<article-title>First report Thaumastocoris peregrinus in Eucalyptus plantations in the state of Sergipe, Brazil (Hemiptera: Thaumastocoridae)</article-title>
+					<source>Entomologica Americana</source>
+					<volume>121</volume>
+					<fpage>23</fpage>
+					<lpage>26</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B18">
+				<mixed-citation>SAGRIMA. 2014. Secretaria de Estado da Agricultura Pecuária e Pesca, Agência Estadual de Defesa Agropecuária. AGED avalia incidência de pragas de impacto econômico nas florestas de eucalipto. (<comment> (<ext-link ext-link-type="uri" xlink:href="http://www.sagrima.ma.gov.br/aged-avalia-incidencia-de-pragas-de-impacto-economico-nas-florestas-de-eucalipto/">http://www.sagrima.ma.gov.br/aged-avalia-incidencia-de-pragas-de-impacto-economico-nas-florestas-de-eucalipto/</ext-link>
+					</comment>). Accessed on 01 Apr 2019.</mixed-citation>
+				<element-citation publication-type="webpage">
+					<person-group person-group-type="author">
+						<collab>SAGRIMA</collab>
+					</person-group>
+					<year>2014</year>
+					<comment>Secretaria de Estado da Agricultura Pecuária e Pesca, Agência Estadual de Defesa Agropecuária</comment>
+					<source>AGED avalia incidência de pragas de impacto econômico nas florestas de eucalipto</source>
+					<comment> (<ext-link ext-link-type="uri" xlink:href="http://www.sagrima.ma.gov.br/aged-avalia-incidencia-de-pragas-de-impacto-economico-nas-florestas-de-eucalipto/">http://www.sagrima.ma.gov.br/aged-avalia-incidencia-de-pragas-de-impacto-economico-nas-florestas-de-eucalipto/</ext-link>
+					</comment>
+					<date-in-citation content-type="access-date" iso-8601-date="2019-04-01">01 Apr 2019</date-in-citation>
+				</element-citation>
+			</ref>
+			<ref id="B19">
+				<mixed-citation>Savaris, M.; Lampert, S.; Pereira, P.R.V.S.; Salvadori, J.R. 2011. Primeiro registro de <italic>Thaumastocoris peregrinus</italic> para o estado de Santa Catarina, e novas áreas de ocorrência para o Rio Grande do Sul, Brasil. <italic>Ciência Rural</italic>, 41: 1874-1876.</mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Savaris</surname>
+							<given-names>M.</given-names>
+						</name>
+						<name>
+							<surname>Lampert</surname>
+							<given-names>S.</given-names>
+						</name>
+						<name>
+							<surname>Pereira</surname>
+							<given-names>P.R.V.S.</given-names>
+						</name>
+						<name>
+							<surname>Salvadori</surname>
+							<given-names>J.R.</given-names>
+						</name>
+					</person-group>
+					<year>2011</year>
+					<article-title>Primeiro registro de Thaumastocoris peregrinus para o estado de Santa Catarina, e novas áreas de ocorrência para o Rio Grande do Sul, Brasil</article-title>
+					<source>Ciência Rural</source>
+					<volume>41</volume>
+					<fpage>1874</fpage>
+					<lpage>1876</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B20">
+				<mixed-citation>Soliman, E.P.; Wilcken, C.F.; Pereira, J.M.; Dias, T.K.R.; Zaché, B.; Dal Pogetto, M.H.F.A. 2012. Biology of <italic>Thaumastocoris peregrinus</italic> in different eucalyptus species and hybrids. <italic>Phytoparasitica</italic>, 40: 223-230. </mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Soliman</surname>
+							<given-names>E.P.</given-names>
+						</name>
+						<name>
+							<surname>Wilcken</surname>
+							<given-names>C.F.</given-names>
+						</name>
+						<name>
+							<surname>Pereira</surname>
+							<given-names>J.M.</given-names>
+						</name>
+						<name>
+							<surname>Dias</surname>
+							<given-names>T.K.R.</given-names>
+						</name>
+						<name>
+							<surname>Zaché</surname>
+							<given-names>B.</given-names>
+						</name>
+						<name>
+							<surname>Dal Pogetto</surname>
+							<given-names>M.H.F.A.</given-names>
+						</name>
+					</person-group>
+					<year>2012</year>
+					<article-title>Biology of Thaumastocoris peregrinus in different eucalyptus species and hybrids</article-title>
+					<source>Phytoparasitica</source>
+					<volume>40</volume>
+					<fpage>223</fpage>
+					<lpage>230</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B21">
+				<mixed-citation>Wilcken, C.F. 2008 <italic>Percevejo bronzeado do eucalipto Thaumastocoris peregrinus (Hemiptera: Thaumastocoridae): ameaça às florestas de eucalipto brasileiras</italic>. Programa de Proteção Florestal - PROTEF, Instituto de Pesquisas e Estudos Florestais - IPEF, Botucatu. 11p. (<comment> (<ext-link ext-link-type="uri" xlink:href="https://www.ipef.br/protecao/alerta-percevejo.pdf">https://www.ipef.br/protecao/alerta-percevejo.pdf</ext-link>
+					</comment>). Accessed on 24 May 2019.</mixed-citation>
+				<element-citation publication-type="report">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Wilcken</surname>
+							<given-names>C.F.</given-names>
+						</name>
+					</person-group>
+					<year>2008</year>
+					<source>Percevejo bronzeado do eucalipto Thaumastocoris peregrinus (Hemiptera: Thaumastocoridae): ameaça às florestas de eucalipto brasileiras</source>
+					<publisher-name>Programa de Proteção Florestal - PROTEF, Instituto de Pesquisas e Estudos Florestais - IPEF</publisher-name>
+					<publisher-loc>Botucatu</publisher-loc>
+					<size units="pages">11</size>
+					<comment> (<ext-link ext-link-type="uri" xlink:href="https://www.ipef.br/protecao/alerta-percevejo.pdf">https://www.ipef.br/protecao/alerta-percevejo.pdf</ext-link>
+					</comment>
+					<date-in-citation content-type="access-date" iso-8601-date="2019-05-24">24 May 2019</date-in-citation>
+				</element-citation>
+			</ref>
+			<ref id="B22">
+				<mixed-citation>Wilcken, C.F.; Soliman, E.P.; Nogueira De Sá, L.A.; Barbosa, L.; Dias, T.K.R.; Ferreira Filho, P.J.; Oliveira, R.J.R. 2010. Bronze bug <italic>Thaumastocoris peregrinus</italic> Carpintero &amp; Dellapé (Hemiptera: Thaumastocoridae) on <italic>Eucalyptus</italic> in Brazil and its distribution. <italic>FriendlyISISJournal of Plant Protection Research</italic>, 50: 201-205.</mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Wilcken</surname>
+							<given-names>C.F.</given-names>
+						</name>
+						<name>
+							<surname>Soliman</surname>
+							<given-names>E.P.</given-names>
+						</name>
+						<name>
+							<surname>Nogueira De Sá</surname>
+							<given-names>L.A.</given-names>
+						</name>
+						<name>
+							<surname>Barbosa</surname>
+							<given-names>L.</given-names>
+						</name>
+						<name>
+							<surname>Dias</surname>
+							<given-names>T.K.R.</given-names>
+						</name>
+						<name>
+							<surname>Ferreira</surname>
+							<given-names>P.J.</given-names>
+							<suffix>Filho</suffix>
+						</name>
+						<name>
+							<surname>Oliveira</surname>
+							<given-names>R.J.R.</given-names>
+						</name>
+					</person-group>
+					<year>2010</year>
+					<article-title>Bronze bug Thaumastocoris peregrinus Carpintero &amp; Dellapé (Hemiptera: Thaumastocoridae) on Eucalyptus in Brazil and its distribution</article-title>
+					<source>FriendlyISISJournal of Plant Protection Research</source>
+					<volume>50</volume>
+					<fpage>201</fpage>
+					<lpage>205</lpage>
+				</element-citation>
+			</ref>
+		</ref-list>
+		<fn-group>
+			<fn fn-type="other" id="fn2">
+				<label>CITE AS:</label>
+				<p> Saliba, I.L.; Lunz, A.M.; Batista, T.F.; Schwartz, G. 2019. First record of Thaumastocoris peregrinus (Hemiptera, Thaumastocoridae) in Pará state, Brazil. <italic>Acta Amazonica</italic> 49: 179-182.</p>
+			</fn>
+		</fn-group>
+	</back>
+</article>

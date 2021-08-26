@@ -1,0 +1,2010 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE article
+  PUBLIC "-//NLM//DTD JATS (Z39.96) FriendlyISISJournal Publishing DTD v1.1 20151215//EN" "JATS-journalpublishing1.dtd">
+<article article-type="research-article" dtd-version="1.1" specific-use="sps-1.9" xml:lang="en" xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<front>
+		<journal-meta>
+			<journal-id journal-id-type="publisher-id">aa</journal-id>
+			<journal-title-group>
+				<journal-title>Acta Amazonica</journal-title>
+				<abbrev-journal-title abbrev-type="publisher">Acta Amaz.</abbrev-journal-title>
+			</journal-title-group>
+			<issn pub-type="ppub">0044-5967</issn>
+			<issn pub-type="epub">1809-4392</issn>
+			<publisher>
+				<publisher-name>Instituto Nacional de Pesquisas da Amazônia</publisher-name>
+			</publisher>
+		</journal-meta>
+		<article-meta>
+			<article-id pub-id-type="doi">10.1590/1809-4392201802702</article-id>
+			<article-categories>
+				<subj-group subj-group-type="heading">
+					<subject>Biotechnology</subject>
+				</subj-group>
+			</article-categories>
+			<title-group>
+				<article-title>Development, characterization and stability of microemulsionated formulations of bacaba, <italic>Oenocarpus bacaba</italic> oil</article-title>
+				<trans-title-group xml:lang="pt">
+					<trans-title>Desenvolvimento, caracterização e estabilidade de formulações microemulsionadas de óleo de bacaba, <italic>Oenocarpus bacaba</italic></trans-title>
+				</trans-title-group>
+			</title-group>
+			<contrib-group>
+				<contrib contrib-type="author">
+					<name>
+						<surname>TORRES</surname>
+						<given-names>Maycon de Paula Ribeiro</given-names>
+					</name>
+					<xref ref-type="aff" rid="aff1"><sup>1</sup></xref>
+				</contrib>
+				<contrib contrib-type="author">
+					<name>
+						<surname>ESPRENDOR</surname>
+						<given-names>Rhuan Vínicius de Freitas</given-names>
+					</name>
+					<xref ref-type="aff" rid="aff2"><sup>2</sup></xref>
+				</contrib>
+				<contrib contrib-type="author">
+					<contrib-id contrib-id-type="orcid">0000-0002-2240-2700</contrib-id>
+					<name>
+						<surname>BONALDO</surname>
+						<given-names>Solange Maria</given-names>
+					</name>
+					<xref ref-type="aff" rid="aff3"><sup>3</sup></xref>
+				</contrib>
+				<contrib contrib-type="author">
+					<name>
+						<surname>RIBEIRO</surname>
+						<given-names>Elton Brito</given-names>
+					</name>
+					<xref ref-type="aff" rid="aff2"><sup>2</sup></xref>
+				</contrib>
+				<contrib contrib-type="author">
+					<contrib-id contrib-id-type="orcid">0000-0002-2643-1963</contrib-id>
+					<name>
+						<surname>VALLADÃO</surname>
+						<given-names>Dênia Mendes de Sousa</given-names>
+					</name>
+					<xref ref-type="aff" rid="aff1"><sup>1</sup></xref>
+					<xref ref-type="corresp" rid="c1">*</xref>
+				</contrib>
+			</contrib-group>
+			<aff id="aff1">
+				<label>1</label>
+				<institution content-type="original">Universidade Federal de Mato Grosso, Campus Sinop, Instituto de Ciências da Saúde, Programa de Pós-Graduação em Ciências Ambientais, Av. Alexandre Ferronato, 1200, CEP 78.557-267, Sinop, Mato Grosso, Brazil</institution>
+				<institution content-type="normalized">Universidade Federal de Mato Grosso</institution>
+				<institution content-type="orgname">Universidade Federal de Mato Grosso</institution>
+				<institution content-type="orgdiv1">Instituto de Ciências da Saúde</institution>
+				<institution content-type="orgdiv2">Programa de Pós-Graduação em Ciências Ambientais</institution>
+				<addr-line>
+					<postal-code>78.557-267</postal-code>
+					<city>Sinop</city>
+					<state>Mato Grosso</state>
+				</addr-line>
+				<country country="BR">Brazil</country>
+			</aff>
+			<aff id="aff2">
+				<label>2</label>
+				<institution content-type="original">Universidade Federal de Mato Grosso, Campus Sinop, Instituto de Ciências da Saúde, Av. Alexandre Ferronato, 1200, CEP 78.557-267, Sinop, Mato Grosso, Brazil</institution>
+				<institution content-type="normalized">Universidade Federal de Mato Grosso</institution>
+				<institution content-type="orgname">Universidade Federal de Mato Grosso</institution>
+				<institution content-type="orgdiv1">Instituto de Ciências da Saúde</institution>
+				<addr-line>
+					<postal-code>78.557-267</postal-code>
+					<city>Sinop</city>
+					<state>Mato Grosso</state>
+				</addr-line>
+				<country country="BR">Brazil</country>
+			</aff>
+			<aff id="aff3">
+				<label>3</label>
+				<institution content-type="original">Universidade Federal de Mato Grosso, Campus Sinop, Instituto de Ciências Agrárias e Ambientais, Programa de Pós-Graduação em Ciências Ambientais, Av. Alexandre Ferronato, 1200, CEP 78.557-267, Sinop, Mato Grosso, Brazil</institution>
+				<institution content-type="normalized">Universidade Federal de Mato Grosso</institution>
+				<institution content-type="orgname">Universidade Federal de Mato Grosso</institution>
+				<institution content-type="orgdiv1">Instituto de Ciências Agrárias e Ambientais</institution>
+				<institution content-type="orgdiv2">Programa de Pós-Graduação em Ciências Ambientais</institution>
+				<addr-line>
+					<postal-code>78.557-267</postal-code>
+					<city>Sinop</city>
+					<state>Mato Grosso</state>
+				</addr-line>
+				<country country="BR">Brazil</country>
+			</aff>
+			<author-notes>
+				<corresp id="c1">* Corresponding author: <email>deniavalladao@gmail.com</email>
+				</corresp>
+				<fn fn-type="edited-by" id="fn1">
+					<label>ASSOCIATE EDITOR:</label>
+					<p> Valdir Veiga Junior </p>
+				</fn>
+			</author-notes>
+			<pub-date date-type="pub" publication-format="electronic">
+				<day>12</day>
+				<month>08</month>
+				<year>2019</year>
+			</pub-date>
+			<pub-date date-type="collection" publication-format="electronic">
+				<season>Jul-Sep</season>
+				<year>2019</year>
+			</pub-date>
+			<volume>49</volume>
+			<issue>3</issue>
+			<fpage>246</fpage>
+			<lpage>255</lpage>
+			<history>
+				<date date-type="received">
+					<day>30</day>
+					<month>07</month>
+					<year>2018</year>
+				</date>
+				<date date-type="accepted">
+					<day>05</day>
+					<month>05</month>
+					<year>2019</year>
+				</date>
+			</history>
+			<permissions>
+				<license license-type="open-access" xlink:href="https://creativecommons.org/licenses/by/4.0/" xml:lang="en">
+					<license-p>This is an open-access article distributed under the terms of the Creative Commons Attribution License</license-p>
+				</license>
+			</permissions>
+			<abstract>
+				<title>ABSTRACT</title>
+				<p>Advances in nanotechnology, combined with the use of natural products, represent a promissing research field. Brazil is a country of a rich biodiversity, especially in the Amazon forest. Fruits commonly used by local communities, such as bacaba (<italic>Oenocarpus bacaba</italic>), are potentially important for prospection of industrial applications of natural products. In nanotechnology, microemulsions stand out for providing a modified release to conveyed substances. This work aimed to develop microemulsionated formulations of bacaba oil, characterize them and evaluate their stability. We determined the HLB (hydrophile-lipophilic balance) of bacaba oil for formulation development. Six formulations were selected from pseudoternary diagrams, which indicated the proportions of surfactants, aqueous phase and bacaba oil. The viability of these formulations was evaluated through stability tests. We provided the rheological characterization of the formulations, evaluated their potential antioxidant activity through the DPPH (2,2-diphenyl-1-picrylhydrazyl) radical scavenging method, and determined the hydrodynamic diameter of the droplets. The microemulsions were stable throughout the test period. Droplet diameter was below 200 nm, and the microemulsions were characterized as newtonian fluids, presenting an increase in antioxidant activity when compared with the diluted oil. Our results confirm the potential of bacaba oil in microemulsionated formulation as a suitable carrier for active compounds.</p>
+			</abstract>
+			<trans-abstract xml:lang="pt">
+				<title>RESUMO</title>
+				<p>Os avanços no âmbito da nanotecnologia, aliados ao uso de produtos naturais, representam uma área promissora de pesquisa. O Brasil é um país de rica biodiversidade, especialmente na floresta amazônica. Frutos utilizados comumente nas comunidades locais, como a bacaba (<italic>Oenocarpus bacaba</italic>), são potencialmente interessantes para prospecção de aplicação industrial de produtos naturais. Na área da nanotecnologia, as microemulsões se destacam por prover uma liberação modificada das substâncias veiculadas. Este trabalho teve como objetivo desenvolver formulações microemulsionadas de óleo da bacaba, caracterizá-las e avaliar sua estabilidade. Determinamos o EHL (equilíbrio hidrófilo-lipófilo) do óleo da bacaba para o desenvolvimento das formulações. A partir de diagramas pseudoternários, que indicaram as proporções de tensoativos da fase aquosa e do óleo de bacaba, foram selecionadas seis formulações. A viabilidade dessas formulações foi analisada por meio de testes de estabilidade. As formulações passaram por caracterização reológica, avaliação do potencial de atividade antioxidante através da capacidade de redução do radical DPPH (2,2-difenil-1-picrilhidrazil), e determinação do diâmetro hidrodinâmico de suas gotículas. As microemulsões mostraram-se estáveis durante o período de teste e apresentaram diâmetro de gotículas abaixo de 200 nm, foram caracterizadas como fluídos newtonianos e apresentaram um aumento da atividade antioxidante quando comparadas com o óleo diluído. Nossos resultados indicam o potencial do óleo de bacaba em formulação microemulsionada para veiculação de diversos princípios ativos.</p>
+			</trans-abstract>
+			<kwd-group xml:lang="en">
+				<title>Keywords:</title>
+				<kwd>microemulsion</kwd>
+				<kwd>Amazon</kwd>
+				<kwd>native fruit</kwd>
+				<kwd>nanotechnology</kwd>
+				<kwd>carriers</kwd>
+			</kwd-group>
+			<kwd-group xml:lang="pt">
+				<title>Palavras-chave:</title>
+				<kwd>microemulsão</kwd>
+				<kwd>Amazônia</kwd>
+				<kwd>fruto nativo</kwd>
+				<kwd>nanotecnologia</kwd>
+				<kwd>carreadores</kwd>
+			</kwd-group>
+			<funding-group>
+				<award-group award-type="contract">
+					<funding-source>FAPEMAT (Fundação de Amparo à Pesquisa do Estado de Mato Grosso</funding-source>
+					<award-id>224179/2015</award-id>
+				</award-group>
+			</funding-group>
+			<counts>
+				<fig-count count="5"/>
+				<table-count count="3"/>
+				<equation-count count="0"/>
+				<ref-count count="45"/>
+				<page-count count="10"/>
+			</counts>
+		</article-meta>
+	</front>
+	<body>
+		<sec sec-type="intro">
+			<title>INTRODUCTION</title>
+			<p>The Amazon rainforest holds about one third of the world’s biological diversity (<xref ref-type="bibr" rid="B1">Albagli 2001</xref>). The use of this biodiversity in new technologies constitutes a great tool of scientific advancement and development of the industry in Brazil (Albagli 2001; <xref ref-type="bibr" rid="B18">Funari and Ferro 2005</xref>). Bacaba (<italic>Oenocarpus bacaba</italic> Mart.) is an Amazonian palm tree with a fruit that produces oil traditionally used in cooking. The fruit has great economic and nutritional potential, as its oil is rich in unsaturated fatty acids, mainly oleic and palmitic, and phenolic compounds (<xref ref-type="bibr" rid="B2">Balick 1986</xref>; <xref ref-type="bibr" rid="B35">Queiroz and Bianco, 2009</xref>; <xref ref-type="bibr" rid="B14">Finco <italic>et al</italic>. 2012</xref>; <xref ref-type="bibr" rid="B29">Pereira <italic>et al</italic>. 2013</xref>; <xref ref-type="bibr" rid="B39">Santos <italic>et al</italic>. 2017</xref>). Traditionally, the oil is extracted by boiling the fruit pulp (<xref ref-type="bibr" rid="B40">Cymerys 2005</xref>). However, the heat might lead thermosensitive substances to degradation, which calls for other methods that do not use high temperatures in the oil extraction process (<xref ref-type="bibr" rid="B37">Roy <italic>et al.</italic> 2006</xref>; <xref ref-type="bibr" rid="B33">Pinto <italic>et al</italic>. 2018</xref>). Studies concerning the biochemical activity of bacaba oil are scarce, but it has already been shown to have antioxidant and cardioprotective potential (Pinto <italic>et al</italic>. 2018).</p>
+			<p>Nanotechnology is a subject of research in several industries, due to the need of new carriers for active compounds, to convey natural substances that are difficult to incorporate in traditional forms, or to enhance productivity in agriculture (<xref ref-type="bibr" rid="B3">Bonifácio <italic>et al</italic>. 2014</xref>; <xref ref-type="bibr" rid="B10">Dasgupta <italic>et al.</italic> 2015</xref>). Nanostructured formulations can increase the selectivity and effectiveness of active compounds, as their delivery structures can surpass biological barriers that traditional formulations do not. They also convey protection against degradation, and reduce side effects by controlling the release of several substances, including plant extracts, which allows the association of two market trends, such as natural products and nanotechnology (<xref ref-type="bibr" rid="B28">Oliveira <italic>et al.</italic> 2004</xref>; Bonifácio <italic>et al.</italic> 2014; <xref ref-type="bibr" rid="B22">Katz <italic>et al.</italic> 2015</xref>; <xref ref-type="bibr" rid="B8">Costa and Santos 2017</xref>). Microemulsions present some advantages when compared to other nanostructured formulations (Bonifácio <italic>et al.</italic> 2014), since they are thermodynamically stable, isotropic and transparent systems of two immiscible liquids (usually water and oil), dispersed into each other in the form of nanometric droplets, stabilized by a interfacial surfactant/cosurfactant film, obtained without the need of energy addition (<xref ref-type="bibr" rid="B26">Lawrence and Rees 2012</xref>; <xref ref-type="bibr" rid="B12">Fanun 2012</xref>; <xref ref-type="bibr" rid="B5">Callender <italic>et al.</italic> 2017</xref>). These characteristics make microemulsions cheaper, easier and quicker to develop.</p>
+			<p>Thus, the aim of this work was to develop microemulsionated formulations with bacaba oil, to characterize them and to evaluate their stability in order to determine their potential capacity as carriers for the delivery of active compounds.</p>
+		</sec>
+		<sec sec-type="materials|methods">
+			<title>MATERIAL AND METHODS</title>
+			<sec>
+				<title>HLB determination</title>
+				<p><italic>Oenocarpus bacaba</italic> oil was purchased from the company “Mundo dos Óleos”, Brasília, Brazil. All the formulations described in here were prepared using oil from the same batch. According to the manufacturer, the oil was extracted by cold pressing and presented corresponding quality characteristics. We prepared a series of emulsions containing bacaba oil with increasing HLB (hidrophilic-lipophilic balance). The surfactant mixture fractions of Span 80 (sorbitan monostearate) and Tween 80 (polysorbate 80), and the ratio [w/w (weight/weight)] of the surfactants to obtain the HLB (from six up to 12), were calculated. The samples for each HLB were prepared in triplicate. The aqueous and oily phases were prepared separately, then mixed and kept under manual stirring and heating in an electric water bath at 75 °C for 15 min. After having been removed from the water bath, the emulsions were kept under manual stirring for fifteen minutes at room temperature. The emulsions were analyzed under a microscope (BEL <sup>®</sup> Photonics, Italy) at 40x magnification, and the globules were photographed (one picture for each replicate, adding up to three pictures for each HLB value) for determination of their area using the Image J ® software. Mean droplet size, standard deviation and coefficient of variation in function of globule area were calculated (<xref ref-type="bibr" rid="B45">Zanin <italic>et al.</italic> 2002</xref>; <xref ref-type="bibr" rid="B15">Fiori <italic>et al.</italic> 2017</xref>).</p>
+			</sec>
+			<sec>
+				<title>System composition</title>
+				<p>The microemulsionated systems were developed using bacaba oil, distilled water, sorbitan monostearate (Span 80 - SP), HLB = 4.3; polysorbate 80 (Tween 80 - TW), HLB = 15.0; and butan-1-ol (BT). The reagents used in the study were analytical grade and purchased from Sigma <sup>®</sup>, USA. Butan-1-ol (BT) was used at a ratio of 10% (fraction = 1) in the surfactant mixture. BT is one of the best cosurfactants for the preparation of microemulsions (<xref ref-type="bibr" rid="B24">Kumar <italic>et al.</italic> 2014</xref>; <xref ref-type="bibr" rid="B4">Boonme <italic>et al.</italic> 2006</xref>; <xref ref-type="bibr" rid="B44">Wilk <italic>et al.</italic> 2009</xref>) and its concentration in our formulations is considered residual and non-toxic (<xref ref-type="bibr" rid="B42">USP 2007</xref>). The HLB of SP and TW was used to calculate the mix relation of surfactants and cosurfactants, to achieve an HLB corresponding to the oily phase (<xref ref-type="bibr" rid="B36">Ribeiro <italic>et al.</italic> 2015</xref>).</p>
+			</sec>
+			<sec>
+				<title>System development</title>
+				<p>Thirty six formulations were developed using pre-established quantities of the components, ranging from 10% to 80%, in order to construct a pseudoternary diagram. The samples were prepared and visually rated after 72 hours at 25 °C in the following categories: microemulsion (ME), liquid emulsion (LE), and phase separation (PS). Titrations were performed to obtain the boundering points, regions and classification of different systems to form the diagram. Surfactant/oil mixtures were prepared in the mass ratios of 1:9 up to 9:1, then distilled water was added in quantities between 0.05 and 0.10 mL, with constant agitation. After homogenization of each mixture, they were visually classified. </p>
+				<p>Pseudoternary diagrams were obtained from the sample and titration data using the SigmaPlot <sup>®</sup> version 8.0 software. The superior vertex of the diagrams (<xref ref-type="fig" rid="f1">Figure 1</xref>) represents 100% surfactant/cosurfactant mix, the lower right represents 100% oily phase and the lower left represents 100% aqueous phase. After acquisition of the pseudoternary phase diagram, the microemulsion region was determined. From this region, microemulsions with different compositions were selected to achieve representative samples of the studied systems.</p>
+				<p>
+					<fig id="f1">
+						<label>Figure 1</label>
+						<caption>
+							<title>(A) Pseudoternary diagram containing all 36 points for microemulsions of <italic>Oenocarpus bacaba</italic> oil and their respective classifications. (B) Region diagram showing the microemulsion region (MEL) containing the six selected microemulsions. LE = liquid emulsion; PS = phase separation</title>
+						</caption>
+						<graphic xlink:href="1809-4392-aa-49-03-246-gf1.jpg"/>
+					</fig>
+				</p>
+			</sec>
+			<sec>
+				<title>Stability analysis</title>
+				<p>Microemulsion stability was analyzed according to <xref ref-type="bibr" rid="B15">Fiori <italic>et al.</italic> (2017</xref>) and <xref ref-type="bibr" rid="B19">Gustmann <italic>et al.</italic> (2017</xref>). For preliminary stability, the formulations selected from the pseudoternary diagram were submitted to alternate heating/cooling cycles of 24 hours, at 40 ± 1 °C and 5 ± 1 °C, respectively, during 14 days. Physicochemical characteristics of the formulations were measured before and after the test. The pH was determined with a pH meter (DLA-PH, Del Lab, Brazil) calibrated with standard pH 7 and pH 4 buffer solutions. Electrical conductivity was measured using a conductivity meter (MCA-150, Tecnopon, Brazil) calibrated with a 0.1 mol/L KCL solution. The refraction index was measured with a digital Abbe refractometer (WYA-2S, Polax, Brazil).</p>
+				<p>For accelerated stability tests, microemulsions selected from the previous test were submitted to three different conditions, in triplicate: 5 ± 1 °C, 25 ± 1 °C and 40 ± 1 °C. The test lasted 90 days and the physiochemical characteristics were assessed at the beginning of the test and every 30 days.</p>
+			</sec>
+			<sec>
+				<title>Rheological characterization</title>
+				<p>Rheological parameters were measured for each formulation, before and after the accelerated stability test, according to <xref ref-type="bibr" rid="B15">Fiori <italic>et al.</italic> (2017</xref>) and <xref ref-type="bibr" rid="B19">Gustmann <italic>et al.</italic> (2017</xref>) using a Modular Compact Rheometer (MCR 102, Anton Paar <sup>®</sup> Germany GmbH, Ostfildern, Germany). The tests were conducted under controlled conditions at 25 °C and statistically significant differences within samples before and after the test were evaluated using analysis of variance (ANOVA), followed by multiple comparisons by Tukey test. Statistical significance was set at p &lt; 0.05.</p>
+			</sec>
+			<sec>
+				<title>Dynamic light scattering (DLS)</title>
+				<p>Dynamic light scattering analysis were performed using a Zetasizer Nano (Z90, Malvern <sup>®</sup> Instruments, United Kingdom) with excitation at 632.8 nm, according to <xref ref-type="bibr" rid="B15">Fiori <italic>et al.</italic> (2017</xref>) and <xref ref-type="bibr" rid="B19">Gustmann <italic>et al.</italic> (2017</xref>). Colloidal structures of the formulations were prepared for analysis by the dynamic light scattering technique, to evaluate the hydrodynamic diameter of the dispersed system.</p>
+			</sec>
+			<sec>
+				<title>Antioxidant activity</title>
+				<p>We determined the potential antioxidant activity using DPPH (2,2-diphenyl-1-pricil-hydrazila) radical scavenging adapted from <xref ref-type="bibr" rid="B11">Elmasta <italic>et al.</italic> (2006</xref>) and <xref ref-type="bibr" rid="B27">Li <italic>et al.</italic> (2012</xref>). Measurements were determined in a spectrophotometer (CIRRUS 80MB, Femto <sup>®</sup>, São Paulo, Brazil). The microemulsions were diluted in methanol, and the oil in a solution of methanol:chloroform (1:1). The microemulsions selected from the previous tests were tested along four control formulations (pure oil and oil in 10, 15 and 20% dilution, according to its percentage in the formulations). Absorbance readings were performed at the wavelength of 517 nm using respective white controls. To evaluate the free radical scavenging activity, a calibration curve was build for each formulation, pure oil and oil dilutions. The percentage of DPPH radical inhibition of each point in the curves was calculated by the following equation: % inhibition of DPPH = [(A<sub>0</sub> - A<sub>1</sub>) / A<sub>0</sub> x 100], where A<sub>0</sub> = control absorbance, and A<sub>1</sub> = absorbance of the sample. The IC50 (half maximal inhibitory concentration) value was calculated using the equation provided by the curve.</p>
+			</sec>
+		</sec>
+		<sec sec-type="results">
+			<title>RESULTS</title>
+			<p>HLB 7 and 12 had similar mean droplet size (<xref ref-type="table" rid="t1">Table 1</xref>), HLB 7 being a bit smaller, and HLB 12 having lower values of standard deviation and coefficient of variation, which indicates a greater homogeneity of the globules and greater proximity to the ideal HLB. Therefore, two pseudoternary diagrams were constructed, one considering the HLB value of the oil phase as seven and the other as 12. The HLB 12 diagram formed more microemulsions, showing that HLB 12 was the most adequate, being selected for subsequent analyzes. </p>
+			<p>
+				<table-wrap id="t1">
+					<label>Table 1</label>
+					<caption>
+						<title>Droplet dimension of the series of emulsions with <italic>Oenocarpus bacaba</italic> oil used to determine the oil’s HLB. Diameter values are the mean ± SD. </title>
+					</caption>
+					<table>
+						<colgroup>
+							<col/>
+							<col/>
+							<col/>
+						</colgroup>
+						<thead>
+							<tr>
+								<th align="left">HLB </th>
+								<th align="center">Diameter (mm²) </th>
+								<th align="center">Coefficient of variation </th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td align="left">6.0 </td>
+								<td align="center">0.0325 ± 0.1326 </td>
+								<td align="center">4.0752 </td>
+							</tr>
+							<tr>
+								<td align="left">6.5 </td>
+								<td align="center">0.0186 ± 0.0873 </td>
+								<td align="center">4.7041 </td>
+							</tr>
+							<tr>
+								<td align="left">7.0 </td>
+								<td align="center">0.0065 ± 0.0065 </td>
+								<td align="center">0.9988 </td>
+							</tr>
+							<tr>
+								<td align="left">7.5 </td>
+								<td align="center">0.0361 ± 0.1520 </td>
+								<td align="center">4.2056 </td>
+							</tr>
+							<tr>
+								<td align="left">8.0 </td>
+								<td align="center">0.0588 ± 0.2156 </td>
+								<td align="center">3.6681 </td>
+							</tr>
+							<tr>
+								<td align="left">8.5 </td>
+								<td align="center">0.0076 ± 0.0084 </td>
+								<td align="center">1.1062 </td>
+							</tr>
+							<tr>
+								<td align="left">9.0 </td>
+								<td align="center">0.0355 ± 0.1535 </td>
+								<td align="center">4.3307 </td>
+							</tr>
+							<tr>
+								<td align="left">9.5 </td>
+								<td align="center">0.0354 ± 0.1604 </td>
+								<td align="center">4.5363 </td>
+							</tr>
+							<tr>
+								<td align="left">10.0 </td>
+								<td align="center">0.0507 ± 0.1913 </td>
+								<td align="center">3.7722 </td>
+							</tr>
+							<tr>
+								<td align="left">10.5 </td>
+								<td align="center">0.0355 ± 0.1574 </td>
+								<td align="center">4.4327 </td>
+							</tr>
+							<tr>
+								<td align="left">11.0 </td>
+								<td align="center">0.0227 ± 0.1151 </td>
+								<td align="center">5.0792 </td>
+							</tr>
+							<tr>
+								<td align="left">11.5 </td>
+								<td align="center">0.0066 ± 0.0091 </td>
+								<td align="center">1.3707 </td>
+							</tr>
+							<tr>
+								<td align="left">12.0 </td>
+								<td align="center">0.0066 ± 0.0056 </td>
+								<td align="center">0.8552 </td>
+							</tr>
+						</tbody>
+					</table>
+				</table-wrap>
+			</p>
+			<p>The obtained surfactant fractions were 2.52 and 6.48 for SP and TW, respectively, resulting in a surfactant mix relation of 1.0:2.52:6.48 (BT:SP:TW), which was used in the pseudoternary diagram.</p>
+			<p>The resulting HLB 12 diagram presented 36 points with divergent characteristics (<xref ref-type="fig" rid="f1">Figure 1</xref>a), from which three were visually classified as microemulsions, considering their translucence. After the titrations, it was possible to determine a microemulsion region limit on the diagram (<xref ref-type="fig" rid="f1">Figure 1</xref>b), and, from this region, six different formulations (1Bc, 2Bc, 3Bc, 4Bc, 5Bc and 6Bc) were selected, which presented different amounts of each phase (at least 10% of oil and water), aiming to represent the diversity of the microemulsion region. The selected formulations contained at least 70% of the surfactant mixture, 10% of the aqueous phase, and an oil phase in a range between 10% and 20%. </p>
+			<p>The six formulations were macroscopically stable after centrifugation and were clear and homogeneous, with no sign of phase separation. The pH values before and after the preliminary stability test ranged between 6.75 and 7.35. The electric conductivity and refraction index showed a small variation (<xref ref-type="table" rid="t2">Table 2</xref>).</p>
+			<p>
+				<table-wrap id="t2">
+					<label>Table 2</label>
+					<caption>
+						<title>Physicochemical parameters of the six selected formulations of <italic>Oenocarpus bacaba</italic> oil microemulsions after preliminary stability tests (14 days). no = no phase separation. Values are the mean ± SD of three replicates.</title>
+					</caption>
+					<table>
+						<colgroup>
+							<col/>
+							<col/>
+							<col/>
+							<col/>
+							<col/>
+							<col/>
+							<col/>
+						</colgroup>
+						<thead>
+							<tr>
+								<th align="left">Formulation</th>
+								<th align="center">1Bc</th>
+								<th align="center">2Bc</th>
+								<th align="center">3Bc</th>
+								<th align="center">4Bc</th>
+								<th align="center">5Bc</th>
+								<th align="center">6Bc</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td align="left">Centrifugation</td>
+								<td align="center">no</td>
+								<td align="center">no</td>
+								<td align="center">no</td>
+								<td align="center">no</td>
+								<td align="center">no</td>
+								<td align="center">no</td>
+							</tr>
+							<tr>
+								<td align="left">pH</td>
+								<td align="center">7.35 ± 0.11</td>
+								<td align="center">7.20 ± 0.11</td>
+								<td align="center">6.93 ± 0.03</td>
+								<td align="center">7.14 ± 0.06</td>
+								<td align="center">7.07 ± 0.05</td>
+								<td align="center">7.17 ± 0.08</td>
+							</tr>
+							<tr>
+								<td align="left">Conductivity (µScm<sup>-1</sup>)</td>
+								<td align="center">9.83 ± 0.63</td>
+								<td align="center">17.66 ± 2.63</td>
+								<td align="center">35.46 ± 0.82</td>
+								<td align="center">9.34 ± 0.09</td>
+								<td align="center">20.66 ± 0.58</td>
+								<td align="center">9.22 ± 0.36</td>
+							</tr>
+							<tr>
+								<td align="left">Refraction index</td>
+								<td align="center">1.4550 ± 0.0006</td>
+								<td align="center">1.4490 ± 0.0016</td>
+								<td align="center">1.4429 ± 0.0002</td>
+								<td align="center">1.4552 ± 0.0004 </td>
+								<td align="center">1.4492 ± 0.0002</td>
+								<td align="center">1.4554 ± 0.0002</td>
+							</tr>
+							<tr>
+								<td align="left" colspan="7">After heating-cooling cycles</td>
+							</tr>
+							<tr>
+								<td align="left">pH</td>
+								<td align="center">7.16 ± 0.23</td>
+								<td align="center">6.90 ± 0.09</td>
+								<td align="center">6.75 ± 0.03</td>
+								<td align="center">7.00 ± 0.02</td>
+								<td align="center">6.91 ± 0.03</td>
+								<td align="center">7.01 ± 0.06</td>
+							</tr>
+							<tr>
+								<td align="left">Conductivity (mScm<sup>-1</sup>)</td>
+								<td align="center">6.69 ± 3.94</td>
+								<td align="center">16.13 ± 1.85</td>
+								<td align="center">32.46 ± 1.55</td>
+								<td align="center">8.22 ± 0.22</td>
+								<td align="center">17.53 ± 0.44</td>
+								<td align="center">8.57 ± 0.67</td>
+							</tr>
+							<tr>
+								<td align="left">Refraction index</td>
+								<td align="center">1.4555 ± 0.0062</td>
+								<td align="center">1.4497 ± 0.0021</td>
+								<td align="center">1.4441 ± 0.0003</td>
+								<td align="center">1.4559 ± 0.0003</td>
+								<td align="center">1.4499 ± 0.0013</td>
+								<td align="center">1.4558 ± 0.0005</td>
+							</tr>
+						</tbody>
+					</table>
+				</table-wrap>
+			</p>
+			<p>In the accelerated stability test, the pH of the microemulsions varied slightly, settling around 7 (<xref ref-type="table" rid="t3">Table 3</xref>). Mean conductivity in all formulations remained above 1.3 µScm<sup>−1</sup> after the 90-day test period (<xref ref-type="table" rid="t3">Table 3</xref>), characterizing them as O/W (oil in water) microemulsions, and indicating stability and non inversion of the system phases. The refraction index of the formulations also remained constant over time (<xref ref-type="table" rid="t3">Table 3</xref>).</p>
+			<p>
+				<table-wrap id="t3">
+					<label>Table 3</label>
+					<caption>
+						<title>Physicochemical parameters of the six selected formulations of <italic>Oenocarpus bacaba</italic> oil microemulsions during the accelerated stability test (determined at 0, 30, 60 and 90 days). Values are the mean ± SD of three replicates.</title>
+					</caption>
+					<table>
+						<colgroup>
+							<col/>
+							<col/>
+							<col/>
+							<col/>
+							<col/>
+						</colgroup>
+						<thead>
+							<tr>
+								<th align="left" rowspan="2">Formulation</th>
+								<th align="center">0</th>
+								<th align="center">30</th>
+								<th align="center">60</th>
+								<th align="center">90</th>
+							</tr>
+							<tr>
+								<th align="center" colspan="4">pH </th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td align="left">1Bc</td>
+								<td align="center">7.47 ± 0.10</td>
+								<td align="center">7.19 ± 0.25</td>
+								<td align="center">7.33 ± 0.27</td>
+								<td align="center">7.07 ± 0.38</td>
+							</tr>
+							<tr>
+								<td align="left">2Bc</td>
+								<td align="center">7.35 ± 0.11</td>
+								<td align="center">7.04 ± 0.33</td>
+								<td align="center">7.18 ± 0.28</td>
+								<td align="center">6.94 ± 0.35</td>
+							</tr>
+							<tr>
+								<td align="left">3Bc</td>
+								<td align="center">7.19 ± 0.06 </td>
+								<td align="center">6.88 ± 0.32</td>
+								<td align="center">7.18 ± 0.35</td>
+								<td align="center">6.80 ± 0.53</td>
+							</tr>
+							<tr>
+								<td align="left">4Bc</td>
+								<td align="center">7.41 ± 0.10 </td>
+								<td align="center">7.14 ± 0.26</td>
+								<td align="center">7.35 ± 0.28</td>
+								<td align="center">7.16 ± 0.37</td>
+							</tr>
+							<tr>
+								<td align="left">5Bc</td>
+								<td align="center">7.32 ± 0.18 </td>
+								<td align="center">7.17 ± 0.15</td>
+								<td align="center">7.28 ± 0.23</td>
+								<td align="center">7.05 ± 0.24</td>
+							</tr>
+							<tr>
+								<td align="left">6Bc</td>
+								<td align="center">7.47 ± 0.19 </td>
+								<td align="center">7.31 ± 0.16</td>
+								<td align="center">7.39 ± 0.13</td>
+								<td align="center">7.23 ± 0.30</td>
+							</tr>
+							<tr>
+								<td align="left">
+								</td>
+								<td align="center" colspan="4">Conductivity (µScm<sup>-1</sup>) </td>
+							</tr>
+							<tr>
+								<td align="left">1Bc</td>
+								<td align="center">7.89 ± 0.68</td>
+								<td align="center">9.05 ± 1.07</td>
+								<td align="center">8.34 ± 0.95</td>
+								<td align="center">9.78 ± 4.28</td>
+							</tr>
+							<tr>
+								<td align="left">2Bc</td>
+								<td align="center">15.63 ± 1.80</td>
+								<td align="center">16.90 ± 2.21</td>
+								<td align="center">18.14 ± 5.73</td>
+								<td align="center">29.74 ± 25.59 </td>
+							</tr>
+							<tr>
+								<td align="left">3Bc</td>
+								<td align="center">28.37 ± 3.13</td>
+								<td align="center">30.11 ± 4.72</td>
+								<td align="center">25.28 ± 9.40</td>
+								<td align="center">30.03 ± 12.03</td>
+							</tr>
+							<tr>
+								<td align="left">4Bc</td>
+								<td align="center">7.83 ± 0.96</td>
+								<td align="center">9.01 ± 1.50</td>
+								<td align="center">6.84 ± 1.74</td>
+								<td align="center">8.14 ± 1.34</td>
+							</tr>
+							<tr>
+								<td align="left">5Bc</td>
+								<td align="center">15.20 ± 0.25</td>
+								<td align="center">15.52 ± 3.56</td>
+								<td align="center">12.45 ± 4.98</td>
+								<td align="center">14.33 ± 6.22</td>
+							</tr>
+							<tr>
+								<td align="left">6Bc</td>
+								<td align="center">7.15 ± 0.10</td>
+								<td align="center">7.41 ± 2.21</td>
+								<td align="center">5.61 ± 3.05</td>
+								<td align="center">6.93 ± 3.13</td>
+							</tr>
+							<tr>
+								<td align="left">
+								</td>
+								<td align="center" colspan="4">Refraction Index</td>
+							</tr>
+							<tr>
+								<td align="left">1Bc</td>
+								<td align="center">1.4553 ± 0.0007</td>
+								<td align="center">1.4544 ± 0.0011</td>
+								<td align="center">1.4565 ± 0.0014</td>
+								<td align="center">1.4577 ± 0.0054</td>
+							</tr>
+							<tr>
+								<td align="left">2Bc</td>
+								<td align="center">1.4495 ± 0.0012</td>
+								<td align="center">1.4488 ± 0.0009</td>
+								<td align="center">1.4585 ± 0.0093</td>
+								<td align="center">1.4559 ± 0.0108</td>
+							</tr>
+							<tr>
+								<td align="left">3Bc</td>
+								<td align="center">1.4439 ± 0.0020</td>
+								<td align="center">1.4438 ± 0.0017</td>
+								<td align="center">1.4479 ± 0.0087</td>
+								<td align="center">1.4484 ± 0.0090</td>
+							</tr>
+							<tr>
+								<td align="left">4Bc</td>
+								<td align="center">1.4545 ± 0.0013</td>
+								<td align="center">1.4545 ± 0.0013</td>
+								<td align="center">1.4574 ± 0.0019</td>
+								<td align="center">1.4584 ± 0.0050</td>
+							</tr>
+							<tr>
+								<td align="left">5Bc</td>
+								<td align="center">1.4544 ± 0.0137</td>
+								<td align="center">1.4508 ± 0.0028</td>
+								<td align="center">1.4539 ± 0.0042</td>
+								<td align="center">1.4531 ± 0.0047</td>
+							</tr>
+							<tr>
+								<td align="left">6Bc</td>
+								<td align="center">1.4552 ± 0.0005</td>
+								<td align="center">1.4567 ± 0.0030</td>
+								<td align="center">1.4601 ± 0.0052</td>
+								<td align="center">1.4593 ± 0.0040</td>
+							</tr>
+						</tbody>
+					</table>
+				</table-wrap>
+			</p>
+			<p>The formulations displayed a flow curve with linear ascending and descending behavior, and viscosity values that did not change with the increase of the shear rate, characterizing them as Newtonian fluids. Formulations 2Bc, 3Bc, 4Bc and 5Bc maintained statistically similar equivalent stability profiles (ANOVA 90 days: F = 0.952; p = 0.533) (<xref ref-type="fig" rid="f2">Figure 2</xref>), while 1Bc and 6Bc differed significantly (p &lt; 0.01) and were therefore not included in <xref ref-type="fig" rid="f2">Figure 2</xref>. Formulations 2Bc, 3Bc and 5Bc had statistically similar viscosity values at the beginning and end of the stability analysis (<xref ref-type="fig" rid="f3">Figure 3</xref>), while 1Bc, 4Bc and 6Bc differed significantly (p &lt; 0.01) and were therefore not included in <xref ref-type="fig" rid="f3">Figure 3</xref> (ANOVA 90 days: F = 29.724; p &lt; 0.0001 - 2Bc: p &gt; 0.05, 3Bc: p &gt; 0.05 and 5Bc: p &gt; 0.05). Therefore we concluded that formulations 2Bc, 3Bc and 5Bc were the ones with greater reological stability over time.</p>
+			<p>
+				<fig id="f2">
+					<label>Figure 2</label>
+					<caption>
+						<title>Flow curve of the selected microemulsions of <italic>Oenocarpus bacaba</italic> oil before and after the accelerated stability test, considering only the microemulsions that did not differ significantly before and after the test.</title>
+					</caption>
+					<graphic xlink:href="1809-4392-aa-49-03-246-gf2.jpg"/>
+				</fig>
+			</p>
+			<p>
+				<fig id="f3">
+					<label>Figure 3</label>
+					<caption>
+						<title>Viscosity curve of the microemulsions of <italic>Oenocarpus bacaba</italic> oil before and after the accelerated stability test, considering only the microemulsions that did not differ significantly before and after the test.</title>
+					</caption>
+					<graphic xlink:href="1809-4392-aa-49-03-246-gf3.jpg"/>
+				</fig>
+			</p>
+			<p>Mean droplet size ranged between 130 and 250 nm (<xref ref-type="fig" rid="f4">Figure 4</xref>). The PDI values ranged between 0.18 and 0.33, indicating homogeneity of the globules in the formulations. The hydrodynamic diameter of all six final formulations was dependent on the proportion of the constituents, since there was a statistical difference among them (p &lt; 0.001). </p>
+			<p>
+				<fig id="f4">
+					<label>Figure 4</label>
+					<caption>
+						<title>Potential antioxidant activity (IC50) of the microemulsions of <italic>Oenocarpus bacaba</italic> oil approved in the stability tests, compared with the values for pure oil and its dilutions (10, 15 and 20%).</title>
+					</caption>
+					<graphic xlink:href="1809-4392-aa-49-03-246-gf4.jpg"/>
+				</fig>
+			</p>
+			<p>The oil with no dilution had the lowest IC50, and, therefore, the best antioxidant activity. All formulations had IC50 values indicative of better antioxidant activity than their respective oil dilutions (<xref ref-type="fig" rid="f5">Figure 5</xref>).</p>
+			<p>
+				<fig id="f5">
+					<label>Figure 5</label>
+					<caption>
+						<title>Droplet hydrodynamic diameter of the microemulsions of <italic>Oenocarpus bacaba</italic> oil approved in the stability tests. In the graph legend, values in brackets after the microemulsion code are the mean followed by the standard deviation.</title>
+					</caption>
+					<graphic xlink:href="1809-4392-aa-49-03-246-gf5.jpg"/>
+				</fig>
+			</p>
+		</sec>
+		<sec sec-type="discussion">
+			<title>DISCUSSION</title>
+			<p>The HLB obtained for bacaba oil in our sample was the same as that for olive oil (<xref ref-type="bibr" rid="B17">Frange and Garcia 2009</xref>), which may be due to a similarity in fatty acid composition of both oils, whith oleic acid in largest proportion (<xref ref-type="bibr" rid="B39">Santos <italic>et al.</italic> 2017</xref>; <xref ref-type="bibr" rid="B43">Wani <italic>et al.</italic> 2018</xref>).</p>
+			<p>The high surfactant concentration in the selected formulations coincides with that employed in other studies of microemulsion prospection (<xref ref-type="bibr" rid="B36">Ribeiro <italic>et al.</italic> 2015</xref>; <xref ref-type="bibr" rid="B4">Boonme <italic>et al.</italic> 2006</xref>; <xref ref-type="bibr" rid="B34">Prajapati <italic>et al.</italic> 2012</xref>; <xref ref-type="bibr" rid="B15">Fiori <italic>et al.</italic> 2017</xref>). The high proportion of surfactant results from the need to reduce the surface tension between the oily and aqueous phase, to enable smaller droplet sizes and provide stability to the formulation, the basic characteristics of viable microemulsions (<xref ref-type="bibr" rid="B12">Fanun 2012</xref>; <xref ref-type="bibr" rid="B31">Pessoa <italic>et al.</italic> 2015</xref>).</p>
+			<p>The formulations were characterized as O/W microemulsions, because 1.3 µScm<sup>-1</sup> is the electrical conductivity of water, and the values above represent water as the outside phase in the microemulsion system (<xref ref-type="bibr" rid="B31">Pessoa <italic>et al.</italic> 2015</xref>; <xref ref-type="bibr" rid="B25">Lanes <italic>et al.</italic> 2016</xref>).</p>
+			<p>The range of pH values in our formulations are indicative of stability, since variability in this parameter can indicate the presence of impurities, hydrolysis and/or decomposition of the system constituents, which cause instability (<xref ref-type="bibr" rid="B32">Pianovski <italic>et al.</italic> 2008</xref>). Moreover, pH 7 is considered the most adequate to different routes of administration (<xref ref-type="bibr" rid="B16">Franco and Bochi 2013</xref>). Likewise, the constance of our refraction indices over time are indicative of stable, translucent and homogeneous microemulsion systems, since unstable and inhomogeneous mixtures are usually turbid (<xref ref-type="bibr" rid="B13">Ferreira <italic>et al.</italic> 2006</xref>).</p>
+			<p>The Newtonian behavior of our formulations corroborates other studies on microemulsions containing oil extracted from natural products (<xref ref-type="bibr" rid="B15">Fiori <italic>et al.</italic> 2017</xref>; <xref ref-type="bibr" rid="B41">Torres <italic>et al.</italic> 2018</xref>). Microemulsions with a Newtonian profile tend to show stability over a long period of time (<xref ref-type="bibr" rid="B36">Ribeiro <italic>et al.</italic> 2015</xref>; <xref ref-type="bibr" rid="B31">Pessoa <italic>et al.</italic> 2015</xref>; <xref ref-type="bibr" rid="B25">Lanes <italic>et al.</italic>, 2016</xref>), however, the composition of the system may influence this characteristic in the formulations, since other studies with microemulsions containing different surfactants resulted in a non-Newtonian profile (<xref ref-type="bibr" rid="B21">Jiao and Burgees 2003</xref>).</p>
+			<p>The droplet size in our formulations (in the order of nanometres) was consistent with that obtained in other studies (<xref ref-type="bibr" rid="B15">Fiori <italic>et al.</italic> 2017</xref>; <xref ref-type="bibr" rid="B41">Torres <italic>et al.</italic> 2018</xref>). </p>
+			<p>The potential antioxidant activity of our pure oil was similar to that of açai (<italic>Euterpe oleraceae</italic>) oil (<xref ref-type="bibr" rid="B38">Rufino <italic>et al.</italic> 2011</xref>). The higher activity of the formulations relative to the oil dilutions was probably due to the incorporation of the oil into the formulation, which may influence its behavior (<xref ref-type="bibr" rid="B20">Hamed <italic>et al.</italic> 2012</xref>; <xref ref-type="bibr" rid="B7">Chaiyana <italic>et al.</italic> 2014</xref>). Although the antioxidant activity of the formulations was higher then that of the diluted oil, it was not as high as that of microemulsions with olive oil (<xref ref-type="bibr" rid="B6">Chaiyana <italic>et al.</italic> 2016</xref>). The choice of the carrier can either increase or decrease the potential antioxidant activity of the microemulsion, thus the choice of surfactant is important, since these substances may or may not present antioxidant activity when isolated (<xref ref-type="bibr" rid="B23">Kim <italic>et al.</italic> 2009</xref>; <xref ref-type="bibr" rid="B30">Pérez-Rosés <italic>et al.</italic> 2014</xref>). </p>
+		</sec>
+		<sec sec-type="conclusions">
+			<title>CONCLUSIONS</title>
+			<p>Bacaba oil microemulsions developed with a greater amount of water (2Bc, 3Bc and 5Bc) were stable and increased the antioxidant potential of bacaba oil when compared with their respective oil dilutions. The water amount may facilitate the incorporation of hidrofilic substances to the microemulsion. The three selected bacaba oil microemulsions have potential as carriers in the pharmaceutical, cosmetic, food and/or agriculture industry.</p>
+		</sec>
+	</body>
+	<back>
+		<ack>
+			<title>ACKNOWLEDGMENTS</title>
+			<p>The financial support from the Brazilian agencies CNPq (Conselho Nacional de Desenvolvimento Científico e Tecnológico) and FAPEMAT (Fundação de Amparo à Pesquisa do Estado de Mato Grosso; process nr. 224179/2015) is gratefully acknowledged.</p>
+		</ack>
+		<ref-list>
+			<ref id="B1">
+				<mixed-citation>Albagli, S. 2001. Amazônia: fronteira geopolítica da biodiversidade. <italic>Parcerias Estratégicas</italic>, 12: 5-19.</mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Albagli</surname>
+							<given-names>S.</given-names>
+						</name>
+					</person-group>
+					<year>2001</year>
+					<article-title>Amazônia: fronteira geopolítica da biodiversidade</article-title>
+					<source>Parcerias Estratégicas</source>
+					<volume>12</volume>
+					<fpage>5</fpage>
+					<lpage>19</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B2">
+				<mixed-citation>Balick, M.J. 1986. Systematics and economic botany of the <italic>Oenocarpus-jessenia (Palmae)</italic> complex. <italic>Advances in Economic Botany</italic>, 3: 1-140.</mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Balick</surname>
+							<given-names>M.J.</given-names>
+						</name>
+					</person-group>
+					<year>1986</year>
+					<article-title>Systematics and economic botany of the Oenocarpus-jessenia (Palmae) complex</article-title>
+					<source>Advances in Economic Botany</source>
+					<volume>3</volume>
+					<fpage>1</fpage>
+					<lpage>140</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B3">
+				<mixed-citation>Bonifácio, B.V.; da Silva, P.B.; Ramos, M.A. dos S.; Negri, K.M.S.; Bauab, T.M.; Chorilli, M. 2014. Nanotechnology-based drug delivery systems and herbal medicines: a review. <italic>International FriendlyISISJournal of Nanomedicine</italic>, 9: 1-15.</mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Bonifácio</surname>
+							<given-names>B.V.</given-names>
+						</name>
+						<name>
+							<surname>da Silva</surname>
+							<given-names>P.B.</given-names>
+						</name>
+						<name>
+							<surname>Ramos</surname>
+							<given-names>M.A. dos S.</given-names>
+						</name>
+						<name>
+							<surname>Negri</surname>
+							<given-names>K.M.S.</given-names>
+						</name>
+						<name>
+							<surname>Bauab</surname>
+							<given-names>T.M.</given-names>
+						</name>
+						<name>
+							<surname>Chorilli</surname>
+							<given-names>M.</given-names>
+						</name>
+					</person-group>
+					<year>2014</year>
+					<article-title>Nanotechnology-based drug delivery systems and herbal medicines: a review</article-title>
+					<source>International FriendlyISISJournal of Nanomedicine</source>
+					<volume>9</volume>
+					<fpage>1</fpage>
+					<lpage>15</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B4">
+				<mixed-citation>Boonme, P.; Krauel, K.; Graf, A.; Rades, T.; Junyaprasert, V.B. 2006. Characterization of microemulsion structures in the pseudoternary phase diagram of isopropyl palmitate/water/Brij 97:1-butanol. <italic>AAPS PharmSciTech, An Official FriendlyISISJournal of the American Association of Pharmaceutical Scientists</italic>, 7: e45.</mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Boonme</surname>
+							<given-names>P.</given-names>
+						</name>
+						<name>
+							<surname>Krauel</surname>
+							<given-names>K.</given-names>
+						</name>
+						<name>
+							<surname>Graf</surname>
+							<given-names>A.</given-names>
+						</name>
+						<name>
+							<surname>Rades</surname>
+							<given-names>T.</given-names>
+						</name>
+						<name>
+							<surname>Junyaprasert</surname>
+							<given-names>V.B.</given-names>
+						</name>
+					</person-group>
+					<year>2006</year>
+					<article-title>Characterization of microemulsion structures in the pseudoternary phase diagram of isopropyl palmitate/water/Brij 97:1-butanol</article-title>
+					<source>AAPS PharmSciTech, An Official FriendlyISISJournal of the American Association of Pharmaceutical Scientists</source>
+					<volume>7</volume>
+					<pub-id pub-id-type="art-access-id">e45</pub-id>
+				</element-citation>
+			</ref>
+			<ref id="B5">
+				<mixed-citation>Callender, S.P.; Mathews, J.A.; Kobernyk, K.; Wettig, S.D. 2017. Microemulsion utility in pharmaceuticals: Implications for multi-drug delivery. <italic>International FriendlyISISJournal of Pharmaceutics</italic>, 526: 425-442.</mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Callender</surname>
+							<given-names>S.P.</given-names>
+						</name>
+						<name>
+							<surname>Mathews</surname>
+							<given-names>J.A.</given-names>
+						</name>
+						<name>
+							<surname>Kobernyk</surname>
+							<given-names>K.</given-names>
+						</name>
+						<name>
+							<surname>Wettig</surname>
+							<given-names>S.D.</given-names>
+						</name>
+					</person-group>
+					<year>2017</year>
+					<article-title>Microemulsion utility in pharmaceuticals: Implications for multi-drug delivery</article-title>
+					<source>International FriendlyISISJournal of Pharmaceutics</source>
+					<volume>526</volume>
+					<fpage>425</fpage>
+					<lpage>442</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B6">
+				<mixed-citation>Chaiyana, W.; Leelapornpisid, P.; Phongpradist, R.; Kiasttisin, K. 2016. Enhancement of antioxidant and skin moisturizing effects of olive oil by incorporation into microemulsions. <italic>Nanomaterials and Nanotechnology</italic>, 6: 1-7.</mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Chaiyana</surname>
+							<given-names>W.</given-names>
+						</name>
+						<name>
+							<surname>Leelapornpisid</surname>
+							<given-names>P.</given-names>
+						</name>
+						<name>
+							<surname>Phongpradist</surname>
+							<given-names>R.</given-names>
+						</name>
+						<name>
+							<surname>Kiasttisin</surname>
+							<given-names>K.</given-names>
+						</name>
+					</person-group>
+					<year>2016</year>
+					<article-title>Enhancement of antioxidant and skin moisturizing effects of olive oil by incorporation into microemulsions</article-title>
+					<source>Nanomaterials and Nanotechnology</source>
+					<volume>6</volume>
+					<fpage>1</fpage>
+					<lpage>7</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B7">
+				<mixed-citation>Chaiyana, W.; Phongpradist, R.; Leelapornpisid, P. 2014. Characterization of hydrodistillated pomelo peel oil and the enhancement of biological activities using microemulsion formulations. <italic>International FriendlyISISJournal of Pharmacy and Pharmeutical Sciences</italic>, 6: 596-602.</mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Chaiyana</surname>
+							<given-names>W.</given-names>
+						</name>
+						<name>
+							<surname>Phongpradist</surname>
+							<given-names>R.</given-names>
+						</name>
+						<name>
+							<surname>Leelapornpisid</surname>
+							<given-names>P.</given-names>
+						</name>
+					</person-group>
+					<year>2014</year>
+					<article-title>Characterization of hydrodistillated pomelo peel oil and the enhancement of biological activities using microemulsion formulations</article-title>
+					<source>International FriendlyISISJournal of Pharmacy and Pharmeutical Sciences</source>
+					<volume>6</volume>
+					<fpage>596</fpage>
+					<lpage>602</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B8">
+				<mixed-citation>Costa, R.; Santos, L. 2017. Delivery systems for cosmetics - From manufacturing to the skin of natural antioxidants. <italic>Powder Technology</italic>, 322: 402-416.</mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Costa</surname>
+							<given-names>R.</given-names>
+						</name>
+						<name>
+							<surname>Santos</surname>
+							<given-names>L.</given-names>
+						</name>
+					</person-group>
+					<year>2017</year>
+					<article-title>Delivery systems for cosmetics - From manufacturing to the skin of natural antioxidants</article-title>
+					<source>Powder Technology</source>
+					<volume>322</volume>
+					<fpage>402</fpage>
+					<lpage>416</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B9">
+				<mixed-citation>Cotrim, A.C. de M.; Honorio-França, A.C.; França, E.L. 2016. Rheology analysis can be added in thermal stability test for design microemulsion materials. <italic>Biointerface Research in Applied Chemistry</italic>, 6: 1128-1135.</mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Cotrim</surname>
+							<given-names>A.C. de M.</given-names>
+						</name>
+						<name>
+							<surname>Honorio-França</surname>
+							<given-names>A.C.</given-names>
+						</name>
+						<name>
+							<surname>França</surname>
+							<given-names>E.L.</given-names>
+						</name>
+					</person-group>
+					<year>2016</year>
+					<article-title>Rheology analysis can be added in thermal stability test for design microemulsion materials</article-title>
+					<source>Biointerface Research in Applied Chemistry</source>
+					<volume>6</volume>
+					<fpage>1128</fpage>
+					<lpage>1135</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B10">
+				<mixed-citation>Dasgupta, N.; Ranjan, S.; Mundekkad, D.; Ramalingam, C.; Shanker, R.; Kumar, A. 2015. Nanotechnology in agro-food: From field to plate. <italic>Food Research International</italic>. 69: 381-400.</mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Dasgupta</surname>
+							<given-names>N.</given-names>
+						</name>
+						<name>
+							<surname>Ranjan</surname>
+							<given-names>S.</given-names>
+						</name>
+						<name>
+							<surname>Mundekkad</surname>
+							<given-names>D.</given-names>
+						</name>
+						<name>
+							<surname>Ramalingam</surname>
+							<given-names>C.</given-names>
+						</name>
+						<name>
+							<surname>Shanker</surname>
+							<given-names>R.</given-names>
+						</name>
+						<name>
+							<surname>Kumar</surname>
+							<given-names>A.</given-names>
+						</name>
+					</person-group>
+					<year>2015</year>
+					<article-title>Nanotechnology in agro-food: From field to plate</article-title>
+					<source>Food Research International</source>
+					<volume>69</volume>
+					<fpage>381</fpage>
+					<lpage>400</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B11">
+				<mixed-citation>Elmasta, M.; Gulçin, I.; Isildak, O.; Küfrevio, Ö.; Ibaoglu, K.; Aboul-Enein, H.Y. 2006. Radical scavenging activity and antioxidant capacity of bay leaf extracts. <italic>FriendlyISISJournal of the Irananian Chemical Society</italic>, 3: 258-266.</mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Elmasta</surname>
+							<given-names>M.</given-names>
+						</name>
+						<name>
+							<surname>Gulçin</surname>
+							<given-names>I.</given-names>
+						</name>
+						<name>
+							<surname>Isildak</surname>
+							<given-names>O.</given-names>
+						</name>
+						<name>
+							<surname>Küfrevio</surname>
+							<given-names>Ö.</given-names>
+						</name>
+						<name>
+							<surname>Ibaoglu</surname>
+							<given-names>K.</given-names>
+						</name>
+						<name>
+							<surname>Aboul-Enein</surname>
+							<given-names>H.Y.</given-names>
+						</name>
+					</person-group>
+					<year>2006</year>
+					<article-title>Radical scavenging activity and antioxidant capacity of bay leaf extracts</article-title>
+					<source>FriendlyISISJournal of the Irananian Chemical Society</source>
+					<volume>3</volume>
+					<fpage>258</fpage>
+					<lpage>266</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B12">
+				<mixed-citation>Fanun, M. 2012. Microemulsion as delivery systems. <italic>Current Opinion in Colloid and Interface Science</italic>. 17: 306-313.</mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Fanun</surname>
+							<given-names>M.</given-names>
+						</name>
+					</person-group>
+					<year>2012</year>
+					<article-title>Microemulsion as delivery systems</article-title>
+					<source>Current Opinion in Colloid and Interface Science</source>
+					<volume>17</volume>
+					<fpage>306</fpage>
+					<lpage>313</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B13">
+				<mixed-citation>Ferreira, E. de S.; Silveira, C. da S.; Lucien, V.G.; Amaral, A.S. 2006. Caracterização físico-química da amêndoa, torta e composição dos ácidos graxos majoritários do óleo bruto da castanha-do-Brasil (<italic>Bertholletia excelsa</italic> H.B.K). <italic>Alimentos e Nutrição</italic>, 17: 203-208.</mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Ferreira</surname>
+							<given-names>E. de S.</given-names>
+						</name>
+						<name>
+							<surname>Silveira</surname>
+							<given-names>C. da S.</given-names>
+						</name>
+						<name>
+							<surname>Lucien</surname>
+							<given-names>V.G.</given-names>
+						</name>
+						<name>
+							<surname>Amaral</surname>
+							<given-names>A.S.</given-names>
+						</name>
+					</person-group>
+					<year>2006</year>
+					<article-title>Caracterização físico-química da amêndoa, torta e composição dos ácidos graxos majoritários do óleo bruto da castanha-do-Brasil (Bertholletia excelsa H.B.K)</article-title>
+					<source>Alimentos e Nutrição</source>
+					<volume>17</volume>
+					<fpage>203</fpage>
+					<lpage>208</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B14">
+				<mixed-citation>Finco, F.D.B.; Kammerer, D.R.; Carle, R.; Tseng, W.; Böser, S.; Graeve, L. 2012. Antioxidant activity and characterization of phenolic compounds from bacaba (<italic>Oenocarpus bacaba</italic> Mart.) fruit by HPLC-DAD-MS. <italic>FriendlyISISJournal of Agricultural and Food Chemistry</italic>, 60: 7665-7673.</mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Finco</surname>
+							<given-names>F.D.B.</given-names>
+						</name>
+						<name>
+							<surname>Kammerer</surname>
+							<given-names>D.R.</given-names>
+						</name>
+						<name>
+							<surname>Carle</surname>
+							<given-names>R.</given-names>
+						</name>
+						<name>
+							<surname>Tseng</surname>
+							<given-names>W.</given-names>
+						</name>
+						<name>
+							<surname>Böser</surname>
+							<given-names>S.</given-names>
+						</name>
+						<name>
+							<surname>Graeve</surname>
+							<given-names>L.</given-names>
+						</name>
+					</person-group>
+					<year>2012</year>
+					<article-title>Antioxidant activity and characterization of phenolic compounds from bacaba (Oenocarpus bacaba Mart.) fruit by HPLC-DAD-MS</article-title>
+					<source>FriendlyISISJournal of Agricultural and Food Chemistry</source>
+					<volume>60</volume>
+					<fpage>7665</fpage>
+					<lpage>7673</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B15">
+				<mixed-citation>Fiori, K.P.; Torres, M.P.R., Schons, J.I.; Ribeiro, E.B.; Nogueira, R.M.; Vasconcelos, L.G.; Andrighetti, C.R.; Jacinto, M.J.; Valladão, D.M.S. 2017. Microemulsion of Brazil nut oil as a natural product to improve superoxide release in human phagocytes. <italic>Química Nova</italic>, 40: 1051-1057.</mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Fiori</surname>
+							<given-names>K.P.</given-names>
+						</name>
+						<name>
+							<surname>Torres</surname>
+							<given-names>J.I.</given-names>
+						</name>
+						<name>
+							<surname>Ribeiro</surname>
+							<given-names>E.B.</given-names>
+						</name>
+						<name>
+							<surname>Nogueira</surname>
+							<given-names>R.M.</given-names>
+						</name>
+						<name>
+							<surname>Vasconcelos</surname>
+							<given-names>L.G.</given-names>
+						</name>
+						<name>
+							<surname>Andrighetti</surname>
+							<given-names>C.R.</given-names>
+						</name>
+						<name>
+							<surname>Jacinto</surname>
+							<given-names>M.J.</given-names>
+						</name>
+						<name>
+							<surname>Valladão</surname>
+							<given-names>D.M.S.</given-names>
+						</name>
+					</person-group>
+					<year>2017</year>
+					<article-title>Microemulsion of Brazil nut oil as a natural product to improve superoxide release in human phagocytes</article-title>
+					<source>Química Nova</source>
+					<volume>40</volume>
+					<fpage>1051</fpage>
+					<lpage>1057</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B16">
+				<mixed-citation>Franco, L.T.; Bochi, L.D.C.S. 2013. Produção e caracterização de diferentes formulações tópicas semissólidas contendo meloxicam na forma nanoestruturada. <italic>Vivências: Revista Eletrônica de Extensão da URI</italic>, 9: 209-231.</mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Franco</surname>
+							<given-names>L.T.</given-names>
+						</name>
+						<name>
+							<surname>Bochi</surname>
+							<given-names>L.D.C.S.</given-names>
+						</name>
+					</person-group>
+					<year>2013</year>
+					<article-title>Produção e caracterização de diferentes formulações tópicas semissólidas contendo meloxicam na forma nanoestruturada</article-title>
+					<source>Vivências: Revista Eletrônica de Extensão da URI</source>
+					<volume>9</volume>
+					<fpage>209</fpage>
+					<lpage>231</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B17">
+				<mixed-citation>Frange, R.C.C.; Garcia, M.T.J. 2009. Desenvolvimento de emulsões óleo de oliva/água: avaliação da estabilidade física. <italic>Revista de Ciências Farmacêuticas Básica e Aplicada</italic>, 30: 263-271.</mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Frange</surname>
+							<given-names>R.C.C.</given-names>
+						</name>
+						<name>
+							<surname>Garcia</surname>
+							<given-names>M.T.J.</given-names>
+						</name>
+					</person-group>
+					<year>2009</year>
+					<article-title>Desenvolvimento de emulsões óleo de oliva/água: avaliação da estabilidade física</article-title>
+					<source>Revista de Ciências Farmacêuticas Básica e Aplicada</source>
+					<volume>30</volume>
+					<fpage>263</fpage>
+					<lpage>271</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B18">
+				<mixed-citation>Funari, C.S.; Ferro, V.O. 2005. Uso ético da biodiversidade brasileira: necessidade e oportunidade. <italic>Revista Brasileira de Farmacognosia</italic>, 15: 178-182.</mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Funari</surname>
+							<given-names>C.S.</given-names>
+						</name>
+						<name>
+							<surname>Ferro</surname>
+							<given-names>V.O.</given-names>
+						</name>
+					</person-group>
+					<year>2005</year>
+					<article-title>Uso ético da biodiversidade brasileira: necessidade e oportunidade</article-title>
+					<source>Revista Brasileira de Farmacognosia</source>
+					<volume>15</volume>
+					<fpage>178</fpage>
+					<lpage>182</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B19">
+				<mixed-citation>Gustmann, P.C.; Cotrim, A.C.M.; Pires, E.M.; Andrighetti, C.R.; Valladão, D.M.S.; Ribeiro, E.B. 2017. Development of Brazil nut oil microemulsion as vehicle for levamisole. <italic>FriendlyISISJournal of Applied Pharmaceutical Science</italic>, 7: 92-98.</mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Gustmann</surname>
+							<given-names>P.C.</given-names>
+						</name>
+						<name>
+							<surname>Cotrim</surname>
+							<given-names>A.C.M.</given-names>
+						</name>
+						<name>
+							<surname>Pires</surname>
+							<given-names>E.M.</given-names>
+						</name>
+						<name>
+							<surname>Andrighetti</surname>
+							<given-names>C.R.</given-names>
+						</name>
+						<name>
+							<surname>Valladão</surname>
+							<given-names>D.M.S.</given-names>
+						</name>
+						<name>
+							<surname>Ribeiro</surname>
+							<given-names>E.B.</given-names>
+						</name>
+					</person-group>
+					<year>2017</year>
+					<article-title>Development of Brazil nut oil microemulsion as vehicle for levamisole</article-title>
+					<source>FriendlyISISJournal of Applied Pharmaceutical Science</source>
+					<volume>7</volume>
+					<fpage>92</fpage>
+					<lpage>98</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B20">
+				<mixed-citation>Hamed, S.F.; Sadek, Z.; Edris, A. 2012. Antioxidant and antimicrobial activities of clove bud essential oil and eugenol nanoparticles in alcohol-free microemulsion. <italic>FriendlyISISJournal of Oleo Science</italic>, 61: 641-648.</mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Hamed</surname>
+							<given-names>S.F.</given-names>
+						</name>
+						<name>
+							<surname>Sadek</surname>
+							<given-names>Z.</given-names>
+						</name>
+						<name>
+							<surname>Edris</surname>
+							<given-names>A.</given-names>
+						</name>
+					</person-group>
+					<year>2012</year>
+					<article-title>Antioxidant and antimicrobial activities of clove bud essential oil and eugenol nanoparticles in alcohol-free microemulsion</article-title>
+					<source>FriendlyISISJournal of Oleo Science</source>
+					<volume>61</volume>
+					<fpage>641</fpage>
+					<lpage>648</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B21">
+				<mixed-citation>Jiao, J.; Burgess, D.J. 2003. Rheology and stability of water-in-oil-in-water multiple emulsions containing Span 83 and Tween 80. <italic>AAPS PharmSciTech, An Official FriendlyISISJournal of the American Association of Pharmaceutical Scientists</italic>, 5: e7.</mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Jiao</surname>
+							<given-names>J.</given-names>
+						</name>
+						<name>
+							<surname>Burgess</surname>
+							<given-names>D.J.</given-names>
+						</name>
+					</person-group>
+					<year>2003</year>
+					<article-title>Rheology and stability of water-in-oil-in-water multiple emulsions containing Span 83 and Tween 80</article-title>
+					<source>AAPS PharmSciTech, An Official FriendlyISISJournal of the American Association of Pharmaceutical Scientists</source>
+					<volume>5</volume>
+					<pub-id pub-id-type="art-access-id">e7</pub-id>
+				</element-citation>
+			</ref>
+			<ref id="B22">
+				<mixed-citation>Katz, L.M.; Dewan, K.; Bronaugh, R.L. 2017. Nanotechnology in cosmetics. <italic>Food and Chemical Toxicology</italic>, 85: 127-137.</mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Katz</surname>
+							<given-names>L.M.</given-names>
+						</name>
+						<name>
+							<surname>Dewan</surname>
+							<given-names>K.</given-names>
+						</name>
+						<name>
+							<surname>Bronaugh</surname>
+							<given-names>R.L.</given-names>
+						</name>
+					</person-group>
+					<year>2017</year>
+					<article-title>Nanotechnology in cosmetics</article-title>
+					<source>Food and Chemical Toxicology</source>
+					<volume>85</volume>
+					<fpage>127</fpage>
+					<lpage>137</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B23">
+				<mixed-citation>Kim, S.; Kiong, W.; Shen, S.; Dong, Y.; Tan, R.B.H. 2009. Phase behavior, microstructure transition, and antiradical activity of sucrose laurate / propylene glycol / the essential oil of <italic>Melaleuca alternifolia</italic> / water microemulsions. <italic>Colloids Surfaces A: Physicochemical and Engineering Aspects</italic>, 348: 289-297.</mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Kim</surname>
+							<given-names>S.</given-names>
+						</name>
+						<name>
+							<surname>Kiong</surname>
+							<given-names>W.</given-names>
+						</name>
+						<name>
+							<surname>Shen</surname>
+							<given-names>S.</given-names>
+						</name>
+						<name>
+							<surname>Dong</surname>
+							<given-names>Y.</given-names>
+						</name>
+						<name>
+							<surname>Tan</surname>
+							<given-names>R.B.H.</given-names>
+						</name>
+					</person-group>
+					<year>2009</year>
+					<article-title>Phase behavior, microstructure transition, and antiradical activity of sucrose laurate / propylene glycol / the essential oil of Melaleuca alternifolia / water microemulsions</article-title>
+					<source>Colloids Surfaces A: Physicochemical and Engineering Aspects</source>
+					<volume>348</volume>
+					<fpage>289</fpage>
+					<lpage>297</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B24">
+				<mixed-citation>Kumar, A.; Kushwaha, V.; Sharma, P.K. 2014. Pharmaceutical microemulsion: Formulation, characterization and drug deliveries across skin. <italic>International FriendlyISISJournal of Drug Development and Research</italic>, 6: 1-21.</mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Kumar</surname>
+							<given-names>A.</given-names>
+						</name>
+						<name>
+							<surname>Kushwaha</surname>
+							<given-names>V.</given-names>
+						</name>
+						<name>
+							<surname>Sharma</surname>
+							<given-names>P.K.</given-names>
+						</name>
+					</person-group>
+					<year>2014</year>
+					<article-title>Pharmaceutical microemulsion: Formulation, characterization and drug deliveries across skin</article-title>
+					<source>International FriendlyISISJournal of Drug Development and Research</source>
+					<volume>6</volume>
+					<fpage>1</fpage>
+					<lpage>21</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B25">
+				<mixed-citation>Lanes, P.K.D.; Ribeiro, E.B.; Chaud, N.G.A.; Pessoa, R.S.; França, E.L.; Honorio-frança, A.C. 2016. Effects of microemulsion incorporated with <italic>Orbignya martiana</italic> Rodr on the functional activity of blood phagocytes. <italic>Wulfenia FriendlyISISJournal</italic>, 1: 214-236.</mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Lanes</surname>
+							<given-names>P.K.D.</given-names>
+						</name>
+						<name>
+							<surname>Ribeiro</surname>
+							<given-names>E.B.</given-names>
+						</name>
+						<name>
+							<surname>Chaud</surname>
+							<given-names>N.G.A.</given-names>
+						</name>
+						<name>
+							<surname>Pessoa</surname>
+							<given-names>R.S.</given-names>
+						</name>
+						<name>
+							<surname>França</surname>
+							<given-names>E.L.</given-names>
+						</name>
+						<name>
+							<surname>Honorio-frança</surname>
+							<given-names>A.C.</given-names>
+						</name>
+					</person-group>
+					<year>2016</year>
+					<article-title>Effects of microemulsion incorporated with Orbignya martiana Rodr on the functional activity of blood phagocytes</article-title>
+					<source>Wulfenia FriendlyISISJournal</source>
+					<volume>1</volume>
+					<fpage>214</fpage>
+					<lpage>236</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B26">
+				<mixed-citation>Lawrence, M.J.; Rees, G.D. 2012. Microemulsion-based media as novel drug delivery systems. <italic>Advanced Drug Delivery Reviews</italic>, 45: 89-121.</mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Lawrence</surname>
+							<given-names>M.J.</given-names>
+						</name>
+						<name>
+							<surname>Rees</surname>
+							<given-names>G.D.</given-names>
+						</name>
+					</person-group>
+					<year>2012</year>
+					<article-title>Microemulsion-based media as novel drug delivery systems</article-title>
+					<source>Advanced Drug Delivery Reviews</source>
+					<volume>45</volume>
+					<fpage>89</fpage>
+					<lpage>121</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B27">
+				<mixed-citation>Li, W.J.; Cheng, X.L.; Liu, J.; Lin, R.C.; Wang, G.L.; Du, S.S.; Liu, Z.L. 2012. Phenolic compounds and antioxidant activities of Liriope muscari. <italic>Molecules</italic>, 17: 1797-1808.</mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Li</surname>
+							<given-names>W.J.</given-names>
+						</name>
+						<name>
+							<surname>Cheng</surname>
+							<given-names>X.L.</given-names>
+						</name>
+						<name>
+							<surname>Liu</surname>
+							<given-names>J.</given-names>
+						</name>
+						<name>
+							<surname>Lin</surname>
+							<given-names>R.C.</given-names>
+						</name>
+						<name>
+							<surname>Wang</surname>
+							<given-names>G.L.</given-names>
+						</name>
+						<name>
+							<surname>Du</surname>
+							<given-names>S.S.</given-names>
+						</name>
+						<name>
+							<surname>Liu</surname>
+							<given-names>Z.L.</given-names>
+						</name>
+					</person-group>
+					<year>2012</year>
+					<article-title>Phenolic compounds and antioxidant activities of Liriope muscari</article-title>
+					<source>Molecules</source>
+					<volume>17</volume>
+					<fpage>1797</fpage>
+					<lpage>1808</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B28">
+				<mixed-citation>Oliveira, A.G.; Scarpa, M.V.; Correa, M.A.; Cera, L.F.R.; Formariz, T.P. 2004. Microemulsões: estruturas e aplicaçoes como sistema de liberação de fármacos. <italic>Química Nova</italic>, 27: 131-138.</mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Oliveira</surname>
+							<given-names>A.G.</given-names>
+						</name>
+						<name>
+							<surname>Scarpa</surname>
+							<given-names>M.V.</given-names>
+						</name>
+						<name>
+							<surname>Correa</surname>
+							<given-names>M.A.</given-names>
+						</name>
+						<name>
+							<surname>Cera</surname>
+							<given-names>L.F.R.</given-names>
+						</name>
+						<name>
+							<surname>Formariz</surname>
+							<given-names>T.P.</given-names>
+						</name>
+					</person-group>
+					<year>2004</year>
+					<article-title>Microemulsões: estruturas e aplicaçoes como sistema de liberação de fármacos</article-title>
+					<source>Química Nova</source>
+					<volume>27</volume>
+					<fpage>131</fpage>
+					<lpage>138</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B29">
+				<mixed-citation>Pereira, S.A.; Alves, H.P.; Sousa, C.M.; Costa, G.L.S. 2013. Prospecção sobre o conhecimento de espécies amazônicas - inajá (<italic>Maximiliana maripa</italic> Aublt.) e bacaba (<italic>Oenocarpus bacaba</italic> Mart.). <italic>Innovation, Technology and Management FriendlyISISJournal</italic>, 3: 110-122.</mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Pereira</surname>
+							<given-names>S.A.</given-names>
+						</name>
+						<name>
+							<surname>Alves</surname>
+							<given-names>H.P.</given-names>
+						</name>
+						<name>
+							<surname>Sousa</surname>
+							<given-names>C.M.</given-names>
+						</name>
+						<name>
+							<surname>Costa</surname>
+							<given-names>G.L.S.</given-names>
+						</name>
+					</person-group>
+					<year>2013</year>
+					<article-title>Prospecção sobre o conhecimento de espécies amazônicas - inajá (Maximiliana maripa Aublt.) e bacaba (Oenocarpus bacaba Mart.)</article-title>
+					<source>Innovation, Technology and Management FriendlyISISJournal</source>
+					<volume>3</volume>
+					<fpage>110</fpage>
+					<lpage>122</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B30">
+				<mixed-citation>Pérez-Rosés, R.; Risco, E.; Vila, R.; Peñalver, P.; Cañigueral, S. 2014. Antioxidant activity of Tween-20 and Tween-80 evaluated through different in-vitro tests. <italic>FriendlyISISJournal of Pharmacy and Pharmacology</italic>, 67: 666-672.</mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Pérez-Rosés</surname>
+							<given-names>R.</given-names>
+						</name>
+						<name>
+							<surname>Risco</surname>
+							<given-names>E.</given-names>
+						</name>
+						<name>
+							<surname>Vila</surname>
+							<given-names>R.</given-names>
+						</name>
+						<name>
+							<surname>Peñalver</surname>
+							<given-names>P.</given-names>
+						</name>
+						<name>
+							<surname>Cañigueral</surname>
+							<given-names>S.</given-names>
+						</name>
+					</person-group>
+					<year>2014</year>
+					<article-title>Antioxidant activity of Tween-20 and Tween-80 evaluated through different in-vitro tests</article-title>
+					<source>FriendlyISISJournal of Pharmacy and Pharmacology</source>
+					<volume>67</volume>
+					<fpage>666</fpage>
+					<lpage>672</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B31">
+				<mixed-citation>Pessoa, R.S.; França, E.L.; Ribeiro, E.B.; Abud, N.G.; Honorio-França, A.C. 2015. Microemulsion of babassu oil as a natural product to improve human immune system function. <italic>Drug Design Development and Therapy</italic>, 9: 21-31.</mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Pessoa</surname>
+							<given-names>R.S.</given-names>
+						</name>
+						<name>
+							<surname>França</surname>
+							<given-names>E.L.</given-names>
+						</name>
+						<name>
+							<surname>Ribeiro</surname>
+							<given-names>E.B.</given-names>
+						</name>
+						<name>
+							<surname>Abud</surname>
+							<given-names>N.G.</given-names>
+						</name>
+						<name>
+							<surname>Honorio-França</surname>
+							<given-names>A.C.</given-names>
+						</name>
+					</person-group>
+					<year>2015</year>
+					<article-title>Microemulsion of babassu oil as a natural product to improve human immune system function</article-title>
+					<source>Drug Design Development and Therapy</source>
+					<volume>9</volume>
+					<fpage>21</fpage>
+					<lpage>31</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B32">
+				<mixed-citation>Pianovski, A.R.; Lima, C.G.; Silva, K.K.; Franco, V.; Carvalho, M.; Musis, C.R. De; Regina, S.; Machado, P. 2008. Desenvolvimento e avaliação da estabilidade de emulsões múltiplas O/A/O com óleo de pequi (<italic>Caryocar brasilienses</italic>). <italic>Revista Brasileira de Farmácia</italic>, 89: 155-159.</mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Pianovski</surname>
+							<given-names>A.R.</given-names>
+						</name>
+						<name>
+							<surname>Lima</surname>
+							<given-names>C.G.</given-names>
+						</name>
+						<name>
+							<surname>Silva</surname>
+							<given-names>K.K.</given-names>
+						</name>
+						<name>
+							<surname>Franco</surname>
+							<given-names>V.</given-names>
+						</name>
+						<name>
+							<surname>Carvalho</surname>
+							<given-names>M.</given-names>
+						</name>
+						<name>
+							<surname>Musis</surname>
+							<given-names>C.R. De</given-names>
+						</name>
+						<name>
+							<surname>Regina</surname>
+							<given-names>S.</given-names>
+						</name>
+						<name>
+							<surname>Machado</surname>
+							<given-names>P.</given-names>
+						</name>
+					</person-group>
+					<year>2008</year>
+					<article-title>Desenvolvimento e avaliação da estabilidade de emulsões múltiplas O/A/O com óleo de pequi (Caryocar brasilienses)</article-title>
+					<source>Revista Brasileira de Farmácia</source>
+					<volume>89</volume>
+					<fpage>155</fpage>
+					<lpage>159</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B33">
+				<mixed-citation>Pinto, R.H.H.; Sena, C.; Santos, O.V.; da Costa, W.A.; Rodrigues, A.M.C.; Carvalho Junior, R.N. 2018. Extraction of bacaba (<italic>Oenocarpus bacaba</italic>) oil with supercritical CO<sub>2</sub>: Global yield isotherms, fatty acid composition, functional quality, oxidative stability, spectroscopic profile and antioxidant activity. <italic>Grasas y Aceites</italic>, 69: e246.</mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Pinto</surname>
+							<given-names>R.H.H.</given-names>
+						</name>
+						<name>
+							<surname>Sena</surname>
+							<given-names>C.</given-names>
+						</name>
+						<name>
+							<surname>Santos</surname>
+							<given-names>O.V.</given-names>
+						</name>
+						<name>
+							<surname>da Costa</surname>
+							<given-names>W.A.</given-names>
+						</name>
+						<name>
+							<surname>Rodrigues</surname>
+							<given-names>A.M.C.</given-names>
+						</name>
+						<name>
+							<surname>Carvalho</surname>
+							<given-names>R.N.</given-names>
+							<suffix>Junior</suffix>
+						</name>
+					</person-group>
+					<year>2018</year>
+					<article-title>Extraction of bacaba (Oenocarpus bacaba) oil with supercritical CO2: Global yield isotherms, fatty acid composition, functional quality, oxidative stability, spectroscopic profile and antioxidant activity</article-title>
+					<source>Grasas y Aceites</source>
+					<volume>69</volume>
+					<pub-id pub-id-type="art-access-id">e246</pub-id>
+				</element-citation>
+			</ref>
+			<ref id="B34">
+				<mixed-citation>Prajapati, H.N.; Dalrymple, D.M.; Serajuddin, A.T.M. 2012. A comparative evaluation of mono-, di- and triglyceride of medium chain fatty acids by lipid / surfactant / water phase diagram, solubility determination and dispersion testing for application in pharmaceutical dosage form development. <italic>Pharmaceutical Research</italic>, 29: 285-305.</mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Prajapati</surname>
+							<given-names>H.N.</given-names>
+						</name>
+						<name>
+							<surname>Dalrymple</surname>
+							<given-names>D.M.</given-names>
+						</name>
+						<name>
+							<surname>Serajuddin</surname>
+							<given-names>A.T.M.</given-names>
+						</name>
+					</person-group>
+					<year>2012</year>
+					<article-title>A comparative evaluation of mono-, di- and triglyceride of medium chain fatty acids by lipid / surfactant / water phase diagram, solubility determination and dispersion testing for application in pharmaceutical dosage form development</article-title>
+					<source>Pharmaceutical Research</source>
+					<volume>29</volume>
+					<fpage>285</fpage>
+					<lpage>305</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B35">
+				<mixed-citation>Queiroz, M.S.M.; Bianco, R. 2009. Morfologia e desenvolvimento germinativo de <italic>Oenocarpus bacaba</italic> Mart. (Arecaceae) da Amazônia Ocidental. <italic>Revista Árvore</italic>, 33: 1037-1042.</mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Queiroz</surname>
+							<given-names>M.S.M.</given-names>
+						</name>
+						<name>
+							<surname>Bianco</surname>
+							<given-names>R.</given-names>
+						</name>
+					</person-group>
+					<year>2009</year>
+					<article-title>Morfologia e desenvolvimento germinativo de Oenocarpus bacaba Mart. (Arecaceae) da Amazônia Ocidental</article-title>
+					<source>Revista Árvore</source>
+					<volume>33</volume>
+					<fpage>1037</fpage>
+					<lpage>1042</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B36">
+				<mixed-citation>Ribeiro, E.B.; Kelly, P.; Lanes, D.; Galdeano, N.; Chaud, A.; Pessoa, R. S.; Honorio-França, A.C.; França, E.L. 2015. Microemulsions with levamisole delivery systems as novel immunomodulating agents with potential for amebiasis therapies. <italic>Science of Advanced Matererials</italic>, 7: 15-27.</mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Ribeiro</surname>
+							<given-names>E.B.</given-names>
+						</name>
+						<name>
+							<surname>Kelly</surname>
+							<given-names>P.</given-names>
+						</name>
+						<name>
+							<surname>Lanes</surname>
+							<given-names>D.</given-names>
+						</name>
+						<name>
+							<surname>Galdeano</surname>
+							<given-names>N.</given-names>
+						</name>
+						<name>
+							<surname>Chaud</surname>
+							<given-names>A.</given-names>
+						</name>
+						<name>
+							<surname>Pessoa</surname>
+							<given-names>R. S.</given-names>
+						</name>
+						<name>
+							<surname>Honorio-França</surname>
+							<given-names>A.C.</given-names>
+						</name>
+						<name>
+							<surname>França</surname>
+							<given-names>E.L.</given-names>
+						</name>
+					</person-group>
+					<year>2015</year>
+					<article-title>Microemulsions with levamisole delivery systems as novel immunomodulating agents with potential for amebiasis therapies</article-title>
+					<source>Science of Advanced Matererials</source>
+					<volume>7</volume>
+					<fpage>15</fpage>
+					<lpage>27</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B37">
+				<mixed-citation>Roy, B.C.; Sasaki, M.; Goto, M. 2006. Effect of temperature and pressure on the extraction yield of oil from sunflower seed with supercritical carbon dioxide.<italic>FriendlyISISJournal of Applied Sciences</italic>, 6: <italic>71-75</italic>.</mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Roy</surname>
+							<given-names>B.C.</given-names>
+						</name>
+						<name>
+							<surname>Sasaki</surname>
+							<given-names>M.</given-names>
+						</name>
+						<name>
+							<surname>Goto</surname>
+							<given-names>M.</given-names>
+						</name>
+					</person-group>
+					<year>2006</year>
+					<article-title>Effect of temperature and pressure on the extraction yield of oil from sunflower seed with supercritical carbon dioxide</article-title>
+					<source>FriendlyISISJournal of Applied Sciences</source>
+					<volume>6</volume>
+					<fpage>71</fpage>
+					<lpage>75</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B38">
+				<mixed-citation>Rufino, M.S.M.; Pérez-Jimenez, J.; Arranz, S.; Alves, R.E.; Brito, E.S.; Oliveira, M.S.P.; Saura-Calixto, F. 2011. Açaí (<italic>Euterpe oleraceae</italic>) ‘BRS Pará’: A tropical fruit source of antioxidant dietary fiber and high antioxidant capacity oil. <italic>Food Research International</italic>, 44: 2100-2106.</mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Rufino</surname>
+							<given-names>M.S.M.</given-names>
+						</name>
+						<name>
+							<surname>Pérez-Jimenez</surname>
+							<given-names>J.</given-names>
+						</name>
+						<name>
+							<surname>Arranz</surname>
+							<given-names>S.</given-names>
+						</name>
+						<name>
+							<surname>Alves</surname>
+							<given-names>R.E.</given-names>
+						</name>
+						<name>
+							<surname>Brito</surname>
+							<given-names>E.S.</given-names>
+						</name>
+						<name>
+							<surname>Oliveira</surname>
+							<given-names>M.S.P.</given-names>
+						</name>
+						<name>
+							<surname>Saura-Calixto</surname>
+							<given-names>F.</given-names>
+						</name>
+					</person-group>
+					<year>2011</year>
+					<article-title>Açaí (Euterpe oleraceae) ‘BRS Pará’: A tropical fruit source of antioxidant dietary fiber and high antioxidant capacity oil</article-title>
+					<source>Food Research International</source>
+					<volume>44</volume>
+					<fpage>2100</fpage>
+					<lpage>2106</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B39">
+				<mixed-citation>Santos, M.F.G.; Alves, R.E.; Brito, E.S.; Silva, S.M.; Silveira, M.R.S. 2017. Quality characteristics of fruits and oils of palms native to the brazilian amazon. <italic>Revista Brasileira de Fruticultura</italic>, 39: e305.</mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Santos</surname>
+							<given-names>M.F.G.</given-names>
+						</name>
+						<name>
+							<surname>Alves</surname>
+							<given-names>R.E.</given-names>
+						</name>
+						<name>
+							<surname>Brito</surname>
+							<given-names>E.S.</given-names>
+						</name>
+						<name>
+							<surname>Silva</surname>
+							<given-names>S.M.</given-names>
+						</name>
+						<name>
+							<surname>Silveira</surname>
+							<given-names>M.R.S.</given-names>
+						</name>
+					</person-group>
+					<year>2017</year>
+					<article-title>Quality characteristics of fruits and oils of palms native to the brazilian amazon</article-title>
+					<source>Revista Brasileira de Fruticultura</source>
+					<volume>39</volume>
+					<pub-id pub-id-type="art-access-id">e305</pub-id>
+				</element-citation>
+			</ref>
+			<ref id="B40">
+				<mixed-citation>Cymerys, M. 2005. <italic>Bacaba (Oenocarpus bacaba</italic> Mart.) In: Shanley, P.; Medina, G. (Ed.). <italic>Frutíferas e plantas úteis na vida amazônica</italic>. CIFOR, Imazon, Belém, p.177-180.</mixed-citation>
+				<element-citation publication-type="book">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Cymerys</surname>
+							<given-names>M.</given-names>
+						</name>
+					</person-group>
+					<year>2005</year>
+					<chapter-title>Bacaba (Oenocarpus bacaba Mart.)</chapter-title>
+					<person-group person-group-type="editor">
+						<name>
+							<surname>Shanley</surname>
+							<given-names>P.</given-names>
+						</name>
+						<name>
+							<surname>Medina</surname>
+							<given-names>G.</given-names>
+						</name>
+					</person-group>
+					<source>Frutíferas e plantas úteis na vida amazônica</source>
+					<publisher-name>CIFOR, Imazon</publisher-name>
+					<publisher-loc>Belém</publisher-loc>
+					<fpage>177</fpage>
+					<lpage>180</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B41">
+				<mixed-citation>Torres, M.P.R.; Raiser, A.L.; Marcílio, M.R.; Ribeiro, E.B.; Andrighetti, C.R.; Valladão, D.M.S. 2018. Development, stability and antioxidant activity of microemulsion containig pequi (<italic>Caryocar brasiliense</italic> Camb.) oil. <italic>Revista Virtual de Química</italic>, 10: 346-361.</mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Torres</surname>
+							<given-names>M.P.R.</given-names>
+						</name>
+						<name>
+							<surname>Raiser</surname>
+							<given-names>A.L.</given-names>
+						</name>
+						<name>
+							<surname>Marcílio</surname>
+							<given-names>M.R.</given-names>
+						</name>
+						<name>
+							<surname>Ribeiro</surname>
+							<given-names>E.B.</given-names>
+						</name>
+						<name>
+							<surname>Andrighetti</surname>
+							<given-names>C.R.</given-names>
+						</name>
+						<name>
+							<surname>Valladão</surname>
+							<given-names>D.M.S.</given-names>
+						</name>
+					</person-group>
+					<year>2018</year>
+					<article-title>Development, stability and antioxidant activity of microemulsion containig pequi (Caryocar brasiliense Camb.) oil</article-title>
+					<source>Revista Virtual de Química</source>
+					<volume>10</volume>
+					<fpage>346</fpage>
+					<lpage>361</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B42">
+				<mixed-citation>United States Pharmacopeial Convention. 2007. <italic>United States Pharmacopeia</italic>. 30 th ed./NF25. USPC, Rockville, 3000p.</mixed-citation>
+				<element-citation publication-type="book">
+					<person-group person-group-type="author">
+						<collab>United States Pharmacopeial Convention</collab>
+					</person-group>
+					<year>2007</year>
+					<source>United States Pharmacopeia</source>
+					<edition>30 th ed</edition>
+					<publisher-name>NF25. USPC</publisher-name>
+					<publisher-loc>Rockville</publisher-loc>
+					<size units="pages">3000</size>
+				</element-citation>
+			</ref>
+			<ref id="B43">
+				<mixed-citation>Wani, T.A.; Masoodi, F.A.; Gani, A.; Baba, W.N.; Rahmanian, N.; Akhter, R.; Wani, I.A.; Ahmad, M. 2018. Olive oil and its principal bioactive compound: Hydroxytyrosol - A review of the recent literature. <italic>Trends in Food, Science &amp; Technology</italic>, 77: 77-90.</mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Wani</surname>
+							<given-names>T.A.</given-names>
+						</name>
+						<name>
+							<surname>Masoodi</surname>
+							<given-names>F.A.</given-names>
+						</name>
+						<name>
+							<surname>Gani</surname>
+							<given-names>A.</given-names>
+						</name>
+						<name>
+							<surname>Baba</surname>
+							<given-names>W.N.</given-names>
+						</name>
+						<name>
+							<surname>Rahmanian</surname>
+							<given-names>N.</given-names>
+						</name>
+						<name>
+							<surname>Akhter</surname>
+							<given-names>R.</given-names>
+						</name>
+						<name>
+							<surname>Wani</surname>
+							<given-names>I.A.</given-names>
+						</name>
+						<name>
+							<surname>Ahmad</surname>
+							<given-names>M.</given-names>
+						</name>
+					</person-group>
+					<year>2018</year>
+					<article-title>Olive oil and its principal bioactive compound: Hydroxytyrosol - A review of the recent literature</article-title>
+					<source>Trends in Food, Science &amp; Technology</source>
+					<volume>77</volume>
+					<fpage>77</fpage>
+					<lpage>90</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B44">
+				<mixed-citation>Wilk, K.A; Zielińska, K.; Hamerska-Dudra, A.; Jezierski, A. 2009. Biocompatible microemulsions of dicephalic aldonamide-type surfactants: formulation, structure and temperature influence. <italic>FriendlyISISJournal of Colloid and Interface Science</italic>, 334: 87-95.</mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Wilk</surname>
+							<given-names>K.A</given-names>
+						</name>
+						<name>
+							<surname>Zielińska</surname>
+							<given-names>K.</given-names>
+						</name>
+						<name>
+							<surname>Hamerska-Dudra</surname>
+							<given-names>A.</given-names>
+						</name>
+						<name>
+							<surname>Jezierski</surname>
+							<given-names>A.</given-names>
+						</name>
+					</person-group>
+					<year>2009</year>
+					<article-title>Biocompatible microemulsions of dicephalic aldonamide-type surfactants: formulation, structure and temperature influence</article-title>
+					<source>FriendlyISISJournal of Colloid and Interface Science</source>
+					<volume>334</volume>
+					<fpage>87</fpage>
+					<lpage>95</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B45">
+				<mixed-citation>Zanin, S.M.; Miguel, M.D.; Chimelli, M.C.; Oliveira, A.B. 2002. Determinação do Equilíbrio hidrófilo-lipófilo (EHL) de óleos de origem vegetal. <italic>Visão Acadêmica</italic>, 3: 13-18.</mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Zanin</surname>
+							<given-names>S.M.</given-names>
+						</name>
+						<name>
+							<surname>Miguel</surname>
+							<given-names>M.D.</given-names>
+						</name>
+						<name>
+							<surname>Chimelli</surname>
+							<given-names>M.C.</given-names>
+						</name>
+						<name>
+							<surname>Oliveira</surname>
+							<given-names>A.B.</given-names>
+						</name>
+					</person-group>
+					<year>2002</year>
+					<article-title>Determinação do Equilíbrio hidrófilo-lipófilo (EHL) de óleos de origem vegetal</article-title>
+					<source>Visão Acadêmica</source>
+					<volume>3</volume>
+					<fpage>13</fpage>
+					<lpage>18</lpage>
+				</element-citation>
+			</ref>
+		</ref-list>
+		<fn-group>
+			<fn fn-type="other" id="fn2">
+				<label>CITE AS:</label>
+				<p> Torres, M. de P.R.; Esprendor, R.V. de F.; Bonaldo, S.M.; Ribeiro, E.B.; Valladão, D.M. de S. 2019. Development, characterization and stability of microemulsionated formulations of bacaba, <italic>Oenocarpus bacaba</italic> oil. <italic>Acta Amazonica</italic> 49: 246-255.</p>
+			</fn>
+		</fn-group>
+	</back>
+</article>

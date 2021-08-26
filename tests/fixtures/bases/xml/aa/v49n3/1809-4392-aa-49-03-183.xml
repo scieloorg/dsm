@@ -1,0 +1,1781 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE article
+  PUBLIC "-//NLM//DTD JATS (Z39.96) FriendlyISISJournal Publishing DTD v1.1 20151215//EN" "JATS-journalpublishing1.dtd">
+<article article-type="research-article" dtd-version="1.1" specific-use="sps-1.9" xml:lang="en" xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<front>
+		<journal-meta>
+			<journal-id journal-id-type="publisher-id">aa</journal-id>
+			<journal-title-group>
+				<journal-title>Acta Amazonica</journal-title>
+				<abbrev-journal-title abbrev-type="publisher">Acta Amaz.</abbrev-journal-title>
+			</journal-title-group>
+			<issn pub-type="ppub">0044-5967</issn>
+			<issn pub-type="epub">1809-4392</issn>
+			<publisher>
+				<publisher-name>Instituto Nacional de Pesquisas da Amazônia</publisher-name>
+			</publisher>
+		</journal-meta>
+		<article-meta>
+			<article-id pub-id-type="doi">10.1590/1809-4392201801122</article-id>
+			<article-categories>
+				<subj-group subj-group-type="heading">
+					<subject>Biodiversity and Conservation</subject>
+				</subj-group>
+			</article-categories>
+			<title-group>
+				<article-title>Relationship of Neotropical otter vestiges with environmental and anthropogenic factors</article-title>
+				<trans-title-group xml:lang="pt">
+					<trans-title>Relação entre os vestígios de lontra neotropical e fatores ambientais e antropogênicos</trans-title>
+				</trans-title-group>
+			</title-group>
+			<contrib-group>
+				<contrib contrib-type="author">
+					<name>
+						<surname>ANDRADE</surname>
+						<given-names>Ana Marta</given-names>
+					</name>
+					<xref ref-type="aff" rid="aff1"><sup>1</sup></xref>
+					<xref ref-type="aff" rid="aff2"><sup>2</sup></xref>
+					<xref ref-type="corresp" rid="c1"><sup>*</sup></xref>
+				</contrib>
+				<contrib contrib-type="author">
+					<name>
+						<surname>ARCOVERDE</surname>
+						<given-names>Danilo Leal</given-names>
+					</name>
+					<xref ref-type="aff" rid="aff1"><sup>1</sup></xref>
+					<xref ref-type="aff" rid="aff2"><sup>2</sup></xref>
+					<xref ref-type="aff" rid="aff3"><sup>3</sup></xref>
+				</contrib>
+				<contrib contrib-type="author">
+					<name>
+						<surname>ALBERNAZ</surname>
+						<given-names>Ana Luisa</given-names>
+					</name>
+					<xref ref-type="aff" rid="aff1"><sup>1</sup></xref>
+				</contrib>
+			</contrib-group>
+			<aff id="aff1">
+				<label>1</label>
+				<institution content-type="original">Museu Paraense Emílio Goeldi - MPEG, Avenida Perimetral, 1901 - Terra Firme - CEP: 66077-830, Belém - PA - Brazil</institution>
+				<institution content-type="orgname">Museu Paraense Emílio Goeldi</institution>
+				<addr-line>
+					<postal-code>66077-830</postal-code>
+					<city>Belém</city>
+					<state>PA</state>
+				</addr-line>
+				<country country="BR">Brazil</country>
+			</aff>
+			<aff id="aff2">
+				<label>2</label>
+				<institution content-type="original">Biologia e Conservação de Mamíferos Aquáticos da Amazônia - BioMA, Av. Presidente Tancredo Neves, nº 2501 - Montese - CEP: 66077-530, Belém - PA - Brazil</institution>
+				<institution content-type="orgname">Biologia e Conservação de Mamíferos Aquáticos da Amazônia</institution>
+				<addr-line>
+					<postal-code>66077-530</postal-code>
+					<city>Belém</city>
+					<state>PA</state>
+				</addr-line>
+				<country country="BR">Brazil</country>
+			</aff>
+			<aff id="aff3">
+				<label>3</label>
+				<institution content-type="original">Universidade Federal do Pará - UFPA, Rua Augusto Corrêa, 01 - Guamá, 66075-110, Belém - PA - Brazil</institution>
+				<institution content-type="normalized">Universidade Federal do Pará</institution>
+				<institution content-type="orgname">Universidade Federal do Pará</institution>
+				<addr-line>
+					<postal-code>66075-110</postal-code>
+					<city>Belém</city>
+					<state>PA</state>
+				</addr-line>
+				<country country="BR">Brazil</country>
+			</aff>
+			<author-notes>
+				<corresp id="c1">* Corresponding author: <email>ana.andrade.marta@gmail.com</email>
+				</corresp>
+				<fn fn-type="edited-by" id="fn1">
+					<label>ASSOCIATE EDITOR:</label>
+					<p> Fernanda Michalski</p>
+				</fn>
+			</author-notes>
+			<pub-date date-type="pub" publication-format="electronic">
+				<day>12</day>
+				<month>08</month>
+				<year>2019</year>
+			</pub-date>
+			<pub-date date-type="collection" publication-format="electronic">
+				<season>Jul-Sep</season>
+				<year>2019</year>
+			</pub-date>
+			<volume>49</volume>
+			<issue>3</issue>
+			<fpage>183</fpage>
+			<lpage>192</lpage>
+			<history>
+				<date date-type="received">
+					<day>27</day>
+					<month>03</month>
+					<year>2018</year>
+				</date>
+				<date date-type="accepted">
+					<day>27</day>
+					<month>12</month>
+					<year>2018</year>
+				</date>
+			</history>
+			<permissions>
+				<license license-type="open-access" xlink:href="https://creativecommons.org/licenses/by/4.0/" xml:lang="en">
+					<license-p>This is an open-access article distributed under the terms of the Creative Commons Attribution License</license-p>
+				</license>
+			</permissions>
+			<abstract>
+				<title>ABSTRACT </title>
+				<p>The Neotropical otter, <italic>Lontra longicaudis</italic> (Mustelidae) is a semi-aquatic mustelid that exploits a variety of freshwater habitats. To understand the relative influence of human activities and environmental factors affecting its distribution and habitat use, we conducted systematic, seasonal surveys of otter signs along the middle Guamá River, in Pará state in the eastern Brazilian Amazon. We applied generalized additive models to compare distribution of otters along the river with data collected on environmental factors (landcover type derived from satellite imagery, and <italic>in situ</italic> measurements of physicochemical water characteristics) and anthropogenic factors (fishing gear in the river and human habitation along the river). Most otter signs (indicators of otter habitat use) occurred along the shoreline of the main river channel during the dry season; we observed fewer signs during peak flow, probably because the shoreline and floodplain are flooded, which hid signs and made access to the floodplain difficult. The best-fit model included variables for proportion of forest, presence of fishing gear and boats, bank steepness, and presence of rock formations and sand banks. Otter occurrence was negatively related to forested area and positively related to the presence of fishing gear and boats. Otters are likely attracted to fish trapped in fishing gear because they can easily predate on the trapped fish.</p>
+			</abstract>
+			<trans-abstract xml:lang="pt">
+				<title>RESUMO</title>
+				<p>A lontra neotropical, <italic>Lontra longicaudis</italic> é um mustelídeo semiaquático que usa seu habitat de diferentes formas. Para entender a influência relativa de fatores antrópicos e ambientais sobre a distribuição de lontras neotropicais, nós conduzimos monitoramentos sistemáticos de vestígios de lontras na região do médio Rio Guamá, Pará, Amazônia Oriental. Modelos aditivos generalizados foram usados para analisar a associação entre a ocorrência de lontras ao longo do rio e variáveis ambientais (cobertura da terra derivada de imagens de satélite e características fisicoquímicas da água medidas <italic>in situ</italic>) e fatores antrópicos (presença de apetrechos de pesca e comunidades humanas ao longo do rio). A maioria dos vestígios de lontras foi encontrada ao logo das margens do rio durante a estação seca. Obtivemos um número muito menor de registros durante a cheia do rio, provavelmente devida à inundação da linha costeira e da planície de inundação, o que obliterou os sinais e dificultou o acesso à área alagada. O modelo de melhor ajuste incluiu como variáveis explicativas a área florestada, a presença de apetrechos de pesca e barcos, a inclinação das margens e a presença de formações rochosas. A ocorrência de registros de lontra foi relacionada negativamante com a proporção de áreas florestadas, e positivamente com a presença de apetrechos de pesca e barcos. As lontras provavelmente são atraídas por peixes presos em artefatos de pesca, pois podem facilmente predar os peixes presos.</p>
+			</trans-abstract>
+			<kwd-group xml:lang="en">
+				<title>Keywords:</title>
+				<kwd>anthropogenic impact</kwd>
+				<kwd>habitat use</kwd>
+				<kwd><italic>Lontra longicaudis</italic>, Amazon</kwd>
+			</kwd-group>
+			<kwd-group xml:lang="pt">
+				<title>Palavras-chave:</title>
+				<kwd>impacto antrópico</kwd>
+				<kwd>uso de habitat</kwd>
+				<kwd>Lontra longicaudis</kwd>
+				<kwd>Amazônia</kwd>
+			</kwd-group>
+			<counts>
+				<fig-count count="4"/>
+				<table-count count="4"/>
+				<equation-count count="0"/>
+				<ref-count count="46"/>
+				<page-count count="10"/>
+			</counts>
+		</article-meta>
+	</front>
+	<body>
+		<sec sec-type="intro">
+			<title>INTRODUCTION</title>
+			<p>River otters are semi-aquatic, territorial predators that exploit a variety of riparian habitats. For example, river otters use holts (dens), tree hollows, and sandbanks along waterbodies as sheltering and resting places, particularly along vegetated shorelines that provide protection from predators and extreme weather events (<xref ref-type="bibr" rid="B12">Crowley <italic>et al</italic>. 2012</xref>, <xref ref-type="bibr" rid="B16">Gomes Jr 2009</xref>). Habitat use of riparian zones is influenced by seasonal fluctuations, hydrologic regimes and availability of prey (<xref ref-type="bibr" rid="B40">Rodríguez and Lewis 1997</xref>).</p>
+			<p>Signs (indicators of habitat use), such as feces and footprints of Eurasian otters (<italic>Lutra lutra</italic>) primarily occur along river margins of mostly intact riparian forests, which may be due to the fact that otter signs are better preserved in intact environments than in altered habitats (<xref ref-type="bibr" rid="B19">Jenkins and Burrows 1980</xref>). In altered environments, where riverbanks are more exposed (cleared of native vegetation), Eurasian otters tend to mark their territories more frequently with feces (<xref ref-type="bibr" rid="B22">Kruuk and Hewson 1978</xref>).</p>
+			<p>The Neotropical otter, <italic>Lontra longicaudis</italic> (Olfers 1818) (Mustelidae) (hereafter referred to as otter), is a semi-aquatic species that ranges from Mexico to Argentina, and has recently expanded into northeastern Brazil (<xref ref-type="bibr" rid="B36">Rheingantz <italic>et al.</italic> 2014</xref>, <xref ref-type="bibr" rid="B41">Rosas-Ribeiro 2017</xref>). Two key factors influencing how otters use their habitat are availability of resources and the degree to which riparian habitats have been altered by humans (<xref ref-type="bibr" rid="B4">Arellano Nicolás <italic>et al.</italic> 2012</xref>).</p>
+			<p>Habitat use of riparian zones by otters appears to be related to channel characteristics, such as depth, transparency, and/or velocity of water, or the proximity to particular habitats, such as forests, rock formations and sandbanks (<xref ref-type="bibr" rid="B31">Pardini 1998</xref>). Otters are known to prefer to search for prey in lentic environments, such as reservoirs (Pardini 1998, <xref ref-type="bibr" rid="B33">Quadros 2012</xref>), but <xref ref-type="bibr" rid="B14">Emmons and Feer (1997</xref>) claim that otters prefer to feed in clear, fast flowing streams. Otters appear to inhabit clearer rather than murky rivers (<xref ref-type="bibr" rid="B34">Quadros and Monteiro-Filho 2001</xref>), perhaps because prey can be detected and captured more efficiently in clearer waters (<xref ref-type="bibr" rid="B33">Quadros 2012</xref>).</p>
+			<p>In addition to the many natural environmental factors affecting riparian habitat use by otters, human alterations also impact otter distribution in three main ways: (a) via aquatic habitat degradation (<xref ref-type="bibr" rid="B6">Brandt 2004</xref>), such as water pollution created by road construction, deforestation, and habitat fragmentation, (b) by the presence of watercrafts, which otters avoid, presumably due to engine noise, and (c) via direct conflicts between otters and humans, when they prey on the same riparian resources, specially fish (<xref ref-type="bibr" rid="B16">Gomes 2009</xref>). Conflict with humans is particularly problematic when otters regularly prey on poultry (<xref ref-type="bibr" rid="B24">Marchini and Macdonald 2012</xref>) and when they damage fishing gear (<xref ref-type="bibr" rid="B5">Barbieri <italic>et al.</italic> 2012</xref>, <xref ref-type="bibr" rid="B9">Castro <italic>et al.</italic> 2014</xref>, <xref ref-type="bibr" rid="B41">Rosas-Ribeiro 2017</xref>), both of which have led to retaliation by humans.</p>
+			<p>In structurally complex riparian habitats and landscapes, it is sometimes difficult to detect otter signs along riverbanks, especially when streamside vegetation is abundant and dense, as is the case along many Amazonian rivers. In fact, otters often hide in dense riparian vegetation (<xref ref-type="bibr" rid="B16">Gomes 2009</xref>), making it difficult to visually locate otters, and even their signs, which, in turn, makes it difficult to evaluate factors related to habitat preference of otters.</p>
+			<p>The Guamá River, which flows past the city of Ourém, in the eastern Brazilian Amazon, has been impacted by numerous human alterations over the past several years, including gravel mining in the riverbed and construction of housing along riverbanks. Both activities detrimentally impacted otters by increasing sediment load in flowing water and destroying fringing vegetation that otters use for hiding and resting. In addition, subsistence fishing has contributed to a decline in local fish populations, forcing otters to raid fishing nets of fishermen (personal observations of the authors and communication with local residents). </p>
+			<p>Therefore, to better understand how otters are affected by environmental factors and how they are impacted by human alterations to the riverine ecosystem of the Guamá River, namely fishing intensity and urban development, we assessed the distribution of otters and variables related to otter habitat and human stressors along the river. </p>
+		</sec>
+		<sec sec-type="materials|methods">
+			<title>MATERIAL AND METHODS</title>
+			<sec>
+				<title>Study Area</title>
+				<p>This study was conducted in the middle reaches of the Guamá River, approximately 40 km in linear distance (80 km in river distance) from Ourém (State of Pará), northern Brazil (1°36’34.73”S, 47°18’57.57”W; 1°33›39.49»S, 47°5’49.74”W). We sampled riverbanks (vegetated and non vegetated), sand beaches, rock ledges, outlets from lakes and tributary streams, and riparian vegetation. The riparian zone of the sampled river section supports three main types of vegetation: secondary forest, also known as “<italic>capoeira</italic> forest,” Alluvial Dense Tropical Rainforest, and Lowland Dense Tropical Rainforest (<xref ref-type="bibr" rid="B25">Martins and Cavararo 2012</xref>).</p>
+				<p>The climate of the region is tropical humid, marked by precipitation in all months of the year and without a defined dry season (type “Af” in the Köppen-Geiger classification) (<xref ref-type="bibr" rid="B8">Carvalho Junior 2008</xref>). Maximum temperatures range from 34 to 40 °C, and minimum temperature is 20 °C (Carvalho Junior 2008). In Ourém, the average annual precipitation was 2400 mm between 1997 and 2006, and relative humidity ranged from 75% to 95% (Carvalho Junior 2008). The average annual variation in the river level was 3.7 m between 1993 and 2015, with mean elevation ranging from a minimum of 1.3 m and a maximum of 5 m asl (<xref ref-type="bibr" rid="B3">ANA 2016</xref>). In 2015 and 2016, water level was lowest in November and highest in April or May (<xref ref-type="fig" rid="f1">Figure 1</xref>). The rainy season occurs from January to May, with much less rain falling from June to November (<xref ref-type="fig" rid="f2">Figure 2</xref>). The Guamá River encompasses several local fishing communities that engage in subsistence fishing. </p>
+				<p>
+					<fig id="f1">
+						<label>Figure 1</label>
+						<caption>
+							<title>Monthly variation in river water level in the middle Guamá River, in the state of Pará (eastern Brazilian Amazon) and the number of Neotropical otter, <italic>Lontra longicaudis</italic> records registered during four surveys. River-level data are from <xref ref-type="bibr" rid="B3">ANA (2016</xref>). Bars are the mean and whiskers the standard deviation.</title>
+						</caption>
+						<graphic xlink:href="1809-4392-aa-49-03-183-gf1.jpg"/>
+					</fig>
+				</p>
+				<p>
+					<fig id="f2">
+						<label>Figure 2</label>
+						<caption>
+							<title>Monthly variation in rainfall and in the number of Neotropical otter, <italic>Lontra longicaudis</italic> records registered during four surveys along the middle Guamá River in the state of Pará (eastern Brazilian Amazon). Rainfall data are from <xref ref-type="bibr" rid="B3">ANA (2016</xref>). Bars are the mean and whiskers the standard deviation.</title>
+						</caption>
+						<graphic xlink:href="1809-4392-aa-49-03-183-gf2.jpg"/>
+					</fig>
+				</p>
+				<p><bold>Survey of <italic>Lontra longicaudis</italic>
+</bold></p>
+				<p>We conducted otter surveys within seven-day windows during four sampling periods in 2015 and 2016. We established sampling periods based on known seasonal climatic conditions and river stages: November (base flow), January (rising limb), March (peak flow), and May (receding limb). Due to logistical constraints and inaccessibility of parts of the river section during low water levels, we were not able to survey the whole section in all periods, which prevented the standardized comparison of otter records among sampling periods. Therefore we pooled data among periods for a grid-based analysis of the relation of otter records with habitat variables, as described below. </p>
+				<p>Surveys were conducted from a 5-m-long aluminum boat at a speed ranging from 2.8 to 10.8 km h<sup>-1</sup> (<xref ref-type="bibr" rid="B17">Groenendijk <italic>et al.</italic> 2005</xref>). As we navigated the boat along the shoreline, we recorded sightings of otters and signs of otter presence on the shoreline. To minimize detection errors, at least two expert observers were involved with spotting otters and their signs during each survey (<italic>sensu</italic><xref ref-type="bibr" rid="B18">Jeffress <italic>et al.</italic> 2011</xref>). Surveys started at 6:00 AM and ended when we had completed our pre-established itinerary, when an exceedingly low river level precluded navigation into more upstream reaches, or when poor weather conditions created unsafe conditions. We surveyed each monitored reach of the river three times during each 1-week-long survey period.</p>
+				<p>We georeferenced all locations of sightings (direct records) and signs (indirect records) using a Garmin GPS (Etrex 30x). We recorded all signs by type (<italic>sensu</italic><xref ref-type="bibr" rid="B46">Waldemarin 2004</xref>): (1) den site (indicted by a cavity in the riverbank or tree that appeared to have been used for resting and care of offspring), (2) resting site (indicted by a small depression with claw marks and footprints around them), (3) sprainting site (indicated by feces deposited on several occasions), (4) fecal site (indicated by a single stool deposit), (5) scratching site (sites with large concentrations of otter scratches on the river bank), (6) footprints. When we observed fresh feces (i.e., feces deposited recently, no deterioration), we classified the site as being recent or “in use.” In contrast, when the observed feces were old (e.g., dry or mixed with dry leaves and branches), we classified the site as being “in disuse.” All feces were collected to prevent resampling.</p>
+			</sec>
+			<sec>
+				<title>Environmental variables</title>
+				<p>The environmental variables measured were based on previous studies (<xref ref-type="bibr" rid="B12">Crowley <italic>et al.</italic> 2012</xref>; <xref ref-type="bibr" rid="B23">Macías-Sánchez 2003</xref>) and on conversations with local people. We measured both site-specific variables related to channel condition (turbidity, velocity, and depth) and remotely measured landscape-scale variables (land cover types). We acquired remotely obtained data from satellite images classified by the TerraClass/ National Institute of Space Research (INPE) database 2014 project (<xref ref-type="bibr" rid="B1">Almeida <italic>et al.</italic> 2016</xref>).</p>
+				<p>In order to characterize habitat types used by otters, we measured both remote environmental variables and on-site conditions of the river channel at each location identified as of recent otter use. For channel condition, we measured (a) water depth, 1 m from the shoreline (depth recorded with a measure tape attached to a weight), (b) turbidity (measured with a Secchi disc), and (c) water velocity (m sec<sup>-1</sup>), (d) riverbank slope (trigonometric relation between height and distance of slope top from the water), and (e) slope of downed tree trunks, when present (trigonometric relation of height and distance of trunk from the water). We also used rainfall and fluviometry data [from the National Water Agency (ANA) database for the survey periods.</p>
+				<p>For remote variables, we reclassified TerraClass landcover classes into fewer (n = 8) land cover types by grouping certain TerraClass cover types into eight cover types (five new) with 6.25 ha resolution: (1) pasture (derived from the TerraClass “clean pasture,” “dirty pasture,” and “regenerative pasture”), (2) plantation (derived from the “agriculture” and “plantation” classes of TerraClass), (3) anthropic (derived from the combination of the “urban mosaic” and “occupied” classes of TerraClass), and (4) rock formation or sandbank (which correspond to “other” and “non-forestry” classes of TerraClass). We retained three original TerraClass categories: (5) mining (6) hydrography, (7) forest, and (8) secondary vegetation. </p>
+				<p>Because the TerraClass hydrography data layer was not sufficiently detailed for our purposes, we constructed a new river shapefile of hydrographic boundaries with 100 m resolution, derived from the satellite imagery available from Google Earth (2017). We then added the new hydrographic shapefile to our reclassified cover-type image using ArcMap (Version 10.4).</p>
+			</sec>
+			<sec>
+				<title>Variables for anthropic impacts</title>
+				<p>We inventoried the number and types of fishing gear used on the river (nets and fish corrals), boats, and the number of dwellings (communities or isolated houses) along the riverbank. We obtained a list of the riverside communities along the river, which contained locations (latitude and longitude), from a resident of each community in the surveyed river section. All the anthropic data listed above was ground-truthed with GPS during our surveys.</p>
+			</sec>
+			<sec>
+				<title>Data analysis</title>
+				<p>All variables were analyzed relative to the four hydrographic phases of the river: base flow, rising limb, receding limb, and peak flow. Because otter signs were collected only once during each survey period, it was not possible to statistically test the relationship between hydrologic fluctuations and habitat use (as inferred from signs). However, because the number of signs we recorded during the four hydrological periods varied widely, we could qualitatively describe these differences and speculate on how Neotropical otters use riparian habitat.</p>
+				<p>We determined the frequency of occurrence of direct and indirect otter records for each hydrologic period. For spatial analyses, we defined sampling units as 1-km² grid cells overlaid on the river reaches where we conducted our surveys. We then related the frequency of signs along the shoreline with our measured environmental and anthropogenic variables within each surveyed cell. We defined a sampling unit (1 km² cell) based on estimates of linear otter density (one otter per km) estimated by <xref ref-type="bibr" rid="B45">Trinca <italic>et al.</italic> (2013</xref>) and our prior field observations. We used the ArcGIS Vers. 10.4 Zonal Statistic Table tool to compile data on the percent cover of each landcover type in each grid cell and associated environmental and anthropic data collected in the field. Thus, within each sampling unit (grid cell), we compiled local and landscape-scale variables along with direct and indirect otter records during each of the four hydrological periods.</p>
+				<p>We used Pearson correlation to determine if any variables correlated with other variables. We did not use any variables that were well-correlated (r &gt; 0.7) in the GLM models. We applied a Generalized Linear Model (GLM) to identify variables that would be most likely to explain use of space by otters in the mid-reaches of the Guamá River. For the GLM models, we related the number of otter records per sampling unit (as a response variable) with each explanatory variable per sampling unit: forest area (m²), secondary forest area (m²), rock formation/sandbank (m<sup>2</sup>), degree of riverbank slope or slope of downed tree trunk (on the shoreline or leaning into the water), water depth (m), water velocity (m s<sup>-1</sup>), turbidity (Secchi disk depth), number of riverside communities or isolated houses, number of fishing gear (nets and corrals combined), and number of vessels (both fishing vessels or used for transportation). The best GLM model was selected based on statistical significance provided by the variables and using the best model according to AICc (Akaike Information Criterion, corrected for small sample size). According to the AIC method, a delta value &gt; 2.0 identifies the model that is clearly superior to the others (<xref ref-type="bibr" rid="B20">Kenneth <italic>et al.</italic> 2002</xref>).</p>
+				<p>Considering that the influence of a given variable is not always linear, we used a Generalized Additive Model (GAM), which allowed us to define non-linear relationships between the explanatory and response variables. By doing so, it was possible to smooth out the residuals of the variables, thus improving model results. We chose the best model between GLM and GAM using AICc and the variation explained by each model. We used the package MGCV (Mixed GAM Computing Vehicle) of Program R for analyses. We obtained an estimate of the corrected AIC for small samples and the relative “AIC weight” of each model (AICwgt) using the MuMin algorithm in the Program R.</p>
+			</sec>
+		</sec>
+		<sec sec-type="results">
+			<title>RESULTS</title>
+			<p>We recorded 62 otter sightings and signs during the four survey periods, most of which were signs (indirect records). No records were obtained during peak flow (March). During the other hydrologic periods, 3% of the records were obtained during the receding limb (May), 61% during base flow (November), and 35% during the rising limb (January) (<xref ref-type="table" rid="t1">Table 1</xref>), indicating an inverse relationship between water level and frequency of occurrence for otter signs (<xref ref-type="fig" rid="f3">Figure 3</xref>). We found no relationship between otter signs and amount of rainfall during the month of survey. Otter signs mainly occurred on the riverbanks (62%) and on downed tree trunks (30%), whereas sightings were mostly of otters swimming in the main channel of the river (8% of all records). We observed otters and some otter signs close to fishing nets and boats (<xref ref-type="fig" rid="f4">Figure 4</xref>).</p>
+			<p>
+				<table-wrap id="t1">
+					<label>Table 1</label>
+					<caption>
+						<title>Frequency of Neotropical otter (<italic>Lontra longicaudis</italic>) sightings (direct records) and signs (indirect records) in each hydrographic period (November = base flow; January = rising limb; March = peak flow; May = receding limb) along the middle Guamá River in the state of Pará (eastern Brazilian Amazon). % occur = relative frequency of occurrence.</title>
+					</caption>
+					<table>
+						<colgroup>
+							<col/>
+							<col/>
+							<col/>
+							<col/>
+							<col/>
+							<col/>
+						</colgroup>
+						<thead>
+							<tr>
+								<th align="left">Type of record</th>
+								<th align="center">November </th>
+								<th align="center">January </th>
+								<th align="center">March </th>
+								<th align="center">May</th>
+								<th align="center">% occur</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td align="left">Indirect records</td>
+								<td align="left">
+								</td>
+								<td align="left">
+								</td>
+								<td align="left">
+								</td>
+								<td align="left">
+								</td>
+								<td align="left">
+								</td>
+							</tr>
+							<tr>
+								<td align="left">Footprint</td>
+								<td align="center">1</td>
+								<td align="center">0</td>
+								<td align="center">0</td>
+								<td align="center">0</td>
+								<td align="center">1.6</td>
+							</tr>
+							<tr>
+								<td align="left">Resting sites</td>
+								<td align="center">2</td>
+								<td align="center">0</td>
+								<td align="center">0</td>
+								<td align="center">0</td>
+								<td align="center">3.2</td>
+							</tr>
+							<tr>
+								<td align="left">Feces</td>
+								<td align="center">3</td>
+								<td align="center">4</td>
+								<td align="center">0</td>
+								<td align="center">2</td>
+								<td align="center">14.5</td>
+							</tr>
+							<tr>
+								<td align="left">Possible Dens</td>
+								<td align="center">7</td>
+								<td align="center">3</td>
+								<td align="center">0</td>
+								<td align="center">0</td>
+								<td align="center">16.1</td>
+							</tr>
+							<tr>
+								<td align="left">Dens</td>
+								<td align="center">6</td>
+								<td align="center">5</td>
+								<td align="center">0</td>
+								<td align="center">0</td>
+								<td align="center">17.7</td>
+							</tr>
+							<tr>
+								<td align="left">Defecation sites</td>
+								<td align="center">17</td>
+								<td align="center">5</td>
+								<td align="center">0</td>
+								<td align="center">0</td>
+								<td align="center">35.5</td>
+							</tr>
+							<tr>
+								<td align="left">Direct records</td>
+								<td align="left">
+								</td>
+								<td align="left">
+								</td>
+								<td align="left">
+								</td>
+								<td align="left">
+								</td>
+								<td align="left">
+								</td>
+							</tr>
+							<tr>
+								<td align="left">Visualization</td>
+								<td align="center">2</td>
+								<td align="center">5</td>
+								<td align="center">0</td>
+								<td align="center">0</td>
+								<td align="center">11.3</td>
+							</tr>
+							<tr>
+								<td align="left">TOTAL</td>
+								<td align="center">38</td>
+								<td align="center">22</td>
+								<td align="center">0</td>
+								<td align="center">2</td>
+								<td align="center">100.0</td>
+							</tr>
+						</tbody>
+					</table>
+				</table-wrap>
+			</p>
+			<p>
+				<fig id="f3">
+					<label>Figure 3</label>
+					<caption>
+						<title>Distribution of Neotropical otter, <italic>Lontra longicaudis</italic> records along the surveyed section of the middle Guamá River (Pará, Brazil) during three hydrological periods. A− base flow (November); B − rising limb (January); C − receding limb (May).This figure is in color in the electronic version.</title>
+					</caption>
+					<graphic xlink:href="1809-4392-aa-49-03-183-gf3.jpg"/>
+				</fig>
+			</p>
+			<p>
+				<fig id="f4">
+					<label>Figure 4</label>
+					<caption>
+						<title>Distribution of Neotropical otter, <italic>Lontra longicaudis</italic> records and human impact variable records along the surveyed section of the middle Guamá River (Pará, Brazil), A − fishing gear (Fishing); B − boats (Boats); C − isolated or communal habitations (Communities).This figure is in color in the electronic version.</title>
+					</caption>
+					<graphic xlink:href="1809-4392-aa-49-03-183-gf4.jpg"/>
+				</fig>
+			</p>
+			<p>Channel characteristics (water depth, water velocity, and turbidity) were auto-correlated (p = 0.91) for all hydrologic periods. Thus, we did not use these variables together in any of the tested models, but instead chose the variable that we assumed would best explain the models (<xref ref-type="table" rid="t2">Table 2</xref>).</p>
+			<p>
+				<table-wrap id="t2">
+					<label>Table 2</label>
+					<caption>
+						<title>Correlation matrix of physicochemical water parameters at location points of otter records in the middle Guamá River in the state of Pará (eastern Brazilian Amazon).</title>
+					</caption>
+					<table>
+						<colgroup>
+							<col/>
+							<col/>
+							<col/>
+							<col/>
+						</colgroup>
+						<thead>
+							<tr>
+								<th align="left">Variables</th>
+								<th align="left"> Velocity</th>
+								<th align="left">Turbidity</th>
+								<th align="left">Depth</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td align="left">Velocity</td>
+								<td align="left">1.0</td>
+								<td align="left">-</td>
+								<td align="left">-</td>
+							</tr>
+							<tr>
+								<td align="left">Turbidity</td>
+								<td align="left">0.946</td>
+								<td align="left">1.0</td>
+								<td align="left">-</td>
+							</tr>
+							<tr>
+								<td align="left">Depth </td>
+								<td align="left">0.912</td>
+								<td align="left">0.915</td>
+								<td align="left">1.0</td>
+							</tr>
+						</tbody>
+					</table>
+				</table-wrap>
+			</p>
+			<p>The GAM models performed better than the GLM models; therefore, we only used results for the GAM models. Sixteen GAM models were generated by combining the explanatory variables with the response variables (<xref ref-type="table" rid="t3">Table 3</xref>). The model that best explained the occurrence of otter records (delta AICc &gt; 2.0) included the variables degree of riverbank slope or slope of downed tree trunk, percent of forest cover (in a cell grid), percent of rock formation/sandbank, combined number of fishing gear, and number of vessels (<xref ref-type="table" rid="t4">Table 4</xref>).</p>
+			<p>
+				<table-wrap id="t3">
+					<label>Table 3</label>
+					<caption>
+						<title>List of General Additive Models (GAM) used to explain the relationship between Neotropical otter, <italic>Lontra longicaudis</italic> records and environmental and anthropic variables. AICc (Akaike Information Criterion corrected for small sample size) and proportion of explained variance are shown for each model. INC = degree of slope; VS = secondary vegetation area, FLO = forest area, RF= rock formation/sand bank area; EBM = number of boats; MOR = number of house(s); ANT = anthropic (nets and corrals combined) = VEL = water velocity; PRO = water depth; FIS = fishing gear.</title>
+					</caption>
+					<table>
+						<colgroup>
+							<col/>
+							<col/>
+							<col/>
+							<col/>
+							<col/>
+						</colgroup>
+						<thead>
+							<tr>
+								<th align="left">GAM Model</th>
+								<th align="center">AICc</th>
+								<th align="center">Delta</th>
+								<th align="center">Weight</th>
+								<th align="center">Variance explained (%)</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td align="left">s(INC) + FLO + RF+ s( FIS )+ EMB</td>
+								<td align="center">126.5</td>
+								<td align="center">0</td>
+								<td align="center">0.798</td>
+								<td align="center">91</td>
+							</tr>
+							<tr>
+								<td align="left">s(FLO) + s( FIS ) + EMB + RF</td>
+								<td align="center">130.1</td>
+								<td align="center">3.61</td>
+								<td align="center">0.131</td>
+								<td align="center">77</td>
+							</tr>
+							<tr>
+								<td align="left">s(INC) + s(FLO) + RF+ s( FIS ) + EMB</td>
+								<td align="center">133.4</td>
+								<td align="center">6.99</td>
+								<td align="center">0.024</td>
+								<td align="center">77</td>
+							</tr>
+							<tr>
+								<td align="left">s(INC) + s(FLO) + RF+ s( FIS )</td>
+								<td align="center">133.7</td>
+								<td align="center">7.24</td>
+								<td align="center">0.021</td>
+								<td align="center">96</td>
+							</tr>
+							<tr>
+								<td align="left">s(INC) + s(FLO) + s( FIS ) + s(RF) + ANT</td>
+								<td align="center">134.8</td>
+								<td align="center">8.36</td>
+								<td align="center">0.012</td>
+								<td align="center">100</td>
+							</tr>
+							<tr>
+								<td align="left">s(INC) + s( FIS ) + (VS)</td>
+								<td align="center">140.3</td>
+								<td align="center">13.82</td>
+								<td align="center">0.001</td>
+								<td align="center">51 </td>
+							</tr>
+							<tr>
+								<td align="left">INC + s(VS) + s( FIS ) + s(PRO)</td>
+								<td align="center">145.4</td>
+								<td align="center">18.97</td>
+								<td align="center">0</td>
+								<td align="center">81</td>
+							</tr>
+							<tr>
+								<td align="left">s(VS) + s( FIS ) + EMB</td>
+								<td align="center">146.0</td>
+								<td align="center">19.52</td>
+								<td align="center">0</td>
+								<td align="center">78</td>
+							</tr>
+							<tr>
+								<td align="left">s(INC) + FLO + s( FIS ) + s(PRO) + RF</td>
+								<td align="center">148.3</td>
+								<td align="center">21.82</td>
+								<td align="center">0</td>
+								<td align="center">82</td>
+							</tr>
+							<tr>
+								<td align="left">INC + s(VS) + s( FIS ) + PRO + EMB</td>
+								<td align="center">150.7</td>
+								<td align="center">24.25</td>
+								<td align="center">0</td>
+								<td align="center">81</td>
+							</tr>
+							<tr>
+								<td align="left">s(INC) + s(FLO) + s(RF) + FIS</td>
+								<td align="center">153.6</td>
+								<td align="center">27.14</td>
+								<td align="center">0</td>
+								<td align="center">73</td>
+							</tr>
+							<tr>
+								<td align="left">s(FIS) + EMB + MOR</td>
+								<td align="center">163.9</td>
+								<td align="center">37.48</td>
+								<td align="center">0</td>
+								<td align="center">32</td>
+							</tr>
+							<tr>
+								<td align="left">s(FLO) + s(FIS) + s(RF)</td>
+								<td align="center">165.0</td>
+								<td align="center">38.53</td>
+								<td align="center">0</td>
+								<td align="center">100</td>
+							</tr>
+							<tr>
+								<td align="left">s(FLO) + s( FIS) + s(RF) + ANT</td>
+								<td align="center">165.9</td>
+								<td align="center">39.43</td>
+								<td align="center">0</td>
+								<td align="center">100</td>
+							</tr>
+							<tr>
+								<td align="left">s(FIS)</td>
+								<td align="center">175.4</td>
+								<td align="center">48.92</td>
+								<td align="center">0</td>
+								<td align="center">20</td>
+							</tr>
+						</tbody>
+					</table>
+				</table-wrap>
+			</p>
+			<p>
+				<table-wrap id="t4">
+					<label>Table 4</label>
+					<caption>
+						<title>Parameters of the General Additive Model (GAM) relating Neotropical otter, <italic>Lontra longicaudis</italic> records to anthropic and environmental variables. Model: s(%Slope) + Forest area + Rock formation/sandbank + s(Fishing) + Boats.</title>
+					</caption>
+					<table>
+						<colgroup>
+							<col/>
+							<col/>
+							<col/>
+							<col/>
+							<col/>
+						</colgroup>
+						<thead>
+							<tr>
+								<th align="left">Coefficients</th>
+								<th align="center">Estimate</th>
+								<th align="center">SE</th>
+								<th align="center">z value</th>
+								<th align="center">Pr(&gt;|z|)</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td align="left">(Intercept)</td>
+								<td align="center">-7.78E+04</td>
+								<td align="center">3.77E+05</td>
+								<td align="center">-0.207</td>
+								<td align="center">0.836332</td>
+							</tr>
+							<tr>
+								<td align="left">Forest area</td>
+								<td align="center">-9.12E-03</td>
+								<td align="center">2.38E-03</td>
+								<td align="center">-3.833</td>
+								<td align="center">&lt;0.001</td>
+							</tr>
+							<tr>
+								<td align="left">Rock formation/sandbank</td>
+								<td align="center">9.59E-03</td>
+								<td align="center">2.05E-03</td>
+								<td align="center">4.688</td>
+								<td align="center">&lt;0.001</td>
+							</tr>
+							<tr>
+								<td align="left">Boats</td>
+								<td align="center">1.31E+03</td>
+								<td align="center">2.94E+02</td>
+								<td align="center">4.475</td>
+								<td align="center">&lt;0.001</td>
+							</tr>
+							<tr>
+								<td align="left">Smoothing terms</td>
+								<td align="center">Edf</td>
+								<td align="center">Ref.df</td>
+								<td align="center">Chi.sq</td>
+								<td align="center">p-value</td>
+							</tr>
+							<tr>
+								<td align="left">s(%Slope)</td>
+								<td align="center">5.110</td>
+								<td align="center">5.398</td>
+								<td align="center">17.92</td>
+								<td align="center">0.005 *</td>
+							</tr>
+							<tr>
+								<td align="left">s(Fishing)</td>
+								<td align="center">8.956</td>
+								<td align="center">8.997</td>
+								<td align="center">22.30</td>
+								<td align="center">0.008 *</td>
+							</tr>
+						</tbody>
+					</table>
+					<table-wrap-foot>
+						<fn id="TFN1">
+							<p>* significant at p &lt; 0.05</p>
+						</fn>
+					</table-wrap-foot>
+				</table-wrap>
+			</p>
+		</sec>
+		<sec sec-type="discussion">
+			<title>DISCUSSION</title>
+			<p>The number of otter records was mainly related to variations in the water level of the river. During peak flow, the river covers its floodplain, which forces otters to forage over a larger area as their prey (mainly fish) disperse into tributaries and onto floodplains (<xref ref-type="bibr" rid="B12">Crowley <italic>et al.</italic> 2012</xref>). This dispersal complicated our surveying effort, which may explain why we obtained so few records during the flood season (peak and receding limb of the hydrograph). During the flood season, we were not able to navigate across the entire additional flooded habitat potentially being used by otters, as there were many obstructions to navigation. In addition, at peak flow, sandbanks, downed tree trunks and rock formations are mostly submerged, thereby reducing the potential number of records on these microhabitats. In addition, at low stages of the river, risks associated with foraging increase because otters must seek food further afield and on land, which increases their exposure to predation or being hit by vehicles on roads (<xref ref-type="bibr" rid="B43">Ruiz-Olmo <italic>et al.</italic> 2011</xref>). The peak flow of the Guamá River coincides with the rainy season, when we observed no otter records. Otter signs on muddy shores, such as footprints, are quickly washed away by rain, limiting observations to only recently deposited signs. </p>
+			<p>Flooded forest habitats are probably used by otters for shelter, specially when they have offspring, as forest cover provides better camouflage when pups are vulnerable to predation (<xref ref-type="bibr" rid="B11">Colares and Waldemarin 2000</xref>), particularly near sites with high intensity of human activity, as indicated by the presence of fishing gear (<xref ref-type="bibr" rid="B10">Chanin 1985</xref>). In environments without human presence, otters tend to use less sheltered microhabitats in thickly vegetated or hardly accessible areas and establish their dens and resting sites in the open (<xref ref-type="bibr" rid="B26">Miles 1984</xref>).</p>
+			<p>Neotropical otters in our study area seemed to congregate near fishing gear and fishing vessels during fishing operations, which seems to indicate that they seek the fish trapped in fishing gear, which requires less energy than foraging for free-swimming prey, and supports the definition of Neotropical otters as opportunistic feeders (<xref ref-type="bibr" rid="B31">Pardini 1998</xref>, <xref ref-type="bibr" rid="B39">Rheingantz <italic>et al.</italic> 2017</xref><italic>b</italic>, <xref ref-type="bibr" rid="B37"><italic>a</italic></xref>). These results suggest that there is a moderate amount of conflict between humans and otters in our study area, due to a likely reduction in fishing yield caused by otters pilfering fish and damaging fishing gear. Fishermen also reported that they often dress up a scarecrow with clothes with vibrant colors, such as red, to scare off otters from fishing nets. Otters are frequently killed in retaliation for stealing fish (<xref ref-type="bibr" rid="B5">Barbieri <italic>et al.</italic> 2012</xref>), yet the impact of such human-induced mortality on Neotropical otter populations is not known (<xref ref-type="bibr" rid="B37">Rheingantz <italic>et al.</italic> 2017a</xref>). Conflicts between fishermen and otters are common worldwide [e.g., <italic>Lutra lutra</italic> in the Czech Republic (<xref ref-type="bibr" rid="B32">Poledníková <italic>et al.</italic> 2013</xref>) and Poland (<xref ref-type="bibr" rid="B21">Kloskowski, 2011</xref>), <italic>Pteronura brasiliensis</italic> in Brazil (<xref ref-type="bibr" rid="B42">Rosas-Ribeiro <italic>et al.</italic> 2012</xref>) and Peru (<xref ref-type="bibr" rid="B35">Recharte <italic>et al.</italic> 2008</xref>), and <italic>Lontra longicaudis</italic> among artisanal fishermen in southeastern Brazil (Barbieri <italic>et al.</italic> 2012). Neotropical otters also prey on small farm animals, such as ducks and chickens, which roam freely in the riverside communities in our study area (Barbieri <italic>et al.</italic> 2012). In this context, the presence of domestic dogs near riverine communities appears to cause otters to become nocturnal (<xref ref-type="bibr" rid="B38">Rheingantz <italic>et al.</italic> 2016</xref>, <xref ref-type="bibr" rid="B37">2017a</xref>).</p>
+			<p>Hunting giant river otters (<italic>Pteronura brasiliensis</italic>) for fur was a common economic activity in Brazil in the decades from the 1950s to the 1970s (<xref ref-type="bibr" rid="B7">Carter and Rosas 1997</xref>). From personal observations and informal conversations with fishermen in our study area, it appears that otter hunting is no longer routinely practiced, except for occasional retaliatory killings of otters that atack farm animals. </p>
+			<p>The proximity of otters to fishing gear suggests that they routinely explore new niches. Future studies should determine whether the close proximity of otters and fishermen in the middle Guamá is due to otters actively seeking easy meals in the form of trapped fish, or whether fishermen set their traps where otters congregate because of the abundance of fish. Whatever the cause of the close proximity of otters and fishermen, our results suggest that otters know that fish are available near fishing gear and near working fisherman, thus making them more susceptible to conflicts with humans.</p>
+			<p>To our knowledge, this is the first study to relate riverbank slope and slope of downed tree trunks to the occurrence of otter records. Otters often climb to escape terrestrial predators (when far from water) and when searching for food on land (<xref ref-type="bibr" rid="B44">Silva and Quintela 2010</xref>). Although the maximum slope that an otter can climb has not been determined, there is one record of a Neotropical otter climbing a slope of 84.3º (Silva and Quintela 2010). The association between otters and rock formations and sandbanks in our study is due to the fact that otters mark their territories and deposit stools in these places. In addition, these types of microhabitat tend to be exposed even during peak flows, which allowed us to record data from these sites during the receding limb. Although river depth, velocity and turbidity were not significantly related with otter records in our models, these variables frequently correlate with the distribution of fish (<xref ref-type="bibr" rid="B40">Rodríguez and Lewis 1997</xref>), which we presumed to be an important factor affecting the spatial distribution of otters. The seasonal variation in river level probably had a stronger effect on otter distribution than physical characteristics of the river channel.</p>
+			<p><italic>Lontra longicaudis</italic> populations are predicted to decline in 25% over the next 27 years (<xref ref-type="bibr" rid="B2">Almeida <italic>et al.</italic> 2017</xref>), which corresponds to about three generations of the species (<xref ref-type="bibr" rid="B30">Pacifici <italic>et al.</italic> 2013</xref>). The interaction of otters with fishing gear is known to cause conflicts between otters and humans (<xref ref-type="bibr" rid="B5">Barbieri <italic>et al.</italic> 2012</xref>; <xref ref-type="bibr" rid="B9">Castro <italic>et al.</italic> 2014</xref>). Thus our results point to that the association between otter records and human fishing activities may threaten otter populations in the middle Guamá River and lead to a decline of the species in the area. The effects of the interaction with fishermen and of other impacts, such as urbaniaztion and habitat fragmentation on otters in the Guamá should be further evaluated through long-term studies that can explicitly estimate detection accuracy from repeated observations. Long-term datasets would make it possible to account for detectability and evaluate with higher confidence the patterns of behavior and habitat use by otters in different seasons. When accounting for factors confounding detection accuracy, average occupation by <italic>L. longicaudis</italic> increased by 6% (<xref ref-type="bibr" rid="B41">Rosas-Ribeiro 2017</xref>).</p>
+		</sec>
+		<sec sec-type="conclusions">
+			<title>CONCLUSIONS</title>
+			<p>We described the variation in the number of direct and indirect records of Neotropical otters inhabiting the middle Guamá River, in the eastern Brazilian Amazon. Our models relating otter records with environmental conditions and anthropogenic impact variables indicated that otters were associated with riparian forest, riverside rock formations and sandbanks (both used to mark territories), and fishing gear along the river. The positive relationship between otters and fishing gear is likely associated with the aggregation of fish in fish traps and the ease with which otters can pilfer fish from the traps. Neotropical otters are apt at exploiting new niches, but exploitation of human altered environments along the river has led to conflicts with humans when otters raid fishing nets and prey on barnyard fowl. Incursions of human developments into primary forest will inevitably lead to more human/otter conflicts.</p>
+		</sec>
+	</body>
+	<back>
+		<ack>
+			<title>ACKNOWLEDGMENTS </title>
+			<p>We are grateful to Coordenação de Aperfeiçoamento de Pessoal de Nível Superior (CAPES) for the first author’s scholarship, to Museu Paraense Emílio Goldi (MPEG) for the financial support, and to Vale do Rio Guamá Hostel and communities around Ourém municipality for their logistic support. We also thank the anonymous reviewers and editor of the article, Fernanda Michalski, for all the support and improvements proposed during the reviewing process.</p>
+		</ack>
+		<ref-list>
+			<ref id="B1">
+				<mixed-citation>Almeida, C.A. de; Coutinho, A.C.; Esquerdo, J.C.D.M.; Adami, M.; Venturieri, A.; Diniz, C.G.; <italic>et al</italic>. 2016. High spatial resolution land use and land cover mapping of the Brazilian Legal Amazon in 2008 using Landsat-5/TM and MODIS data. <italic>Acta Amazonica</italic>, 46: 291-302.</mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Almeida</surname>
+							<given-names>C.A. de</given-names>
+						</name>
+						<name>
+							<surname>Coutinho</surname>
+							<given-names>A.C.</given-names>
+						</name>
+						<name>
+							<surname>Esquerdo</surname>
+							<given-names>J.C.D.M.</given-names>
+						</name>
+						<name>
+							<surname>Adami</surname>
+							<given-names>M.</given-names>
+						</name>
+						<name>
+							<surname>Venturieri</surname>
+							<given-names>A.</given-names>
+						</name>
+						<name>
+							<surname>Diniz</surname>
+							<given-names>C.G.</given-names>
+						</name>
+						<etal/>
+					</person-group>
+					<year>2016</year>
+					<article-title>High spatial resolution land use and land cover mapping of the Brazilian Legal Amazon in 2008 using Landsat-5/TM and MODIS data</article-title>
+					<source>Acta Amazonica</source>
+					<volume>46</volume>
+					<fpage>291</fpage>
+					<lpage>302</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B2">
+				<mixed-citation>Almeida, L.R. de.; Pereira, M.J.R. 2017. Ecology and biogeography of the Neotropical otter <italic>Lontra longicaudis</italic>: existing knowledge and open questions. <italic>Mammal Research</italic>, 64: 313-321.</mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Almeida</surname>
+							<given-names>L.R. de.</given-names>
+						</name>
+						<name>
+							<surname>Pereira</surname>
+							<given-names>M.J.R.</given-names>
+						</name>
+					</person-group>
+					<year>2017</year>
+					<article-title>Ecology and biogeography of the Neotropical otter Lontra longicaudis : existing knowledge and open questions</article-title>
+					<source>Mammal Research</source>
+					<volume>64</volume>
+					<fpage>313</fpage>
+					<lpage>321</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B3">
+				<mixed-citation>ANA. 2016. Agência Nacional de Água. Sistema Nacional de Informações sobre Recursos Hídricos, ANA/SNIRH. (<comment> (<ext-link ext-link-type="uri" xlink:href="http://www.snirh.gov.br/hidroweb/publico/medicoes_historicas_abas.jsf">http://www.snirh.gov.br/hidroweb/publico/medicoes_historicas_abas.jsf</ext-link>
+					</comment>). Accessed on 23 Mar 2019.</mixed-citation>
+				<element-citation publication-type="webpage">
+					<person-group person-group-type="author">
+						<collab>ANA</collab>
+					</person-group>
+					<year>2016</year>
+					<source>Agência Nacional de Água. Sistema Nacional de Informações sobre Recursos Hídricos, ANA/SNIRH</source>
+					<comment> (<ext-link ext-link-type="uri" xlink:href="http://www.snirh.gov.br/hidroweb/publico/medicoes_historicas_abas.jsf">http://www.snirh.gov.br/hidroweb/publico/medicoes_historicas_abas.jsf</ext-link>
+					</comment>
+					<date-in-citation content-type="access-date" iso-8601-date="2019-03-23">23 Mar 2019</date-in-citation>
+				</element-citation>
+			</ref>
+			<ref id="B4">
+				<mixed-citation>Arellano Nicolás, E.; Sánchez Núñez, E.; Mosqueda Cabrera, M.Á. 2012. Distribución y abundancia de la nutria neotropical (<italic>Lontra longicaudis annectens</italic>) en Tlacotalpan, Veracruz, México. <italic>Acta Zoológica Mexicana</italic>, 28: 270-279.</mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Arellano Nicolás</surname>
+							<given-names>E.</given-names>
+						</name>
+						<name>
+							<surname>Sánchez Núñez</surname>
+							<given-names>E.</given-names>
+						</name>
+						<name>
+							<surname>Mosqueda Cabrera</surname>
+							<given-names>M.Á.</given-names>
+						</name>
+					</person-group>
+					<year>2012</year>
+					<article-title>Distribución y abundancia de la nutria neotropical (Lontra longicaudis annectens) en Tlacotalpan, Veracruz, México</article-title>
+					<source>Acta Zoológica Mexicana</source>
+					<volume>28</volume>
+					<fpage>270</fpage>
+					<lpage>279</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B5">
+				<mixed-citation>Barbieri, F.; Machado, R.; Zappes, C.A.; de Oliveira, L.R. 2012. Interactions between the Neotropical otter (<italic>Lontra longicaudis</italic>) and gillnet fishery in the southern Brazilian coast. <italic>Ocean &amp; Coastal Management</italic>, 63: 16-23.</mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Barbieri</surname>
+							<given-names>F.</given-names>
+						</name>
+						<name>
+							<surname>Machado</surname>
+							<given-names>R.</given-names>
+						</name>
+						<name>
+							<surname>Zappes</surname>
+							<given-names>C.A.</given-names>
+						</name>
+						<name>
+							<surname>de Oliveira</surname>
+							<given-names>L.R.</given-names>
+						</name>
+					</person-group>
+					<year>2012</year>
+					<article-title>Interactions between the Neotropical otter (Lontra longicaudis) and gillnet fishery in the southern Brazilian coast</article-title>
+					<source>Ocean &amp; Coastal Management</source>
+					<volume>63</volume>
+					<fpage>16</fpage>
+					<lpage>23</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B6">
+				<mixed-citation>Brandt, A. P. 2004. Dieta e uso do habitat por <italic>Lontra longicaudis</italic> (Carnivora: Mustelidae) no Parque Estadual de Itapuã, Viamão, RS. Master’s dissertation, Universidade Federal do Rio Grande do Sul, Porto Alegre, Brasil. 86p. </mixed-citation>
+				<element-citation publication-type="thesis">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Brandt</surname>
+							<given-names>A. P.</given-names>
+						</name>
+					</person-group>
+					<year>2004</year>
+					<source>Dieta e uso do habitat por <italic>Lontra longicaudis</italic> (Carnivora: Mustelidae) no Parque Estadual de Itapuã, Viamão, RS</source>
+					<comment content-type="degree">Master</comment>
+					<publisher-name>Universidade Federal do Rio Grande do Sul</publisher-name>
+					<publisher-loc>Porto Alegre, Brasil</publisher-loc>
+					<publisher-loc>Porto Alegre, Brasil</publisher-loc>
+					<size units="pages">86</size>
+				</element-citation>
+			</ref>
+			<ref id="B7">
+				<mixed-citation>Carter, S.K.; Rosas, F.C. 1997. Biology and conservation of the giant otter <italic>Pteronura brasiliensis</italic>. <italic>Mammal Review</italic>, 27: 1-26.</mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Carter</surname>
+							<given-names>S.K.</given-names>
+						</name>
+						<name>
+							<surname>Rosas</surname>
+							<given-names>F.C.</given-names>
+						</name>
+					</person-group>
+					<year>1997</year>
+					<article-title>Biology and conservation of the giant otter Pteronura brasiliensis</article-title>
+					<source>Mammal Review</source>
+					<volume>27</volume>
+					<fpage>1</fpage>
+					<lpage>26</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B8">
+				<mixed-citation>Carvalho Junior, J.R. 2008. <italic>A composição e a distribuição da ictiofauna de interesse ornamental no estado do Pará</italic>. Master’s dissertation, Universidade Federal do Pará, Belém, Brazil. 99p. (<comment> (<ext-link ext-link-type="uri" xlink:href="http://www.repositorio.ufpa.br/jspui/bitstream/2011/4787/1/Dissertacao_ComposicaoDistribuicaoIctiofauna.pdf">http://www.repositorio.ufpa.br/jspui/bitstream/2011/4787/1/Dissertacao_ComposicaoDistribuicaoIctiofauna.pdf</ext-link>
+					</comment>). Accessed on 23 Mar 2019.</mixed-citation>
+				<element-citation publication-type="thesis">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Carvalho</surname>
+							<given-names>J.R.</given-names>
+							<suffix>Junior</suffix>
+						</name>
+					</person-group>
+					<year>2008</year>
+					<source>A composição e a distribuição da ictiofauna de interesse ornamental no estado do Pará</source>
+					<comment content-type="degree">Master</comment>
+					<publisher-name>Universidade Federal do Pará</publisher-name>
+					<publisher-loc>Belém, Brazil</publisher-loc>
+					<publisher-loc>Belém, Brazil</publisher-loc>
+					<size units="pages">99</size>
+					<comment> (<ext-link ext-link-type="uri" xlink:href="http://www.repositorio.ufpa.br/jspui/bitstream/2011/4787/1/Dissertacao_ComposicaoDistribuicaoIctiofauna.pdf">http://www.repositorio.ufpa.br/jspui/bitstream/2011/4787/1/Dissertacao_ComposicaoDistribuicaoIctiofauna.pdf</ext-link>
+					</comment>
+					<date-in-citation content-type="access-date" iso-8601-date="2019-03-23">23 Mar 2019</date-in-citation>
+				</element-citation>
+			</ref>
+			<ref id="B9">
+				<mixed-citation>Castro, F.R. de; Suzana, S.R.; Reis, S.S.; Oliveira, E.N.; Andrio, A. 2014. Fishermen’s perception of Neotropical otters (<italic>Lontra longicaudis</italic>) and their attacks on artisanal fixed fence traps: The case of caiçara communities. <italic>FriendlyISISJournal of Ocean and Coastal Management</italic>, 92: 19-27.</mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Castro</surname>
+							<given-names>F.R. de</given-names>
+						</name>
+						<name>
+							<surname>Suzana</surname>
+							<given-names>S.R.</given-names>
+						</name>
+						<name>
+							<surname>Reis</surname>
+							<given-names>S.S.</given-names>
+						</name>
+						<name>
+							<surname>Oliveira</surname>
+							<given-names>E.N.</given-names>
+						</name>
+						<name>
+							<surname>Andrio</surname>
+							<given-names>A.</given-names>
+						</name>
+					</person-group>
+					<year>2014</year>
+					<article-title>Fishermen’s perception of Neotropical otters (Lontra longicaudis) and their attacks on artisanal fixed fence traps: The case of caiçara communities</article-title>
+					<source>FriendlyISISJournal of Ocean and Coastal Management</source>
+					<volume>92</volume>
+					<fpage>19</fpage>
+					<lpage>27</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B10">
+				<mixed-citation>Chanin, P. 1985. <italic>The natural history of otters</italic>. Croom Helm, Australia. 179p.</mixed-citation>
+				<element-citation publication-type="book">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Chanin</surname>
+							<given-names>P.</given-names>
+						</name>
+					</person-group>
+					<year>1985</year>
+					<source>The natural history of otters</source>
+					<publisher-name>Croom Helm</publisher-name>
+					<publisher-loc>Australia</publisher-loc>
+					<size units="pages">179</size>
+				</element-citation>
+			</ref>
+			<ref id="B11">
+				<mixed-citation>Colares, E.P.; Waldemarin, H.F. 2000. Feeding of the Neotropical river otter (<italic>Lontra longicaudis</italic>) in the coastal region of the Rio Grande do Sul State, Southern Brazil. <italic>IUCN Otter Specialist Group Bulletin</italic>, 17: 6-13.</mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Colares</surname>
+							<given-names>E.P.</given-names>
+						</name>
+						<name>
+							<surname>Waldemarin</surname>
+							<given-names>H.F.</given-names>
+						</name>
+					</person-group>
+					<year>2000</year>
+					<article-title>Feeding of the Neotropical river otter (Lontra longicaudis) in the coastal region of the Rio Grande do Sul State, Southern Brazil</article-title>
+					<source>IUCN Otter Specialist Group Bulletin</source>
+					<volume>17</volume>
+					<fpage>6</fpage>
+					<lpage>13</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B12">
+				<mixed-citation>Crowley, S.; Johnson, C.J.; Hodder, D. 2012. Spatial and behavioral scales of habitat selection and activity by river otters at latrine sites. <italic>FriendlyISISJournal of Mammalogy</italic>, 93: 170-182.</mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Crowley</surname>
+							<given-names>S.</given-names>
+						</name>
+						<name>
+							<surname>Johnson</surname>
+							<given-names>C.J.</given-names>
+						</name>
+						<name>
+							<surname>Hodder</surname>
+							<given-names>D.</given-names>
+						</name>
+					</person-group>
+					<year>2012</year>
+					<article-title>Spatial and behavioral scales of habitat selection and activity by river otters at latrine sites</article-title>
+					<source>FriendlyISISJournal of Mammalogy</source>
+					<volume>93</volume>
+					<fpage>170</fpage>
+					<lpage>182</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B13">
+				<mixed-citation>Da Silva, C.D.V.M.; Cantanhede, A.; Rodrigues, E. 2009. <italic>Estudo dos Mamíferos Aquáticos da Área de Influência Direta da AHE Belo Monte</italic>. Unpublished technical report. 36p. (<comment> (<ext-link ext-link-type="uri" xlink:href="http://licenciamento.ibama.gov.br/Processo%20PNMA/EIA’s%20CGENE/COHID/UHE/Belo%20Monte/EIA/Consolida%C3%A7%C3%A3o-Mam%C3%ADferos%20Aqu%C3%A1ticos/PDF/Anexo/RELATORIO_XINGU_CHEIA_consolidado.pdf">http://licenciamento.ibama.gov.br/Processo%20PNMA/EIA’s%20CGENE/COHID/UHE/Belo%20Monte/EIA/Consolida%C3%A7%C3%A3o-Mam%C3%ADferos%20Aqu%C3%A1ticos/PDF/Anexo/RELATORIO_XINGU_CHEIA_consolidado.pdf</ext-link>
+					</comment>). Acessed on 23 Mar 2019.</mixed-citation>
+				<element-citation publication-type="report">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Da Silva</surname>
+							<given-names>C.D.V.M.</given-names>
+						</name>
+						<name>
+							<surname>Cantanhede</surname>
+							<given-names>A.</given-names>
+						</name>
+						<name>
+							<surname>Rodrigues</surname>
+							<given-names>E.</given-names>
+						</name>
+					</person-group>
+					<year>2009</year>
+					<source>Estudo dos Mamíferos Aquáticos da Área de Influência Direta da AHE Belo Monte</source>
+					<comment>Unpublished technical report</comment>
+					<size units="pages">36</size>
+					<comment> (<ext-link ext-link-type="uri" xlink:href="http://licenciamento.ibama.gov.br/Processo%20PNMA/EIA’s%20CGENE/COHID/UHE/Belo%20Monte/EIA/Consolida%C3%A7%C3%A3o-Mam%C3%ADferos%20Aqu%C3%A1ticos/PDF/Anexo/RELATORIO_XINGU_CHEIA_consolidado.pdf">http://licenciamento.ibama.gov.br/Processo%20PNMA/EIA’s%20CGENE/COHID/UHE/Belo%20Monte/EIA/Consolida%C3%A7%C3%A3o-Mam%C3%ADferos%20Aqu%C3%A1ticos/PDF/Anexo/RELATORIO_XINGU_CHEIA_consolidado.pdf</ext-link>
+					</comment>
+					<date-in-citation content-type="access-date" iso-8601-date="2019-03-23">23 Mar 2019</date-in-citation>
+				</element-citation>
+			</ref>
+			<ref id="B14">
+				<mixed-citation>Emmons, L.H.; Feer, F. 1997. <italic>Neotropical rainforest mammals</italic>. <italic>A field guide</italic>. 2nd ed. University of Chicago Press, Chicago, 307p.</mixed-citation>
+				<element-citation publication-type="book">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Emmons</surname>
+							<given-names>L.H.</given-names>
+						</name>
+						<name>
+							<surname>Feer</surname>
+							<given-names>F.</given-names>
+						</name>
+					</person-group>
+					<year>1997</year>
+					<source>Neotropical rainforest mammals. A field guide</source>
+					<edition>2nd ed</edition>
+					<publisher-name>University of Chicago Press</publisher-name>
+					<publisher-loc>Chicago</publisher-loc>
+					<size units="pages">307</size>
+				</element-citation>
+			</ref>
+			<ref id="B15">
+				<mixed-citation>Feeroz, M.M.; Begum S., Hasan, M.K. 2011. Fishing with otter: A traditional conservation practice in Bangladesh. <italic>IUCN Otter Speciallist Group Bulletin</italic>, 28: 14-20. </mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Feeroz</surname>
+							<given-names>M.M.</given-names>
+						</name>
+						<name>
+							<surname>Begum S.</surname>
+							<given-names>M.K.</given-names>
+						</name>
+					</person-group>
+					<year>2011</year>
+					<article-title>Fishing with otter: A traditional conservation practice in Bangladesh</article-title>
+					<source>IUCN Otter Speciallist Group Bulletin</source>
+					<volume>28</volume>
+					<fpage>14</fpage>
+					<lpage>20</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B16">
+				<mixed-citation>Gomes, A. 2009. <italic>Uso de ambientes por Lontra longicaudis (Olfers, 1818) (Carnivora, Mustelidae) no extremo sul do Brasil</italic>. Master’s dissertation. Universidade Federal do Rio Grande, Rio Grande, Brazil. 53p. (<comment> (<ext-link ext-link-type="uri" xlink:href="https://sistemas.furg.br/sistemas/sab/arquivos/bdtd/0000011241.pdf">https://sistemas.furg.br/sistemas/sab/arquivos/bdtd/0000011241.pdf</ext-link>
+					</comment>). Accessed on 23 Mar 2019.</mixed-citation>
+				<element-citation publication-type="thesis">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Gomes</surname>
+							<given-names>A.</given-names>
+						</name>
+					</person-group>
+					<year>2009</year>
+					<source>Uso de ambientes por Lontra longicaudis (Olfers, 1818) (Carnivora, Mustelidae) no extremo sul do Brasil</source>
+					<comment content-type="degree">Master</comment>
+					<publisher-name>Universidade Federal do Rio Grande</publisher-name>
+					<publisher-loc>Rio Grande, Brazil</publisher-loc>
+					<publisher-loc>Rio Grande, Brazil</publisher-loc>
+					<size units="pages">53</size>
+					<comment> (<ext-link ext-link-type="uri" xlink:href="https://sistemas.furg.br/sistemas/sab/arquivos/bdtd/0000011241.pdf">https://sistemas.furg.br/sistemas/sab/arquivos/bdtd/0000011241.pdf</ext-link>
+					</comment>
+					<date-in-citation content-type="access-date" iso-8601-date="2019-03-23">23 Mar 2019</date-in-citation>
+				</element-citation>
+			</ref>
+			<ref id="B17">
+				<mixed-citation>Groenendijk, J.; Hajek, F.; Duplaix, N.; Reuther, C.; Van Damme, P.; Schenck, C.; <italic>et al</italic>. 2005. Surveying and monitoring distribution and population trends of the giant otter (<italic>Pteronura brasiliensis</italic>): guidelines for a standardization of survey methods as recommended by the giant otter section of the IUCN/SSC Otter Specialist Group. <italic>Habitat</italic>, 16: 1-100.</mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Groenendijk</surname>
+							<given-names>J.</given-names>
+						</name>
+						<name>
+							<surname>Hajek</surname>
+							<given-names>F.</given-names>
+						</name>
+						<name>
+							<surname>Duplaix</surname>
+							<given-names>N.</given-names>
+						</name>
+						<name>
+							<surname>Reuther</surname>
+							<given-names>C.</given-names>
+						</name>
+						<name>
+							<surname>Van Damme</surname>
+							<given-names>P.</given-names>
+						</name>
+						<name>
+							<surname>Schenck</surname>
+							<given-names>C.</given-names>
+						</name>
+						<etal/>
+					</person-group>
+					<year>2005</year>
+					<article-title>Surveying and monitoring distribution and population trends of the giant otter (Pteronura brasiliensis): guidelines for a standardization of survey methods as recommended by the giant otter section of the IUCN/SSC Otter Specialist Group</article-title>
+					<source>Habitat</source>
+					<volume>16</volume>
+					<fpage>1</fpage>
+					<lpage>100</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B18">
+				<mixed-citation>Jeffress, M.R.; Paukert, C.P.; Sandercock, B.K.; Gipson, P.S. 2011. Factors affecting detectability of river otters during sign surveys. <italic>The FriendlyISISJournal of Wildlife Management</italic>, 75: 144-150.</mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Jeffress</surname>
+							<given-names>M.R.</given-names>
+						</name>
+						<name>
+							<surname>Paukert</surname>
+							<given-names>C.P.</given-names>
+						</name>
+						<name>
+							<surname>Sandercock</surname>
+							<given-names>B.K.</given-names>
+						</name>
+						<name>
+							<surname>Gipson</surname>
+							<given-names>P.S.</given-names>
+						</name>
+					</person-group>
+					<year>2011</year>
+					<article-title>Factors affecting detectability of river otters during sign surveys</article-title>
+					<source>The FriendlyISISJournal of Wildlife Management</source>
+					<volume>75</volume>
+					<fpage>144</fpage>
+					<lpage>150</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B19">
+				<mixed-citation>Jenkins, D.; Burrows, G.O. 1980. Ecology of otters in northern Scotland. III. The use of faeces as indicators of otter (<italic>Lutra lutra</italic>) density and distribution. <italic>The FriendlyISISJournal of Animal Ecology</italic>, 49: 755-774.</mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Jenkins</surname>
+							<given-names>D.</given-names>
+						</name>
+						<name>
+							<surname>Burrows</surname>
+							<given-names>G.O.</given-names>
+						</name>
+					</person-group>
+					<year>1980</year>
+					<article-title>Ecology of otters in northern Scotland. III. The use of faeces as indicators of otter (Lutra lutra) density and distribution</article-title>
+					<source>The FriendlyISISJournal of Animal Ecology</source>
+					<volume>49</volume>
+					<fpage>755</fpage>
+					<lpage>774</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B20">
+				<mixed-citation>Kenneth, P.; Burnham, K.P.; Anderson, D.R. 2002. <italic>Model selection and multimodel inference: A practical information-theoretic approach</italic>. 2nd ed. Springer, New York, 488p.</mixed-citation>
+				<element-citation publication-type="book">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Kenneth</surname>
+							<given-names>P.</given-names>
+						</name>
+						<name>
+							<surname>Burnham</surname>
+							<given-names>K.P.</given-names>
+						</name>
+						<name>
+							<surname>Anderson</surname>
+							<given-names>D.R.</given-names>
+						</name>
+					</person-group>
+					<year>2002</year>
+					<source>Model selection and multimodel inference: A practical information-theoretic approach</source>
+					<edition>2nd ed</edition>
+					<publisher-name>Springer</publisher-name>
+					<publisher-loc>New York</publisher-loc>
+					<size units="pages">488</size>
+				</element-citation>
+			</ref>
+			<ref id="B21">
+				<mixed-citation>Kloskowski, J. 2011. Human-wildlife conflicts at pond fisheries in eastern Poland: perceptions and management of wildlife damage. <italic>European FriendlyISISJournal of Wildlife Research</italic>, 57: 295-304.</mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Kloskowski</surname>
+							<given-names>J.</given-names>
+						</name>
+					</person-group>
+					<year>2011</year>
+					<article-title>Human-wildlife conflicts at pond fisheries in eastern Poland: perceptions and management of wildlife damage</article-title>
+					<source>European FriendlyISISJournal of Wildlife Research</source>
+					<volume>57</volume>
+					<fpage>295</fpage>
+					<lpage>304</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B22">
+				<mixed-citation>Kruuk, H.; Hewson, R. 1978. Spacing and foraging of otters (<italic>Lutra lutra</italic>) in a marine habitat. <italic>FriendlyISISJournal of Zoology</italic>, 185: 205-212.</mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Kruuk</surname>
+							<given-names>H.</given-names>
+						</name>
+						<name>
+							<surname>Hewson</surname>
+							<given-names>R.</given-names>
+						</name>
+					</person-group>
+					<year>1978</year>
+					<article-title>Spacing and foraging of otters (Lutra lutra) in a marine habitat</article-title>
+					<source>FriendlyISISJournal of Zoology</source>
+					<volume>185</volume>
+					<fpage>205</fpage>
+					<lpage>212</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B23">
+				<mixed-citation>Macías-Sánchez, S. 2003. <italic>Evaluación del</italic> hábitat de <italic>la nutria neotropical (Lontra longicaudis Olfers, 1818) en dos ríos de la zona centro del estado de Veracruz, México</italic>. Master’s dissertation. Instituto de Ecología AC. Xalapa, México. 93p. (<comment> (<ext-link ext-link-type="uri" xlink:href="https://www.ciad.mx/guaymas/nutrias/Lontra%20longicaudis%20Evaluacion%20del%20Habitat.pdf">https://www.ciad.mx/guaymas/nutrias/Lontra%20longicaudis%20Evaluacion%20del%20Habitat.pdf</ext-link>
+					</comment>). Accessed on 23 Mar 2019.</mixed-citation>
+				<element-citation publication-type="thesis">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Macías-Sánchez</surname>
+							<given-names>S.</given-names>
+						</name>
+					</person-group>
+					<year>2003</year>
+					<source>Evaluación del hábitat de la nutria neotropical (Lontra longicaudis Olfers, 1818) en dos ríos de la zona centro del estado de Veracruz, México</source>
+					<comment content-type="degree">Master</comment>
+					<publisher-name>Instituto de Ecología AC</publisher-name>
+					<publisher-loc>Xalapa, México</publisher-loc>
+					<publisher-loc>Xalapa, México</publisher-loc>
+					<size units="pages">93</size>
+					<comment> (<ext-link ext-link-type="uri" xlink:href="https://www.ciad.mx/guaymas/nutrias/Lontra%20longicaudis%20Evaluacion%20del%20Habitat.pdf">https://www.ciad.mx/guaymas/nutrias/Lontra%20longicaudis%20Evaluacion%20del%20Habitat.pdf</ext-link>
+					</comment>
+					<date-in-citation content-type="access-date" iso-8601-date="2019-03-23">23 Mar 2019</date-in-citation>
+				</element-citation>
+			</ref>
+			<ref id="B24">
+				<mixed-citation>Marchini, S.; Macdonald, D.W. 2012. Predicting ranchers’ intention to kill jaguars: case studies in Amazonia and Pantanal. <italic>Biological Conservation</italic>, 147: 213-221.</mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Marchini</surname>
+							<given-names>S.</given-names>
+						</name>
+						<name>
+							<surname>Macdonald</surname>
+							<given-names>D.W.</given-names>
+						</name>
+					</person-group>
+					<year>2012</year>
+					<article-title>Predicting ranchers’ intention to kill jaguars: case studies in Amazonia and Pantanal</article-title>
+					<source>Biological Conservation</source>
+					<volume>147</volume>
+					<fpage>213</fpage>
+					<lpage>221</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B25">
+				<mixed-citation>Martins, L.; Cavararo, R. 2012. <italic>Manual técnico da vegetação brasileira: sistema fitogeográfico, inventário das formações florestais e campestres, técnicas e manejo de coleções botânicas, procedimentos para mapeamentos</italic>. IBGE. Rio de Janeiro, 166p.</mixed-citation>
+				<element-citation publication-type="report">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Martins</surname>
+							<given-names>L.</given-names>
+						</name>
+						<name>
+							<surname>Cavararo</surname>
+							<given-names>R.</given-names>
+						</name>
+					</person-group>
+					<year>2012</year>
+					<source>Manual técnico da vegetação brasileira: sistema fitogeográfico, inventário das formações florestais e campestres, técnicas e manejo de coleções botânicas, procedimentos para mapeamentos</source>
+					<publisher-name>IBGE</publisher-name>
+					<publisher-loc>Rio de Janeiro</publisher-loc>
+					<size units="pages">166</size>
+				</element-citation>
+			</ref>
+			<ref id="B26">
+				<mixed-citation>Miles, H. 1984. <italic>The track of the wild otter</italic>. St. Martin’s Press, New York. 160p. </mixed-citation>
+				<element-citation publication-type="book">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Miles</surname>
+							<given-names>H.</given-names>
+						</name>
+					</person-group>
+					<year>1984</year>
+					<source>The track of the wild otter</source>
+					<publisher-name>St. Martin’s Press</publisher-name>
+					<publisher-loc>New York</publisher-loc>
+					<size units="pages">160</size>
+				</element-citation>
+			</ref>
+			<ref id="B27">
+				<mixed-citation>Miller, J.R.; Jhala, Y.V.; Jena, J.; Schmitz, O.J. 2015. Landscape-scale accessibility of livestock to tigers: implications of spatial grain for modeling predation risk to mitigate human-carnivore conflict. <italic>Ecology and Evolution</italic>, 5: 1354-1367.</mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Miller</surname>
+							<given-names>J.R.</given-names>
+						</name>
+						<name>
+							<surname>Jhala</surname>
+							<given-names>Y.V.</given-names>
+						</name>
+						<name>
+							<surname>Jena</surname>
+							<given-names>J.</given-names>
+						</name>
+						<name>
+							<surname>Schmitz</surname>
+							<given-names>O.J.</given-names>
+						</name>
+					</person-group>
+					<year>2015</year>
+					<article-title>Landscape-scale accessibility of livestock to tigers: implications of spatial grain for modeling predation risk to mitigate human-carnivore conflict</article-title>
+					<source>Ecology and Evolution</source>
+					<volume>5</volume>
+					<fpage>1354</fpage>
+					<lpage>1367</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B28">
+				<mixed-citation>Molica, J.R. 2017. <italic>Biologia reprodutiva de Peckoltia oligospila GÜNTHER, 1864 (SILURIFORMES-LORICARIIDAE) no trecho médio do rio Guamá-Pa</italic>. Master’s dissertation, Universidade Federal do Pará, Belém, Brazil. 50p. (<comment> (<ext-link ext-link-type="uri" xlink:href="http://ppgeap.propesp.ufpa.br/ARQUIVOS/dissertacoes/2017/PPGEAP_Dissertac%CC%A7a%CC%83o_Juliana%20Rodrigues%20Molica_2017.pdf">http://ppgeap.propesp.ufpa.br/ARQUIVOS/dissertacoes/2017/PPGEAP_Dissertac%CC%A7a%CC%83o_Juliana%20Rodrigues%20Molica_2017.pdf</ext-link>
+					</comment>). Accessed on 23 Mar 2019.</mixed-citation>
+				<element-citation publication-type="thesis">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Molica</surname>
+							<given-names>J.R.</given-names>
+						</name>
+					</person-group>
+					<year>2017</year>
+					<source>Biologia reprodutiva de Peckoltia oligospila GÜNTHER, 1864 (SILURIFORMES-LORICARIIDAE) no trecho médio do rio Guamá-Pa</source>
+					<comment content-type="degree">Master</comment>
+					<publisher-name>Universidade Federal do Pará</publisher-name>
+					<publisher-loc>Belém, Brazil</publisher-loc>
+					<publisher-loc>Belém, Brazil</publisher-loc>
+					<size units="pages">50</size>
+					<comment> (<ext-link ext-link-type="uri" xlink:href="http://ppgeap.propesp.ufpa.br/ARQUIVOS/dissertacoes/2017/PPGEAP_Dissertac%CC%A7a%CC%83o_Juliana%20Rodrigues%20Molica_2017.pdf">http://ppgeap.propesp.ufpa.br/ARQUIVOS/dissertacoes/2017/PPGEAP_Dissertac%CC%A7a%CC%83o_Juliana%20Rodrigues%20Molica_2017.pdf</ext-link>
+					</comment>
+					<date-in-citation content-type="access-date" iso-8601-date="2019-03-23">23 Mar 2019</date-in-citation>
+				</element-citation>
+			</ref>
+			<ref id="B29">
+				<mixed-citation>Monteiro, M.D.R.; Melo, N.F.A.C. de; Alves, M.A.M. da S.; Paiva, R.S. 2009. Composição e distribuição do microfitoplâncton do rio Guamá no trecho entre Belém e São Miguel do Guamá, Pará, Brasil. <italic>Boletim do Museu Paraense Emílio Goeldi Ciências Naturais</italic>, 4: 341-351.</mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Monteiro</surname>
+							<given-names>M.D.R.</given-names>
+						</name>
+						<name>
+							<surname>Melo</surname>
+							<given-names>N.F.A.C. de</given-names>
+						</name>
+						<name>
+							<surname>Alves</surname>
+							<given-names>M.A.M. da S.</given-names>
+						</name>
+						<name>
+							<surname>Paiva</surname>
+							<given-names>R.S.</given-names>
+						</name>
+					</person-group>
+					<year>2009</year>
+					<article-title>Composição e distribuição do microfitoplâncton do rio Guamá no trecho entre Belém e São Miguel do Guamá, Pará, Brasil</article-title>
+					<source>Boletim do Museu Paraense Emílio Goeldi Ciências Naturais</source>
+					<volume>4</volume>
+					<fpage>341</fpage>
+					<lpage>351</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B30">
+				<mixed-citation>Pacifici, M.; Santini, L.; Di Marco, M.; Baisero, D.; Francucci, L.; Marasini, G.G.; <italic>et al</italic>. 2013. Generation length for mammals. <italic>Nature Conservation</italic>, 5: 89.</mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Pacifici</surname>
+							<given-names>M.</given-names>
+						</name>
+						<name>
+							<surname>Santini</surname>
+							<given-names>L.</given-names>
+						</name>
+						<name>
+							<surname>Di Marco</surname>
+							<given-names>M.</given-names>
+						</name>
+						<name>
+							<surname>Baisero</surname>
+							<given-names>D.</given-names>
+						</name>
+						<name>
+							<surname>Francucci</surname>
+							<given-names>L.</given-names>
+						</name>
+						<name>
+							<surname>Marasini</surname>
+							<given-names>G.G.</given-names>
+						</name>
+						<etal/>
+					</person-group>
+					<year>2013</year>
+					<article-title>Generation length for mammals</article-title>
+					<source>Nature Conservation</source>
+					<volume>5</volume>
+					<fpage>89</fpage>
+					<lpage>89</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B31">
+				<mixed-citation>Pardini, R. 1998. Feeding ecology of the neotropical river otter <italic>Lontra longicaudis</italic> in an Atlantic Forest stream, south-eastern Brazil. <italic>FriendlyISISJournal of Zoology</italic>, 245: 385-391.</mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Pardini</surname>
+							<given-names>R.</given-names>
+						</name>
+					</person-group>
+					<year>1998</year>
+					<article-title>Feeding ecology of the neotropical river otter Lontra longicaudis in an Atlantic Forest stream, south-eastern Brazil</article-title>
+					<source>FriendlyISISJournal of Zoology</source>
+					<volume>245</volume>
+					<fpage>385</fpage>
+					<lpage>391</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B32">
+				<mixed-citation>Poledníková, K.; Kranz, A.; Poledník, L.; Myšiak, J. 2013. Otters Causing Conflicts. In: Klenke, R.A.; Ring, I.; Kranz, A.; Jepsen, N.; Rauschmayer, F.; Henle, K. (Eds.), <italic>Human - Wildlife Conflicts in Europe. Fisheries and Fish-eating Vertebrates as a Model Case</italic>, Springer, Berlin/Heidelberg, p.81-106.</mixed-citation>
+				<element-citation publication-type="book">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Poledníková</surname>
+							<given-names>K.</given-names>
+						</name>
+						<name>
+							<surname>Kranz</surname>
+							<given-names>A.</given-names>
+						</name>
+						<name>
+							<surname>Poledník</surname>
+							<given-names>L.</given-names>
+						</name>
+						<name>
+							<surname>Myšiak</surname>
+							<given-names>J.</given-names>
+						</name>
+					</person-group>
+					<year>2013</year>
+					<chapter-title>Otters Causing Conflicts</chapter-title>
+					<person-group person-group-type="editor">
+						<name>
+							<surname>Klenke</surname>
+							<given-names>R.A.</given-names>
+						</name>
+						<name>
+							<surname>Ring</surname>
+							<given-names>I.</given-names>
+						</name>
+						<name>
+							<surname>Kranz</surname>
+							<given-names>A.</given-names>
+						</name>
+						<name>
+							<surname>Jepsen</surname>
+							<given-names>N.</given-names>
+						</name>
+						<name>
+							<surname>Rauschmayer</surname>
+							<given-names>F.</given-names>
+						</name>
+						<name>
+							<surname>Henle</surname>
+							<given-names>K.</given-names>
+						</name>
+					</person-group>
+					<source>Human - Wildlife Conflicts in Europe. Fisheries and Fish-eating Vertebrates as a Model Case</source>
+					<publisher-name>Springer</publisher-name>
+					<publisher-loc>Berlin/Heidelberg</publisher-loc>
+					<fpage>81</fpage>
+					<lpage>106</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B33">
+				<mixed-citation>Quadros, J. 2012. Uso do habitat e estimativa populacional da lontra antes e depois da formação do reservatório de Salto Caxias, rio Iguaçu, Paraná. <italic>Neotropical Biology &amp; Conservation</italic>, 7: 97-107.</mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Quadros</surname>
+							<given-names>J.</given-names>
+						</name>
+					</person-group>
+					<year>2012</year>
+					<article-title>Uso do habitat e estimativa populacional da lontra antes e depois da formação do reservatório de Salto Caxias, rio Iguaçu, Paraná</article-title>
+					<source>Neotropical Biology &amp; Conservation</source>
+					<volume>7</volume>
+					<fpage>97</fpage>
+					<lpage>107</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B34">
+				<mixed-citation>Quadros, J.; Monteiro-Filho, E.L. 2001. Diet of the neotropical otter, <italic>Lontra longicaudis</italic>, in an Atlantic forest area, Santa Catarina State, southern Brazil. <italic>Studies on Neotropical Fauna and Environment</italic>, 36: 15-21.</mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Quadros</surname>
+							<given-names>J.</given-names>
+						</name>
+						<name>
+							<surname>Monteiro-Filho</surname>
+							<given-names>E.L.</given-names>
+						</name>
+					</person-group>
+					<year>2001</year>
+					<article-title>Diet of the neotropical otter, Lontra longicaudis, in an Atlantic forest area, Santa Catarina State, southern Brazil</article-title>
+					<source>Studies on Neotropical Fauna and Environment</source>
+					<volume>36</volume>
+					<fpage>15</fpage>
+					<lpage>21</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B35">
+				<mixed-citation>Recharte, M.; Bowler, M.; Bodmer, R. 2008. Potential conflict between fishermen and giant otter (<italic>Pteronura brasiliensis</italic>) populations by fishermen in response to declining stocks of arowana fish (<italic>Osteoglossum bicirrhosum</italic>) in northeastern Peru. <italic>IUCN Otter Specialist Group Bulletin</italic>, 25: 89-93.</mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Recharte</surname>
+							<given-names>M.</given-names>
+						</name>
+						<name>
+							<surname>Bowler</surname>
+							<given-names>M.</given-names>
+						</name>
+						<name>
+							<surname>Bodmer</surname>
+							<given-names>R.</given-names>
+						</name>
+					</person-group>
+					<year>2008</year>
+					<article-title>Potential conflict between fishermen and giant otter (Pteronura brasiliensis) populations by fishermen in response to declining stocks of arowana fish (Osteoglossum bicirrhosum) in northeastern Peru</article-title>
+					<source>IUCN Otter Specialist Group Bulletin</source>
+					<volume>25</volume>
+					<fpage>89</fpage>
+					<lpage>93</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B36">
+				<mixed-citation>Rheingantz, M.L.; de Menezes, J.F.S.; de Thoisy, B. 2014. Defining Neotropical otter <italic>Lontra longicaudis</italic> distribution, conservation priorities and ecological frontiers. <italic>Tropical Conservation Science</italic>, 7: 214-229.</mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Rheingantz</surname>
+							<given-names>M.L.</given-names>
+						</name>
+						<name>
+							<surname>de Menezes</surname>
+							<given-names>J.F.S.</given-names>
+						</name>
+						<name>
+							<surname>de Thoisy</surname>
+							<given-names>B.</given-names>
+						</name>
+					</person-group>
+					<year>2014</year>
+					<article-title>Defining Neotropical otter Lontra longicaudis distribution, conservation priorities and ecological frontiers</article-title>
+					<source>Tropical Conservation Science</source>
+					<volume>7</volume>
+					<fpage>214</fpage>
+					<lpage>229</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B37">
+				<mixed-citation>Rheingantz, M.L.; Santiago-Plata, V.M.; Trinca, C.S. 2017a. The Neotropical otter <italic>Lontra longicaudis</italic>: a comprehensive update on the current knowledge and conservation status of this semiaquatic carnivore. <italic>Mammal Review</italic>, 47: 291-305.</mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Rheingantz</surname>
+							<given-names>M.L.</given-names>
+						</name>
+						<name>
+							<surname>Santiago-Plata</surname>
+							<given-names>V.M.</given-names>
+						</name>
+						<name>
+							<surname>Trinca</surname>
+							<given-names>C.S.</given-names>
+						</name>
+					</person-group>
+					<year>2017</year>
+					<article-title>The Neotropical otter Lontra longicaudis: a comprehensive update on the current knowledge and conservation status of this semiaquatic carnivore</article-title>
+					<source>Mammal Review</source>
+					<volume>47</volume>
+					<fpage>291</fpage>
+					<lpage>305</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B38">
+				<mixed-citation>Rheingantz, M.L.; Leuchtenberger, C.; Zucco, C.A.; Fernandez, F.A. 2016. Differences in activity patterns of the Neotropical otter <italic>Lontra longicaudis</italic> between rivers of two Brazilian ecoregions. <italic>FriendlyISISJournal of Tropical Ecology</italic>, 32: 170-174.</mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Rheingantz</surname>
+							<given-names>M.L.</given-names>
+						</name>
+						<name>
+							<surname>Leuchtenberger</surname>
+							<given-names>C.</given-names>
+						</name>
+						<name>
+							<surname>Zucco</surname>
+							<given-names>C.A.</given-names>
+						</name>
+						<name>
+							<surname>Fernandez</surname>
+							<given-names>F.A.</given-names>
+						</name>
+					</person-group>
+					<year>2016</year>
+					<article-title>Differences in activity patterns of the Neotropical otter Lontra longicaudis between rivers of two Brazilian ecoregions</article-title>
+					<source>FriendlyISISJournal of Tropical Ecology</source>
+					<volume>32</volume>
+					<fpage>170</fpage>
+					<lpage>174</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B39">
+				<mixed-citation>Rheingantz, M.L.; de Menezes, J.F.S.; Galliez, M.; dos Santos Fernandez, F.A. 2017b. Biogeographic patterns in the feeding habits of the opportunist and semiaquatic Neotropical otter. <italic>Hydrobiologia</italic>, 792: 1-15.</mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Rheingantz</surname>
+							<given-names>M.L.</given-names>
+						</name>
+						<name>
+							<surname>de Menezes</surname>
+							<given-names>J.F.S.</given-names>
+						</name>
+						<name>
+							<surname>Galliez</surname>
+							<given-names>M.</given-names>
+						</name>
+						<name>
+							<surname>dos Santos Fernandez</surname>
+							<given-names>F.A.</given-names>
+						</name>
+					</person-group>
+					<year>2017</year>
+					<article-title>Biogeographic patterns in the feeding habits of the opportunist and semiaquatic Neotropical otter</article-title>
+					<source>Hydrobiologia</source>
+					<volume>792</volume>
+					<fpage>1</fpage>
+					<lpage>15</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B40">
+				<mixed-citation>Rodríguez, M.A.; Lewis, W.M. 1997. Structure of fish assemblages along environmental gradients in floodplain lakes of the Orinoco River. <italic>Ecological Monographs</italic>, 67: 109-128.</mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Rodríguez</surname>
+							<given-names>M.A.</given-names>
+						</name>
+						<name>
+							<surname>Lewis</surname>
+							<given-names>W.M.</given-names>
+						</name>
+					</person-group>
+					<year>1997</year>
+					<article-title>Structure of fish assemblages along environmental gradients in floodplain lakes of the Orinoco River</article-title>
+					<source>Ecological Monographs</source>
+					<volume>67</volume>
+					<fpage>109</fpage>
+					<lpage>128</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B41">
+				<mixed-citation>Rosas-Ribeiro, P.F. 2017. <italic>A Lontra Neotropical (Lontra longicaudis) no Nordeste brasileiro: distribuição, uso do habitat e diversidade genética</italic>. Doctoral thesis, Universidade Federal do Rio Grande do Norte, Natal, Brazil. 100p. (<comment> (<ext-link ext-link-type="uri" xlink:href="https://repositorio.ufrn.br/jspui/bitstream/123456789/24679/1/PatriciaFariasRosasRibeiro_TESE.pdf">https://repositorio.ufrn.br/jspui/bitstream/123456789/24679/1/PatriciaFariasRosasRibeiro_TESE.pdf</ext-link>
+					</comment>). Accessed on 23 Mar 2019.</mixed-citation>
+				<element-citation publication-type="thesis">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Rosas-Ribeiro</surname>
+							<given-names>P.F.</given-names>
+						</name>
+					</person-group>
+					<year>2017</year>
+					<source>A Lontra Neotropical (Lontra longicaudis) no Nordeste brasileiro: distribuição, uso do habitat e diversidade genética</source>
+					<comment content-type="degree">Doctoral</comment>
+					<publisher-name>Universidade Federal do Rio Grande do Norte</publisher-name>
+					<publisher-loc>Natal, Brazil</publisher-loc>
+					<publisher-loc>Natal, Brazil</publisher-loc>
+					<size units="pages">100</size>
+					<comment> (<ext-link ext-link-type="uri" xlink:href="https://repositorio.ufrn.br/jspui/bitstream/123456789/24679/1/PatriciaFariasRosasRibeiro_TESE.pdf">https://repositorio.ufrn.br/jspui/bitstream/123456789/24679/1/PatriciaFariasRosasRibeiro_TESE.pdf</ext-link>
+					</comment>
+					<date-in-citation content-type="access-date" iso-8601-date="2019-03-23">23 Mar 2019</date-in-citation>
+				</element-citation>
+			</ref>
+			<ref id="B42">
+				<mixed-citation>Rosas-Ribeiro, P.F.; Rosas, F.C.W.; Zuanon, J. 2012. Conflict between fishermen and giant otters, <italic>Pteronura brasiliensis</italic> in Western Brazilian Amazon. <italic>Biotropica</italic>, 44: 437-444.</mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Rosas-Ribeiro</surname>
+							<given-names>P.F.</given-names>
+						</name>
+						<name>
+							<surname>Rosas</surname>
+							<given-names>F.C.W.</given-names>
+						</name>
+						<name>
+							<surname>Zuanon</surname>
+							<given-names>J.</given-names>
+						</name>
+					</person-group>
+					<year>2012</year>
+					<article-title>Conflict between fishermen and giant otters, Pteronura brasiliensis in Western Brazilian Amazon</article-title>
+					<source>Biotropica</source>
+					<volume>44</volume>
+					<fpage>437</fpage>
+					<lpage>444</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B43">
+				<mixed-citation>Ruiz-Olmo, J.; Batet, A.; Mañas, F.; Martínez-Vidal, R. 2011. Factors affecting otter (<italic>Lutra lutra</italic>) abundance and breeding success in freshwater habitats of the northeastern Iberian Peninsula. <italic>European FriendlyISISJournal of Wildlife Research</italic>, 57: 827-842.</mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Ruiz-Olmo</surname>
+							<given-names>J.</given-names>
+						</name>
+						<name>
+							<surname>Batet</surname>
+							<given-names>A.</given-names>
+						</name>
+						<name>
+							<surname>Mañas</surname>
+							<given-names>F.</given-names>
+						</name>
+						<name>
+							<surname>Martínez-Vidal</surname>
+							<given-names>R.</given-names>
+						</name>
+					</person-group>
+					<year>2011</year>
+					<article-title>Factors affecting otter (Lutra lutra) abundance and breeding success in freshwater habitats of the northeastern Iberian Peninsula</article-title>
+					<source>European FriendlyISISJournal of Wildlife Research</source>
+					<volume>57</volume>
+					<fpage>827</fpage>
+					<lpage>842</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B44">
+				<mixed-citation>Silva, F. da; Quintela, F.M. 2010. Observations on the climbing habits of Neotropical otter, <italic>Lontra longicaudis</italic>. IUCN <italic>Otter Specialist Group Bulletin</italic>, 27: 93-97. </mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Silva</surname>
+							<given-names>F. da</given-names>
+						</name>
+						<name>
+							<surname>Quintela</surname>
+							<given-names>F.M.</given-names>
+						</name>
+					</person-group>
+					<year>2010</year>
+					<article-title>Observations on the climbing habits of Neotropical otter, Lontra longicaudis</article-title>
+					<source>IUCN Otter Specialist Group Bulletin</source>
+					<volume>27</volume>
+					<fpage>93</fpage>
+					<lpage>97</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B45">
+				<mixed-citation>Trinca, C.S.; Jaeger, C.F.; Eizirik, E. 2013. Molecular ecology of the Neotropical otter (<italic>Lontra longicaudis</italic>): non-invasive sampling yields insights into local population dynamics. <italic>Biological FriendlyISISJournal of the Linnean Society</italic>, 109: 932-948.</mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Trinca</surname>
+							<given-names>C.S.</given-names>
+						</name>
+						<name>
+							<surname>Jaeger</surname>
+							<given-names>C.F.</given-names>
+						</name>
+						<name>
+							<surname>Eizirik</surname>
+							<given-names>E.</given-names>
+						</name>
+					</person-group>
+					<year>2013</year>
+					<article-title>Molecular ecology of the Neotropical otter (Lontra longicaudis): non-invasive sampling yields insights into local population dynamics</article-title>
+					<source>Biological FriendlyISISJournal of the Linnean Society</source>
+					<volume>109</volume>
+					<fpage>932</fpage>
+					<lpage>948</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B46">
+				<mixed-citation>Waldemarin, H.F. 2004. <italic>Ecologia da lontra neotropical (Lontra longicaudis), no trecho inferior da bacia do rio Mambucaba, Angra dos Reis</italic>. Doctoral thesis, Universidade do Estado do Rio de Janeiro, Rio de Janeiro, Brazil, 122p.</mixed-citation>
+				<element-citation publication-type="thesis">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Waldemarin</surname>
+							<given-names>H.F.</given-names>
+						</name>
+					</person-group>
+					<year>2004</year>
+					<source>Ecologia da lontra neotropical (Lontra longicaudis), no trecho inferior da bacia do rio Mambucaba, Angra dos Reis</source>
+					<comment content-type="degree">Doctoral</comment>
+					<publisher-name>Universidade do Estado do Rio de Janeiro</publisher-name>
+					<publisher-loc>Rio de Janeiro, Brazil</publisher-loc>
+					<publisher-loc>Rio de Janeiro, Brazil</publisher-loc>
+					<size units="pages">122</size>
+				</element-citation>
+			</ref>
+		</ref-list>
+		<fn-group>
+			<fn fn-type="other" id="fn2">
+				<label>CITE AS:</label>
+				<p> Andrade, A.M.; Arcoverde, D.L.; Albernaz, A.L. 2019. Relationship of Neotropical otter vestiges with environmental and anthropogenic factors. <italic>Acta Amazonica</italic> 49: 183-192.</p>
+			</fn>
+		</fn-group>
+	</back>
+</article>

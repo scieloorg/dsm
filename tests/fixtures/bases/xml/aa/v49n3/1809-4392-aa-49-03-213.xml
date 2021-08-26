@@ -1,0 +1,3643 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE article
+  PUBLIC "-//NLM//DTD JATS (Z39.96) FriendlyISISJournal Publishing DTD v1.1 20151215//EN" "JATS-journalpublishing1.dtd">
+<article article-type="research-article" dtd-version="1.1" specific-use="sps-1.9" xml:lang="en" xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<front>
+		<journal-meta>
+			<journal-id journal-id-type="publisher-id">aa</journal-id>
+			<journal-title-group>
+				<journal-title>Acta Amazonica</journal-title>
+				<abbrev-journal-title abbrev-type="publisher">Acta Amaz.</abbrev-journal-title>
+			</journal-title-group>
+			<issn pub-type="ppub">0044-5967</issn>
+			<issn pub-type="epub">1809-4392</issn>
+			<publisher>
+				<publisher-name>Instituto Nacional de Pesquisas da Amazônia</publisher-name>
+			</publisher>
+		</journal-meta>
+		<article-meta>
+			<article-id pub-id-type="doi">10.1590/1809-4392201804392</article-id>
+			<article-categories>
+				<subj-group subj-group-type="heading">
+					<subject>Biodiversity and Conservation</subject>
+				</subj-group>
+			</article-categories>
+			<title-group>
+				<article-title>Sexual dimorphism in the electric knifefish, <italic>Gymnorhamphichthys rondoni</italic> (Rhamphichthyidae: Gymnotiformes)</article-title>
+				<trans-title-group xml:lang="pt">
+					<trans-title>Dimorfismo sexual no peixe elétrico, <italic>Gymnorhamphichthys rondoni</italic> (Rhamphichthyidae: Gymnotiformes)</trans-title>
+				</trans-title-group>
+			</title-group>
+			<contrib-group>
+				<contrib contrib-type="author">
+					<contrib-id contrib-id-type="orcid">0000-0003-2393-8870</contrib-id>
+					<name>
+						<surname>GARCIA</surname>
+						<given-names>Elisa Queiroz</given-names>
+					</name>
+					<xref ref-type="aff" rid="aff1"><sup>1</sup></xref>
+					<xref ref-type="corresp" rid="c1">*</xref>
+				</contrib>
+				<contrib contrib-type="author">
+					<name>
+						<surname>ZUANON</surname>
+						<given-names>Jansen</given-names>
+					</name>
+					<xref ref-type="aff" rid="aff2"><sup>2</sup></xref>
+				</contrib>
+			</contrib-group>
+			<aff id="aff1">
+				<label>1</label>
+				<institution content-type="original">Instituto Nacional de Pesquisas da Amazônia - INPA, Programa de Pós-Graduação em Ecologia, 69080-971, Manaus, AM, Brazil</institution>
+				<institution content-type="normalized">Instituto Nacional de Pesquisas da Amazônia</institution>
+				<institution content-type="orgname">Instituto Nacional de Pesquisas da Amazônia - INPA</institution>
+				<institution content-type="orgdiv1">Programa de Pós-Graduação em Ecologia</institution>
+				<addr-line>
+					<postal-code>69080-971</postal-code>
+					<city>Manaus</city>
+					<state>AM</state>
+				</addr-line>
+				<country country="BR">Brazil</country>
+			</aff>
+			<aff id="aff2">
+				<label>2</label>
+				<institution content-type="original">Instituto Nacional de Pesquisas da Amazônia - INPA, Coordenação de Biodiversidade - COBIO, 69067-375, Manaus, AM, Brazil</institution>
+				<institution content-type="normalized">Instituto Nacional de Pesquisas da Amazônia</institution>
+				<institution content-type="orgname">Instituto Nacional de Pesquisas da Amazônia - INPA</institution>
+				<institution content-type="orgdiv1">Coordenação de Biodiversidade - COBIO</institution>
+				<addr-line>
+					<postal-code>69067-375</postal-code>
+					<city>Manaus</city>
+					<state>AM</state>
+				</addr-line>
+				<country country="BR">Brazil</country>
+			</aff>
+			<author-notes>
+				<corresp id="c1">* Corresponding author: <email>elisaqga@gmail.com</email>
+				</corresp>
+				<fn fn-type="edited-by" id="fn1">
+					<label>ASSOCIATE EDITOR:</label>
+					<p> Helder M. Espírito-Santo</p>
+				</fn>
+			</author-notes>
+			<pub-date date-type="pub" publication-format="electronic">
+				<day>12</day>
+				<month>08</month>
+				<year>2019</year>
+			</pub-date>
+			<pub-date date-type="collection" publication-format="electronic">
+				<season>Jul-Sep</season>
+				<year>2019</year>
+			</pub-date>
+			<volume>49</volume>
+			<issue>3</issue>
+			<fpage>213</fpage>
+			<lpage>220</lpage>
+			<history>
+				<date date-type="received">
+					<day>13</day>
+					<month>11</month>
+					<year>2018</year>
+				</date>
+				<date date-type="accepted">
+					<day>26</day>
+					<month>03</month>
+					<year>2019</year>
+				</date>
+			</history>
+			<permissions>
+				<license license-type="open-access" xlink:href="https://creativecommons.org/licenses/by/4.0/" xml:lang="en">
+					<license-p>This is an open-access article distributed under the terms of the Creative Commons Attribution License</license-p>
+				</license>
+			</permissions>
+			<abstract>
+				<title>ABSTRACT </title>
+				<p>Sexual dimorfism refers to morphological differences between males and females of a species. It may be a result of different selection pressures acting on either or both sexes and may occur in any sexually-reproducing dioecious species, including fishes. We analyzed 63 females and 63 adult males of <italic>Gymnorhamphichthys rondoni</italic> (Gymnotiformes) collected by us or deposited in museum collections. Sex was identified through abdominal dissection. We measured length from snout to posterior end of anal-fin, anal-fin length, distance from anus to anal-fin origin, distance from genital papilla to anal-fin origin, body width at beginning of anal-fin, and head length. Morphometric data submitted to a Principal Component Analysis (PCA) grouped males and females according to variables related to body size (along the first component) and to head length and body height along the second and third components. Females were larger than males, whereas males had proportionally larger heads and higher bodies than females. The urogenital papilla of males and females showed differences in shape, size and relative position on the body. The female papilla was elongated horizontally, larger than that of males, and was located on a vertical line below the eye, while the papilla of the males was vertically elongated and located on a vertical line below the operculum. To our knowledge, this is the first recorded case of sexual dimorphism in a species of Rhamphichthyidae, a condition that is now known in all the currently recognized families of Gymnotiformes.</p>
+			</abstract>
+			<trans-abstract xml:lang="pt">
+				<title>RESUMO</title>
+				<p>Dimorfismo sexual é caracterizado por diferenças entre machos e fêmeas de uma espécie. Pode estar presente em qualquer ser vivo dioico que se reproduza sexualmente, inclusive peixes. Analisamos 63 fêmeas e 63 machos adultos de <italic>Gymnorhamphichthys rondoni</italic> (Gymnotiformes) coletados por nós ou obtidos em coleções. O sexo foi determinado por dissecção abdominal. Medimos o comprimento do focinho até o final da origem da nadadeira anal, comprimento da nadadeira anal, distância da papila genital até a origem da nadadeira anal, distância do ânus até a origem da nadadeira anal, altura do corpo e comprimento da cabeça. Dados morfométricos submetidos a uma Análise de Componentes Principais (PCA) agruparam machos e fêmeas de <italic>G. rondoni</italic> em função de variáveis relacionadas ao tamanho do corpo ao longo do primeiro componente, ao comprimento da cabeça e à altura do corpo ao longo do segundo e terceiro componentes. Fêmeas foram maiores que os machos, enquanto machos tiveram a cabeça proporcionalmente maior e o corpo mais alto que as fêmeas. A papila urogenital de machos e fêmeas diferiu no formato, tamanho e posição relativa no corpo. A papila das fêmeas foi alongada horizontalmente, maior que a dos machos e localizada na linha vertical abaixo do olho, enquanto que a papila dos machos foi alongada verticalmente e localizada na linha vertical abaixo do opérculo. Até onde sabemos, esse é o primeiro caso registrado de dimorfismo sexual em uma espécie de Rhamphichthyidae, uma condição que é agora conhecida para todas as famílias atualmente reconhecidas de Gymnotiformes.</p>
+			</trans-abstract>
+			<kwd-group xml:lang="en">
+				<title>Keywords:</title>
+				<kwd>electric fish</kwd>
+				<kwd>head morphology</kwd>
+				<kwd>morphological variation</kwd>
+				<kwd>sexual differences</kwd>
+				<kwd>urogenital papilla</kwd>
+			</kwd-group>
+			<kwd-group xml:lang="pt">
+				<title>Palavras-chave:</title>
+				<kwd>peixe elétrico</kwd>
+				<kwd>morfologia da cabeça</kwd>
+				<kwd>variação morfológica</kwd>
+				<kwd>diferenças sexuais</kwd>
+				<kwd>papila urogenital</kwd>
+			</kwd-group>
+			<funding-group>
+				<award-group award-type="contract">
+					<funding-source>Conselho Nacional de Desenvolvimento Científico e Tecnológico (CNPq)</funding-source>
+					<award-id>477251/2012-9</award-id>
+				</award-group>
+				<award-group award-type="contract">
+					<funding-source>CNPq</funding-source>
+					<award-id>313183/2014-7</award-id>
+				</award-group>
+			</funding-group>
+			<counts>
+				<fig-count count="4"/>
+				<table-count count="3"/>
+				<equation-count count="0"/>
+				<ref-count count="69"/>
+				<page-count count="8"/>
+			</counts>
+		</article-meta>
+	</front>
+	<body>
+		<sec sec-type="intro">
+			<title>INTRODUCTION</title>
+			<p>Sexual dimorphism refers to differences between males and females of a species in secondary sex-related features, like body size, color pattern, morphological details of specific body parts, and behavior. Sexual dimorphism may be present in any sexually-reproducing dioecious organism, including plants (e.g. <xref ref-type="bibr" rid="B46">Lloyd and Webb 1977</xref>; <xref ref-type="bibr" rid="B4">Barret </xref>2002; <xref ref-type="bibr" rid="B66">Tsuji and Fukami 2018</xref>) and animals (e.g. <xref ref-type="bibr" rid="B30">Garcia <italic>et al.</italic> 2006</xref>; <xref ref-type="bibr" rid="B47">Loker and Brant 2006</xref>; <xref ref-type="bibr" rid="B8">Ceballos <italic>et al.</italic> 2013</xref>). <xref ref-type="bibr" rid="B17">Darwin (1871</xref>) described several examples of sexual dimorphism when proposing his theory of sexual selection, and <xref ref-type="bibr" rid="B3">Andersson (1994</xref>) postulated that sexual dimorphism would result from different sexual selection pressures acting on the two sexes.</p>
+			<p>For fish, secondary sexual dimorphism has been recorded in body size (e.g. <xref ref-type="bibr" rid="B53">Parker 1992</xref>; <xref ref-type="bibr" rid="B26">Erlandsson and Ribbink 1997</xref>; <xref ref-type="bibr" rid="B51">Neat <italic>et al</italic>. 1998</xref>; <xref ref-type="bibr" rid="B48">McMillan 1999</xref>; <xref ref-type="bibr" rid="B50">Morbey 2018</xref>), fin size and shape (e.g. <xref ref-type="bibr" rid="B62">Skjæraasen <italic>et al</italic>. 2006</xref>; <xref ref-type="bibr" rid="B57">Pires <italic>et al</italic>. 2016</xref>), color pattern (e.g. <xref ref-type="bibr" rid="B59">Robertson and Warner 1978</xref>; <xref ref-type="bibr" rid="B45">Karino and Someya 2007</xref>), and head morphology (e.g. <xref ref-type="bibr" rid="B38">Hastings 1991</xref>; <xref ref-type="bibr" rid="B36">Gramitto and Coen 1997</xref>; <xref ref-type="bibr" rid="B9">Cox Fernandes 1998</xref>; <xref ref-type="bibr" rid="B10">Cox Fernandes <italic>et al</italic>. 2002</xref>, <xref ref-type="bibr" rid="B11">2009</xref>; <xref ref-type="bibr" rid="B22">de Santana and Vari 2010</xref>). In some species, jaws, mouth and snout are larger in males than in females (<xref ref-type="bibr" rid="B35">Goto 1984</xref>; <xref ref-type="bibr" rid="B14">Crabtree 1985</xref>). Dentition may also be sexually dimorphic, with differences between males and females in number, shape and arrangement of teeth (<xref ref-type="bibr" rid="B34">Gomes and Tomas 1991</xref>; <xref ref-type="bibr" rid="B44">Kajiura and Tricas 1996</xref>; <xref ref-type="bibr" rid="B5">Böhlke 1997</xref>; <xref ref-type="bibr" rid="B58">Rapp Py-Daniel and Cox Fernandes 2005</xref>; de Santana and Vari 2010). The shape of the urogenital papilla may also differ between males and females (<xref ref-type="bibr" rid="B27">Esmaeili <italic>et al.</italic> 2017</xref>).</p>
+			<p>Secondary sexual dimorphism may also be expressed in communication systems, such as in sound-producing mechanisms (<xref ref-type="bibr" rid="B2">Ali <italic>et al.</italic> 2016</xref>; <xref ref-type="bibr" rid="B54">Parmentier <italic>et al</italic>. 2018</xref>) or as differences in electrical signal repertoires of male and female electric fishes (<xref ref-type="bibr" rid="B29">Fugere and Krake 2009</xref>; <xref ref-type="bibr" rid="B40">Ho <italic>et al.</italic> 2010</xref>, 2013). Among Neotropical electric fishes of the order Gymnotiformes, the most common forms of sexual dimorphism occur in body size (<xref ref-type="bibr" rid="B39">Hilton and Cox Fernandes 2006</xref>; <xref ref-type="bibr" rid="B19">de Santana and Cox Fernandes 2012</xref>), snout shape (de Santana 2003; <xref ref-type="bibr" rid="B1">Albert and Crampton 2009</xref>; <xref ref-type="bibr" rid="B28">Evans <italic>et al.</italic> 2018</xref>), and caudal filament size and shape (<xref ref-type="bibr" rid="B43">Hopkins <italic>et al</italic>. 1990</xref>; <xref ref-type="bibr" rid="B33">Giora <italic>et al.</italic> 2008</xref>). Differences in mouth shape, position and shape of teeth (de Santana and Vari 2010; Cox Fernandes <italic>et al</italic>. 2010), and electric organ discharge (<xref ref-type="bibr" rid="B52">Nogueira 2006</xref>; <xref ref-type="bibr" rid="B20">de Santana and Crampton 2007</xref>; <xref ref-type="bibr" rid="B63">Smith and Combs 2008</xref>; Fugere and Krake 2009; Ho <italic>et al.</italic> 2010, 2013) have also been reported. </p>
+			<p>
+				<xref ref-type="bibr" rid="B58">Rapp Py-Daniel and Cox Fernandes (2005</xref>) discuss the evolution of sexual dimorphism in Gymnotiformes by mapping sex-related features on phylogenetic hypotheses and presenting evidences that secondary sexual differences arose independently both among the gymnotiform families and inside Apteronotidae, where most cases of sexual dimorphism in electric knifefishes were reported (<xref ref-type="bibr" rid="B18">de Santana 2003</xref>; <xref ref-type="bibr" rid="B39">Hilton and Cox Fernandes 2006</xref>; <xref ref-type="bibr" rid="B1">Albert and Crampton 2009</xref>; Cox Fernandes <italic>et al.</italic> 2010; de Santana and Vari 2010; <xref ref-type="bibr" rid="B41">Ho <italic>et al.</italic> 2013</xref>). Sexual dimorphism in Hypopomidae (<xref ref-type="bibr" rid="B43">Hopkins <italic>et al.</italic> 1990</xref>; <xref ref-type="bibr" rid="B42">Hopkins 1999</xref>; <xref ref-type="bibr" rid="B33">Giora <italic>et al.</italic> 2008</xref>; <xref ref-type="bibr" rid="B31">Gavassa <italic>et al.</italic> 2013</xref>), Gymnotidae (<xref ref-type="bibr" rid="B49">Mendes-Júnior 2015</xref>) and in Sternopygidae (<xref ref-type="bibr" rid="B68">Zakon <italic>et al.</italic> 1991</xref>; <xref ref-type="bibr" rid="B32">Giora and Fialho 2009</xref>; Vari <italic>et al.</italic> 2012) has also been reported. However, for Rhamphichthyidae (<italic>Ramphichthys + Gymnorhamphicthys + Iracema</italic> + <italic>Hypopygus</italic> + <italic>Steatogenys</italic>; <xref ref-type="bibr" rid="B7">Carvalho 2013</xref>; <xref ref-type="bibr" rid="B65">Tagliacollo <italic>et al.</italic> 2015</xref>) we have found no recorded instances of sexual dimorphism in the literature.</p>
+			<p>Recently, we had the opportunity to study the reproductive biology and spatial distribution of individuals of <italic>Gymnorhamphichthys rondoni</italic> (Miranda Ribeiro, 1920), a strictly psammophilous electric knifefish widely distributed in the Amazon Basin and a common inhabitant of upland forest streams of the Brazilian Amazon (<xref ref-type="bibr" rid="B69">Zuanon <italic>et al</italic>. 2006</xref>; <xref ref-type="bibr" rid="B7">Carvalho 2013</xref>). During the study, we noted differences in the proportional size of the head, as well as in the conspicuouness of the urogenital papilla between male and female specimens, which suggested a possible case of sexual dimorphism. Therefore, our objective was to evaluate the occurrence of secondary sexual dimorphism in a population of <italic>G. rondoni</italic> in a Central Amazon forest stream by analyzing external morphometric parameters.</p>
+		</sec>
+		<sec sec-type="materials|methods">
+			<title>MATERIAL AND METHODS</title>
+			<p>We collected 45 adult individuals (36 females and nine males) of <italic>Gymnorhamphichthys rondoni</italic> using an electric fish detector (<xref ref-type="bibr" rid="B15">Crampton <italic>et al.</italic> 2007</xref>) and hand nets in a <italic>terra firme</italic> forest stream at Fazenda Dimona of the Biological Dynamics of Forest Fragments Project (BDFFP - http://pdbff.inpa.gov.br/), located about 80 km north of Manaus, Amazonas state, Brazil. The studied forest stream is a tributary of the Cuieiras River in the Negro River basin, in the central Brazilian Amazon. The studied stream section (2º21’1.41”S, 60º5’44.31”W) has a width of 3 - 5 m, maximum depth of 1.5 m, a predominantly sandy substrate with coarse litter deposits, and the channel almost completely shaded by riparian forest canopy. The water was clear, acidic (pH ~5.0), with low electric conductivity (~10 µS*cm<sup>-1</sup>), and temperature of 23-24 ºC. In addition to the collected fish, we also used preserved specimens from the Fish Collection of the Instituto Nacional de Pesquisas da Amazônia (INPA-ICT). All specimens had the abdominal cavity opened for identification of sex via gonadal examination. We retained for subsequent analyzes only the adult specimens (i.e. those with gonads classified as in late maturation, spawning or regenerating, according to definitions by <xref ref-type="bibr" rid="B6">Brown-Peterson <italic>et al.</italic> 2011</xref>). Combining the 45 specimens collected by us with 81 adult specimens from INPA’s Fish Collection we had a final sample of 63 females and 63 males (Supplementary Material, <xref ref-type="table" rid="t3">Table S1</xref>).</p>
+			<p>To quantify morphological characteristics, we used digital calipers and measured (in mm) the length of snout to posterior end of anal-fin (LEA), length of anal-fin length (LAF), distance from anus to anal-fin origin (DAAF), distance from the genital papilla to anal-fin origin (DPAF), body height (BH), and head length (HL) (<xref ref-type="fig" rid="f1">Figure 1</xref>). Morphometric differences between males and females were tested with a Kruskal-Wallis test, as the data distribution lacked normality. The morphometric variables were also analyzed using Principal Component Analysis (PCA) via R statistical software (<xref ref-type="bibr" rid="B60">R Core Team 2016</xref>). Since the first component usually is strongly influenced by the size of the specimens, we plotted the data considering the first principal component (PC1 x PC2) and the next two components (PC2 x PC3) to depict the ordination without the effect of body size.</p>
+			<p>
+				<fig id="f1">
+					<label>Figure 1</label>
+					<caption>
+						<title>Schematic drawing of <italic>Gymnorhamphichthys rondoni</italic> in lateral view showing the morphological measurements used in this study: DAAF = distance from anus to anal-fin origin; DPAF = distance from urogenital papilla to anal-fin origin; HL = head length; LAF = length of anal-fin; LEA = length from snout to posterior end of anal-fin.</title>
+					</caption>
+					<graphic xlink:href="1809-4392-aa-49-03-213-gf1.jpg"/>
+				</fig>
+			</p>
+			<p>To check for occurrence of sexual dimorphism in the urogenital papilla, we used an extended focus stereomicroscope to produce lateral and ventral images of the papillae of adult male and female <italic>G. rondoni</italic>. All the procedures in this study involving animals were in accordance with and duly approved by the Ethics Committee on Animal Use (CEUA/INPA, protocol #022/2016).</p>
+		</sec>
+		<sec sec-type="results">
+			<title>RESULTS</title>
+			<p>The morphometric analysis showed that female <italic>G. rondoni</italic> had a longer anal-fin (LAF), a larger distance between the urogenital papilla and the anal-fin origin (DPAF) and a larger distance from the anus to the anal-fin origin (DAAF), whereas males presented a longer head (HL) (<xref ref-type="fig" rid="f2">Figure 2</xref>, <xref ref-type="table" rid="t1">Table 1</xref>).</p>
+			<p>
+				<fig id="f2">
+					<label>Figure 2</label>
+					<caption>
+						<title>Images of a female and male <italic>Gymnorhamphichtys rondoni</italic> collected in a forest stream tributary of the Cuieiras River in the Negro River basin, central Brazilian Amazon. LEA female = 123.74 mm; LEA male = 117.3 mm. Scale bars = 10 mm</title>
+					</caption>
+					<graphic xlink:href="1809-4392-aa-49-03-213-gf2.jpg"/>
+				</fig>
+			</p>
+			<p>
+				<table-wrap id="t1">
+					<label>Table 1</label>
+					<caption>
+						<title>Summary of morphometric measurements (median (minimum - maximum)) in mm, and statistics of the Kruskal-Wallis rank sum test for females (n=63) and males (n=63) of <italic>Gymnorhamphichthys rondoni</italic>. For all tests, df = 1. Values followed by * indicate significant differences between genders. </title>
+					</caption>
+					<table>
+						<colgroup>
+							<col/>
+							<col/>
+							<col/>
+							<col/>
+							<col/>
+						</colgroup>
+						<thead>
+							<tr>
+								<th align="left">Measurements </th>
+								<th align="center">Females</th>
+								<th align="center">Males</th>
+								<th align="center">H</th>
+								<th align="center">p-value</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td align="left">Length from snout to posterior end of anal-fin (LEA)</td>
+								<td align="center">129.99 (77.19 - 185.15)</td>
+								<td align="center">126.3 (102.1 - 153.3)</td>
+								<td align="center">0.9006</td>
+								<td align="center">0.3426</td>
+							</tr>
+							<tr>
+								<td align="left">Length of anal-fin (LAF)</td>
+								<td align="center">103.54 (60.32 - 143.50)</td>
+								<td align="center">94.56 (65.38 - 120.87)</td>
+								<td align="center">54.736</td>
+								<td align="center">0.01931*</td>
+							</tr>
+							<tr>
+								<td align="left">Distance from the urogenital papilla to the anal-fin origin (DPAF)</td>
+								<td align="center">13.65 (2.24 - 22.14)</td>
+								<td align="center">4.32 (2.42 - 5.88)</td>
+								<td align="center">82.678</td>
+								<td align="center">2.20E-16*</td>
+							</tr>
+							<tr>
+								<td align="left">Distance from the anus to the anal-fin origin (DAAF)</td>
+								<td align="center">11.070 (0.94 - 19.310)</td>
+								<td align="center">4.82 (2.67 - 6.64)</td>
+								<td align="center">67.635</td>
+								<td align="center">2.20E-16*</td>
+							</tr>
+							<tr>
+								<td align="left">Body height (BH)</td>
+								<td align="center">4.05 (2.05 - 6.65)</td>
+								<td align="center">4.03 (3.07 - 5.09)</td>
+								<td align="center">0.45012</td>
+								<td align="center">0.5023</td>
+							</tr>
+							<tr>
+								<td align="left">Head length (HL)</td>
+								<td align="center">28.18 (12.13 - 40.53)</td>
+								<td align="center">32.01 (26.17 - 38.79)</td>
+								<td align="center">14.042</td>
+								<td align="center">0.0001788*</td>
+							</tr>
+						</tbody>
+					</table>
+				</table-wrap>
+			</p>
+			<p>The first three morphometric-based PCA components explained 64.5%, 21% and 8.4% of observed variance, respectively (<xref ref-type="fig" rid="f3">Figure 3</xref>). The first principal component (PC1) was strongly influenced by negative values of variables related to body size of the specimens, such as length from snout to posterior end of anal-fin (LEA) and LAF. The second component (PC2) was positively influenced by head length (HL) and negatively by DPAF and DAAF. The third component was negatively influenced by HL and positively by LAF (<xref ref-type="table" rid="t2">Table 2</xref>). PCA ordination separated males and females of <italic>G. rondoni</italic> mainly along the second principal component (<xref ref-type="fig" rid="f3">Figures 3</xref>a and 3b). Females were larger than males, had a shorter head and body heigth, and a wider distance between the urogenital papilla and the anal fin origin, whereas males were smaller, had a longer head and a higher body height, and a smaller space between the urogenital papilla and the anal fin origin. </p>
+			<p>
+				<fig id="f3">
+					<label>Figure 3</label>
+					<caption>
+						<title>Principal Component Analysis of morphometric data of male and female specimens of <italic>Gymnorhamphichthys rondoni</italic> showing (a) the first and second components (PC1 x PC2), and (b) the second and third components (PC2 x PC3). Blue dots = males, red dots = females. HL = head length; BH = body height; LEA = length from snout to posterior end of anal-fin; LAF = length of anal-fin; DAAF = distance from anus to anal-fin origin; DPAF = distance from urogenital papilla to anal-fin origin. This figure is in color in the electronic version.</title>
+					</caption>
+					<graphic xlink:href="1809-4392-aa-49-03-213-gf3.jpg"/>
+				</fig>
+			</p>
+			<p>
+				<table-wrap id="t2">
+					<label>Table 2</label>
+					<caption>
+						<title>Variable loadings on the first two principal components (PCs) for <italic>Gymnorhamphichthys rondoni</italic> (n= 126)</title>
+					</caption>
+					<table>
+						<colgroup>
+							<col/>
+							<col/>
+							<col/>
+							<col/>
+						</colgroup>
+						<thead>
+							<tr>
+								<th align="left">Measurements </th>
+								<th align="center">PC1</th>
+								<th align="center">PC2</th>
+								<th align="center">PC3</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td align="left">Length from snout to posterior end of anal-fin (LEA)</td>
+								<td align="center">-1.995</td>
+								<td align="center">0.4436</td>
+								<td align="center">0.5030</td>
+							</tr>
+							<tr>
+								<td align="left">Length of anal-fin (LAF)</td>
+								<td align="center">-1.944</td>
+								<td align="center">0.1023</td>
+								<td align="center">0.8152</td>
+							</tr>
+							<tr>
+								<td align="left">Distance from the urogenital papilla to the anal-fin origin (DPAF)</td>
+								<td align="center">-1.559</td>
+								<td align="center">-1.3665</td>
+								<td align="center">-0.4481</td>
+							</tr>
+							<tr>
+								<td align="left">Distance from the anus to the anal-fin origin (DAAF)</td>
+								<td align="center">-1.790</td>
+								<td align="center">-1.0331</td>
+								<td align="center">-0.4671</td>
+							</tr>
+							<tr>
+								<td align="left">Body height (BH)</td>
+								<td align="center">-1.718</td>
+								<td align="center">0.7164</td>
+								<td align="center">0.0462</td>
+							</tr>
+							<tr>
+								<td align="left">Head length (HL)</td>
+								<td align="center">-1.147</td>
+								<td align="center">1.4522</td>
+								<td align="center">-0.9878</td>
+							</tr>
+							<tr>
+								<td align="left">Explained variance</td>
+								<td align="center">64.5</td>
+								<td align="center">21.0</td>
+								<td align="center">8.4</td>
+							</tr>
+							<tr>
+								<td align="left">Cumulative variance (%)</td>
+								<td align="center">64.5</td>
+								<td align="center">85.5</td>
+								<td align="center">93.9</td>
+							</tr>
+						</tbody>
+					</table>
+				</table-wrap>
+			</p>
+			<p>We found differences in the shape and position of the urogenital papilla between males and females (<xref ref-type="fig" rid="f4">Figure 4</xref>). Female papillae were more horizontally elongated and approximately 10 times larger than those of males, and were located on a vertical line below the eye, while male papillae were located on a vertical line below the operculum. In females, papillae may expand remarkably during oocyte passage (<xref ref-type="fig" rid="f4">Figures 4</xref>g and 4h).</p>
+			<p>
+				<fig id="f4">
+					<label>Figure 4</label>
+					<caption>
+						<title>Urogenital papilla of female and male <italic>Gymnorhamphichthys rondoni</italic>. In all images, the anterior portion of the body is towards the left. (a) Side view of head of a female showing urogenital papilla (blue arrow). (b) Side view of head of a male showing urogenital papilla (blue arrow). (c) Ventral view of head of a female showing urogenital papilla (blue arrow) and anus (green arrow). (d) Ventral view of head of a male showing urogenital papilla (blue arrow) and anus (green arrow). (e) Side view of female urogenital papilla. (f) Side view of male urogenital papilla. (g) Side view of urogenital papilla of a female with an oocyte (red arrow) inside. (h) Ventral view of head of a female with oocyte at the end of urogenital papilla. Blue arrow = urogenital papilla, green arrow = anus, red arrow = oocyte position. LEA female = 145.83 mm; LEA male = 144.83 mm. This figure is in color in the electronic version.</title>
+					</caption>
+					<graphic xlink:href="1809-4392-aa-49-03-213-gf4.jpg"/>
+				</fig>
+			</p>
+		</sec>
+		<sec sec-type="discussion">
+			<title>DISCUSSION</title>
+			<p>The observed sexual dimorphism in <italic>G. rondoni</italic> was related to body size, anal fin length, head length and to urogenital papilla shape and relative position on the body. Males had a proportionally larger head than females, whereas females had a longer anal fin, a larger distance between the urogenital papilla and the anal-fin origin, and a larger distance from the anus to the anal-fin origin. In females the papilla was elongated horizontally, longer than that of males and located on the vertical line below the eye. In males the papila was vertically elongated, smaller than that of females and located on a vertical line below the opercular opening. As far as we searched the scientific litterature, this is the first recorded case of sexual dimorphism in a species of Rhamphichthyidae.</p>
+			<p>In Gymnotiformes, it is relatively common to find sexual dimorphism in head shape and snout size (<xref ref-type="bibr" rid="B18">de Santana 2003</xref>; <xref ref-type="bibr" rid="B1">Albert and Crampton 2009</xref>). Tooth shape, size and position also differ between genders of several species of the apteronotid genus <italic>Sternarchorhynchus</italic> (de Santana and Vari 2010), and in “super-males” of <italic>Sternarchogiton nattereri</italic> (<xref ref-type="bibr" rid="B12">Cox Fernandes <italic>et al.</italic> 2010</xref>), in which males have hypertrophied and partially exteriorized teeth that seems to be related to male-male conflicts, or to their use when courting females (Cox Fernandes <italic>et al.</italic> 2010). However, the ecological or behavioral meaning of the larger head in male <italic>G. rondoni</italic> is not clear. Contrary to the obvious potential use of a hyperthophied mouth and teeth during aggressive encounters or agonistic displays by male apteronotid knifefishes, the small mouth and delicate tubular snout of male <italic>G. rondoni</italic> seems of little value during a male-male conflict. A possible alternative explanation for such a sexually dimorphic characteristic may be related to differences in foraging tactics or microhabitat use between genders, which remains to be verified.</p>
+			<p>Sexual dimorphism of the Gymnotiform urogenital papilla position was reported for 15 species of <italic>Sternarchorhynchus</italic> (Santana and Vari 2010). However, unlike <italic>G. rondoni,</italic> in <italic>Sternarchorhynchus</italic> species the urogenital papilla of males is located in a more anterior position on the body compared to females (<xref ref-type="bibr" rid="B22">de Santana and Vari 2010</xref>). In addition to this form of dimorphism, <xref ref-type="bibr" rid="B13">Cox Fernandes <italic>et al.</italic> (2014</xref>) also found a difference in the size of the urogenital papillae in <italic>Procerusternarchus pixuna</italic> (Hypopomidae), with male papillae smaller than those of females, as recorded here for <italic>G. rondoni</italic>.</p>
+			<p>When describing <italic>Gymnorhamphichthys rosamariae</italic>, <xref ref-type="bibr" rid="B61">Schwassmann (1989</xref>) reported mature males and females with elongated urogenital papillae and located at the vertical line passing through the eye, and that papilla growth and position are related to gonad development. In this way, papillae larger and closer to the eye line would indicate reproductively mature individuals, regardless of sex. There are records in Gymnotiformes species of the anus and urogenital papilla changing position on the body during ontogeny, moving gradually from the posterior region of the abdominal cavity to the cephalic region (e.g. <italic>Apteronotus caudimaculosus</italic>: <xref ref-type="bibr" rid="B18">de Santana 2003</xref>; <italic>Archolaemus blax</italic>: <xref ref-type="bibr" rid="B67">Vari <italic>et al.</italic> 2012</xref>; <italic>Distocyclus conirostris:</italic><xref ref-type="bibr" rid="B24">Dutra <italic>et al.</italic> 2014</xref>; <italic>Eigenmannia besouro</italic>: <xref ref-type="bibr" rid="B56">Peixoto and Wosiacki 2016</xref>; <italic>E. meeki</italic>: <xref ref-type="bibr" rid="B25">Dutra <italic>et al.</italic> 2017</xref>; and <italic>E. sayona:</italic><xref ref-type="bibr" rid="B55">Peixoto and Waltz 2017</xref>). This change in the relative position of the anus and urogenital papila was not detected in other examined apteronotids (<italic>Apteronotus eschmeyeri</italic>: <xref ref-type="bibr" rid="B21">de Santana <italic>et al.</italic> 2004</xref>; <italic>Sternarchogiton labiatus</italic>: de Santana and <xref ref-type="bibr" rid="B15">Crampton 2007</xref>; <italic>S. nattereri</italic>: de Santana and Crampton 2007, and Crampton 2007; <italic>Apteronotus anu</italic>: <xref ref-type="bibr" rid="B23">de Santana and Vari 2013</xref>; <italic>A. baniwa</italic>: <xref ref-type="bibr" rid="B23">de Santana and Vari 2013</xref>). We did not find evidence of an ontogenetic change in the position of the urogenital papilla of <italic>G. rondoni</italic>, as our study was limited to the analysis of adult specimens, which prevented the detection of ontogenetic variations.</p>
+			<p>The presence of larger urogenital papillae in females than in males may be related to the size of the gametes to be released, so that this characteristic should be more apparent in those species whith proportionately larger oocytes, such as <italic>G. rondoni</italic> (Garcia and Zuanon, unpublished data). On the other hand, the elongated urogenital papilla of Gymnotiform females may be related to some tactic of oocyte deposition. <italic>Gymnorhamphichthys rondoni</italic> lives only in places where the substrate is composed largely of sand, in which individuals remain buried during the day, emerging only at night to forage and perform reproductive activities (Zuanon <italic>et al.</italic> 2006). It is therefore possible that the horizontally elongated papilla aid in selection of oviposition sites, which remains to be studied. At the moment, we lack a functional explanation for the difference in the position of the urogenital papilla and anus observed in male and female <italic>G. rondoni</italic>. An anatomical study involving a complete ontogenetic series from the larval phase to sexually mature adults, would likely help to better understand the process and the biological significance of the differences reported here.</p>
+			<p>In a review of the Rhamphichthyoidea, <xref ref-type="bibr" rid="B7">Carvalho (2013</xref>) did not mention the occurrence of sexual dimorphism in species of <italic>Rhamphichthys, Gymnorhamphichthys</italic> or in <italic>Iracema caiana</italic> (Rhamphichthyinae <italic>sensu</italic> Carvalho 2013). However, our study found sexual dimorphism in relation to head length and the shape, size and position of urogenital papila for <italic>G. rondoni</italic>. Accordingly, it is possible that this species might also show sexual dimorphism in other characteristics, such as electric organ discharge patterns or in behavioral aspects, which deserve to be investigated.</p>
+		</sec>
+		<sec sec-type="conclusions">
+			<title>CONCLUSIONS</title>
+			<p>The description and quantification of secondary sexual differences in a rhamphichthyid species may help providing important new information for the understanding of the evolution of sexual dimorphism among Gymnotiformes. Moreover, the known occurrence of external morphological differences could allow sex identification of living individuals in ecological or behavioral studies, avoiding the unnecessary sacrifice of fish and reducing impacts in natural populations, which may be specially important in protected areas.</p>
+		</sec>
+	</body>
+	<back>
+		<ack>
+			<title>ACKNOWLEDGMENTS</title>
+			<p>We thank L. Rapp Py-Daniel for providing access to the ichthyological collection of Instituto Nacional de Pesquisas da Amazônia (INPA), and M. Oliveira, curator of INPA’s invertebrate colletion, for the loan of the extended focus stereomicroscope. We also thank J. Lopes, D. Bastos, E. Borghezan and C. Gualberto for assistance in the field and R. Reis for the drawing of <italic>G. rondoni.</italic> Supplementary logistics and financial support were provided by the Biological Dynamics of Forest Fragment Project’s (BDFFP) Thomas Lovejoy Research Fellowship Program, and by Conselho Nacional de Desenvolvimento Científico e Tecnológico (CNPq) (process #477251/2012-9). EQG received a research grant from Coordenação de Aperfeiçoamento de Pessoal de Nível Superior (CAPES) and JZ received a productivity grant from CNPq (#313183/2014-7). Adrian Barnett kindly provided the English language revision of the manuscript. This is contribution #59 of the Igarapés Project Technical Series and #757 of the BDFFP Technical Series.</p>
+		</ack>
+		<ref-list>
+			<ref id="B1">
+				<mixed-citation>Albert, J.A.; Crampton, W.G.R. 2009. A new species of electric knifefish, genus <italic>Compsaraia</italic> (Gymnotiformes: Apteronotidae) from the Amazon River, with extreme sexual dimorphism in snout and jaw length. <italic>Systematics and Biodiversity</italic>, 7: 81-92.</mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Albert</surname>
+							<given-names>J.A.</given-names>
+						</name>
+						<name>
+							<surname>Crampton</surname>
+							<given-names>W.G.R.</given-names>
+						</name>
+					</person-group>
+					<year>2009</year>
+					<article-title>A new species of electric knifefish, genus Compsaraia (Gymnotiformes: Apteronotidae) from the Amazon River, with extreme sexual dimorphism in snout and jaw length</article-title>
+					<source>Systematics and Biodiversity</source>
+					<volume>7</volume>
+					<fpage>81</fpage>
+					<lpage>92</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B2">
+				<mixed-citation>Ali, H.A.; Mok, H.K.; Fine, M.L. 2016. Development and sexual dimorphism of the sonic system in deep sea neobythitine fishes: The upper continental slope. <italic>Deep-Sea Research I</italic>, 115: 293-308 </mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Ali</surname>
+							<given-names>H.A.</given-names>
+						</name>
+						<name>
+							<surname>Mok</surname>
+							<given-names>H.K.</given-names>
+						</name>
+						<name>
+							<surname>Fine</surname>
+							<given-names>M.L.</given-names>
+						</name>
+					</person-group>
+					<year>2016</year>
+					<article-title>Development and sexual dimorphism of the sonic system in deep sea neobythitine fishes: The upper continental slope</article-title>
+					<source>Deep-Sea Research I</source>
+					<volume>115</volume>
+					<fpage>293</fpage>
+					<lpage>308</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B3">
+				<mixed-citation>Andersson, M. 1994. <italic>Sexual selection</italic>. Princeton University Press, Princeton. 599p.</mixed-citation>
+				<element-citation publication-type="book">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Andersson</surname>
+							<given-names>M.</given-names>
+						</name>
+					</person-group>
+					<year>1994</year>
+					<source>Sexual selection</source>
+					<publisher-name>Princeton University Press</publisher-name>
+					<publisher-loc>Princeton</publisher-loc>
+					<size units="pages">599</size>
+				</element-citation>
+			</ref>
+			<ref id="B4">
+				<mixed-citation>Barrett, S.C.H. 2002. The evolution of plant sexual divert. <italic>Nature Reviews Genetics</italic> 3: 274-284. </mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Barrett</surname>
+							<given-names>S.C.H.</given-names>
+						</name>
+					</person-group>
+					<year>2002</year>
+					<article-title>The evolution of plant sexual divert</article-title>
+					<source>Nature Reviews Genetics</source>
+					<volume>3</volume>
+					<fpage>274</fpage>
+					<lpage>284</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B5">
+				<mixed-citation>Böhlke, E.E. 1997. <italic>Gymnothorax robinsi</italic> (Anguilliformes, Muraenidae), a new dwarf moray with sexually dimorphic dentition from the Indo-Pacific. <italic>Bulletin of Marine Science</italic>, 60: 648-655.</mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Böhlke</surname>
+							<given-names>E.E.</given-names>
+						</name>
+					</person-group>
+					<year>1997</year>
+					<article-title>Gymnothorax robinsi (Anguilliformes, Muraenidae), a new dwarf moray with sexually dimorphic dentition from the Indo-Pacific</article-title>
+					<source>Bulletin of Marine Science</source>
+					<volume>60</volume>
+					<fpage>648</fpage>
+					<lpage>655</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B6">
+				<mixed-citation>Brown-Peterson, N.J.; Wyanski, D.M.; Saborido-Rey, F.; Macewicz, B.J.; Lowerre-Barbieri, S.K. 2011 A standardized terminology of describing reproductive development in fishes. <italic>Marine and Coastal Fisheries, Dynamics, Management and Ecosystem Science</italic>, 3: 52-70. </mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Brown-Peterson</surname>
+							<given-names>N.J.</given-names>
+						</name>
+						<name>
+							<surname>Wyanski</surname>
+							<given-names>D.M.</given-names>
+						</name>
+						<name>
+							<surname>Saborido-Rey</surname>
+							<given-names>F.</given-names>
+						</name>
+						<name>
+							<surname>Macewicz</surname>
+							<given-names>B.J.</given-names>
+						</name>
+						<name>
+							<surname>Lowerre-Barbieri</surname>
+							<given-names>S.K.</given-names>
+						</name>
+					</person-group>
+					<year>2011</year>
+					<article-title>A standardized terminology of describing reproductive development in fishes</article-title>
+					<source>Marine and Coastal Fisheries, Dynamics, Management and Ecosystem Science</source>
+					<volume>3</volume>
+					<fpage>52</fpage>
+					<lpage>70</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B7">
+				<mixed-citation>Carvalho, T.P. 2013. <italic>Systematics and Evolution of the toothless knifefishes Rhamphichthyoidea Mago-Leccia (Actinopterygii: Gymnotiformes): Diversification in South American Freshwaters</italic>. Doctoral thesis, University of Louisiana at Lafayette. 487p.</mixed-citation>
+				<element-citation publication-type="thesis">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Carvalho</surname>
+							<given-names>T.P.</given-names>
+						</name>
+					</person-group>
+					<year>2013</year>
+					<source>Systematics and Evolution of the toothless knifefishes Rhamphichthyoidea Mago-Leccia (Actinopterygii: Gymnotiformes): Diversification in South American Freshwaters</source>
+					<comment content-type="degree">Doctoral</comment>
+					<publisher-name>University of Louisiana at Lafayette</publisher-name>
+					<size units="pages">487</size>
+				</element-citation>
+			</ref>
+			<ref id="B8">
+				<mixed-citation>Ceballos, C.P.; Adams, D.C.; Iverson, J.B.; Valenzuela, N. 2013. Phylogenetic patterns of sexual size dimorphism in turtles and their implications for Rensch’s Rule. <italic>Evolutionary Biology</italic> 40: 194-208. </mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Ceballos</surname>
+							<given-names>C.P.</given-names>
+						</name>
+						<name>
+							<surname>Adams</surname>
+							<given-names>D.C.</given-names>
+						</name>
+						<name>
+							<surname>Iverson</surname>
+							<given-names>J.B.</given-names>
+						</name>
+						<name>
+							<surname>Valenzuela</surname>
+							<given-names>N.</given-names>
+						</name>
+					</person-group>
+					<year>2013</year>
+					<article-title>Phylogenetic patterns of sexual size dimorphism in turtles and their implications for Rensch’s Rule</article-title>
+					<source>Evolutionary Biology</source>
+					<volume>40</volume>
+					<fpage>194</fpage>
+					<lpage>208</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B9">
+				<mixed-citation>Cox Fernandes, C. 1998. Sex-related morphological variation in two species of Apteronotid fishes (Gymnotiformes) from the Amazon River Basin. <italic>American Society of Ichthyologists and Herpetologists</italic>, 3: 730-735.</mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Cox Fernandes</surname>
+							<given-names>C.</given-names>
+						</name>
+					</person-group>
+					<year>1998</year>
+					<article-title>Sex-related morphological variation in two species of Apteronotid fishes (Gymnotiformes) from the Amazon River Basin</article-title>
+					<source>American Society of Ichthyologists and Herpetologists</source>
+					<volume>3</volume>
+					<fpage>730</fpage>
+					<lpage>735</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B10">
+				<mixed-citation>Cox Fernandes, C.; Lundberg, J.G.; Riginos, C. 2002. Largest of all electric-fish snouts: hypermorphic facial growth in male <italic>Apteronotus hasemani</italic> and the identity of <italic>Apteronotus anas</italic> (Gymnotiformes: Apteronotidae). <italic>Copeia</italic>, 2002: 52-61.</mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Cox Fernandes</surname>
+							<given-names>C.</given-names>
+						</name>
+						<name>
+							<surname>Lundberg</surname>
+							<given-names>J.G.</given-names>
+						</name>
+						<name>
+							<surname>Riginos</surname>
+							<given-names>C.</given-names>
+						</name>
+					</person-group>
+					<year>2002</year>
+					<article-title>Largest of all electric-fish snouts: hypermorphic facial growth in male Apteronotus hasemani and the identity of Apteronotus anas (Gymnotiformes: Apteronotidae)</article-title>
+					<source>Copeia</source>
+					<volume>2002</volume>
+					<fpage>52</fpage>
+					<lpage>61</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B11">
+				<mixed-citation>Cox Fernandes, C.; Lundberg, J.G.; Sullivan, J.P. 2009. <italic>Oedemognathus exodon</italic> and <italic>Sternarchogiton nattereri</italic> (Apteronotidae, Gymnotiformes): the case for sexual dimorphism and conspecificity. <italic>Proceedings of the Academy of Natural Sciences of Philadelphia</italic>, 158: 193-207. </mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Cox Fernandes</surname>
+							<given-names>C.</given-names>
+						</name>
+						<name>
+							<surname>Lundberg</surname>
+							<given-names>J.G.</given-names>
+						</name>
+						<name>
+							<surname>Sullivan</surname>
+							<given-names>J.P.</given-names>
+						</name>
+					</person-group>
+					<year>2009</year>
+					<article-title>Oedemognathus exodon and Sternarchogiton nattereri (Apteronotidae, Gymnotiformes): the case for sexual dimorphism and conspecificity</article-title>
+					<source>Proceedings of the Academy of Natural Sciences of Philadelphia</source>
+					<volume>158</volume>
+					<fpage>193</fpage>
+					<lpage>207</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B12">
+				<mixed-citation>Cox Fernandes, C.; Smith, G.T.; Podos, J.; Nogueira, A.; Inoue, L.; Akama, A.; Ho, W.W.; Alves-Gomes, J. 2010. Hormonal and behavioral correlates of morphological variation in an Amazonian electric fish (<italic>Sternarchogiton nattereri</italic>: Apteronotidae). <italic>Hormones and Behavior</italic>, 58: 660-668. </mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Cox Fernandes</surname>
+							<given-names>C.</given-names>
+						</name>
+						<name>
+							<surname>Smith</surname>
+							<given-names>G.T.</given-names>
+						</name>
+						<name>
+							<surname>Podos</surname>
+							<given-names>J.</given-names>
+						</name>
+						<name>
+							<surname>Nogueira</surname>
+							<given-names>A.</given-names>
+						</name>
+						<name>
+							<surname>Inoue</surname>
+							<given-names>L.</given-names>
+						</name>
+						<name>
+							<surname>Akama</surname>
+							<given-names>A.</given-names>
+						</name>
+						<name>
+							<surname>Ho</surname>
+							<given-names>W.W.</given-names>
+						</name>
+						<name>
+							<surname>Alves-Gomes</surname>
+							<given-names>J.</given-names>
+						</name>
+					</person-group>
+					<year>2010</year>
+					<article-title>Hormonal and behavioral correlates of morphological variation in an Amazonian electric fish (Sternarchogiton nattereri: Apteronotidae)</article-title>
+					<source>Hormones and Behavior</source>
+					<volume>58</volume>
+					<fpage>660</fpage>
+					<lpage>668</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B13">
+				<mixed-citation>Cox Fernandes, C.; Nogueira, A.; Alves-Gomes, J.A. 2014. <italic>Procerusternarchus pixuna</italic>, a new genus and species of electric knifefish (Gymnotiformes: Hypopomidae, Microsternarchini) from the Negro River, South America. <italic>Proceedings of the Academy of Natural Sciences of Philadelphia</italic>, 163: 95-118.</mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Cox Fernandes</surname>
+							<given-names>C.</given-names>
+						</name>
+						<name>
+							<surname>Nogueira</surname>
+							<given-names>A.</given-names>
+						</name>
+						<name>
+							<surname>Alves-Gomes</surname>
+							<given-names>J.A.</given-names>
+						</name>
+					</person-group>
+					<year>2014</year>
+					<article-title>Procerusternarchus pixuna, a new genus and species of electric knifefish (Gymnotiformes: Hypopomidae, Microsternarchini) from the Negro River, South America</article-title>
+					<source>Proceedings of the Academy of Natural Sciences of Philadelphia</source>
+					<volume>163</volume>
+					<fpage>95</fpage>
+					<lpage>118</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B14">
+				<mixed-citation>Crabtree, C.B. 1985. Sexual dimorphism of the upper jaw in <italic>Gillichthys mirabilis</italic>. <italic>Bulletin Southern California Academy Science</italic>, 84: 96-103.</mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Crabtree</surname>
+							<given-names>C.B.</given-names>
+						</name>
+					</person-group>
+					<year>1985</year>
+					<article-title>Sexual dimorphism of the upper jaw in Gillichthys mirabilis</article-title>
+					<source>Bulletin Southern California Academy Science</source>
+					<volume>84</volume>
+					<fpage>96</fpage>
+					<lpage>103</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B15">
+				<mixed-citation>Crampton, W.G.R.; Wells, J.K.; Smyth, C.; Walz, S.A. 2007. Design and construction of an Electric Fish Finder. <italic>Neotropical Ichthyology</italic>, 5: 425-428. </mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Crampton</surname>
+							<given-names>W.G.R.</given-names>
+						</name>
+						<name>
+							<surname>Wells</surname>
+							<given-names>J.K.</given-names>
+						</name>
+						<name>
+							<surname>Smyth</surname>
+							<given-names>C.</given-names>
+						</name>
+						<name>
+							<surname>Walz</surname>
+							<given-names>S.A.</given-names>
+						</name>
+					</person-group>
+					<year>2007</year>
+					<article-title>Design and construction of an Electric Fish Finder</article-title>
+					<source>Neotropical Ichthyology</source>
+					<volume>5</volume>
+					<fpage>425</fpage>
+					<lpage>428</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B16">
+				<mixed-citation>Crampton, W.G.R.; de Santana, C.D.; Waddell, JC.; Lovejoy, N.R. 2016. A taxonomic revision of the Neotropical electric fish genus <italic>Brachyhypopomus</italic> (Ostariophysi: Gymnotiformes: Hypopomidae), with descriptions of 15 new species. <italic>Neotropical Ichthyology</italic>,14: e150146. </mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Crampton</surname>
+							<given-names>W.G.R.</given-names>
+						</name>
+						<name>
+							<surname>de Santana</surname>
+							<given-names>C.D.</given-names>
+						</name>
+						<name>
+							<surname>Waddell</surname>
+							<given-names>JC.</given-names>
+						</name>
+						<name>
+							<surname>Lovejoy</surname>
+							<given-names>N.R.</given-names>
+						</name>
+					</person-group>
+					<year>2016</year>
+					<article-title>A taxonomic revision of the Neotropical electric fish genus Brachyhypopomus (Ostariophysi: Gymnotiformes: Hypopomidae), with descriptions of 15 new species</article-title>
+					<source>Neotropical Ichthyology</source>
+					<volume>14</volume>
+					<pub-id pub-id-type="art-access-id">e150146</pub-id>
+				</element-citation>
+			</ref>
+			<ref id="B17">
+				<mixed-citation>Darwin, C.R. 1871. <italic>The descent of man, and selection in relation to sex</italic>. John Murray, London. 864p.</mixed-citation>
+				<element-citation publication-type="book">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Darwin</surname>
+							<given-names>C.R.</given-names>
+						</name>
+					</person-group>
+					<year>1871</year>
+					<source>The descent of man, and selection in relation to sex</source>
+					<publisher-name>John Murray</publisher-name>
+					<publisher-loc>London</publisher-loc>
+					<size units="pages">864</size>
+				</element-citation>
+			</ref>
+			<ref id="B18">
+				<mixed-citation>de Santana, C.D. 2003 <italic>Apteronotus caudimaculosus</italic> n. sp. (Gymnotiformes: Apteronotidae), a sexually dimorphic black ghost knifefish from the Pantanal, Western Brazil, with a note on the monophyly of the <italic>A. albifrons</italic> species complex. <italic>Zootaxa</italic>, 252: 1-11.</mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>de Santana</surname>
+							<given-names>C.D.</given-names>
+						</name>
+					</person-group>
+					<year>2003</year>
+					<article-title>Apteronotus caudimaculosus n. sp. (Gymnotiformes: Apteronotidae), a sexually dimorphic black ghost knifefish from the Pantanal, Western Brazil, with a note on the monophyly of the A. albifrons species complex</article-title>
+					<source>Zootaxa</source>
+					<volume>252</volume>
+					<fpage>1</fpage>
+					<lpage>11</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B19">
+				<mixed-citation>de Santana C.D.; Cox Fernandes, C. 2012. A new species of sexually dimorphic electric knifefish from the Amazon Basin, Brazil (Gymnotiformes: Apteronotidae) <italic>Copeia</italic>, 2012: 283-292. </mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>de Santana</surname>
+							<given-names>C.D.</given-names>
+						</name>
+						<name>
+							<surname>Cox Fernandes</surname>
+							<given-names>C.</given-names>
+						</name>
+					</person-group>
+					<year>2012</year>
+					<article-title>A new species of sexually dimorphic electric knifefish from the Amazon Basin, Brazil (Gymnotiformes: Apteronotidae)</article-title>
+					<source>Copeia</source>
+					<volume>2012</volume>
+					<fpage>283</fpage>
+					<lpage>292</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B20">
+				<mixed-citation>de Santana, C.D.; Crampton, W.G.R. 2007. Revision of the deep-channel electric fish genus <italic>Sternarchogiton</italic> (Gymnotiformes: Apteronotidae). <italic>Copeia</italic>, 2007: 387-402.</mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>de Santana</surname>
+							<given-names>C.D.</given-names>
+						</name>
+						<name>
+							<surname>Crampton</surname>
+							<given-names>W.G.R.</given-names>
+						</name>
+					</person-group>
+					<year>2007</year>
+					<article-title>Revision of the deep-channel electric fish genus Sternarchogiton (Gymnotiformes: Apteronotidae)</article-title>
+					<source>Copeia</source>
+					<volume>2007</volume>
+					<fpage>387</fpage>
+					<lpage>402</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B21">
+				<mixed-citation>de Santana, C.D.; Maldonado-Ocampo, J.A. Severi, W.; Mendes, G.N. 2004. <italic>Apteronotus eschmeyeri</italic>, a new species of ghost knifefish from the Magdalena Basin, Colombia (Gymnotiformes: Apteronotidae) <italic>Zootaxa</italic>, 410: 1-11.</mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>de Santana</surname>
+							<given-names>C.D.</given-names>
+						</name>
+						<name>
+							<surname>Maldonado-Ocampo</surname>
+							<given-names>W.</given-names>
+						</name>
+						<name>
+							<surname>Mendes</surname>
+							<given-names>G.N.</given-names>
+						</name>
+					</person-group>
+					<year>2004</year>
+					<article-title>Apteronotus eschmeyeri, a new species of ghost knifefish from the Magdalena Basin, Colombia (Gymnotiformes: Apteronotidae)</article-title>
+					<source>Zootaxa</source>
+					<volume>410</volume>
+					<fpage>1</fpage>
+					<lpage>11</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B22">
+				<mixed-citation>de Santana, C.D.; Vari, R.P. 2010. Electric fishes of the genus <italic>Sternarchorhynchus</italic> (Teleostei, Ostariophysi, Gymnotiformes); phylogenetic and revisionary studies. <italic>Zoological FriendlyISISJournal of the Linnean Society</italic>, 159: 223-371.</mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>de Santana</surname>
+							<given-names>C.D.</given-names>
+						</name>
+						<name>
+							<surname>Vari</surname>
+							<given-names>R.P.</given-names>
+						</name>
+					</person-group>
+					<year>2010</year>
+					<article-title>Electric fishes of the genus Sternarchorhynchus (Teleostei, Ostariophysi, Gymnotiformes); phylogenetic and revisionary studies</article-title>
+					<source>Zoological FriendlyISISJournal of the Linnean Society</source>
+					<volume>159</volume>
+					<fpage>223</fpage>
+					<lpage>371</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B23">
+				<mixed-citation>de Santana, C.D.; Vari, R.P. 2013. Brown ghost electric fishes of the <italic>Apteronotus leptorhynchus</italic> species-group (Ostariophysi, Gymnotiformes); monophyly, major clades, and revision. <italic>Zoological FriendlyISISJournal of the Linnean Society</italic>, 168: 564-596. </mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>de Santana</surname>
+							<given-names>C.D.</given-names>
+						</name>
+						<name>
+							<surname>Vari</surname>
+							<given-names>R.P.</given-names>
+						</name>
+					</person-group>
+					<year>2013</year>
+					<article-title>Brown ghost electric fishes of the Apteronotus leptorhynchus species-group (Ostariophysi, Gymnotiformes); monophyly, major clades, and revision</article-title>
+					<source>Zoological FriendlyISISJournal of the Linnean Society</source>
+					<volume>168</volume>
+					<fpage>564</fpage>
+					<lpage>596</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B24">
+				<mixed-citation>Dutra, G.M.; de Santana, C.D.; Vari, R.P.; Wosiacki, W.B. 2014. The south american electric glass knifefish genus <italic>Distocyclus</italic> (Gymnotiformes: Sternopygidae): Redefinition and revision. <italic>Copeia</italic>, 2: 345-354. </mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Dutra</surname>
+							<given-names>G.M.</given-names>
+						</name>
+						<name>
+							<surname>de Santana</surname>
+							<given-names>C.D.</given-names>
+						</name>
+						<name>
+							<surname>Vari</surname>
+							<given-names>R.P.</given-names>
+						</name>
+						<name>
+							<surname>Wosiacki</surname>
+							<given-names>W.B.</given-names>
+						</name>
+					</person-group>
+					<year>2014</year>
+					<article-title>The south american electric glass knifefish genus Distocyclus (Gymnotiformes: Sternopygidae): Redefinition and revision</article-title>
+					<source>Copeia</source>
+					<volume>2</volume>
+					<fpage>345</fpage>
+					<lpage>354</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B25">
+				<mixed-citation>Dutra, G.M.; de Santana, C.D.; Vari, R.P.; Wosiacki, W.B. 2017. A new species of the glass electric knifefish genus <italic>Eigenmannia</italic> Jordan and Evermann (Teleostei: Gymnotiformes: Sternopygidae) from Río Tuíra Basin, Panama. <italic>Copeia</italic>, 2017: 85-91. </mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Dutra</surname>
+							<given-names>G.M.</given-names>
+						</name>
+						<name>
+							<surname>de Santana</surname>
+							<given-names>C.D.</given-names>
+						</name>
+						<name>
+							<surname>Vari</surname>
+							<given-names>R.P.</given-names>
+						</name>
+						<name>
+							<surname>Wosiacki</surname>
+							<given-names>W.B.</given-names>
+						</name>
+					</person-group>
+					<year>2017</year>
+					<article-title>A new species of the glass electric knifefish genus Eigenmannia Jordan and Evermann (Teleostei: Gymnotiformes: Sternopygidae) from Río Tuíra Basin, Panama</article-title>
+					<source>Copeia</source>
+					<volume>2017</volume>
+					<fpage>85</fpage>
+					<lpage>91</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B26">
+				<mixed-citation>Erlandsson, A.; Ribbink, A.J. 1997. Patterns of sexual size dimorphim in african cichlid fishes. <italic>South African FriendlyISISJournal of Science</italic>, 93: 498-508.</mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Erlandsson</surname>
+							<given-names>A.</given-names>
+						</name>
+						<name>
+							<surname>Ribbink</surname>
+							<given-names>A.J.</given-names>
+						</name>
+					</person-group>
+					<year>1997</year>
+					<article-title>Patterns of sexual size dimorphim in african cichlid fishes</article-title>
+					<source>South African FriendlyISISJournal of Science</source>
+					<volume>93</volume>
+					<fpage>498</fpage>
+					<lpage>508</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B27">
+				<mixed-citation>Esmaeili, H.R.; Sayyadzadeh, G.; Amini Chermahini, M. 2017. Sexual dimorphism in two catfish species, <italic>Mystus pelusius</italic> (Solander, 1794) and <italic>Glyptothorax silviae</italic> Coad, 1981 (Teleostei: Siluriformes). <italic>Turkish FriendlyISISJournal of Zoology</italic>, 41: 144-149. </mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Esmaeili</surname>
+							<given-names>H.R.</given-names>
+						</name>
+						<name>
+							<surname>Sayyadzadeh</surname>
+							<given-names>G.</given-names>
+						</name>
+						<name>
+							<surname>Amini Chermahini</surname>
+							<given-names>M.</given-names>
+						</name>
+					</person-group>
+					<year>2017</year>
+					<article-title>Sexual dimorphism in two catfish species, Mystus pelusius (Solander, 1794) and Glyptothorax silviae Coad, 1981 (Teleostei: Siluriformes)</article-title>
+					<source>Turkish FriendlyISISJournal of Zoology</source>
+					<volume>41</volume>
+					<fpage>144</fpage>
+					<lpage>149</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B28">
+				<mixed-citation>Evans, K.M.; Bernt, MJ.; Kolmann, M.A.; Ford, K.L.; Albert, J.S. 2018. Why the long face? Static allometry in the sexually dimorphic phenotypes of Neotropical electric fishes. <italic>Zoological FriendlyISISJournal of the Linnean Society</italic>, XX: 1-17. </mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Evans</surname>
+							<given-names>K.M.</given-names>
+						</name>
+						<name>
+							<surname>Bernt</surname>
+							<given-names>MJ.</given-names>
+						</name>
+						<name>
+							<surname>Kolmann</surname>
+							<given-names>M.A.</given-names>
+						</name>
+						<name>
+							<surname>Ford</surname>
+							<given-names>K.L.</given-names>
+						</name>
+						<name>
+							<surname>Albert</surname>
+							<given-names>J.S.</given-names>
+						</name>
+					</person-group>
+					<year>2018</year>
+					<article-title>Why the long face? Static allometry in the sexually dimorphic phenotypes of Neotropical electric fishes</article-title>
+					<source>Zoological FriendlyISISJournal of the Linnean Society</source>
+					<volume>XX</volume>
+					<fpage>1</fpage>
+					<lpage>17</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B29">
+				<mixed-citation>Fugere, V.; Krake, R. 2009. Electric signals and species recognition in the wave-type gymnotiform fish <italic>Apteronotus leptorhynchus</italic>. <italic>The FriendlyISISJournal of Experimental Biology</italic>, 213: 225-236. </mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Fugere</surname>
+							<given-names>V.</given-names>
+						</name>
+						<name>
+							<surname>Krake</surname>
+							<given-names>R.</given-names>
+						</name>
+					</person-group>
+					<year>2009</year>
+					<article-title>Electric signals and species recognition in the wave-type gymnotiform fish Apteronotus leptorhynchus</article-title>
+					<source>The FriendlyISISJournal of Experimental Biology</source>
+					<volume>213</volume>
+					<fpage>225</fpage>
+					<lpage>236</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B30">
+				<mixed-citation>Garcia, E.Q.; Cambra, R.; Melo, G.A.R. 2006. Sexual associations for two species of mutillid wasps (Hymenoptera, Mutillidae), with the description of a new species of Anomophotopsis. <italic>Revista Brasileira de Entomologia</italic>, 50: 379-384. </mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Garcia</surname>
+							<given-names>E.Q.</given-names>
+						</name>
+						<name>
+							<surname>Cambra</surname>
+							<given-names>R.</given-names>
+						</name>
+						<name>
+							<surname>Melo</surname>
+							<given-names>G.A.R.</given-names>
+						</name>
+					</person-group>
+					<year>2006</year>
+					<article-title>Sexual associations for two species of mutillid wasps (Hymenoptera, Mutillidae), with the description of a new species of Anomophotopsis</article-title>
+					<source>Revista Brasileira de Entomologia</source>
+					<volume>50</volume>
+					<fpage>379</fpage>
+					<lpage>384</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B31">
+				<mixed-citation>Gavassa, S.; Roach, J.P.; Stoddard, P.K. 2013. Social regulation of electric signal plasticity in male <italic>Brachyhypopomus gauderio</italic>. <italic>FriendlyISISJournal of Comparative Physiology A</italic>, 199: 375-384.</mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Gavassa</surname>
+							<given-names>S.</given-names>
+						</name>
+						<name>
+							<surname>Roach</surname>
+							<given-names>J.P.</given-names>
+						</name>
+						<name>
+							<surname>Stoddard</surname>
+							<given-names>P.K.</given-names>
+						</name>
+					</person-group>
+					<year>2013</year>
+					<article-title>Social regulation of electric signal plasticity in male Brachyhypopomus gauderio</article-title>
+					<source>FriendlyISISJournal of Comparative Physiology A</source>
+					<volume>199</volume>
+					<fpage>375</fpage>
+					<lpage>384</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B32">
+				<mixed-citation>Giora, J.; Fialho, C.B. 2009. Reproductive biology of weakly electric fish <italic>Eigenmannia trilineata</italic> López and Castello, 1966 (Teleostei, Sternopygidae). <italic>Brazilian Archives of Biology and Technology</italic>, 52: 617-628. </mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Giora</surname>
+							<given-names>J.</given-names>
+						</name>
+						<name>
+							<surname>Fialho</surname>
+							<given-names>C.B.</given-names>
+						</name>
+					</person-group>
+					<year>2009</year>
+					<article-title>Reproductive biology of weakly electric fish Eigenmannia trilineata López and Castello, 1966 (Teleostei, Sternopygidae).</article-title>
+					<source>Brazilian Archives of Biology and Technology</source>
+					<volume>52</volume>
+					<fpage>617</fpage>
+					<lpage>628</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B33">
+				<mixed-citation>Giora, J.; Malabarba, L.R.; Crampton, W. 2008. <italic>Brachyhypopomus draco</italic>, a new sexually dimorphic species of Neotropical electric fish from southern South America (Gymnotiformes: Hypopomidae) <italic>Neotropical Ichthyology</italic>, 6: 159-168.</mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Giora</surname>
+							<given-names>J.</given-names>
+						</name>
+						<name>
+							<surname>Malabarba</surname>
+							<given-names>L.R.</given-names>
+						</name>
+						<name>
+							<surname>Crampton</surname>
+							<given-names>W.</given-names>
+						</name>
+					</person-group>
+					<year>2008</year>
+					<article-title>Brachyhypopomus draco, a new sexually dimorphic species of Neotropical electric fish from southern South America (Gymnotiformes: Hypopomidae)</article-title>
+					<source>Neotropical Ichthyology</source>
+					<volume>6</volume>
+					<fpage>159</fpage>
+					<lpage>168</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B34">
+				<mixed-citation>Gomes, U.L.; Tomas, A.R.G. 1991. Secondary sexual dimorphsim in the shark <italic>Scyliorhinus haeckelli</italic> Ribeiro, 1907 (Elasmobranchii, Scyliorhinidae). <italic>Anais da Academia Brasileira de Ciências</italic>, 63: 192-200.</mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Gomes</surname>
+							<given-names>U.L.</given-names>
+						</name>
+						<name>
+							<surname>Tomas</surname>
+							<given-names>A.R.G.</given-names>
+						</name>
+					</person-group>
+					<year>1991</year>
+					<article-title>Secondary sexual dimorphsim in the shark Scyliorhinus haeckelli Ribeiro, 1907 (Elasmobranchii, Scyliorhinidae)</article-title>
+					<source>Anais da Academia Brasileira de Ciências</source>
+					<volume>63</volume>
+					<fpage>192</fpage>
+					<lpage>200</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B35">
+				<mixed-citation>Goto, A. 1984. Sexual dimorphism in a river sculpin <italic>Cottus hangiongensis</italic>. <italic>Japanese FriendlyISISJournal of Ichthyology</italic>, 31: 161-166.</mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Goto</surname>
+							<given-names>A.</given-names>
+						</name>
+					</person-group>
+					<year>1984</year>
+					<article-title>Sexual dimorphism in a river sculpin Cottus hangiongensis</article-title>
+					<source>Japanese FriendlyISISJournal of Ichthyology</source>
+					<volume>31</volume>
+					<fpage>161</fpage>
+					<lpage>166</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B36">
+				<mixed-citation>Gramitto, M.E.; Coen, B. 1997. New records of <italic>Bellottia apoda</italic> (Bythitidae) in the Adriatic Sea with notes on morphology and biology. <italic>Cybium</italic>, 21: 163-172.</mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Gramitto</surname>
+							<given-names>M.E.</given-names>
+						</name>
+						<name>
+							<surname>Coen</surname>
+							<given-names>B.</given-names>
+						</name>
+					</person-group>
+					<year>1997</year>
+					<article-title>New records of Bellottia apoda (Bythitidae) in the Adriatic Sea with notes on morphology and biology</article-title>
+					<source>Cybium</source>
+					<volume>21</volume>
+					<fpage>163</fpage>
+					<lpage>172</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B37">
+				<mixed-citation>Hagedorn, M.; Carr, C. 1985. Single electrocytes produce a sexually dimorphic signal in South America electric fish, <italic>Hypopomus occidentalis</italic> (Gymnotiformes, Hypopomidae). <italic>FriendlyISISJournal of Comparative Physiology</italic>, 156: 511-523.</mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Hagedorn</surname>
+							<given-names>M.</given-names>
+						</name>
+						<name>
+							<surname>Carr</surname>
+							<given-names>C.</given-names>
+						</name>
+					</person-group>
+					<year>1985</year>
+					<article-title>Single electrocytes produce a sexually dimorphic signal in South America electric fish, Hypopomus occidentalis (Gymnotiformes, Hypopomidae)</article-title>
+					<source>FriendlyISISJournal of Comparative Physiology</source>
+					<volume>156</volume>
+					<fpage>511</fpage>
+					<lpage>523</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B38">
+				<mixed-citation>Hastings, P.A. 1991. Ontogeny of sexual dimorphism in the angel blenny, <italic>Coralliozetus angelica</italic> (Blennioidei: Chaenopsidae). <italic>Copeia</italic>, 1991: 969-978.</mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Hastings</surname>
+							<given-names>P.A.</given-names>
+						</name>
+					</person-group>
+					<year>1991</year>
+					<article-title>Ontogeny of sexual dimorphism in the angel blenny, Coralliozetus angelica (Blennioidei: Chaenopsidae)</article-title>
+					<source>Copeia</source>
+					<volume>1991</volume>
+					<fpage>969</fpage>
+					<lpage>978</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B39">
+				<mixed-citation>Hilton, E.; Cox Fernandes, C. 2006. Sexual dimorphism in <italic>Apteronotus bonapartii</italic> (Gymnotiformes: Apteronotidae). <italic>Copeia</italic>, 2006: 826-833.</mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Hilton</surname>
+							<given-names>E.</given-names>
+						</name>
+						<name>
+							<surname>Cox Fernandes</surname>
+							<given-names>C.</given-names>
+						</name>
+					</person-group>
+					<year>2006</year>
+					<article-title>Sexual dimorphism in Apteronotus bonapartii (Gymnotiformes: Apteronotidae)</article-title>
+					<source>Copeia</source>
+					<volume>2006</volume>
+					<fpage>826</fpage>
+					<lpage>833</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B40">
+				<mixed-citation>Ho, W.W.; Cox Fernandes, C.; Alves-Gomes, J.A.; Smith, G.T. 2010. Sex diferences in the electrocommunication signals of the electric fish <italic>Apteronotus bonapartii</italic>. <italic>Ethology</italic>, 116: 1050-1064. </mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Ho</surname>
+							<given-names>W.W.</given-names>
+						</name>
+						<name>
+							<surname>Cox Fernandes</surname>
+							<given-names>C.</given-names>
+						</name>
+						<name>
+							<surname>Alves-Gomes</surname>
+							<given-names>J.A.</given-names>
+						</name>
+						<name>
+							<surname>Smith</surname>
+							<given-names>G.T.</given-names>
+						</name>
+					</person-group>
+					<year>2010</year>
+					<article-title>Sex diferences in the electrocommunication signals of the electric fish Apteronotus bonapartii</article-title>
+					<source>Ethology</source>
+					<volume>116</volume>
+					<fpage>1050</fpage>
+					<lpage>1064</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B41">
+				<mixed-citation>Ho, W.W.; Rack, J.M.; Smith, G.T. 2013. Divergence in androgen sensitivity contributes to population differences in sexual dimorphism of electrocommunication behavior. <italic>Hormones and Behavior</italic>, 63: 49-53. </mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Ho</surname>
+							<given-names>W.W.</given-names>
+						</name>
+						<name>
+							<surname>Rack</surname>
+							<given-names>J.M.</given-names>
+						</name>
+						<name>
+							<surname>Smith</surname>
+							<given-names>G.T.</given-names>
+						</name>
+					</person-group>
+					<year>2013</year>
+					<article-title>Divergence in androgen sensitivity contributes to population differences in sexual dimorphism of electrocommunication behavior</article-title>
+					<source>Hormones and Behavior</source>
+					<volume>63</volume>
+					<fpage>49</fpage>
+					<lpage>53</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B42">
+				<mixed-citation>Hopkins, C.D. 1999. Design features for electric communication. <italic>The FriendlyISISJournal of Experimental Biology</italic>, 202: 1217-1228. </mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Hopkins</surname>
+							<given-names>C.D.</given-names>
+						</name>
+					</person-group>
+					<year>1999</year>
+					<article-title>Design features for electric communication</article-title>
+					<source>The FriendlyISISJournal of Experimental Biology</source>
+					<volume>202</volume>
+					<fpage>1217</fpage>
+					<lpage>1228</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B43">
+				<mixed-citation>Hopkins, C.D.; Confort, N.C.; Bastian, J.; Bass, A.H. 1990. Functional analysis of sexual dimorfism in an electric fish, <italic>Hypopomus pinnicaudatus</italic>, Order Gymnotiformes. <italic>Brain, Behavior and Evolution</italic>, 35: 350-367.</mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Hopkins</surname>
+							<given-names>C.D.</given-names>
+						</name>
+						<name>
+							<surname>Confort</surname>
+							<given-names>N.C.</given-names>
+						</name>
+						<name>
+							<surname>Bastian</surname>
+							<given-names>J.</given-names>
+						</name>
+						<name>
+							<surname>Bass</surname>
+							<given-names>A.H.</given-names>
+						</name>
+					</person-group>
+					<year>1990</year>
+					<article-title>Functional analysis of sexual dimorfism in an electric fish, Hypopomus pinnicaudatus, Order Gymnotiformes</article-title>
+					<source>Brain, Behavior and Evolution</source>
+					<volume>35</volume>
+					<fpage>350</fpage>
+					<lpage>367</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B44">
+				<mixed-citation>Kajiura, S.M.; Tricas, T.C. 1996. Seasonal dynamics of dental sexual dimorphism in the Atlantic stingray <italic>Dasyatis sabina</italic>. <italic>FriendlyISISJournal of Experimental Biology</italic>, 10: 2297-2306.</mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Kajiura</surname>
+							<given-names>S.M.</given-names>
+						</name>
+						<name>
+							<surname>Tricas</surname>
+							<given-names>T.C.</given-names>
+						</name>
+					</person-group>
+					<year>1996</year>
+					<article-title>Seasonal dynamics of dental sexual dimorphism in the Atlantic stingray Dasyatis sabina</article-title>
+					<source>FriendlyISISJournal of Experimental Biology</source>
+					<volume>10</volume>
+					<fpage>2297</fpage>
+					<lpage>2306</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B45">
+				<mixed-citation>Karino, K.; Someya, C. 2007. The influence of sex, line, and fight experience on aggressiveness of the Siamese fighting fish in intrasexual competition. <italic>Behavioural Processes</italic>, 75: 283-289.</mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Karino</surname>
+							<given-names>K.</given-names>
+						</name>
+						<name>
+							<surname>Someya</surname>
+							<given-names>C.</given-names>
+						</name>
+					</person-group>
+					<year>2007</year>
+					<article-title>The influence of sex, line, and fight experience on aggressiveness of the Siamese fighting fish in intrasexual competition</article-title>
+					<source>Behavioural Processes</source>
+					<volume>75</volume>
+					<fpage>283</fpage>
+					<lpage>289</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B46">
+				<mixed-citation>Lloyd, D.G.; Webb, C.J. 1977. Secundary sex characters in plants. <italic>The Botanical Review</italic> 43: 177-216.</mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Lloyd</surname>
+							<given-names>D.G.</given-names>
+						</name>
+						<name>
+							<surname>Webb</surname>
+							<given-names>C.J.</given-names>
+						</name>
+					</person-group>
+					<year>1977</year>
+					<article-title>Secundary sex characters in plants</article-title>
+					<source>The Botanical Review</source>
+					<volume>43</volume>
+					<fpage>177</fpage>
+					<lpage>216</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B47">
+				<mixed-citation>Loker, E.S.; Brant, S. 2006. Diversification, dioecy and dimorphism in schistosomes. <italic>Trends in Parasitology</italic>, 22: 521-528. </mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Loker</surname>
+							<given-names>E.S.</given-names>
+						</name>
+						<name>
+							<surname>Brant</surname>
+							<given-names>S.</given-names>
+						</name>
+					</person-group>
+					<year>2006</year>
+					<article-title>Diversification, dioecy and dimorphism in schistosomes</article-title>
+					<source>Trends in Parasitology</source>
+					<volume>22</volume>
+					<fpage>521</fpage>
+					<lpage>528</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B48">
+				<mixed-citation>McMillan, P.J. 1999. New grenadier fishes of the genus Coryphaenoides (Pisces; Macrouridae), one from of New Zealand and one widespread in the southern Indo West pacific and Atlantic Oceans. <italic>New Zealand FriendlyISISJournal of Marine and Freshwater Research</italic>, 33: 481-489.</mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>McMillan</surname>
+							<given-names>P.J.</given-names>
+						</name>
+					</person-group>
+					<year>1999</year>
+					<article-title>New grenadier fishes of the genus Coryphaenoides (Pisces; Macrouridae), one from of New Zealand and one widespread in the southern Indo West pacific and Atlantic Oceans</article-title>
+					<source>New Zealand FriendlyISISJournal of Marine and Freshwater Research</source>
+					<volume>33</volume>
+					<fpage>481</fpage>
+					<lpage>489</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B49">
+				<mixed-citation>Mendes-Júnior, R.N.G.; Sá-Oliveira, J.C.; Ferrari, S.F. 2015. Biology of the electric eel, <italic>Electrophorus electricus</italic>, Linnaeus, 1766 (Gymnotiformes: Gymnotidae) on the floodplain of the Curiau´ River, eastern Amazonia. <italic>Reviews in Fish Biology and Fisheries</italic> 26: 83-91. </mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Mendes-Júnior</surname>
+							<given-names>R.N.G.</given-names>
+						</name>
+						<name>
+							<surname>Sá-Oliveira</surname>
+							<given-names>J.C.</given-names>
+						</name>
+						<name>
+							<surname>Ferrari</surname>
+							<given-names>S.F.</given-names>
+						</name>
+					</person-group>
+					<year>2015</year>
+					<article-title>Biology of the electric eel, Electrophorus electricus, Linnaeus, 1766 (Gymnotiformes: Gymnotidae) on the floodplain of the Curiau´ River, eastern Amazonia</article-title>
+					<source>Reviews in Fish Biology and Fisheries</source>
+					<volume>26</volume>
+					<fpage>83</fpage>
+					<lpage>91</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B50">
+				<mixed-citation>Morbey, Y.E. 2018. Female-biased dimorphism in size and age at maturity is reduced at higher latitudes in lake whitefish <italic>Coregonus clupeaformis</italic>. <italic>FriendlyISISJournal of Fish Biology</italic>, 93: 40-46. </mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Morbey</surname>
+							<given-names>Y.E.</given-names>
+						</name>
+					</person-group>
+					<year>2018</year>
+					<article-title>Female-biased dimorphism in size and age at maturity is reduced at higher latitudes in lake whitefish Coregonus clupeaformis</article-title>
+					<source>FriendlyISISJournal of Fish Biology</source>
+					<volume>93</volume>
+					<fpage>40</fpage>
+					<lpage>46</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B51">
+				<mixed-citation>Neat, F.C.; Huntingford, F.A.; Beveridge, M.M. 1998. Fighting and assessment in male cichlid fish: the effects of asymmetries in gonadal state and body size. <italic>Animal Behaviour</italic>, 55: 883-891.</mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Neat</surname>
+							<given-names>F.C.</given-names>
+						</name>
+						<name>
+							<surname>Huntingford</surname>
+							<given-names>F.A.</given-names>
+						</name>
+						<name>
+							<surname>Beveridge</surname>
+							<given-names>M.M.</given-names>
+						</name>
+					</person-group>
+					<year>1998</year>
+					<article-title>Fighting and assessment in male cichlid fish: the effects of asymmetries in gonadal state and body size</article-title>
+					<source>Animal Behaviour</source>
+					<volume>55</volume>
+					<fpage>883</fpage>
+					<lpage>891</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B52">
+				<mixed-citation>Nogueira, A.P.R. 2006. <italic>Diversidade do repertório eletrocomunicativo de Microsternachus cf. bilineatus Fernández-Yépez, 1968 (Pisces: Gymnotiformes) durante a maturação sexual em cativeiro</italic>. Master’s dissertation, Instituto Nacional de Pesquisas da Amazônia, Brazil. 82p. (<ext-link ext-link-type="uri" xlink:href="https://bdtd.inpa.gov.br/bitstream/tede/2285/5/Dissertac%CC%A7a%CC%83o%20-%20Dalton%20Nunes%20versa%CC%83o%20final.pdf">https://bdtd.inpa.gov.br/bitstream/tede/2285/5/Dissertac%CC%A7a%CC%83o%20-%20Dalton%20Nunes%20versa%CC%83o%20final.pdf</ext-link>)</mixed-citation>
+				<element-citation publication-type="thesis">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Nogueira</surname>
+							<given-names>A.P.R.</given-names>
+						</name>
+					</person-group>
+					<year>2006</year>
+					<source>Diversidade do repertório eletrocomunicativo de Microsternachus cf. bilineatus Fernández-Yépez, 1968 (Pisces: Gymnotiformes) durante a maturação sexual em cativeiro</source>
+					<comment content-type="degree">Master</comment>
+					<publisher-name>Instituto Nacional de Pesquisas da Amazônia</publisher-name>
+					<publisher-loc>Brazil</publisher-loc>
+					<size units="pages">82</size>
+					<ext-link ext-link-type="uri" xlink:href="https://bdtd.inpa.gov.br/bitstream/tede/2285/5/Dissertac%CC%A7a%CC%83o%20-%20Dalton%20Nunes%20versa%CC%83o%20final.pdf">https://bdtd.inpa.gov.br/bitstream/tede/2285/5/Dissertac%CC%A7a%CC%83o%20-%20Dalton%20Nunes%20versa%CC%83o%20final.pdf</ext-link>
+				</element-citation>
+			</ref>
+			<ref id="B53">
+				<mixed-citation>Parker, G.A. 1992. The evolution of sexual size dimorphism in fish. <italic>FriendlyISISJournal of Fish Biology</italic>, 41: 1-20. </mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Parker</surname>
+							<given-names>G.A.</given-names>
+						</name>
+					</person-group>
+					<year>1992</year>
+					<article-title>The evolution of sexual size dimorphism in fish</article-title>
+					<source>FriendlyISISJournal of Fish Biology</source>
+					<volume>41</volume>
+					<fpage>1</fpage>
+					<lpage>20</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B54">
+				<mixed-citation>Parmentier, E.; Boistel, R.; Bahri, M.A.; Plenevaux, A.; Schwarzhans, A. 2018. Sexual dimorphism in the sonic system and otolith morphology of <italic>Neobythites gilli</italic> (Ophidiiformes). <italic>FriendlyISISJournal of Zoology</italic>, 305: 274-280. </mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Parmentier</surname>
+							<given-names>E.</given-names>
+						</name>
+						<name>
+							<surname>Boistel</surname>
+							<given-names>R.</given-names>
+						</name>
+						<name>
+							<surname>Bahri</surname>
+							<given-names>M.A.</given-names>
+						</name>
+						<name>
+							<surname>Plenevaux</surname>
+							<given-names>A.</given-names>
+						</name>
+						<name>
+							<surname>Schwarzhans</surname>
+							<given-names>A.</given-names>
+						</name>
+					</person-group>
+					<year>2018</year>
+					<article-title>Sexual dimorphism in the sonic system and otolith morphology of Neobythites gilli (Ophidiiformes)</article-title>
+					<source>FriendlyISISJournal of Zoology</source>
+					<volume>305</volume>
+					<fpage>274</fpage>
+					<lpage>280</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B55">
+				<mixed-citation>Peixoto, L.A.W.; Waltz, B.T. 2017. A new species of the <italic>Eigenmannia trilineata</italic> (Gymnotiformes: Sternopygidae) species group from the río Orinoco basin, Venezuela. <italic>Neotropical Ichthyology</italic>, 15: e150199. </mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Peixoto</surname>
+							<given-names>L.A.W.</given-names>
+						</name>
+						<name>
+							<surname>Waltz</surname>
+							<given-names>B.T.</given-names>
+						</name>
+					</person-group>
+					<year>2017</year>
+					<article-title>A new species of the Eigenmannia trilineata (Gymnotiformes: Sternopygidae) species group from the río Orinoco basin, Venezuela</article-title>
+					<source>Neotropical Ichthyology</source>
+					<volume>15</volume>
+					<pub-id pub-id-type="art-access-id">e150199</pub-id>
+				</element-citation>
+			</ref>
+			<ref id="B56">
+				<mixed-citation>Peixoto, L.A.W.; Wosiacki, W.B. 2016. <italic>Eigenmannia besouro</italic>, a new species of the <italic>Eigenmannia trilineata</italic> species-group (Gymnotiformes: Sternopygidae) from the rio São Francisco basin, northeastern Brazil. <italic>Zootaxa</italic>, 4126: 262-270. </mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Peixoto</surname>
+							<given-names>L.A.W.</given-names>
+						</name>
+						<name>
+							<surname>Wosiacki</surname>
+							<given-names>W.B.</given-names>
+						</name>
+					</person-group>
+					<year>2016</year>
+					<article-title>Eigenmannia besouro, a new species of the Eigenmannia trilineata species-group (Gymnotiformes: Sternopygidae) from the rio São Francisco basin, northeastern Brazil</article-title>
+					<source>Zootaxa</source>
+					<volume>4126</volume>
+					<fpage>262</fpage>
+					<lpage>270</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B57">
+				<mixed-citation>Pires, T.H.S.; Farago, T.B.; Campos, D.F.; Cardoso, G.M.; Zuanon, J. 2016. Traits of a lineage with extraordinary geographical range: ecology, behavior and life-history of the sailfin tetra <italic>Crenuchus spilurus</italic>. <italic>Environmental Biology of Fishes</italic>, 99: 925-937. </mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Pires</surname>
+							<given-names>T.H.S.</given-names>
+						</name>
+						<name>
+							<surname>Farago</surname>
+							<given-names>T.B.</given-names>
+						</name>
+						<name>
+							<surname>Campos</surname>
+							<given-names>D.F.</given-names>
+						</name>
+						<name>
+							<surname>Cardoso</surname>
+							<given-names>G.M.</given-names>
+						</name>
+						<name>
+							<surname>Zuanon</surname>
+							<given-names>J.</given-names>
+						</name>
+					</person-group>
+					<year>2016</year>
+					<article-title>Traits of a lineage with extraordinary geographical range: ecology, behavior and life-history of the sailfin tetra Crenuchus spilurus</article-title>
+					<source>Environmental Biology of Fishes</source>
+					<volume>99</volume>
+					<fpage>925</fpage>
+					<lpage>937</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B58">
+				<mixed-citation>Rapp Py-Daniel, L.; Cox Fernandes, C. 2005. Dimorfismo sexual em Siluriformes e Gymnotiformes. <italic>Acta Amazonica</italic>, 35: 97-110.</mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Rapp Py-Daniel</surname>
+							<given-names>L.</given-names>
+						</name>
+						<name>
+							<surname>Cox Fernandes</surname>
+							<given-names>C.</given-names>
+						</name>
+					</person-group>
+					<year>2005</year>
+					<article-title>Dimorfismo sexual em Siluriformes e Gymnotiformes</article-title>
+					<source>Acta Amazonica</source>
+					<volume>35</volume>
+					<fpage>97</fpage>
+					<lpage>110</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B59">
+				<mixed-citation>Robertson, D.R.; Warner, R.R. 1978. Sexual patterns in the labroid fishes of the western Caribbean, II: The Parrotfishes (Scaridae). <italic>Smithsonian Contribuitions to Zoology</italic>, Nr. 255. 36p.</mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Robertson</surname>
+							<given-names>D.R.</given-names>
+						</name>
+						<name>
+							<surname>Warner</surname>
+							<given-names>R.R.</given-names>
+						</name>
+					</person-group>
+					<year>1978</year>
+					<article-title>Sexual patterns in the labroid fishes of the western Caribbean, II: The Parrotfishes (Scaridae)</article-title>
+					<source>Smithsonian Contribuitions to Zoology</source>
+					<volume>255</volume>
+					<size units="pages">36</size>
+				</element-citation>
+			</ref>
+			<ref id="B60">
+				<mixed-citation>RStudio Team. 2016. <italic>RStudio</italic>: Integrated Development for R. RStudio, Inc., Boston. (<ext-link ext-link-type="uri" xlink:href="http://www.rstudio.com/">http://www.rstudio.com/</ext-link>).</mixed-citation>
+				<element-citation publication-type="software">
+					<person-group person-group-type="author">
+						<collab>RStudio Team</collab>
+					</person-group>
+					<year>2016</year>
+					<source><italic>RStudio</italic>: Integrated Development for R</source>
+					<publisher-name>RStudio, Inc.</publisher-name>
+					<publisher-loc>Boston</publisher-loc>
+					<ext-link ext-link-type="uri" xlink:href="http://www.rstudio.com/">http://www.rstudio.com/</ext-link>
+				</element-citation>
+			</ref>
+			<ref id="B61">
+				<mixed-citation>Schwassmann, H.O. 1989. <italic>Gymnorhamphichthys rosamariae</italic>, a new species of knifefish (Ramphichthyidae, Gymnotiformes) from the upper Rio Negro, Brazil. <italic>Studies on Neotropical Fauna and Environment</italic>, 24: 157-167.</mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Schwassmann</surname>
+							<given-names>H.O.</given-names>
+						</name>
+					</person-group>
+					<year>1989</year>
+					<article-title>Gymnorhamphichthys rosamariae, a new species of knifefish (Ramphichthyidae, Gymnotiformes) from the upper Rio Negro, Brazil</article-title>
+					<source>Studies on Neotropical Fauna and Environment</source>
+					<volume>24</volume>
+					<fpage>157</fpage>
+					<lpage>167</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B62">
+				<mixed-citation>Skjæraasen, J.E.; Rowe, S.; Hutchings, J.A. 2006. Sexual dimorphism in pelvic fin length of Atlantic cod. <italic>Canadian FriendlyISISJournal of Zoology</italic> , 84: 865-870. </mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Skjæraasen</surname>
+							<given-names>J.E.</given-names>
+						</name>
+						<name>
+							<surname>Rowe</surname>
+							<given-names>S.</given-names>
+						</name>
+						<name>
+							<surname>Hutchings</surname>
+							<given-names>J.A.</given-names>
+						</name>
+					</person-group>
+					<year>2006</year>
+					<article-title>Sexual dimorphism in pelvic fin length of Atlantic cod</article-title>
+					<source>Canadian FriendlyISISJournal of Zoology</source>
+					<volume>84</volume>
+					<fpage>865</fpage>
+					<lpage>870</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B63">
+				<mixed-citation>Smith, G.T.; Combs, N. 2008. Serotonergic activation of 5HT1A and 5HT2 receptors modulates sexually dimorphic communication signals in the weakly electric fish <italic>Apteronotus leptorhynchus</italic>. <italic>Hormones and Behavior</italic>, 54: 69-82. </mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Smith</surname>
+							<given-names>G.T.</given-names>
+						</name>
+						<name>
+							<surname>Combs</surname>
+							<given-names>N.</given-names>
+						</name>
+					</person-group>
+					<year>2008</year>
+					<article-title>Serotonergic activation of 5HT1A and 5HT2 receptors modulates sexually dimorphic communication signals in the weakly electric fish Apteronotus leptorhynchus</article-title>
+					<source>Hormones and Behavior</source>
+					<volume>54</volume>
+					<fpage>69</fpage>
+					<lpage>82</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B64">
+				<mixed-citation>Stoddard, P. 1999. Predation enhances complexity in the evolution of electric fish signals. <italic>Nature</italic>, 400: 254-256. </mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Stoddard</surname>
+							<given-names>P.</given-names>
+						</name>
+					</person-group>
+					<year>1999</year>
+					<article-title>Predation enhances complexity in the evolution of electric fish signals</article-title>
+					<source>Nature</source>
+					<volume>400</volume>
+					<fpage>254</fpage>
+					<lpage>256</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B65">
+				<mixed-citation>Tagliacollo, V.A.; Bernt, M,J.; Craig, J.M.; Oliveira, C.; Albert, J.S. 2015. Model-based total evidence phylogeny of Neotropical eletric knifefishes (Teleostei, Gymnotiformes). <italic>Molecular Phylogenetics and Evolution</italic>, 95: 20-33. </mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Tagliacollo</surname>
+							<given-names>V.A.</given-names>
+						</name>
+						<name>
+							<surname>Bernt</surname>
+							<given-names>M,J.</given-names>
+						</name>
+						<name>
+							<surname>Craig</surname>
+							<given-names>J.M.</given-names>
+						</name>
+						<name>
+							<surname>Oliveira</surname>
+							<given-names>C.</given-names>
+						</name>
+						<name>
+							<surname>Albert</surname>
+							<given-names>J.S.</given-names>
+						</name>
+					</person-group>
+					<year>2015</year>
+					<article-title>Model-based total evidence phylogeny of Neotropical eletric knifefishes (Teleostei, Gymnotiformes)</article-title>
+					<source>Molecular Phylogenetics and Evolution</source>
+					<volume>95</volume>
+					<fpage>20</fpage>
+					<lpage>33</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B66">
+				<mixed-citation>Tsuji, K.; Fukami, T. 2018. Community-wide consequences of sexual dimorphism: néctar microbes in dioecious plants. <italic>Ecology</italic> 99: 2476-2484. </mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Tsuji</surname>
+							<given-names>K.</given-names>
+						</name>
+						<name>
+							<surname>Fukami</surname>
+							<given-names>T.</given-names>
+						</name>
+					</person-group>
+					<year>2018</year>
+					<article-title>Community-wide consequences of sexual dimorphism: néctar microbes in dioecious plants</article-title>
+					<source>Ecology</source>
+					<volume>99</volume>
+					<fpage>2476</fpage>
+					<lpage>2484</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B67">
+				<mixed-citation>Vari, R.P.; de Santana, C.D.; Wosiacki, W.B. 2012. South American electric knifefishes of the genus <italic>Archolaemus</italic> (Ostariophysi, Gymnotiformes): undetected diversity in a clade of rheophiles. <italic>Zoological FriendlyISISJournal of the Linnean Society</italic>, 165: 670-699. </mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Vari</surname>
+							<given-names>R.P.</given-names>
+						</name>
+						<name>
+							<surname>de Santana</surname>
+							<given-names>C.D.</given-names>
+						</name>
+						<name>
+							<surname>Wosiacki</surname>
+							<given-names>W.B.</given-names>
+						</name>
+					</person-group>
+					<year>2012</year>
+					<article-title>South American electric knifefishes of the genus Archolaemus (Ostariophysi, Gymnotiformes): undetected diversity in a clade of rheophiles</article-title>
+					<source>Zoological FriendlyISISJournal of the Linnean Society</source>
+					<volume>165</volume>
+					<fpage>670</fpage>
+					<lpage>699</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B68">
+				<mixed-citation>Zakon, H.H.; Thomas, P.; Yan, H.Y. 1991. Electric organ discharge frequency and plasma sex steroid levels during gonadal recrudescence in a natural populaion of the weakly electric fish <italic>Sternopygus macrurus</italic>. <italic>FriendlyISISJournal of Comparative Physiology A</italic>, 169: 493-499.</mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Zakon</surname>
+							<given-names>H.H.</given-names>
+						</name>
+						<name>
+							<surname>Thomas</surname>
+							<given-names>P.</given-names>
+						</name>
+						<name>
+							<surname>Yan</surname>
+							<given-names>H.Y.</given-names>
+						</name>
+					</person-group>
+					<year>1991</year>
+					<article-title>Electric organ discharge frequency and plasma sex steroid levels during gonadal recrudescence in a natural populaion of the weakly electric fish Sternopygus macrurus</article-title>
+					<source>FriendlyISISJournal of Comparative Physiology A</source>
+					<volume>169</volume>
+					<fpage>493</fpage>
+					<lpage>499</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B69">
+				<mixed-citation>Zuanon, J.A.S.; Bockmann, F.A.; Sazima, I. 2006. A remarkable sand-dwelling fish assemblage from central Amazonia, with comments on the evolution of psammophily in South American freshwater fishes. <italic>Neotropical Ichthyology</italic>, 4: 107-118.</mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Zuanon</surname>
+							<given-names>J.A.S.</given-names>
+						</name>
+						<name>
+							<surname>Bockmann</surname>
+							<given-names>F.A.</given-names>
+						</name>
+						<name>
+							<surname>Sazima</surname>
+							<given-names>I.</given-names>
+						</name>
+					</person-group>
+					<year>2006</year>
+					<article-title>A remarkable sand-dwelling fish assemblage from central Amazonia, with comments on the evolution of psammophily in South American freshwater fishes</article-title>
+					<source>Neotropical Ichthyology</source>
+					<volume>4</volume>
+					<fpage>107</fpage>
+					<lpage>118</lpage>
+				</element-citation>
+			</ref>
+		</ref-list>
+		<fn-group>
+			<fn fn-type="other" id="fn2">
+				<label>CITE AS:</label>
+				<p> Garcia, E.Q.; Zuanon, J. 2019. Sexual dimorphism in the electric knifefish, <italic>Gymnorhamphichthys rondoni</italic> (Rhamphichthyidae: Gymnotiformes). <italic>Acta Amazonica</italic> 49: 213-220</p>
+			</fn>
+		</fn-group>
+		<app-group>
+			<app id="app1">
+				<label>SUPPLEMENTARY MATERIAL</label>
+				<p>(only available in the electronic version)</p>
+				<p>GARCIA &amp; ZUANON. Sexual dimorphism in the electric knifefish, <italic>Gymnorhamphichthys rondoni</italic> (Rhamphichthyidae: Gymnotiformes)</p>
+				<p>
+					<table-wrap id="t3">
+						<label>Table S1</label>
+						<caption>
+							<title>Measurements (mm) used in the study of sexual dimorphism of females (F) and males (M) of <italic>Gymnorhamphichthys rondoni</italic>. LEA - length from snout to posterior end of anal fin, LAF - length of anal fin, DPAF - distance from urogenital papilla to anal fin, DAAF - distance from anus to anal fin, BH - body height, HL - length of head. DIMONA = study area at the BDFF Project; INPA-ICT = specimens from INPA’s ichthyological collection. * = Uncatalogued specimen.</title>
+						</caption>
+						<table>
+							<colgroup>
+								<col/>
+								<col/>
+								<col/>
+								<col/>
+								<col/>
+								<col/>
+								<col/>
+								<col/>
+								<col/>
+								<col/>
+								<col/>
+							</colgroup>
+							<thead>
+								<tr>
+									<th align="left">Code</th>
+									<th align="center">LEA</th>
+									<th align="center">LAF</th>
+									<th align="center">DPAF</th>
+									<th align="center">DAAF</th>
+									<th align="center">BH</th>
+									<th align="center">HL</th>
+									<th align="center">Sex</th>
+									<th align="center">Source</th>
+									<th align="center">Catalog Number</th>
+									<th align="center">Drainage</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td align="left">F1</td>
+									<td align="center">149.94</td>
+									<td align="center">115.8</td>
+									<td align="center">17.67</td>
+									<td align="center">15.61</td>
+									<td align="center">5.8</td>
+									<td align="center">33.37</td>
+									<td align="center">F</td>
+									<td align="center">DIMONA</td>
+									<td align="center">*</td>
+									<td align="center">Negro River</td>
+								</tr>
+								<tr>
+									<td align="left">F2</td>
+									<td align="center">155.06</td>
+									<td align="center">124.27</td>
+									<td align="center">15.52</td>
+									<td align="center">14.92</td>
+									<td align="center">4.92</td>
+									<td align="center">32.44</td>
+									<td align="center">F</td>
+									<td align="center">DIMONA</td>
+									<td align="center">*</td>
+									<td align="center">Negro River</td>
+								</tr>
+								<tr>
+									<td align="left">F3</td>
+									<td align="center">152.18</td>
+									<td align="center">118.87</td>
+									<td align="center">17.39</td>
+									<td align="center">15.52</td>
+									<td align="center">4.32</td>
+									<td align="center">34.48</td>
+									<td align="center">F</td>
+									<td align="center">DIMONA</td>
+									<td align="center">*</td>
+									<td align="center">Negro River</td>
+								</tr>
+								<tr>
+									<td align="left">F4</td>
+									<td align="center">140.84</td>
+									<td align="center">112.48</td>
+									<td align="center">13.61</td>
+									<td align="center">9.92</td>
+									<td align="center">4.05</td>
+									<td align="center">28.61</td>
+									<td align="center">F</td>
+									<td align="center">DIMONA</td>
+									<td align="center">*</td>
+									<td align="center">Negro River</td>
+								</tr>
+								<tr>
+									<td align="left">F5</td>
+									<td align="center">128.77</td>
+									<td align="center">102.64</td>
+									<td align="center">13.04</td>
+									<td align="center">9.26</td>
+									<td align="center">3.86</td>
+									<td align="center">26.53</td>
+									<td align="center">F</td>
+									<td align="center">DIMONA</td>
+									<td align="center">*</td>
+									<td align="center">Negro River</td>
+								</tr>
+								<tr>
+									<td align="left">F6</td>
+									<td align="center">117.98</td>
+									<td align="center">94.4</td>
+									<td align="center">11.11</td>
+									<td align="center">9.79</td>
+									<td align="center">3.94</td>
+									<td align="center">12.26</td>
+									<td align="center">F</td>
+									<td align="center">DIMONA</td>
+									<td align="center">*</td>
+									<td align="center">Negro River</td>
+								</tr>
+								<tr>
+									<td align="left">F7</td>
+									<td align="center">159.11</td>
+									<td align="center">124.93</td>
+									<td align="center">19.65</td>
+									<td align="center">17.72</td>
+									<td align="center">4.95</td>
+									<td align="center">36.5</td>
+									<td align="center">F</td>
+									<td align="center">DIMONA</td>
+									<td align="center">*</td>
+									<td align="center">Negro River</td>
+								</tr>
+								<tr>
+									<td align="left">F8</td>
+									<td align="center">151.48</td>
+									<td align="center">121.22</td>
+									<td align="center">17.65</td>
+									<td align="center">14.92</td>
+									<td align="center">5.05</td>
+									<td align="center">32.19</td>
+									<td align="center">F</td>
+									<td align="center">DIMONA</td>
+									<td align="center">*</td>
+									<td align="center">Negro River</td>
+								</tr>
+								<tr>
+									<td align="left">F9</td>
+									<td align="center">148.26</td>
+									<td align="center">116.12</td>
+									<td align="center">16.38</td>
+									<td align="center">14.73</td>
+									<td align="center">4.47</td>
+									<td align="center">32.76</td>
+									<td align="center">F</td>
+									<td align="center">DIMONA</td>
+									<td align="center">*</td>
+									<td align="center">Negro River</td>
+								</tr>
+								<tr>
+									<td align="left">F10</td>
+									<td align="center">145.52</td>
+									<td align="center">118.54</td>
+									<td align="center">12.8</td>
+									<td align="center">11.07</td>
+									<td align="center">4.48</td>
+									<td align="center">28.06</td>
+									<td align="center">F</td>
+									<td align="center">DIMONA</td>
+									<td align="center">*</td>
+									<td align="center">Negro River</td>
+								</tr>
+								<tr>
+									<td align="left">F11</td>
+									<td align="center">167.47</td>
+									<td align="center">131.73</td>
+									<td align="center">20.68</td>
+									<td align="center">18.08</td>
+									<td align="center">6.06</td>
+									<td align="center">34.53</td>
+									<td align="center">F</td>
+									<td align="center">DIMONA</td>
+									<td align="center">*</td>
+									<td align="center">Negro River</td>
+								</tr>
+								<tr>
+									<td align="left">F12</td>
+									<td align="center">171.96</td>
+									<td align="center">134.28</td>
+									<td align="center">21.61</td>
+									<td align="center">19.31</td>
+									<td align="center">4.85</td>
+									<td align="center">37.02</td>
+									<td align="center">F</td>
+									<td align="center">DIMONA</td>
+									<td align="center">*</td>
+									<td align="center">Negro River</td>
+								</tr>
+								<tr>
+									<td align="left">F13</td>
+									<td align="center">171.88</td>
+									<td align="center">135.5</td>
+									<td align="center">20.13</td>
+									<td align="center">17.22</td>
+									<td align="center">4.91</td>
+									<td align="center">37.2</td>
+									<td align="center">F</td>
+									<td align="center">DIMONA</td>
+									<td align="center">*</td>
+									<td align="center">Negro River</td>
+								</tr>
+								<tr>
+									<td align="left">F14</td>
+									<td align="center">159.1</td>
+									<td align="center">124.65</td>
+									<td align="center">19.26</td>
+									<td align="center">16.69</td>
+									<td align="center">5.56</td>
+									<td align="center">34.05</td>
+									<td align="center">F</td>
+									<td align="center">DIMONA</td>
+									<td align="center">*</td>
+									<td align="center">Negro River</td>
+								</tr>
+								<tr>
+									<td align="left">F15</td>
+									<td align="center">161.94</td>
+									<td align="center">125.71</td>
+									<td align="center">19.62</td>
+									<td align="center">17.37</td>
+									<td align="center">5.73</td>
+									<td align="center">35.59</td>
+									<td align="center">F</td>
+									<td align="center">DIMONA</td>
+									<td align="center">*</td>
+									<td align="center">Negro River</td>
+								</tr>
+								<tr>
+									<td align="left">F16</td>
+									<td align="center">157.52</td>
+									<td align="center">125.81</td>
+									<td align="center">17.78</td>
+									<td align="center">14.81</td>
+									<td align="center">5.12</td>
+									<td align="center">31.13</td>
+									<td align="center">F</td>
+									<td align="center">DIMONA</td>
+									<td align="center">*</td>
+									<td align="center">Negro River</td>
+								</tr>
+								<tr>
+									<td align="left">F17</td>
+									<td align="center">160.86</td>
+									<td align="center">125.74</td>
+									<td align="center">19.4</td>
+									<td align="center">16.43</td>
+									<td align="center">6.65</td>
+									<td align="center">35.96</td>
+									<td align="center">F</td>
+									<td align="center">DIMONA</td>
+									<td align="center">*</td>
+									<td align="center">Negro River</td>
+								</tr>
+								<tr>
+									<td align="left">F18</td>
+									<td align="center">159.12</td>
+									<td align="center">127.17</td>
+									<td align="center">19.33</td>
+									<td align="center">17.05</td>
+									<td align="center">4.84</td>
+									<td align="center">33.47</td>
+									<td align="center">F</td>
+									<td align="center">DIMONA</td>
+									<td align="center">*</td>
+									<td align="center">Negro River</td>
+								</tr>
+								<tr>
+									<td align="left">F19</td>
+									<td align="center">131.72</td>
+									<td align="center">103.54</td>
+									<td align="center">14.9</td>
+									<td align="center">12.43</td>
+									<td align="center">4.29</td>
+									<td align="center">26.19</td>
+									<td align="center">F</td>
+									<td align="center">DIMONA</td>
+									<td align="center">*</td>
+									<td align="center">Negro River</td>
+								</tr>
+								<tr>
+									<td align="left">F20</td>
+									<td align="center">119.28</td>
+									<td align="center">93.47</td>
+									<td align="center">10.33</td>
+									<td align="center">9.78</td>
+									<td align="center">4.12</td>
+									<td align="center">25.07</td>
+									<td align="center">F</td>
+									<td align="center">DIMONA</td>
+									<td align="center">*</td>
+									<td align="center">Negro River</td>
+								</tr>
+								<tr>
+									<td align="left">F21</td>
+									<td align="center">77.19</td>
+									<td align="center">60.32</td>
+									<td align="center">3.29</td>
+									<td align="center">2.55</td>
+									<td align="center">2.44</td>
+									<td align="center">17.11</td>
+									<td align="center">F</td>
+									<td align="center">DIMONA</td>
+									<td align="center">*</td>
+									<td align="center">Negro River</td>
+								</tr>
+								<tr>
+									<td align="left">F22</td>
+									<td align="center">185.15</td>
+									<td align="center">143.5</td>
+									<td align="center">22.14</td>
+									<td align="center">18.9</td>
+									<td align="center">5.63</td>
+									<td align="center">40.53</td>
+									<td align="center">F</td>
+									<td align="center">DIMONA</td>
+									<td align="center">*</td>
+									<td align="center">Negro River</td>
+								</tr>
+								<tr>
+									<td align="left">F23</td>
+									<td align="center">158.9</td>
+									<td align="center">121.08</td>
+									<td align="center">17.68</td>
+									<td align="center">15.23</td>
+									<td align="center">5.01</td>
+									<td align="center">36.89</td>
+									<td align="center">F</td>
+									<td align="center">DIMONA</td>
+									<td align="center">*</td>
+									<td align="center">Negro River</td>
+								</tr>
+								<tr>
+									<td align="left">F24</td>
+									<td align="center">154.37</td>
+									<td align="center">123.02</td>
+									<td align="center">17.18</td>
+									<td align="center">14.95</td>
+									<td align="center">5.14</td>
+									<td align="center">31.42</td>
+									<td align="center">F</td>
+									<td align="center">DIMONA</td>
+									<td align="center">*</td>
+									<td align="center">Negro River</td>
+								</tr>
+								<tr>
+									<td align="left">F25</td>
+									<td align="center">162.68</td>
+									<td align="center">128.36</td>
+									<td align="center">16.06</td>
+									<td align="center">13.62</td>
+									<td align="center">4.62</td>
+									<td align="center">33.33</td>
+									<td align="center">F</td>
+									<td align="center">DIMONA</td>
+									<td align="center">*</td>
+									<td align="center">Negro River</td>
+								</tr>
+								<tr>
+									<td align="left">F26</td>
+									<td align="center">164.05</td>
+									<td align="center">132.24</td>
+									<td align="center">16.24</td>
+									<td align="center">13.84</td>
+									<td align="center">5.18</td>
+									<td align="center">32.86</td>
+									<td align="center">F</td>
+									<td align="center">DIMONA</td>
+									<td align="center">*</td>
+									<td align="center">Negro River</td>
+								</tr>
+								<tr>
+									<td align="left">F27</td>
+									<td align="center">164.85</td>
+									<td align="center">130.47</td>
+									<td align="center">16.01</td>
+									<td align="center">13.51</td>
+									<td align="center">4.61</td>
+									<td align="center">34.5</td>
+									<td align="center">F</td>
+									<td align="center">DIMONA</td>
+									<td align="center">*</td>
+									<td align="center">Negro River</td>
+								</tr>
+								<tr>
+									<td align="left">F28</td>
+									<td align="center">167.98</td>
+									<td align="center">134.25</td>
+									<td align="center">16.3</td>
+									<td align="center">12.73</td>
+									<td align="center">5</td>
+									<td align="center">33.73</td>
+									<td align="center">F</td>
+									<td align="center">DIMONA</td>
+									<td align="center">*</td>
+									<td align="center">Negro River</td>
+								</tr>
+								<tr>
+									<td align="left">F29</td>
+									<td align="center">140.56</td>
+									<td align="center">112.06</td>
+									<td align="center">14.98</td>
+									<td align="center">13.82</td>
+									<td align="center">4.45</td>
+									<td align="center">28.69</td>
+									<td align="center">F</td>
+									<td align="center">DIMONA</td>
+									<td align="center">*</td>
+									<td align="center">Negro River</td>
+								</tr>
+								<tr>
+									<td align="left">F30</td>
+									<td align="center">137.41</td>
+									<td align="center">107.57</td>
+									<td align="center">13.88</td>
+									<td align="center">12.24</td>
+									<td align="center">4.32</td>
+									<td align="center">30.41</td>
+									<td align="center">F</td>
+									<td align="center">DIMONA</td>
+									<td align="center">*</td>
+									<td align="center">Negro River</td>
+								</tr>
+								<tr>
+									<td align="left">F31</td>
+									<td align="center">152.8</td>
+									<td align="center">119.8</td>
+									<td align="center">17.8</td>
+									<td align="center">15.89</td>
+									<td align="center">4.84</td>
+									<td align="center">33.1</td>
+									<td align="center">F</td>
+									<td align="center">DIMONA</td>
+									<td align="center">*</td>
+									<td align="center">Negro River</td>
+								</tr>
+								<tr>
+									<td align="left">F32</td>
+									<td align="center">95.14</td>
+									<td align="center">75.54</td>
+									<td align="center">2.24</td>
+									<td align="center">0.94</td>
+									<td align="center">2.67</td>
+									<td align="center">20.11</td>
+									<td align="center">F</td>
+									<td align="center">DIMONA</td>
+									<td align="center">*</td>
+									<td align="center">Negro River</td>
+								</tr>
+								<tr>
+									<td align="left">F33</td>
+									<td align="center">152.23</td>
+									<td align="center">123.83</td>
+									<td align="center">16.8</td>
+									<td align="center">16.01</td>
+									<td align="center">4.25</td>
+									<td align="center">32.01</td>
+									<td align="center">F</td>
+									<td align="center">DIMONA</td>
+									<td align="center">*</td>
+									<td align="center">Negro River</td>
+								</tr>
+								<tr>
+									<td align="left">F34</td>
+									<td align="center">151.27</td>
+									<td align="center">120.43</td>
+									<td align="center">11.79</td>
+									<td align="center">11.33</td>
+									<td align="center">4.53</td>
+									<td align="center">31.09</td>
+									<td align="center">F</td>
+									<td align="center">DIMONA</td>
+									<td align="center">*</td>
+									<td align="center">Negro River</td>
+								</tr>
+								<tr>
+									<td align="left">F35</td>
+									<td align="center">133.93</td>
+									<td align="center">107.32</td>
+									<td align="center">11.69</td>
+									<td align="center">10.82</td>
+									<td align="center">4.09</td>
+									<td align="center">29.07</td>
+									<td align="center">F</td>
+									<td align="center">DIMONA</td>
+									<td align="center">*</td>
+									<td align="center">Negro River</td>
+								</tr>
+								<tr>
+									<td align="left">F36</td>
+									<td align="center">141.96</td>
+									<td align="center">111.79</td>
+									<td align="center">16.52</td>
+									<td align="center">15.5</td>
+									<td align="center">4.6</td>
+									<td align="center">31.86</td>
+									<td align="center">F</td>
+									<td align="center">DIMONA</td>
+									<td align="center">*</td>
+									<td align="center">Negro River</td>
+								</tr>
+								<tr>
+									<td align="left">F37</td>
+									<td align="center">123.74</td>
+									<td align="center">111.61</td>
+									<td align="center">9.42</td>
+									<td align="center">6.16</td>
+									<td align="center">2.68</td>
+									<td align="center">12.13</td>
+									<td align="center">F</td>
+									<td align="center">INPA-ICT</td>
+									<td align="center">INPA-ICT 014995</td>
+									<td align="center">Negro River</td>
+								</tr>
+								<tr>
+									<td align="left">F38</td>
+									<td align="center">126.35</td>
+									<td align="center">92.65</td>
+									<td align="center">13.54</td>
+									<td align="center">6.15</td>
+									<td align="center">2.59</td>
+									<td align="center">33.7</td>
+									<td align="center">F</td>
+									<td align="center">INPA-ICT</td>
+									<td align="center">INPA-ICT 015876</td>
+									<td align="center">Negro River</td>
+								</tr>
+								<tr>
+									<td align="left">F39</td>
+									<td align="center">104.07</td>
+									<td align="center">77.29</td>
+									<td align="center">9.89</td>
+									<td align="center">6.28</td>
+									<td align="center">2.24</td>
+									<td align="center">26.78</td>
+									<td align="center">F</td>
+									<td align="center">INPA-ICT</td>
+									<td align="center">INPA-ICT 020101</td>
+									<td align="center">Negro River</td>
+								</tr>
+								<tr>
+									<td align="left">F40</td>
+									<td align="center">108.33</td>
+									<td align="center">74.29</td>
+									<td align="center">9.91</td>
+									<td align="center">5.4</td>
+									<td align="center">2.41</td>
+									<td align="center">34.04</td>
+									<td align="center">F</td>
+									<td align="center">INPA-ICT</td>
+									<td align="center">INPA-ICT 020101</td>
+									<td align="center">Negro River</td>
+								</tr>
+								<tr>
+									<td align="left">F41</td>
+									<td align="center">114.19</td>
+									<td align="center">87.54</td>
+									<td align="center">10.81</td>
+									<td align="center">6.79</td>
+									<td align="center">2.65</td>
+									<td align="center">26.65</td>
+									<td align="center">F</td>
+									<td align="center">INPA-ICT</td>
+									<td align="center">INPA-ICT 022461</td>
+									<td align="center">Negro River</td>
+								</tr>
+								<tr>
+									<td align="left">F42</td>
+									<td align="center">120.52</td>
+									<td align="center">94.68</td>
+									<td align="center">11.74</td>
+									<td align="center">6.65</td>
+									<td align="center">3.08</td>
+									<td align="center">25.84</td>
+									<td align="center">F</td>
+									<td align="center">INPA-ICT</td>
+									<td align="center">INPA-ICT 023164</td>
+									<td align="center">Negro River</td>
+								</tr>
+								<tr>
+									<td align="left">F43</td>
+									<td align="center">111.52</td>
+									<td align="center">84.55</td>
+									<td align="center">11.37</td>
+									<td align="center">6.92</td>
+									<td align="center">2.99</td>
+									<td align="center">26.97</td>
+									<td align="center">F</td>
+									<td align="center">INPA-ICT</td>
+									<td align="center">INPA-ICT 023223</td>
+									<td align="center">Negro River</td>
+								</tr>
+								<tr>
+									<td align="left">F44</td>
+									<td align="center">111.03</td>
+									<td align="center">84.61</td>
+									<td align="center">11.1</td>
+									<td align="center">6.72</td>
+									<td align="center">2.78</td>
+									<td align="center">26.42</td>
+									<td align="center">F</td>
+									<td align="center">INPA-ICT</td>
+									<td align="center">INPA-ICT 024657</td>
+									<td align="center">Negro River</td>
+								</tr>
+								<tr>
+									<td align="left">F45</td>
+									<td align="center">121.85</td>
+									<td align="center">97.41</td>
+									<td align="center">14.64</td>
+									<td align="center">6.99</td>
+									<td align="center">2.88</td>
+									<td align="center">24.44</td>
+									<td align="center">F</td>
+									<td align="center">INPA-ICT</td>
+									<td align="center">INPA-ICT 024657</td>
+									<td align="center">Negro River</td>
+								</tr>
+								<tr>
+									<td align="left">F46</td>
+									<td align="center">115.9</td>
+									<td align="center">90.41</td>
+									<td align="center">10.25</td>
+									<td align="center">7.41</td>
+									<td align="center">3</td>
+									<td align="center">25.49</td>
+									<td align="center">F</td>
+									<td align="center">INPA-ICT</td>
+									<td align="center">INPA-ICT 024657</td>
+									<td align="center">Negro River</td>
+								</tr>
+								<tr>
+									<td align="left">F47</td>
+									<td align="center">95.03</td>
+									<td align="center">76.86</td>
+									<td align="center">8.65</td>
+									<td align="center">6.34</td>
+									<td align="center">2.3</td>
+									<td align="center">18.17</td>
+									<td align="center">F</td>
+									<td align="center">INPA-ICT</td>
+									<td align="center">INPA-ICT 024657</td>
+									<td align="center">Negro River</td>
+								</tr>
+								<tr>
+									<td align="left">F48</td>
+									<td align="center">107.67</td>
+									<td align="center">81.15</td>
+									<td align="center">10.93</td>
+									<td align="center">7.39</td>
+									<td align="center">3.74</td>
+									<td align="center">26.52</td>
+									<td align="center">F</td>
+									<td align="center">INPA-ICT</td>
+									<td align="center">INPA-ICT 024657</td>
+									<td align="center">Negro River</td>
+								</tr>
+								<tr>
+									<td align="left">F49</td>
+									<td align="center">107.24</td>
+									<td align="center">86.56</td>
+									<td align="center">11.9</td>
+									<td align="center">6.47</td>
+									<td align="center">2.58</td>
+									<td align="center">20.68</td>
+									<td align="center">F</td>
+									<td align="center">INPA-ICT</td>
+									<td align="center">INPA-ICT 029952</td>
+									<td align="center">Negro River</td>
+								</tr>
+								<tr>
+									<td align="left">F50</td>
+									<td align="center">113.27</td>
+									<td align="center">87</td>
+									<td align="center">11.52</td>
+									<td align="center">6.1</td>
+									<td align="center">2.73</td>
+									<td align="center">26.27</td>
+									<td align="center">F</td>
+									<td align="center">INPA-ICT</td>
+									<td align="center">INPA-ICT 029952</td>
+									<td align="center">Negro River</td>
+								</tr>
+								<tr>
+									<td align="left">F51</td>
+									<td align="center">88.12</td>
+									<td align="center">66.64</td>
+									<td align="center">9.22</td>
+									<td align="center">6.19</td>
+									<td align="center">2.33</td>
+									<td align="center">21.48</td>
+									<td align="center">F</td>
+									<td align="center">INPA-ICT</td>
+									<td align="center">INPA-ICT 029963</td>
+									<td align="center">Negro River</td>
+								</tr>
+								<tr>
+									<td align="left">F52</td>
+									<td align="center">104.86</td>
+									<td align="center">82.52</td>
+									<td align="center">9.28</td>
+									<td align="center">7.44</td>
+									<td align="center">3.05</td>
+									<td align="center">22.34</td>
+									<td align="center">F</td>
+									<td align="center">INPA-ICT</td>
+									<td align="center">INPA-ICT 029963</td>
+									<td align="center">Negro River</td>
+								</tr>
+								<tr>
+									<td align="left">F53</td>
+									<td align="center">97.65</td>
+									<td align="center">74.7</td>
+									<td align="center">8.3</td>
+									<td align="center">5.52</td>
+									<td align="center">2.19</td>
+									<td align="center">22.95</td>
+									<td align="center">F</td>
+									<td align="center">INPA-ICT</td>
+									<td align="center">INPA-ICT 029963</td>
+									<td align="center">Negro River</td>
+								</tr>
+								<tr>
+									<td align="left">F54</td>
+									<td align="center">101.08</td>
+									<td align="center">81.35</td>
+									<td align="center">10.79</td>
+									<td align="center">7.93</td>
+									<td align="center">2.67</td>
+									<td align="center">19.73</td>
+									<td align="center">F</td>
+									<td align="center">INPA-ICT</td>
+									<td align="center">INPA-ICT 029963</td>
+									<td align="center">Negro River</td>
+								</tr>
+								<tr>
+									<td align="left">F55</td>
+									<td align="center">129.29</td>
+									<td align="center">101.21</td>
+									<td align="center">10.25</td>
+									<td align="center">8.33</td>
+									<td align="center">3.41</td>
+									<td align="center">28.08</td>
+									<td align="center">F</td>
+									<td align="center">INPA-ICT</td>
+									<td align="center">INPA-ICT 030026</td>
+									<td align="center">Preto da Eva River</td>
+								</tr>
+								<tr>
+									<td align="left">F56</td>
+									<td align="center">99.58</td>
+									<td align="center">75.77</td>
+									<td align="center">10</td>
+									<td align="center">8.48</td>
+									<td align="center">2.8</td>
+									<td align="center">23.81</td>
+									<td align="center">F</td>
+									<td align="center">INPA-ICT</td>
+									<td align="center">INPA-ICT 030026</td>
+									<td align="center">Preto da Eva River</td>
+								</tr>
+								<tr>
+									<td align="left">F57</td>
+									<td align="center">114.63</td>
+									<td align="center">88.32</td>
+									<td align="center">14.54</td>
+									<td align="center">12.87</td>
+									<td align="center">3.18</td>
+									<td align="center">26.31</td>
+									<td align="center">F</td>
+									<td align="center">INPA-ICT</td>
+									<td align="center">INPA-ICT 030026</td>
+									<td align="center">Preto da Eva River</td>
+								</tr>
+								<tr>
+									<td align="left">F58</td>
+									<td align="center">101.95</td>
+									<td align="center">77.68</td>
+									<td align="center">12.87</td>
+									<td align="center">10.33</td>
+									<td align="center">3.6</td>
+									<td align="center">24.27</td>
+									<td align="center">F</td>
+									<td align="center">INPA-ICT</td>
+									<td align="center">INPA-ICT 030026</td>
+									<td align="center">Preto da Eva River</td>
+								</tr>
+								<tr>
+									<td align="left">F59</td>
+									<td align="center">118.64</td>
+									<td align="center">92.57</td>
+									<td align="center">13.33</td>
+									<td align="center">11.93</td>
+									<td align="center">3.05</td>
+									<td align="center">26.07</td>
+									<td align="center">F</td>
+									<td align="center">INPA-ICT</td>
+									<td align="center">INPA-ICT 030360</td>
+									<td align="center">Negro River</td>
+								</tr>
+								<tr>
+									<td align="left">F60</td>
+									<td align="center">111.34</td>
+									<td align="center">89.81</td>
+									<td align="center">14.73</td>
+									<td align="center">11.37</td>
+									<td align="center">3.15</td>
+									<td align="center">21.53</td>
+									<td align="center">F</td>
+									<td align="center">INPA-ICT</td>
+									<td align="center">INPA-ICT 030360</td>
+									<td align="center">Negro River</td>
+								</tr>
+								<tr>
+									<td align="left">F61</td>
+									<td align="center">96.39</td>
+									<td align="center">74.21</td>
+									<td align="center">8.08</td>
+									<td align="center">6.15</td>
+									<td align="center">2.05</td>
+									<td align="center">22.18</td>
+									<td align="center">F</td>
+									<td align="center">INPA-ICT</td>
+									<td align="center">INPA-ICT 030360</td>
+									<td align="center">Negro River</td>
+								</tr>
+								<tr>
+									<td align="left">F62</td>
+									<td align="center">96.79</td>
+									<td align="center">75.4</td>
+									<td align="center">8.82</td>
+									<td align="center">7.68</td>
+									<td align="center">2.42</td>
+									<td align="center">21.39</td>
+									<td align="center">F</td>
+									<td align="center">INPA-ICT</td>
+									<td align="center">INPA-ICT 030360</td>
+									<td align="center">Negro River</td>
+								</tr>
+								<tr>
+									<td align="left">F63</td>
+									<td align="center">89.36</td>
+									<td align="center">72.6</td>
+									<td align="center">5.79</td>
+									<td align="center">4.07</td>
+									<td align="center">2.33</td>
+									<td align="center">16.76</td>
+									<td align="center">F</td>
+									<td align="center">INPA-ICT</td>
+									<td align="center">INPA-ICT 030360</td>
+									<td align="center">Negro River</td>
+								</tr>
+								<tr>
+									<td align="left">M1</td>
+									<td align="center">145.15</td>
+									<td align="center">110.6</td>
+									<td align="center">3.15</td>
+									<td align="center">3.98</td>
+									<td align="center">4.57</td>
+									<td align="center">33.47</td>
+									<td align="center">M</td>
+									<td align="center">DIMONA</td>
+									<td align="center">*</td>
+									<td align="center">Negro River</td>
+								</tr>
+								<tr>
+									<td align="left">M2</td>
+									<td align="center">127.48</td>
+									<td align="center">98.95</td>
+									<td align="center">3.59</td>
+									<td align="center">3.83</td>
+									<td align="center">3.85</td>
+									<td align="center">28.24</td>
+									<td align="center">M</td>
+									<td align="center">DIMONA</td>
+									<td align="center">*</td>
+									<td align="center">Negro River</td>
+								</tr>
+								<tr>
+									<td align="left">M3</td>
+									<td align="center">145.14</td>
+									<td align="center">116</td>
+									<td align="center">2.42</td>
+									<td align="center">2.67</td>
+									<td align="center">4.17</td>
+									<td align="center">28.42</td>
+									<td align="center">M</td>
+									<td align="center">DIMONA</td>
+									<td align="center">*</td>
+									<td align="center">Negro River</td>
+								</tr>
+								<tr>
+									<td align="left">M4</td>
+									<td align="center">135.59</td>
+									<td align="center">106.2</td>
+									<td align="center">3.66</td>
+									<td align="center">3.84</td>
+									<td align="center">4.14</td>
+									<td align="center">30.48</td>
+									<td align="center">M</td>
+									<td align="center">DIMONA</td>
+									<td align="center">*</td>
+									<td align="center">Negro River</td>
+								</tr>
+								<tr>
+									<td align="left">M5</td>
+									<td align="center">145.49</td>
+									<td align="center">114.85</td>
+									<td align="center">3.67</td>
+									<td align="center">4.02</td>
+									<td align="center">4.76</td>
+									<td align="center">28.08</td>
+									<td align="center">M</td>
+									<td align="center">DIMONA</td>
+									<td align="center">*</td>
+									<td align="center">Negro River</td>
+								</tr>
+								<tr>
+									<td align="left">M6</td>
+									<td align="center">117.3</td>
+									<td align="center">84.03</td>
+									<td align="center">3.4</td>
+									<td align="center">3.78</td>
+									<td align="center">3.49</td>
+									<td align="center">32.07</td>
+									<td align="center">M</td>
+									<td align="center">DIMONA</td>
+									<td align="center">*</td>
+									<td align="center">Negro River</td>
+								</tr>
+								<tr>
+									<td align="left">M7</td>
+									<td align="center">142.09</td>
+									<td align="center">114.25</td>
+									<td align="center">5.23</td>
+									<td align="center">5.6</td>
+									<td align="center">3.9</td>
+									<td align="center">28.32</td>
+									<td align="center">M</td>
+									<td align="center">DIMONA</td>
+									<td align="center">*</td>
+									<td align="center">Negro River</td>
+								</tr>
+								<tr>
+									<td align="left">M8</td>
+									<td align="center">152.86</td>
+									<td align="center">120.14</td>
+									<td align="center">3.05</td>
+									<td align="center">4.11</td>
+									<td align="center">5.08</td>
+									<td align="center">32.01</td>
+									<td align="center">M</td>
+									<td align="center">DIMONA</td>
+									<td align="center">*</td>
+									<td align="center">Negro River</td>
+								</tr>
+								<tr>
+									<td align="left">M9</td>
+									<td align="center">153.28</td>
+									<td align="center">120.87</td>
+									<td align="center">3.52</td>
+									<td align="center">3.93</td>
+									<td align="center">5.09</td>
+									<td align="center">32.99</td>
+									<td align="center">M</td>
+									<td align="center">DIMONA</td>
+									<td align="center">*</td>
+									<td align="center">Negro River</td>
+								</tr>
+								<tr>
+									<td align="left">M10</td>
+									<td align="center">109.9</td>
+									<td align="center">78.24</td>
+									<td align="center">3.38</td>
+									<td align="center">4.24</td>
+									<td align="center">3.72</td>
+									<td align="center">31.66</td>
+									<td align="center">M</td>
+									<td align="center">INPA-ICT</td>
+									<td align="center">INPA-ICT 014209</td>
+									<td align="center">Negro River</td>
+								</tr>
+								<tr>
+									<td align="left">M11</td>
+									<td align="center">126.21</td>
+									<td align="center">90.52</td>
+									<td align="center">4.29</td>
+									<td align="center">4.7</td>
+									<td align="center">4.42</td>
+									<td align="center">35.69</td>
+									<td align="center">M</td>
+									<td align="center">INPA-ICT</td>
+									<td align="center">INPA-ICT 014209</td>
+									<td align="center">Negro River</td>
+								</tr>
+								<tr>
+									<td align="left">M12</td>
+									<td align="center">117.9</td>
+									<td align="center">89.44</td>
+									<td align="center">4.01</td>
+									<td align="center">4.64</td>
+									<td align="center">3.4</td>
+									<td align="center">28.46</td>
+									<td align="center">M</td>
+									<td align="center">INPA-ICT</td>
+									<td align="center">INPA-ICT 014209</td>
+									<td align="center">Negro River</td>
+								</tr>
+								<tr>
+									<td align="left">M13</td>
+									<td align="center">108.09</td>
+									<td align="center">72.05</td>
+									<td align="center">4.28</td>
+									<td align="center">5.19</td>
+									<td align="center">3.07</td>
+									<td align="center">36.04</td>
+									<td align="center">M</td>
+									<td align="center">INPA-ICT</td>
+									<td align="center">INPA-ICT 015881</td>
+									<td align="center">Negro River</td>
+								</tr>
+								<tr>
+									<td align="left">M14</td>
+									<td align="center">116.25</td>
+									<td align="center">80.23</td>
+									<td align="center">3.7</td>
+									<td align="center">4.2</td>
+									<td align="center">3.58</td>
+									<td align="center">36.02</td>
+									<td align="center">M</td>
+									<td align="center">INPA-ICT</td>
+									<td align="center">INPA-ICT 015881</td>
+									<td align="center">Negro River</td>
+								</tr>
+								<tr>
+									<td align="left">M15</td>
+									<td align="center">125.52</td>
+									<td align="center">94.28</td>
+									<td align="center">4.54</td>
+									<td align="center">5.48</td>
+									<td align="center">3.76</td>
+									<td align="center">31.24</td>
+									<td align="center">M</td>
+									<td align="center">INPA-ICT</td>
+									<td align="center">INPA-ICT 015904</td>
+									<td align="center">Negro River</td>
+								</tr>
+								<tr>
+									<td align="left">M16</td>
+									<td align="center">133.18</td>
+									<td align="center">101.23</td>
+									<td align="center">4.32</td>
+									<td align="center">4.65</td>
+									<td align="center">3.13</td>
+									<td align="center">31.95</td>
+									<td align="center">M</td>
+									<td align="center">INPA-ICT</td>
+									<td align="center">INPA-ICT 015985</td>
+									<td align="center">Negro River</td>
+								</tr>
+								<tr>
+									<td align="left">M17</td>
+									<td align="center">130.09</td>
+									<td align="center">100.67</td>
+									<td align="center">3.58</td>
+									<td align="center">3.81</td>
+									<td align="center">4.19</td>
+									<td align="center">29.42</td>
+									<td align="center">M</td>
+									<td align="center">INPA-ICT</td>
+									<td align="center">INPA-ICT 015763</td>
+									<td align="center">Negro River</td>
+								</tr>
+								<tr>
+									<td align="left">M18</td>
+									<td align="center">147.24</td>
+									<td align="center">115.82</td>
+									<td align="center">4.92</td>
+									<td align="center">6.16</td>
+									<td align="center">3.43</td>
+									<td align="center">31.42</td>
+									<td align="center">M</td>
+									<td align="center">INPA-ICT</td>
+									<td align="center">INPA-ICT 020101</td>
+									<td align="center">Negro River</td>
+								</tr>
+								<tr>
+									<td align="left">M19</td>
+									<td align="center">142.94</td>
+									<td align="center">106.32</td>
+									<td align="center">4.7</td>
+									<td align="center">6.19</td>
+									<td align="center">4.11</td>
+									<td align="center">36.62</td>
+									<td align="center">M</td>
+									<td align="center">INPA-ICT</td>
+									<td align="center">INPA-ICT 023223</td>
+									<td align="center">Negro River</td>
+								</tr>
+								<tr>
+									<td align="left">M20</td>
+									<td align="center">109</td>
+									<td align="center">82.83</td>
+									<td align="center">4.23</td>
+									<td align="center">4.52</td>
+									<td align="center">3.58</td>
+									<td align="center">26.17</td>
+									<td align="center">M</td>
+									<td align="center">INPA-ICT</td>
+									<td align="center">INPA-ICT 023223</td>
+									<td align="center">Negro River</td>
+								</tr>
+								<tr>
+									<td align="left">M21</td>
+									<td align="center">146</td>
+									<td align="center">107.5</td>
+									<td align="center">3.24</td>
+									<td align="center">3.55</td>
+									<td align="center">3.2</td>
+									<td align="center">38.5</td>
+									<td align="center">M</td>
+									<td align="center">INPA-ICT</td>
+									<td align="center">INPA-ICT 024657</td>
+									<td align="center">Negro River</td>
+								</tr>
+								<tr>
+									<td align="left">M22</td>
+									<td align="center">133.58</td>
+									<td align="center">97.75</td>
+									<td align="center">3.5</td>
+									<td align="center">4.21</td>
+									<td align="center">3.61</td>
+									<td align="center">35.83</td>
+									<td align="center">M</td>
+									<td align="center">INPA-ICT</td>
+									<td align="center">INPA-ICT 024657</td>
+									<td align="center">Negro River</td>
+								</tr>
+								<tr>
+									<td align="left">M23</td>
+									<td align="center">144.83</td>
+									<td align="center">111.45</td>
+									<td align="center">4.06</td>
+									<td align="center">4.57</td>
+									<td align="center">4.63</td>
+									<td align="center">33.38</td>
+									<td align="center">M</td>
+									<td align="center">INPA-ICT</td>
+									<td align="center">INPA-ICT 029847</td>
+									<td align="center">Negro River</td>
+								</tr>
+								<tr>
+									<td align="left">M24</td>
+									<td align="center">126.27</td>
+									<td align="center">98.7</td>
+									<td align="center">5.8</td>
+									<td align="center">6.3</td>
+									<td align="center">4.8</td>
+									<td align="center">27.57</td>
+									<td align="center">M</td>
+									<td align="center">INPA-ICT</td>
+									<td align="center">INPA-ICT 029847</td>
+									<td align="center">Negro River</td>
+								</tr>
+								<tr>
+									<td align="left">M25</td>
+									<td align="center">142.55</td>
+									<td align="center">108.1</td>
+									<td align="center">4.93</td>
+									<td align="center">5.63</td>
+									<td align="center">4.42</td>
+									<td align="center">34.45</td>
+									<td align="center">M</td>
+									<td align="center">INPA-ICT</td>
+									<td align="center">INPA-ICT 029952</td>
+									<td align="center">Negro River</td>
+								</tr>
+								<tr>
+									<td align="left">M26</td>
+									<td align="center">133.54</td>
+									<td align="center">105.66</td>
+									<td align="center">5.5</td>
+									<td align="center">6.17</td>
+									<td align="center">3.47</td>
+									<td align="center">27.88</td>
+									<td align="center">M</td>
+									<td align="center">INPA-ICT</td>
+									<td align="center">INPA-ICT 029952</td>
+									<td align="center">Negro River</td>
+								</tr>
+								<tr>
+									<td align="left">M27</td>
+									<td align="center">119.46</td>
+									<td align="center">84.41</td>
+									<td align="center">4.34</td>
+									<td align="center">4.96</td>
+									<td align="center">4.4</td>
+									<td align="center">35.05</td>
+									<td align="center">M</td>
+									<td align="center">INPA-ICT</td>
+									<td align="center">INPA-ICT 029963</td>
+									<td align="center">Negro River</td>
+								</tr>
+								<tr>
+									<td align="left">M28</td>
+									<td align="center">102.28</td>
+									<td align="center">65.38</td>
+									<td align="center">4.47</td>
+									<td align="center">4.95</td>
+									<td align="center">4.03</td>
+									<td align="center">36.9</td>
+									<td align="center">M</td>
+									<td align="center">INPA-ICT</td>
+									<td align="center">INPA-ICT 029963</td>
+									<td align="center">Negro River</td>
+								</tr>
+								<tr>
+									<td align="left">M29</td>
+									<td align="center">106.81</td>
+									<td align="center">78.74</td>
+									<td align="center">3.23</td>
+									<td align="center">3.92</td>
+									<td align="center">4.75</td>
+									<td align="center">28.07</td>
+									<td align="center">M</td>
+									<td align="center">INPA-ICT</td>
+									<td align="center">INPA-ICT 029963</td>
+									<td align="center">Negro River</td>
+								</tr>
+								<tr>
+									<td align="left">M30</td>
+									<td align="center">116.46</td>
+									<td align="center">79.72</td>
+									<td align="center">3.24</td>
+									<td align="center">3.84</td>
+									<td align="center">4.3</td>
+									<td align="center">36.74</td>
+									<td align="center">M</td>
+									<td align="center">INPA-ICT</td>
+									<td align="center">INPA-ICT 029997</td>
+									<td align="center">Preto da Eva River</td>
+								</tr>
+								<tr>
+									<td align="left">M31</td>
+									<td align="center">146.56</td>
+									<td align="center">117.55</td>
+									<td align="center">3.25</td>
+									<td align="center">3.68</td>
+									<td align="center">4.94</td>
+									<td align="center">29.01</td>
+									<td align="center">M</td>
+									<td align="center">INPA-ICT</td>
+									<td align="center">INPA-ICT 029997</td>
+									<td align="center">Preto da Eva River</td>
+								</tr>
+								<tr>
+									<td align="left">M32</td>
+									<td align="center">131.6</td>
+									<td align="center">100.7</td>
+									<td align="center">3.62</td>
+									<td align="center">4.13</td>
+									<td align="center">3.28</td>
+									<td align="center">30.9</td>
+									<td align="center">M</td>
+									<td align="center">INPA-ICT</td>
+									<td align="center">INPA-ICT 029997</td>
+									<td align="center">Preto da Eva River</td>
+								</tr>
+								<tr>
+									<td align="left">M33</td>
+									<td align="center">141.38</td>
+									<td align="center">108.83</td>
+									<td align="center">4.22</td>
+									<td align="center">4.82</td>
+									<td align="center">3.95</td>
+									<td align="center">32.55</td>
+									<td align="center">M</td>
+									<td align="center">INPA-ICT</td>
+									<td align="center">INPA-ICT 030360</td>
+									<td align="center">Negro River</td>
+								</tr>
+								<tr>
+									<td align="left">M34</td>
+									<td align="center">121.3</td>
+									<td align="center">84.13</td>
+									<td align="center">4.75</td>
+									<td align="center">5.18</td>
+									<td align="center">3.15</td>
+									<td align="center">37.17</td>
+									<td align="center">M</td>
+									<td align="center">INPA-ICT</td>
+									<td align="center">INPA-ICT 030360</td>
+									<td align="center">Negro River</td>
+								</tr>
+								<tr>
+									<td align="left">M35</td>
+									<td align="center">123.54</td>
+									<td align="center">84.75</td>
+									<td align="center">4.49</td>
+									<td align="center">4.77</td>
+									<td align="center">4.12</td>
+									<td align="center">38.79</td>
+									<td align="center">M</td>
+									<td align="center">INPA-ICT</td>
+									<td align="center">INPA-ICT 030360</td>
+									<td align="center">Negro River</td>
+								</tr>
+								<tr>
+									<td align="left">M36</td>
+									<td align="center">102.06</td>
+									<td align="center">70.13</td>
+									<td align="center">3.28</td>
+									<td align="center">3.72</td>
+									<td align="center">4.56</td>
+									<td align="center">31.93</td>
+									<td align="center">M</td>
+									<td align="center">INPA-ICT</td>
+									<td align="center">INPA-ICT 030360</td>
+									<td align="center">Negro River</td>
+								</tr>
+								<tr>
+									<td align="left">M37</td>
+									<td align="center">102.2</td>
+									<td align="center">71.47</td>
+									<td align="center">3.92</td>
+									<td align="center">4.77</td>
+									<td align="center">3.72</td>
+									<td align="center">30.73</td>
+									<td align="center">M</td>
+									<td align="center">INPA-ICT</td>
+									<td align="center">INPA-ICT 030360</td>
+									<td align="center">Negro River</td>
+								</tr>
+								<tr>
+									<td align="left">M38</td>
+									<td align="center">102.98</td>
+									<td align="center">65.54</td>
+									<td align="center">5.6</td>
+									<td align="center">6.52</td>
+									<td align="center">4.59</td>
+									<td align="center">37.44</td>
+									<td align="center">M</td>
+									<td align="center">INPA-ICT</td>
+									<td align="center">INPA-ICT 030360</td>
+									<td align="center">Negro River</td>
+								</tr>
+								<tr>
+									<td align="left">M39</td>
+									<td align="center">102.49</td>
+									<td align="center">75.29</td>
+									<td align="center">3.18</td>
+									<td align="center">3.95</td>
+									<td align="center">4.32</td>
+									<td align="center">27.2</td>
+									<td align="center">M</td>
+									<td align="center">INPA-ICT</td>
+									<td align="center">INPA-ICT 030531</td>
+									<td align="center">Negro River</td>
+								</tr>
+								<tr>
+									<td align="left">M40</td>
+									<td align="center">108.91</td>
+									<td align="center">74.33</td>
+									<td align="center">3.33</td>
+									<td align="center">3.72</td>
+									<td align="center">4.07</td>
+									<td align="center">34.58</td>
+									<td align="center">M</td>
+									<td align="center">INPA-ICT</td>
+									<td align="center">INPA-ICT 030531</td>
+									<td align="center">Negro River</td>
+								</tr>
+								<tr>
+									<td align="left">M41</td>
+									<td align="center">119.18</td>
+									<td align="center">89.47</td>
+									<td align="center">4.57</td>
+									<td align="center">5.33</td>
+									<td align="center">4.56</td>
+									<td align="center">29.71</td>
+									<td align="center">M</td>
+									<td align="center">INPA-ICT</td>
+									<td align="center">INPA-ICT 027841</td>
+									<td align="center">Negro River</td>
+								</tr>
+								<tr>
+									<td align="left">M42</td>
+									<td align="center">127.88</td>
+									<td align="center">94.14</td>
+									<td align="center">5.88</td>
+									<td align="center">6.49</td>
+									<td align="center">3.34</td>
+									<td align="center">33.74</td>
+									<td align="center">M</td>
+									<td align="center">INPA-ICT</td>
+									<td align="center">INPA-ICT 027841</td>
+									<td align="center">Negro River</td>
+								</tr>
+								<tr>
+									<td align="left">M43</td>
+									<td align="center">123.9</td>
+									<td align="center">97.03</td>
+									<td align="center">3.24</td>
+									<td align="center">4.14</td>
+									<td align="center">3.98</td>
+									<td align="center">26.87</td>
+									<td align="center">M</td>
+									<td align="center">INPA-ICT</td>
+									<td align="center">INPA-ICT 030383</td>
+									<td align="center">Negro River</td>
+								</tr>
+								<tr>
+									<td align="left">M44</td>
+									<td align="center">136.98</td>
+									<td align="center">109.86</td>
+									<td align="center">5.33</td>
+									<td align="center">6.05</td>
+									<td align="center">4.04</td>
+									<td align="center">27.12</td>
+									<td align="center">M</td>
+									<td align="center">INPA-ICT</td>
+									<td align="center">INPA-ICT 030562</td>
+									<td align="center">Negro River</td>
+								</tr>
+								<tr>
+									<td align="left">M45</td>
+									<td align="center">122.14</td>
+									<td align="center">87.53</td>
+									<td align="center">3.84</td>
+									<td align="center">4.81</td>
+									<td align="center">3.63</td>
+									<td align="center">34.61</td>
+									<td align="center">M</td>
+									<td align="center">INPA-ICT</td>
+									<td align="center">INPA-ICT 027923</td>
+									<td align="center">Amazonas River</td>
+								</tr>
+								<tr>
+									<td align="left">M46</td>
+									<td align="center">109.23</td>
+									<td align="center">78.32</td>
+									<td align="center">3.81</td>
+									<td align="center">4.12</td>
+									<td align="center">3.89</td>
+									<td align="center">30.91</td>
+									<td align="center">M</td>
+									<td align="center">INPA-ICT</td>
+									<td align="center">INPA-ICT 027235</td>
+									<td align="center">Solimões River</td>
+								</tr>
+								<tr>
+									<td align="left">M47</td>
+									<td align="center">142.91</td>
+									<td align="center">112.17</td>
+									<td align="center">5.54</td>
+									<td align="center">6.12</td>
+									<td align="center">3.95</td>
+									<td align="center">30.74</td>
+									<td align="center">M</td>
+									<td align="center">INPA-ICT</td>
+									<td align="center">INPA-ICT 027235</td>
+									<td align="center">Solimões River</td>
+								</tr>
+								<tr>
+									<td align="left">M48</td>
+									<td align="center">136.27</td>
+									<td align="center">101.79</td>
+									<td align="center">5.61</td>
+									<td align="center">5.87</td>
+									<td align="center">4.1</td>
+									<td align="center">34.48</td>
+									<td align="center">M</td>
+									<td align="center">INPA-ICT</td>
+									<td align="center">INPA-ICT 027279</td>
+									<td align="center">Solimões River</td>
+								</tr>
+								<tr>
+									<td align="left">M49</td>
+									<td align="center">146.79</td>
+									<td align="center">112.86</td>
+									<td align="center">5.71</td>
+									<td align="center">6.35</td>
+									<td align="center">4.04</td>
+									<td align="center">33.93</td>
+									<td align="center">M</td>
+									<td align="center">INPA-ICT</td>
+									<td align="center">INPA-ICT 027279</td>
+									<td align="center">Solimões River</td>
+								</tr>
+								<tr>
+									<td align="left">M50</td>
+									<td align="center">123.96</td>
+									<td align="center">90.93</td>
+									<td align="center">4.19</td>
+									<td align="center">5.01</td>
+									<td align="center">3.73</td>
+									<td align="center">33.03</td>
+									<td align="center">M</td>
+									<td align="center">INPA-ICT</td>
+									<td align="center">INPA-ICT 027279</td>
+									<td align="center">Solimões River</td>
+								</tr>
+								<tr>
+									<td align="left">M51</td>
+									<td align="center">144.99</td>
+									<td align="center">114.67</td>
+									<td align="center">4.49</td>
+									<td align="center">4.98</td>
+									<td align="center">4</td>
+									<td align="center">30.32</td>
+									<td align="center">M</td>
+									<td align="center">INPA-ICT</td>
+									<td align="center">INPA-ICT 027302</td>
+									<td align="center">Solimões River</td>
+								</tr>
+								<tr>
+									<td align="left">M52</td>
+									<td align="center">143.31</td>
+									<td align="center">109.09</td>
+									<td align="center">5.81</td>
+									<td align="center">6.64</td>
+									<td align="center">4.31</td>
+									<td align="center">34.22</td>
+									<td align="center">M</td>
+									<td align="center">INPA-ICT</td>
+									<td align="center">INPA-ICT 027302</td>
+									<td align="center">Solimões River</td>
+								</tr>
+								<tr>
+									<td align="left">M53</td>
+									<td align="center">140.61</td>
+									<td align="center">107.97</td>
+									<td align="center">5.45</td>
+									<td align="center">6.17</td>
+									<td align="center">4.7</td>
+									<td align="center">32.64</td>
+									<td align="center">M</td>
+									<td align="center">INPA-ICT</td>
+									<td align="center">INPA-ICT 034182</td>
+									<td align="center">Tapajós River</td>
+								</tr>
+								<tr>
+									<td align="left">M54</td>
+									<td align="center">112.21</td>
+									<td align="center">82.81</td>
+									<td align="center">5.61</td>
+									<td align="center">6.23</td>
+									<td align="center">3.4</td>
+									<td align="center">29.4</td>
+									<td align="center">M</td>
+									<td align="center">INPA-ICT</td>
+									<td align="center">INPA-ICT 034182</td>
+									<td align="center">Tapajós River</td>
+								</tr>
+								<tr>
+									<td align="left">M55</td>
+									<td align="center">112.69</td>
+									<td align="center">81.78</td>
+									<td align="center">5.72</td>
+									<td align="center">6.52</td>
+									<td align="center">3.77</td>
+									<td align="center">30.91</td>
+									<td align="center">M</td>
+									<td align="center">INPA-ICT</td>
+									<td align="center">INPA-ICT 034182</td>
+									<td align="center">Tapajós River</td>
+								</tr>
+								<tr>
+									<td align="left">M56</td>
+									<td align="center">103.75</td>
+									<td align="center">71.08</td>
+									<td align="center">4.49</td>
+									<td align="center">4.82</td>
+									<td align="center">3.33</td>
+									<td align="center">32.67</td>
+									<td align="center">M</td>
+									<td align="center">INPA-ICT</td>
+									<td align="center">INPA-ICT 034182</td>
+									<td align="center">Tapajós River</td>
+								</tr>
+								<tr>
+									<td align="left">M57</td>
+									<td align="center">127.22</td>
+									<td align="center">88.71</td>
+									<td align="center">5.81</td>
+									<td align="center">6.4</td>
+									<td align="center">3.24</td>
+									<td align="center">38.51</td>
+									<td align="center">M</td>
+									<td align="center">INPA-ICT</td>
+									<td align="center">INPA-ICT 034182</td>
+									<td align="center">Tapajós River</td>
+								</tr>
+								<tr>
+									<td align="left">M58</td>
+									<td align="center">119.18</td>
+									<td align="center">87.21</td>
+									<td align="center">5.45</td>
+									<td align="center">6.06</td>
+									<td align="center">3.62</td>
+									<td align="center">31.97</td>
+									<td align="center">M</td>
+									<td align="center">INPA-ICT</td>
+									<td align="center">INPA-ICT 034182</td>
+									<td align="center">Tapajós River</td>
+								</tr>
+								<tr>
+									<td align="left">M59</td>
+									<td align="center">108.91</td>
+									<td align="center">82.28</td>
+									<td align="center">5.61</td>
+									<td align="center">6.06</td>
+									<td align="center">4.95</td>
+									<td align="center">26.63</td>
+									<td align="center">M</td>
+									<td align="center">INPA-ICT</td>
+									<td align="center">INPA-ICT 034182</td>
+									<td align="center">Tapajós River</td>
+								</tr>
+								<tr>
+									<td align="left">M60</td>
+									<td align="center">148.02</td>
+									<td align="center">113.4</td>
+									<td align="center">5.71</td>
+									<td align="center">6.04</td>
+									<td align="center">4.51</td>
+									<td align="center">34.62</td>
+									<td align="center">M</td>
+									<td align="center">INPA-ICT</td>
+									<td align="center">INPA-ICT 034182</td>
+									<td align="center">Tapajós River</td>
+								</tr>
+								<tr>
+									<td align="left">M61</td>
+									<td align="center">123.91</td>
+									<td align="center">94.56</td>
+									<td align="center">4.49</td>
+									<td align="center">4.81</td>
+									<td align="center">4.25</td>
+									<td align="center">29.35</td>
+									<td align="center">M</td>
+									<td align="center">INPA-ICT</td>
+									<td align="center">INPA-ICT 034182</td>
+									<td align="center">Tapajós River</td>
+								</tr>
+								<tr>
+									<td align="left">M62</td>
+									<td align="center">114.06</td>
+									<td align="center">79.41</td>
+									<td align="center">5.81</td>
+									<td align="center">6.33</td>
+									<td align="center">4.5</td>
+									<td align="center">34.65</td>
+									<td align="center">M</td>
+									<td align="center">INPA-ICT</td>
+									<td align="center">INPA-ICT 034182</td>
+									<td align="center">Tapajós River</td>
+								</tr>
+								<tr>
+									<td align="left">M63</td>
+									<td align="center">143.55</td>
+									<td align="center">110</td>
+									<td align="center">5.2</td>
+									<td align="center">6.06</td>
+									<td align="center">3.55</td>
+									<td align="center">33.55</td>
+									<td align="center">M</td>
+									<td align="center">INPA-ICT</td>
+									<td align="center">INPA-ICT 034182</td>
+									<td align="center">Tapajós River</td>
+								</tr>
+							</tbody>
+						</table>
+					</table-wrap>
+				</p>
+			</app>
+		</app-group>
+	</back>
+</article>

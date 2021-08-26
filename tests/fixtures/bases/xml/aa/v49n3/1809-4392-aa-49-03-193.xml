@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE article
+  PUBLIC "-//NLM//DTD JATS (Z39.96) FriendlyISISJournal Publishing DTD v1.1 20151215//EN" "JATS-journalpublishing1.dtd">
+<article article-type="brief-report" dtd-version="1.1" specific-use="sps-1.9" xml:lang="en" xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<front>
+		<journal-meta>
+			<journal-id journal-id-type="publisher-id">aa</journal-id>
+			<journal-title-group>
+				<journal-title>Acta Amazonica</journal-title>
+				<abbrev-journal-title abbrev-type="publisher">Acta Amaz.</abbrev-journal-title>
+			</journal-title-group>
+			<issn pub-type="ppub">0044-5967</issn>
+			<issn pub-type="epub">1809-4392</issn>
+			<publisher>
+				<publisher-name>Instituto Nacional de Pesquisas da Amazônia</publisher-name>
+			</publisher>
+		</journal-meta>
+		<article-meta>
+			<article-id pub-id-type="doi">10.1590/1809-4392201803571</article-id>
+			<article-categories>
+				<subj-group subj-group-type="heading">
+					<subject>Biodiversity and Conservation</subject>
+				</subj-group>
+			</article-categories>
+			<title-group>
+				<article-title>Description of the female of <italic>Spodochlamys marahuaca</italic> Jameson &amp; Ratcliffe, 2011 (Melolonthidae, Rutelinae, Anatistini) and additional records for the Brazilian species of the genus</article-title>
+				<trans-title-group xml:lang="pt">
+					<trans-title>Descrição da fêmea de <italic>Spodochlamys marahuaca</italic> Jameson &amp; Ratcliffe, 2011 (Melolonthidae, Rutelinae, Anatistini) e registros adicionais para as espécies brasileiras do gênero</trans-title>
+				</trans-title-group>
+			</title-group>
+			<contrib-group>
+				<contrib contrib-type="author">
+					<contrib-id contrib-id-type="orcid">0000-0001-9846-9728</contrib-id>
+					<name>
+						<surname>BENTO</surname>
+						<given-names>Matheus</given-names>
+					</name>
+					<xref ref-type="aff" rid="aff1"><sup>1</sup></xref>
+					<xref ref-type="corresp" rid="c1">*</xref>
+				</contrib>
+				<contrib contrib-type="author">
+					<name>
+						<surname>GROSSI</surname>
+						<given-names>Paschoal Coelho</given-names>
+					</name>
+					<xref ref-type="aff" rid="aff2">²</xref>
+				</contrib>
+			</contrib-group>
+			<aff id="aff1">
+				<label>1</label>
+				<institution content-type="original">Instituto Nacional de Pesquisas da Amazônia (INPA), Coordenação de Biodiversidade. Av. André Araújo 2936, CP 478, 69011-970 Manaus, Amazonas, Brazil</institution>
+				<institution content-type="normalized">Instituto Nacional de Pesquisas da Amazônia</institution>
+				<institution content-type="orgname">Instituto Nacional de Pesquisas da Amazônia</institution>
+				<institution content-type="orgdiv1">Coordenação de Biodiversidade</institution>
+				<addr-line>
+					<postal-code>69011-970</postal-code>
+					<city>Manaus</city>
+					<state>Amazonas</state>
+				</addr-line>
+				<country country="BR">Brazil</country>
+			</aff>
+			<aff id="aff2">
+				<label>²</label>
+				<institution content-type="original">Universidade Federal Rural de Pernambuco (UFRPE), Programa de Pós-Graduação em Entomologia Agrícola, Laboratório de Taxonomia de Insetos, Rua Manoel Medeiros, s/n, Dois Irmãos, 52171-900 Recife, Pernambuco, Brazil</institution>
+				<institution content-type="normalized">Universidade Federal Rural de Pernambuco</institution>
+				<institution content-type="orgname">Universidade Federal Rural de Pernambuco</institution>
+				<institution content-type="orgdiv1">Programa de Pós-Graduação em Entomologia Agrícola</institution>
+				<institution content-type="orgdiv2">Laboratório de Taxonomia de Insetos</institution>
+				<addr-line>
+					<postal-code>52171-900</postal-code>
+					<city>Recife</city>
+					<state>Pernambuco</state>
+				</addr-line>
+				<country country="BR">Brazil</country>
+			</aff>
+			<author-notes>
+				<corresp id="c1">* Corresponding author: <email>mabento2008@gmail.com</email>
+				</corresp>
+				<fn fn-type="edited-by" id="fn1">
+					<label>ASSOCIATE EDITOR:</label>
+					<p> Ana Lúcia M. Tourinho</p>
+				</fn>
+			</author-notes>
+			<pub-date date-type="pub" publication-format="electronic">
+				<day>12</day>
+				<month>08</month>
+				<year>2019</year>
+			</pub-date>
+			<pub-date date-type="collection" publication-format="electronic">
+				<season>Jul-Sep</season>
+				<year>2019</year>
+			</pub-date>
+			<volume>49</volume>
+			<issue>3</issue>
+			<fpage>193</fpage>
+			<lpage>196</lpage>
+			<history>
+				<date date-type="received">
+					<day>17</day>
+					<month>09</month>
+					<year>2018</year>
+				</date>
+				<date date-type="accepted">
+					<day>20</day>
+					<month>05</month>
+					<year>2019</year>
+				</date>
+			</history>
+			<permissions>
+				<license license-type="open-access" xlink:href="https://creativecommons.org/licenses/by/4.0/" xml:lang="en">
+					<license-p>This is an open-access article distributed under the terms of the Creative Commons Attribution License</license-p>
+				</license>
+			</permissions>
+			<abstract>
+				<title>ABSTRACT</title>
+				<p>The previously unknown female of <italic>Spodochlamys marahuaca</italic> Jameson &amp; Ratcliffe, 2011 is described and illustrated for the first time based on two specimens collected in the region of the Juruá River, Amazonas state, Brazil. The specimens constitute a new record for Brazil. The identification key for species of <italic>Spodochlamys</italic> is updated, as well as the geographic distribution of the other two Brazilian species, <italic>S. caesarea</italic> Burmeister and <italic>S. iheringi</italic> Ohaus.</p>
+			</abstract>
+			<trans-abstract xml:lang="pt">
+				<title>RESUMO</title>
+				<p>A fêmea previamente desconhecida de <italic>Spodochlamys marahuaca</italic> Jameson &amp; Ratcliffe, 2011 é descrita e ilustrada pela primeira vez com base em dois espécimes coletados na região do Rio Juruá, Amazonas, Brasil. Os espécimes constituem um novo registro para o país. A chave de identificação para as espécies de <italic>Spodochlamys</italic> é atualizada, bem como a distribuição geográfica das duas outras espécies brasileiras, <italic>S. caesarea</italic> Burmeister e <italic>S. iheringi</italic> Ohaus.</p>
+			</trans-abstract>
+			<kwd-group xml:lang="en">
+				<title>Keywords:</title>
+				<kwd>Amazon</kwd>
+				<kwd>Neotropical region</kwd>
+				<kwd>geographic distribution</kwd>
+				<kwd>taxonomy</kwd>
+				<kwd>Scarabaeoidea</kwd>
+			</kwd-group>
+			<kwd-group xml:lang="pt">
+				<title>Palavras-chave:</title>
+				<kwd>Amazônia</kwd>
+				<kwd>região Neotropical</kwd>
+				<kwd>distribuição geográfica</kwd>
+				<kwd>taxonomia</kwd>
+				<kwd>Scarabaeoidea</kwd>
+			</kwd-group>
+			<funding-group>
+				<award-group award-type="contract">
+					<funding-source>Conselho Nacional de Desenvolvimento Científico e Tecnológico (CNPq)</funding-source>
+					<award-id>132195/2017-8</award-id>
+				</award-group>
+			</funding-group>
+			<counts>
+				<fig-count count="3"/>
+				<table-count count="0"/>
+				<equation-count count="0"/>
+				<ref-count count="4"/>
+				<page-count count="4"/>
+			</counts>
+		</article-meta>
+	</front>
+	<body>
+		<p>The ruteline beetles belonging to the Neotropical tribe Anatistini (Rutelinae) comprise 21 species distributed in four genera: <italic>Anatista</italic> Brême, 1844, <italic>Chalcochlamys</italic> Ohaus, 1905, <italic>Spinochlamys</italic> Machatschke, 1970 and <italic>Spodochlamys</italic> Burmeister, 1855, occuring from Honduras to central and western Brazil (<xref ref-type="bibr" rid="B2">Jameson and Ratcliffe 2011</xref>). They are characterized by the presence of a labrum vertically produced with respect to the clypeus and somewhat fused to the clypeus, each labrum and mentum lacking a medioapical projection, maxillary teeth directed approximately at a 90 degree angle with respect to the longitudinal axis of the maxillae, a mandible with a strongly developed molar lobe, and the protibia lacking spurs. </p>
+		<p><italic>Spodochlamys</italic> is the most diverse genus of Anatistini, with about 80% of the species, and can be easily distinguished from the other genera by the clypeal apex broadly rounded, parabolic, or with a median tooth, the pronotum not vertically elevated anteriorly, the mesoventrite not produced beyond the base of the mesocoxae, and the length of the antennal club subequal to twice the length of the antenommeres 2-7 combined (<xref ref-type="bibr" rid="B2">Jameson and Ratcliffe 2011</xref>). From the 17 species known only two had been recorded in Brazil: <italic>S. caesarea</italic> Burmeister, 1855 in the states of Amazonas, Bahia, Goiás and Pará, and <italic>S. iheringi</italic> Ohaus, 1905 in Bahia, Goiás, Mato Grosso, Pará and Rondônia (Ohaus 1918; Jameson and Ratcliffe 2011; <xref ref-type="bibr" rid="B1">Ferreira <italic>et al.</italic> 2018</xref>).</p>
+		<p><italic>Spodochlamys marahuaca</italic><xref ref-type="bibr" rid="B2">Jameson &amp; Ratcliffe, 2011</xref> is a species known only by the male holotype from Venezuela. Here we complement the characterization of the species by reporting and describing the previously unknown female of <italic>S. marahuaca</italic> from Brazil, providing means for the reliable identification of the species and extending the knowledge about its geographical distribution. We also update the identification key for Anatistini females and add new records of the other two Brazilian species, <italic>S. caesarea</italic> and <italic>S. iheringi</italic>.</p>
+		<p>The studied specimens are deposited in the Entomological Collection of Universidade Federal Rural de Pernambuco, in Recife, Pernambuco, Brazil (CERPE), the Invertebrate Collection of Instituto Nacional de Pesquisas da Amazônia (INPA), the Zoological Collection Prof. Paulo Bührnheim of Universidade Federal do Amazonas (CZPB), in Manaus, Amazonas, Brazil, and the Entomological Collection of Universidade Federal do Mato Grosso, Mato Grosso, Brazil (CEMT). The holotypes of <italic>S. marahuaca</italic> and <italic>S. neblina</italic><xref ref-type="bibr" rid="B2">Jameson &amp; Ratcliffe, 2011</xref> (University of Nebraska State Museum, UNSM) were analyzed from pictures (<xref ref-type="fig" rid="f1">Figure 1</xref>). The identification was made based on the original descriptions of the species and the existing key (Jameson and Ratcliffe 2011). We followed Jameson and Ratcliffe (2011) for definition of morphological characters and measurements.</p>
+		<p>
+			<fig id="f1">
+				<label>Figure 1</label>
+				<caption>
+					<title>Male holotype of <italic>Spodochlamys marahuaca</italic> Jameson &amp; Ratcliffe: <bold>A.</bold> head and pronotum in dorsal view; <bold>B.</bold> head in ventral view. Male holotype of <italic>Spodochlamys neblina</italic> Jameson &amp; Ratcliffe; <bold>C.</bold> head and pronotum in dorsal view; <bold>D.</bold> head in ventral view. Credit: M. J. Paulsen. This figure is in color in the electronic version.</title>
+				</caption>
+				<graphic xlink:href="1809-4392-aa-49-03-193-gf1.jpg"/>
+			</fig>
+		</p>
+		<p>The crenulation of the pronotal and elytral margins was defined as (1) densely crenulated: fully crenulated margin, majority of crenulations separated from each other by a distance of less than 0.6 mm; (2) moderately crenulated: fully crenulated margin, but with crenulations separated from each other by a distance greater than 0.6 mm; and (3) sparsely crenulated: margin with only a few crenulations.</p>
+		<p>The geographic coordinates of the collection sites were obtained with Google Maps and the georeferenced points were plotted on the distribution maps derived from the websoftware Simplemappr (<xref ref-type="bibr" rid="B4">Shorthouse 2010</xref>).</p>
+		<p>Images were taken using a Nikon D90 with a 40 mm macro lens, using the software Helicon remote. Multifocus images were stacked with Combine ZP software. The final stacked photos were edited, and the plates were made in Adobe Photoshop<sup>®</sup>.</p>
+		<p><italic>Spodochlamys marahuaca</italic><xref ref-type="bibr" rid="B2">Jameson &amp; Ratcliffe, 2011</xref>
+		</p>
+		<p>Material examined: “BRASIL, Amazonas, Juruá/ Mineruazinho, 03°34’85’’S, 66°59’15’’W, 13-25.I.1996/ P. Buhrnheim; N. O. Aguiar <italic>et al</italic>. leg.” // “Armadilha/ Pensylvania/ Luz negra BLB” (♀, CERPE 000002; ♀ CZPB-CO000756, ♂ CZPB-CO000755). </p>
+		<p>Description. Female (<xref ref-type="fig" rid="f2">Figure 2</xref>). Length 30.0-30.5 mm; width 11.0-13.3 mm. Coloration: Dorsal surface and legs matte black, opaque; ventral surface black with weak reddish reflections at middle. Head: Frons densely punctate; interocular width 4.1-4.3 times wider than transverse eye diameter. Frontoclypeal suture complete. Clypeus confluently punctate or rugopunctate, punctures large; anterior margin weakly parabolic in dorsal view, weakly reflexed in lateral view. Ocular <italic>canthus</italic> cariniform. Ventral clypeal face slightly wider at middle than on sides, apex concave. Labrum length greater than two times the length of ventral face of clypeus medially, vertically produced with respect to clypeal apex, weakly and obtusely angulated at apex. Mentum convex, lacking longitudinal furrow, subquadrate, apex notched medially. Labial palpi 3-segmented, subapical palpomere with small dorsoapical projection. Antenna with club about 1.2 times longer than antenommeres 2-7 combined. Pronotum: surface coarsely rugopunctate; evenly convex in lateral view; anterior marginal bead absent medially; lateral margin densely crenulate; posterior margin weakly bisinuous, with complete bead. Scutellum: Surface densely punctate, wider than long, posterior angle rounded. Elytra: Surface densely and finely punctate; striae absent; sutural margin weakly rugose at base; lateral margin moderately crenulate. Elytral epipleuron gradually narrowed and incomplete. Apical umbone with a rounded, moderately developed tubercle. Sutural stria well defined at apex. Pygidium: Disc evenly rounded in lateral view, not protuberant; surface finely and confluently punctate at base and lateral margins, punctures minute; disc densely punctate. Venter: Mesoventral apex not produced, without process. Legs: Inner protarsal claw and outer claws on meso- and metatarsi narrowly split; protarsomere 5 with weakly developed ventromedial ridge. Protibia without ventral subapical projection, with outer margin tridentate, proximal tooth reduced, inner margin more or less straight; protibial spur absent. Profemur without a ventromedial projection. Meso- and metatibia with apex expanded, outer margin with three acute spine-like teeth; meso- and metatibial spurs simple and not hooked; metatibia with one ventroexternal, transversal carina. Metatrochanter with apex not produced beyond posterior margin of metafemur. </p>
+		<p>
+			<fig id="f2">
+				<label>Figure 2</label>
+				<caption>
+					<title><italic>Spodochlamys marahuaca</italic> Jameson &amp; Ratcliffe, female CERPE 000002. <bold>A.</bold> head and prothorax in lateral view; <bold>B.</bold> dorsal habitus; <bold>C.</bold> protarsus, and protarsal claws; <bold>D.</bold> head, and prothorax in ventral view; <bold>E.</bold> head and pronotum in dorsal view. Credit: P. C. Grossi. This figure is in color in the electronic version.</title>
+				</caption>
+				<graphic xlink:href="1809-4392-aa-49-03-193-gf2.jpg"/>
+			</fig>
+		</p>
+		<p>Diagnosis. The females of <italic>S. marahuaca</italic> can be distinguished from males by (opposing to males): anterior margin of the clypeus weakly parabolic in dorsal view (broadly rounded in dorsal view); pronotum with lateral margins rounded anteriorly (almost straight anteriorly); broader protibial teeth (narrower); inner protarsal claw narrowly split (inner claw simple); and protarsomere 5 with weakly developed, ventromedial ridge (moderately developed). They are also distinguished from the females of other species of the genus by the following character combination: 1) dorsal coloration matte black, opaque, without waxy bloom and greenish or cupreous reflections on pronotum; 2) anterior bead of pronotum incomplete; 3) surface of pronotum coarsely rugose; 4) clypeus in frontal view noticeably convex medially; and 5) outer metatarsal claw narrowly split.</p>
+		<p>Discussion. This is a distinctive species of <italic>Spodochlamys</italic>, possessing a matte black, opaque dorsal surface, and surface of the pronotum coarsely rugopunctate. <italic>Spodochlamys marahuaca</italic> is similar to <italic>S. neblina</italic> (only the male known), but differs from it by the following combination of characters (opposing to <italic>S. neblina</italic>): 1) elytra with apical umbone rounded (apical umbone more or less a pointed tubercle); 2) metatibial apical spur simple (weakly hooked); and 3) apex of metatibia with a spine-like tooth (lacking tooth).</p>
+		<p>
+			<xref ref-type="bibr" rid="B2">Jameson and Ratcliffe (2011</xref>) were correct when they hypothesized that the hitherto unknown female had dark, opaque elytra. However, it is not restricted to the isolated locality of the type, as they previously believed. Here, we record this species for the first time in Brazil (new country record).</p>
+		<p>Three species of the genus are now known to occur in Brazil, and we present additional new records for two of them: <italic>S. caesarea</italic> is here registered to Maranhão, Paraíba, Pernambuco, and Alagoas states, whereas <italic>S. iheringi</italic> is additionally registered to the states of Roraima, Amazonas, Maranhão, and Tocantins (<xref ref-type="fig" rid="f3">Figure 3</xref>). <xref ref-type="bibr" rid="B1">Ferreira <italic>et al.</italic> (2018</xref>) erroneously mentioned the occurrence of <italic>S. caesarea</italic> in São Paulo state based on <xref ref-type="bibr" rid="B3">Ohaus (1918</xref>), but instead, this species was recorded from São Paulo de Olivença municipality in southeastern Amazonas state.</p>
+		<p>
+			<fig id="f3">
+				<label>Figure 3</label>
+				<caption>
+					<title>Distribution map of Brazilian <italic>Spodochlamys</italic> species (open symbols represent state records only). This figure is in color in the electronic version.</title>
+				</caption>
+				<graphic xlink:href="1809-4392-aa-49-03-193-gf3.jpg"/>
+			</fig>
+		</p>
+		<p><bold>Material examined. <italic>Spodochlamys caesarea</italic> Burmeister</bold>. <italic>Amazonas</italic>: Presidente Figueiredo (♀, INPA); <italic>Maranhão</italic>: Reserva Biológica do Gurupi (♂, CERPE); <italic>Paraíba</italic>: João Pessoa (♂♀, CERPE); <italic>Pernambuco</italic>: Recife (♀, CERPE), Igarassu (♂♀, EPGC), Cabo de Santo Agostinho (CEMT), Camaragibe (♀, CERPE); <italic>Alagoas</italic>: Ibateguara (♀, CERPE). <bold>
+ <italic>Spodochlamys iheringi</italic> Ohaus</bold>. <italic>Amazonas</italic>: Coari (♂ CZPB); <italic>Roraima</italic>: Yanomami (♀, INPA); <italic>Pará</italic>: Redenção, Reserva Pinkaiti (CEMT), Barcarena (2♂, 2♀, EPGC); <italic>Maranhão</italic>: Balsas, Serra do Penitente (2♂, EPGC), Carolina (♀, CERPE); <italic>Rondônia</italic>: Jirau, Porto Velho (CEMT), Candeias do Jamari (♂, CZPB), São Domingos, Parque Natural de Porto Velho (♂♀, CERPE); <italic>Mato Grosso</italic>: Sinop (♂, EPGC), Diamantino, Serra das Araras, Paranaíta, Porto Esperidião, Cotriguaçu, Comodoro, Chapada dos Guimarães, Itanhangá, Lucas do Rio Verde, Novo Mundo (CEMT, CERPE); <italic>Tocantins</italic>: Ponte Alta do Tocantins (CEMT); <italic>Distrito Federal</italic>: Planaltina (CEMT).</p>
+		<p>For the inclusion of the <italic>Spodochlamys marahuaca</italic> female, the female key of <xref ref-type="bibr" rid="B2">Jameson and Ratcliffe (2011</xref>) is modified as follows:</p>
+		<p>5. Ventral face of clypeus longer at middle than at sides …....11</p>
+		<p>5’. Ventral face of clypeus with apical and basal margins subparallel ............................................................................6</p>
+		<p>6. Outer metatarsal claw widely split ............<italic>S. cupreola</italic> Bates</p>
+		<p>6’. Outer metatarsal claw narrowly split ……….............………7</p>
+		<p>7. Elytra with waxy bloom .............……….<italic>S. iheringi</italic> Ohaus</p>
+		<p>7’. Elytra without waxy bloom …....…...............................8</p>
+		<p>8. Pronotal apical bead lacking at middle ...………...…….........9</p>
+		<p>8’. Pronotal apical bead complete, at least at middle and laterally .......................…….............................................10</p>
+		<p>9. Dorsal color light castaneous; head, pronotum, and scutellum with weak greenish reflections …...<italic>…S. flavofemorata</italic> Ohaus</p>
+		<p>9’. Dorsal color black matte, opaque, without greenish reflections……................<italic>S. marahuaca</italic> Jameson &amp; Ratcliffe</p>
+		<p>10. Mentum on apical third strongly declivous .............................................................<italic>S. letiranti</italic> Jameson &amp; Ratcliffe</p>
+		<p>10’. Mentum on apical third not noticeably declivous, instead with triangular depression on disc ..…............<italic>S. soulai</italic> Curoe</p>
+		<p>11. Elytra with waxy bloom ...…......<italic>S. caesarea</italic> Burmeister</p>
+		<p>11’. Elytra without waxy bloom.........................................................................................<italic>S. neitai</italic> Jameson &amp; Ratcliffe</p>
+	</body>
+	<back>
+		<ack>
+			<title>ACKNOWLEDGMENTS</title>
+			<p>We thank the curators of the collections, namely Fabio Siqueira Pitaluga de Godoi (CZPB), Fernando Zagury Vaz-de-Mello (CEMT) and Márcio de Oliveira (INPA), for providing the material included in this paper. M. J. Paulsen (UNSM) is thanked for sending images of the holotypes of <italic>S. marahuaca</italic> and <italic>S. neblina</italic>. We thank also the reviewers for their constructive remarks. MB thanks the Conselho Nacional de Desenvolvimento Científico e Tecnológico (CNPq) for the financial support (Process 132195/2017-8).</p>
+		</ack>
+		<ref-list>
+			<ref id="B1">
+				<mixed-citation>Ferreira, A.S.; Almeida, L.M.; Bravo, F.; Grossi, P.C. 2018. A checklist of Rutelinae MacLeay, 1819 (Coleoptera: Melolonthidae) of Bahia, Brazil. <italic>Biota Neotropica</italic>, 18: 1-11.</mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Ferreira</surname>
+							<given-names>A.S.</given-names>
+						</name>
+						<name>
+							<surname>Almeida</surname>
+							<given-names>L.M.</given-names>
+						</name>
+						<name>
+							<surname>Bravo</surname>
+							<given-names>F.</given-names>
+						</name>
+						<name>
+							<surname>Grossi</surname>
+							<given-names>P.C.</given-names>
+						</name>
+					</person-group>
+					<year>2018</year>
+					<article-title>A checklist of Rutelinae MacLeay, 1819 (Coleoptera: Melolonthidae) of Bahia, Brazil</article-title>
+					<source>Biota Neotropica</source>
+					<volume>18</volume>
+					<fpage>1</fpage>
+					<lpage>11</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B2">
+				<mixed-citation>Jameson, M.L.; Ratcliffe, B.C. 2011. The Neotropical scarab beetle tribe Anatistini (Coleoptera: Scarabaeidae: Rutelinae). <italic>Bulletin of the University of Nebraska State Museum</italic>, 26: 1-100.</mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Jameson</surname>
+							<given-names>M.L.</given-names>
+						</name>
+						<name>
+							<surname>Ratcliffe</surname>
+							<given-names>B.C.</given-names>
+						</name>
+					</person-group>
+					<year>2011</year>
+					<article-title>The Neotropical scarab beetle tribe Anatistini (Coleoptera: Scarabaeidae: Rutelinae)</article-title>
+					<source>Bulletin of the University of Nebraska State Museum</source>
+					<volume>26</volume>
+					<fpage>1</fpage>
+					<lpage>100</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B3">
+				<mixed-citation>Ohaus, F. 1918. Scarabaeidae: Euchirinae, Phaenomerinae, Rutelinae. <italic>Coleopterum Catalogus</italic>, Berlim, 10 9-217.</mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Ohaus</surname>
+							<given-names>F.</given-names>
+						</name>
+					</person-group>
+					<year>1918</year>
+					<article-title>Scarabaeidae: Euchirinae, Phaenomerinae, Rutelinae</article-title>
+					<source>Coleopterum Catalogus, Berlim</source>
+					<volume>10</volume>
+					<fpage>9</fpage>
+					<lpage>217</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B4">
+				<mixed-citation>Shorthouse, D.P. 2010. SimpleMappr, an online tool to produce publication-quality point maps, (<comment> SimpleMappr, an online tool to produce publication-quality point maps, (<ext-link ext-link-type="uri" xlink:href="http://www.simplemappr.net">http://www.simplemappr.net</ext-link>
+					</comment>). Accessed on 27 Jul 2018.</mixed-citation>
+				<element-citation publication-type="software">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Shorthouse</surname>
+							<given-names>D.P.</given-names>
+						</name>
+					</person-group>
+					<year>2010</year>
+					<source>SimpleMappr, an online tool to produce publication-quality point maps</source>
+					<comment> SimpleMappr, an online tool to produce publication-quality point maps, (<ext-link ext-link-type="uri" xlink:href="http://www.simplemappr.net">http://www.simplemappr.net</ext-link>
+					</comment>
+					<date-in-citation content-type="access-date" iso-8601-date="2018-07-27">27 Jul 2018</date-in-citation>
+				</element-citation>
+			</ref>
+		</ref-list>
+		<fn-group>
+			<fn fn-type="other" id="fn2">
+				<label>CITE AS:</label>
+				<p> Bento, M.; Grossi, P.C. 2019. Description of the female of <italic>Spodochlamys marahuaca</italic> Jameson &amp; Ratcliffe, 2011 (Melolonthidae, Rutelinae, Anatistini) and additional records for the Brazilian species of the genus. <italic>Acta Amazonica</italic> 49: 193-196.</p>
+			</fn>
+		</fn-group>
+	</back>
+</article>

@@ -1,0 +1,3166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE article
+  PUBLIC "-//NLM//DTD JATS (Z39.96) FriendlyISISJournal Publishing DTD v1.1 20151215//EN" "JATS-journalpublishing1.dtd">
+<article article-type="research-article" dtd-version="1.1" specific-use="sps-1.9" xml:lang="en" xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<front>
+		<journal-meta>
+			<journal-id journal-id-type="publisher-id">aa</journal-id>
+			<journal-title-group>
+				<journal-title>Acta Amazonica</journal-title>
+				<abbrev-journal-title abbrev-type="publisher">Acta Amaz.</abbrev-journal-title>
+			</journal-title-group>
+			<issn pub-type="ppub">0044-5967</issn>
+			<issn pub-type="epub">1809-4392</issn>
+			<publisher>
+				<publisher-name>Instituto Nacional de Pesquisas da Amazônia</publisher-name>
+			</publisher>
+		</journal-meta>
+		<article-meta>
+			<article-id pub-id-type="doi">10.1590/1809-4392201803941</article-id>
+			<article-categories>
+				<subj-group subj-group-type="heading">
+					<subject>Biodiversity and Conservation</subject>
+				</subj-group>
+			</article-categories>
+			<title-group>
+				<article-title>Environmental structure affects taxonomic diversity but not functional structure of understory birds in the southwestern Brazilian Amazon</article-title>
+				<trans-title-group xml:lang="pt">
+					<trans-title>Estrutura ambiental afeta a diversidade taxonômica, mas não a estrutura funcional de aves de sub-bosque no sudoeste da Amazônia brasileira</trans-title>
+				</trans-title-group>
+			</title-group>
+			<contrib-group>
+				<contrib contrib-type="author">
+					<name>
+						<surname>OLIVEIRA</surname>
+						<given-names>Jocieli de</given-names>
+					</name>
+					<xref ref-type="aff" rid="aff1"><sup>1</sup></xref>
+					<xref ref-type="fn" rid="fn1"><sup>§</sup></xref>
+					<xref ref-type="corresp" rid="c1">*</xref>
+				</contrib>
+				<contrib contrib-type="author">
+					<contrib-id contrib-id-type="orcid">0000-0002-8372-5482</contrib-id>
+					<name>
+						<surname>ALMEIDA</surname>
+						<given-names>Sara M.</given-names>
+					</name>
+					<xref ref-type="aff" rid="aff2"><sup>2</sup></xref>
+					<xref ref-type="fn" rid="fn1"><sup>§</sup></xref>
+				</contrib>
+				<contrib contrib-type="author">
+					<name>
+						<surname>FLORÊNCIO</surname>
+						<given-names>Fernando P.</given-names>
+					</name>
+					<xref ref-type="aff" rid="aff1"><sup>1</sup></xref>
+				</contrib>
+				<contrib contrib-type="author">
+					<name>
+						<surname>PINHO</surname>
+						<given-names>João B.</given-names>
+					</name>
+					<xref ref-type="aff" rid="aff1"><sup>1</sup></xref>
+				</contrib>
+				<contrib contrib-type="author">
+					<name>
+						<surname>OLIVEIRA</surname>
+						<given-names>Dalci M. M.</given-names>
+					</name>
+					<xref ref-type="aff" rid="aff3"><sup>3</sup></xref>
+				</contrib>
+				<contrib contrib-type="author">
+					<name>
+						<surname>LIGEIRO</surname>
+						<given-names>Raphael</given-names>
+					</name>
+					<xref ref-type="aff" rid="aff4"><sup>4</sup></xref>
+					<xref ref-type="fn" rid="fn1"><sup>§</sup></xref>
+				</contrib>
+				<contrib contrib-type="author">
+					<name>
+						<surname>RODRIGUES</surname>
+						<given-names>Domingos J.</given-names>
+					</name>
+					<xref ref-type="aff" rid="aff1"><sup>1</sup></xref>
+					<xref ref-type="aff" rid="aff5"><sup>5</sup></xref>
+				</contrib>
+			</contrib-group>
+			<aff id="aff1">
+				<label>1</label>
+				<institution content-type="original">Universidade Federal de Mato Grosso − UFMT, Programa de Pós-Graduação em Ecologia e Conservação da Biodiversidade, Av. Fernando Correa da Costa 2367, CEP 78060-900, Cuiabá, Mato Grosso, Brazil</institution>
+				<institution content-type="normalized">Universidade Federal de Mato Grosso</institution>
+				<institution content-type="orgname">Universidade Federal de Mato Grosso − UFMT</institution>
+				<institution content-type="orgdiv1">Programa de Pós-Graduação em Ecologia e Conservação da Biodiversidade</institution>
+				<addr-line>
+					<postal-code>78060-900</postal-code>
+					<city>Cuiabá</city>
+					<state>Mato Grosso</state>
+				</addr-line>
+				<country country="BR">Brazil</country>
+			</aff>
+			<aff id="aff2">
+				<label>2</label>
+				<institution content-type="original">Universidade Federal do Pará − UFPA, Instituto de Ciências Biológicas, Museu de Zoologia de Vertebrados, Rua Augusto Corrêa 1, CEP 66075-110, Belém, Pará, Brazil</institution>
+				<institution content-type="normalized">Universidade Federal do Pará</institution>
+				<institution content-type="orgname">Universidade Federal do Pará − UFPA</institution>
+				<institution content-type="orgdiv1">Instituto de Ciências Biológicas</institution>
+				<institution content-type="orgdiv2">Museu de Zoologia de Vertebrados</institution>
+				<addr-line>
+					<postal-code>66075-110</postal-code>
+					<city>Belém</city>
+					<state>Pará</state>
+				</addr-line>
+				<country country="BR">Brazil</country>
+			</aff>
+			<aff id="aff3">
+				<label>3</label>
+				<institution content-type="original">Universidade Federal de Mato Grosso − UFMT, Instituto de Biociências, Departamento de Biologia, Av. Fernando Correa da Costa 2367, CEP 78060-900, Cuiabá, Mato Grosso, Brazil</institution>
+				<institution content-type="normalized">Universidade Federal de Mato Grosso</institution>
+				<institution content-type="orgname">Universidade Federal de Mato Grosso − UFMT</institution>
+				<institution content-type="orgdiv1">Instituto de Biociências</institution>
+				<institution content-type="orgdiv2">Departamento de Biologia</institution>
+				<addr-line>
+					<postal-code>78060-900</postal-code>
+					<city>Cuiabá</city>
+					<state>Mato Grosso</state>
+				</addr-line>
+				<country country="BR">Brazil</country>
+			</aff>
+			<aff id="aff4">
+				<label>4</label>
+				<institution content-type="original">Universidade Federal do Pará − UFPA, Instituto de Ciências Biológicas, Laboratório de Ecologia e Conservação, Rua Augusto Corrêa 1, CEP 66075-110, Belém, Pará, Brazil</institution>
+				<institution content-type="normalized">Universidade Federal do Pará</institution>
+				<institution content-type="orgname">Universidade Federal do Pará − UFPA</institution>
+				<institution content-type="orgdiv1">Instituto de Ciências Biológicas</institution>
+				<institution content-type="orgdiv2">Laboratório de Ecologia e Conservação</institution>
+				<addr-line>
+					<postal-code>66075-110</postal-code>
+					<city>Belém</city>
+					<state>Pará</state>
+				</addr-line>
+				<country country="BR">Brazil</country>
+			</aff>
+			<aff id="aff5">
+				<label>5</label>
+				<institution content-type="original">Universidade Federal de Mato Grosso − UFMT, Instituto de Ciências Naturais, Humanas e Sociais, Av. Alexandre Ferronato 1200, CEP 78557-267, Sinop, Mato Grosso, Brazil</institution>
+				<institution content-type="normalized">Universidade Federal de Mato Grosso</institution>
+				<institution content-type="orgname">Universidade Federal de Mato Grosso − UFMT</institution>
+				<institution content-type="orgdiv1">Instituto de Ciências Naturais, Humanas e Sociais</institution>
+				<addr-line>
+					<postal-code>78557-267</postal-code>
+					<city>Sinop</city>
+					<state>Mato Grosso</state>
+				</addr-line>
+				<country country="BR">Brazil</country>
+			</aff>
+			<author-notes>
+				<corresp id="c1">*<sup>	</sup>Corresponding author: <email>jociely@hotmail.com</email>
+				</corresp>
+				<fn fn-type="equal" id="fn1">
+					<label><sup>§</sup></label>
+					<p><sup>	</sup>These authors contributed equally to this work.</p>
+				</fn>
+				<fn fn-type="edited-by" id="fn2">
+					<label>ASSOCIATE EDITOR:</label>
+					<p> Sérgio Henrique Borges</p>
+				</fn>
+			</author-notes>
+			<pub-date date-type="pub" publication-format="electronic">
+				<day>12</day>
+				<month>08</month>
+				<year>2019</year>
+			</pub-date>
+			<pub-date date-type="collection" publication-format="electronic">
+				<season>Jul-Sep</season>
+				<year>2019</year>
+			</pub-date>
+			<volume>49</volume>
+			<issue>3</issue>
+			<fpage>232</fpage>
+			<lpage>241</lpage>
+			<history>
+				<date date-type="received">
+					<day>15</day>
+					<month>10</month>
+					<year>2018</year>
+				</date>
+				<date date-type="accepted">
+					<day>24</day>
+					<month>05</month>
+					<year>2019</year>
+				</date>
+			</history>
+			<permissions>
+				<license license-type="open-access" xlink:href="https://creativecommons.org/licenses/by/4.0/" xml:lang="en">
+					<license-p>This is an open-access article distributed under the terms of the Creative Commons Attribution License</license-p>
+				</license>
+			</permissions>
+			<abstract>
+				<title>ABSTRACT</title>
+				<p>Changes in environmental characteristics can affect habitat use by birds, impacting the number of individuals, number of species, and changing species composition and functional structure of assemblages. Metrics that evaluate the functional structure of biological assemblages constitute a complementary tool to the traditional taxonomic approach, because they quantify the differences between species by means of functional traits. We assessed the effect of environmental characteristics on the taxonomic diversity (species richness, species composition and number of individuals) and functional structure (functional richness, functional evenness, Rao’s functional diversity, and community-weighted mean traits) of bird assemblages in northern Mato Grosso state, in the southwestern Brazilian Amazon. We sampled birds in 32 plots. At each plot birds were captured using mist nets, and eight environmental variables were measured: canopy openness, leaf litter, elevation, number of trees in three classes of DBH, soil clay content, and distance to nearest stream. To evaluate functional structure, we measured seven morphological traits from individuals of each bird species. Habitat variables had a significant effect on taxonomic diversity. However, the general functional structure was not affected. Elevation and distance to nearest stream were the main variables driving changes in taxonomic diversity and had a minor effect on functional richness. The other metrics of functional structure were not significantly affected by the set of environmental variables. Our results suggest that the sampled bird assemblages exhibit some functional tolerance (redundancy) to small-scale environmental variation, implying certain resilience to ecosystem modification. </p>
+			</abstract>
+			<trans-abstract xml:lang="pt">
+				<title>RESUMO</title>
+				<p>Mudanças nas características ambientais podem influenciar o uso do habitat por aves, afetando o número de indivíduos, a riqueza de espécies e alterando a composição de espécies e estrutura funcional das assembleias. Medidas que avaliam a estrutura funcional de assembléias biológicas constituem uma ferramenta complementar à abordagem taxonômica, pois quantificam as diferenças entre as espécies através de seus atributos funcionais. Nós acessamos o efeito de variáveis ambientais sobre a diversidade taxonômica (riqueza, composição de espécies e número de indivíduos) e estrutura funcional (riqueza funcional, equabilidade funcional, diversidade funcional e média dos atributos ponderada pelas abundâncias) de assembleias de aves no norte do estado de Mato Grosso. Amostramos aves em 32 parcelas. Em cada parcela as aves foram capturadas usando redes de neblina e oito variáveis ambientais foram mensuradas: abertura de dossel, volume de serapilheira, elevação, número de árvores em três classe de DAP, teor de argila no solo e distância ao riacho mais próximo. Para avaliar a estrutura funcional nós tomamos sete medidas morfológicas de cada espécie de aves. Encontramos um efeito significativo das variáveis do habitat sobre a diversidade taxonômica, porém, a estrutura funcional, de maneira geral, não foi afetada. Elevação e distância ao riacho mais próximo foram as variáveis que direcionaram as mudanças na diversidade taxonômica e tiveram um pequeno efeito na riqueza funcional. As demais métricas de estrutura funcional não foram afetadas significativamente pelo conjunto de variáveis ambientais. Nossos resultados sugerem que a assembleia estudada exibe certa tolerância funcional (redundância) à variação ambiental em pequena escala, implicando em alguma resiliência à modificação do ecossistema.</p>
+			</trans-abstract>
+			<kwd-group xml:lang="en">
+				<title>KEYWORDS:</title>
+				<kwd>Aves</kwd>
+				<kwd>assemblage structure</kwd>
+				<kwd>habitat</kwd>
+				<kwd>functional richness</kwd>
+			</kwd-group>
+			<kwd-group xml:lang="pt">
+				<title>PALAVRAS-CHAVE:</title>
+				<kwd>Aves</kwd>
+				<kwd>estrutura de assembleias</kwd>
+				<kwd>habitat</kwd>
+				<kwd>riqueza funcional</kwd>
+			</kwd-group>
+			<funding-group>
+				<award-group award-type="contract">
+					<funding-source>Conselho Nacional de Desenvolvimento Científico e Tecnológico (CNPq)</funding-source>
+					<award-id>558225/2009-8</award-id>
+					<award-id>569382/2008-4</award-id>
+					<award-id>556858/2009-3</award-id>
+				</award-group>
+			</funding-group>
+			<counts>
+				<fig-count count="4"/>
+				<table-count count="5"/>
+				<equation-count count="0"/>
+				<ref-count count="54"/>
+				<page-count count="10"/>
+			</counts>
+		</article-meta>
+	</front>
+	<body>
+		<sec sec-type="intro">
+			<title>INTRODUCTION</title>
+			<p>The structure of the environment constitutes a crucial component for bird assemblages (<xref ref-type="bibr" rid="B54">Wiens <italic>et al</italic>. 1987</xref>). Environments with greater structural complexity (e.g. rainforests) support high local diversity due to greater opportunities for resource specialization and niche partitioning, enabling the coexistence of species with different ecological features (<xref ref-type="bibr" rid="B29">MacArthur 1972</xref>; <xref ref-type="bibr" rid="B50">Tews <italic>et al</italic>. 2004</xref>; <xref ref-type="bibr" rid="B33">Mansor and Mohd Sah 2012</xref>). Forest birds are highly dependent on habitat and microhabitat conditions, particularly those related to vegetation structure (<xref ref-type="bibr" rid="B49">Terborgh <italic>et al</italic>. 1990</xref>; <xref ref-type="bibr" rid="B11">Cintra <italic>et al</italic>. 2006</xref>). Changes in the structure of vegetation within forests (e.g. canopy cover, density of trees) affects food availability, nesting sites, microclimate characteristics, vulnerability to predators and bird dispersal ability (<xref ref-type="bibr" rid="B22">Johns 1991</xref>; <xref ref-type="bibr" rid="B34">Mason and Thiollay 2001</xref>). These conditions can influence the use of habitats by Amazonian birds, affecting the number of individuals, the number of species and compositional change among assemblages (Johns 1991; Cintra <italic>et al</italic>. 2006; <xref ref-type="bibr" rid="B46">Rodrigues <italic>et al</italic>. 2016</xref>). The depth of leaf litter, for example, can affect the utilisation of the forest floor by many species of insectivorous birds (<xref ref-type="bibr" rid="B39">Pearson 1975</xref>), while canopy cover is crucial to the occurrence of birds that depend on a shaded understory (<xref ref-type="bibr" rid="B3">Banks-Leite and Cintra 2008</xref>). </p>
+			<p>Besides forest structure, topographical variation is also broadly considered in ecological studies because it can structure bird assemblages at both large (<xref ref-type="bibr" rid="B44">Quintero and Jetz 2018</xref>) and local scales (<xref ref-type="bibr" rid="B11">Cintra <italic>et al</italic>. 2006</xref>; <xref ref-type="bibr" rid="B3">Banks-Leite and Cintra 2008</xref>). Locally, variation in elevation is directly related to soil components, which influence the floristic and structural complexity of vegetation in tropical forests (<xref ref-type="bibr" rid="B43">Puig 2008</xref>), consequently affecting assemblages (Cintra <italic>et al</italic>. 2006; Banks-Leite and Cintra 2008; <xref ref-type="bibr" rid="B10">Cintra and Cancelli 2008</xref>; Cintra and Naka 2012).</p>
+			<p>Assemblage diversity is usually measured in terms of taxonomic diversity, which only accounts for species composition and abundance of individuals (<xref ref-type="bibr" rid="B31">Magurran 1988</xref>). Functional diversity can also be an effective tool in environmental monitoring studies, constituting a complementary tool to the traditional taxonomic approach (<xref ref-type="bibr" rid="B14">De Bello <italic>et al</italic>. 2010</xref>). This component of biodiversity quantifies the differences between species by means of functional traits, which are morphological, physiological, reproductive or behavioural characteristics of the organisms that affect their fitness (Tilman 2001; <xref ref-type="bibr" rid="B41">Petchey and Gaston 2006</xref>). They are often related to their environmental tolerances and competition for resources (Tilman 2001; Petchey and Gaston 2002, 2006). In this way, functional diversity allows to understand the competitive abilities of species and their patterns of co-occurrence, assembly rules, and the role of different functional traits in the ecosystem (<xref ref-type="bibr" rid="B25">Laureto <italic>et al</italic>. 2015</xref>). </p>
+			<p>Many studies have demonstrated the importance of habitat structure for the composition, richness and guild structure of birds in the Brazilian Amazon (<xref ref-type="bibr" rid="B11">Cintra <italic>et al</italic>. 2006</xref>; <xref ref-type="bibr" rid="B3">Banks-Leite and Cintra 2008</xref>; <xref ref-type="bibr" rid="B10">Cintra and Cancelli 2008</xref>; <xref ref-type="bibr" rid="B27">Lees and Peres 2010</xref>; <xref ref-type="bibr" rid="B36">Menger <italic>et al</italic>. 2017</xref>). Comparatively few studies on Amazonian birds have considered functional diversity, evaluating the effects of monoculture (<xref ref-type="bibr" rid="B1">Almeida <italic>et al</italic>. 2016</xref>), phytophysiognomies and biogeography (<xref ref-type="bibr" rid="B2">Almeida <italic>et al</italic>. 2018</xref>), urbanization (<xref ref-type="bibr" rid="B26">Lees and Moura 2017</xref>) and wildfire (<xref ref-type="bibr" rid="B21">Hidasi-Neto e<italic>t al</italic>. 2012</xref>) on this trait. However, little is known about the response of forest bird functional diversity to forested habitat structure in the Amazon (e.g. Hidasi-Neto e<italic>t al</italic>. 2012). The functional characteristics of the species determine the impact of biodiversity on ecosystem functioning, ecological patterns and structuring of biological assemblages (<xref ref-type="bibr" rid="B51">Tilman 2004</xref>; <xref ref-type="bibr" rid="B25">Laureto <italic>et al</italic>. 2015</xref>). </p>
+			<p>The purpose of this study was to assess the effects of habitat structure on the taxonomic and functional diversity (as derived from morphological traits) of Amazonian birds. Specifically, we tested the effects of a set of habitat variables (related to vegetation, elevation, soil clay content and distance to nearest stream) on richness, abundance, composition and functional structure of understory bird assemblages. Because changes in habitat conditions influence the structuring of ecological communities, we expected that both taxonomic and functional diversity would be affected by the environmental structure, especially those related to vegetation.</p>
+		</sec>
+		<sec sec-type="materials|methods">
+			<title>MATERIAL AND METHODS</title>
+			<sec>
+				<title>Study area</title>
+				<p>The study was conducted at three sites (I, II, III) located in the municipality of Cláudia, in the northern region of the state of Mato Grosso, Brazil (<xref ref-type="fig" rid="f1">Figure 1</xref>). The region is located within the Mato Grosso tropical dry forests ecoregion, which constitutes a transitional area between the Amazon rainforest and savanna-type cerrado vegetation (<xref ref-type="bibr" rid="B7">Carvalho 2006</xref>). This ecoregion represents approximately 10% of the Amazon biome and covers the northern part of Mato Grosso and the southern part of Pará state (Carvalho 2006). The climate is of type Am (<xref ref-type="bibr" rid="B23">Köppen 1948</xref>), characterised by high temperature (20ºC - 33ºC) and humidity, and an average annual rainfall of 2,000 mm, with higher rainfall (80%) from September to April, and a dry season from May to September, with precipitation below 60 mm (<xref ref-type="bibr" rid="B53">Vourlitis 2004</xref>). The three sampling sites have a history of selective logging, containing clearings that were used for the storage of harvested timber. Site I was logged 29 years, site II 15 years, and site III eight years prior to sampling. However, scarce evidence of impacts from the selective logging can be observed today at the sites, due to the use of reduced-impact looging practices, which resulted in lower environmental degradation.</p>
+				<p>
+					<fig id="f1">
+						<label>Figure 1</label>
+						<caption>
+							<title>Location of the three sampling sites in the municipality of Cláudia, Mato Grosso state, southwestern Brazilian Amazon. </title>
+						</caption>
+						<graphic xlink:href="1809-4392-aa-49-03-232-gf1.jpg"/>
+					</fig>
+				</p>
+			</sec>
+			<sec>
+				<title>Sampling design</title>
+				<p>Sampling was performed in 32 plots distributed in the three sites. Each plot was 250 m in length and located 1 km from neighbouring plots. Sites I and II had 12 plots each, distributed in a 1 x 5 km (5 km²) system of trails. Site III contained eight plots comprising a 1 x 3 km (3 km<sup>2</sup>) system of trails, as the size of the forest area was not large enough for the installation of a 1 x 5 km trail system (<xref ref-type="fig" rid="f1">Figure 1</xref>c). Sampling design was based on the Rapid Assessment model for Long Term Ecological Research (RAPELD) adapted by <xref ref-type="bibr" rid="B32">Magnusson <italic>et al</italic>. (2005</xref>) and adopted by the Research Program on Biodiversity (PPBio) (for more information see http://ppbio.inpa.gov.br/). We captured birds in the 32 plots during two campaigns (March/April 2010 and July/August 2010), so that each plot was sampled twice overall.</p>
+			</sec>
+			<sec>
+				<title>Bird sampling</title>
+				<p>Birds were captured using 25 mist nets (36-mm mesh), each 10 m long and 2.5 m heigh, linearly set within the 250 m, covering an area of 625 m² in each plot. The sampling effort in each plot was 6,250 h m<sup>-2</sup> (<italic>sensu</italic><xref ref-type="bibr" rid="B48">Straube and Bianconi 2002</xref>). The nets were arranged adjacent to each other along the plots from ground level and remained functioning from 06:00 to 11:00 am, and were checked every hour for the removal of captured birds. Each captured individual received a numbered metal ring provided by CEMAVE (ICMBio/SNA authorisation nr. 3144). Birds not identified in the field were collected (IBAMA/SISBIO license nr. 22923-2) and later identified by experts and deposited in the bird collection of Universidade Federal de Mato Grosso.</p>
+			</sec>
+			<sec>
+				<title>Environmental variables</title>
+				<p>Eight environmental variables were measured in each plot during the first sampling campaign (March/April 2010): canopy openness, litter volume, elevation, tree density for three DBH classes, soil clay content, and distance to nearest stream (<xref ref-type="table" rid="t1">Table 1</xref>). Canopy openness, which is an indirect measurement of the amount of light reaching the understory, was measured at five equidistant points in each plot using a concave spherical densiometer (Robert &amp; Lemmon Forest Densiometer, model C). Measurements were taken along the cardinal points (east-west and north-south) and the average was calculated. The five measurements obtained at each plot were averaged and used in the analysis. Litter volume (in litres) was sampled at five points in each plot (every 50 m), with all litter from a 1 m<sup>2</sup> area collected at each point. The collected material was pressed three times in a graduated bucket using a wooden press that was released at a distance of 1.5 m from the bucket. The volume of litter measured from the five points was averaged for subsequent analysis. Elevation was measured at the beginning of each plot with a GPS Garmin ® model 60CSx MAP altimeter, as the topographic level of each plot was roughly constant along its entire length. Tree density was estimated by counting all trees within three DBH (diameter at breast height at 1.30 m from the ground) classes, using different sub-plot areas for each DBH class: DBH = 1 − 9.9 cm (DBH 1-10) in sub-plots 250 m long x 4 m wide (0.1 ha); DBH = 10 − 29.9 cm (DBH 10-30) in sub-plots 250 m x 20 m (0.5 ha); and DBH ≥ 30 cm (DBH 30) in sub-plots 250 m x 40 m (1 ha). All previous variable measurements followed PPBio protocols (https://ppbio.inpa.gov.br/manuais). Soil samples were taken from five equidistant points at a depth of 0-10 cm in each plot following the methodology of <xref ref-type="bibr" rid="B18">EMBRAPA (1997</xref>) and sent to a laboratory for analysis of clay content. Distance from the mid-point of the 250-m trail to the nearest stream was calculated using georeferenced points in ArcGIS 9.0.</p>
+				<p>
+					<table-wrap id="t1">
+						<label>Table 1</label>
+						<caption>
+							<title>Mean, standard deviation (SD) and range (min − max) of values for environmental variables tested as predictors of understory bird assemblage patterns in 32 plots in northern Mato Grosso state, southwestern Brazilian Amazon. See Material and Methods for variable definitions.</title>
+						</caption>
+						<table>
+							<colgroup>
+								<col/>
+								<col/>
+							</colgroup>
+							<thead>
+								<tr>
+									<th align="left">Variables</th>
+									<th align="center">Mean ± SD (min − max)</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td align="left">Elevation (m)</td>
+									<td align="center">357 ± 20.8 (289 − 388)</td>
+								</tr>
+								<tr>
+									<td align="left">Canopy openness (%)</td>
+									<td align="center">23.6 ± 2.7 (19.8 − 30.1)</td>
+								</tr>
+								<tr>
+									<td align="left">Tree DBH 10-30 (ind 0.1 ha<sup>-1</sup>) </td>
+									<td align="center">229.3 ± 38.5 (148 − 310)</td>
+								</tr>
+								<tr>
+									<td align="left">Tree DBH 1-10 (ind 0.5 ha<sup>-1</sup>)</td>
+									<td align="center">523 ± 116.2 (351 − 850)</td>
+								</tr>
+								<tr>
+									<td align="left">Tree DBH 30 (ind ha<sup>-1</sup>)</td>
+									<td align="center">50.6 ± 13.2 (29 − 88)</td>
+								</tr>
+								<tr>
+									<td align="left">Leaf litter volume (L)</td>
+									<td align="center">3520 ± 355.7 (2880 − 4240)</td>
+								</tr>
+								<tr>
+									<td align="left">Soil clay content (%)</td>
+									<td align="center">37.81 ± 11.4 (22.7 − 58.3)</td>
+								</tr>
+								<tr>
+									<td align="left">Distance to nearest stream (m)</td>
+									<td align="center">1238.1 ± 635.6 (130 − 2880)</td>
+								</tr>
+							</tbody>
+						</table>
+					</table-wrap>
+				</p>
+				<p>To eliminate highly correlated variables (|r| &gt; 0.70) we analyzed a correlation matrix of the eight environmental variables using the Pearson coefficient (Supplementary Material, <xref ref-type="fig" rid="f4">Figure S1</xref>). All variables were weakly correlated and none was eliminated. We also included the time since last logging in the analyses, to control for any possible effect of past human activities on bird assemblage structure. No model selected this predictor, and none of the habitat variables considered above showed any correlation with time since logging, confirming the absence of influence of this activity in the patterns observed.</p>
+			</sec>
+			<sec>
+				<title>Functional traits</title>
+				<p>For each recorded bird species we measured seven morphological traits related to resource use, as birds perform most of their ecological roles via resource acquisition (<xref ref-type="bibr" rid="B47">Şekercioğlu 2006</xref>). The following biometric parameters were measured, given their relationship to foraging strategies adopted by the species, and the amount and types of resources they exploit: body mass, wing length, bill length, bill width, bill height, tarsus length and hallux length. Body mass indicates the amount and size of food required for a given individual and strongly relates to metabolic rate, foraging behaviour, longevity and home range size (<xref ref-type="bibr" rid="B28">Luck <italic>et al</italic>. 2012</xref>). Wing length is related to capacity of movement, which in turn influences resource use, seed dispersal and nutrient cycling (Luck <italic>et al</italic>. 2012). Bill shape is a morphological adaptation related to food access and type of food consumed, influencing pollination effectiveness and handling of fruit and seeds (Luck <italic>et al</italic>. 2012). The hallux (opposable digit 1) is related to grasping and perching ability, and the tarsus can influence foraging behaviour as well (Luck <italic>et al</italic>. 2012). These measurements were obtained from the ornithological collection of the Museu Paraense Emilio Goeldi, in Belém, Pará, Brazil (see Supplementary Material, <xref ref-type="table" rid="t5">Table S1</xref> for details). Six male specimens of each species were measured using a digital calliper with 0.1 mm precision, and the mean of these six values being used for analysis. The specimens were selected based on the proximity of their collecting localities to our study sites. All measurements were taken by one observer (SMA).</p>
+			</sec>
+			<sec>
+				<title>Data analysis</title>
+				<p>To examine the response of bird assemblages to environmental variables, we conducted a redundancy analysis (RDA) using the ‘vegan’ package in the R environment. This method calculates the variation in a set of response variables (e.g. species composition) that can be explained by a set of explanatory variables (e.g. environmental variables). The response variable was the matrix of species composition, and the eight environmental variables measured were used as predictor variables, employing a forward selection (<xref ref-type="bibr" rid="B4">Blanchet <italic>et al.</italic> 2008</xref>). The effect of the environmental gradients (each variable selected by the forward selection) on relative species abundance was shown through a direct gradient analyses (<xref ref-type="bibr" rid="B19">Gauch 1982</xref>).</p>
+				<p>We used different and complementary analytical approaches to describe assemblage functional structure and to understand how biodiversity interacts with habitat variables. We calculated functional richness (FRic), functional evenness (FEve), Rao’s functional diversity (FD<sub>
+ <italic>Q</italic>
+</sub> ) and community weighted means traits (CWM). FRic represents the amount of functional space occupied by all species of an assemblage according to Euclidean distances between them as calculated from the morphological traits (<xref ref-type="bibr" rid="B52">Villéger <italic>et al</italic>. 2008</xref>). FRic is independent of species abundance but the values monotonically increase with species richness, because more species fill a larger volume of trait space. This measure is considered the best performing index, mainly for communities with low richness (<xref ref-type="bibr" rid="B38">Mouchet <italic>et al</italic>. 2010</xref>). FEve quantifies the regularity between species in trait space, weighted by their abundance (Villéger <italic>et al</italic>. 2008). FEve is not biased by species richness and has a range between 0 and 1, with values close to 1 indicating very constant, and values close to 0 indicating very irregular functional distances between species or a less even abundance distribution among species (Villéger <italic>et al</italic>. 2008). FRic and FEve were calculated using the “dbFD” function in the ‘FD’ package in R (<xref ref-type="bibr" rid="B24">Laliberté and Legendre 2010</xref>). We standardized FRic values for the assemblage in each plot by expressing them as a proportion of the total volume filled by the regional species pool, here represented by all species recorded in this study. </p>
+				<p>To calculate the functional diversity of assemblages (FD<sub>Q</sub>) we calculated a matrix using the Euclidean distance between the morphological trait measures. Then, using the distance matrix with all species, we quantified the functional diversity of the birds in the plots through <xref ref-type="bibr" rid="B45">Rao’s quadratic entropy (Rao 1982</xref>; <xref ref-type="bibr" rid="B5">Botta-Dukát 2005</xref>). The Rao index is greater when there is a greater number of functionally unique species, because a new species in the community increases the species-abundance based diversity, while it decreases the average dissimilarity among species (<xref ref-type="bibr" rid="B15">De Bello <italic>et al.</italic> 2016</xref>). We calculated FD<sub>
+ <italic>Q</italic>
+</sub> in the R environment using the ‘melodic’ function, considering abundance data (De Bello <italic>et al</italic>. 2016). </p>
+				<p>The community-weighted means (CWM) were calculated for each morphological trait of the assemblage. The CWM can define the functional composition of assemblages, and enables to evaluate the association between trait dominance and environmental gradients for a set of local communities (<xref ref-type="bibr" rid="B17">Duarte <italic>et al</italic>. 2018</xref>). CWM were calculated using the ‘matrix.t’ function in the R package ‘SYNCSA’ (<xref ref-type="bibr" rid="B16">Debastiani and Pillar 2012</xref>). To analyze the relationship between morphological traits of species and habitat structure we performed simple correlations combining data on environmental variables and the CWM of traits. </p>
+				<p>Generalised linear models (GLMs) using Gaussian distribution were used to identify the variables related to species richness, number of individuals (log-transformed) and functional richness. For each dependent variable we performed best subset models with all possible combinations of predictors (the eight explanatory variables), and used the Akaike criterion corrected for small sample sizes (AICc) to evaluate the models’ performances. We selected the one with lower AICc as the fittest model (<xref ref-type="bibr" rid="B6">Burnham and Anderson 2002</xref>). We ran the GLMs using the ‘bestglm’ package in R. </p>
+				<p>We tested for the occurrence of spatial autocorrelation in our data, but Moran’s I tests indicated a lack thereof for species richness (Moran’s I = 0.125, p = 0.066) and number of individuals (Moran’s I = 0.127, p = 0.063). Mantel’s statistic also revealed that there was no significant spatial autocorrelation of bird composition among the 32 plots (r = 0.033, p = 0.280). All analyses were conducted in the R environment, version 3.3.2.</p>
+			</sec>
+		</sec>
+		<sec sec-type="results">
+			<title>RESULTS</title>
+			<p>We captured 621 birds belonging to 72 species and 26 families (Supplementary Material, <xref ref-type="table" rid="t5">Table S1</xref>). Forward selection analysis presented two variables related to species composition of understory birds (elevation and distance to nearest stream), which together explained 14% of variation in species composition. Elevation alone explained 11.4% of the variation (Adj R² = 0.114, F = 4.87, p = 0.001, <xref ref-type="table" rid="t2">Table 2</xref>). </p>
+			<p>
+				<table-wrap id="t2">
+					<label>Table 2</label>
+					<caption>
+						<title>Environmental variables selected to explain bird species composition in 32 plots in northern Mato Grosso, southwestern Brazilian Amazonia.</title>
+					</caption>
+					<table>
+						<colgroup>
+							<col/>
+							<col/>
+							<col/>
+							<col/>
+							<col/>
+							<col/>
+						</colgroup>
+						<thead>
+							<tr>
+								<th align="left">Variables</th>
+								<th align="center">R²</th>
+								<th align="center">R²Cum</th>
+								<th align="center">AdjR²Cum</th>
+								<th align="center">F</th>
+								<th align="center">p-value</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td align="left">Elevation</td>
+								<td align="center">0.143</td>
+								<td align="center">0.143</td>
+								<td align="center">0.114</td>
+								<td align="center">4.870</td>
+								<td align="center">0.001</td>
+							</tr>
+							<tr>
+								<td align="left">Distance to nearest stream</td>
+								<td align="center">0.053</td>
+								<td align="center">0.197</td>
+								<td align="center">0.140</td>
+								<td align="center">1.875</td>
+								<td align="center">0.009</td>
+							</tr>
+						</tbody>
+					</table>
+				</table-wrap>
+			</p>
+			<p>Few species were strongly associated with the extremes of the gradients, with most species occurring in the middle of the gradients of elevation and distance to nearest stream. Among the species that occurred more often near the streams were <italic>Galbula cyanicollis</italic>, <italic>Sclateria naevia</italic>, <italic>Automolus subulatus</italic> and <italic>Corythopis torquatus</italic> (<xref ref-type="fig" rid="f2">Figure 2</xref>). Species that occurred predominantly in plots at lower altitudes were <italic>Corythopis torquatus</italic>, <italic>Arremon taciturnus</italic>, <italic>Willisornis poecillinotus</italic>, <italic>Manacus manacus</italic>, <italic>Campylorhamphus procurvoides</italic>, <italic>Campylopterus largipennis</italic>, <italic>Geotrygon montana</italic>, <italic>Tyranneutes stolzmanni</italic> and <italic>Phlegopsis nigromaculata</italic>. Species that occurred at higher altitudes were <italic>Xiphorhynchus guttatus</italic>, <italic>Lanio cristatus</italic>, <italic>Hylocharis cyanus</italic>, <italic>Platyrinchus platyrhynchos</italic>, <italic>Dacnis albiventris</italic>, <italic>Myrmotherula longipennis</italic> and <italic>Monasa morphoeus</italic> (<xref ref-type="fig" rid="f3">Figure 3</xref>). </p>
+			<p>
+				<fig id="f2">
+					<label>Figure 2</label>
+					<caption>
+						<title>Bird species captured in 32 lines of mist-nets in the Cláudia municipality, northern Mato Grosso state, southwestern Brazilian Amazon, in relation to distance to nearest stream gradient. The bars represent the presence and abundance of each species at each point of the gradient, whereas the height of the bars at the top represent the values of the predictor variable.</title>
+					</caption>
+					<graphic xlink:href="1809-4392-aa-49-03-232-gf2.jpg"/>
+				</fig>
+			</p>
+			<p>
+				<fig id="f3">
+					<label>Figure 3</label>
+					<caption>
+						<title>Bird species captured in 32 lines of mist-nets in the Cláudia municipality, northern Mato Grosso, southwestern Brazilian Amazon, in relation to elevation gradient. The bars represent the presence and abundance of each species at each point of the gradient, whereas the height of the bars at the top represent the values of the predictor variable.</title>
+					</caption>
+					<graphic xlink:href="1809-4392-aa-49-03-232-gf3.jpg"/>
+				</fig>
+			</p>
+			<p>The models that best explained species richness and number of individuals consisted of three variables (dbh1-10 + elevation + distance to nearest stream), and explained 53% and 63% of the variation of these responses, respectively. For functional richness, the best explanatory model contained two variables (elevation + distance to nearest stream), which explained 15% of the variation. However, we failed to find any effect of habitat variables on functional evenness and Rao’s functional diversity in our analyses (<xref ref-type="table" rid="t3">Table 3</xref>). We also found no significant correlation between the habitat variables and CWM of traits (<xref ref-type="table" rid="t4">Table 4</xref>).</p>
+			<p>
+				<table-wrap id="t3">
+					<label>Table 3</label>
+					<caption>
+						<title>Best models for the influence of environmental variables on species richness, number of individuals and functional structure of understory birds in 32 plots in northern Mato Grosso, southwestern Brazilian Amazonia.</title>
+					</caption>
+					<table>
+						<colgroup>
+							<col/>
+							<col/>
+							<col/>
+							<col/>
+							<col/>
+						</colgroup>
+						<thead>
+							<tr>
+								<th align="left">
+								</th>
+								<th align="center">Estimate</th>
+								<th align="center">Std. Error</th>
+								<th align="center">Z value</th>
+								<th align="center">Pr(&gt;|z|)²</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td align="left" colspan="5">Species Richness AICc = 170.6, AdjR² = 0.53 </td>
+							</tr>
+							<tr>
+								<td align="left">(Intercept)</td>
+								<td align="center">11.77</td>
+								<td align="center">0.62</td>
+								<td align="center">18.96</td>
+								<td align="center">&lt; 0.001</td>
+							</tr>
+							<tr>
+								<td align="left">dbh1-10</td>
+								<td align="center">-1.28</td>
+								<td align="center">0.63</td>
+								<td align="center">-2.02</td>
+								<td align="center">0.053</td>
+							</tr>
+							<tr>
+								<td align="left">Elevation</td>
+								<td align="center">-4.47</td>
+								<td align="center">0.74</td>
+								<td align="center">-6.01</td>
+								<td align="center">&lt; 0.001</td>
+							</tr>
+							<tr>
+								<td align="left">Distance to nearest stream</td>
+								<td align="center">2.09</td>
+								<td align="center">0.73</td>
+								<td align="center">2.83</td>
+								<td align="center">0.008</td>
+							</tr>
+							<tr>
+								<td align="left" colspan="5">Number individuals AICc = 212.11, AdjR² = 0.63 </td>
+							</tr>
+							<tr>
+								<td align="left">(Intercept)</td>
+								<td align="center">20.03</td>
+								<td align="center">1.19</td>
+								<td align="center">16.73</td>
+								<td align="center">&lt; 0.001</td>
+							</tr>
+							<tr>
+								<td align="left">dbh1-10</td>
+								<td align="center">-3.085</td>
+								<td align="center">1.29</td>
+								<td align="center">-2.38</td>
+								<td align="center">0.02</td>
+							</tr>
+							<tr>
+								<td align="left">Elevation</td>
+								<td align="center">-12.12</td>
+								<td align="center">1.86</td>
+								<td align="center">-6.49</td>
+								<td align="center">&lt; 0.001</td>
+							</tr>
+							<tr>
+								<td align="left">Distance to nearest stream</td>
+								<td align="center">4.55</td>
+								<td align="center">1.43</td>
+								<td align="center">3.16</td>
+								<td align="center">0.006</td>
+							</tr>
+							<tr>
+								<td align="left" colspan="5">Functional Richness AICc = -37.54, AdjR² = 0.15 </td>
+							</tr>
+							<tr>
+								<td align="left">(Intercept)</td>
+								<td align="center">0.14</td>
+								<td align="center">0.02</td>
+								<td align="center">6.64</td>
+								<td align="center">&lt; 0.001</td>
+							</tr>
+							<tr>
+								<td align="left">Elevation</td>
+								<td align="center">-0.06</td>
+								<td align="center">0.02</td>
+								<td align="center">-2.48</td>
+								<td align="center">0.01</td>
+							</tr>
+							<tr>
+								<td align="left">Distance to nearest stream</td>
+								<td align="center">-0.02</td>
+								<td align="center">0.02</td>
+								<td align="center">-1.01</td>
+								<td align="center">0.32</td>
+							</tr>
+							<tr>
+								<td align="left">Functional Evenness</td>
+								<td align="left">
+								</td>
+								<td align="left">
+								</td>
+								<td align="left">
+								</td>
+								<td align="left">
+								</td>
+							</tr>
+							<tr>
+								<td align="left">(Intercept)</td>
+								<td align="center">0.66</td>
+								<td align="center">0.01</td>
+								<td align="center">50.5</td>
+								<td align="center">&lt; 0.001</td>
+							</tr>
+							<tr>
+								<td align="left">Best model is null model</td>
+								<td align="center">
+								</td>
+								<td align="center">
+								</td>
+								<td align="left">
+								</td>
+								<td align="left">
+								</td>
+							</tr>
+							<tr>
+								<td align="left" colspan="5">Rao’s Functional diversity </td>
+							</tr>
+							<tr>
+								<td align="left">(Intercept)</td>
+								<td align="center">1.41</td>
+								<td align="center">0.13</td>
+								<td align="center">10.29</td>
+								<td align="center">&lt; 0.001</td>
+							</tr>
+							<tr>
+								<td align="left" colspan="5">Best model is null model </td>
+							</tr>
+						</tbody>
+					</table>
+				</table-wrap>
+			</p>
+			<p>
+				<table-wrap id="t4">
+					<label>Table 4</label>
+					<caption>
+						<title>Relationship between CWM of traits and environmental variables from Pearson’s correlation analysis. All correlations were non-significant at α = 0.05.</title>
+					</caption>
+					<table>
+						<colgroup>
+							<col/>
+							<col/>
+							<col/>
+							<col/>
+							<col/>
+							<col/>
+							<col/>
+							<col/>
+							<col/>
+						</colgroup>
+						<thead>
+							<tr>
+								<th align="left">
+								</th>
+								<th align="center">dbh1.10</th>
+								<th align="center">dbh10.30</th>
+								<th align="center">dbh.30</th>
+								<th align="center">Elevation</th>
+								<th align="center">Canopy</th>
+								<th align="center">Litter</th>
+								<th align="center">Soil clay </th>
+								<th align="center">Stream</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td align="left">CWM-Body mass</td>
+								<td align="center">-0.19</td>
+								<td align="center">0.04</td>
+								<td align="center">0.03</td>
+								<td align="center">-0.1</td>
+								<td align="center">0.11</td>
+								<td align="center">0.03</td>
+								<td align="center">0.08</td>
+								<td align="center">-0.26</td>
+							</tr>
+							<tr>
+								<td align="left">CWM-Bill length</td>
+								<td align="center">-0.15</td>
+								<td align="center">0.15</td>
+								<td align="center">-0.01</td>
+								<td align="center">-0.1</td>
+								<td align="center">0.18</td>
+								<td align="center">-0.1</td>
+								<td align="center">0.07</td>
+								<td align="center">-0.27</td>
+							</tr>
+							<tr>
+								<td align="left">CWM-Bill height</td>
+								<td align="center">-0.19</td>
+								<td align="center">-0.03</td>
+								<td align="center">-0.01</td>
+								<td align="center">0.18</td>
+								<td align="center">0.31</td>
+								<td align="center">0.14</td>
+								<td align="center">0.19</td>
+								<td align="center">-0.04</td>
+							</tr>
+							<tr>
+								<td align="left">CWM-Bill width</td>
+								<td align="center">-0.26</td>
+								<td align="center">-0.01</td>
+								<td align="center">0</td>
+								<td align="center">0.11</td>
+								<td align="center">0.21</td>
+								<td align="center">0.12</td>
+								<td align="center">0.05</td>
+								<td align="center">-0.06</td>
+							</tr>
+							<tr>
+								<td align="left">CWM-Tarsus length</td>
+								<td align="center">-0.17</td>
+								<td align="center">-0.02</td>
+								<td align="center">0.05</td>
+								<td align="center">-0.1</td>
+								<td align="center">0.07</td>
+								<td align="center">-0.01</td>
+								<td align="center">-0.04</td>
+								<td align="center">-0.13</td>
+							</tr>
+							<tr>
+								<td align="left">CWM-Wing length</td>
+								<td align="center">-0.13</td>
+								<td align="center">-0.01</td>
+								<td align="center">-0.03</td>
+								<td align="center">0.01</td>
+								<td align="center">0.2</td>
+								<td align="center">0.09</td>
+								<td align="center">0.14</td>
+								<td align="center">-0.24</td>
+							</tr>
+							<tr>
+								<td align="left">CMW-Hallux length</td>
+								<td align="center">-0.09</td>
+								<td align="center">-0.03</td>
+								<td align="center">0.13</td>
+								<td align="center">-0.2</td>
+								<td align="center">0.01</td>
+								<td align="center">-0.03</td>
+								<td align="center">0.03</td>
+								<td align="center">-0.25</td>
+							</tr>
+						</tbody>
+					</table>
+				</table-wrap>
+			</p>
+		</sec>
+		<sec sec-type="discussion">
+			<title>DISCUSSION</title>
+			<p>Our results indicated significant effects of environmental structure on the taxonomic diversity (species composition, species richness and number of individuals) of avifauna found in the dry forests of the southwestern Brazilian Amazon. However, functional structure was not affected by the habitat variables we measured, with the exception of functional richness (FRic). Topographic variation and distance to nearest stream were more important for changes in bird species composition. Although birds are closely associated with vegetation structure, the variables related to vegetation (e.g. canopy openness) did not have any major influence on the diversity measures, contradicting our initial expectation. Only one variable related to vegetation structure was retained in the generalized linear models, dbh1-10 (number of trees with a diameter at breast height between 1 and 9.9 cm), and it composed the models that explained both species richness and number of individuals. All three models generated (for species richness, number of individuals and functional richness) retained elevation and distance to nearest stream. </p>
+			<p>In evaluating the influence of landscape features and forest structure, <xref ref-type="bibr" rid="B9">Cintra and Naka (2012</xref>) found no significant relationships between forest components (e.g. tree abundance, canopy openness) and species composition and number of bird species and individuals sampled. However, they observed that bird species composition was influenced by elevation and distance to forest streams, similar to what we found in the present study, and also leaf litter depth. We found that streams were important for the occurrence of some species. <italic>Sclateria naevia</italic> and <italic>Corythopis torquatus</italic>, for example, are known to occur along the banks of streams and forage in the humid foliage on the ground or in dense vegetation. In the central Amazon, small variations in topography (~ 75 m) have indirectly affected the distribution of plants (<xref ref-type="bibr" rid="B13">Costa <italic>et al</italic>. 2009</xref>) and animals, including birds (<xref ref-type="bibr" rid="B37">Menin <italic>et al</italic>. 2007</xref>; Cintra and Naka 2012; <xref ref-type="bibr" rid="B36">Menger <italic>et al</italic>. 2017</xref>). This parameter can influence soil characteristics (e.g. soil clay content) which in turn influence the structure of vegetation and floristic composition, ultimately affecting bird assemblages (<xref ref-type="bibr" rid="B8">Castilho <italic>et al</italic>. 2006</xref>, <xref ref-type="bibr" rid="B42">Pomara <italic>et al</italic>. 2012</xref>). We also observed this tendency in our results because, although presenting only moderate values of correlation, elevation influenced other environmental variables measured (canopy openness, leaf litter, distance to nearest stream and soil clay content) (Supplementary Material, <xref ref-type="fig" rid="f4">Figure S1</xref>). </p>
+			<p>Functional richness was little affected by the habitat variables, indicating that an almost similar number of ecological functions were provided throughout the environmental gradient. In addition, we must consider that FRic increases with species richness (<xref ref-type="bibr" rid="B38">Mouchet <italic>et al.</italic> 2010</xref>). In this way, this index may have been influenced by the number of species, which, in turn, was significantly affected by environmental structure in our study sites. The other measures of functional structure (i.e. FEve, FD<sub>
+ <italic>Q</italic>
+</sub> and CWM traits) were not influenced by any environmental variables considered. Changes in FRic without changes in FEve indicate that, despite finding some impact of habitat variables on functional richness, there were no shifts in the range of functional traits as a function of environmental variation (<xref ref-type="bibr" rid="B30">Magnago <italic>et al</italic>. 2014</xref>). If FEve values had been influenced by environmental variation, this would indicate a decline or disappearance of some parts of the functional space (e.g. Mouchet <italic>et al</italic>. 2010). </p>
+			<p>The average dissimilarity between species (Rao’s functional diversity, FDQ) and average of each of the seven traits (CWM) were not influenced by the habitat variables. Other studies have found an influence of habitat in functional metrics of forest bird assemblages. However, these studies have evaluated strong gradients of disturbance or environmental changes, for example, the effects of monoculture on Amazonian birds (<xref ref-type="bibr" rid="B1">Almeida <italic>et al</italic>. 2016</xref>) and the reduction of riparian forest width on birds of the Atlantic Forest (<xref ref-type="bibr" rid="B35">Maure <italic>et al</italic>. 2018</xref>). We suggest that environmental differences among our plots were not strong enough to generate major changes in functional structure of the assemblages. This might also be explained by the coexistence of functionally similar species (<xref ref-type="bibr" rid="B12">Cornwell <italic>et al</italic>. 2006</xref>, <xref ref-type="bibr" rid="B50">Tews <italic>et al</italic>. 2004</xref>), which may allow a greater stability in the face of small environmental changes (<xref ref-type="bibr" rid="B40">Petchey and Gaston 2002</xref>). In addition, although functional structure can be influenced by the environmental filtering of certain characteristics of the birds, it also can be caused by other ecological mechanisms, such as interaction between species (e.g. interspecific competition; <xref ref-type="bibr" rid="B20">Gomez <italic>et al</italic>. 2018</xref>).</p>
+		</sec>
+		<sec sec-type="conclusions">
+			<title>CONCLUSIONS</title>
+			<p>We observed that the species richness, number of individuals and composition of understory birds in 32 sampling plots in tropical dry forest in the southwestern Brazilian Amazon were influenced by local scale environmental variables. In contrast, environmental differences among plots were not enough to cause major alterations in the functional structure of bird assemblages. Thus, because taxonomic diversity changed without a variation in functional structure, we conclude that the Amazonian avifauna in this ecoregion can exhibit some functional redundancy to small-scale environmental variations, which may be important for the resilience of the bird assemblages.</p>
+		</sec>
+	</body>
+	<back>
+		<ack>
+			<title>ACKNOWLEDGMENTS</title>
+			<p>We acknowledge Conselho Nacional de Desenvolvimento Científico e Tecnológico (CNPq) for financial support (Processes # 558225/2009-8, # 569382/2008-4 and # 556858/2009-3), and for granting of scholarships to DJR and JO, and CAPES for a scholarship to FPF. We are thankful for the support of the Master’s program of PPG Ecologia e Conservação da Biodiversidade of Universidade Federal de Mato Grosso.</p>
+		</ack>
+		<ref-list>
+			<ref id="B1">
+				<mixed-citation>Almeida, S.M.; Silva, L.C.; Cardoso, M.R.; Cerqueira, P.V.; Juen, L.; Santos, M.P.D. 2016. The effects of oil palm plantation on the functional diversity of Amazonian birds. <italic>FriendlyISISJournal of Tropical Ecology</italic>, 32: 510-525.</mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Almeida</surname>
+							<given-names>S.M.</given-names>
+						</name>
+						<name>
+							<surname>Silva</surname>
+							<given-names>L.C.</given-names>
+						</name>
+						<name>
+							<surname>Cardoso</surname>
+							<given-names>M.R.</given-names>
+						</name>
+						<name>
+							<surname>Cerqueira</surname>
+							<given-names>P.V.</given-names>
+						</name>
+						<name>
+							<surname>Juen</surname>
+							<given-names>L.</given-names>
+						</name>
+						<name>
+							<surname>Santos</surname>
+							<given-names>M.P.D.</given-names>
+						</name>
+					</person-group>
+					<year>2016</year>
+					<article-title>The effects of oil palm plantation on the functional diversity of Amazonian birds</article-title>
+					<source>FriendlyISISJournal of Tropical Ecology</source>
+					<volume>32</volume>
+					<fpage>510</fpage>
+					<lpage>525</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B2">
+				<mixed-citation>Almeida, S.M.; Juen, L.; Sobral, F.L.; Santos, M.P.D.S. 2018. The influence of biogeographic history on the functional and phylogenetic diversity of passerine birds in savannas and forests of the Brazilian Amazon. <italic>Ecology &amp; Evolution</italic>, 8: 3617-3627.</mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Almeida</surname>
+							<given-names>S.M.</given-names>
+						</name>
+						<name>
+							<surname>Juen</surname>
+							<given-names>L.</given-names>
+						</name>
+						<name>
+							<surname>Sobral</surname>
+							<given-names>F.L.</given-names>
+						</name>
+						<name>
+							<surname>Santos</surname>
+							<given-names>M.P.D.S.</given-names>
+						</name>
+					</person-group>
+					<year>2018</year>
+					<article-title>The influence of biogeographic history on the functional and phylogenetic diversity of passerine birds in savannas and forests of the Brazilian Amazon</article-title>
+					<source>Ecology &amp; Evolution</source>
+					<volume>8</volume>
+					<fpage>3617</fpage>
+					<lpage>3627</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B3">
+				<mixed-citation>Banks-Leite, C.; Cintra, R. 2008. The heterogeneity of Amazonian treefall gaps and bird community composition. <italic>Ecotropica</italic>, 14: 1-13.</mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Banks-Leite</surname>
+							<given-names>C.</given-names>
+						</name>
+						<name>
+							<surname>Cintra</surname>
+							<given-names>R.</given-names>
+						</name>
+					</person-group>
+					<year>2008</year>
+					<article-title>The heterogeneity of Amazonian treefall gaps and bird community composition</article-title>
+					<source>Ecotropica</source>
+					<volume>14</volume>
+					<fpage>1</fpage>
+					<lpage>13</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B4">
+				<mixed-citation>Blanchet, F.G.; Legendre, P.; Borcard, D. 2008. Forward selection of explanatory variables. <italic>Ecology</italic>, 89: 2623-2632.</mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Blanchet</surname>
+							<given-names>F.G.</given-names>
+						</name>
+						<name>
+							<surname>Legendre</surname>
+							<given-names>P.</given-names>
+						</name>
+						<name>
+							<surname>Borcard</surname>
+							<given-names>D.</given-names>
+						</name>
+					</person-group>
+					<year>2008</year>
+					<article-title>Forward selection of explanatory variables</article-title>
+					<source>Ecology</source>
+					<volume>89</volume>
+					<fpage>2623</fpage>
+					<lpage>2632</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B5">
+				<mixed-citation>Botta-Dukát, Z. 2005. Rao’s quadratic entropy as a measure of functional diversity based on multiple traits. <italic>FriendlyISISJournal of Vegetation Science</italic>, 16: 533-540.</mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Botta-Dukát</surname>
+							<given-names>Z.</given-names>
+						</name>
+					</person-group>
+					<year>2005</year>
+					<article-title>Rao’s quadratic entropy as a measure of functional diversity based on multiple traits</article-title>
+					<source>FriendlyISISJournal of Vegetation Science</source>
+					<volume>16</volume>
+					<fpage>533</fpage>
+					<lpage>540</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B6">
+				<mixed-citation>Burnham, K.P.; Anderson, D.R. 2002. <italic>Model selection and multimodel inference: a practical information-theoretic approach</italic>. 2nd ed. Springer, New York, 488p.</mixed-citation>
+				<element-citation publication-type="book">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Burnham</surname>
+							<given-names>K.P.</given-names>
+						</name>
+						<name>
+							<surname>Anderson</surname>
+							<given-names>D.R.</given-names>
+						</name>
+					</person-group>
+					<year>2002</year>
+					<source>Model selection and multimodel inference: a practical information-theoretic approach</source>
+					<edition>2nd ed</edition>
+					<publisher-name>Springer</publisher-name>
+					<publisher-loc>New York</publisher-loc>
+					<size units="pages">488</size>
+				</element-citation>
+			</ref>
+			<ref id="B7">
+				<mixed-citation>Carvalho, M.A. 2006. <italic>Composição e História Natural de uma Comunidade de Serpentes em Área de Transição Amazônia-Cerrado, Ecorregião Florestas Secas de Mato Grosso, Município de Claudia, Mato Grosso, Brasil</italic>. Doctoral thesis, Pontifícia Universidade Católica do Rio Grande do Sul, Brazil, 92p. (<ext-link ext-link-type="uri" xlink:href="http://tede2.pucrs.br/tede2/handle/tede/288">http://tede2.pucrs.br/tede2/handle/tede/288</ext-link>)</mixed-citation>
+				<element-citation publication-type="thesis">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Carvalho</surname>
+							<given-names>M.A.</given-names>
+						</name>
+					</person-group>
+					<year>2006</year>
+					<source>Composição e História Natural de uma Comunidade de Serpentes em Área de Transição Amazônia-Cerrado, Ecorregião Florestas Secas de Mato Grosso, Município de Claudia, Mato Grosso, Brasil</source>
+					<comment content-type="degree">Doctoral</comment>
+					<publisher-name>Pontifícia Universidade Católica do Rio Grande do Sul</publisher-name>
+					<publisher-loc>Brazil</publisher-loc>
+					<size units="pages">92</size>
+					<ext-link ext-link-type="uri" xlink:href="http://tede2.pucrs.br/tede2/handle/tede/288">http://tede2.pucrs.br/tede2/handle/tede/288</ext-link>
+				</element-citation>
+			</ref>
+			<ref id="B8">
+				<mixed-citation>Castilho, C.V.; Magnusson, W.E.; de Araújo, R.N.O.; Luizão, R.C.C.; Luizão, F.J.; Lima, A.P.; <italic>et al</italic>. 2006. Variation in aboveground tree live biomass in a central Amazonian Forest: effects of soil and topography. <italic>Forest Ecology and Management</italic>, 234: 85-96.</mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Castilho</surname>
+							<given-names>C.V.</given-names>
+						</name>
+						<name>
+							<surname>Magnusson</surname>
+							<given-names>W.E.</given-names>
+						</name>
+						<name>
+							<surname>de Araújo</surname>
+							<given-names>R.N.O.</given-names>
+						</name>
+						<name>
+							<surname>Luizão</surname>
+							<given-names>R.C.C.</given-names>
+						</name>
+						<name>
+							<surname>Luizão</surname>
+							<given-names>F.J.</given-names>
+						</name>
+						<name>
+							<surname>Lima</surname>
+							<given-names>A.P.</given-names>
+						</name>
+						<etal/>
+					</person-group>
+					<year>2006</year>
+					<article-title>Variation in aboveground tree live biomass in a central Amazonian Forest: effects of soil and topography</article-title>
+					<source>Forest Ecology and Management</source>
+					<volume>234</volume>
+					<fpage>85</fpage>
+					<lpage>96</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B9">
+				<mixed-citation>Cintra, R.; Naka, L.N. 2012. Spatial Variation in Bird Community Composition in Relation to Topographic Gradient and Forest Heterogeneity in a Central Amazonian Rainforest. <italic>International FriendlyISISJournal of Ecology</italic>, 2012: 1-25.</mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Cintra</surname>
+							<given-names>R.</given-names>
+						</name>
+						<name>
+							<surname>Naka</surname>
+							<given-names>L.N.</given-names>
+						</name>
+					</person-group>
+					<year>2012</year>
+					<article-title>Spatial Variation in Bird Community Composition in Relation to Topographic Gradient and Forest Heterogeneity in a Central Amazonian Rainforest</article-title>
+					<source>International FriendlyISISJournal of Ecology</source>
+					<volume>2012</volume>
+					<fpage>1</fpage>
+					<lpage>25</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B10">
+				<mixed-citation>Cintra, R.; Cancelli, J. 2008. Effects of forest heterogeneity on ocurrence and abundance of the scale-backed antbird, <italic>Hylophylax poecillinotus</italic> (Aves: Thamnophilidae), in the Amazon forest. <italic>Revista Brasileira de Zoologia</italic>, 25: 630-639.</mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Cintra</surname>
+							<given-names>R.</given-names>
+						</name>
+						<name>
+							<surname>Cancelli</surname>
+							<given-names>J.</given-names>
+						</name>
+					</person-group>
+					<year>2008</year>
+					<article-title>Effects of forest heterogeneity on ocurrence and abundance of the scale-backed antbird, Hylophylax poecillinotus (Aves: Thamnophilidae), in the Amazon forest</article-title>
+					<source>Revista Brasileira de Zoologia</source>
+					<volume>25</volume>
+					<fpage>630</fpage>
+					<lpage>639</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B11">
+				<mixed-citation>Cintra, R.; Maruoka, A.E.; Naka, L.N. 2006. Abundance of two Dendrocincla woodcreeprs (Aves: Dendrocolaptidae) in relation to Forest structure in Central Amazonia. <italic>Acta Amazonica</italic>, 36: 209-220.</mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Cintra</surname>
+							<given-names>R.</given-names>
+						</name>
+						<name>
+							<surname>Maruoka</surname>
+							<given-names>A.E.</given-names>
+						</name>
+						<name>
+							<surname>Naka</surname>
+							<given-names>L.N.</given-names>
+						</name>
+					</person-group>
+					<year>2006</year>
+					<article-title>Abundance of two Dendrocincla woodcreeprs (Aves: Dendrocolaptidae) in relation to Forest structure in Central Amazonia</article-title>
+					<source>Acta Amazonica</source>
+					<volume>36</volume>
+					<fpage>209</fpage>
+					<lpage>220</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B12">
+				<mixed-citation>Cornwell, W.K.; Schwilk, D.W.; Ackerly, D.D. 2006. A trait-based test for habitat filtering: convex hull volume. <italic>Ecology</italic>, 87: 1465-1471.</mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Cornwell</surname>
+							<given-names>W.K.</given-names>
+						</name>
+						<name>
+							<surname>Schwilk</surname>
+							<given-names>D.W.</given-names>
+						</name>
+						<name>
+							<surname>Ackerly</surname>
+							<given-names>D.D.</given-names>
+						</name>
+					</person-group>
+					<year>2006</year>
+					<article-title>A trait-based test for habitat filtering: convex hull volume</article-title>
+					<source>Ecology</source>
+					<volume>87</volume>
+					<fpage>1465</fpage>
+					<lpage>1471</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B13">
+				<mixed-citation>Costa, F.R.C.; Guillaumet, J.L.; Lima, A.P.; Pereira, O.S. 2009. Gradients within gradients: the mesoscale distribution patterns of palms in a central amazonian forest. <italic>FriendlyISISJournal of Vegetation Science</italic>, 20: 69-78.</mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Costa</surname>
+							<given-names>F.R.C.</given-names>
+						</name>
+						<name>
+							<surname>Guillaumet</surname>
+							<given-names>J.L.</given-names>
+						</name>
+						<name>
+							<surname>Lima</surname>
+							<given-names>A.P.</given-names>
+						</name>
+						<name>
+							<surname>Pereira</surname>
+							<given-names>O.S.</given-names>
+						</name>
+					</person-group>
+					<year>2009</year>
+					<article-title>Gradients within gradients: the mesoscale distribution patterns of palms in a central amazonian forest</article-title>
+					<source>FriendlyISISJournal of Vegetation Science</source>
+					<volume>20</volume>
+					<fpage>69</fpage>
+					<lpage>78</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B14">
+				<mixed-citation>De Bello, F.; Lavorel, S.; Gerhold, P.; Reier, Ü.; Pärtel, M. 2010. A biodiversity monitoring framework for practical conservation of grasslands and shrublands. <italic>Biological Conservation</italic>, 143: 9-17.</mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>De Bello</surname>
+							<given-names>F.</given-names>
+						</name>
+						<name>
+							<surname>Lavorel</surname>
+							<given-names>S.</given-names>
+						</name>
+						<name>
+							<surname>Gerhold</surname>
+							<given-names>P.</given-names>
+						</name>
+						<name>
+							<surname>Reier</surname>
+							<given-names>Ü.</given-names>
+						</name>
+						<name>
+							<surname>Pärtel</surname>
+							<given-names>M.</given-names>
+						</name>
+					</person-group>
+					<year>2010</year>
+					<article-title>A biodiversity monitoring framework for practical conservation of grasslands and shrublands</article-title>
+					<source>Biological Conservation</source>
+					<volume>143</volume>
+					<fpage>9</fpage>
+					<lpage>17</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B15">
+				<mixed-citation>De Bello, F.; Carmona, C.P.; Lepš, J.; Szava-Kovats, R.; Pärte, M. 2016. Functional diversity through the mean trait dissimilarity: Resolving shortcomings with existing paradigms and algorithms. <italic>Oecologia</italic>, 180, 933.</mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>De Bello</surname>
+							<given-names>F.</given-names>
+						</name>
+						<name>
+							<surname>Carmona</surname>
+							<given-names>C.P.</given-names>
+						</name>
+						<name>
+							<surname>Lepš</surname>
+							<given-names>J.</given-names>
+						</name>
+						<name>
+							<surname>Szava-Kovats</surname>
+							<given-names>R.</given-names>
+						</name>
+						<name>
+							<surname>Pärte</surname>
+							<given-names>M.</given-names>
+						</name>
+					</person-group>
+					<year>2016</year>
+					<article-title>Functional diversity through the mean trait dissimilarity: Resolving shortcomings with existing paradigms and algorithms</article-title>
+					<source>Oecologia</source>
+					<volume>180</volume>
+					<fpage>933</fpage>
+					<lpage>933</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B16">
+				<mixed-citation>Debastiani, V.J.; Pillar, V.D. 2012. SYNCSA - R tool for analysis of metacommunities based on functional traits and phylogeny of the community components. <italic>Bioinformatics</italic>, 28: 2067-2068.</mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Debastiani</surname>
+							<given-names>V.J.</given-names>
+						</name>
+						<name>
+							<surname>Pillar</surname>
+							<given-names>V.D.</given-names>
+						</name>
+					</person-group>
+					<year>2012</year>
+					<article-title>SYNCSA - R tool for analysis of metacommunities based on functional traits and phylogeny of the community components</article-title>
+					<source>Bioinformatics</source>
+					<volume>28</volume>
+					<fpage>2067</fpage>
+					<lpage>2068</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B17">
+				<mixed-citation>Duarte, L.D.S.; Debastiani, V.J.; Carlucci, M.B.; Diniz-Filho, J.A.F. 2018. Analyzing community-weighted trait means across environmental gradients: should phylogeny stay or should it go? <italic>Ecology</italic>, 99: 385-398.</mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Duarte</surname>
+							<given-names>L.D.S.</given-names>
+						</name>
+						<name>
+							<surname>Debastiani</surname>
+							<given-names>V.J.</given-names>
+						</name>
+						<name>
+							<surname>Carlucci</surname>
+							<given-names>M.B.</given-names>
+						</name>
+						<name>
+							<surname>Diniz-Filho</surname>
+							<given-names>J.A.F.</given-names>
+						</name>
+					</person-group>
+					<year>2018</year>
+					<article-title>Analyzing community-weighted trait means across environmental gradients: should phylogeny stay or should it go?</article-title>
+					<source>Ecology</source>
+					<volume>99</volume>
+					<fpage>385</fpage>
+					<lpage>398</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B18">
+				<mixed-citation>EMBRAPA. 1997. <italic>Manual de métodos de análise de solo</italic>. Empresa Brasileira de Pesquisa Agropecuária, Centro Nacional de Pesquisas de Solos, Rio de Janeiro, 212p.</mixed-citation>
+				<element-citation publication-type="book">
+					<person-group person-group-type="author">
+						<collab>EMBRAPA</collab>
+					</person-group>
+					<year>1997</year>
+					<source>Manual de métodos de análise de solo</source>
+					<publisher-name>Empresa Brasileira de Pesquisa Agropecuária, Centro Nacional de Pesquisas de Solos</publisher-name>
+					<publisher-loc>Rio de Janeiro</publisher-loc>
+					<size units="pages">212</size>
+				</element-citation>
+			</ref>
+			<ref id="B19">
+				<mixed-citation>Gauch, H.G. 1982. <italic>Multivariate analysis in community ecology</italic>. Cambridge University Press, Cambridge, 295p.</mixed-citation>
+				<element-citation publication-type="book">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Gauch</surname>
+							<given-names>H.G.</given-names>
+						</name>
+					</person-group>
+					<year>1982</year>
+					<source>Multivariate analysis in community ecology</source>
+					<publisher-name>Cambridge University Press</publisher-name>
+					<publisher-loc>Cambridge</publisher-loc>
+					<size units="pages">295</size>
+				</element-citation>
+			</ref>
+			<ref id="B20">
+				<mixed-citation>Gomez, J.P.; Robinson, S.; Ponciano, J.M. 2018. Asymmetric effects of environmental filtering on the assembly of tropical bird communities along a moisture gradient. <italic>bioRxiv</italic>, 251249.</mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Gomez</surname>
+							<given-names>J.P.</given-names>
+						</name>
+						<name>
+							<surname>Robinson</surname>
+							<given-names>S.</given-names>
+						</name>
+						<name>
+							<surname>Ponciano</surname>
+							<given-names>J.M.</given-names>
+						</name>
+					</person-group>
+					<year>2018</year>
+					<article-title>Asymmetric effects of environmental filtering on the assembly of tropical bird communities along a moisture gradient</article-title>
+					<source>bioRxiv</source>
+					<pub-id pub-id-type="art-access-id">251249</pub-id>
+				</element-citation>
+			</ref>
+			<ref id="B21">
+				<mixed-citation>Hidasi-Neto, J.; Barlow, J.; Cianciaruso, M.V. 2012. Bird functional diversity and wildfires in the Amazon: the role of forest structure. <italic>Animal Conservation</italic>, 15: 407-415.</mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Hidasi-Neto</surname>
+							<given-names>J.</given-names>
+						</name>
+						<name>
+							<surname>Barlow</surname>
+							<given-names>J.</given-names>
+						</name>
+						<name>
+							<surname>Cianciaruso</surname>
+							<given-names>M.V.</given-names>
+						</name>
+					</person-group>
+					<year>2012</year>
+					<article-title>Bird functional diversity and wildfires in the Amazon: the role of forest structure</article-title>
+					<source>Animal Conservation</source>
+					<volume>15</volume>
+					<fpage>407</fpage>
+					<lpage>415</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B22">
+				<mixed-citation>Johns, A.D. 1991. Responses of Amazonian rain forest birds to habitat modification. <italic>FriendlyISISJournal of Tropical Ecology</italic>, 7: 417-437.</mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Johns</surname>
+							<given-names>A.D.</given-names>
+						</name>
+					</person-group>
+					<year>1991</year>
+					<article-title>Responses of Amazonian rain forest birds to habitat modification</article-title>
+					<source>FriendlyISISJournal of Tropical Ecology</source>
+					<volume>7</volume>
+					<fpage>417</fpage>
+					<lpage>437</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B23">
+				<mixed-citation>Köppen, W. 1948. <italic>Climatologia: con un estudio de los climas de la tierra</italic>. Fondo de Cultura Econômica, México, 479p.</mixed-citation>
+				<element-citation publication-type="book">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Köppen</surname>
+							<given-names>W.</given-names>
+						</name>
+					</person-group>
+					<year>1948</year>
+					<source>Climatologia: con un estudio de los climas de la tierra</source>
+					<publisher-name>Fondo de Cultura Econômica</publisher-name>
+					<publisher-loc>México</publisher-loc>
+					<size units="pages">479</size>
+				</element-citation>
+			</ref>
+			<ref id="B24">
+				<mixed-citation>Laliberté, E.; Legendre, P. 2010. A distance-based framework for measuring functional diversity from multiple traits. <italic>Ecology</italic>, 91: 299-305. </mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Laliberté</surname>
+							<given-names>E.</given-names>
+						</name>
+						<name>
+							<surname>Legendre</surname>
+							<given-names>P.</given-names>
+						</name>
+					</person-group>
+					<year>2010</year>
+					<article-title>A distance-based framework for measuring functional diversity from multiple traits</article-title>
+					<source>Ecology</source>
+					<volume>91</volume>
+					<fpage>299</fpage>
+					<lpage>305</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B25">
+				<mixed-citation>Laureto, L.M.O.; Cianciaruso, M.V.; Samia, D.S.M. 2015. Functional diversity: an overview of its history and applicability. <italic>Natureza &amp; Conservação</italic>, 13: 112-116. </mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Laureto</surname>
+							<given-names>L.M.O.</given-names>
+						</name>
+						<name>
+							<surname>Cianciaruso</surname>
+							<given-names>M.V.</given-names>
+						</name>
+						<name>
+							<surname>Samia</surname>
+							<given-names>D.S.M.</given-names>
+						</name>
+					</person-group>
+					<year>2015</year>
+					<article-title>Functional diversity: an overview of its history and applicability</article-title>
+					<source>Natureza &amp; Conservação</source>
+					<volume>13</volume>
+					<fpage>112</fpage>
+					<lpage>116</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B26">
+				<mixed-citation>Lees, A.C.; Moura, N.G. 2017. Taxonomic, phylogenetic and functional diversity of an urban Amazonian avifauna. <italic>Urban Ecosystems</italic>, 20: 1019-1025.</mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Lees</surname>
+							<given-names>A.C.</given-names>
+						</name>
+						<name>
+							<surname>Moura</surname>
+							<given-names>N.G.</given-names>
+						</name>
+					</person-group>
+					<year>2017</year>
+					<article-title>Taxonomic, phylogenetic and functional diversity of an urban Amazonian avifauna</article-title>
+					<source>Urban Ecosystems</source>
+					<volume>20</volume>
+					<fpage>1019</fpage>
+					<lpage>1025</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B27">
+				<mixed-citation>Lees, A.C.; Peres, C.A. 2010. Habitat and life history determinants of antbird occurrence in variable-sized Amazonian forest fragments. <italic>Biotropica</italic>, 42: 614-621.</mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Lees</surname>
+							<given-names>A.C.</given-names>
+						</name>
+						<name>
+							<surname>Peres</surname>
+							<given-names>C.A.</given-names>
+						</name>
+					</person-group>
+					<year>2010</year>
+					<article-title>Habitat and life history determinants of antbird occurrence in variable-sized Amazonian forest fragments</article-title>
+					<source>Biotropica</source>
+					<volume>42</volume>
+					<fpage>614</fpage>
+					<lpage>621</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B28">
+				<mixed-citation>Luck, G.W.; Lavorel, S.; McIntyre, S.; Lumb, K. 2012. Improving the application of vertebrate trait-based frameworks to the study of ecosystem services. <italic>FriendlyISISJournal of Animal Ecology</italic>, 81: 1065-76.</mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Luck</surname>
+							<given-names>G.W.</given-names>
+						</name>
+						<name>
+							<surname>Lavorel</surname>
+							<given-names>S.</given-names>
+						</name>
+						<name>
+							<surname>McIntyre</surname>
+							<given-names>S.</given-names>
+						</name>
+						<name>
+							<surname>Lumb</surname>
+							<given-names>K.</given-names>
+						</name>
+					</person-group>
+					<year>2012</year>
+					<article-title>Improving the application of vertebrate trait-based frameworks to the study of ecosystem services</article-title>
+					<source>FriendlyISISJournal of Animal Ecology</source>
+					<volume>81</volume>
+					<fpage>1065</fpage>
+					<lpage>1076</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B29">
+				<mixed-citation>MacArthur, RH. 1972. <italic>Geographical ecology: patterns in the distribution of species</italic>. Princeton University Press, Princeton, New Jersey, 288p.</mixed-citation>
+				<element-citation publication-type="book">
+					<person-group person-group-type="author">
+						<name>
+							<surname>MacArthur</surname>
+							<given-names>RH.</given-names>
+						</name>
+					</person-group>
+					<year>1972</year>
+					<source>Geographical ecology: patterns in the distribution of species</source>
+					<publisher-name>Princeton University Press</publisher-name>
+					<publisher-loc>Princeton, New Jersey</publisher-loc>
+					<size units="pages">288</size>
+				</element-citation>
+			</ref>
+			<ref id="B30">
+				<mixed-citation>Magnago, L.FS.; Edwards, D.P.; Edwards, F.A.; Magrach, A.; Martins, S.V.; Laurance, W.F.; Bellingham, P. 2014. Functional attributes change but functional richness is unchanged after fragmentation of Brazilian Atlantic forests. <italic>FriendlyISISJournal of Ecology</italic>, 102: 75-485.</mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Magnago</surname>
+							<given-names>L.FS.</given-names>
+						</name>
+						<name>
+							<surname>Edwards</surname>
+							<given-names>D.P.</given-names>
+						</name>
+						<name>
+							<surname>Edwards</surname>
+							<given-names>F.A.</given-names>
+						</name>
+						<name>
+							<surname>Magrach</surname>
+							<given-names>A.</given-names>
+						</name>
+						<name>
+							<surname>Martins</surname>
+							<given-names>S.V.</given-names>
+						</name>
+						<name>
+							<surname>Laurance</surname>
+							<given-names>W.F.</given-names>
+						</name>
+						<name>
+							<surname>Bellingham</surname>
+							<given-names>P.</given-names>
+						</name>
+					</person-group>
+					<year>2014</year>
+					<article-title>Functional attributes change but functional richness is unchanged after fragmentation of Brazilian Atlantic forests</article-title>
+					<source>FriendlyISISJournal of Ecology</source>
+					<volume>102</volume>
+					<fpage>75</fpage>
+					<lpage>485</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B31">
+				<mixed-citation>Magurran, A.E. 1988. <italic>Ecological Diversity and Its Measurement</italic>. Princeton University Press, New Jersey, 192p.</mixed-citation>
+				<element-citation publication-type="book">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Magurran</surname>
+							<given-names>A.E.</given-names>
+						</name>
+					</person-group>
+					<year>1988</year>
+					<source>Ecological Diversity and Its Measurement</source>
+					<publisher-name>Princeton University Press</publisher-name>
+					<publisher-loc>New Jersey</publisher-loc>
+					<size units="pages">192</size>
+				</element-citation>
+			</ref>
+			<ref id="B32">
+				<mixed-citation>Magnusson, W.E.; Lima, A.P.; Luizão, R.C.; Luizão, F.; Costa, F.R.C, Castilho, C.V.; Kinupp, V.F. 2005. RAPELD: a modification of the Gentry method for biodiversity surveys in long-term ecological research sites. <italic>Biota Neotropica</italic>, 5: 19-24.</mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Magnusson</surname>
+							<given-names>W.E.</given-names>
+						</name>
+						<name>
+							<surname>Lima</surname>
+							<given-names>A.P.</given-names>
+						</name>
+						<name>
+							<surname>Luizão</surname>
+							<given-names>R.C.</given-names>
+						</name>
+						<name>
+							<surname>Luizão</surname>
+							<given-names>F.</given-names>
+						</name>
+						<name>
+							<surname>Costa</surname>
+							<given-names>C.V.</given-names>
+						</name>
+						<name>
+							<surname>Kinupp</surname>
+							<given-names>V.F.</given-names>
+						</name>
+					</person-group>
+					<year>2005</year>
+					<article-title>RAPELD: a modification of the Gentry method for biodiversity surveys in long-term ecological research sites</article-title>
+					<source>Biota Neotropica</source>
+					<volume>5</volume>
+					<fpage>19</fpage>
+					<lpage>24</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B33">
+				<mixed-citation>Mansor, M.S.; Mohd Sah, S.A. 2012. Foraging patterns reveal niche separation in tropical insectivorous birds. <italic>Acta Ornithologica</italic>, 47: 27-36.</mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Mansor</surname>
+							<given-names>M.S.</given-names>
+						</name>
+						<name>
+							<surname>Mohd Sah</surname>
+							<given-names>S.A.</given-names>
+						</name>
+					</person-group>
+					<year>2012</year>
+					<article-title>Foraging patterns reveal niche separation in tropical insectivorous birds</article-title>
+					<source>Acta Ornithologica</source>
+					<volume>47</volume>
+					<fpage>27</fpage>
+					<lpage>36</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B34">
+				<mixed-citation>Mason, D.; Thiollay, J.M. 2001. Tropical forestry and the conservation of Neotropical birds. In: Fimbel, R.A.; Grajal, A.; Robinson, J.G. (Ed.). <italic>The cutting edge: conserving wildlife in logged tropical forests</italic>. Columbia University Press, New York, p.167-191.</mixed-citation>
+				<element-citation publication-type="book">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Mason</surname>
+							<given-names>D.</given-names>
+						</name>
+						<name>
+							<surname>Thiollay</surname>
+							<given-names>J.M.</given-names>
+						</name>
+					</person-group>
+					<year>2001</year>
+					<chapter-title>Tropical forestry and the conservation of Neotropical birds</chapter-title>
+					<person-group person-group-type="editor">
+						<name>
+							<surname>Fimbel</surname>
+							<given-names>R.A.</given-names>
+						</name>
+						<name>
+							<surname>Grajal</surname>
+							<given-names>A.</given-names>
+						</name>
+						<name>
+							<surname>Robinson</surname>
+							<given-names>J.G.</given-names>
+						</name>
+					</person-group>
+					<source>The cutting edge: conserving wildlife in logged tropical forests</source>
+					<publisher-name>Columbia University Press</publisher-name>
+					<publisher-loc>New York</publisher-loc>
+					<fpage>167</fpage>
+					<lpage>191</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B35">
+				<mixed-citation>Maure, L.A.; Rodrigues, R.C.; Alcântara, A.V.; Adorno, B.F.C.B.; Santos, D.L.; Abreu, E.L.; Tanaka, R.M.; Gonçalves, R.M.; Hasui, E. 2018. Functional Redundancy in bird community decreases with riparian forest width reduction. <italic>Ecology and Evolution</italic>, 8: 10395-10408.</mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Maure</surname>
+							<given-names>L.A.</given-names>
+						</name>
+						<name>
+							<surname>Rodrigues</surname>
+							<given-names>R.C.</given-names>
+						</name>
+						<name>
+							<surname>Alcântara</surname>
+							<given-names>A.V.</given-names>
+						</name>
+						<name>
+							<surname>Adorno</surname>
+							<given-names>B.F.C.B.</given-names>
+						</name>
+						<name>
+							<surname>Santos</surname>
+							<given-names>D.L.</given-names>
+						</name>
+						<name>
+							<surname>Abreu</surname>
+							<given-names>E.L.</given-names>
+						</name>
+						<name>
+							<surname>Tanaka</surname>
+							<given-names>R.M.</given-names>
+						</name>
+						<name>
+							<surname>Gonçalves</surname>
+							<given-names>R.M.</given-names>
+						</name>
+						<name>
+							<surname>Hasui</surname>
+							<given-names>E.</given-names>
+						</name>
+					</person-group>
+					<year>2018</year>
+					<article-title>Functional Redundancy in bird community decreases with riparian forest width reduction</article-title>
+					<source>Ecology and Evolution</source>
+					<volume>8</volume>
+					<fpage>10395</fpage>
+					<lpage>10408</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B36">
+				<mixed-citation>Menger, J.; Magnusson, W.E.; Anderson, M.J.; Schlegel, M.; Pe’er, G.; Henle, K. 2017. Environmental characteristics drive variation in Amazonian understorey bird assemblages. <italic>PloS ONE</italic>, 12: e0171540.</mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Menger</surname>
+							<given-names>J.</given-names>
+						</name>
+						<name>
+							<surname>Magnusson</surname>
+							<given-names>W.E.</given-names>
+						</name>
+						<name>
+							<surname>Anderson</surname>
+							<given-names>M.J.</given-names>
+						</name>
+						<name>
+							<surname>Schlegel</surname>
+							<given-names>M.</given-names>
+						</name>
+						<name>
+							<surname>Pe’er</surname>
+							<given-names>G.</given-names>
+						</name>
+						<name>
+							<surname>Henle</surname>
+							<given-names>K.</given-names>
+						</name>
+					</person-group>
+					<year>2017</year>
+					<article-title>Environmental characteristics drive variation in Amazonian understorey bird assemblages</article-title>
+					<source>PloS ONE</source>
+					<volume>12</volume>
+					<pub-id pub-id-type="art-access-id">e0171540</pub-id>
+				</element-citation>
+			</ref>
+			<ref id="B37">
+				<mixed-citation>Menin, M.; Lima, A.P.; Magnusson, W.E.; Waldez, F. 2007. Topographic and edaphic effects on the distribution of terrestrially reproducing anurans in Central Amazonia: mesoscale spatial patterns. <italic>FriendlyISISJournal of Tropical Ecology</italic>, 23: 539-547.</mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Menin</surname>
+							<given-names>M.</given-names>
+						</name>
+						<name>
+							<surname>Lima</surname>
+							<given-names>A.P.</given-names>
+						</name>
+						<name>
+							<surname>Magnusson</surname>
+							<given-names>W.E.</given-names>
+						</name>
+						<name>
+							<surname>Waldez</surname>
+							<given-names>F.</given-names>
+						</name>
+					</person-group>
+					<year>2007</year>
+					<article-title>Topographic and edaphic effects on the distribution of terrestrially reproducing anurans in Central Amazonia: mesoscale spatial patterns</article-title>
+					<source>FriendlyISISJournal of Tropical Ecology</source>
+					<volume>23</volume>
+					<fpage>539</fpage>
+					<lpage>547</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B38">
+				<mixed-citation>Mouchet, M.A.; Villéger, S.; Mason, N.W.H.; Mouillot, D. 2010. Functional diversity measures: an overview of their redundancy and their ability to discriminate community assembly rules. <italic>Functional Ecology</italic>, 24: 867-876.</mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Mouchet</surname>
+							<given-names>M.A.</given-names>
+						</name>
+						<name>
+							<surname>Villéger</surname>
+							<given-names>S.</given-names>
+						</name>
+						<name>
+							<surname>Mason</surname>
+							<given-names>N.W.H.</given-names>
+						</name>
+						<name>
+							<surname>Mouillot</surname>
+							<given-names>D.</given-names>
+						</name>
+					</person-group>
+					<year>2010</year>
+					<article-title>Functional diversity measures: an overview of their redundancy and their ability to discriminate community assembly rules</article-title>
+					<source>Functional Ecology</source>
+					<volume>24</volume>
+					<fpage>867</fpage>
+					<lpage>876</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B39">
+				<mixed-citation>Pearson, D.L. 1975. The relationship of foliage complexity to ecological diversity of three Amazonian bird communities. <italic>Condor</italic>, 77: 453-466.</mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Pearson</surname>
+							<given-names>D.L.</given-names>
+						</name>
+					</person-group>
+					<year>1975</year>
+					<article-title>The relationship of foliage complexity to ecological diversity of three Amazonian bird communities</article-title>
+					<source>Condor</source>
+					<volume>77</volume>
+					<fpage>453</fpage>
+					<lpage>466</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B40">
+				<mixed-citation>Petchey, O.L.; Gaston, K.J. 2002. Functional diversity (FD), species richness, and community composition. <italic>Ecology Letters</italic>, 5: 402-411.</mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Petchey</surname>
+							<given-names>O.L.</given-names>
+						</name>
+						<name>
+							<surname>Gaston</surname>
+							<given-names>K.J.</given-names>
+						</name>
+					</person-group>
+					<year>2002</year>
+					<article-title>Functional diversity (FD), species richness, and community composition</article-title>
+					<source>Ecology Letters</source>
+					<volume>5</volume>
+					<fpage>402</fpage>
+					<lpage>411</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B41">
+				<mixed-citation>Petchey, O.L.; Gaston, K.J. 2006. Functional diversity: back to basics and looking forward. <italic>Ecology Letters</italic>, 9: 741-758.</mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Petchey</surname>
+							<given-names>O.L.</given-names>
+						</name>
+						<name>
+							<surname>Gaston</surname>
+							<given-names>K.J.</given-names>
+						</name>
+					</person-group>
+					<year>2006</year>
+					<article-title>Functional diversity: back to basics and looking forward</article-title>
+					<source>Ecology Letters</source>
+					<volume>9</volume>
+					<fpage>741</fpage>
+					<lpage>758</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B42">
+				<mixed-citation>Pomara, L.Y.; Ruokolainen, K.; Tuomisto, H; Young, K.R. 2012. Avian composition co-varies with floristic composition and soil nutrient concentration in Amazonian upland forests. <italic>Biotropica</italic>, 44: 545-553.</mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Pomara</surname>
+							<given-names>L.Y.</given-names>
+						</name>
+						<name>
+							<surname>Ruokolainen</surname>
+							<given-names>K.</given-names>
+						</name>
+						<name>
+							<surname>Tuomisto</surname>
+							<given-names>H</given-names>
+						</name>
+						<name>
+							<surname>Young</surname>
+							<given-names>K.R.</given-names>
+						</name>
+					</person-group>
+					<year>2012</year>
+					<article-title>Avian composition co-varies with floristic composition and soil nutrient concentration in Amazonian upland forests</article-title>
+					<source>Biotropica</source>
+					<volume>44</volume>
+					<fpage>545</fpage>
+					<lpage>553</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B43">
+				<mixed-citation>Puig, H. 2008. A floresta tropical úmida. Editora UNESP, São Paulo, 496p.</mixed-citation>
+				<element-citation publication-type="book">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Puig</surname>
+							<given-names>H.</given-names>
+						</name>
+					</person-group>
+					<year>2008</year>
+					<source>A floresta tropical úmida</source>
+					<publisher-name>Editora UNESP</publisher-name>
+					<publisher-loc>São Paulo</publisher-loc>
+					<size units="pages">496</size>
+				</element-citation>
+			</ref>
+			<ref id="B44">
+				<mixed-citation>Quintero, I.; Jetz, W. 2018. Global elevational diversity and diversification of birds. <italic>Nature</italic>, 555: 246-250.</mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Quintero</surname>
+							<given-names>I.</given-names>
+						</name>
+						<name>
+							<surname>Jetz</surname>
+							<given-names>W.</given-names>
+						</name>
+					</person-group>
+					<year>2018</year>
+					<article-title>Global elevational diversity and diversification of birds</article-title>
+					<source>Nature</source>
+					<volume>555</volume>
+					<fpage>246</fpage>
+					<lpage>250</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B45">
+				<mixed-citation>Rao, C. R. 1982. Diversity and dissimilarity coefficients - a unified approach. <italic>Theoretical Population Biology</italic>, 21: 24-43.</mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Rao</surname>
+							<given-names>C. R.</given-names>
+						</name>
+					</person-group>
+					<year>1982</year>
+					<article-title>Diversity and dissimilarity coefficients - a unified approach</article-title>
+					<source>Theoretical Population Biology</source>
+					<volume>21</volume>
+					<fpage>24</fpage>
+					<lpage>43</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B46">
+				<mixed-citation>Rodrigues, D.J.; Florêncio, F.P.; Oliveira, J.; Oliveira, D.M.M.; Lollback, G.W.; Hero, J-M. 2016. Habitat associations of woodcreeper (Aves: Dendrocolaptidae) assemblage in selectively logged areas of Southern Amazonia. <italic>FriendlyISISJournal of Tropical Ecology</italic>, 32: 1-12.</mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Rodrigues</surname>
+							<given-names>D.J.</given-names>
+						</name>
+						<name>
+							<surname>Florêncio</surname>
+							<given-names>F.P.</given-names>
+						</name>
+						<name>
+							<surname>Oliveira</surname>
+							<given-names>J.</given-names>
+						</name>
+						<name>
+							<surname>Oliveira</surname>
+							<given-names>D.M.M.</given-names>
+						</name>
+						<name>
+							<surname>Lollback</surname>
+							<given-names>G.W.</given-names>
+						</name>
+						<name>
+							<surname>Hero</surname>
+							<given-names>J-M.</given-names>
+						</name>
+					</person-group>
+					<year>2016</year>
+					<article-title>Habitat associations of woodcreeper (Aves: Dendrocolaptidae) assemblage in selectively logged areas of Southern Amazonia</article-title>
+					<source>FriendlyISISJournal of Tropical Ecology</source>
+					<volume>32</volume>
+					<fpage>1</fpage>
+					<lpage>12</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B47">
+				<mixed-citation>Şekercioğlu, Ç.H. 2006. Increasing awareness of avian ecological function. <italic>Trends in Ecology and Evolution</italic>, 21: 464-471.</mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Şekercioğlu</surname>
+							<given-names>Ç.H.</given-names>
+						</name>
+					</person-group>
+					<year>2006</year>
+					<article-title>Increasing awareness of avian ecological function.</article-title>
+					<source>Trends in Ecology and Evolution</source>
+					<volume>21</volume>
+					<fpage>464</fpage>
+					<lpage>471</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B48">
+				<mixed-citation>Straube, F.C.; Bianconi, G.V. 2002. Sobre a grandeza e a unidade utilizada para estimar esforço de captura com utilização de redes-de-neblina. <italic>Chiroptera Neotropical</italic>, 8: 150-152.</mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Straube</surname>
+							<given-names>F.C.</given-names>
+						</name>
+						<name>
+							<surname>Bianconi</surname>
+							<given-names>G.V.</given-names>
+						</name>
+					</person-group>
+					<year>2002</year>
+					<article-title>Sobre a grandeza e a unidade utilizada para estimar esforço de captura com utilização de redes-de-neblina</article-title>
+					<source>Chiroptera Neotropical</source>
+					<volume>8</volume>
+					<fpage>150</fpage>
+					<lpage>152</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B49">
+				<mixed-citation>Terborgh, J.; Robinson, S.K.; Parker III, T.A.; Munn, C.A.; Pierpont, N. 1990. Structure and organization of an Amazonian forest bird community. <italic>Ecological Monographs</italic>, 60: 213-238.</mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Terborgh</surname>
+							<given-names>J.</given-names>
+						</name>
+						<name>
+							<surname>Robinson</surname>
+							<given-names>S.K.</given-names>
+						</name>
+						<name>
+							<surname>Parker III</surname>
+							<given-names>T.A.</given-names>
+						</name>
+						<name>
+							<surname>Munn</surname>
+							<given-names>C.A.</given-names>
+						</name>
+						<name>
+							<surname>Pierpont</surname>
+							<given-names>N.</given-names>
+						</name>
+					</person-group>
+					<year>1990</year>
+					<article-title>Structure and organization of an Amazonian forest bird community</article-title>
+					<source>Ecological Monographs</source>
+					<volume>60</volume>
+					<fpage>213</fpage>
+					<lpage>238</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B50">
+				<mixed-citation>Tews, J.; Brose, U.; Grimm, V.; Tielbörger, K.; Wichmann, M.C.; Schwager, M.; Jeltsch, F. 2004. Animal species diversity driven by habitat heterogeneity/diversity: the importance of keystone structures. <italic>FriendlyISISJournal of Biogeography</italic>, 31: 79-92.</mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Tews</surname>
+							<given-names>J.</given-names>
+						</name>
+						<name>
+							<surname>Brose</surname>
+							<given-names>U.</given-names>
+						</name>
+						<name>
+							<surname>Grimm</surname>
+							<given-names>V.</given-names>
+						</name>
+						<name>
+							<surname>Tielbörger</surname>
+							<given-names>K.</given-names>
+						</name>
+						<name>
+							<surname>Wichmann</surname>
+							<given-names>M.C.</given-names>
+						</name>
+						<name>
+							<surname>Schwager</surname>
+							<given-names>M.</given-names>
+						</name>
+						<name>
+							<surname>Jeltsch</surname>
+							<given-names>F.</given-names>
+						</name>
+					</person-group>
+					<year>2004</year>
+					<article-title>Animal species diversity driven by habitat heterogeneity/diversity: the importance of keystone structures</article-title>
+					<source>FriendlyISISJournal of Biogeography</source>
+					<volume>31</volume>
+					<fpage>79</fpage>
+					<lpage>92</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B51">
+				<mixed-citation>Tilman, D. 2004. Niche tradeoffs, neutrality, and community structure: A stochastic theory of resource competition, invasion, and community assembly. <italic>Proceedings of the National Academy of Sciences of the United States of America</italic>, 101: 10854-10861. </mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Tilman</surname>
+							<given-names>D.</given-names>
+						</name>
+					</person-group>
+					<year>2004</year>
+					<article-title>Niche tradeoffs, neutrality, and community structure: A stochastic theory of resource competition, invasion, and community assembly</article-title>
+					<source>Proceedings of the National Academy of Sciences of the United States of America</source>
+					<volume>101</volume>
+					<fpage>10854</fpage>
+					<lpage>10861</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B52">
+				<mixed-citation>Villéger, S.; Mason, N. W. H.; Mouilot, D. (2008). New multidimensional functional diversity indices for a multifaceted freamework in functional ecology. <italic>Ecology</italic>, 89: 2290-2301. </mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Villéger</surname>
+							<given-names>S.</given-names>
+						</name>
+						<name>
+							<surname>Mason</surname>
+							<given-names>N. W. H.</given-names>
+						</name>
+						<name>
+							<surname>Mouilot</surname>
+							<given-names>D.</given-names>
+						</name>
+					</person-group>
+					<year>2008</year>
+					<article-title>New multidimensional functional diversity indices for a multifaceted freamework in functional ecology</article-title>
+					<source>Ecology</source>
+					<volume>89</volume>
+					<fpage>2290</fpage>
+					<lpage>2301</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B53">
+				<mixed-citation>Vourlitis, G.L.; Filho, N.P.; Hayashi, M.M.S; Nogueira, J.S.; Raiter, F.; Hoegel, W.; Campelo Jr., J.H. 2004. Effects of meteorological variations on the CO2 exchange of a Brazilian transitional tropical forest. <italic>Ecological Applications</italic>,14: 89-100.</mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Vourlitis</surname>
+							<given-names>G.L.</given-names>
+						</name>
+						<name>
+							<surname>Filho</surname>
+							<given-names>N.P.</given-names>
+						</name>
+						<name>
+							<surname>Hayashi</surname>
+							<given-names>M.M.S</given-names>
+						</name>
+						<name>
+							<surname>Nogueira</surname>
+							<given-names>J.S.</given-names>
+						</name>
+						<name>
+							<surname>Raiter</surname>
+							<given-names>F.</given-names>
+						</name>
+						<name>
+							<surname>Hoegel</surname>
+							<given-names>W.</given-names>
+						</name>
+						<name>
+							<surname>Campelo</surname>
+							<given-names>J.H.</given-names>
+							<suffix>Jr.</suffix>
+						</name>
+					</person-group>
+					<year>2004</year>
+					<article-title>Effects of meteorological variations on the CO2 exchange of a Brazilian transitional tropical forest</article-title>
+					<source>Ecological Applications</source>
+					<volume>14</volume>
+					<fpage>89</fpage>
+					<lpage>100</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B54">
+				<mixed-citation>Wiens, J.A.; Rotenberry, J.T; Van Horne, B. 1987. Habitat occupancy patterns of North American shrubsteppe birds: the effects of spatial scale. <italic>Oikos</italic>, 48: 132-147.</mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Wiens</surname>
+							<given-names>J.A.</given-names>
+						</name>
+						<name>
+							<surname>Rotenberry</surname>
+							<given-names>J.T</given-names>
+						</name>
+						<name>
+							<surname>Van Horne</surname>
+							<given-names>B.</given-names>
+						</name>
+					</person-group>
+					<year>1987</year>
+					<article-title>Habitat occupancy patterns of North American shrubsteppe birds: the effects of spatial scale</article-title>
+					<source>Oikos</source>
+					<volume>48</volume>
+					<fpage>132</fpage>
+					<lpage>147</lpage>
+				</element-citation>
+			</ref>
+		</ref-list>
+		<fn-group>
+			<fn fn-type="other" id="fn3">
+				<label>CITE AS:</label>
+				<p> Oliveira, J. de; Almeida, S.M.; Florêncio, F.P.; Pinho, J.B.; Oliveira, D.M.M.; Ligeiro, R.; Rodrigues, D. 2019. Environmental structure affects taxonomic diversity but not functional structure of understory birds in the southwestern Brazilian Amazon. <italic>Acta Amazonica</italic> 49: 232-241.</p>
+			</fn>
+		</fn-group>
+		<app-group>
+			<app id="app1">
+				<label>SUPPLEMENTARY MATERIAL</label>
+				<p>(only available in the electronic version)</p>
+				<p>OLIVEIRA <italic>et al</italic>. Environmental structure affects taxonomic diversity but not functional structure of understory birds in the southwestern Brazilian Amazon</p>
+				<p>
+					<table-wrap id="t5">
+						<label>Table S1</label>
+						<caption>
+							<title>Composition of understory birds from 32 plots sampled in the Cláudia Municipality, Mato Grosso, southern Amazon. Information on family, species, number and proportion of occupied plots (N. plots and % plots, respectively), and the number of individuals with excluded recaptures (N) are shown. The biometric measures are also presented: body mass in grams (live body mass of bird as shown on the specimen label), bill length measured from tip to nostril, bill height measured at proximal end of operculum, bill width measured at proximal end of operculum, mean value of tarsus length measured on specimen’s right-hand side, mean value of wing length measured on specimen’s right-hand side, and hallux length measured on specimen’s right-hand side. Species classification followed the Brazilian Committee of Ornithological Records (Comitê Brasileiro de Registros Ornitológicos, 2015).</title>
+						</caption>
+						<table>
+							<colgroup>
+								<col/>
+								<col/>
+								<col/>
+								<col/>
+								<col/>
+								<col/>
+								<col/>
+								<col/>
+								<col/>
+								<col/>
+								<col/>
+							</colgroup>
+							<thead>
+								<tr>
+									<th align="left">
+									</th>
+									<th align="center">(N.plots)</th>
+									<th align="center">% plots</th>
+									<th align="center">N</th>
+									<th align="center">Body mass</th>
+									<th align="center">Bill length</th>
+									<th align="center">Bill height</th>
+									<th align="center">Bill width</th>
+									<th align="center">Tarsus length</th>
+									<th align="center">Wing length</th>
+									<th align="center">Hallux length</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td align="left" colspan="11">Columbidae </td>
+								</tr>
+								<tr>
+									<td align="left"><italic>Geotrygon montana</italic> (Linnaeus, 1758)</td>
+									<td align="center">2</td>
+									<td align="center">6.25</td>
+									<td align="center">2</td>
+									<td align="center">109</td>
+									<td align="center">9.11</td>
+									<td align="center">4.69</td>
+									<td align="center">4.19</td>
+									<td align="center">24.3</td>
+									<td align="center">135</td>
+									<td align="center">13.7</td>
+								</tr>
+								<tr>
+									<td align="left" colspan="11">Cuculidae </td>
+								</tr>
+								<tr>
+									<td align="left"><italic>Dromococcyx pavoninus</italic> Pelzeln, 1870</td>
+									<td align="center">1</td>
+									<td align="center">3.12</td>
+									<td align="center">1</td>
+									<td align="center">51.3</td>
+									<td align="center">17.4</td>
+									<td align="center">6.03</td>
+									<td align="center">7.99</td>
+									<td align="center">28</td>
+									<td align="center">126</td>
+									<td align="center">16.6</td>
+								</tr>
+								<tr>
+									<td align="left" colspan="11">Caprimulgidae </td>
+								</tr>
+								<tr>
+									<td align="left"><italic>Nyctiphrynus ocellatus</italic> (Tschudi, 1844)</td>
+									<td align="center">6</td>
+									<td align="center">18.8</td>
+									<td align="center">8</td>
+									<td align="center">37.7</td>
+									<td align="center">6.36</td>
+									<td align="center">3.6</td>
+									<td align="center">6.39</td>
+									<td align="center">13.8</td>
+									<td align="center">120</td>
+									<td align="center">5.97</td>
+								</tr>
+								<tr>
+									<td align="left" colspan="11">Trochilidae </td>
+								</tr>
+								<tr>
+									<td align="left"><italic>Phaethornis ruber</italic> (Linnaeus, 1758)</td>
+									<td align="center">4</td>
+									<td align="center">12.5</td>
+									<td align="center">5</td>
+									<td align="center">2.02</td>
+									<td align="center">22.4</td>
+									<td align="center">2.63</td>
+									<td align="center">2.04</td>
+									<td align="center">2.09</td>
+									<td align="center">33.4</td>
+									<td align="center">3.03</td>
+								</tr>
+								<tr>
+									<td align="left"><italic>Phaethornis superciliosus</italic> (Linnaeus, 1766)</td>
+									<td align="center">1</td>
+									<td align="center">3.12</td>
+									<td align="center">1</td>
+									<td align="center">4.8</td>
+									<td align="center">36.1</td>
+									<td align="center">3.21</td>
+									<td align="center">3.47</td>
+									<td align="center">2.7</td>
+									<td align="center">61.8</td>
+									<td align="center">3.62</td>
+								</tr>
+								<tr>
+									<td align="left"><italic>Campylopterus largipennis</italic> (Boddaert, 1783)</td>
+									<td align="center">3</td>
+									<td align="center">9.37</td>
+									<td align="center">5</td>
+									<td align="center">7.75</td>
+									<td align="center">25.2</td>
+									<td align="center">2.71</td>
+									<td align="center">3.16</td>
+									<td align="center">2.45</td>
+									<td align="center">74.6</td>
+									<td align="center">4.41</td>
+								</tr>
+								<tr>
+									<td align="left"><italic>Thalurania furcata</italic> (Gmelin, 1788)</td>
+									<td align="center">7</td>
+									<td align="center">21.9</td>
+									<td align="center">10</td>
+									<td align="center">4.06</td>
+									<td align="center">17.9</td>
+									<td align="center">2.16</td>
+									<td align="center">2.29</td>
+									<td align="center">2.37</td>
+									<td align="center">50.8</td>
+									<td align="center">4.46</td>
+								</tr>
+								<tr>
+									<td align="left"><italic>Hylocharis cyanus</italic> (Vieillot, 1818)</td>
+									<td align="center">1</td>
+									<td align="center">3.12</td>
+									<td align="center">1</td>
+									<td align="center">3.48</td>
+									<td align="center">16.7</td>
+									<td align="center">2.17</td>
+									<td align="center">2.49</td>
+									<td align="center">2.5</td>
+									<td align="center">48.8</td>
+									<td align="center">4.13</td>
+								</tr>
+								<tr>
+									<td align="left"><italic>Heliothryx auritus</italic> (Gmelin, 1788)</td>
+									<td align="center">1</td>
+									<td align="center">3.12</td>
+									<td align="center">2</td>
+									<td align="center">5.88</td>
+									<td align="center">16.6</td>
+									<td align="center">2.36</td>
+									<td align="center">3.01</td>
+									<td align="center">2.77</td>
+									<td align="center">64.8</td>
+									<td align="center">3.79</td>
+								</tr>
+								<tr>
+									<td align="left" colspan="11">Momotidae </td>
+								</tr>
+								<tr>
+									<td align="left"><italic>Momotus momota</italic> (Linnaeus, 1766)</td>
+									<td align="center">1</td>
+									<td align="center">3.12</td>
+									<td align="center">1</td>
+									<td align="center">118</td>
+									<td align="center">29.3</td>
+									<td align="center">12.1</td>
+									<td align="center">11</td>
+									<td align="center">25.3</td>
+									<td align="center">133</td>
+									<td align="center">15.2</td>
+								</tr>
+								<tr>
+									<td align="left" colspan="11">Galbulidae </td>
+								</tr>
+								<tr>
+									<td align="left"><italic>Galbula cyanicollis</italic> Cassin, 1851</td>
+									<td align="center">2</td>
+									<td align="center">6.25</td>
+									<td align="center">2</td>
+									<td align="center">25.1</td>
+									<td align="center">41</td>
+									<td align="center">7.56</td>
+									<td align="center">6.7</td>
+									<td align="center">9.26</td>
+									<td align="center">82</td>
+									<td align="center">5.49</td>
+								</tr>
+								<tr>
+									<td align="left" colspan="11">Bucconidae </td>
+								</tr>
+								<tr>
+									<td align="left"><italic>Malacoptila rufa</italic> (Spix, 1824)</td>
+									<td align="center">4</td>
+									<td align="center">12.5</td>
+									<td align="center">6</td>
+									<td align="center">41</td>
+									<td align="center">19.3</td>
+									<td align="center">8.78</td>
+									<td align="center">8.23</td>
+									<td align="center">17.6</td>
+									<td align="center">87</td>
+									<td align="center">7.73</td>
+								</tr>
+								<tr>
+									<td align="left"><italic>Monasa morphoeus</italic> (Hahn &amp; Küster, 1823)</td>
+									<td align="center">2</td>
+									<td align="center">6.25</td>
+									<td align="center">2</td>
+									<td align="center">73</td>
+									<td align="center">25.7</td>
+									<td align="center">11.3</td>
+									<td align="center">9.62</td>
+									<td align="center">19.3</td>
+									<td align="center">117</td>
+									<td align="center">8.6</td>
+								</tr>
+								<tr>
+									<td align="left" colspan="11">Falconidae </td>
+								</tr>
+								<tr>
+									<td align="left"><italic>Micrastur ruficollis</italic> (Vieillot, 1817)</td>
+									<td align="center">1</td>
+									<td align="center">3.12</td>
+									<td align="center">1</td>
+									<td align="center">160</td>
+									<td align="center">12</td>
+									<td align="center">13</td>
+									<td align="center">10.8</td>
+									<td align="center">52.5</td>
+									<td align="center">166</td>
+									<td align="center">22.5</td>
+								</tr>
+								<tr>
+									<td align="left"><italic>Micrastur gilvicollis</italic> (Vieillot, 1817)</td>
+									<td align="center">2</td>
+									<td align="center">6.25</td>
+									<td align="center">2</td>
+									<td align="center">204</td>
+									<td align="center">13.1</td>
+									<td align="center">13.2</td>
+									<td align="center">10.6</td>
+									<td align="center">64</td>
+									<td align="center">175</td>
+									<td align="center">16.2</td>
+								</tr>
+								<tr>
+									<td align="left" colspan="11">Thamnophilidae </td>
+								</tr>
+								<tr>
+									<td align="left"><italic>Epinecrophylla leucophthalma</italic> (Pelzeln, 1868)</td>
+									<td align="center">15</td>
+									<td align="center">46.9</td>
+									<td align="center">27</td>
+									<td align="center">8.1</td>
+									<td align="center">9.34</td>
+									<td align="center">3.8</td>
+									<td align="center">4.82</td>
+									<td align="center">15.7</td>
+									<td align="center">50</td>
+									<td align="center">10.3</td>
+								</tr>
+								<tr>
+									<td align="left"><italic>Myrmophylax atrothorax</italic> (Boddaert, 1783)</td>
+									<td align="center">1</td>
+									<td align="center">3.12</td>
+									<td align="center">1</td>
+									<td align="center">15.6</td>
+									<td align="center">10.1</td>
+									<td align="center">3.85</td>
+									<td align="center">5.44</td>
+									<td align="center">24</td>
+									<td align="center">56.4</td>
+									<td align="center">11.7</td>
+								</tr>
+								<tr>
+									<td align="left"><italic>Myrmotherula axillaris</italic> (Vieillot, 1817)</td>
+									<td align="center">15</td>
+									<td align="center">46.9</td>
+									<td align="center">26</td>
+									<td align="center">7.32</td>
+									<td align="center">9.3</td>
+									<td align="center">3.17</td>
+									<td align="center">4.66</td>
+									<td align="center">13.9</td>
+									<td align="center">52.4</td>
+									<td align="center">9.11</td>
+								</tr>
+								<tr>
+									<td align="left"><italic>Myrmotherula longipennis</italic> Pelzeln, 1868</td>
+									<td align="center">2</td>
+									<td align="center">6.25</td>
+									<td align="center">3</td>
+									<td align="center">7.92</td>
+									<td align="center">9.13</td>
+									<td align="center">3.49</td>
+									<td align="center">4.87</td>
+									<td align="center">13.7</td>
+									<td align="center">61</td>
+									<td align="center">8.29</td>
+								</tr>
+								<tr>
+									<td align="left"><italic>Isleria hauxwelli</italic> (Sclater, 1857)</td>
+									<td align="center">8</td>
+									<td align="center">25</td>
+									<td align="center">13</td>
+									<td align="center">9.54</td>
+									<td align="center">8.38</td>
+									<td align="center">3.44</td>
+									<td align="center">4.95</td>
+									<td align="center">18.3</td>
+									<td align="center">50</td>
+									<td align="center">11.1</td>
+								</tr>
+								<tr>
+									<td align="left"><italic>Thamnomanes caesius</italic> (Temminck, 1820)</td>
+									<td align="center">4</td>
+									<td align="center">12.5</td>
+									<td align="center">5</td>
+									<td align="center">16.4</td>
+									<td align="center">11.3</td>
+									<td align="center">5.19</td>
+									<td align="center">7.85</td>
+									<td align="center">16.3</td>
+									<td align="center">74</td>
+									<td align="center">11.9</td>
+								</tr>
+								<tr>
+									<td align="left"><italic>Thamnophilus schistaceus</italic> d’Orbigny, 1835</td>
+									<td align="center">2</td>
+									<td align="center">6.25</td>
+									<td align="center">2</td>
+									<td align="center">17.1</td>
+									<td align="center">11.9</td>
+									<td align="center">5.86</td>
+									<td align="center">7.74</td>
+									<td align="center">17.7</td>
+									<td align="center">65</td>
+									<td align="center">11.3</td>
+								</tr>
+								<tr>
+									<td align="left"><italic>Thamnophilus aethiops</italic> Sclater, 1858</td>
+									<td align="center">9</td>
+									<td align="center">28.1</td>
+									<td align="center">13</td>
+									<td align="center">21.7</td>
+									<td align="center">12.2</td>
+									<td align="center">6.62</td>
+									<td align="center">7.47</td>
+									<td align="center">20.9</td>
+									<td align="center">69.8</td>
+									<td align="center">14.1</td>
+								</tr>
+								<tr>
+									<td align="left"><italic>Sclateria naevia</italic> (Gmelin, 1788)</td>
+									<td align="center">1</td>
+									<td align="center">3.12</td>
+									<td align="center">1</td>
+									<td align="center">19.7</td>
+									<td align="center">14.8</td>
+									<td align="center">4.23</td>
+									<td align="center">6.23</td>
+									<td align="center">22.9</td>
+									<td align="center">69.8</td>
+									<td align="center">14.4</td>
+								</tr>
+								<tr>
+									<td align="left"><italic>Myrmelastes rufifacies</italic> (Hellmayr, 1929)</td>
+									<td align="center">1</td>
+									<td align="center">3.12</td>
+									<td align="center">1</td>
+									<td align="center">24</td>
+									<td align="center">13.8</td>
+									<td align="center">4.9</td>
+									<td align="center">6.62</td>
+									<td align="center">24.5</td>
+									<td align="center">69.6</td>
+									<td align="center">15.1</td>
+								</tr>
+								<tr>
+									<td align="left"><italic>Myrmoborus myotherinus</italic> (Spix, 1825)</td>
+									<td align="center">12</td>
+									<td align="center">37.5</td>
+									<td align="center">18</td>
+									<td align="center">16.2</td>
+									<td align="center">10.2</td>
+									<td align="center">4.4</td>
+									<td align="center">5.97</td>
+									<td align="center">23.8</td>
+									<td align="center">62</td>
+									<td align="center">14.1</td>
+								</tr>
+								<tr>
+									<td align="left"><italic>Pyriglena leuconota</italic> (Spix, 1824)</td>
+									<td align="center">4</td>
+									<td align="center">12.5</td>
+									<td align="center">5</td>
+									<td align="center">33.6</td>
+									<td align="center">12.1</td>
+									<td align="center">5.39</td>
+									<td align="center">6.26</td>
+									<td align="center">30.2</td>
+									<td align="center">79.2</td>
+									<td align="center">17.1</td>
+								</tr>
+								<tr>
+									<td align="left"><italic>Sciaphylax hemimelaena</italic> (Sclater, 1857)</td>
+									<td align="center">13</td>
+									<td align="center">40.6</td>
+									<td align="center">23</td>
+									<td align="center">14.6</td>
+									<td align="center">9.93</td>
+									<td align="center">3.92</td>
+									<td align="center">5.52</td>
+									<td align="center">21.8</td>
+									<td align="center">57.2</td>
+									<td align="center">13.3</td>
+								</tr>
+								<tr>
+									<td align="left"><italic>Cercomacra nigrescens</italic> (Cabanis &amp; Heine, 1859)</td>
+									<td align="center">2</td>
+									<td align="center">6.25</td>
+									<td align="center">2</td>
+									<td align="center">18.3</td>
+									<td align="center">11.6</td>
+									<td align="center">5.11</td>
+									<td align="center">6.94</td>
+									<td align="center">24.3</td>
+									<td align="center">66.2</td>
+									<td align="center">13.9</td>
+								</tr>
+								<tr>
+									<td align="left"><italic>Hypocnemis striata</italic> (Spix, 1825)</td>
+									<td align="center">6</td>
+									<td align="center">18.8</td>
+									<td align="center">15</td>
+									<td align="center">12.4</td>
+									<td align="center">9.42</td>
+									<td align="center">3.99</td>
+									<td align="center">5.68</td>
+									<td align="center">19.2</td>
+									<td align="center">54.2</td>
+									<td align="center">12.4</td>
+								</tr>
+								<tr>
+									<td align="left"><italic>Willisornis poecilinotus</italic> (Cabanis, 1847)</td>
+									<td align="center">5</td>
+									<td align="center">15.6</td>
+									<td align="center">15</td>
+									<td align="center">16.9</td>
+									<td align="center">11.2</td>
+									<td align="center">4.7</td>
+									<td align="center">6.89</td>
+									<td align="center">21.8</td>
+									<td align="center">69</td>
+									<td align="center">15.6</td>
+								</tr>
+								<tr>
+									<td align="left"><italic>Phlegopsis nigromaculata</italic> (d’Orbigny &amp; Lafresnaye, 1837)</td>
+									<td align="center">3</td>
+									<td align="center">9.37</td>
+									<td align="center">7</td>
+									<td align="center">46.4</td>
+									<td align="center">12.9</td>
+									<td align="center">6.26</td>
+									<td align="center">7.95</td>
+									<td align="center">29.2</td>
+									<td align="center">90.2</td>
+									<td align="center">18.6</td>
+								</tr>
+								<tr>
+									<td align="left"><italic>Rhegmatorhina gymnops</italic> Ridgway, 1888</td>
+									<td align="center">10</td>
+									<td align="center">31.3</td>
+									<td align="center">25</td>
+									<td align="center">26.2</td>
+									<td align="center">12.3</td>
+									<td align="center">4.87</td>
+									<td align="center">6.71</td>
+									<td align="center">26.5</td>
+									<td align="center">77.8</td>
+									<td align="center">15.9</td>
+								</tr>
+								<tr>
+									<td align="left" colspan="11">Conopophagidae </td>
+								</tr>
+								<tr>
+									<td align="left"><italic>Conopophaga aurita</italic> (Gmelin, 1789)</td>
+									<td align="center">1</td>
+									<td align="center">3.12</td>
+									<td align="center">1</td>
+									<td align="center">22.1</td>
+									<td align="center">9.44</td>
+									<td align="center">4.65</td>
+									<td align="center">7.37</td>
+									<td align="center">26.4</td>
+									<td align="center">68.6</td>
+									<td align="center">14.8</td>
+								</tr>
+								<tr>
+									<td align="left" colspan="11">Formicariidae </td>
+								</tr>
+								<tr>
+									<td align="left"><italic>Formicarius colma</italic> Boddaert, 1783</td>
+									<td align="center">3</td>
+									<td align="center">9.37</td>
+									<td align="center">5</td>
+									<td align="center">43.1</td>
+									<td align="center">12.2</td>
+									<td align="center">5.43</td>
+									<td align="center">6.98</td>
+									<td align="center">26.2</td>
+									<td align="center">83.6</td>
+									<td align="center">15.3</td>
+								</tr>
+								<tr>
+									<td align="left" colspan="11">Dendrocolaptidae </td>
+								</tr>
+								<tr>
+									<td align="left"><italic>Dendrocincla fuliginosa</italic> (Vieillot, 1818)</td>
+									<td align="center">9</td>
+									<td align="center">28.1</td>
+									<td align="center">13</td>
+									<td align="center">33.3</td>
+									<td align="center">20.1</td>
+									<td align="center">6.96</td>
+									<td align="center">7.76</td>
+									<td align="center">22.6</td>
+									<td align="center">100</td>
+									<td align="center">13</td>
+								</tr>
+								<tr>
+									<td align="left"><italic>Dendrocincla merula</italic> (Lichtenstein, 1829)</td>
+									<td align="center">6</td>
+									<td align="center">18.8</td>
+									<td align="center">7</td>
+									<td align="center">44.6</td>
+									<td align="center">18.8</td>
+									<td align="center">6.37</td>
+									<td align="center">7.03</td>
+									<td align="center">23</td>
+									<td align="center">100</td>
+									<td align="center">12.9</td>
+								</tr>
+								<tr>
+									<td align="left"><italic>Deconychura longicauda</italic> (Pelzeln, 1868)</td>
+									<td align="center">2</td>
+									<td align="center">6.25</td>
+									<td align="center">2</td>
+									<td align="center">32.4</td>
+									<td align="center">20.2</td>
+									<td align="center">5.72</td>
+									<td align="center">7.2</td>
+									<td align="center">23.1</td>
+									<td align="center">106</td>
+									<td align="center">14.9</td>
+								</tr>
+								<tr>
+									<td align="left"><italic>Sittasomus griseicapillus</italic> (Vieillot, 1818)</td>
+									<td align="center">4</td>
+									<td align="center">12.5</td>
+									<td align="center">4</td>
+									<td align="center">15.3</td>
+									<td align="center">13</td>
+									<td align="center">4.59</td>
+									<td align="center">6.21</td>
+									<td align="center">16.8</td>
+									<td align="center">84.4</td>
+									<td align="center">11.8</td>
+								</tr>
+								<tr>
+									<td align="left"><italic>Glyphorynchus spirurus</italic> (Vieillot, 1819)</td>
+									<td align="center">25</td>
+									<td align="center">78.1</td>
+									<td align="center">45</td>
+									<td align="center">13.2</td>
+									<td align="center">10.3</td>
+									<td align="center">4.56</td>
+									<td align="center">5.33</td>
+									<td align="center">15.2</td>
+									<td align="center">68.4</td>
+									<td align="center">9.89</td>
+								</tr>
+								<tr>
+									<td align="left"><italic>Xiphorhynchus elegans</italic> (Pelzeln, 1868)</td>
+									<td align="center">10</td>
+									<td align="center">31.3</td>
+									<td align="center">18</td>
+									<td align="center">31.6</td>
+									<td align="center">22.5</td>
+									<td align="center">6.86</td>
+									<td align="center">7.25</td>
+									<td align="center">19.5</td>
+									<td align="center">96</td>
+									<td align="center">14.9</td>
+								</tr>
+								<tr>
+									<td align="left"><italic>Xiphorhynchus guttatus</italic> (Lichtenstein, 1820)</td>
+									<td align="center">1</td>
+									<td align="center">3.12</td>
+									<td align="center">1</td>
+									<td align="center">61.5</td>
+									<td align="center">32</td>
+									<td align="center">8.74</td>
+									<td align="center">8.24</td>
+									<td align="center">22.6</td>
+									<td align="center">120</td>
+									<td align="center">17.8</td>
+								</tr>
+								<tr>
+									<td align="left"><italic>Campylorhamphus procurvoides</italic> (Lafresnaye, 1850)</td>
+									<td align="center">1</td>
+									<td align="center">3.12</td>
+									<td align="center">1</td>
+									<td align="center">35.8</td>
+									<td align="center">53.5</td>
+									<td align="center">5.44</td>
+									<td align="center">4.09</td>
+									<td align="center">20.1</td>
+									<td align="center">95.4</td>
+									<td align="center">13.7</td>
+								</tr>
+								<tr>
+									<td align="left"><italic>Dendrocolaptes certhia</italic> (Boddaert, 1783)</td>
+									<td align="center">4</td>
+									<td align="center">12.5</td>
+									<td align="center">5</td>
+									<td align="center">62.2</td>
+									<td align="center">28.2</td>
+									<td align="center">8.7</td>
+									<td align="center">9.61</td>
+									<td align="center">26.5</td>
+									<td align="center">132</td>
+									<td align="center">16.4</td>
+								</tr>
+								<tr>
+									<td align="left" colspan="11">Xenopidae </td>
+								</tr>
+								<tr>
+									<td align="left"><italic>Xenops minutus</italic> (Sparrman, 1788)</td>
+									<td align="center">7</td>
+									<td align="center">21.9</td>
+									<td align="center">7</td>
+									<td align="center">10.4</td>
+									<td align="center">10.2</td>
+									<td align="center">4.2</td>
+									<td align="center">3.84</td>
+									<td align="center">11.9</td>
+									<td align="center">66.6</td>
+									<td align="center">12.5</td>
+								</tr>
+								<tr>
+									<td align="left" colspan="11">Furnariidae </td>
+								</tr>
+								<tr>
+									<td align="left"><italic>Automolus rufipileatus</italic> (Pelzeln, 1859)</td>
+									<td align="center">1</td>
+									<td align="center">3.12</td>
+									<td align="center">2</td>
+									<td align="center">32.2</td>
+									<td align="center">15.6</td>
+									<td align="center">6.74</td>
+									<td align="center">6.49</td>
+									<td align="center">22</td>
+									<td align="center">91.4</td>
+									<td align="center">17.6</td>
+								</tr>
+								<tr>
+									<td align="left"><italic>Automolus subulatus</italic> (Spix, 1824)</td>
+									<td align="center">1</td>
+									<td align="center">3.12</td>
+									<td align="center">1</td>
+									<td align="center">26.9</td>
+									<td align="center">15.5</td>
+									<td align="center">5.91</td>
+									<td align="center">5.79</td>
+									<td align="center">18.8</td>
+									<td align="center">77</td>
+									<td align="center">15</td>
+								</tr>
+								<tr>
+									<td align="left"><italic>Automolus ochrolaemus</italic> (Tschudi, 1844)</td>
+									<td align="center">9</td>
+									<td align="center">28.1</td>
+									<td align="center">14</td>
+									<td align="center">32.8</td>
+									<td align="center">14.2</td>
+									<td align="center">6.46</td>
+									<td align="center">5.84</td>
+									<td align="center">19.9</td>
+									<td align="center">89.4</td>
+									<td align="center">17.5</td>
+								</tr>
+								<tr>
+									<td align="left"><italic>Synallaxis rutilans</italic> Temminck, 1823</td>
+									<td align="center">2</td>
+									<td align="center">6.25</td>
+									<td align="center">4</td>
+									<td align="center">18</td>
+									<td align="center">8.9</td>
+									<td align="center">4.3</td>
+									<td align="center">4.18</td>
+									<td align="center">19.7</td>
+									<td align="center">59.4</td>
+									<td align="center">12.5</td>
+								</tr>
+								<tr>
+									<td align="left" colspan="11">Pipridae</td>
+								</tr>
+								<tr>
+									<td align="left"><italic>Tyranneutes stolzmanni</italic> (Hellmayr, 1906)</td>
+									<td align="center">1</td>
+									<td align="center">3.12</td>
+									<td align="center">2</td>
+									<td align="center">9.18</td>
+									<td align="center">6</td>
+									<td align="center">3.6</td>
+									<td align="center">4.28</td>
+									<td align="center">12.6</td>
+									<td align="center">50.2</td>
+									<td align="center">8.98</td>
+								</tr>
+								<tr>
+									<td align="left"><italic>Ceratopipra rubrocapilla</italic> (Temminck, 1821)</td>
+									<td align="center">19</td>
+									<td align="center">59.4</td>
+									<td align="center">38</td>
+									<td align="center">11.4</td>
+									<td align="center">5.95</td>
+									<td align="center">3.57</td>
+									<td align="center">3.93</td>
+									<td align="center">13.8</td>
+									<td align="center">59.8</td>
+									<td align="center">9.24</td>
+								</tr>
+								<tr>
+									<td align="left"><italic>Lepidothrix nattereri</italic> (Sclater, 1865)</td>
+									<td align="center">27</td>
+									<td align="center">84.4</td>
+									<td align="center">87</td>
+									<td align="center">6.32</td>
+									<td align="center">6.47</td>
+									<td align="center">3.95</td>
+									<td align="center">4.27</td>
+									<td align="center">12.9</td>
+									<td align="center">49.4</td>
+									<td align="center">6.83</td>
+								</tr>
+								<tr>
+									<td align="left"><italic>Manacus manacus</italic> (Linnaeus, 1766)</td>
+									<td align="center">1</td>
+									<td align="center">3.12</td>
+									<td align="center">1</td>
+									<td align="center">16.1</td>
+									<td align="center">6.92</td>
+									<td align="center">3.76</td>
+									<td align="center">5.6</td>
+									<td align="center">19.3</td>
+									<td align="center">49.6</td>
+									<td align="center">11.6</td>
+								</tr>
+								<tr>
+									<td align="left"><italic>Machaeropterus pyrocephalus</italic> (Sclater, 1852)</td>
+									<td align="center">9</td>
+									<td align="center">28.1</td>
+									<td align="center">22</td>
+									<td align="center">8.5</td>
+									<td align="center">5.98</td>
+									<td align="center">3.32</td>
+									<td align="center">4.13</td>
+									<td align="center">13</td>
+									<td align="center">53.2</td>
+									<td align="center">9.1</td>
+								</tr>
+								<tr>
+									<td align="left" colspan="11">Onychorhynchidae </td>
+								</tr>
+								<tr>
+									<td align="left"><italic>Onychorhynchus coronatus</italic> (Statius Muller, 1776)</td>
+									<td align="center">5</td>
+									<td align="center">15.6</td>
+									<td align="center">7</td>
+									<td align="center">15.1</td>
+									<td align="center">15</td>
+									<td align="center">4.71</td>
+									<td align="center">7.07</td>
+									<td align="center">14.1</td>
+									<td align="center">80.8</td>
+									<td align="center">11</td>
+								</tr>
+								<tr>
+									<td align="left"><italic>Terenotriccus erythrurus</italic> (Cabanis, 1847)</td>
+									<td align="center">2</td>
+									<td align="center">6.25</td>
+									<td align="center">2</td>
+									<td align="center">6.76</td>
+									<td align="center">5.59</td>
+									<td align="center">2.67</td>
+									<td align="center">4.09</td>
+									<td align="center">13.4</td>
+									<td align="center">50.8</td>
+									<td align="center">8.95</td>
+								</tr>
+								<tr>
+									<td align="left" colspan="11">Tityridae </td>
+								</tr>
+								<tr>
+									<td align="left"><italic>Schiffornis turdina</italic> (Wied, 1831)</td>
+									<td align="center">11</td>
+									<td align="center">34.4</td>
+									<td align="center">15</td>
+									<td align="center">25.8</td>
+									<td align="center">9.59</td>
+									<td align="center">5.58</td>
+									<td align="center">6.66</td>
+									<td align="center">19.1</td>
+									<td align="center">88.4</td>
+									<td align="center">13.6</td>
+								</tr>
+								<tr>
+									<td align="left" colspan="11">Platyrinchidae </td>
+								</tr>
+								<tr>
+									<td align="left"><italic>Platyrinchus mystaceus</italic> Vieillot, 1818</td>
+									<td align="center">1</td>
+									<td align="center">3.12</td>
+									<td align="center">1</td>
+									<td align="center">9.6</td>
+									<td align="center">6.85</td>
+									<td align="center">3.27</td>
+									<td align="center">8.44</td>
+									<td align="center">15.4</td>
+									<td align="center">57.4</td>
+									<td align="center">9.31</td>
+								</tr>
+								<tr>
+									<td align="left"><italic>Platyrinchus platyrhynchos</italic> (Gmelin, 1788)</td>
+									<td align="center">4</td>
+									<td align="center">12.5</td>
+									<td align="center">4</td>
+									<td align="center">11</td>
+									<td align="center">7.75</td>
+									<td align="center">4.47</td>
+									<td align="center">11.5</td>
+									<td align="center">12.5</td>
+									<td align="center">63.8</td>
+									<td align="center">8.58</td>
+								</tr>
+								<tr>
+									<td align="left" colspan="11">Rhynchocyclidae </td>
+								</tr>
+								<tr>
+									<td align="left"><italic>Mionectes oleagineus</italic> (Lichtenstein, 1823)</td>
+									<td align="center">5</td>
+									<td align="center">15.6</td>
+									<td align="center">7</td>
+									<td align="center">10.8</td>
+									<td align="center">8.19</td>
+									<td align="center">3.27</td>
+									<td align="center">4.56</td>
+									<td align="center">13.8</td>
+									<td align="center">66.4</td>
+									<td align="center">9.82</td>
+								</tr>
+								<tr>
+									<td align="left"><italic>Corythopis torquatus</italic> Tschudi, 1844</td>
+									<td align="center">1</td>
+									<td align="center">3.12</td>
+									<td align="center">1</td>
+									<td align="center">15.3</td>
+									<td align="center">9.17</td>
+									<td align="center">3.86</td>
+									<td align="center">5.56</td>
+									<td align="center">24.1</td>
+									<td align="center">65</td>
+									<td align="center">12.2</td>
+								</tr>
+								<tr>
+									<td align="left"><italic>Hemitriccus minor</italic> (Snethlage, 1907)</td>
+									<td align="center">15</td>
+									<td align="center">46.9</td>
+									<td align="center">21</td>
+									<td align="center">6.7</td>
+									<td align="center">7.09</td>
+									<td align="center">3.2</td>
+									<td align="center">5.06</td>
+									<td align="center">14.8</td>
+									<td align="center">49.6</td>
+									<td align="center">8.63</td>
+								</tr>
+								<tr>
+									<td align="left" colspan="11">Tyrannidae </td>
+								</tr>
+								<tr>
+									<td align="left"><italic>Myiopagis viridicata</italic> (Vieillot, 1817)</td>
+									<td align="center">1</td>
+									<td align="center">3.12</td>
+									<td align="center">1</td>
+									<td align="center">10.6</td>
+									<td align="center">6.75</td>
+									<td align="center">3.65</td>
+									<td align="center">4.76</td>
+									<td align="center">14.4</td>
+									<td align="center">58.6</td>
+									<td align="center">9.12</td>
+								</tr>
+								<tr>
+									<td align="left"><italic>Ramphotrigon ruficauda</italic> (Spix, 1825)</td>
+									<td align="center">2</td>
+									<td align="center">6.25</td>
+									<td align="center">3</td>
+									<td align="center">19.6</td>
+									<td align="center">10</td>
+									<td align="center">5.03</td>
+									<td align="center">8.2</td>
+									<td align="center">15</td>
+									<td align="center">76.8</td>
+									<td align="center">9.62</td>
+								</tr>
+								<tr>
+									<td align="left" colspan="11">Vireonidae </td>
+								</tr>
+								<tr>
+									<td align="left"><italic>Hylophilus ochraceiceps</italic> (Sclater, 1860)</td>
+									<td align="center">1</td>
+									<td align="center">3.12</td>
+									<td align="center">1</td>
+									<td align="center">10.1</td>
+									<td align="center">8.86</td>
+									<td align="center">4.22</td>
+									<td align="center">5.08</td>
+									<td align="center">14.5</td>
+									<td align="center">58.8</td>
+									<td align="center">10.4</td>
+								</tr>
+								<tr>
+									<td align="left" colspan="11">Troglodytidae </td>
+								</tr>
+								<tr>
+									<td align="left"><italic>Pheugopedius genibarbis</italic> (Swainson, 1838)</td>
+									<td align="center">4</td>
+									<td align="center">12.5</td>
+									<td align="center">4</td>
+									<td align="center">19.4</td>
+									<td align="center">12.4</td>
+									<td align="center">4.38</td>
+									<td align="center">5.25</td>
+									<td align="center">21.1</td>
+									<td align="center">62.6</td>
+									<td align="center">15.4</td>
+								</tr>
+								<tr>
+									<td align="left" colspan="11">Turdidae </td>
+								</tr>
+								<tr>
+									<td align="left"><italic>Catharus fuscescens</italic> (Stephens, 1817)</td>
+									<td align="center">1</td>
+									<td align="center">3.12</td>
+									<td align="center">1</td>
+									<td align="center">34</td>
+									<td align="center">10.4</td>
+									<td align="center">4.44</td>
+									<td align="center">6</td>
+									<td align="center">28.6</td>
+									<td align="center">100</td>
+									<td align="center">14.1</td>
+								</tr>
+								<tr>
+									<td align="left" colspan="11">Passerellidae </td>
+								</tr>
+								<tr>
+									<td align="left"><italic>Arremon taciturnus</italic> (Hermann, 1783)</td>
+									<td align="center">2</td>
+									<td align="center">6.25</td>
+									<td align="center">2</td>
+									<td align="center">25.4</td>
+									<td align="center">10.3</td>
+									<td align="center">8.06</td>
+									<td align="center">6.77</td>
+									<td align="center">24</td>
+									<td align="center">75</td>
+									<td align="center">14.2</td>
+								</tr>
+								<tr>
+									<td align="left" colspan="11">Thraupidae </td>
+								</tr>
+								<tr>
+									<td align="left"><italic>Lanio cristatus</italic> (Linnaeus, 1766)</td>
+									<td align="center">3</td>
+									<td align="center">9.37</td>
+									<td align="center">3</td>
+									<td align="center">21.7</td>
+									<td align="center">10.8</td>
+									<td align="center">6.5</td>
+									<td align="center">7.28</td>
+									<td align="center">18.1</td>
+									<td align="center">81.2</td>
+									<td align="center">11.4</td>
+								</tr>
+								<tr>
+									<td align="left"><italic>Dacnis albiventris</italic> (Sclater, 1852)</td>
+									<td align="center">1</td>
+									<td align="center">3.12</td>
+									<td align="center">1</td>
+									<td align="center">11</td>
+									<td align="center">6.85</td>
+									<td align="center">3.06</td>
+									<td align="center">4.8</td>
+									<td align="center">10.9</td>
+									<td align="center">61.5</td>
+									<td align="center">8.52</td>
+								</tr>
+								<tr>
+									<td align="left" colspan="11">Cardinalidae </td>
+								</tr>
+								<tr>
+									<td align="left"><italic>Habia rubra</italic> (Vieillot, 1819)</td>
+									<td align="center">8</td>
+									<td align="center">25</td>
+									<td align="center">13</td>
+									<td align="center">29.6</td>
+									<td align="center">11.7</td>
+									<td align="center">8.43</td>
+									<td align="center">7.39</td>
+									<td align="center">21.8</td>
+									<td align="center">93.2</td>
+									<td align="center">12.8</td>
+								</tr>
+								<tr>
+									<td align="left"><italic>Cyanoloxia rothschildii</italic> (Bartlett, 1890)</td>
+									<td align="center">3</td>
+									<td align="center">9.37</td>
+									<td align="center">3</td>
+									<td align="center">24.3</td>
+									<td align="center">13.5</td>
+									<td align="center">12.2</td>
+									<td align="center">11.7</td>
+									<td align="center">18.9</td>
+									<td align="center">81</td>
+									<td align="center">12.4</td>
+								</tr>
+							</tbody>
+						</table>
+					</table-wrap>
+				</p>
+				<p>
+					<fig id="f4">
+						<label>Figure S1</label>
+						<caption>
+							<title>Results of the correlation between habitat variables at the 32 sampling sites in the southwestern Brazilian Amazon. The diagonal presents the data distribution of the variables (identified by their acronyms). Squares below the diagonal present the scatterplots between variables, and squares above the diagonal present the values of the correlation coefficients (r) and their statistical significance (*p &lt; 0.05, ** 0.05 &gt; p &gt; 0.001, *** p &lt; 0.001).</title>
+						</caption>
+						<graphic xlink:href="1809-4392-aa-49-03-232-gf4.jpg"/>
+					</fig>
+				</p>
+			</app>
+		</app-group>
+	</back>
+</article>
