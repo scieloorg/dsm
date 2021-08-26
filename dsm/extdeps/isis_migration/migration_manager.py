@@ -610,7 +610,7 @@ def _update_issue_with_isis_data(issue, f_issue):
 
     # nao presente na base isis
     # TODO: verificar o uso no site
-    # issue.type = f_issue.type
+    issue.type = _get_issue_type(f_issue)
 
     # supplement
     issue.suppl_text = f_issue.suppl
@@ -655,6 +655,23 @@ def _update_issue_with_isis_data(issue, f_issue):
         issue.number,
         issue.suppl_text,
     )
+
+
+def _get_issue_type(f_issue):
+    """
+    https://github.com/scieloorg/opac-airflow/blob/1064b818fda91f73414a6393d364663bdefa9665/airflow/dags/sync_kernel_to_website.py#L511
+    https://github.com/scieloorg/opac_proc/blob/3c6bd66040de596e1af86a99cca6d205bfb79a68/opac_proc/transformers/tr_issues.py#L76
+    'ahead', 'regular', 'special', 'supplement', 'volume_issue'
+    """
+    if f_issue.suppl:
+        return "supplement"
+    if f_issue.number:
+        if f_issue.number == "ahead":
+            return "ahead"
+        if "spe" in f_issue.number:
+            return "special"
+        return "regular"
+    return "volume_issue"
 
 
 def _update_journal_with_isis_data(journal, f_journal):
@@ -707,7 +724,8 @@ def _update_journal_with_isis_data(journal, f_journal):
     # journal.logo_url = f_journal.attr
 
     # TODO
-    # journal.current_status = f_journal.current_status
+    if f_journal.current_status == "C":
+        journal.current_status = "current"
     journal.editor_email = f_journal.email
 
     journal.index_at = f_journal.index_at
