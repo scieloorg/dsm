@@ -344,6 +344,9 @@ def register_assets(files_storage, files_storage_folder,
         # FIXME
         # parece que há um bug que faz com que asset_file_path is None
         # o xlink_href no XML não tem correspondente no pacote
+        if not asset_file_path:
+            print("%s has no corresponding file in package" % asset_in_xml.xlink_href)
+            continue
         try:
             # atualiza os valores do atributo xlink:href dos ativos com a
             # uri do `files_storage`
