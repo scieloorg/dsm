@@ -223,7 +223,7 @@ def fetch_document_package(v3):
         return article_files[0]
 
 
-def register_document_package(v3, data):
+def register_document_package(v3, data, is_new_document_package=True):
     """
     data = {}
     data['xml'] = xml_uri_and_name
@@ -231,12 +231,27 @@ def register_document_package(v3, data):
     data['renditions'] = renditions
     data['file'] = file
     """
-    article_files = v2_models.ArticleFiles()
-    article_files._id = v3
+    if is_new_document_package:
+        article_files = v2_models.ArticleFiles()
+        article_files._id = v3
+    else:
+        try:
+            article_files = fetch_document_package(v3)
+        except Exception as e:
+            raise exceptions.DBFetchDocumentPackageError(e)
+
+    _set_document_package_file_paths(article_files, data)
+    save_data(article_files)
+
+    return article_files
+
+
+def _set_document_package_file_paths(article_files, data):
     article_files.xml = create_remote_and_local_file(
         data['xml']['uri'],
         data['xml']['name']
     )
+
     article_files.file = create_remote_and_local_file(
         data['file']['uri'],
         data['file']['name']
@@ -261,8 +276,6 @@ def register_document_package(v3, data):
             )
         )
     article_files.renditions = renditions
-    save_data(article_files)
-    return article_files
 
 
 def get_isis_documents_by_date_range(

@@ -80,6 +80,11 @@ class DocsManager:
                     "updated": document_package.updated
                 }
 
+    def update_document_package(self, v3):
+        doc = db.fetch_document(v3)
+        data = docfiles.build_zip_package(self._files_storage, doc)
+        db.register_document_package(v3, data, is_new_document_package=False)
+
     def get_doc_packages(self, source):
         """
         Get documents' package

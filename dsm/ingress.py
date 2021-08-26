@@ -100,6 +100,8 @@ def upload_package(source, receipt_id=None, pid_v2_items={}, old_filenames={},
                 issue_id,
             )
             if docid:
+                # atualiza article_files relacionado ao documento
+                _docs_manager.update_document_package(docid)
                 results['docs'].append({"name": name, "id": docid})
 
         except Exception as e:
