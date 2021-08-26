@@ -1,0 +1,1525 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE article
+  PUBLIC "-//NLM//DTD JATS (Z39.96) FriendlyISISJournal Publishing DTD v1.1 20151215//EN" "JATS-journalpublishing1.dtd">
+<article article-type="research-article" dtd-version="1.1" specific-use="sps-1.9" xml:lang="en" xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<front>
+		<journal-meta>
+			<journal-id journal-id-type="publisher-id">aa</journal-id>
+			<journal-title-group>
+				<journal-title>Acta Amazonica</journal-title>
+				<abbrev-journal-title abbrev-type="publisher">Acta Amaz.</abbrev-journal-title>
+			</journal-title-group>
+			<issn pub-type="ppub">0044-5967</issn>
+			<issn pub-type="epub">1809-4392</issn>
+			<publisher>
+				<publisher-name>Instituto Nacional de Pesquisas da Amazônia</publisher-name>
+			</publisher>
+		</journal-meta>
+		<article-meta>
+			<article-id pub-id-type="doi">10.1590/1809-4392201804470</article-id>
+			<article-categories>
+				<subj-group subj-group-type="heading">
+					<subject>Agronomy and Forestry</subject>
+				</subj-group>
+			</article-categories>
+			<title-group>
+				<article-title>Diversity and abundance of green lacewings (Neuroptera: Chrysopidae) in a Conilon coffee plantation in Acre, Brazil</article-title>
+				<trans-title-group xml:lang="pt">
+					<trans-title>Diversidade e abundância de crisopídeos (Neuroptera: Chrysopidae) em cultivo de café Conilon no Acre, Brasil</trans-title>
+				</trans-title-group>
+			</title-group>
+			<contrib-group>
+				<contrib contrib-type="author">
+					<contrib-id contrib-id-type="orcid">0000-0001-5630-9865</contrib-id>
+					<name>
+						<surname>MARTINS</surname>
+						<given-names>Caleb Califre</given-names>
+					</name>
+					<xref ref-type="aff" rid="aff1"><sup>1</sup></xref>
+					<xref ref-type="corresp" rid="c1">*</xref>
+				</contrib>
+				<contrib contrib-type="author">
+					<name>
+						<surname>SANTOS</surname>
+						<given-names>Rodrigo Souza</given-names>
+					</name>
+					<xref ref-type="aff" rid="aff2"><sup>2</sup></xref>
+				</contrib>
+				<contrib contrib-type="author">
+					<name>
+						<surname>SUTIL</surname>
+						<given-names>Weidson Plauter</given-names>
+					</name>
+					<xref ref-type="aff" rid="aff3"><sup>3</sup></xref>
+				</contrib>
+				<contrib contrib-type="author">
+					<name>
+						<surname>OLIVEIRA</surname>
+						<given-names>José Fernando Araújo de</given-names>
+					</name>
+					<xref ref-type="aff" rid="aff4"><sup>4</sup></xref>
+				</contrib>
+			</contrib-group>
+			<aff id="aff1">
+				<label>1</label>
+				<institution content-type="original">Universidade de São Paulo, Faculdade de Filosofia Ciências e Letras de Ribeirão Preto, Av. Bandeirantes 3900, 14040-901, Ribeirão Preto, SP, Brazil</institution>
+				<institution content-type="normalized">Universidade de São Paulo</institution>
+				<institution content-type="orgname">Universidade de São Paulo</institution>
+				<institution content-type="orgdiv1">Faculdade de Filosofia Ciências e Letras de Ribeirão Preto</institution>
+				<addr-line>
+					<postal-code>14040-901</postal-code>
+					<city>Ribeirão Preto</city>
+					<state>SP</state>
+				</addr-line>
+				<country country="BR">Brazil</country>
+			</aff>
+			<aff id="aff2">
+				<label>2</label>
+				<institution content-type="original">Empresa Brasileira de Pesquisa Agropecuária, Rodovia BR 364, Km 14, CP 321, 69900-970, Rio Branco, AC, Brazil</institution>
+				<institution content-type="normalized">Embrapa</institution>
+				<institution content-type="orgname">Empresa Brasileira de Pesquisa Agropecuária</institution>
+				<addr-line>
+					<postal-code>69900-970</postal-code>
+					<city>Rio Branco</city>
+					<state>AC</state>
+				</addr-line>
+				<country country="BR">Brazil</country>
+			</aff>
+			<aff id="aff3">
+				<label>3</label>
+				<institution content-type="original">Universidade Federal do Acre, Programa de Pós-Graduação em Produção Vegetal, Rodovia BR 364, Km 04 - Distrito Industrial, 69920-900, Rio Branco, AC, Brazil</institution>
+				<institution content-type="normalized">Universidade Federal do Acre</institution>
+				<institution content-type="orgname">Universidade Federal do Acre</institution>
+				<institution content-type="orgdiv1">Programa de Pós-Graduação em Produção Vegetal</institution>
+				<addr-line>
+					<postal-code>69920-900</postal-code>
+					<city>Rio Branco</city>
+					<state>AC</state>
+				</addr-line>
+				<country country="BR">Brazil</country>
+			</aff>
+			<aff id="aff4">
+				<label>4</label>
+				<institution content-type="original">União Educacional do Norte, Alameda Hungria 200, Jardim Europa, 69915-901, Rio Branco, AC, Brazil</institution>
+				<institution content-type="normalized">União Educacional do Norte</institution>
+				<institution content-type="orgname">União Educacional do Norte</institution>
+				<addr-line>
+					<postal-code>69915-901</postal-code>
+					<city>Rio Branco</city>
+					<state>AC</state>
+				</addr-line>
+				<country country="BR">Brazil</country>
+			</aff>
+			<author-notes>
+				<corresp id="c1">* Corresponding author: <email>calebcalifre@gmail.com</email>
+				</corresp>
+				<fn fn-type="edited-by" id="fn1">
+					<label>ASSOCIATE EDITOR:</label>
+					<p> Fabrício B. Baccaro</p>
+				</fn>
+			</author-notes>
+			<pub-date date-type="pub" publication-format="electronic">
+				<day>12</day>
+				<month>08</month>
+				<year>2019</year>
+			</pub-date>
+			<pub-date date-type="collection" publication-format="electronic">
+				<season>Jul-Sep</season>
+				<year>2019</year>
+			</pub-date>
+			<volume>49</volume>
+			<issue>3</issue>
+			<fpage>173</fpage>
+			<lpage>178</lpage>
+			<history>
+				<date date-type="received">
+					<day>04</day>
+					<month>02</month>
+					<year>2019</year>
+				</date>
+				<date date-type="accepted">
+					<day>27</day>
+					<month>05</month>
+					<year>2019</year>
+				</date>
+			</history>
+			<permissions>
+				<license license-type="open-access" xlink:href="https://creativecommons.org/licenses/by/4.0/" xml:lang="en">
+					<license-p>This is an open-access article distributed under the terms of the Creative Commons Attribution License</license-p>
+				</license>
+			</permissions>
+			<abstract>
+				<title>ABSTRACT</title>
+				<p><italic>Coffea canephora</italic> (Conilon coffee) has great economic importance for the state of Acre, in northern Brazil. The use of insecticides in this crop has increased considerably in recent years. In order to find species of green lacewing (Chrysopidae, Neuroptera) with potential for use in biological pest control in coffee plantations, we sampled green lacewings during one year in an experimental plantation of Conilon coffee in Acre, in order to assess the diversity, abundance and seasonal occurrence of Chrysopidae species. Samplings were carried out weekly using an entomological net. Overall, 1079 specimens of seven green lacewing species were collected: <italic>Ceraeochrysa cincta</italic>, <italic>Ceraeochrysa claveri</italic>, <italic>Ceraeochrysa cubana</italic>, <italic>Ceraeochrysa everes</italic>, <italic>Chrysoperla externa</italic>, <italic>Leucochrysa</italic> (<italic>Nodita</italic>) <italic>cruentata</italic> and <italic>Leucochrysa</italic> (<italic>Nodita</italic>) <italic>marquezi</italic>. <italic>Ceraeochrysa cubana</italic> was the dominant and constant species, comprising 97% of the sampled specimens and occurring in 82% of the weekly samples. The abundance and constant presence of <italic>C. cubana</italic>, which preys upon several agricultural pests and has shown resistance to various insecticides, make this species a potential candidate for future programs of biological control in Conilon coffee plantations in the southwestern Brazilian Amazon region. </p>
+			</abstract>
+			<trans-abstract xml:lang="pt">
+				<title>RESUMO </title>
+				<p><italic>Coffea canephora</italic> (café Conilon) tem grande importância econômica para o estado do Acre, porém o uso de inseticidas nessa cultura tem aumentado consideravelmente nos últimos anos. A fim de prospectar espécies de Chrysopidae (Neuroptera) com potencial para uso em programas de controle biológico de pragas dessa cultura, nós amostramos crisopídeos em um plantio experimental de café Conilon no Acre durante um ano, para avaliar a diversidade, abundância e ocorrência sazonal de espécies deste grupo de insetos. As amostragens foram semanais por meio do uso de rede entomológica. Foram coletados 1079 espécimes de sete espécies de crisopídeos: <italic>Ceraeochrysa cincta</italic>, <italic>Ceraeochrysa claveri</italic>, <italic>Ceraeochrysa cubana</italic>, <italic>Ceraeochrysa everes</italic>, <italic>Chrysoperla externa</italic>, <italic>Leucochrysa</italic> (<italic>Nodita</italic>) <italic>cruentata</italic> and <italic>Leucochrysa</italic> (<italic>Nodita</italic>) <italic>marquezi</italic>. <italic>Ceraeochrysa cubana</italic> foi a espécie mais dominante e constante, constituindo 97% dos exemplares coletados e ocorrendo em 82% das amostras. Esses resultados, somados ao fato de que <italic>C. cubana</italic> é predadora de diversas pragas agrícolas e possui resistência a vários inseticidas, indicam que essa espécie é candidata potencial para o uso em futuros programas de controle biológico de pragas de café Conilon no sudoeste da Amazônia brasileira.</p>
+			</trans-abstract>
+			<kwd-group xml:lang="en">
+				<title>Keywords:</title>
+				<kwd>Neuropterida</kwd>
+				<kwd>Chrysopoidea</kwd>
+				<kwd>species diversity</kwd>
+				<kwd>Rubiaceae</kwd>
+			</kwd-group>
+			<kwd-group xml:lang="pt">
+				<title>Palavras-chave:</title>
+				<kwd>Neuropterida</kwd>
+				<kwd>Chrysopoidea</kwd>
+				<kwd>diversidade de espécies</kwd>
+				<kwd>Rubiaceae</kwd>
+			</kwd-group>
+			<counts>
+				<fig-count count="2"/>
+				<table-count count="1"/>
+				<equation-count count="0"/>
+				<ref-count count="41"/>
+				<page-count count="6"/>
+			</counts>
+		</article-meta>
+	</front>
+	<body>
+		<sec sec-type="intro">
+			<title>INTRODUCTION</title>
+			<p>Brazil is the world’s largest producer of coffee <italic>in natura</italic>, as well as the second largest consumer of the beverage, accounting for 32% of the world market and with an average annual consumption of 4.89 kg of roasted coffee per inhabitant (<xref ref-type="bibr" rid="B5">Arantes and Guimarães 2015</xref>; <xref ref-type="bibr" rid="B26">Medeiros and Rodrigues 2017</xref>). The culture of coffee was introduced to Brazil in the Amazonian state of Pará, but trade in this region only gained economic expression from the middle of the 1970s onwards, through colonization projects that attracted settlers from other Brazilian regions to the Amazon region (<xref ref-type="bibr" rid="B30">Oliveira and Araújo 2015</xref>). Coffee in the Amazon is mainly cultivated by small producers, which confers great social importance to this culture. In the state of Acre, in the southwestern Brazilian Amazon, 93% of coffee plantations have areas of less than 5 ha (Oliveira and Araújo 2015). The most cultivated species in Acre is <italic>Coffea canephora</italic> Pierre <italic>ex</italic> Froehner (Rubiaceae), popularly known as Conilon coffee (<xref ref-type="bibr" rid="B6">Bergo <italic>et al</italic>. 2001</xref>). Chemical control is still the most widely used method by coffee farmers to combat crop pest insects, and the use of these products has increased in recent years. From 2000 to 2017 the consumption in tons of active ingredients of pesticides in Brazil has increased by 230% (Oliveira and Araújo 2015; <xref ref-type="bibr" rid="B22">IBAMA 2019</xref>).</p>
+			<p>Green lacewings (Neuroptera: Chrysopidae) are among the natural enemies of coffee pests that are eliminated collaterally by pesticide use (<xref ref-type="bibr" rid="B38">Silva <italic>et al</italic>. 2005</xref>; <xref ref-type="bibr" rid="B17">Fernandes <italic>et al</italic>. 2010</xref>; <xref ref-type="bibr" rid="B20">Garzón <italic>et al</italic>. 2015</xref>). Chrysopidae is the second largest Neuroptera family, with 1,415 species distributed in all continents, except Antarctica (<xref ref-type="bibr" rid="B32">Oswald and Machado 2018</xref>). Green lacewings occupy the first place in number of species among Neuroptera that occur in Brazil, currently with 183 valid species with Brazilian records, of which 114 are endemic (<xref ref-type="bibr" rid="B25">Martins and Machado 2018</xref>). Chrysopidae have been prominent in studies aimed at biological pest control, as their larvae are voracious, with great hunting capacity, resistance to various insecticides, high reproductive potential and feed on various soft-bodied prey that are considered pests of different crops, including coffee, such as scales, aphids, whiteflies, eggs and small larvae of Lepidoptera, mites and thrips (<xref ref-type="bibr" rid="B10">Canard and Principi 1984</xref>; <xref ref-type="bibr" rid="B1">Albuquerque <italic>et al</italic>. 1994</xref>; <xref ref-type="bibr" rid="B11">Carvalho and Souza 2000</xref>; <xref ref-type="bibr" rid="B15">Freitas and Penny 2012</xref>). </p>
+			<p>Due to the importance of Conilon coffee cultivation in Acre, and the high potential of green lacewings for the biological pest control, we carried out a survey of green lacewings in an experimental Conilon coffee plantation in the state, with the aim of determining diversity, abundance and seasonal distribution of Chrysopidae species, to provide information for future biological coffee pest control programs. </p>
+		</sec>
+		<sec sec-type="materials|methods">
+			<title>MATERIAL AND METHODS</title>
+			<p>The study was conducted in two plots planted with <italic>Coffea canephora</italic> in the Experimental Farm of Embrapa Acre, in the municipality of Rio Branco, Acre state, Brazil (10°01’38.8’’S,67°41’09.8”W) (<xref ref-type="fig" rid="f1">Figure 1</xref>). Each plot had an area of 0.25 ha, planted with eight lines of two year old coffee plants distanced 1.5 m and with 3 m between lines. The two plots were about 2 m apart, and formed a joint area of approximately 0.5 ha (88 x 54 m<sup>2</sup>). One plot was regularly irrigated twice a day and the other was not irrigated and depended exclusively on rainfall for watering. Both plots were implemented in 2013 and will be referred from here on as the study area. The study area was not submitted to phytosanitary control and is surrounded by <italic>Citrus</italic> sp. (Rutaceae) and <italic>Arachis</italic> spp. (Fabaceae) plantations that are not submitted to phytosanitary control either. The nearest native forest area is located at approximately 3 km from the study area.</p>
+			<p>
+				<fig id="f1">
+					<label>Figure 1</label>
+					<caption>
+						<title>A − Location of the study area in Acre state, southwestern Brazilian Amazon region (map from http://www.simplemappr.net); B − Image of the study area in the experimental farm of Embrapa Acre (Rio Branco, Acre, Brazil). The shaded area indicates the two sampling plots of Conilon coffee, and the green lines mark the sampling transects (image from Google Earth Pro). This figure is in color in the electronic version</title>
+					</caption>
+					<graphic xlink:href="1809-4392-aa-49-03-173-gf1.jpg"/>
+				</fig>
+			</p>
+			<p>Average annual temperature in the region varies from 23.7 to 25.9 °C with maximum temperatures reaching 33 °C, and average annual precipitation of 1,739 mm. The wettest period occurrs from October to March and the driest from April to September (<xref ref-type="bibr" rid="B16">Duarte 2006</xref>). During the study period, the total annual precipitations was about 1,800 mm, average annual temperature was 26 ºC and maximum temperature reached 34 ºC (<xref ref-type="bibr" rid="B23">INMET 2019</xref>). </p>
+			<p>The two plots were sampled weekly from September 2015 to September 2016. On each sampling occasion, adult Chrysopidae were collected by a person walking along six transects of approximately 43 m (<xref ref-type="fig" rid="f1">Figure 1</xref>) hitting an entomological net against both coffee plants and vegetation at the interrows. All Chrysopidae specimens from different transects collected on the same sampling occasion were pooled in one sample. All samplings were performed during 40 min in the morning (8:00 to 8:40 a.m. local time). </p>
+			<p>All collected specimens of Chrysopidae were stored in 70% ethyl alcohol in properly labeled containers and are deposited in the entomological collection “Prof. J.M.F.Camargo” at Universidade de São Paulo, campus Ribeirão Preto. Material identification was carried out by the first author using identification keys in <xref ref-type="bibr" rid="B8">Brooks and Barnard (1990</xref>) and <xref ref-type="bibr" rid="B14">Freitas and Penny (2001</xref>). When necessary, genitalia were examined using the methodology of <xref ref-type="bibr" rid="B14">Freitas and Penny (2001</xref>). The abdominal apex was removed and successively cleared in a solution of 10% potassium hydroxide (KOH), rinsed with distilled water, stained with Chlorazol Black E., rinsed with distilled water again, and the genitals were stored in tubes with glycerin. </p>
+			<p>The characterization of the green lacewing assemblage followed the faunal indices in <xref ref-type="bibr" rid="B40">Silveira Neto <italic>et al</italic>. (1976</xref>). To measure diversity and entropy we calculated the Shannon’s index, which is based on the proportional abundance of species, considering both richness and equity. Species richness was calculated as the total number of species recorded (S). Species relative frequency (f) was calculated as the ratio of individuals of each species in relation to the total number of individuals collected. Species constancy was measured by the percentage frequency of each species in the overall sample. A species was considered dominant when it had a frequency &gt; 1 when divided by species richness. The dominance index (D) was calculated, which varies from 0 (all taxa have equal number of individuals in the sample) to 1 (one taxon completely dominates the sample). Simpson’s index (1-D) was used to determine the evenness in the species assemblage, a value close to 0 indicates a low uniformity in the sample composition (<xref ref-type="bibr" rid="B24">Magurran 2004</xref>). All analyses were made in Excel and the PaSt software (<xref ref-type="bibr" rid="B21">Hammer <italic>et al</italic>. 2001</xref>). </p>
+		</sec>
+		<sec sec-type="results">
+			<title>RESULTS</title>
+			<p>Overall we collected 1079 specimens of seven species of Chrysopidae (<xref ref-type="table" rid="t1">Table 1</xref>) on 51 sampling occasions. <italic>Ceraeochrysa cubana</italic> (Hagen, 1861) was present in 82% of the samples and was the only constant species in the survey. <italic>Ceraeochrysa claveri</italic> (Navás, 1911) was present in 26% of the samples, and was thus considered an accessory species, while the other five species had frequencies below 14% and were considered accidental occurrences in the study area (<xref ref-type="table" rid="t1">Table 1</xref>). <italic>Ceraeochrysa everes</italic> (Banks, 1920), <italic>Leucochrysa</italic> (<italic>Nodita</italic>) <italic>cruentata</italic> (Schneider, 1851) and <italic>Chrysoperla externa</italic> (Hagen, 1861) were recorded in only one sample. <italic>Ceraeochrysa cubana</italic> represented 97% of the captured specimens, and had an accordingly high dominance index (0.9401) and low Simpson index (0.05992). </p>
+			<p>
+				<table-wrap id="t1">
+					<label>Table 1</label>
+					<caption>
+						<title>Diversity indices of green lacewing species (Chrysopidae, Neuroptera) sampled on <italic>Coffea canephora</italic> (Conilon coffee) plots in the experimental farm of Embrapa Acre, in Rio Branco (Acre state, Brazil). N = number of specimens.</title>
+					</caption>
+					<table>
+						<colgroup>
+							<col/>
+							<col/>
+							<col span="2"/>
+							<col/>
+							<col/>
+						</colgroup>
+						<thead>
+							<tr>
+								<th align="left" rowspan="2">Species</th>
+								<th align="center" rowspan="2">N</th>
+								<th align="center" colspan="2">Constancy </th>
+								<th align="center" rowspan="2">Relative frequency</th>
+								<th align="center" rowspan="2">Dominance</th>
+							</tr>
+							<tr>
+								<th align="center">Frequency (%)</th>
+								<th align="center">Category</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td align="left"><italic>Ceraeochrysa cincta</italic></td>
+								<td align="center">2</td>
+								<td align="center">3.9</td>
+								<td align="center">Accidental</td>
+								<td align="center">0.19</td>
+								<td align="center">Non-dominant</td>
+							</tr>
+							<tr>
+								<td align="left"><italic>Ceraeochrysa claveri</italic></td>
+								<td align="center">17</td>
+								<td align="center">25.5</td>
+								<td align="center">Accessory</td>
+								<td align="center">1.58</td>
+								<td align="center">Non-dominant</td>
+							</tr>
+							<tr>
+								<td align="left"><italic>Ceraeochrysa cubana</italic></td>
+								<td align="center">1046</td>
+								<td align="center">82.4</td>
+								<td align="center">Constant</td>
+								<td align="center">96.94</td>
+								<td align="center">Dominant</td>
+							</tr>
+							<tr>
+								<td align="left"><italic>Ceraeochrysa everes</italic></td>
+								<td align="center">1</td>
+								<td align="center">2.0</td>
+								<td align="center">Accidental</td>
+								<td align="center">0.09</td>
+								<td align="center">Non-dominant</td>
+							</tr>
+							<tr>
+								<td align="left"><italic>Chrysoperla externa</italic></td>
+								<td align="center">5</td>
+								<td align="center">2.0</td>
+								<td align="center">Accidental</td>
+								<td align="center">0.46</td>
+								<td align="center">Non-dominant</td>
+							</tr>
+							<tr>
+								<td align="left"><italic>Leucochrysa</italic> (<italic>Nodita</italic>) c<italic>ruentata</italic></td>
+								<td align="center">1</td>
+								<td align="center">2.0</td>
+								<td align="center">Accidental</td>
+								<td align="center">0.09</td>
+								<td align="center">Non-dominant</td>
+							</tr>
+							<tr>
+								<td align="left"><italic>Leucochrysa</italic> (<italic>Nodita</italic>) <italic>marquezi</italic></td>
+								<td align="center">7</td>
+								<td align="center">13.7</td>
+								<td align="center">Accidental</td>
+								<td align="center">0.65</td>
+								<td align="center">Non-dominant</td>
+							</tr>
+							<tr>
+								<td align="left">Total</td>
+								<td align="center">1079</td>
+								<td align="center">100%</td>
+								<td align="left">
+								</td>
+								<td align="center">100</td>
+								<td align="left">
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</table-wrap>
+			</p>
+			<p>In general, species occurrence and abundance were irregular along the year (<xref ref-type="fig" rid="f2">Figure 2</xref>). The Shannon index for the overall period was 0.1777, which indicates low entropy of Chrysopidae in the study area. The highest values for species richness were observed in November and December, when <italic>C. cubana</italic>, <italic>C. claveri</italic>, <italic>C. everes</italic>, <italic>Ceraeochrysa cincta</italic> (Schneider, 1851) and <italic>L</italic>. (<italic>N</italic>.) <italic>cruentata</italic> occurred in the samples, and in July and August, with the occurrence of <italic>C. cubana</italic>, <italic>C. claveri</italic>, <italic>C. externa</italic> and <italic>Leucochrysa</italic> (<italic>Nodita</italic>) <italic>marquezi</italic> (Navás, 1913) (<xref ref-type="fig" rid="f2">Figure 2</xref>). No specimens were recorded in the beggining of October, and from the end of April to the beginning of May (<xref ref-type="fig" rid="f2">Figure 2</xref>). <italic>Ceraeochrysa cubana,</italic> which was present in the samples throughout the year, had the largest number of specimens recorded at the end of February, beginning of June and end of July (<xref ref-type="fig" rid="f2">Figure 2</xref>b). </p>
+			<p>
+				<fig id="f2">
+					<label>Figure 2</label>
+					<caption>
+						<title>Annual distribution of abundance of green lacewing species (Chrysopidae: Neuroptera) sampled on <italic>Coffea canephora</italic> (Conilon coffee) plots in the experimental farm of Embrapa Acre, in Rio Branco (Acre state, Brazil). A − Accessory and accidental species; B − Dominant species, <italic>Ceraeochrysa cubana</italic> (Hagen, 1861).This figure is in color in the electronic version</title>
+					</caption>
+					<graphic xlink:href="1809-4392-aa-49-03-173-gf2.jpg"/>
+				</fig>
+			</p>
+		</sec>
+		<sec sec-type="discussion">
+			<title>DISCUSSION</title>
+			<p>Only three species of two Chrysopidae genera (<italic>Chrysoperla externa</italic>, <italic>Ceraeochrysa nigripes</italic> Adams &amp; Penny, 1987 and <italic>C. cubana</italic>) had official records for the state of Acre (<xref ref-type="bibr" rid="B25">Martins and Machado 2018</xref>), so that in this study we increase the known diversity of Chrysopidae in Acre to three genera and seven species.</p>
+			<p>A diversity of green lacewings similar to that observed in this study was recorded in <italic>Coffea arabica</italic> L. plantations in the state of São Paulo, in southeastern Brazil (194 individuals of eight species from three genera) (<xref ref-type="bibr" rid="B27">Montes and Freitas 2010</xref>). In <italic>C. arabica</italic> plantations in the northeastern state of Bahia, 148 individuals of 15 species from four Chrysopidae genera were recorded (<xref ref-type="bibr" rid="B35">Ribeiro <italic>et al</italic>. 2014</xref>). However, these data have to be compared with caution, as species diversity and abundance are dependent on sampling effort. Montes and Freitas (2010) and Ribeiro <italic>et al</italic>. (2014) also used weekly entomological-net samplings, but over shorter periods of nine and eight months, respectively. They also used McPhail traps, which allow the sampling of species that occur in the afternoon and evening periods, and which were not sampled in our study. It is notable that the abundance of individuals (represented predominantly by <italic>C. cubana</italic>) was considerably higher in our survey than in the two latter studies. <italic>Ceraeochrysa cubana</italic>, <italic>C. cincta</italic>, <italic>C. everes</italic>, <italic>Chrysoperla externa</italic> and <italic>L.</italic> (<italic>N.</italic>) <italic>cruentata</italic> occurred in coffee plantations in Acre, Bahia and São Paulo, while <italic>C. claveri</italic> occurred in Acre and São Paulo, and <italic>L.</italic> (<italic>N.</italic>) <italic>marquezi</italic> occurred only in Acre (Montes and Freitas 2010; Ribeiro <italic>et al</italic>. 2014, this study). </p>
+			<p>The diversity of green lacewing species and the low abundance of most species in our study site may be owed to the sampling method and period, as it left out species with crepuscular and nocturnal habits (<xref ref-type="bibr" rid="B32">Oswald and Machado 2018</xref>). Environmental temperature may also have played a role, as mean annual maximum temperature in the region is about 5 °C above the optimum temperature for Chrysopidae development (<xref ref-type="bibr" rid="B1">Albuquerque <italic>et al</italic>. 1994</xref>; <xref ref-type="bibr" rid="B18">Figueira <italic>et al</italic>. 2000</xref>; <xref ref-type="bibr" rid="B34">Pessoa <italic>et al</italic>. 2004</xref>; <xref ref-type="bibr" rid="B33">Pappas <italic>et al</italic>. 2008</xref>). Our coffee plots were in full sun, which may also have contributed to lower lacewing occurrence, as the presence of surrounding trees provides shade and landscape heterogeneity, acting as refuges for invertebrate fauna and increasing the biodiversity of the habitat (<xref ref-type="bibr" rid="B36">Ricci <italic>et al</italic>. 2006</xref>; <xref ref-type="bibr" rid="B37">Santos and Pérez-Maluf 2012</xref>). The absence of native forest surrounding our study area is also likely to reduce the diversity of native insect fauna, since the presence of this vegetation, as in agroforest systems, allows the dispersion of pest natural enemy species (<xref ref-type="bibr" rid="B35">Ribeiro <italic>et al</italic>. 2014</xref>), and acting as a reservatory of insect diversity. More diverse habitats tend to have larger populations of pest natural enemy species (<xref ref-type="bibr" rid="B3">Altieri 2004</xref>). </p>
+			<p>This is the first record of <italic>C. cubana</italic> as a dominant species in a crop system. The species had already been recorded in a number of different cultures, such as peach [<italic>Prunus persica</italic> (Linnaeus)], coffee (<italic>C</italic>. <italic>arabica</italic>), acerola (<italic>Acerola emarginata</italic> D. C.), manioc (<italic>Manihot</italic> sp.), eucalyptus (<italic>Eucaliptus</italic> sp.), pinus (<italic>Pinus</italic> sp.), mango (<italic>Mangifera indica</italic> L.), sweet potato (<italic>Ipomoea batatas</italic> (L.) Lam), pumpkin (<italic>Curcubita</italic> sp.), citros (<italic>Citrus</italic> spp.), melon (<italic>Cucumis melo</italic> L.), almond (<italic>Prunus dulcis</italic> (Mill.) D. A. Webb) and avocado (<italic>Persea americana</italic> Mill.) (<xref ref-type="bibr" rid="B7">Bezerra <italic>et al</italic>. 2010</xref>, Monte and Freitas 2010, <xref ref-type="bibr" rid="B35">Ribeiro <italic>et al</italic>. 2014</xref>; Caleb C. Martins, pers. comm.), but in all cases <italic>C</italic>. <italic>externa</italic> or <italic>C</italic>. <italic>cincta</italic> was the dominant species (Bezerra <italic>et al</italic>. 2010, Monte and Freitas 2010, Ribeiro <italic>et al</italic>. 2014). In this sense, the low number of <italic>C. externa</italic> in our study was surprising, as it usually occurs with high frequency when it is present in crops as diverse as coffee, peach, acerola, eucalyptus, mango and pumpkin (<xref ref-type="bibr" rid="B27">Montes and Freitas 2010</xref>; Ribeiro <italic>et al</italic>. 2014). Populations of <italic>C. externa</italic> increase during cool and dry periods (<xref ref-type="bibr" rid="B41">Souza and Carvalho 2002</xref>), which may explain the low frequency of this species in the humid tropical conditions of our study. </p>
+			<p><italic>Ceraeochrysa cubana</italic> population had two frequency peaks, at the end of February, when the rainy season is ending, and coinciding with the period of coffee fruit maturation (<xref ref-type="bibr" rid="B4">Amaral <italic>et al</italic>. 2018</xref>), and in June-July, during the dry season, coinciding with the end of the physiological rest period and the beginning of the flowering of Conilon coffee (Amaral <italic>et al</italic>. 2018). So the peaks of <italic>C. cubana</italic> abundance coincided with periods of high availability of food sources for Chrysopidae adults (<xref ref-type="bibr" rid="B9">Canard 2001</xref>), which likely made the coffee plantation attractive to them. From the end of April to beginning of May, when no green lacewing was collected, Conilon coffee tree branches are in resting and senescence (Amaral <italic>et al</italic>. 2018). </p>
+			<p><italic>Ceraeochrysa cubana</italic> is widespread in the Neotropics, has resistance to various insecticides (<xref ref-type="bibr" rid="B12">Cordeiro <italic>et al</italic>. 2010</xref>; <xref ref-type="bibr" rid="B31">Ono <italic>et al</italic>. 2017</xref>) and preys on several agricultural pests, such as <italic>Spodoptera frugiperda</italic> (Smith, 1797) (Lepidoptera: Noctuidae) (<xref ref-type="bibr" rid="B28">Nunes <italic>et al</italic>. 2017</xref>), <italic>Aleurocanthus woglumi</italic> Ashby, 1915 (Hemiptera: Aleyrodidae) (<xref ref-type="bibr" rid="B29">Oliveira <italic>et al</italic>. 2016</xref>) and <italic>Aphis gossypii</italic> Glover, 1877 (Hemiptera: Aphididae) (<xref ref-type="bibr" rid="B2">Alcantra <italic>et al</italic>. 2008</xref>). Our results suggest that <italic>C. cubana</italic> is well adapted to the climatic and environmental conditions in Acre, and may be a suitable candidate for use in biological control programs for coffee pests in Acre, such as <italic>Praelongorthezia praelonga</italic> (Douglas, 1891) (Hemiptera: Ortheziidae), <italic>Leucoptera coffeella</italic> (Guérin-Mèneville &amp; Perrottet, 1842) (Lepidoptera: Lyonetiidae) and <italic>Brevipalpus phoenicis</italic> (Geijskes, 1939) (Acari: Tenuipalpidae), which are known to be predated by other Chrysopidae species (<italic>Chrysopa</italic> sp. and <italic>C. externa</italic>) (<xref ref-type="bibr" rid="B39">Silva <italic>et al</italic>. 2006</xref>; <xref ref-type="bibr" rid="B13">Costa <italic>et al</italic>. 2009</xref>; <xref ref-type="bibr" rid="B19">Fornazier <italic>et al</italic>. 2017</xref>). Further long-term studies on a wider geographical scale should confirm the constance and dominance of <italic>C. cubana</italic> in coffee plantations in Acre.</p>
+		</sec>
+		<sec sec-type="conclusions">
+			<title>CONCLUSIONS</title>
+			<p>A year-long survey on an experimental Conilon coffee plantation in Acre (southwestern Brazilian Amazon) detected seven green lacewing species, resulting in low Shannon diversity and evenness indices for Chrysopidae in the study area. <italic>Ceraeochrysa cubana</italic> was the dominant species, occurring in 82% of the weekly samples, and accounting for 97% of all specimens collected. These results suggest that <italic>C. cubana</italic> is well adapted to local climatic conditions. As this species is known to prey on several agricultural pests and shows resistance to various insecticides, it may be a suitable candidate for biological control programs of Conilon coffee pests in this region.</p>
+		</sec>
+	</body>
+	<back>
+		<ack>
+			<title>ACKNOWLEDGMENTS</title>
+			<p>We are grateful to Embrapa Acre (Empresa Brasileira de Pesquisa Agropecuária) for making the areas of coffee Conilon available for this study, to Biol. Elisandro Nascimento da Silva for his help in field samplings, and to Dr. Claudia Keller and two anonymous reviewers for their suggestions on previous versions of the manuscript. The first author is grateful to Coordenação de Aperfeiçoamento de Pessoal de Nível Superior - CAPES/Brasil for a doctoral scholarship (Code 001).</p>
+		</ack>
+		<ref-list>
+			<ref id="B1">
+				<mixed-citation>Albuquerque, G.S.; Tauber, C.A.; Tauber, M.J. 1994. <italic>Chrysoperla externa</italic> (Neuroptera: Chrysopidae): life history and potencial for biological control in Central and South America. <italic>Biological Control</italic>, 4: 7-13.</mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Albuquerque</surname>
+							<given-names>G.S.</given-names>
+						</name>
+						<name>
+							<surname>Tauber</surname>
+							<given-names>C.A.</given-names>
+						</name>
+						<name>
+							<surname>Tauber</surname>
+							<given-names>M.J.</given-names>
+						</name>
+					</person-group>
+					<year>1994</year>
+					<article-title>Chrysoperla externa (Neuroptera: Chrysopidae): life history and potencial for biological control in Central and South America</article-title>
+					<source>Biological Control</source>
+					<volume>4</volume>
+					<fpage>7</fpage>
+					<lpage>13</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B2">
+				<mixed-citation>Alcantra, E.; Carvalho, C.F.; dos Santos, T.M.; Souza, B.; Santa-Cecilia, L.V.C. 2008. Biological aspects and predatory capacity of <italic>Ceraeochrysa cubana</italic> (Hagen, 1861) (Neuroptera: Chrysopidae) fed on <italic>Aphis gossypii</italic> Glover, 1877 (Hemiptera: Aphididae) under different temperatures. <italic>Ciência e Agrotecnologia</italic>, 32: 1047-1054.</mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Alcantra</surname>
+							<given-names>E.</given-names>
+						</name>
+						<name>
+							<surname>Carvalho</surname>
+							<given-names>C.F.</given-names>
+						</name>
+						<name>
+							<surname>dos Santos</surname>
+							<given-names>T.M.</given-names>
+						</name>
+						<name>
+							<surname>Souza</surname>
+							<given-names>B.</given-names>
+						</name>
+						<name>
+							<surname>Santa-Cecilia</surname>
+							<given-names>L.V.C.</given-names>
+						</name>
+					</person-group>
+					<year>2008</year>
+					<article-title>Biological aspects and predatory capacity of Ceraeochrysa cubana (Hagen, 1861) (Neuroptera: Chrysopidae) fed on Aphis gossypii Glover, 1877 (Hemiptera: Aphididae) under different temperatures</article-title>
+					<source>Ciência e Agrotecnologia</source>
+					<volume>32</volume>
+					<fpage>1047</fpage>
+					<lpage>1054</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B3">
+				<mixed-citation>Altieri, M.A. 2004. <italic>Agroecologia: a dinâmica produtiva da agricultura sustentável</italic>. 4th ed. Editora UFRGS, Porto Alegre, 110p.</mixed-citation>
+				<element-citation publication-type="book">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Altieri</surname>
+							<given-names>M.A.</given-names>
+						</name>
+					</person-group>
+					<year>2004</year>
+					<source>Agroecologia: a dinâmica produtiva da agricultura sustentável</source>
+					<edition>4th ed</edition>
+					<publisher-name>Editora UFRGS</publisher-name>
+					<publisher-loc>Porto Alegre</publisher-loc>
+					<size units="pages">110</size>
+				</element-citation>
+			</ref>
+			<ref id="B4">
+				<mixed-citation>Amaral, E.F.; Martorano, L.G.; Bergo, C.L.; Moraes, J.R.S.C.; Lunz, A.M.P.; Souza, L.P.; Araújo, E.A.; Bardales, N.G.; Lima, M.N. 2018. Condições agroclimáticas para subsidiar cultivos de café canéfora no Acre. In: Bergo, C.L.; Bardales, N.G. (Eds.). <italic>Zoneamento Edafoclimático para o Cultivo do Café Canéfora (Coffea canephora) no Acre</italic>. Empresa Brasileira de Pesquisa Agropecuária, Brasília, p.49-90.</mixed-citation>
+				<element-citation publication-type="book">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Amaral</surname>
+							<given-names>E.F.</given-names>
+						</name>
+						<name>
+							<surname>Martorano</surname>
+							<given-names>L.G.</given-names>
+						</name>
+						<name>
+							<surname>Bergo</surname>
+							<given-names>C.L.</given-names>
+						</name>
+						<name>
+							<surname>Moraes</surname>
+							<given-names>J.R.S.C.</given-names>
+						</name>
+						<name>
+							<surname>Lunz</surname>
+							<given-names>A.M.P.</given-names>
+						</name>
+						<name>
+							<surname>Souza</surname>
+							<given-names>L.P.</given-names>
+						</name>
+						<name>
+							<surname>Araújo</surname>
+							<given-names>E.A.</given-names>
+						</name>
+						<name>
+							<surname>Bardales</surname>
+							<given-names>N.G.</given-names>
+						</name>
+						<name>
+							<surname>Lima</surname>
+							<given-names>M.N.</given-names>
+						</name>
+					</person-group>
+					<year>2018</year>
+					<chapter-title>Condições agroclimáticas para subsidiar cultivos de café canéfora no Acre</chapter-title>
+					<person-group person-group-type="editor">
+						<name>
+							<surname>Bergo</surname>
+							<given-names>C.L.</given-names>
+						</name>
+						<name>
+							<surname>Bardales</surname>
+							<given-names>N.G.</given-names>
+						</name>
+					</person-group>
+					<source>Zoneamento Edafoclimático para o Cultivo do Café Canéfora (Coffea canephora) no Acre</source>
+					<publisher-name>Empresa Brasileira de Pesquisa Agropecuária</publisher-name>
+					<publisher-loc>Brasília</publisher-loc>
+					<fpage>49</fpage>
+					<lpage>90</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B5">
+				<mixed-citation>Arantes, A.; Guimarães, L.G. 2015. <italic>Guia para Produção de Café Sustentável na Amazônia</italic>: Experiência de Apuí (AM). Instituto de Manejo e Certificação Florestal e Agrícola/ Instituto de Conservação e Desenvolvimento Sustentável do Amazonas, Piracicaba, 33p. </mixed-citation>
+				<element-citation publication-type="book">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Arantes</surname>
+							<given-names>A.</given-names>
+						</name>
+						<name>
+							<surname>Guimarães</surname>
+							<given-names>L.G.</given-names>
+						</name>
+					</person-group>
+					<year>2015</year>
+					<source><italic>Guia para Produção de Café Sustentável na Amazônia</italic>: Experiência de Apuí (AM)</source>
+					<publisher-name>Instituto de Manejo e Certificação Florestal e Agrícola/ Instituto de Conservação e Desenvolvimento Sustentável do Amazonas</publisher-name>
+					<publisher-loc>Piracicaba</publisher-loc>
+					<size units="pages">33</size>
+				</element-citation>
+			</ref>
+			<ref id="B6">
+				<mixed-citation>Bergo, C.L.; Amaral, E.F.; Araújo, E.A.; Bardales, N.G.; Pereira, R.C.A. 2001. Aptidão Natural para o Cultivo do Café (<italic>Coffea canephora</italic>) no Estado do Acre. <italic>Comunicado Técnico Embrapa</italic>, 126: 1-4.</mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Bergo</surname>
+							<given-names>C.L.</given-names>
+						</name>
+						<name>
+							<surname>Amaral</surname>
+							<given-names>E.F.</given-names>
+						</name>
+						<name>
+							<surname>Araújo</surname>
+							<given-names>E.A.</given-names>
+						</name>
+						<name>
+							<surname>Bardales</surname>
+							<given-names>N.G.</given-names>
+						</name>
+						<name>
+							<surname>Pereira</surname>
+							<given-names>R.C.A.</given-names>
+						</name>
+					</person-group>
+					<year>2001</year>
+					<article-title>Aptidão Natural para o Cultivo do Café (Coffea canephora) no Estado do Acre</article-title>
+					<source>Comunicado Técnico Embrapa</source>
+					<volume>126</volume>
+					<fpage>1</fpage>
+					<lpage>4</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B7">
+				<mixed-citation>Bezerra, C.E.S.; Tavares, P.K.A.; Macedo, L.P.M.; De Freitas, S.; Araújo, E.L. 2010. Green Lacewings (Neuroptera: Chrysopidae) Associated with Melon Crop in Mossoró, Rio Grande do Norte state, Brazil. <italic>Neotropical Entomology</italic>, 39: 454-455.</mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Bezerra</surname>
+							<given-names>C.E.S.</given-names>
+						</name>
+						<name>
+							<surname>Tavares</surname>
+							<given-names>P.K.A.</given-names>
+						</name>
+						<name>
+							<surname>Macedo</surname>
+							<given-names>L.P.M.</given-names>
+						</name>
+						<name>
+							<surname>De Freitas</surname>
+							<given-names>S.</given-names>
+						</name>
+						<name>
+							<surname>Araújo</surname>
+							<given-names>E.L.</given-names>
+						</name>
+					</person-group>
+					<year>2010</year>
+					<article-title>Green Lacewings (Neuroptera: Chrysopidae) Associated with Melon Crop in Mossoró, Rio Grande do Norte state, Brazil</article-title>
+					<source>Neotropical Entomology</source>
+					<volume>39</volume>
+					<fpage>454</fpage>
+					<lpage>455</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B8">
+				<mixed-citation>Brooks, S.J.; Barnard, P.C. 1990. The green lacewings of the world: a generic review (Neuroptera: Chrysopidae). <italic>The Bulletin of the British Museum</italic> 59: 117-286.</mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Brooks</surname>
+							<given-names>S.J.</given-names>
+						</name>
+						<name>
+							<surname>Barnard</surname>
+							<given-names>P.C.</given-names>
+						</name>
+					</person-group>
+					<year>1990</year>
+					<article-title>The green lacewings of the world: a generic review (Neuroptera: Chrysopidae)</article-title>
+					<source>The Bulletin of the British Museum</source>
+					<volume>59</volume>
+					<fpage>117</fpage>
+					<lpage>286</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B9">
+				<mixed-citation>Canard, M. 2001. Natural food and feeding habits of lacewings. In: Mcewen, P.; New, T.R.; Whittington, A.E. (Eds.). <italic>Lacewings in the crop environment</italic>. Cambridge University Press, Cambridge, p.116-129.</mixed-citation>
+				<element-citation publication-type="book">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Canard</surname>
+							<given-names>M.</given-names>
+						</name>
+					</person-group>
+					<year>2001</year>
+					<chapter-title>Natural food and feeding habits of lacewings</chapter-title>
+					<person-group person-group-type="editor">
+						<name>
+							<surname>Mcewen</surname>
+							<given-names>P.</given-names>
+						</name>
+						<name>
+							<surname>New</surname>
+							<given-names>T.R.</given-names>
+						</name>
+						<name>
+							<surname>Whittington</surname>
+							<given-names>A.E.</given-names>
+						</name>
+					</person-group>
+					<source>Lacewings in the crop environment</source>
+					<publisher-name>Cambridge University Press</publisher-name>
+					<publisher-loc>Cambridge</publisher-loc>
+					<fpage>116</fpage>
+					<lpage>129</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B10">
+				<mixed-citation>Canard, M.; Principi, M.M. 1984. Development of Chrysopidae. In Canard, M.; Séméria, Y.; New, T.R. (Eds.). <italic>Biology of Chrysopidae</italic>. MTP Press, Lancaster, p.57-75.</mixed-citation>
+				<element-citation publication-type="book">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Canard</surname>
+							<given-names>M.</given-names>
+						</name>
+						<name>
+							<surname>Principi</surname>
+							<given-names>M.M.</given-names>
+						</name>
+					</person-group>
+					<year>1984</year>
+					<chapter-title>Development of Chrysopidae</chapter-title>
+					<person-group person-group-type="editor">
+						<name>
+							<surname>Canard</surname>
+							<given-names>M.</given-names>
+						</name>
+						<name>
+							<surname>Séméria</surname>
+							<given-names>Y.</given-names>
+						</name>
+						<name>
+							<surname>New</surname>
+							<given-names>T.R.</given-names>
+						</name>
+					</person-group>
+					<source>Biology of Chrysopidae</source>
+					<publisher-name>MTP Press</publisher-name>
+					<publisher-loc>Lancaster</publisher-loc>
+					<fpage>57</fpage>
+					<lpage>75</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B11">
+				<mixed-citation>Carvalho, C.F.; Souza, B. 2000. Métodos de criação e produção de crisopídeos. In: Bueno, V.H.P. (Ed.). <italic>Controle biológico de pragas: produção massal e controle de qualidade</italic>. Editora Universidade Federal de Lavras, Lavras, p.91-109.</mixed-citation>
+				<element-citation publication-type="book">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Carvalho</surname>
+							<given-names>C.F.</given-names>
+						</name>
+						<name>
+							<surname>Souza</surname>
+							<given-names>B.</given-names>
+						</name>
+					</person-group>
+					<year>2000</year>
+					<chapter-title>Métodos de criação e produção de crisopídeos</chapter-title>
+					<person-group person-group-type="editor">
+						<name>
+							<surname>Bueno</surname>
+							<given-names>V.H.P.</given-names>
+						</name>
+					</person-group>
+					<source>Controle biológico de pragas: produção massal e controle de qualidade</source>
+					<publisher-name>Editora Universidade Federal de Lavras</publisher-name>
+					<publisher-loc>Lavras</publisher-loc>
+					<fpage>91</fpage>
+					<lpage>109</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B12">
+				<mixed-citation>Cordeiro, E.M.G.; Corrêa, A.S.; Venzon, M.; Guedes, R.N.C. 2010. Insecticide survival and behavioral avoidance in the lacewings <italic>Chrysoperla externa</italic> and <italic>Ceraeochrysa cubana</italic>. <italic>Chemosphere</italic>, 81: 1352-1357.</mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Cordeiro</surname>
+							<given-names>E.M.G.</given-names>
+						</name>
+						<name>
+							<surname>Corrêa</surname>
+							<given-names>A.S.</given-names>
+						</name>
+						<name>
+							<surname>Venzon</surname>
+							<given-names>M.</given-names>
+						</name>
+						<name>
+							<surname>Guedes</surname>
+							<given-names>R.N.C.</given-names>
+						</name>
+					</person-group>
+					<year>2010</year>
+					<article-title>Insecticide survival and behavioral avoidance in the lacewings Chrysoperla externa and Ceraeochrysa cubana</article-title>
+					<source>Chemosphere</source>
+					<volume>81</volume>
+					<fpage>1352</fpage>
+					<lpage>1357</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B13">
+				<mixed-citation>Costa, J.N.M.; Teixeira, C.A.D.; Sallet, L.A.P.; Gama, F.C. 2009. Cochonilhas ocorrentes em cafezais de Rondônia. <italic>Comunicado Técnico Embrapa</italic>, 110: 1-6. </mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Costa</surname>
+							<given-names>J.N.M.</given-names>
+						</name>
+						<name>
+							<surname>Teixeira</surname>
+							<given-names>C.A.D.</given-names>
+						</name>
+						<name>
+							<surname>Sallet</surname>
+							<given-names>L.A.P.</given-names>
+						</name>
+						<name>
+							<surname>Gama</surname>
+							<given-names>F.C.</given-names>
+						</name>
+					</person-group>
+					<year>2009</year>
+					<article-title>Cochonilhas ocorrentes em cafezais de Rondônia</article-title>
+					<source>Comunicado Técnico Embrapa</source>
+					<volume>110</volume>
+					<fpage>1</fpage>
+					<lpage>6</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B14">
+				<mixed-citation>De Freitas, S.; Penny, N.D. 2001. The green lacewings (Neuroptera: Chrysopidae) of Brazilian agro-ecosystems. <italic>Proceedings of the California Academy of Sciences</italic>, 52: 245-395.</mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>De Freitas</surname>
+							<given-names>S.</given-names>
+						</name>
+						<name>
+							<surname>Penny</surname>
+							<given-names>N.D.</given-names>
+						</name>
+					</person-group>
+					<year>2001</year>
+					<article-title>The green lacewings (Neuroptera: Chrysopidae) of Brazilian agro-ecosystems</article-title>
+					<source>Proceedings of the California Academy of Sciences</source>
+					<volume>52</volume>
+					<fpage>245</fpage>
+					<lpage>395</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B15">
+				<mixed-citation>De Freitas, S.; Penny, N.D. 2012. Neuroptera. In: Rafael, J.A.; Melo, G.A.R.; Carvalho, C.J.B.; Casari, S.A.; Constantino, R. (Eds.). <italic>Insetos do Brasil: diversidade e taxonomia</italic>. Holos Editora, Ribeirão Preto, p.537-546.</mixed-citation>
+				<element-citation publication-type="book">
+					<person-group person-group-type="author">
+						<name>
+							<surname>De Freitas</surname>
+							<given-names>S.</given-names>
+						</name>
+						<name>
+							<surname>Penny</surname>
+							<given-names>N.D</given-names>
+						</name>
+					</person-group>
+					<year>2012</year>
+					<chapter-title>Neuroptera</chapter-title>
+					<person-group person-group-type="editor">
+						<name>
+							<surname>Rafael</surname>
+							<given-names>J.A.</given-names>
+						</name>
+						<name>
+							<surname>Melo</surname>
+							<given-names>G.A.R.</given-names>
+						</name>
+						<name>
+							<surname>Carvalho</surname>
+							<given-names>C.J.B.</given-names>
+						</name>
+						<name>
+							<surname>Casari</surname>
+							<given-names>S.A.</given-names>
+						</name>
+						<name>
+							<surname>Constantino</surname>
+							<given-names>R.</given-names>
+						</name>
+					</person-group>
+					<source>Insetos do Brasil: diversidade e taxonomia</source>
+					<publisher-name>Holos Editora</publisher-name>
+					<publisher-loc>Ribeirão Preto</publisher-loc>
+					<fpage>537</fpage>
+					<lpage>546</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B16">
+				<mixed-citation>Duarte, A.F. 2006. Aspectos da climatologia do Acre, Brasil, com base no intervalo 1971-2000. <italic>Revista Brasileira de Meteorologia</italic>, 21: 308-317.</mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Duarte</surname>
+							<given-names>A.F.</given-names>
+						</name>
+					</person-group>
+					<year>2006</year>
+					<article-title>Aspectos da climatologia do Acre, Brasil, com base no intervalo 1971-2000</article-title>
+					<source>Revista Brasileira de Meteorologia</source>
+					<volume>21</volume>
+					<fpage>308</fpage>
+					<lpage>317</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B17">
+				<mixed-citation>Fernandes, F.L; Bacci, L.; Fernandes, M.S. 2010. Impact and selectivity of insecticides to predators and parasitoids. <italic>Entomo Brasilisis</italic>, 3: 1-10. </mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Fernandes</surname>
+							<given-names>F.L</given-names>
+						</name>
+						<name>
+							<surname>Bacci</surname>
+							<given-names>L.</given-names>
+						</name>
+						<name>
+							<surname>Fernandes</surname>
+							<given-names>M.S.</given-names>
+						</name>
+					</person-group>
+					<year>2010</year>
+					<article-title>Impact and selectivity of insecticides to predators and parasitoids</article-title>
+					<source>Entomo Brasilisis</source>
+					<volume>3</volume>
+					<fpage>1</fpage>
+					<lpage>10</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B18">
+				<mixed-citation>Figueira, L.K.; Carvalho, C.F.; Souza, B. 2000. Biologia e exigências térmicas de <italic>Chrysoperla externa</italic> (Hagen, 1861) (Neuroptera: Chrysopidae) alimentada com ovos de <italic>Alabama argillacea</italic> (Hübner, 1818) (Lepidoptera: Noctuidae). <italic>Ciência e Agrotecnologia</italic>, 24: 319-326.</mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Figueira</surname>
+							<given-names>L.K.</given-names>
+						</name>
+						<name>
+							<surname>Carvalho</surname>
+							<given-names>C.F.</given-names>
+						</name>
+						<name>
+							<surname>Souza</surname>
+							<given-names>B.</given-names>
+						</name>
+					</person-group>
+					<year>2000</year>
+					<article-title>Biologia e exigências térmicas de Chrysoperla externa (Hagen, 1861) (Neuroptera: Chrysopidae) alimentada com ovos de Alabama argillacea (Hübner, 1818) (Lepidoptera: Noctuidae)</article-title>
+					<source>Ciência e Agrotecnologia</source>
+					<volume>24</volume>
+					<fpage>319</fpage>
+					<lpage>326</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B19">
+				<mixed-citation>Fornazier, M.J.; Martins, D.S.; Fanton, C.J.; Benassi, V.L.R.M. 2017. Manejo de Pragas do Café Conilon. In: Ferrão, R.G.; Fonseca, A.F.A.; da Bragança, S.M.; Ferrão, M.A.G.; De Muner, L.H. (Eds.) <italic>Café Conilon</italic>. Instituto Capixaba de Pesquisa, Assistência Técnica e Extensão Rural, Vitória, Espírito Santo, p.407-449.</mixed-citation>
+				<element-citation publication-type="book">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Fornazier</surname>
+							<given-names>M.J.</given-names>
+						</name>
+						<name>
+							<surname>Martins</surname>
+							<given-names>D.S.</given-names>
+						</name>
+						<name>
+							<surname>Fanton</surname>
+							<given-names>C.J.</given-names>
+						</name>
+						<name>
+							<surname>Benassi</surname>
+							<given-names>V.L.R.M.</given-names>
+						</name>
+					</person-group>
+					<year>2017</year>
+					<chapter-title>Manejo de Pragas do Café Conilon</chapter-title>
+					<person-group person-group-type="editor">
+						<name>
+							<surname>Ferrão</surname>
+							<given-names>R.G.</given-names>
+						</name>
+						<name>
+							<surname>Fonseca</surname>
+							<given-names>A.F.A.</given-names>
+						</name>
+						<name>
+							<surname>da Bragança</surname>
+							<given-names>S.M.</given-names>
+						</name>
+						<name>
+							<surname>Ferrão</surname>
+							<given-names>M.A.G.</given-names>
+						</name>
+						<name>
+							<surname>De Muner</surname>
+							<given-names>L.H.</given-names>
+						</name>
+					</person-group>
+					<source>Café Conilon</source>
+					<publisher-name>Instituto Capixaba de Pesquisa, Assistência Técnica e Extensão Rural</publisher-name>
+					<publisher-loc>Vitória, Espírito Santo</publisher-loc>
+					<fpage>407</fpage>
+					<lpage>449</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B20">
+				<mixed-citation>Garzón, A.; Amor, P.M.F.; Budia, E.V. 2015. Toxicity and sublethal effects of six insecticides to last instar larvae and adults of the biocontrol agents <italic>Chrysoperla carnea</italic> (Stephens) (Neuroptera: Chrysopidae) and <italic>Adalia bipunctata</italic> (L.) (Coleoptera: Coccinellidae). <italic>Chemosphere</italic>, 132: 87-93.</mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Garzón</surname>
+							<given-names>A.</given-names>
+						</name>
+						<name>
+							<surname>Amor</surname>
+							<given-names>P.M.F.</given-names>
+						</name>
+						<name>
+							<surname>Budia</surname>
+							<given-names>E.V.</given-names>
+						</name>
+					</person-group>
+					<year>2015</year>
+					<article-title>Toxicity and sublethal effects of six insecticides to last instar larvae and adults of the biocontrol agents Chrysoperla carnea (Stephens) (Neuroptera: Chrysopidae) and Adalia bipunctata (L.) (Coleoptera: Coccinellidae)</article-title>
+					<source>Chemosphere</source>
+					<volume>132</volume>
+					<fpage>87</fpage>
+					<lpage>93</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B21">
+				<mixed-citation>Hammer, Ø.; Harper, D.A.T.; Ryan, P.D. 2001. PAST: Paleontological Statistics Software Package for Education and Data Analysis. <italic>Palaeontologia Electronica</italic>, 4: 1-9.</mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Hammer</surname>
+							<given-names>Ø.</given-names>
+						</name>
+						<name>
+							<surname>Harper</surname>
+							<given-names>D.A.T.</given-names>
+						</name>
+						<name>
+							<surname>Ryan</surname>
+							<given-names>P.D.</given-names>
+						</name>
+					</person-group>
+					<year>2001</year>
+					<article-title>PAST: Paleontological Statistics Software Package for Education and Data Analysis</article-title>
+					<source>Palaeontologia Electronica</source>
+					<volume>4</volume>
+					<fpage>1</fpage>
+					<lpage>9</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B22">
+				<mixed-citation>IBAMA. 2019. Instituto Brasileiro do Meio Ambiente e dos recursos Naturais Renováveis. Relatórios de comercialização de agrotóxicos. (<comment> (<ext-link ext-link-type="uri" xlink:href="http://www.ibama.gov.br/agrotoxicos/relatorios-de-comercializacao-de-agrotoxicos">http://www.ibama.gov.br/agrotoxicos/relatorios-de-comercializacao-de-agrotoxicos</ext-link>
+					</comment>). Accessed on 06 Jun 2019.</mixed-citation>
+				<element-citation publication-type="report">
+					<person-group person-group-type="author">
+						<collab>IBAMA</collab>
+					</person-group>
+					<year>2019</year>
+					<comment>Instituto Brasileiro do Meio Ambiente e dos recursos Naturais Renováveis</comment>
+					<source>Relatórios de comercialização de agrotóxicos</source>
+					<comment> (<ext-link ext-link-type="uri" xlink:href="http://www.ibama.gov.br/agrotoxicos/relatorios-de-comercializacao-de-agrotoxicos">http://www.ibama.gov.br/agrotoxicos/relatorios-de-comercializacao-de-agrotoxicos</ext-link>
+					</comment>
+					<date-in-citation content-type="access-date" iso-8601-date="2019-06-06">06 Jun 2019</date-in-citation>
+				</element-citation>
+			</ref>
+			<ref id="B23">
+				<mixed-citation>INMET. 2019. Instituto Nacional de Meteorologia. Clima. (<comment> (<ext-link ext-link-type="uri" xlink:href="http://www.inmet.gov.br/portal/index.php?r=clima">http://www.inmet.gov.br/portal/index.php?r=clima</ext-link>
+					</comment>). Accessed on 04 Jun 2019.</mixed-citation>
+				<element-citation publication-type="webpage">
+					<person-group person-group-type="author">
+						<collab>INMET</collab>
+					</person-group>
+					<year>2019</year>
+					<comment>Instituto Nacional de Meteorologia</comment>
+					<source>Clima</source>
+					<comment> (<ext-link ext-link-type="uri" xlink:href="http://www.inmet.gov.br/portal/index.php?r=clima">http://www.inmet.gov.br/portal/index.php?r=clima</ext-link>
+					</comment>
+					<date-in-citation content-type="access-date" iso-8601-date="2019-06-04">04 Jun 2019</date-in-citation>
+				</element-citation>
+			</ref>
+			<ref id="B24">
+				<mixed-citation>Magurran, A.E. 2004. <italic>Measuring biological Diversity</italic>. Blackwell Publishing, Oxford, 256p.</mixed-citation>
+				<element-citation publication-type="book">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Magurran</surname>
+							<given-names>A.E.</given-names>
+						</name>
+					</person-group>
+					<year>2004</year>
+					<source>Measuring biological Diversity</source>
+					<publisher-name>Blackwell Publishing</publisher-name>
+					<publisher-loc>Oxford</publisher-loc>
+					<size units="pages">256</size>
+				</element-citation>
+			</ref>
+			<ref id="B25">
+				<mixed-citation>Martins, C.C.; Machado, R.J.P. 2018. Chrysopidae. In: Boeger, W.A.; Zager, H.; Rafael, J.A.; Valim, M.P. (Eds.). <italic>Catálogo Taxonômico da Fauna do Brasil</italic>. Programa das Nações Unidas para o Desenvolvimento/ Universidade Federal do Rio de Janeiro/ Instituto Alberto Luiz Coimbra de Pós-Graduação e Pesquisa de Engenharia, Rio de Janeiro, 644p. </mixed-citation>
+				<element-citation publication-type="book">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Martins</surname>
+							<given-names>C.C.</given-names>
+						</name>
+						<name>
+							<surname>Machado</surname>
+							<given-names>R.J.P.</given-names>
+						</name>
+					</person-group>
+					<year>2018</year>
+					<chapter-title>Chrysopidae</chapter-title>
+					<person-group person-group-type="editor">
+						<name>
+							<surname>Boeger</surname>
+							<given-names>W.A.</given-names>
+						</name>
+						<name>
+							<surname>Zager</surname>
+							<given-names>H.</given-names>
+						</name>
+						<name>
+							<surname>Rafael</surname>
+							<given-names>J.A.</given-names>
+						</name>
+						<name>
+							<surname>Valim</surname>
+							<given-names>M.P.</given-names>
+						</name>
+					</person-group>
+					<source>Catálogo Taxonômico da Fauna do Brasil</source>
+					<publisher-name>Programa das Nações Unidas para o Desenvolvimento/ Universidade Federal do Rio de Janeiro/ Instituto Alberto Luiz Coimbra de Pós-Graduação e Pesquisa de Engenharia</publisher-name>
+					<publisher-loc>Rio de Janeiro</publisher-loc>
+					<size units="pages">644</size>
+				</element-citation>
+			</ref>
+			<ref id="B26">
+				<mixed-citation>Medeiros, R.V.V.; Rodrigues, P.M.A. 2017. A economia cafeeira no Brasil e a importância das inovações para essa cadeia. <italic>A Economia em Revista</italic> 25: 1-12.</mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Medeiros</surname>
+							<given-names>R.V.V.</given-names>
+						</name>
+						<name>
+							<surname>Rodrigues</surname>
+							<given-names>P.M.A.</given-names>
+						</name>
+					</person-group>
+					<year>2017</year>
+					<article-title>A economia cafeeira no Brasil e a importância das inovações para essa cadeia</article-title>
+					<source>A Economia em Revista</source>
+					<volume>25</volume>
+					<fpage>1</fpage>
+					<lpage>12</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B27">
+				<mixed-citation>Montes, S.M.N.M.; De Freitas, S. 2010. Ocorrência de inimigos naturais (bicho lixeiro) em agroecossistemas, na alta Sorocabana, estado de São Paulo. <italic>Pesquisa &amp; Tecnologia</italic>, 7:1.</mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Montes</surname>
+							<given-names>S.M.N.M.</given-names>
+						</name>
+						<name>
+							<surname>De Freitas</surname>
+							<given-names>S.</given-names>
+						</name>
+					</person-group>
+					<year>2010</year>
+					<article-title>Ocorrência de inimigos naturais (bicho lixeiro) em agroecossistemas, na alta Sorocabana, estado de São Paulo</article-title>
+					<source>Pesquisa &amp; Tecnologia</source>
+					<volume>7</volume>
+					<fpage>1</fpage>
+					<lpage>1</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B28">
+				<mixed-citation>Nunes, G.S.; Nascimento, I.N.; Souza, G.M.M.; Oliveira, R.; Oliveira, F.Q.; Batista, J.L. 2017. Biological aspects and predation behavior of <italic>Ceraeochrysa cubana</italic> against <italic>Spodoptera frugiperda</italic>. <italic>Revista Brasileira de Ciências Agrárias</italic>, 12: 20-25. </mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Nunes</surname>
+							<given-names>G.S.</given-names>
+						</name>
+						<name>
+							<surname>Nascimento</surname>
+							<given-names>I.N.</given-names>
+						</name>
+						<name>
+							<surname>Souza</surname>
+							<given-names>G.M.M.</given-names>
+						</name>
+						<name>
+							<surname>Oliveira</surname>
+							<given-names>R.</given-names>
+						</name>
+						<name>
+							<surname>Oliveira</surname>
+							<given-names>F.Q.</given-names>
+						</name>
+						<name>
+							<surname>Batista</surname>
+							<given-names>J.L.</given-names>
+						</name>
+					</person-group>
+					<year>2017</year>
+					<article-title>Biological aspects and predation behavior of Ceraeochrysa cubana against Spodoptera frugiperda</article-title>
+					<source>Revista Brasileira de Ciências Agrárias</source>
+					<volume>12</volume>
+					<fpage>20</fpage>
+					<lpage>25</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B29">
+				<mixed-citation>Oliveira, R.; Barbosa, V.D.; Vieira, D.L.; Oliveira, F.Q.; Batista, J.D.; de Brito, C.H. 2016. Development and reproduction of <italic>Ceraeochrysa cubana</italic> (Neuroptera: Chrysopidae) fed with <italic>Aleurocanthus woglumi</italic> (Hemiptera: Aleyrodidae). <italic>Semina: Ciências Agrárias</italic>, 37: 17-23. </mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Oliveira</surname>
+							<given-names>R.</given-names>
+						</name>
+						<name>
+							<surname>Barbosa</surname>
+							<given-names>V.D.</given-names>
+						</name>
+						<name>
+							<surname>Vieira</surname>
+							<given-names>D.L.</given-names>
+						</name>
+						<name>
+							<surname>Oliveira</surname>
+							<given-names>F.Q.</given-names>
+						</name>
+						<name>
+							<surname>Batista</surname>
+							<given-names>J.D.</given-names>
+						</name>
+						<name>
+							<surname>de Brito</surname>
+							<given-names>C.H.</given-names>
+						</name>
+					</person-group>
+					<year>2016</year>
+					<article-title>Development and reproduction of Ceraeochrysa cubana (Neuroptera: Chrysopidae) fed with Aleurocanthus woglumi (Hemiptera: Aleyrodidae)</article-title>
+					<source>Semina: Ciências Agrárias</source>
+					<volume>37</volume>
+					<fpage>17</fpage>
+					<lpage>23</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B30">
+				<mixed-citation>Oliveira, S.J.M.; Araújo, L.V. 2015. Aspectos econômicos da cafeicultura. In: Marcolan, A.L.; Espindula, M.C. (Eds.). <italic>Café na Amazônia</italic>. Empresa Brasileira de Pesquisa Agropecuária, Brasília , p.27-40.</mixed-citation>
+				<element-citation publication-type="book">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Oliveira</surname>
+							<given-names>S.J.M.</given-names>
+						</name>
+						<name>
+							<surname>Araújo</surname>
+							<given-names>L.V.</given-names>
+						</name>
+					</person-group>
+					<year>2015</year>
+					<chapter-title>Aspectos econômicos da cafeicultura</chapter-title>
+					<person-group person-group-type="editor">
+						<name>
+							<surname>Marcolan</surname>
+							<given-names>A.L.</given-names>
+						</name>
+						<name>
+							<surname>Espindula</surname>
+							<given-names>M.C.</given-names>
+						</name>
+					</person-group>
+					<source>Café na Amazônia</source>
+					<publisher-name>Empresa Brasileira de Pesquisa Agropecuária</publisher-name>
+					<publisher-loc>Brasília</publisher-loc>
+					<fpage>27</fpage>
+					<lpage>40</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B31">
+				<mixed-citation>Ono, E.K.; Zanardi, O.Z.; Santos, K.F.A.; Yamamoto, P.T. 2017. Susceptibility of <italic>Ceraeochrysa cubana</italic> larvae and adults to six insect growth-regulator insecticides. <italic>Chemosphere</italic>, 168: 49-57.</mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Ono</surname>
+							<given-names>E.K.</given-names>
+						</name>
+						<name>
+							<surname>Zanardi</surname>
+							<given-names>O.Z.</given-names>
+						</name>
+						<name>
+							<surname>Santos</surname>
+							<given-names>K.F.A.</given-names>
+						</name>
+						<name>
+							<surname>Yamamoto</surname>
+							<given-names>P.T.</given-names>
+						</name>
+					</person-group>
+					<year>2017</year>
+					<article-title>Susceptibility of Ceraeochrysa cubana larvae and adults to six insect growth-regulator insecticides</article-title>
+					<source>Chemosphere</source>
+					<volume>168</volume>
+					<fpage>49</fpage>
+					<lpage>57</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B32">
+				<mixed-citation>Oswald, J.D.; Machado, R.J.P. 2018. Biodiversity of the Neuropterida (Insecta: Neuroptera: Megaloptera, and Raphidioptera). In: Foottit, R.G.; Adler, P.H. (Eds.). <italic>Insect Biodiversity: Science and Society</italic>. 1st ed. John Wiley &amp; Sons, New York, p.627-671.</mixed-citation>
+				<element-citation publication-type="book">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Oswald</surname>
+							<given-names>J.D.</given-names>
+						</name>
+						<name>
+							<surname>Machado</surname>
+							<given-names>R.J.P.</given-names>
+						</name>
+					</person-group>
+					<year>2018</year>
+					<chapter-title>Biodiversity of the Neuropterida (Insecta: Neuroptera: Megaloptera, and Raphidioptera)</chapter-title>
+					<person-group person-group-type="editor">
+						<name>
+							<surname>Foottit</surname>
+							<given-names>R.G.</given-names>
+						</name>
+						<name>
+							<surname>Adler</surname>
+							<given-names>P.H.</given-names>
+						</name>
+					</person-group>
+					<source>Insect Biodiversity: Science and Society</source>
+					<edition>1st ed</edition>
+					<publisher-name>John Wiley &amp; Sons</publisher-name>
+					<publisher-loc>New York</publisher-loc>
+					<fpage>627</fpage>
+					<lpage>671</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B33">
+				<mixed-citation>Pappas, M.L.; Broufas, G.D.; Koveos, D.S. 2008. Effect of temperature on survival, development and reproduction of the predatory lacewing <italic>Dichochrysa prasina</italic> (Neuroptera: Chrysopidae) reared on <italic>Ephestia Kuehniella</italic> eggs (Lepidoptera: Pyralidae). <italic>Biological Control</italic>, 45: 396-403.</mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Pappas</surname>
+							<given-names>M.L.</given-names>
+						</name>
+						<name>
+							<surname>Broufas</surname>
+							<given-names>G.D.</given-names>
+						</name>
+						<name>
+							<surname>Koveos</surname>
+							<given-names>D.S.</given-names>
+						</name>
+					</person-group>
+					<year>2008</year>
+					<article-title>Effect of temperature on survival, development and reproduction of the predatory lacewing Dichochrysa prasina (Neuroptera: Chrysopidae) reared on Ephestia Kuehniella eggs (Lepidoptera: Pyralidae)</article-title>
+					<source>Biological Control</source>
+					<volume>45</volume>
+					<fpage>396</fpage>
+					<lpage>403</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B34">
+				<mixed-citation>Pessoa, L.G.A.; Leite, M.V.; De Freitas, S.; Garbin, G.C. 2004. Efeito da variação da temperatura sobre o desenvolvimento embrionário e pós-embrionário de <italic>Ceraeochrysa paraguaria</italic> (Navás) (Neuroptera: Chrysopidae). <italic>Arquivos do Instituto Biológico</italic>, 71: 473-476.</mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Pessoa</surname>
+							<given-names>L.G.A.</given-names>
+						</name>
+						<name>
+							<surname>Leite</surname>
+							<given-names>M.V.</given-names>
+						</name>
+						<name>
+							<surname>De Freitas</surname>
+							<given-names>S.</given-names>
+						</name>
+						<name>
+							<surname>Garbin</surname>
+							<given-names>G.C.</given-names>
+						</name>
+					</person-group>
+					<year>2004</year>
+					<article-title>Efeito da variação da temperatura sobre o desenvolvimento embrionário e pós-embrionário de Ceraeochrysa paraguaria (Navás) (Neuroptera: Chrysopidae)</article-title>
+					<source>Arquivos do Instituto Biológico</source>
+					<volume>71</volume>
+					<fpage>473</fpage>
+					<lpage>476</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B35">
+				<mixed-citation>Ribeiro, A.E.L.; Castellani, M.A.; Pérez-Maluf, R.; Moreira, A.A.; Leite, S.A.; Costa, D.R. 2014. Ocurrence of green lacewings (Neuroptera: Chrysopidae) in two coffee cropping systems. <italic>African FriendlyISISJournal of Agricultural Research</italic>, 9: 1597-1603.</mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Ribeiro</surname>
+							<given-names>A.E.L.</given-names>
+						</name>
+						<name>
+							<surname>Castellani</surname>
+							<given-names>M.A.</given-names>
+						</name>
+						<name>
+							<surname>Pérez-Maluf</surname>
+							<given-names>R.</given-names>
+						</name>
+						<name>
+							<surname>Moreira</surname>
+							<given-names>A.A.</given-names>
+						</name>
+						<name>
+							<surname>Leite</surname>
+							<given-names>S.A.</given-names>
+						</name>
+						<name>
+							<surname>Costa</surname>
+							<given-names>D.R.</given-names>
+						</name>
+					</person-group>
+					<year>2014</year>
+					<article-title>Ocurrence of green lacewings (Neuroptera: Chrysopidae) in two coffee cropping systems</article-title>
+					<source>African FriendlyISISJournal of Agricultural Research</source>
+					<volume>9</volume>
+					<fpage>1597</fpage>
+					<lpage>1603</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B36">
+				<mixed-citation>Ricci, M. dos S.F.; Costa, J.R.; Pinto, A.N.; Santos, V.L.S. 2006. Cultivo orgânico de cultivares de café a pleno sol e sombreado. <italic>Pesquisa Agropecuária Brasileira</italic> 41: 569-575.</mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Ricci</surname>
+							<given-names>M. dos S.F.</given-names>
+						</name>
+						<name>
+							<surname>Costa</surname>
+							<given-names>J.R.</given-names>
+						</name>
+						<name>
+							<surname>Pinto</surname>
+							<given-names>A.N.</given-names>
+						</name>
+						<name>
+							<surname>Santos</surname>
+							<given-names>V.L.S.</given-names>
+						</name>
+					</person-group>
+					<year>2006</year>
+					<article-title>Cultivo orgânico de cultivares de café a pleno sol e sombreado</article-title>
+					<source>Pesquisa Agropecuária Brasileira</source>
+					<volume>41</volume>
+					<fpage>569</fpage>
+					<lpage>575</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B37">
+				<mixed-citation>Santos, P.S.; Pérez-Maluf, R. 2012. Diversidade de himenópteros parasitoides em áreas de mata de cipó e cafezais em Vitória da Conquista-Bahia. <italic>Magistra</italic>, 24: 84-90. </mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Santos</surname>
+							<given-names>P.S.</given-names>
+						</name>
+						<name>
+							<surname>Pérez-Maluf</surname>
+							<given-names>R.</given-names>
+						</name>
+					</person-group>
+					<year>2012</year>
+					<article-title>Diversidade de himenópteros parasitoides em áreas de mata de cipó e cafezais em Vitória da Conquista-Bahia</article-title>
+					<source>Magistra</source>
+					<volume>24</volume>
+					<fpage>84</fpage>
+					<lpage>90</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B38">
+				<mixed-citation>Silva, R.A.; Carvalho, G.A.; Carvalho, C.F.; Reis, P.R.; Pereira, A.M.A.R.; Cosme, L.V. 2005. Toxicidade de produtos fitossanitários utilizados na cultura do cafeeiro a larvas de <italic>Chrysoperla externa</italic> (Hagen) (Neuroptera: Chrysopidae) e efeitos sobre as fases subsequentes dos desenvolvimentos do predador. <italic>Neotropical Entomology</italic>, 34: 951-959. </mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Silva</surname>
+							<given-names>R.A.</given-names>
+						</name>
+						<name>
+							<surname>Carvalho</surname>
+							<given-names>G.A.</given-names>
+						</name>
+						<name>
+							<surname>Carvalho</surname>
+							<given-names>C.F.</given-names>
+						</name>
+						<name>
+							<surname>Reis</surname>
+							<given-names>P.R.</given-names>
+						</name>
+						<name>
+							<surname>Pereira</surname>
+							<given-names>A.M.A.R.</given-names>
+						</name>
+						<name>
+							<surname>Cosme</surname>
+							<given-names>L.V.</given-names>
+						</name>
+					</person-group>
+					<year>2005</year>
+					<article-title>Toxicidade de produtos fitossanitários utilizados na cultura do cafeeiro a larvas de Chrysoperla externa (Hagen) (Neuroptera: Chrysopidae) e efeitos sobre as fases subsequentes dos desenvolvimentos do predador</article-title>
+					<source>Neotropical Entomology</source>
+					<volume>34</volume>
+					<fpage>951</fpage>
+					<lpage>959</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B39">
+				<mixed-citation>Silva, R.A.; Reis, P.R.; Carvalho, C.F.; Souza, B. 2006. Predatory capacity of <italic>Chrysoperla externa</italic> (Hagen, 1861) (Neuroptera: Chrysopidae) on <italic>Brevipalpus phoenicis</italic> (Geijskes, 1939) (Acari: Tenuipalpidae. <italic>Coffee Science</italic>, Lavras, 1: 50-54. </mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Silva</surname>
+							<given-names>R.A.</given-names>
+						</name>
+						<name>
+							<surname>Reis</surname>
+							<given-names>P.R.</given-names>
+						</name>
+						<name>
+							<surname>Carvalho</surname>
+							<given-names>C.F.</given-names>
+						</name>
+						<name>
+							<surname>Souza</surname>
+							<given-names>B.</given-names>
+						</name>
+					</person-group>
+					<year>2006</year>
+					<article-title>Predatory capacity of Chrysoperla externa (Hagen, 1861) (Neuroptera: Chrysopidae) on Brevipalpus phoenicis (Geijskes, 1939) (Acari: Tenuipalpidae</article-title>
+					<source>Coffee Science, Lavras</source>
+					<volume>1</volume>
+					<fpage>50</fpage>
+					<lpage>54</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B40">
+				<mixed-citation>Silveira Neto, S; Nakano, O.; Vila Nova, N.A. 1976. <italic>Manual de Ecologia dos Insetos</italic>. Agronômica Ceres, Piracicaba, 419p. </mixed-citation>
+				<element-citation publication-type="book">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Silveira</surname>
+							<given-names>S</given-names>
+							<suffix>Neto</suffix>
+						</name>
+						<name>
+							<surname>Nakano</surname>
+							<given-names>O.</given-names>
+						</name>
+						<name>
+							<surname>Vila Nova</surname>
+							<given-names>N.A.</given-names>
+						</name>
+					</person-group>
+					<year>1976</year>
+					<source>Manual de Ecologia dos Insetos</source>
+					<publisher-name>Agronômica Ceres</publisher-name>
+					<publisher-loc>Piracicaba</publisher-loc>
+					<size units="pages">419</size>
+				</element-citation>
+			</ref>
+			<ref id="B41">
+				<mixed-citation>Souza, B.; Carvalho, C. F. 2002. Population dynamics and seasonal occurrence of adults of <italic>Chrysoperla externa</italic> (Hagen, 1861) (Neuroptera: Chrysopidae) in a citrus orchard in southern Brazil. <italic>Acta Zoologica Academiae Scientiarum Hungaricae</italic>, 48 (Suppl. 2): 301-310.</mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Souza</surname>
+							<given-names>B.</given-names>
+						</name>
+						<name>
+							<surname>Carvalho</surname>
+							<given-names>C. F.</given-names>
+						</name>
+					</person-group>
+					<year>2002</year>
+					<article-title>Population dynamics and seasonal occurrence of adults of Chrysoperla externa (Hagen, 1861) (Neuroptera: Chrysopidae) in a citrus orchard in southern Brazil</article-title>
+					<source>Acta Zoologica Academiae Scientiarum Hungaricae</source>
+					<volume>48</volume>
+					<supplement>2</supplement>
+					<fpage>301</fpage>
+					<lpage>310</lpage>
+				</element-citation>
+			</ref>
+		</ref-list>
+		<fn-group>
+			<fn fn-type="other" id="fn2">
+				<label>CITE AS:</label>
+				<p> Martins, C.C.; Santos, R.S.; Sutil, W.P.; Oliveira, J.F.A. de. 2019. Diversity and abundance of green lacewings (Neuroptera: Chrysopidae) in a Conilon coffee plantation in Acre, Brazil. <italic>Acta Amazonica</italic> 49: 173-178.</p>
+			</fn>
+		</fn-group>
+	</back>
+</article>

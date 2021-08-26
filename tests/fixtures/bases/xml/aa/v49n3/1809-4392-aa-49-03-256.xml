@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE article
+  PUBLIC "-//NLM//DTD JATS (Z39.96) FriendlyISISJournal Publishing DTD v1.1 20151215//EN" "JATS-journalpublishing1.dtd">
+<article article-type="correction" dtd-version="1.1" specific-use="sps-1.9" xml:lang="en" xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<front>
+		<journal-meta>
+			<journal-id journal-id-type="publisher-id">aa</journal-id>
+			<journal-title-group>
+				<journal-title>Acta Amazonica</journal-title>
+				<abbrev-journal-title abbrev-type="publisher">Acta Amaz.</abbrev-journal-title>
+			</journal-title-group>
+			<issn pub-type="ppub">0044-5967</issn>
+			<issn pub-type="epub">1809-4392</issn>
+			<publisher>
+				<publisher-name>Instituto Nacional de Pesquisas da Amazônia</publisher-name>
+			</publisher>
+		</journal-meta>
+		<article-meta>
+			<article-id pub-id-type="doi">10.1590/1809-4392201801252e</article-id>
+			<article-categories>
+				<subj-group subj-group-type="heading">
+					<subject>ERRATUM</subject>
+				</subj-group>
+			</article-categories>
+			<title-group>
+				<article-title>Errata</article-title>
+			</title-group>
+			<pub-date date-type="pub" publication-format="electronic">
+				<day>12</day>
+				<month>08</month>
+				<year>2019</year>
+			</pub-date>
+			<pub-date date-type="collection" publication-format="electronic">
+				<season>Jul-Sep</season>
+				<year>2019</year>
+			</pub-date>
+			<volume>49</volume>
+			<issue>3</issue>
+			<fpage>256</fpage>
+			<lpage>256</lpage>
+			<permissions>
+				<license license-type="open-access" xlink:href="https://creativecommons.org/licenses/by/4.0/" xml:lang="en">
+					<license-p>This is an open-access article distributed under the terms of the Creative Commons Attribution License</license-p>
+				</license>
+			</permissions>
+			<related-article ext-link-type="doi" id="r01" related-article-type="corrected-article" xlink:href="10.1590/1809-4392201801252"/>
+			<counts>
+				<fig-count count="0"/>
+				<table-count count="0"/>
+				<equation-count count="0"/>
+				<ref-count count="0"/>
+				<page-count count="1"/>
+			</counts>
+		</article-meta>
+	</front>
+	<body>
+		<p>In the article <bold>Effect of <italic>Alpinia zerumbet</italic> essential oil on the shelf life of tambaqui fillets during short-term refrigerator storage</bold>, with DOI: 10.1590/1809-4392201801252, published in the journal <bold>Acta Amazonica</bold>, 49(2):81-165, on page 152:</p>
+		<p>Where it reads:</p>
+		<p>“Thais Danielly Santos ARAUJO”:</p>
+		<p>Ana Karolinne Anastacio de SOUSA<sup>1</sup>, Fabíola Helena dos Santos FOGAÇA<sup>2</sup>*, Thais Danielly Santos ARAUJO<sup>1</sup>, Karina Neoob de Carvalho CASTRO<sup>3</sup>, Alitiene Moura Lemos PEREIRA<sup>4</sup>, Kirley Marques CANUTO<sup>5</sup>, Edy Sousa de BRITO<sup>5</sup>, Mônica Giacometti MAI<sup>4</sup>, João Avelar de MAGALHÃES<sup>4</sup></p>
+		<p>Please read as:</p>
+		<p>“Thais Danyelle Santos ARAUJO”:</p>
+		<p>Ana Karolinne Anastacio de SOUSA<sup>1</sup>, Fabíola Helena dos Santos FOGAÇA<sup>2</sup>*, Thais Danyelle Santos ARAUJO<sup>1</sup>, Karina Neoob de Carvalho CASTRO<sup>3</sup>, Alitiene Moura Lemos PEREIRA<sup>4</sup>, Kirley Marques CANUTO<sup>5</sup>, Edy Sousa de BRITO<sup>5</sup>, Mônica Giacometti MAI<sup>4</sup>, João Avelar de MAGALHÃES<sup>4</sup></p>
+	</body>
+</article>

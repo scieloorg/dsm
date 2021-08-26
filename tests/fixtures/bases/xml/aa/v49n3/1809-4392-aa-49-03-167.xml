@@ -1,0 +1,1393 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE article
+  PUBLIC "-//NLM//DTD JATS (Z39.96) FriendlyISISJournal Publishing DTD v1.1 20151215//EN" "JATS-journalpublishing1.dtd">
+<article article-type="research-article" dtd-version="1.1" specific-use="sps-1.9" xml:lang="en" xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<front>
+		<journal-meta>
+			<journal-id journal-id-type="publisher-id">aa</journal-id>
+			<journal-title-group>
+				<journal-title>Acta Amazonica</journal-title>
+				<abbrev-journal-title abbrev-type="publisher">Acta Amaz.</abbrev-journal-title>
+			</journal-title-group>
+			<issn pub-type="ppub">0044-5967</issn>
+			<issn pub-type="epub">1809-4392</issn>
+			<publisher>
+				<publisher-name>Instituto Nacional de Pesquisas da Amazônia</publisher-name>
+			</publisher>
+		</journal-meta>
+		<article-meta>
+			<article-id pub-id-type="doi">10.1590/1809-4392201802992</article-id>
+			<article-categories>
+				<subj-group subj-group-type="heading">
+					<subject>Agronomy and Forestry</subject>
+				</subj-group>
+			</article-categories>
+			<title-group>
+				<article-title>Floral phenology, seed germination and hybrid plants of the Amerindian yam (<italic>Dioscorea trifida</italic>)</article-title>
+				<trans-title-group xml:lang="pt">
+					<trans-title>Fenologia floral, germinação de sementes e plantas híbridas de variedades locais de cará (<italic>Dioscorea trifida</italic>)</trans-title>
+				</trans-title-group>
+			</title-group>
+			<contrib-group>
+				<contrib contrib-type="author">
+					<name>
+						<surname>BEYERLEIN</surname>
+						<given-names>Patrick</given-names>
+					</name>
+					<xref ref-type="aff" rid="aff1">1</xref>
+				</contrib>
+				<contrib contrib-type="author">
+					<name>
+						<surname>MENDES</surname>
+						<given-names>Ângela M. S.</given-names>
+					</name>
+					<xref ref-type="aff" rid="aff1">1</xref>
+				</contrib>
+				<contrib contrib-type="author">
+					<contrib-id contrib-id-type="orcid">0000-0002-9113-1166</contrib-id>
+					<name>
+						<surname>PEREIRA</surname>
+						<given-names>Henrique S.</given-names>
+					</name>
+					<xref ref-type="corresp" rid="c1">*</xref>
+					<xref ref-type="aff" rid="aff1">1</xref>
+				</contrib>
+				<aff id="aff1">
+					<label>1</label>
+					<institution content-type="original">Universidade Federal do Amazonas - UFAM, Av. Gal. Rodrigo O. J. Ramos 6200, Coroado, 69080-900, Manaus, AM, Brazil</institution>
+					<institution content-type="normalized">Universidade Federal do Amazonas</institution>
+					<institution content-type="orgname">Universidade Federal do Amazonas</institution>
+					<addr-line>
+						<postal-code>69080-900</postal-code>
+						<city>Manaus</city>
+						<state>AM</state>
+					</addr-line>
+					<country country="BR">Brazil</country>
+				</aff>
+			</contrib-group>
+			<author-notes>
+				<corresp id="c1">*<sup>	</sup>Corresponding author: <email>hpereira@ufam.edu.br</email>
+				</corresp>
+				<fn fn-type="edited-by" id="fn1">
+					<label>ASSOCIATE EDITOR:</label>
+					<p> Wolfgang Stuppy</p>
+				</fn>
+			</author-notes>
+			<pub-date date-type="pub" publication-format="electronic">
+				<day>12</day>
+				<month>08</month>
+				<year>2019</year>
+			</pub-date>
+			<pub-date date-type="collection" publication-format="electronic">
+				<season>Jul-Sep</season>
+				<year>2019</year>
+			</pub-date>
+			<volume>49</volume>
+			<issue>3</issue>
+			<fpage>167</fpage>
+			<lpage>172</lpage>
+			<history>
+				<date date-type="received">
+					<day>22</day>
+					<month>08</month>
+					<year>2018</year>
+				</date>
+				<date date-type="accepted">
+					<day>20</day>
+					<month>05</month>
+					<year>2019</year>
+				</date>
+			</history>
+			<permissions>
+				<license license-type="open-access" xlink:href="https://creativecommons.org/licenses/by/4.0/" xml:lang="en">
+					<license-p>This is an open-access article distributed under the terms of the Creative Commons Attribution License</license-p>
+				</license>
+			</permissions>
+			<abstract>
+				<title>ABSTRACT</title>
+				<p>The Amerindian yam (<italic>Dioscorea trifida</italic>) is a food plant native to the Amazon region. Several local varieties are cultivated by traditional family farmers for consumption and local trade. However, socioeconomic processes may be causing species genetic erosion. Knowledge about species sexual reproduction is essential for its conservation and genetic improvement. The objective of this study was to observe the floral phenology, to assess the germination and dormancy of seeds, to conduct controlled pollinations and to select hybrid plants of <italic>D. trifida</italic> with agronomic potential. Seed dormancy was confirmed and was broken by after-ripening at 28 <sup>o</sup>C and 80% RH. We carried out controlled pollinations between local landraces and cultivated the resulting hybrid plants in the field. The new genotypes showed high phenotypic variability and tubers with new characteristics, which permitted the selection of genotypes with agronomic potential for further studies. The results contribute to the conservation of agrobiodiversity and genetic improvement for added value of Amazonian native food plants.</p>
+			</abstract>
+			<trans-abstract xml:lang="pt">
+				<title>RESUMO</title>
+				<p>O cará (<italic>Dioscorea trifida</italic>) é uma planta alimentícia nativa da Amazônia. Diversas variedades locais são cultivadas por agricultores familiares para consumo e comercialização local. Porém, processos socioeconômicos podem estar causando a erosão genética da espécie. O conhecimento sobre a reprodução sexuada da espécie é essencial para sua conservação e melhoramento genético. O estudo teve como objetivos observar a fenologia floral, estudar a germinação e a quebra de dormência de sementes, testar a viabilidade de polinizações controladas e selecionar plantas híbridas de <italic>D. trifida</italic> com potencial agronômico. A dormência de sementes e a quebra da dormência após o armazenamento à 28 <sup>o</sup>C e 80% UR foram comprovadas. As plantas híbridas obtidas a partir das polinizações controladas foram cultivadas em condições de campo. Os novos genótipos apresentaram alta variabilidade fenotípica e tubérculos com novas características, permitindo a seleção de genótipos com potencial agronômico para futuros estudos. Os resultados contribuem para a conservação da agrobiodiversidade e o melhoramento genético para agregar valor a plantas alimentícias nativas da Amazônia.</p>
+			</trans-abstract>
+			<kwd-group xml:lang="en">
+				<title>Keywords:</title>
+				<kwd>Amazonia</kwd>
+				<kwd>Dioscoreaceae</kwd>
+				<kwd>native food plant</kwd>
+				<kwd>controlled pollination</kwd>
+				<kwd>crossbreeding</kwd>
+			</kwd-group>
+			<kwd-group xml:lang="pt">
+				<title>Palavras-chave:</title>
+				<kwd>Amazônia</kwd>
+				<kwd>Dioscoreacaea</kwd>
+				<kwd>planta alimentícia nativa</kwd>
+				<kwd>polinização controlada</kwd>
+				<kwd>cruzamentos</kwd>
+			</kwd-group>
+			<counts>
+				<fig-count count="1"/>
+				<table-count count="5"/>
+				<equation-count count="0"/>
+				<ref-count count="24"/>
+				<page-count count="6"/>
+			</counts>
+		</article-meta>
+	</front>
+	<body>
+		<sec sec-type="intro">
+			<title>INTRODUCTION</title>
+			<p>Amerindian yam (<italic>Dioscorea trifida</italic> L.) is a native Amazonian food plant (<xref ref-type="bibr" rid="B8">Clement <italic>et al</italic>. 2010</xref>), locally known in Brazil as <italic>cará</italic>. It is an important local crop for food security (<xref ref-type="bibr" rid="B15">Nascimento <italic>et al.</italic> 2015</xref>) and with high agronomic potential (<xref ref-type="bibr" rid="B13">Mollica <italic>et al.</italic> 2013</xref>; <xref ref-type="bibr" rid="B17">Pérez <italic>et al</italic>. 2011</xref>). <italic>Dioscorea trifida</italic> is a herbaceous, climbing, perennial, dioecious and allogamous plant, with high intraspecific genetic diversity (<xref ref-type="bibr" rid="B14">Nascimento <italic>et al</italic>. 2013</xref>). There is evidence that its center of origin is the Amazon, where it shows autotetraploidy in the cultivated form, and tri- or diploidy in the wild form (<xref ref-type="bibr" rid="B6">Bousalem <italic>et al</italic>. 2010</xref>). The species has high nutritional value and medicinal properties (<xref ref-type="bibr" rid="B18">Ramos-Escudero <italic>et al</italic>. 2010</xref>; <xref ref-type="bibr" rid="B22">Teixeira <italic>et al</italic>. 2013</xref>). </p>
+			<p>Despite their local relevance, yams are neglected and underutilized crops in Brazil (<xref ref-type="bibr" rid="B21">Siqueira <italic>et al</italic>. 2011</xref>). In the Brazilian state of Amazonas, traditional family farmers maintain numerous landraces of <italic>D. trifida</italic> for local consumption and also for selling at local markets. Germplasm materials are selected and then produced exclusively by vegetative propagation, which may have favorable fixation of certain agronomic characteristics and high capacity to tolerate biotic and abiotic stress. Yam growers may occasionally select hybrid plants that originated spontaneously from intervarietal crossbreeds from the seed bank in old swidden plots. Once chosen, the new phenotype is fixed through vegetative cloning, which is a common breeding method not only in yams, but also of other species of traditional fallow agriculture in the Amazon region, such as cassava (<italic>Manihot esculenta</italic>) (<xref ref-type="bibr" rid="B12">Martins 2005</xref>).</p>
+			<p>
+				<xref ref-type="bibr" rid="B7">Castro <italic>et al</italic>. (2012</xref>) identified ten local landraces of <italic>D. trifida</italic> in its main cultivation region in the municipality of Caapiranga, in the Brazilian state of Amazonas, and that at least four landraces were no longer cultivated, and only known from the reports of local farmers. The cultivation of this species has been progressively abandoned or concentrated on only a few landraces, leading to genetic erosion and the loss of species diversity and increased extinction risk of landraces. </p>
+			<p>A germplasm collection was established in Amazonas and a study on <italic>in situ</italic> genetic resource management showed that local farmers cultivate their Amerindian yam plantations asexually by cloning (<xref ref-type="bibr" rid="B4">Beyerlein 2017</xref>). Knowledge about sexual reproduction is essential for agrobiodiversity conservation and genetic improvement. Therefore, our objectives were to study the floral phenology, and the germination and dormancy breaking of seeds of <italic>D. trifida,</italic> to conduct controlled pollinations and to select hybrid plants with agronomic potential. </p>
+		</sec>
+		<sec sec-type="materials|methods">
+			<title>MATERIAL AND METHODS</title>
+			<sec>
+				<title>Germination and dormancy-breaking</title>
+				<p>Seeds were collected from 20 female <italic>D. trifida</italic> plants of five landraces of the germplasm collection at the experimental farm of the Federal University of Amazonas (UFAM) located at km 38 of the BR-174 highway (2º38’20’S’, 60º40W) in the state of Amazonas, northern Brazil. The collection contains 153 accesses obtained in five municipalities of Amazonas state (Caapiranga, Manacapuru, Manaus, Humaitá and Boa Vista do Ramos) (<xref ref-type="bibr" rid="B5">Beyerlein and Pereira 2018</xref>). The seeds were stored in paper bags in a laboratory environment at 28 ± 3 <sup>o</sup>C air temperature and approximately 80% relative air humidity. The germination occurred in 20 x 15 x 5-cm white plastic trays filled with sterilized substrate of thin vermiculite (65 − 95% &gt; 1.2 mm) in a germination chamber at 30 ± 3 <sup>o</sup>C air temperature and 90 − 95% relative air humidity. </p>
+				<p>Seed germination was evaluated as a function of storage time, as determined by the germination percentage, mean germination time and germination speed index, according to <xref ref-type="bibr" rid="B20">Santana and Ranal (2004</xref>). The germination percentage (G) was calculated as <inline-formula>
+						<mml:math id="e01">
+							<mml:mrow>
+								<mml:mi>G</mml:mi>
+								<mml:mo>=</mml:mo>
+								<mml:mfenced close=")" open="(">
+									<mml:mrow>
+										<mml:mi>N</mml:mi>
+										<mml:mn>100</mml:mn>
+										<mml:mo>/</mml:mo>
+									</mml:mrow>
+								</mml:mfenced>
+								<mml:mo lspace="2px" rspace="2px">×</mml:mo>
+								<mml:mn>100</mml:mn>
+							</mml:mrow>
+						</mml:math>
+					</inline-formula>, where: N = number of seeds germinated. The mean germination time (MGT) was obtained by daily counting of the germinated seeds and calculated as <inline-formula>
+						<mml:math id="e02">
+							<mml:mrow>
+								<mml:mtext>MGT</mml:mtext>
+								<mml:mo>=</mml:mo>
+								<mml:mrow>
+									<mml:mrow>
+										<mml:mo>∑</mml:mo>
+										<mml:mrow>
+											<mml:mfenced close=")" open="(">
+												<mml:mrow>
+													<mml:msub>
+														<mml:mi>n</mml:mi>
+														<mml:mi>i</mml:mi>
+													</mml:msub>
+													<mml:msub>
+														<mml:mi>t</mml:mi>
+														<mml:mi>i</mml:mi>
+													</mml:msub>
+												</mml:mrow>
+											</mml:mfenced>
+										</mml:mrow>
+									</mml:mrow>
+									<mml:mrow>
+										<mml:mo>∑</mml:mo>
+										<mml:mrow>
+											<mml:msub>
+												<mml:mi>n</mml:mi>
+												<mml:mi>i</mml:mi>
+											</mml:msub>
+										</mml:mrow>
+									</mml:mrow>
+									<mml:mo>/</mml:mo>
+								</mml:mrow>
+							</mml:mrow>
+						</mml:math>
+					</inline-formula>, where: n<sub>i</sub> = number of germinated seeds in the interval between each count; t<sub>i</sub> = time between the beginning of the germination and the i-th count. The germination velocity index (GVI) was considered as the sum of the number of germinated seeds per day, divided by the number of days between sowing and germination, and was calculated as <inline-formula>
+						<mml:math id="e03">
+							<mml:mrow>
+								<mml:mtext>GVI</mml:mtext>
+								<mml:mo>=</mml:mo>
+								<mml:mfenced close=")" open="(">
+									<mml:mrow>
+										<mml:mtext>G1</mml:mtext>
+										<mml:mtext>N1</mml:mtext>
+										<mml:mo>/</mml:mo>
+									</mml:mrow>
+								</mml:mfenced>
+								<mml:mo lspace="2px" rspace="2px">+</mml:mo>
+								<mml:mfenced close=")" open="(">
+									<mml:mrow>
+										<mml:mtext>G2</mml:mtext>
+										<mml:mtext>N2</mml:mtext>
+										<mml:mo>/</mml:mo>
+									</mml:mrow>
+								</mml:mfenced>
+								<mml:mo lspace="2px" rspace="2px">+</mml:mo>
+								<mml:mfenced close=")" open="(">
+									<mml:mrow>
+										<mml:mtext>G3</mml:mtext>
+										<mml:mtext>N3</mml:mtext>
+										<mml:mo>/</mml:mo>
+									</mml:mrow>
+								</mml:mfenced>
+								<mml:mo lspace="2px" rspace="2px">+</mml:mo>
+								<mml:mtext>...</mml:mtext>
+								<mml:mo lspace="2px" rspace="2px">+</mml:mo>
+								<mml:mfenced close=")" open="(">
+									<mml:mrow>
+										<mml:mtext>Gn</mml:mtext>
+										<mml:mtext>Nn</mml:mtext>
+										<mml:mo>/</mml:mo>
+									</mml:mrow>
+								</mml:mfenced>
+							</mml:mrow>
+						</mml:math>
+					</inline-formula>, where: G1, G2, G3, ..., Gn = number of seedlings in the first, second, third and last count; N1, N2, N3, ..., Nn = number of days of sowing to the first, second, third and last count.</p>
+				<p>A completely randomized design was used with nine treatments: recently collected seeds (0 - 4 days), and seeds stored for 15, 40, 72, 96, 120, 144, 184 and 224 days after collection. Each treatment consisted of four replicates of groups of 20 seeds, composed of equal proportions of each mother plant and landrace from the germplasm collection. Germination percentage, mean germination time and the germination speed index were compared among treatments using analysis of variance (ANOVA) followed by the Tukey test (p &lt; 0.05).</p>
+			</sec>
+			<sec>
+				<title>Floral phenology</title>
+				<p>The floral development of <italic>D. trifida</italic> plants cultivated in the germplasm collection was evaluated every two weeks during the flowering period. The fertilization rate of inflorescences with open pollination was estimated by randomly evaluating five inflorescences per plant of ten female plants, marking inflorescences with ribbons and calculating the fertilization rate based on the number of flowers and the number of fruits developed. Based on these estimations, six feminine and three masculine plants were selected to perform controlled pollinations between landraces with different tuber pulp color for the production of hybrid seeds (<xref ref-type="table" rid="t1">Table 1</xref>). </p>
+				<p>
+					<table-wrap id="t1">
+						<label>Table 1</label>
+						<caption>
+							<title>Main morphological traits of female and male parental landraces of Amerindian yam, <italic>Dioscorea trifida</italic> used for breedings.</title>
+						</caption>
+						<table>
+							<colgroup>
+								<col/>
+								<col/>
+								<col/>
+								<col/>
+								<col/>
+							</colgroup>
+							<thead>
+								<tr>
+									<th align="left">Landrace name</th>
+									<th align="center">Code</th>
+									<th align="center">Sex</th>
+									<th align="center">Pulp color</th>
+									<th align="center">Tuber shape</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td align="left">Branco redondo</td>
+									<td align="center">Brd</td>
+									<td align="center">Female</td>
+									<td align="center">White solid</td>
+									<td align="center">Round</td>
+								</tr>
+								<tr>
+									<td align="left">Branco comprido I</td>
+									<td align="center">BcpI</td>
+									<td align="center">Female</td>
+									<td align="center">White solid</td>
+									<td align="center">Elongated</td>
+								</tr>
+								<tr>
+									<td align="left">Ovo de cavalo</td>
+									<td align="center">OC</td>
+									<td align="center">Female</td>
+									<td align="center">White solid</td>
+									<td align="center">Oval</td>
+								</tr>
+								<tr>
+									<td align="left">Pé de elefante</td>
+									<td align="center">PE</td>
+									<td align="center">Female</td>
+									<td align="center">White solid</td>
+									<td align="center">Paw-like</td>
+								</tr>
+								<tr>
+									<td align="left">Branco casquinha roxa</td>
+									<td align="center">Bcx</td>
+									<td align="center">Female</td>
+									<td align="center">White matrix with purple near skin</td>
+									<td align="center">Oblong</td>
+								</tr>
+								<tr>
+									<td align="left">Açai comprido</td>
+									<td align="center">AÇcp</td>
+									<td align="center">Male</td>
+									<td align="center">Mixed purple matrix</td>
+									<td align="center">Elongated</td>
+								</tr>
+								<tr>
+									<td align="left">Roxo comum</td>
+									<td align="center">Rx</td>
+									<td align="center">Male</td>
+									<td align="center">Purple solid</td>
+									<td align="center">Round</td>
+								</tr>
+								<tr>
+									<td align="left">Branco comprido II</td>
+									<td align="center">BcpII</td>
+									<td align="center">Male</td>
+									<td align="center">White solid</td>
+									<td align="center">Elongated</td>
+								</tr>
+							</tbody>
+						</table>
+					</table-wrap>
+				</p>
+			</sec>
+			<sec>
+				<title>Controlled pollinations and selection of hybrid plants</title>
+				<p>When the first inflorescences appeared, they were covered with bags made of white tulle fabric. Female inflorescences were isolated to prevent pollen entry and flower pollination, and male inflorescences were isolated to avoid mixing with pollen from other plants. When synchrony occurred between the anthesis of female and male plants, male inflorescences were cut and taken to the female plants to perform pollination, touching the anthers with the stigmas. </p>
+				<p>After the pollination, the bags were closed again until the collection of the seeds. The efficiency of the isolation method was controled by confirming the inhibition of fruit formation in five bag-isolated inflorescences that were not pollinated. Mature fruits, as indicated by their brown color and open capsules, were collected. The seeds were stored in paper bags in a refrigerator at 4 °C for 15 days. The seeds were sown in 20 x 15 x 5-cm white plastic trays filled with sterilized substrate of thin vermiculite (65 − 95% &gt; 1.2 mm) and placed in the germinating chamber at 30 ± 3 <sup>o</sup>C air temperature and 90 − 95% relative air humidity. </p>
+				<p>Five days after germination, the seedlings were transplanted into individual planting tubes and placed in a plant nursery covered with shade net with 50% shading. After two months the plants were transplanted into pits at a spacing of 1 x 1 m in an experimental farm field. The soil type of the planting area was classified as a high-clay dystrophic yellow latosol. Soil correction and fertilization was carried out with 480 g m<sup>-2</sup> dolomite lime (25 − 30% CaO and 15 − 20% MgO) and 3 kg m<sup>-2</sup> dry and homogenized chicken manure. The surface soil of an area of 1 m<sup>2</sup> and 20 cm depth was mixed with the fertilizer and used to form the planting pit. The young plants were irrigated daily during the working days, from July untill August, i.e., during the dry season of 2015, which was particularly severe that year. </p>
+				<p>During the first month in the field, a formicide was applied to control an attack of leaf cutting ants of the genus <italic>Atta</italic>. The vegetation between the plants was cut every two months with a motorized brush cutter. The climbing support for each plant was made with three wooden sticks of 220 cm length. The aim of this system was to avoid contact between plants to facilitate the phenological observations of individual plants.</p>
+				<p>The development of the seedlings was evaluated for nine months by recording 13 morphological descriptors for tubers, 12 for stems and 14 for leaves, as suggested in <xref ref-type="bibr" rid="B5">Beyerlein and Pereira (2018</xref>). Sexual expression and seed production of the hybrids were also recorded. Hybrid plants that presented higher agronomic potential were incorporated into UFAM´s collection.</p>
+			</sec>
+		</sec>
+		<sec sec-type="results">
+			<title>RESULTS</title>
+			<sec>
+				<title>Germination and dormancy-break</title>
+				<p>The recently collected seeds presented a significantly lower germination percentage than seeds stored for 15 days or longer, while there was no significant difference among storage times (<xref ref-type="table" rid="t2">Table 2</xref>). Therefore, a minimum of 15 days of storage time should be sufficient to maximize the percentage of germination. Mean germination time decreased significantly with storage time (<xref ref-type="table" rid="t3">Table 3</xref>), while the germination velocity index increased significantly with storage time (<xref ref-type="table" rid="t4">Table 4</xref>). </p>
+				<p>
+					<table-wrap id="t2">
+						<label>Table 2</label>
+						<caption>
+							<title>Germination percentage of Amerindian yam, <italic>Dioscorea trifida</italic> seeds as a function of storage time. Values are the mean <italic>±</italic> SD, followed by the range. Different upper-case letters indicate statistical differences among treatments according to a Tukey test.</title>
+						</caption>
+						<table>
+							<colgroup>
+								<col/>
+								<col/>
+								<col/>
+							</colgroup>
+							<thead>
+								<tr>
+									<th align="left">Storage time (days)</th>
+									<th align="center">Germination (%)</th>
+									<th align="center">Coefficient of variation</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td align="left">0 - 4</td>
+									<td align="center">45.0 ± 11.90 (30 - 80)<sup>a</sup></td>
+									<td align="center">52.90</td>
+								</tr>
+								<tr>
+									<td align="left">15 </td>
+									<td align="center">87.5 ± 2.50 (80 - 90)<sup>b</sup></td>
+									<td align="center">5.71</td>
+								</tr>
+								<tr>
+									<td align="left">40 </td>
+									<td align="center">90.0 ± 5.77 (80 - 100)<sup>b</sup></td>
+									<td align="center">12.83</td>
+								</tr>
+								<tr>
+									<td align="left">72 </td>
+									<td align="center">92.5 ± 7.50 (70 - 100)<sup>b</sup></td>
+									<td align="center">16.22</td>
+								</tr>
+								<tr>
+									<td align="left">96 </td>
+									<td align="center">87.5 ± 4.79 (80 - 100)<sup>b</sup></td>
+									<td align="center">10.94</td>
+								</tr>
+								<tr>
+									<td align="left">120 </td>
+									<td align="center">90.0 ± 4.08 (80 - 100)<sup>b</sup></td>
+									<td align="center">9.07</td>
+								</tr>
+								<tr>
+									<td align="left">144 </td>
+									<td align="center">90.0 ± 4.08 (80 - 100)<sup>b</sup></td>
+									<td align="center">9.07</td>
+								</tr>
+								<tr>
+									<td align="left">184 </td>
+									<td align="center">92.5 ± 4.79 (80 - 100)<sup>b</sup></td>
+									<td align="center">10.35</td>
+								</tr>
+								<tr>
+									<td align="left">224 </td>
+									<td align="center">87.5 ± 4.79 (80 - 100)<sup>b</sup></td>
+									<td align="center">10.94</td>
+								</tr>
+							</tbody>
+						</table>
+					</table-wrap>
+				</p>
+				<p>
+					<table-wrap id="t3">
+						<label>Table 3</label>
+						<caption>
+							<title>Germination time of Amerindian yam, <italic>Dioscorea trifida</italic> seeds as a function of storage time. Values are the mean <italic>±</italic> SD, followed by the range. Different upper-case letters indicate statistical differences among treatments according to a Tukey test.</title>
+						</caption>
+						<table>
+							<colgroup>
+								<col/>
+								<col/>
+								<col/>
+							</colgroup>
+							<thead>
+								<tr>
+									<th align="left">Storage time (days)</th>
+									<th align="center">Germination time (days)</th>
+									<th align="center">Coefficient of variation </th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td align="left">0 - 4</td>
+									<td align="center">58.90 ± 4.90 (49.0 - 71.3)<sup>a</sup></td>
+									<td align="center">16.63</td>
+								</tr>
+								<tr>
+									<td align="left">15 </td>
+									<td align="center">53.78 ± 2.38 (46.8 - 57.5)<sup>a</sup></td>
+									<td align="center">8.85</td>
+								</tr>
+								<tr>
+									<td align="left">40 </td>
+									<td align="center">38.70 ± 3.94 (34.1 - 50.5)<sup>b</sup></td>
+									<td align="center">20.38</td>
+								</tr>
+								<tr>
+									<td align="left">72 </td>
+									<td align="center">28.98 ± 1.38 (24.9 - 30.9)<sup>bc</sup></td>
+									<td align="center">9.53</td>
+								</tr>
+								<tr>
+									<td align="left">96 </td>
+									<td align="center">28.55 ± 1.03 (25.7 - 30.6)<sup>bc</sup></td>
+									<td align="center">7.20</td>
+								</tr>
+								<tr>
+									<td align="left">120 </td>
+									<td align="center">33.00 ± 2.97 (28.4 - 41.1)<sup>bc</sup></td>
+									<td align="center">18.00</td>
+								</tr>
+								<tr>
+									<td align="left">144 </td>
+									<td align="center">27.70 ± 1.34 (24.9 - 31.1)<sup>bc</sup></td>
+									<td align="center">9.68</td>
+								</tr>
+								<tr>
+									<td align="left">184 </td>
+									<td align="center">25.83 ± 0.81 (24.1 - 28.0)<sup>c</sup></td>
+									<td align="center">6.28</td>
+								</tr>
+								<tr>
+									<td align="left">224 </td>
+									<td align="center">21.13 ± 0.55 (20.3 - 22.7)<sup>c</sup></td>
+									<td align="center">5.25</td>
+								</tr>
+							</tbody>
+						</table>
+					</table-wrap>
+				</p>
+				<p>
+					<table-wrap id="t4">
+						<label>Table 4</label>
+						<caption>
+							<title>Germination velocity index of Amerindian yam, <italic>Dioscorea trifida</italic> seeds as a function of storage time. Values are the mean <italic>±</italic> SD, followed by the range. Different upper-case letters indicate statistical differences among treatments according to a Tukey test.</title>
+						</caption>
+						<table>
+							<colgroup>
+								<col/>
+								<col/>
+								<col/>
+							</colgroup>
+							<thead>
+								<tr>
+									<th align="left">Storage time (days)</th>
+									<th align="center">Germination velocity index </th>
+									<th align="center">Coefficient of variation</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td align="left">0 - 4</td>
+									<td align="center">0.08 ± 0.02 (0.05 - 0.14)a</td>
+									<td align="center">52.99</td>
+								</tr>
+								<tr>
+									<td align="left">15 </td>
+									<td align="center">0.17 ± 0.01 (0.14 - 0.20)ab</td>
+									<td align="center">12.54</td>
+								</tr>
+								<tr>
+									<td align="left">40 </td>
+									<td align="center">0.25 ± 0.03 (0.17 - 0.31)bc</td>
+									<td align="center">24.23</td>
+								</tr>
+								<tr>
+									<td align="left">72 </td>
+									<td align="center">0.30 ± 0.01 (0.29 - 0.35)bcd</td>
+									<td align="center">8.03</td>
+								</tr>
+								<tr>
+									<td align="left">96 </td>
+									<td align="center">0.32 ± 0.02 (0.28 - 0.36)c</td>
+									<td align="center">13.69</td>
+								</tr>
+								<tr>
+									<td align="left">120 </td>
+									<td align="center">0.29 ± 0.03 (0.23 - 0.36)cd</td>
+									<td align="center">20.85</td>
+								</tr>
+								<tr>
+									<td align="left">144 </td>
+									<td align="center">0.34 ± 0.01 (0.32 - 0.38)d</td>
+									<td align="center">8.74</td>
+								</tr>
+								<tr>
+									<td align="left">184 </td>
+									<td align="center">0.37 ± 0.02 (0.33 - 0.41)e</td>
+									<td align="center">9.86</td>
+								</tr>
+								<tr>
+									<td align="left">224 </td>
+									<td align="center">0.43 ± 0.02 (0.40 - 0.46)e</td>
+									<td align="center">7.84</td>
+								</tr>
+							</tbody>
+						</table>
+					</table-wrap>
+				</p>
+			</sec>
+			<sec>
+				<title>Floral phenology</title>
+				<p>The phenophases were determined mainly by the rainfall. The tuber sprouting started in the rainy season in December 2013 within a period of 30 to 48 days, except for one landrace that took three to four weeks more to start sprouting. Most landraces started inflorescence development in the next year, in April, six months after tuber planting, and finished flowering in July. One landrace began to flower in early March, one month before the others, and another landrace did not develop inflorescences. The drying of the leaves and branches occurred with the beginning of the dry season, in August 2014, and seed and tuber ripening occurred from August to September.</p>
+				<p>The natural pollination of <italic>D. trifida</italic> is xenogamic. The flowers smell well and we regularly observed micro-bees landing and flying from flower to flower. A possible pollinator visiting frequently the flowers was photographed and identified as a micro-bee of the genus <italic>Melipona</italic>, possibly <italic>M. varia.</italic> Furthermore<italic>,</italic> ants were frequently observed on inflorescences, moving between flowers. Possible insect pollinators were observed by <xref ref-type="bibr" rid="B10">Henry (1967</xref>)<italic>,</italic> who recorded visiting insects on the flowers of <italic>D</italic>. <italic>trifida</italic> that belonged to Formicidea, Vespidae, Chalcididae, Curculionidae, Lamprydae, Chrysomelidae, Muscidae and Tachinidae. </p>
+				<p>The average fertilization rate of the plants evaluated with open pollination varied from 25 to 90.8% with an overall average of 61.7%. The average number of seeds per fruit varied from 2.9 to 5.7 with an overall average of 4.8, showing high production capacity of seeds.</p>
+			</sec>
+			<sec>
+				<title>Controlled pollinations and selection of hybrid plants</title>
+				<p>Controlled pollination was easily conducted. The isolated male flowers opened in the morning and began to dispose the pollen about half an hour later. The floral anthesis occurred irregularly over a period of two to seven days. The female flowers remained open and presumably susceptible to pollination for several days. The fruits matured at the beginning of the dry season, three to four months after pollination.</p>
+				<p>From a total of 159 seeds, originated from seven crosses, 124 germinated, resulting in an overall germination rate of 78%. Of the 124 seedlings, 108 plants survived in the greenhouse and were transplanted. Plants suffered water stress due to a lack of irrigation on weekends and, probably due to this, only 55 plants from seven crosses survived. The hybrid plants of crosses 1, 2, 3 and 4 (<xref ref-type="table" rid="t5">Table 5</xref>) had a 1:1 female to male ratio and a flowering percentage of 70%. Crosses 5, 6 and 7 produced only plants with female flowers.</p>
+				<p>
+					<table-wrap id="t5">
+						<label>Table 5</label>
+						<caption>
+							<title>Main morphological traits of hybrid plants of <italic>Dioscorea trifida</italic> from controlled pollination. F1 = number of surviving F1 plants.</title>
+						</caption>
+						<table>
+							<colgroup>
+								<col/>
+								<col/>
+								<col/>
+								<col/>
+								<col span="3"/>
+								<col/>
+								<col span="3"/>
+							</colgroup>
+							<thead>
+								<tr>
+									<th align="left" rowspan="2">Cross</th>
+									<th align="center" rowspan="2">Female</th>
+									<th align="center" rowspan="2">Male</th>
+									<th align="center" rowspan="2">F1</th>
+									<th align="center" colspan="3">Tuber shape</th>
+									<th align="left">
+									</th>
+									<th align="center" colspan="3">Pulp color</th>
+								</tr>
+								<tr>
+									<th align="center">Oval</th>
+									<th align="center">Elongated</th>
+									<th align="center">Paw-like</th>
+									<th align="left">
+									</th>
+									<th align="center">Solid white</th>
+									<th align="center">Solid purple</th>
+									<th align="center">Mixed or segmented</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td align="left">1</td>
+									<td align="center">Brd</td>
+									<td align="center">AÇcp</td>
+									<td align="center">20</td>
+									<td align="center">+</td>
+									<td align="left">
+									</td>
+									<td align="center">+</td>
+									<td align="left">
+									</td>
+									<td align="left">
+									</td>
+									<td align="left">
+									</td>
+									<td align="center">+</td>
+								</tr>
+								<tr>
+									<td align="left">2</td>
+									<td align="center">BcpI</td>
+									<td align="center">AÇcp</td>
+									<td align="center">12</td>
+									<td align="center">+</td>
+									<td align="center">+</td>
+									<td align="center">+</td>
+									<td align="left">
+									</td>
+									<td align="left">
+									</td>
+									<td align="left">
+									</td>
+									<td align="center">+</td>
+								</tr>
+								<tr>
+									<td align="left">3</td>
+									<td align="center">OC</td>
+									<td align="center">AÇcp</td>
+									<td align="center">8</td>
+									<td align="center">+</td>
+									<td align="left">
+									</td>
+									<td align="left">
+									</td>
+									<td align="left">
+									</td>
+									<td align="left">
+									</td>
+									<td align="left">
+									</td>
+									<td align="center">+</td>
+								</tr>
+								<tr>
+									<td align="left">4</td>
+									<td align="center">Brd</td>
+									<td align="center">Rx</td>
+									<td align="center">7</td>
+									<td align="center">+</td>
+									<td align="center">+</td>
+									<td align="left">
+									</td>
+									<td align="left">
+									</td>
+									<td align="center">+</td>
+									<td align="center">+</td>
+									<td align="center">+</td>
+								</tr>
+								<tr>
+									<td align="left">5</td>
+									<td align="center">Bcx</td>
+									<td align="center">AÇcp</td>
+									<td align="center">1</td>
+									<td align="left">
+									</td>
+									<td align="left">
+									</td>
+									<td align="left">
+									</td>
+									<td align="left">
+									</td>
+									<td align="left">
+									</td>
+									<td align="left">
+									</td>
+									<td align="center">+</td>
+								</tr>
+								<tr>
+									<td align="left">6</td>
+									<td align="center">PE</td>
+									<td align="center">AÇcp</td>
+									<td align="center">6</td>
+									<td align="left">
+									</td>
+									<td align="center">+</td>
+									<td align="center">+</td>
+									<td align="left">
+									</td>
+									<td align="left">
+									</td>
+									<td align="left">
+									</td>
+									<td align="center">+</td>
+								</tr>
+								<tr>
+									<td align="left">7</td>
+									<td align="center">Bcx</td>
+									<td align="center">BcpII</td>
+									<td align="center">1</td>
+									<td align="left">
+									</td>
+									<td align="left">
+									</td>
+									<td align="center">+</td>
+									<td align="left">
+									</td>
+									<td align="center">+</td>
+									<td align="left">
+									</td>
+									<td align="left">
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</table-wrap>
+				</p>
+				<p>Hybrid plants had variable flowering and fruiting rates, seed production, leaf shapes, and, particularly, tuber shape and pulp color in all seven crosses (<xref ref-type="fig" rid="f1">Figure 1</xref>, <xref ref-type="table" rid="t5">Table 5</xref>). We did not observe the occurrence of diseases or pests in any of the F1 hybrids. Only in the 7<sup>th</sup> cross both parents were white pulp landraces, and the only surviving plant also shown solid white pulp color (<xref ref-type="table" rid="t5">Table 5</xref>, <xref ref-type="fig" rid="f1">Figure 1</xref>b). No F1 plant presented tubers with round shape and only a few had tubers with regular shape, i.e., more uniform in size and without ramifications (<xref ref-type="table" rid="t5">Table 5</xref>).</p>
+				<p>
+					<fig id="f1">
+						<label>Figure 1</label>
+						<caption>
+							<title>Whole and sectioned tubers of hybrid Amerindian yam, <italic>Dioscorea trifida.</italic> A - Cross 2 (female of <italic>branco comprido</italic> landrace, with white pulp x male of <italic>açaí comprido</italic> landrace, with mixed purple pulp); B - Cross 7 (female of <italic>branco casquinha roxa</italic> landrace, with white pulp x male of <italic>branco comprido</italic> landrace, also with white pulp). This figure is in color in the electronic version.</title>
+						</caption>
+						<graphic xlink:href="1809-4392-aa-49-03-167-gf1.jpg"/>
+					</fig>
+				</p>
+			</sec>
+		</sec>
+		<sec sec-type="discussion">
+			<title>DISCUSSION</title>
+			<p>The fruit yield obtained for <italic>D. trifida</italic> in this study was only slightly lower than that obtained for <italic>Dioscorea alata</italic> L. (<xref ref-type="bibr" rid="B2">Abraham <italic>et al</italic>. 1986</xref>), and substantially higher than that obtained for white yam, <italic>Dioscorea rotundata</italic> Poir. (<xref ref-type="bibr" rid="B1">Akoroda 1985</xref>). The high germination vigor of <italic>D. trifida</italic> seeds after a relatively short storage time, as well as the decrease of germination time with seed storage time, indicate the occurrence of post-harvest seed ripening, which contributed significantly to a faster germination. The results support the occurrence of seed dormancy and the breaking of dormancy through after-ripening storage in <italic>D. trifida</italic>. </p>
+			<p>Seed dormancy was defined by <xref ref-type="bibr" rid="B9">Finch-Savage and Leubner-Metzger (2006</xref>) as “a block to the completion of germination of an intact viable seed under favourable conditions”. Through this adaptation, germination is programmed to avoid unfavorable climatic conditions for subsequent plant establishment and reproductive growth (<xref ref-type="bibr" rid="B16">Penfield 2017</xref>). <italic>Dioscorea trifida</italic> seed dormancy was broken faster than in other species of <italic>Dioscorea</italic>, such as <italic>D. rotundata</italic>, which has a dormancy period of three to four months after harvest and a relatively low germination rate due to embryo or endosperm development issues (<xref ref-type="bibr" rid="B19">Sadik 1976</xref>). An even longer dormancy time was observed for <italic>D. composita</italic> Hemsl., which broke dormancy only after storage for nine months (<xref ref-type="bibr" rid="B23">Viana and Felippe 1990</xref>). These results suggest that <italic>D. trifida</italic> presents a physiological dormancy, as do other <italic>Dioscorea</italic> species, such as the medicinal <italic>D. villosa</italic> L. (<xref ref-type="bibr" rid="B11">Langhu and Deb 2014</xref>). Physiological dormancy is caused by hormones that prevent germination in the absence of specific environmental conditions, as opposed to morphological dormancy in which the embryo remains underdeveloped at maturity (Penfield 2017). Viability of seedborn plants may explain how local variability of <italic>D. trifida</italic> has been accidentally amplified by traditional farmers. </p>
+			<p>The 55 hybrid plants of seven crosses that survived the greenhouse phase had eight of the 12 originally tested landraces as parent plants. Thus the hybrid plants were half-sibling groups, as they shared the same maternal or paternal parent. <xref ref-type="bibr" rid="B10">Henry (1967</xref>) also observed a sex ratio of 1:1 in populations of <italic>D. trifida</italic> plants with a flowering ratio over 60%. The latter author observed some hermaphrodite plants, which could not be observed in the plants in our study. </p>
+			<p>With the exception of the plant from the 7<sup>th</sup> cross, all remaining hybrids had parents with different pulp color matrices, i.e., a predominantly white female parent and a predominantly purple male parent. This may explain the new segmented pulp color patterns presented by most hybrid plants (<xref ref-type="fig" rid="f1">Figure 1</xref>a). The 4<sup>th</sup> cross was the only one that produced both solid white and purple F1 plants and this may result from the fact that both parents had pulps with solid colors, which is the pulp-color characteristic preferred by both farmers and consumers. </p>
+		</sec>
+		<sec sec-type="conclusions">
+			<title>CONCLUSIONS</title>
+			<p>Amerindian yam, <italic>Dioscorea trifida</italic> seed dormancy is broken in response to an after-ripening dry storage period as short as 15 days. Our results on flowering, controlled pollination, seed production and germination indicate that the species has the capacity to produce a large quantity of viable seeds, providing opportunities for selective breeding programs through sexual reproduction and also for breeding methods. Among our crosses between five female and three male landraces, one between a white-solid pulp-color female and a purple-solid pulp-color male produced the most promising F1 plants, with solid-color and uniform tubers, which are characteristics preferred by farmers and consumers.</p>
+		</sec>
+	</body>
+	<back>
+		<ack>
+			<title>ACKNOWLEDGMENTS</title>
+			<p>We are grateful to the Amazonian farmers who cultivate the Amerindian yam and maintain its agrobiodiversity, and for their collaboration in this research. We are also grateful to the staff of the experimental farm of Universidade Federal do Amazonas (UFAM) for their support. Special thanks to Fundação de Amparo à Pesquisa do Estado do Amazonas (FAPEAM) for the doctoral scholarship to the first author.</p>
+		</ack>
+		<ref-list>
+			<title/>
+			<ref id="B1">
+				<mixed-citation>Akoroda, M.O. 1985. Pollination management for controlled hybridization of white yam. <italic>Scientia Horticulturae</italic>, 25: 201-209.</mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Akoroda</surname>
+							<given-names>M.O.</given-names>
+						</name>
+					</person-group>
+					<year>1985</year>
+					<article-title>Pollination management for controlled hybridization of white yam</article-title>
+					<source>Scientia Horticulturae</source>
+					<volume>25</volume>
+					<fpage>201</fpage>
+					<lpage>209</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B2">
+				<mixed-citation>Abraham, K.; Nair, S.C.; Sreekumari, M.T.; Unnikrishnan, M. 1986. Weed set and seedling variation in greater yam (<italic>Dioscorea alata</italic> L.). <italic>Euphytica</italic>, 35: 337-343.</mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Abraham</surname>
+							<given-names>K.</given-names>
+						</name>
+						<name>
+							<surname>Nair</surname>
+							<given-names>S.C.</given-names>
+						</name>
+						<name>
+							<surname>Sreekumari</surname>
+							<given-names>M.T.</given-names>
+						</name>
+						<name>
+							<surname>Unnikrishnan</surname>
+							<given-names>M.</given-names>
+						</name>
+					</person-group>
+					<year>1986</year>
+					<article-title>Weed set and seedling variation in greater yam (Dioscorea alata L.)</article-title>
+					<source>Euphytica</source>
+					<volume>35</volume>
+					<fpage>337</fpage>
+					<lpage>343</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B3">
+				<mixed-citation>Bernard, H.R. 2006. <italic>Research methods in anthropology: qualitative and quantitative approaches</italic>. 4th ed. Altamira Press, Lanham, 192p.</mixed-citation>
+				<element-citation publication-type="book">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Bernard</surname>
+							<given-names>H.R.</given-names>
+						</name>
+					</person-group>
+					<year>2006</year>
+					<source>Research methods in anthropology: qualitative and quantitative approaches</source>
+					<edition>4th ed</edition>
+					<publisher-name>Altamira Press</publisher-name>
+					<publisher-loc>Lanham</publisher-loc>
+					<size units="pages">192</size>
+				</element-citation>
+			</ref>
+			<ref id="B4">
+				<mixed-citation>Beyerlein, P. 2017. Agrobiodiversidade do cará (<italic>Dioscorea trifida</italic> L.) e sua conservação <italic>in-situ</italic> em Caapiranga, Amazonas. Doctoral thesis, Universidade Federal do Amazonas, Brazil. 131p. (<ext-link ext-link-type="uri" xlink:href="https://tede.ufam.edu.br/handle/tede/5717">https://tede.ufam.edu.br/handle/tede/5717</ext-link>)</mixed-citation>
+				<element-citation publication-type="thesis">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Beyerlein</surname>
+							<given-names>P.</given-names>
+						</name>
+					</person-group>
+					<year>2017</year>
+					<source>Agrobiodiversidade do cará (<italic>Dioscorea trifida</italic> L.) e sua conservação <italic>in-situ</italic> em Caapiranga, Amazonas</source>
+					<comment content-type="degree">Doctoral</comment>
+					<publisher-name>Universidade Federal do Amazonas</publisher-name>
+					<publisher-loc>Brazil</publisher-loc>
+					<size units="pages">131</size>
+					<ext-link ext-link-type="uri" xlink:href="https://tede.ufam.edu.br/handle/tede/5717">https://tede.ufam.edu.br/handle/tede/5717</ext-link>
+				</element-citation>
+			</ref>
+			<ref id="B5">
+				<mixed-citation>Beyerlein, P.; Pereira, H.S. 2018. Morphological diversity and identification key for landraces of the Amerindian yam in central Amazon. <italic>Pesquisa Agropecuária Brasileira</italic>, 53: 405-418. </mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Beyerlein</surname>
+							<given-names>P.</given-names>
+						</name>
+						<name>
+							<surname>Pereira</surname>
+							<given-names>H.S</given-names>
+						</name>
+					</person-group>
+					<year>2018</year>
+					<article-title>Morphological diversity and identification key for landraces of the Amerindian yam in central Amazon</article-title>
+					<source>Pesquisa Agropecuária Brasileira</source>
+					<volume>53</volume>
+					<fpage>405</fpage>
+					<lpage>418</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B6">
+				<mixed-citation>Bousalem, M.; Viader, V.; Mariac, V.; Gomez, R.; Hochu, I.; Santoni, S.; David, J. 2010. Evidence of diploidy in the wild Amerindian yam, a putative progenitor of the endangered species <italic>Dioscorea trifida</italic> (Dioscoreaceae). <italic>Genome</italic>, 53: 371-383. </mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Bousalem</surname>
+							<given-names>M.</given-names>
+						</name>
+						<name>
+							<surname>Viader</surname>
+							<given-names>V.</given-names>
+						</name>
+						<name>
+							<surname>Mariac</surname>
+							<given-names>V.</given-names>
+						</name>
+						<name>
+							<surname>Gomez</surname>
+							<given-names>R.</given-names>
+						</name>
+						<name>
+							<surname>Hochu</surname>
+							<given-names>I.</given-names>
+						</name>
+						<name>
+							<surname>Santoni</surname>
+							<given-names>S.</given-names>
+						</name>
+						<name>
+							<surname>David</surname>
+							<given-names>J.</given-names>
+						</name>
+					</person-group>
+					<year>2010</year>
+					<article-title>Evidence of diploidy in the wild Amerindian yam, a putative progenitor of the endangered species Dioscorea trifida (Dioscoreaceae)</article-title>
+					<source>Genome</source>
+					<volume>53</volume>
+					<fpage>371</fpage>
+					<lpage>383</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B7">
+				<mixed-citation>Castro, A.P.; Fraxe, T.J.P.; Pereira, H.S.; Kinupp, V.F. 2012. Etnobotânica das variedades locais do cará (<italic>Dioscorea</italic> spp.) cultivados em comunidades no município de Caapiranga, estado do Amazonas. <italic>Acta Botanica Brasilica</italic>, 26: 658-667. </mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Castro</surname>
+							<given-names>A.P.</given-names>
+						</name>
+						<name>
+							<surname>Fraxe</surname>
+							<given-names>T.J.P.</given-names>
+						</name>
+						<name>
+							<surname>Pereira</surname>
+							<given-names>H.S.</given-names>
+						</name>
+						<name>
+							<surname>Kinupp</surname>
+							<given-names>V.F.</given-names>
+						</name>
+					</person-group>
+					<year>2012</year>
+					<article-title>Etnobotânica das variedades locais do cará (Dioscorea spp.) cultivados em comunidades no município de Caapiranga, estado do Amazonas</article-title>
+					<source>Acta Botanica Brasilica</source>
+					<volume>26</volume>
+					<fpage>658</fpage>
+					<lpage>667</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B8">
+				<mixed-citation>Clement, C.R.; Cristo-Araújo, M.; d’Eeckenbrugge, G.C.; Pereira, A.A.; Picanço-Rodrigues, D. 2010. Origin and domestication of native Amazonian crops. <italic>Diversity</italic>, 2: 72-106. </mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Clement</surname>
+							<given-names>C.R.</given-names>
+						</name>
+						<name>
+							<surname>Cristo-Araújo</surname>
+							<given-names>M.</given-names>
+						</name>
+						<name>
+							<surname>d’Eeckenbrugge</surname>
+							<given-names>G.C.</given-names>
+						</name>
+						<name>
+							<surname>Pereira</surname>
+							<given-names>A.A.</given-names>
+						</name>
+						<name>
+							<surname>Picanço-Rodrigues</surname>
+							<given-names>D.</given-names>
+						</name>
+					</person-group>
+					<year>2010</year>
+					<article-title>Origin and domestication of native Amazonian crops</article-title>
+					<source>Diversity</source>
+					<volume>2</volume>
+					<fpage>72</fpage>
+					<lpage>106</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B9">
+				<mixed-citation> Finch-Savage, W.E.; Leubner-Metzger, G. 2006. Seed dormancy and the control of germination. <italic>New Phytologist</italic>, 171: 501-523. </mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Finch-Savage</surname>
+							<given-names>W.E.</given-names>
+						</name>
+						<name>
+							<surname>Leubner-Metzger</surname>
+							<given-names>G.</given-names>
+						</name>
+					</person-group>
+					<year>2006</year>
+					<article-title>Seed dormancy and the control of germination</article-title>
+					<source>New Phytologist</source>
+					<volume>171</volume>
+					<fpage>501</fpage>
+					<lpage>523</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B10">
+				<mixed-citation>Henry, V.C.R. 1967. Studies on botanical and agronomic characteristics in cush-cush (<italic>Dioscorea trifida</italic> L.). Doctoral thesis, McGill University, Canada. 189p.</mixed-citation>
+				<element-citation publication-type="thesis">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Henry</surname>
+							<given-names>V.C.R.</given-names>
+						</name>
+					</person-group>
+					<year>1967</year>
+					<source>Studies on botanical and agronomic characteristics in cush-cush (<italic>Dioscorea trifida</italic> L.)</source>
+					<comment content-type="degree">Doctoral</comment>
+					<publisher-name>McGill University</publisher-name>
+					<publisher-loc>Canada</publisher-loc>
+					<size units="pages">189</size>
+				</element-citation>
+			</ref>
+			<ref id="B11">
+				<mixed-citation>Langhu, T.; Deb, C.R. 2014. Studies on reproductive and seed biology of <italic>Dioscorea villosa</italic> Linnaeus (Dioscoreaceae): a rare medicinal plant in NE India. <italic>Pleione</italic> 8: 251 - 257</mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Langhu</surname>
+							<given-names>T.</given-names>
+						</name>
+						<name>
+							<surname>Deb</surname>
+							<given-names>C.R.</given-names>
+						</name>
+					</person-group>
+					<year>2014</year>
+					<article-title>Studies on reproductive and seed biology of Dioscorea villosa Linnaeus (Dioscoreaceae): a rare medicinal plant in NE India</article-title>
+					<source>Pleione</source>
+					<volume>8</volume>
+					<fpage>251 </fpage>
+					<lpage> 257</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B12">
+				<mixed-citation>Martins, P.S. 2005. Dinâmica evolutiva em roças de caboclos amazônicos. <italic>Estudos Avançados</italic>, 19: 209-220. </mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Martins</surname>
+							<given-names>P.S.</given-names>
+						</name>
+					</person-group>
+					<year>2005</year>
+					<article-title>Dinâmica evolutiva em roças de caboclos amazônicos</article-title>
+					<source>Estudos Avançados</source>
+					<volume>19</volume>
+					<fpage>209</fpage>
+					<lpage>220</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B13">
+				<mixed-citation>Mollica, J.Q.; Cara, D.C.; D’Auriol, M.; Oliveira, V.B.; Cesar, I.C.; Brandão, M.G. 2013. Anti-inflammatory activity of American yam <italic>Dioscorea trifida</italic> Lf in food allergy induced by ovalbumin in mice. <italic>FriendlyISISJournal of Functional Foods</italic>, 5: 1975-1984.</mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Mollica</surname>
+							<given-names>J.Q.</given-names>
+						</name>
+						<name>
+							<surname>Cara</surname>
+							<given-names>D.C.</given-names>
+						</name>
+						<name>
+							<surname>D’Auriol</surname>
+							<given-names>M.</given-names>
+						</name>
+						<name>
+							<surname>Oliveira</surname>
+							<given-names>V.B.</given-names>
+						</name>
+						<name>
+							<surname>Cesar</surname>
+							<given-names>I.C.</given-names>
+						</name>
+						<name>
+							<surname>Brandão</surname>
+							<given-names>M.G.</given-names>
+						</name>
+					</person-group>
+					<year>2013</year>
+					<article-title>Anti-inflammatory activity of American yam Dioscorea trifida Lf in food allergy induced by ovalbumin in mice</article-title>
+					<source>FriendlyISISJournal of Functional Foods</source>
+					<volume>5</volume>
+					<fpage>1975</fpage>
+					<lpage>1984</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B14">
+				<mixed-citation>Nascimento, W.F.; Rodrigues, J.F.; Koehler, S.; Gepts, P.; Veasey, E.A. 2013. Spatially structured genetic diversity of the Amerindian yam (<italic>Dioscorea trifida</italic> L.) assessed by SSR and ISSR markers in Southern Brazil. <italic>Genetic Resources and Crop Evolution</italic>, 6: 2405. </mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Nascimento</surname>
+							<given-names>W.F.</given-names>
+						</name>
+						<name>
+							<surname>Rodrigues</surname>
+							<given-names>J.F.</given-names>
+						</name>
+						<name>
+							<surname>Koehler</surname>
+							<given-names>S.</given-names>
+						</name>
+						<name>
+							<surname>Gepts</surname>
+							<given-names>P.</given-names>
+						</name>
+						<name>
+							<surname>Veasey</surname>
+							<given-names>E.A.</given-names>
+						</name>
+					</person-group>
+					<year>2013</year>
+					<article-title>Spatially structured genetic diversity of the Amerindian yam (Dioscorea trifida L.) assessed by SSR and ISSR markers in Southern Brazil</article-title>
+					<source>Genetic Resources and Crop Evolution</source>
+					<volume>6</volume>
+					<fpage>2405</fpage>
+					<lpage>2405</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B15">
+				<mixed-citation>Nascimento, W.F.; Siqueira, M.V.B.M.; Ferreira, A.B.; Ming, L.C.; Peroni, N.; Veasey, E.A. 2015. Distribution, management and diversity of the endangered Amerindian yam (<italic>Dioscorea trifida</italic> L.). <italic>Brazilian FriendlyISISJournal of Biology</italic>, 75: 104-113. </mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Nascimento</surname>
+							<given-names>W.F.</given-names>
+						</name>
+						<name>
+							<surname>Siqueira</surname>
+							<given-names>M.V.B.M.</given-names>
+						</name>
+						<name>
+							<surname>Ferreira</surname>
+							<given-names>A.B.</given-names>
+						</name>
+						<name>
+							<surname>Ming</surname>
+							<given-names>L.C.</given-names>
+						</name>
+						<name>
+							<surname>Peroni</surname>
+							<given-names>N.</given-names>
+						</name>
+						<name>
+							<surname>Veasey</surname>
+							<given-names>E.A.</given-names>
+						</name>
+					</person-group>
+					<year>2015</year>
+					<article-title>Distribution, management and diversity of the endangered Amerindian yam (Dioscorea trifida L.)</article-title>
+					<source>Brazilian FriendlyISISJournal of Biology</source>
+					<volume>75</volume>
+					<fpage>104</fpage>
+					<lpage>113</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B16">
+				<mixed-citation>Penfield, S. 2017. Seed dormancy and germination. <italic>Currrent Biology</italic>, 27: R874-R878. </mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Penfield</surname>
+							<given-names>S.</given-names>
+						</name>
+					</person-group>
+					<year>2017</year>
+					<article-title>Seed dormancy and germination</article-title>
+					<source>Currrent Biology</source>
+					<version>27</version>
+					<fpage>R874</fpage>
+					<lpage>R878</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B17">
+				<mixed-citation>Pérez, E.; Gibert, O.; Rolland-Sabaté, A.; Segovia, X.; Sánchez, T.; Reynes, M.; Dufour, D. 2011. Evaluation of the functional properties of promising <italic>Dioscorea trifida</italic> L. waxy starches for food innovation. <italic>International FriendlyISISJournal of Carbohydrate Chemistry</italic>, 2011: 1-7.</mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Pérez</surname>
+							<given-names>E.</given-names>
+						</name>
+						<name>
+							<surname>Gibert</surname>
+							<given-names>O.</given-names>
+						</name>
+						<name>
+							<surname>Rolland-Sabaté</surname>
+							<given-names>A.</given-names>
+						</name>
+						<name>
+							<surname>Segovia</surname>
+							<given-names>X.</given-names>
+						</name>
+						<name>
+							<surname>Sánchez</surname>
+							<given-names>T.</given-names>
+						</name>
+						<name>
+							<surname>Reynes</surname>
+							<given-names>M.</given-names>
+						</name>
+						<name>
+							<surname>Dufour</surname>
+							<given-names>D.</given-names>
+						</name>
+					</person-group>
+					<year>2011</year>
+					<article-title>Evaluation of the functional properties of promising Dioscorea trifida L. waxy starches for food innovation</article-title>
+					<source>International FriendlyISISJournal of Carbohydrate Chemistry</source>
+					<volume>2011</volume>
+					<fpage>1</fpage>
+					<lpage>7</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B18">
+				<mixed-citation>Ramos-Escudero, F.; Santos-Buelga, C.; Pérez-Alonso, J.J.; Yáñez, J.A.; Dunñas, M. 2010. HPLC-DAD-ESI/MS identification of anthocyanins in <italic>Dioscorea trifida</italic> L. yam tubers (purple sachapapa). <italic>European Food Research Technology</italic>, 230: 745-752. </mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Ramos-Escudero</surname>
+							<given-names>F.</given-names>
+						</name>
+						<name>
+							<surname>Santos-Buelga</surname>
+							<given-names>C.</given-names>
+						</name>
+						<name>
+							<surname>Pérez-Alonso</surname>
+							<given-names>J.J.</given-names>
+						</name>
+						<name>
+							<surname>Yáñez</surname>
+							<given-names>J.A.</given-names>
+						</name>
+						<name>
+							<surname>Dunñas</surname>
+							<given-names>M.</given-names>
+						</name>
+					</person-group>
+					<year>2010</year>
+					<article-title>HPLC-DAD-ESI/MS identification of anthocyanins in Dioscorea trifida L. yam tubers (purple sachapapa)</article-title>
+					<source>European Food Research Technology</source>
+					<volume>230</volume>
+					<fpage>745</fpage>
+					<lpage>752</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B19">
+				<mixed-citation>Sadik, S. 1976. A review of sexual propagation for yam improvement. In: <italic>Proceedings of the</italic> 
+ <italic>Fourth</italic> 
+ <italic>Symposium of the International Society for Tropical Root Crops</italic>, IDRC, Ottawa, Canada, p.40-44.</mixed-citation>
+				<element-citation publication-type="confproc">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Sadik</surname>
+							<given-names>S.</given-names>
+						</name>
+					</person-group>
+					<year>1976</year>
+					<source>A review of sexual propagation for yam improvement</source><italic>Proceedings of the</italic><conf-name>FourthSymposium of the International Society for Tropical Root Crops</conf-name>
+					<conf-sponsor>IDRC</conf-sponsor>
+					<conf-loc>Ottawa, Canada</conf-loc>
+					<fpage>40</fpage>
+					<lpage>44</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B20">
+				<mixed-citation>Santana, D.G.; Ranal, M.A. 2004. Análise da germinação: um enfoque estatístico. Editora UnB, Brasília, 247p.</mixed-citation>
+				<element-citation publication-type="book">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Santana</surname>
+							<given-names>D.G.</given-names>
+						</name>
+						<name>
+							<surname>Ranal</surname>
+							<given-names>M.A.</given-names>
+						</name>
+					</person-group>
+					<year>2004</year>
+					<source>Análise da germinação: um enfoque estatístico</source>
+					<publisher-name>Editora UnB</publisher-name>
+					<publisher-loc>Brasília</publisher-loc>
+					<size units="pages">247</size>
+				</element-citation>
+			</ref>
+			<ref id="B21">
+				<mixed-citation>Siqueira, M.V.B.M. 2011. Yam: a neglected and underutilized crop in Brazil. <italic>Horticultura Brasileira</italic>, 29: 16-20.</mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Siqueira</surname>
+							<given-names>M.V.B.M.</given-names>
+						</name>
+					</person-group>
+					<year>2011</year>
+					<article-title>Yam: a neglected and underutilized crop in Brazil</article-title>
+					<source>Horticultura Brasileira</source>
+					<volume>29</volume>
+					<fpage>16</fpage>
+					<lpage>20</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B22">
+				<mixed-citation>Teixeira, A.P.; Oliveira, I.M.A.; Lima, E.S.; Matsuura, T. 2013. The use of purple yam (<italic>Dioscorea trifida</italic>) as a health-promoting ingredient in bread making. <italic>FriendlyISISJournal of Research in Biology</italic>, 3: 747-758. </mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Teixeira</surname>
+							<given-names>A.P.</given-names>
+						</name>
+						<name>
+							<surname>Oliveira</surname>
+							<given-names>I.M.A.</given-names>
+						</name>
+						<name>
+							<surname>Lima</surname>
+							<given-names>E.S.</given-names>
+						</name>
+						<name>
+							<surname>Matsuura</surname>
+							<given-names>T.</given-names>
+						</name>
+					</person-group>
+					<year>2013</year>
+					<article-title>The use of purple yam (Dioscorea trifida) as a health-promoting ingredient in bread making</article-title>
+					<source>FriendlyISISJournal of Research in Biology</source>
+					<volume>3</volume>
+					<fpage>747</fpage>
+					<lpage>758</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B23">
+				<mixed-citation>Viana, A.M.; Felippe, G.M. 1990. Effects of storage on germination of <italic>Dioscorea composita</italic> (Dioscoreaceae) seeds. <italic>Economic Botany</italic>, 44: 311-317.</mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Viana</surname>
+							<given-names>A.M.</given-names>
+						</name>
+						<name>
+							<surname>Felippe</surname>
+							<given-names>G.M.</given-names>
+						</name>
+					</person-group>
+					<year>1990</year>
+					<article-title>Effects of storage on germination of Dioscorea composita (Dioscoreaceae) seeds</article-title>
+					<source>Economic Botany</source>
+					<volume>44</volume>
+					<fpage>311</fpage>
+					<lpage>317</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B24">
+				<mixed-citation>Willis, C.G.; Baskin, C.C.; Baskin, J.M.; Auld, J.R.; Venable, D.L.; Cavender-Bares, J.; <italic>et al</italic>. 2014. The evolution of seed dormancy: environmental cues, evolutionary hubs, and diversification of the seed plants. <italic>New Phytologist</italic>, 203: 300-309.</mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Willis</surname>
+							<given-names>C.G.</given-names>
+						</name>
+						<name>
+							<surname>Baskin</surname>
+							<given-names>C.C.</given-names>
+						</name>
+						<name>
+							<surname>Baskin</surname>
+							<given-names>J.M.</given-names>
+						</name>
+						<name>
+							<surname>Auld</surname>
+							<given-names>J.R.</given-names>
+						</name>
+						<name>
+							<surname>Venable</surname>
+							<given-names>D.L.</given-names>
+						</name>
+						<name>
+							<surname>Cavender-Bares</surname>
+							<given-names>J.</given-names>
+						</name>
+						<etal/>
+					</person-group>
+					<year>2014</year>
+					<article-title>The evolution of seed dormancy: environmental cues, evolutionary hubs, and diversification of the seed plants</article-title>
+					<source>New Phytologist</source>
+					<volume>203</volume>
+					<fpage>300</fpage>
+					<lpage>309</lpage>
+				</element-citation>
+			</ref>
+		</ref-list>
+		<fn-group>
+			<fn fn-type="other" id="fn2">
+				<label>CITE AS:</label>
+				<p> Beyerlein, P.; Mendes, A.M.S.; Pereira, H.S. 2019. Floral phenology, seed germination and hybrid plants of the Amerindian yam (Dioscorea trifida). Acta Amazonica 49: 167-172.</p>
+			</fn>
+		</fn-group>
+	</back>
+</article>

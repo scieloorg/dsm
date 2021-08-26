@@ -1,0 +1,554 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE article
+  PUBLIC "-//NLM//DTD JATS (Z39.96) FriendlyISISJournal Publishing DTD v1.1 20151215//EN" "JATS-journalpublishing1.dtd">
+<article article-type="brief-report" dtd-version="1.1" specific-use="sps-1.9" xml:lang="en" xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<front>
+		<journal-meta>
+			<journal-id journal-id-type="publisher-id">aa</journal-id>
+			<journal-title-group>
+				<journal-title>Acta Amazonica</journal-title>
+				<abbrev-journal-title abbrev-type="publisher">Acta Amaz.</abbrev-journal-title>
+			</journal-title-group>
+			<issn pub-type="ppub">0044-5967</issn>
+			<issn pub-type="epub">1809-4392</issn>
+			<publisher>
+				<publisher-name>Instituto Nacional de Pesquisas da Amazônia</publisher-name>
+			</publisher>
+		</journal-meta>
+		<article-meta>
+			<article-id pub-id-type="doi">10.1590/1809-4392201803521</article-id>
+			<article-categories>
+				<subj-group subj-group-type="heading">
+					<subject>Biodiversity and Conservation</subject>
+				</subj-group>
+			</article-categories>
+			<title-group>
+				<article-title>New record of <italic>Blepharicnema splendens</italic> (Diptera, Calliphoridae, Luciliini) and range expansion in Caquetá, Colombia</article-title>
+				<trans-title-group xml:lang="pt">
+					<trans-title>Novo registro de <italic>Blepharicnema splendens</italic> (Diptera, Calliphoridae, Luciliini) e expansão de sua área de distribuição em Caquetá, Colômbia</trans-title>
+				</trans-title-group>
+			</title-group>
+			<contrib-group>
+				<contrib contrib-type="author">
+					<contrib-id contrib-id-type="orcid">0000-0002-3193-6659</contrib-id>
+					<name>
+						<surname>RAMOS-PASTRANA</surname>
+						<given-names>Yardany</given-names>
+					</name>
+					<xref ref-type="aff" rid="aff1"><sup>1</sup></xref>
+					<xref ref-type="aff" rid="aff2"><sup>2</sup></xref>
+					<xref ref-type="corresp" rid="c1">*</xref>
+				</contrib>
+				<contrib contrib-type="author">
+					<name>
+						<surname>CÓRDOBA-SUAREZ</surname>
+						<given-names>Eric</given-names>
+					</name>
+					<xref ref-type="aff" rid="aff1"><sup>1</sup></xref>
+				</contrib>
+				<contrib contrib-type="author">
+					<name>
+						<surname>WOLFF</surname>
+						<given-names>Marta</given-names>
+					</name>
+					<xref ref-type="aff" rid="aff2"><sup>2</sup></xref>
+				</contrib>
+			</contrib-group>
+			<aff id="aff1">
+				<label>1</label>
+				<institution content-type="original">Universidad de la Amazonia, Grupo de Investigación en Entomología -GIEUA-, Laboratorio de Entomología, Florencia, Caquetá, Colombia</institution>
+				<institution content-type="normalized">Universidad de la Amazonia</institution>
+				<institution content-type="orgname">Universidad de la Amazonia</institution>
+				<institution content-type="orgdiv1">Grupo de Investigación en Entomología -GIEUA-</institution>
+				<institution content-type="orgdiv2">Laboratorio de Entomología</institution>
+				<addr-line>
+					<city>Florencia</city>
+					<state>Caquetá</state>
+				</addr-line>
+				<country country="CO">Colombia</country>
+			</aff>
+			<aff id="aff2">
+				<label>2</label>
+				<institution content-type="original">Universidad de Antioquia, Instituto de Biología, Grupo de Entomología -GEAU-, Medellín, Colombia</institution>
+				<institution content-type="normalized">Universidad de Antioquia</institution>
+				<institution content-type="orgname">Universidad de Antioquia</institution>
+				<institution content-type="orgdiv1">Instituto de Biología</institution>
+				<institution content-type="orgdiv2">Grupo de Entomología -GEAU-</institution>
+				<addr-line>
+					<city>Medellín</city>
+				</addr-line>
+				<country country="CO">Colombia</country>
+			</aff>
+			<author-notes>
+				<corresp id="c1">* Corresponding author: <email>ya.ramos@udla.edu.co</email>
+				</corresp>
+				<fn fn-type="edited-by" id="fn1">
+					<label>ASSOCIATE EDITOR:</label>
+					<p> Pitágoras C. Bispo</p>
+				</fn>
+			</author-notes>
+			<pub-date date-type="pub" publication-format="electronic">
+				<day>12</day>
+				<month>08</month>
+				<year>2019</year>
+			</pub-date>
+			<pub-date date-type="collection" publication-format="electronic">
+				<season>Jul-Sep</season>
+				<year>2019</year>
+			</pub-date>
+			<volume>49</volume>
+			<issue>3</issue>
+			<fpage>242</fpage>
+			<lpage>245</lpage>
+			<history>
+				<date date-type="received">
+					<day>04</day>
+					<month>09</month>
+					<year>2018</year>
+				</date>
+				<date date-type="accepted">
+					<day>23</day>
+					<month>03</month>
+					<year>2019</year>
+				</date>
+			</history>
+			<permissions>
+				<license license-type="open-access" xlink:href="https://creativecommons.org/licenses/by/4.0/" xml:lang="en">
+					<license-p>This is an open-access article distributed under the terms of the Creative Commons Attribution License</license-p>
+				</license>
+			</permissions>
+			<abstract>
+				<title>ABSTRACT</title>
+				<p><italic>Blepharicnema splendens</italic> is a dipteran with occurrence restricted to the Neotropical Andean mountain forests from 1,400 to 2,500 masl. We surveyed the species using Van Someren-Rydon traps with decaying fish as bait in four sites (<italic>veredas</italic>) in the Eastern Cordillera, in the Municipality of Florencia, Caquetá, Colombia. A total of 221 individuals were collected in the four localities. The Vereda Las Brisa<italic>s</italic> had the highest abundance, with 104 specimens (45.4%), followed by El Vergel, 76 (33.2%), Tarqui, 46 (20.1%) and Los Lirios, 2 (0.9%). The record of this species in the mountainous ecosystems of the Department of Caquetá expands the known distribution of <italic>B</italic>. <italic>splendens</italic> and adds to the incipient knowledge on the diversity of Diptera in this region. </p>
+			</abstract>
+			<trans-abstract xml:lang="pt">
+				<title>RESUMO</title>
+				<p><italic>Blepharicnema splendens</italic> é um dipetero de ocorrência restrita às florestas montanhosas dos Andes neotropicais de 1400 até 2500 m acima do nível do mar. Amostramos a espécie utilizando armadilhas Van Someren-Rydon, com peixe em decomposição como isca, em quatro localidades (<italic>veredas</italic>) na Cordilheira Oriental, no município de Florencia, Caquetá, Côlombia. Foram coletados 221 indivíduos nas quatro localidades. A maior abundância foi registrada na Vereda Las Brisas, com 104 espécimes (45,4%), seguido de El Vergel, 76 (33,2%), Tarqui, 46 (20,1%) e Los Lirios, 2 (0,9%). O registro dessa espécie nos ecossistemas montanhosos do Departamento de Caquetá é uma expansão da distribuição atualmente conhecida de <italic>B</italic>. <italic>splendens</italic>, e contribui ao conhecimento incipiente sobre a diversidade de dípteros nessa região.</p>
+			</trans-abstract>
+			<kwd-group xml:lang="en">
+				<title>KEYWORDS:</title>
+				<kwd>biodiversity</kwd>
+				<kwd>Andean-Amazon region</kwd>
+				<kwd>distribution</kwd>
+				<kwd>Van Someren-Rydon</kwd>
+			</kwd-group>
+			<kwd-group xml:lang="pt">
+				<title>PALAVRAS-CHAVE:</title>
+				<kwd>biodiversidade</kwd>
+				<kwd>Região Andino-Amazônica</kwd>
+				<kwd>distribuição</kwd>
+				<kwd>Van Someren-Rydon</kwd>
+			</kwd-group>
+			<funding-group>
+				<award-group award-type="contract">
+					<funding-source>Universidad de la Amazonia and Colciencias</funding-source>
+					<award-id>113171249749-49749-2015</award-id>
+				</award-group>
+			</funding-group>
+			<counts>
+				<fig-count count="2"/>
+				<table-count count="0"/>
+				<equation-count count="0"/>
+				<ref-count count="15"/>
+				<page-count count="4"/>
+			</counts>
+		</article-meta>
+	</front>
+	<body>
+		<p>Calliphoridae is commonly known as a cosmopolitan and heterogeneous family, composed of about 1,000 species distributed in approximately 150 genera (<xref ref-type="bibr" rid="B13">Thompson 2008</xref>). In the Neotropical region, more than 120 species are known (<xref ref-type="bibr" rid="B8">Kosmann <italic>et al.</italic> 2013</xref>) and for Colombia there are 31 recorded species, distributed in four subfamilies and 12 genera (<xref ref-type="bibr" rid="B15">Wolff and Kossmann 2016</xref>).</p>
+		<p><italic>Blepharicnema</italic><xref ref-type="bibr" rid="B9">Macquart, 1843</xref> is a monotypic genus, represented by <italic>Blepharicnema splendens</italic> (Macquart, 1843). The species was subsequently redescribed by <xref ref-type="bibr" rid="B10">Mariluis (1979</xref>), however its type locality is still unknown. The genus is characterized by its large size, from 12 to 14 mm, metallic green coloration, and abundant hairs on the legs. They are frequently collected using decaying fish as bait (<xref ref-type="bibr" rid="B2">Amat and Wolff 2007</xref>). It is distributed in the Andean zone from Bolivia to Venezuela, in high areas of well preserved Andean forest (Amat and Wolff 2007).</p>
+		<p>In Colombia, <italic>B. splendens</italic> has been reported in the departments of Antioquia, Caldas, Cundinamarca, Magdalena, Risaralda, Santander, and Valle del Cauca, based on 49 specimens (<xref ref-type="bibr" rid="B2">Amat and Wolff 2007</xref>). There is only one record in the Colombian Amazonian region, in the Department of Putumayo (<xref ref-type="bibr" rid="B12">Pape <italic>et al</italic>. 2004</xref>). This study reports <italic>B</italic>. <italic>splendens</italic> for the Department of Caquetá, Colombia, and updates its geographical distribution. </p>
+		<p>The study was developed in the Municipality of Florencia, Caquetá, located in the Colombian Andean Amazon (1°37´03´´N, 75°37´03´´W). The average annual rainfall is 3,840 mm, decreasing between September and February, the less rainy season in the region, while it increases between March and August, the rainy season, when the temperature tends to decrease (<xref ref-type="bibr" rid="B6">IGAC 2010</xref>). Four sampling areas were selected, corresponding to the city zones (veredas) El Vergel, Las Brisas, Tarqui and Los Lirios, all located between 1,400 and 2,400 masl.</p>
+		<p><italic>Vereda El Vergel</italic>: the collection site was at El Pórtico, located at km 49 of the road between the municipalities of Florencia, Caquetá, and Suaza, Huila (01º45´17”N, 75º44´51.6”W), at an altitude of 2,400 masl. It is characterized by a cold climate and cloud forest (<xref ref-type="bibr" rid="B6">IGAC 2010</xref>), with a yearly average temperature of 15 ºC. The site corresponds to an area of montane forest (<xref ref-type="bibr" rid="B5">Holdridge 1996</xref>).</p>
+		<p><italic>Vereda Las Brisas</italic>: the collection site was at Túnel III, located at km 46 of the same road from Florencia to Suaza (01º45´14”N, 75º44´51.5”W), at an altitude of 2,040 masl, with vegetation and temperature similar to El Pórtico.</p>
+		<p><italic>Vereda Tarqui</italic>: collection site located at km 44 of the road to the municipality of Guadalupe, Huila (01º51´02”N, 75º40´28.4”W), at an altitude of 2,020 masl, with vegetation and temperature similar to El Pórtico.</p>
+		<p><italic>Vereda Los Lirios</italic>: collection site located at km 28 of the road from Florencia to Suaza (01<sup>o</sup>45´14”N, 75<sup>o</sup>43´13.6”W), at an altitude of 1,400 masl, and characterized by a medium or temperate climate and premontane pluvial forest (<xref ref-type="bibr" rid="B6">IGAC 2010</xref>), dominated by plants belonging to the family Rubiaceae, with an average temperature of 18 <sup>o</sup>C. The site corresponds to an area of low montane forest (<xref ref-type="bibr" rid="B5">Holdridge 1996</xref>).</p>
+		<p>The collections were made randomly, between 2011 and 2018, using Van Someren-Rydon traps baited with approximately 150 g of decaying fish, set at approximately 130 cm from the ground, and left for a period of 36 hours. Additional material was collected with entomological nets in the areas around the traps. All specimens were brought to the entomology laboratory of Universidad de la Amazonia, where the material was sorted, counted, sexed, and identified with the keys proposed by <xref ref-type="bibr" rid="B3">Amat <italic>et al</italic>. (2008</xref>) and <xref ref-type="bibr" rid="B14">Vargas and Wood (2010</xref>), using an Olympus SZ2-ILST stereomicroscope. All specimens were deposited in the entomological collection of Universidad de la Amazonia (LEUA; Registro Nacional de Colecciones (RNC) in process) in Florencia, Caquetá, Colombia.</p>
+		<p>The photograph of the specimen (<xref ref-type="fig" rid="f1">Figure 1</xref>) was taken under a stereomicroscope Leica M205A, using a camera Leica DFC450. The distribution map (<xref ref-type="fig" rid="f2">Figure 2</xref>) was composed in QGIS v.2.8.3 (<xref ref-type="bibr" rid="B4">QGIS Development Team, 2018</xref>) using World-Clim elevation data (Hijmans <italic>et al</italic>. 2005) and the field coordinates were taken in degree format.</p>
+		<p>
+			<fig id="f1">
+				<label>Figure 1</label>
+				<caption>
+					<title>Adult of <italic>Blepharicnema splendens</italic> (LEUA-600). Scale bar = 2 mm. (Credit: Yennifer Andrea Carreño Guevara). This figure is in color in the electronic version.</title>
+				</caption>
+				<graphic xlink:href="1809-4392-aa-49-03-242-gf1.jpg"/>
+			</fig>
+		</p>
+		<p>
+			<fig id="f2">
+				<label>Figure 2</label>
+				<caption>
+					<title>Distribution records of <italic>Blepharicnema splendens</italic> (<xref ref-type="bibr" rid="B9">Macquart, 1843</xref>). This figure is in color in the electronic version.</title>
+				</caption>
+				<graphic xlink:href="1809-4392-aa-49-03-242-gf2.jpg"/>
+			</fig>
+		</p>
+		<p>A total of 221 specimens of <italic>B</italic>. <italic>splendens</italic> (<xref ref-type="fig" rid="f1">Figure 1</xref>) were collected (104 in Las Brisas, 76 in El Vergel, 46 in Tarqui, and two in Los Lirios). The species was found mainly in cloud and tropical rainforest, between 1,400 and 2,400 masl.</p>
+		<p><italic>Material examined</italic>. Colombia, Caquetá, Florencia, Vereda El Vergel, 2.400 m, 6♀, 25.xi.2011, Y. Ramos-Pastrana, Vsr. Trap baited with fish (LEUA-600 to 605). 24.xi.2011, 8♀, Y. Ramos-Pastrana, Vsr. Trap baited with fish (LEUA-606, LEUA-607 to 613). 24.xi.2011, 4♀, Y. Ramos-Pastrana, jama (LEUA-614 to 617). 10.vi.2011, 1♀, Y. Ramos-Pastrana, Vsr. Trap baited with fish (LEUA-618). 03.vi.2011, 4♀, Y. Ramos-Pastrana, Vsr. Trap baited with fish (LEUA-619 to 622). 3.iii.2011, 3♀, Y. Ramos-Pastrana, Vsr. Trap baited with fish (LEUA-623 to 625). 16.v.2013, 2♀, Y. Ramos-Pastrana, Vsr. Trap baited with fish (LEUA-626, LEUA-627). 15.v.2014, 1♂, 47♀, Y. Ramos-Pastrana, Vsr. Trap baited with fish (male: LEUA-628; females: LEUA-629 to 675). 13.v.2014, 1♂, Y. Ramos-Pastrana, Vsr. Trap baited with fish (LEUA-676). 11.v.2014, 1♀, Y. Ramos-Pastrana, Vsr. Trap baited with fish (LEUA-677). Vereda Las Brisas, 2.040 m, 23.xi.2011, 1♀, Y. Ramos-Pastrana, Vsr. Trap baited with fish (LEUA-678). 25.xi.2011, 1♀, Y. Ramos-Pastrana, Vsr. Trap baited with fish (LEUA-679). 25.v.2012, 3♂, 2♀, Y. Ramos-Pastrana, Vsr. Trap baited with fish (males: LEUA-680 to 682; females: LEUA-683, LEUA-684). 17.v.2013, 22♀, Y. Ramos-Pastrana, Vsr. Trap baited with fish (LEUA-685 to 706). 16.v.2016, 9♂, 20♀, Y. Ramos-Pastrana, Vsr. Trap baited with fish (males: LEUA-707 to 715; females: LEUA-716 to 735). 17.v.2016, 2♂, 7♀, Y. Ramos-Pastrana, Vsr. Trap baited with fish (males: LEUA-736, LEUA-737; females: LEUA-738 to 744). 19.v.2016, 1♂, 12♀, Y. Ramos-Pastrana, Vsr. Trap baited with fish (male: LEUA-745; females: LEUA-746 to 757). 19.ii.2018, 1♂, 2♀, Y. Ramos-Pastrana, Vsr. Trap baited with fish (male: LEUA-758; females: LEUA-759, LEUA-760). 20.ii.2018, 1♂, 6♀, Y. Ramos-Pastrana, Vsr. Trap baited with fish (male: LEUA-761; females: LEUA-762 to 767). 21.ii.2018, 3♀, Y. Ramos-Pastrana, Vsr. Trap baited with fish (LEUA-768 to 770). 21.ii.2018, 1♀, Y. Ramos-Pastrana, jama (LEUA-771). Vereda Los Lirios, 1.400 m, 14.xi.2011, 2♀, Y. Ramos-Pastrana, Vsr. Trap baited with fish (LEUA-772, LEUA-773). Vereda Tarqui, 2020 m, 9.x.2014, 2♂, 40♀, Y. Ramos-Pastrana, Vsr. Trap baited with fish (males: LEUA-774, LEUA-775; females: LEUA-776 to 815). 4.x.2014, 4♀, Y. Ramos-Pastrana, Vsr. Trap baited with fish (LEUA-816 to 819). 6.x.2016, 1♀, Y. Ramos-Pastrana, Vsr. Trap baited with fish (LEUA-820).</p>
+		<p><italic>Diagnosis.</italic> Large-sized specimens (&gt;12 mm in length), thorax with presutural acrostic setae, thorax and abdomen metallic green, legs with abundant long hairs. </p>
+		<p><italic>Distribution</italic>. South America: Bolivia (Cochabamba, Chapare) (<xref ref-type="bibr" rid="B11">Mariluis and Peris 1984</xref>); Ecuador (Pichincha, Quito) (Walker 1858, in <xref ref-type="bibr" rid="B7">James 1970</xref>); Peru (Cajamarca, San Ignacio, Distrito de Nambelle, Cuenca del Río Chinchipe) (<xref ref-type="bibr" rid="B1">Amanzo <italic>et al</italic>. 2003</xref>); Venezuela (Maracaibo, Distrito Federal, Caracas, Merida); Colombia (Antioquia, Medellín, San Antonio de Prado, El Retiro, Andes, Barbosa; Caldas, Manizales; Cundinamarca, Fusagasugá, Magdalena, Sierra Nevada de Santa Marta; Putumayo, Mocoa, Risaralda, Santuario de Fauna y Flora Otún-Quimbaya; Santander, Piedecuesta; Valle del Cauca, Farallones de Cali) (<xref ref-type="bibr" rid="B2">Amat and 2007</xref>), Caquetá, Florencia, new record (this study).</p>
+		<p>In Colombia, <italic>B. splendens</italic> had been reported mostly in montane forests with little human intervention, at 2,500 masl (<xref ref-type="bibr" rid="B2">Amat and Wolff 2007</xref>). We report its occurrence in montane and cloud forests at altitudes from 1,400 and 2,400 masl, in highly preserved areas, which indicates that <italic>B. splendens</italic> can be found at lower altitudes than previously reported. At Vereda Las Brisas, where the highest abundance of <italic>B</italic>. <italic>splendens</italic> was recorded, the climate and ecological characteristics are optimal for the occurrence of the species, with a predominance of wooded areas with diverse tree, herbaceous and shrub species (Amat and Wolff 2007).</p>
+		<p>The diversity of calliphorids in the Department of Caquetá is still largely unknown. The last report on the species in Colombia date 11 years ago (<xref ref-type="bibr" rid="B2">Amat and Wolff 2007</xref>). With this record, the distribution of the species is expanded and further surveys are likely to reveal a wider distribution and abundance of this species in the Colombian mountainous ecosystems.</p>
+	</body>
+	<back>
+		<ack>
+			<title>ACKNOWLEDGMENTS</title>
+			<p>To Universidad de la Amazonia and Colciencias, Project 113171249749-49749-2015, to Semillero de Investigación en Entomología (SIEN) of Universidad de la Amazonia and Universidad de Antioquia, to engineer Yennifer Andrea Carreño Guevara, for the photograph of B. splendens, and to biologist Cornelio Bota for the elaboration of the map of the geographical locations of B. splendens records.</p>
+		</ack>
+		<ref-list>
+			<ref id="B1">
+				<mixed-citation>Amanzo, J.; Aacosta, R.; Aguilar, C.; Eckhard, K.; Severo, B.; Pequeño, T. 2003. <italic>Evaluación biológica rápida del Santuario Nacional Tabaconas-Nambelle y zonas aledañas</italic>. WWF, INRENA, Perú, 212p.</mixed-citation>
+				<element-citation publication-type="book">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Amanzo</surname>
+							<given-names>J.</given-names>
+						</name>
+						<name>
+							<surname>Aacosta</surname>
+							<given-names>R.</given-names>
+						</name>
+						<name>
+							<surname>Aguilar</surname>
+							<given-names>C.</given-names>
+						</name>
+						<name>
+							<surname>Eckhard</surname>
+							<given-names>K.</given-names>
+						</name>
+						<name>
+							<surname>Severo</surname>
+							<given-names>B.</given-names>
+						</name>
+						<name>
+							<surname>Pequeño</surname>
+							<given-names>T.</given-names>
+						</name>
+					</person-group>
+					<year>2003</year>
+					<source>Evaluación biológica rápida del Santuario Nacional Tabaconas-Nambelle y zonas aledañas</source>
+					<publisher-name>WWF, INRENA</publisher-name>
+					<publisher-loc>Perú</publisher-loc>
+					<size units="pages">212</size>
+				</element-citation>
+			</ref>
+			<ref id="B2">
+				<mixed-citation>Amat, E.; Wolff, M. 2007. New Records of Blepharicnema splendens Macquart, 1843 (Calliphoridae, Calliphorinae, Luciliini) from Colombia. <italic>Revista de la Sociedad Entomológica Argentina</italic>, 66: 187-190.</mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Amat</surname>
+							<given-names>E.</given-names>
+						</name>
+						<name>
+							<surname>Wolff</surname>
+							<given-names>M.</given-names>
+						</name>
+					</person-group>
+					<year>2007</year>
+					<article-title>New Records of Blepharicnema splendens Macquart, 1843 (Calliphoridae, Calliphorinae, Luciliini) from Colombia</article-title>
+					<source>Revista de la Sociedad Entomológica Argentina</source>
+					<volume>66</volume>
+					<fpage>187</fpage>
+					<lpage>190</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B3">
+				<mixed-citation>Amat, E.; Vélez, M.C.; Wolff, M. 2008. Clave ilustrada para la identificación de los géneros y las especies de califóridos (Diptera: Calliphoridae) de Colombia. <italic>Caldasia</italic>, 30: 231-244.</mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Amat</surname>
+							<given-names>E.</given-names>
+						</name>
+						<name>
+							<surname>Vélez</surname>
+							<given-names>M.C.</given-names>
+						</name>
+						<name>
+							<surname>Wolff</surname>
+							<given-names>M.</given-names>
+						</name>
+					</person-group>
+					<year>2008</year>
+					<article-title>Clave ilustrada para la identificación de los géneros y las especies de califóridos (Diptera: Calliphoridae) de Colombia</article-title>
+					<source>Caldasia</source>
+					<volume>30</volume>
+					<fpage>231</fpage>
+					<lpage>244</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B4">
+				<mixed-citation>ArcGIS (2018). (<comment> (<ext-link ext-link-type="uri" xlink:href="https://www.arcgis.com/index.html">https://www.arcgis.com/index.html</ext-link>
+					</comment>). Accessed on 02/04/2019.</mixed-citation>
+				<element-citation publication-type="webpage">
+					<person-group person-group-type="author">
+						<collab>ArcGIS</collab>
+					</person-group>
+					<year>2018</year>
+					<comment> (<ext-link ext-link-type="uri" xlink:href="https://www.arcgis.com/index.html">https://www.arcgis.com/index.html</ext-link>
+					</comment>
+					<date-in-citation content-type="access-date" iso-8601-date="2019-04-02">02/04/2019</date-in-citation>
+				</element-citation>
+			</ref>
+			<ref id="B5">
+				<mixed-citation>Holdridge, L. 1996. <italic>Ecología Basada en Zonas de Vida</italic>. Instituto Interamericano de Cooperación para la Agricultura, IICA, San José de Costa Rica. 225p.</mixed-citation>
+				<element-citation publication-type="book">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Holdridge</surname>
+							<given-names>L.</given-names>
+						</name>
+					</person-group>
+					<year>1996</year>
+					<source>Ecología Basada en Zonas de Vida</source>
+					<publisher-name>Instituto Interamericano de Cooperación para la Agricultura, IICA</publisher-name>
+					<publisher-loc>San José de Costa Rica</publisher-loc>
+					<size units="pages">225</size>
+				</element-citation>
+			</ref>
+			<ref id="B6">
+				<mixed-citation>IGAC. 2010. <italic>Caquetá, características geográficas</italic>. Instituto Geográfico Agustín Codazzi, Bogotá, Colombia. 376p.</mixed-citation>
+				<element-citation publication-type="book">
+					<person-group person-group-type="author">
+						<collab>IGAC</collab>
+					</person-group>
+					<year>2010</year>
+					<source>Caquetá, características geográficas</source>
+					<publisher-name>Instituto Geográfico Agustín Codazzi</publisher-name>
+					<publisher-loc>Bogotá, Colombia</publisher-loc>
+					<size units="pages">376</size>
+				</element-citation>
+			</ref>
+			<ref id="B7">
+				<mixed-citation>James, M.T. 1970. Family Calliphoridae. In: Papavero, N. (Ed.). <italic>A Catalogue of the America South of the United States</italic>. Museu de Zoologia, Universidad de São Paulo, São Paulo. Brazil, p.1-28.</mixed-citation>
+				<element-citation publication-type="book">
+					<person-group person-group-type="author">
+						<name>
+							<surname>James</surname>
+							<given-names>M.T.</given-names>
+						</name>
+					</person-group>
+					<year>1970</year>
+					<chapter-title>Family Calliphoridae</chapter-title>
+					<person-group person-group-type="editor">
+						<name>
+							<surname>Papavero</surname>
+							<given-names>N.</given-names>
+						</name>
+					</person-group>
+					<source>A Catalogue of the America South of the United States</source>
+					<publisher-name>Museu de Zoologia, Universidad de São Paulo</publisher-name>
+					<publisher-loc>São Paulo. Brazil</publisher-loc>
+					<fpage>1</fpage>
+					<lpage>28</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B8">
+				<mixed-citation>Kosmann, A.C.; Pinto, D.E; Mello, R.; Harterreiten-Souza, S.E.; Pujol-Luz, J.R. 2013. A list of current valid blow fly names (Diptera: Calliphoridae) in the Americas South of Mexico with key to the Brazilian species. <italic>EntomoBrasilis</italic>, 6: 74-85.</mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Kosmann</surname>
+							<given-names>A.C.</given-names>
+						</name>
+						<name>
+							<surname>Pinto</surname>
+							<given-names>D.E</given-names>
+						</name>
+						<name>
+							<surname>Mello</surname>
+							<given-names>R.</given-names>
+						</name>
+						<name>
+							<surname>Harterreiten-Souza</surname>
+							<given-names>S.E.</given-names>
+						</name>
+						<name>
+							<surname>Pujol-Luz</surname>
+							<given-names>J.R.</given-names>
+						</name>
+					</person-group>
+					<year>2013</year>
+					<article-title>A list of current valid blow fly names (Diptera: Calliphoridae) in the Americas South of Mexico with key to the Brazilian species</article-title>
+					<source>EntomoBrasilis</source>
+					<volume>6</volume>
+					<fpage>74</fpage>
+					<lpage>85</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B9">
+				<mixed-citation>Macquart, J.P.M. 1843. Dipteres exotiquez nouveaux peu connus. <italic>Memories de la Société (Royale) des Sciences, de l`Agricultura et des Arts à Lille</italic>, 283. </mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Macquart</surname>
+							<given-names>J.P.M.</given-names>
+						</name>
+					</person-group>
+					<year>1843</year>
+					<article-title>Dipteres exotiquez nouveaux peu connus</article-title>
+					<source>Memories de la Société (Royale) des Sciences, de l`Agricultura et des Arts à Lille</source>
+					<volume>283</volume>
+				</element-citation>
+			</ref>
+			<ref id="B10">
+				<mixed-citation>Mariluis, J.C. 1979. El género Blepharicnema Macquart, 1843 (Calliphoridae, Calliphorinae, Luciliini). <italic>Revista de la Sociedad Entomol</italic>ógica <italic>Aragonesa</italic>, 38: 137-142.</mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Mariluis</surname>
+							<given-names>J.C.</given-names>
+						</name>
+					</person-group>
+					<year>1979</year>
+					<article-title>El género Blepharicnema Macquart, 1843 (Calliphoridae, Calliphorinae, Luciliini)</article-title>
+					<source>Revista de la Sociedad Entomológica Aragonesa</source>
+					<volume>38</volume>
+					<fpage>137</fpage>
+					<lpage>142</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B11">
+				<mixed-citation>Mariluis, J.C.; Peris, S.V. 1984. Datos para una sinopsis de los Calliphoridae Neotropicales. <italic>Eos</italic>, <italic>LX</italic>: 67-86.</mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Mariluis</surname>
+							<given-names>J.C.</given-names>
+						</name>
+						<name>
+							<surname>Peris</surname>
+							<given-names>S.V.</given-names>
+						</name>
+					</person-group>
+					<year>1984</year>
+					<article-title>Datos para una sinopsis de los Calliphoridae Neotropicales</article-title>
+					<source>Eos</source>
+					<volume>LX</volume>
+					<fpage>67</fpage>
+					<lpage>86</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B12">
+				<mixed-citation>Pape, T.; Wolff, M.; Amat, E. 2004. The blow flies, bot flies, woodlouse flies and flesh flies (Diptera: Calliphoridae, Oestridae, Rhinophoridae, Sarcophagidae) of Colombia. <italic>Biota Colombiana</italic>, 5: 201-208.</mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Pape</surname>
+							<given-names>T.</given-names>
+						</name>
+						<name>
+							<surname>Wolff</surname>
+							<given-names>M.</given-names>
+						</name>
+						<name>
+							<surname>Amat</surname>
+							<given-names>E.</given-names>
+						</name>
+					</person-group>
+					<year>2004</year>
+					<article-title>The blow flies, bot flies, woodlouse flies and flesh flies (Diptera: Calliphoridae, Oestridae, Rhinophoridae, Sarcophagidae) of Colombia</article-title>
+					<source>Biota Colombiana</source>
+					<volume>5</volume>
+					<fpage>201</fpage>
+					<lpage>208</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B13">
+				<mixed-citation>Thompson, F.C. 2008. The díptera site. The biosystematic database of world díptera. Nomenclátor status statistics. Versión 10.5. (<comment> (<ext-link ext-link-type="uri" xlink:href="http://www.sel.barc.usda.gov/diptera/names/Status/bdwdstat.htm">http://www.sel.barc.usda.gov/diptera/names/Status/bdwdstat.htm</ext-link>
+					</comment>) Accessed on 26/01/2018. </mixed-citation>
+				<element-citation publication-type="database">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Thompson</surname>
+							<given-names>F.C.</given-names>
+						</name>
+					</person-group>
+					<year>2008</year>
+					<source>The díptera site. The biosystematic database of world díptera. Nomenclátor status statistics</source>
+					<version>10.5</version>
+					<comment> (<ext-link ext-link-type="uri" xlink:href="http://www.sel.barc.usda.gov/diptera/names/Status/bdwdstat.htm">http://www.sel.barc.usda.gov/diptera/names/Status/bdwdstat.htm</ext-link>
+					</comment>
+					<date-in-citation content-type="access-date" iso-8601-date="2018-01-26">26/01/2018</date-in-citation>
+				</element-citation>
+			</ref>
+			<ref id="B14">
+				<mixed-citation>Vargas, J.; Wood, D.M. 2010. Calliphoridae (blow flies). In: Brown, B.V.; Borkent, A.; Cumming, J.M.; Wood, M.D.; Woodley, N.E.; Zumbado, M.A. (Ed.). <italic>Manual of Central American Diptera</italic>. v.2. National Research Council of Canada, Monograph Publishing Program, Ottawa, p.1297-1304.</mixed-citation>
+				<element-citation publication-type="book">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Vargas</surname>
+							<given-names>J.</given-names>
+						</name>
+						<name>
+							<surname>Wood</surname>
+							<given-names>D.M.</given-names>
+						</name>
+					</person-group>
+					<year>2010</year>
+					<chapter-title>Calliphoridae (blow flies)</chapter-title>
+					<person-group person-group-type="editor">
+						<name>
+							<surname>Brown</surname>
+							<given-names>B.V.</given-names>
+						</name>
+						<name>
+							<surname>Borkent</surname>
+							<given-names>A.</given-names>
+						</name>
+						<name>
+							<surname>Cumming</surname>
+							<given-names>J.M.</given-names>
+						</name>
+						<name>
+							<surname>Wood</surname>
+							<given-names>M.D.</given-names>
+						</name>
+						<name>
+							<surname>Woodley</surname>
+							<given-names>N.E.</given-names>
+						</name>
+						<name>
+							<surname>Zumbado</surname>
+							<given-names>M.A.</given-names>
+						</name>
+					</person-group>
+					<source>Manual of Central American Diptera</source>
+					<volume>2</volume>
+					<publisher-name>National Research Council of Canada, Monograph Publishing Program</publisher-name>
+					<publisher-loc>Ottawa</publisher-loc>
+					<fpage>1297</fpage>
+					<lpage>1304</lpage>
+				</element-citation>
+			</ref>
+			<ref id="B15">
+				<mixed-citation>Wolff, M.; Kosmann, C. 2016. Families Calliphoridae and Mesembrinellidae. <italic>Zootaxa</italic>, 4122: 856-875.</mixed-citation>
+				<element-citation publication-type="journal">
+					<person-group person-group-type="author">
+						<name>
+							<surname>Wolff</surname>
+							<given-names>M.</given-names>
+						</name>
+						<name>
+							<surname>Kosmann</surname>
+							<given-names>C.</given-names>
+						</name>
+					</person-group>
+					<year>2016</year>
+					<article-title>Families Calliphoridae and Mesembrinellidae</article-title>
+					<source>Zootaxa</source>
+					<volume>4122</volume>
+					<fpage>856</fpage>
+					<lpage>875</lpage>
+				</element-citation>
+			</ref>
+		</ref-list>
+		<fn-group>
+			<fn fn-type="other" id="fn2">
+				<label>CITE AS:</label>
+				<p> Ramos-Pastrana, Y.; Córdoba-Suarez, E.; Wolff, M. 2019. New record of Blepharicnema splendens (Diptera, Calliphoridae, Luciliini) and range expansion in Caquetá, Colombia. <italic>Acta Amazonica</italic> 49: 242-245.</p>
+			</fn>
+		</fn-group>
+	</back>
+</article>

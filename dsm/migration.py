@@ -49,14 +49,29 @@ def register_documents(pub_year=None, updated_from=None, updated_to=None):
     _docs_manager = DocsManager(_files_storage, _db_url, _v3_manager)
 
     _migration_manager.db_connect()
+
+    registered_xml = 0
+    registered_metadata = 0
+
     for doc in _select_docs(pub_year, updated_from, updated_to):
-        zip_file_path = _migration_manager.register_old_website_document_files(
-            doc._id)
-        if os.path.isfile(zip_file_path) and doc.file_type == "xml":
+        zip_file_path = None
+        try:
+            zip_file_path = _migration_manager.register_old_website_document_files(
+                doc._id)
+        except Exception as e:
+            print("Unable to create document files zip for %s" % doc._id)
+            print(e)
+
+        if doc.file_type == "xml" and zip_file_path and os.path.isfile(zip_file_path):
             _register_package(_docs_manager, zip_file_path, doc)
+            print("Document %s was published using XML data" % doc._id)
+            registered_xml += 1
         else:
-            print(doc._id)
             _migration_manager.update_website_document_metadata(doc._id)
+            registered_metadata += 1
+            print("Document %s was published using metadata" % doc._id)
+    print("Published with XML: ", registered_xml)
+    print("Published with metadata: ", registered_metadata)
 
 
 def _register_package(_docs_manager, zip_file_path, doc):
