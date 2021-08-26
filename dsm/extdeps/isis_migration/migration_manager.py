@@ -707,7 +707,8 @@ def _update_journal_with_isis_data(journal, f_journal):
     # journal.logo_url = f_journal.attr
 
     # TODO
-    # journal.current_status = f_journal.current_status
+    if f_journal.current_status == "C":
+        journal.current_status = "current"
     journal.editor_email = f_journal.email
 
     journal.index_at = f_journal.index_at
