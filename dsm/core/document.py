@@ -39,7 +39,6 @@ class DocsManager:
     def db_connect(self):
         db.mk_connection(self._db_url)
 
-
     def get_zip_document_package(self, v3):
         """
         Get uri of zip document package or
@@ -79,7 +78,6 @@ class DocsManager:
                     "name": document_package.file.name,
                 }
 
-
     def get_doc_packages(self, source):
         """
         Get documents' package
@@ -96,8 +94,7 @@ class DocsManager:
         # obtém do pacote os arquivos de cada documento
         return packages.explore_source(source)
 
-
-    def receive_package(self, source):
+    def store_received_package(self, source, _id, annotation=None):
         """
         Receive package
 
@@ -111,8 +108,12 @@ class DocsManager:
         dict
         """
         # armazena o zip
-        docfiles.register_received_package(self._files_storage, source)
-
+        docfiles.register_received_package(
+            self._files_storage,
+            source,
+            _id,
+            annotation,
+        )
 
     def _fetch_document(self, xml_sps, pid_v2):
         _ids = (
@@ -128,7 +129,6 @@ class DocsManager:
             doc = db.fetch_document(_id)
             if doc:
                 return doc
-        
 
     def register_document(self, doc_pkg, pid_v2, old_name, issue_id, is_new_document=False):
         """

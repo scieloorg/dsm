@@ -210,8 +210,9 @@ def create_remote_and_local_file(remote, local, annotation=None):
         )
 
 
-def register_received_package(uri, name, annotation=None):
+def register_received_package(_id, uri, name, annotation=None):
     received = v2_models.ReceivedPackage()
+    received._id = _id
     received.file = create_remote_and_local_file(uri, name, annotation)
     return save_data(received)
 

@@ -7,7 +7,8 @@ from zipfile import ZipFile
 from dsm.utils import (
     xml_utils,
     files,
-    requests,
+    reqs,
+    async_download,
 )
 from dsm.core.sps_package import (
     SPS_Package,
@@ -23,22 +24,25 @@ def build_zip_package(files_storage, record):
 
     # get uri and filename of assets and renditions
     assets = _get_assets_to_zip(xml_sps)
+
     renditions = _get_renditions_to_zip(record)
 
     files_storage_folder = _get_files_storage_folder(
         issn=xml_sps.issn,
         scielo_pid_v3=xml_sps.scielo_pid_v3,
         prefix=configuration.MINIO_SPF_DIR)
+
     xml_uri_and_name = register_xml(
         files_storage,
         files_storage_folder,
         xml_sps)
 
-    uri_and_file_items = (
+    uris_and_names = (
         [xml_uri_and_name] + assets + renditions
     )
+
     # create zip file
-    zip_file_path = _zip_files(xml_sps, uri_and_file_items)
+    zip_file_path = _zip_files(f"{xml_sps.package_name}.zip", uris_and_names)
 
     # publish zip file in the files storage
     uri_and_name = files_storage_register(
@@ -52,7 +56,12 @@ def build_zip_package(files_storage, record):
 
     data = {}
     data['xml'] = xml_uri_and_name
+
+    # FIXME - alguns valores que deveriam ser uri são nome de arquivos
+    # isso dá erro ao salvar o registro
+    assets = [a for a in assets if a["uri"].startswith("http")]
     data['assets'] = assets
+
     data['renditions'] = renditions
     data['file'] = uri_and_name
 
@@ -96,7 +105,9 @@ def _get_xml_to_zip(document):
     dsm.data.sps_package.SPS_Package
     """
     # get XML file
-    xml_sps = SPS_Package(requests.requests_get_content(document.xml))
+    content = reqs.requests_get_content(document.xml)
+
+    xml_sps = SPS_Package(content)
 
     # change assets uri
     xml_sps.assets.remote_to_local(xml_sps.package_name)
@@ -148,7 +159,7 @@ def _get_renditions_to_zip(document):
     return uris_and_filenames
 
 
-def _zip_files(xml_sps, uri_and_file_items):
+def _zip_files(zip_name, uris_and_names):
     """
     Create zip file
 
@@ -163,12 +174,13 @@ def _zip_files(xml_sps, uri_and_file_items):
     """
 
     # create zip file
-    temp_dir = tempfile.mkdtemp()
-    zip_file_path = os.path.join(temp_dir, f"{xml_sps.package_name}.zip")
-    files.download_files_and_create_zip_file(
-        zip_file_path,
-        uri_and_file_items)
-    return zip_file_path
+    uris_and_names = [
+        item
+        for item in uris_and_names
+        if item["uri"].startswith("http")
+    ]
+    downloaded_files = async_download.download_files(uris_and_names)
+    return files.create_zip_file(downloaded_files, zip_name)
 
 
 def register_document_files(files_storage, doc_package, xml_sps,
@@ -381,7 +393,7 @@ def files_storage_register(files_storage, files_storage_folder,
         )
 
 
-def register_received_package(files_storage, pkg_path):
+def register_received_package(files_storage, pkg_path, _id, annotation=None):
     """
 
     Raises
@@ -411,7 +423,9 @@ def register_received_package(files_storage, pkg_path):
             zip_path,
             zip_name,
         )
-        db.register_received_package(**uri_and_name)
+        db.register_received_package(
+            _id, uri_and_name["uri"], uri_and_name["name"],
+            annotation=annotation)
     else:
         raise exceptions.ReceivedPackageRegistrationError(
             f"Unable to register {pkg_path}")
