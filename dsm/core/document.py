@@ -63,20 +63,25 @@ class DocsManager:
         document_package = db.fetch_document_package(v3)
 
         if not document_package:
-            doc = db.fetch_document(v3)
-            if not doc:
-                raise exceptions.DocumentDoesNotExistError(
-                    f"Document {v3} does not exist"
-                )
-            data = docfiles.build_zip_package(self._files_storage, doc)
-            document_package = db.register_document_package(v3, data)
+            document_package = self.update_document_package(v3)
 
         if document_package:
             if document_package.file:
                 return {
                     "uri": document_package.file.uri,
                     "name": document_package.file.name,
+                    "created": document_package.created,
+                    "updated": document_package.updated
                 }
+
+    def update_document_package(self, v3):
+        doc = db.fetch_document(v3)
+        if not doc:
+            raise exceptions.DocumentDoesNotExistError(
+                f"Document {v3} does not exist"
+            )
+        data = docfiles.build_zip_package(self._files_storage, doc)
+        return db.register_document_package(v3, data)
 
     def get_doc_packages(self, source):
         """
