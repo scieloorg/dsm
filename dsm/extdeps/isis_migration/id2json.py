@@ -188,22 +188,17 @@ def _save_records(records, curr_filename, prev_filename, output_file_path):
     return records
 
 
-def read_large_file(input_file_path, encoding="utf-8"):
-    with open(input_file_path, "r", encoding=encoding) as fp:
-        for row in fp.read().splitlines():
-            yield row
-
-
 def read_id_file(input_file_path):
     rows = []
-    for row in read_large_file(input_file_path, encoding="iso-8859-1"):
-        if row.startswith("!ID "):
-            if len(rows):
-                yield "\n".join(rows)
-                rows = []
-        else:
-            rows.append(row)
-    yield "\n".join(rows)
+    with open(input_file_path, "r", encoding="iso-8859-1") as fp:
+        for row in fp:
+            if row.startswith("!ID "):
+                if len(rows):
+                    yield "\n".join(rows)
+                    rows = []
+            else:
+                rows.append(row.strip())
+        yield "\n".join(rows)
 
 
 def get_json_records(input_file_path, get_id_function):
