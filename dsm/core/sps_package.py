@@ -613,7 +613,7 @@ class Identity:
         fpage = self.fpage
         if self.fpage_seq:
             fpage += self.fpage_seq
-        last_item = (fpage or self.elocation_id or self.order or doi).zfill(5)
+        last_item = str(fpage or self.elocation_id or self.order or doi).zfill(5)
 
         data = (
             self.issn,
