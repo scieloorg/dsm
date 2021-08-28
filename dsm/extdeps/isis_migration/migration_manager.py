@@ -471,7 +471,7 @@ def _update_document_with_isis_data(document, f_document, issue):
 
     _set_issue_data(document, issue)
     _set_order(document, f_document)
-    # _set_renditions(document, registered_renditions)
+    _set_renditions(document, f_document)
     # _set_xml_url(document, registered_xml)
     _set_ids(document, f_document)
     _set_is_public(document, is_public=True)
@@ -489,9 +489,8 @@ def _set_order(article, f_document):
     article.order = int(f_document.order)
 
 
-def _set_renditions(article, renditions):
-    # TODO
-    article.pdfs = renditions
+def _set_renditions(article, f_document):
+    article.pdfs = f_document.pdfs
 
 
 def _set_xml_url(article, xml_url):
