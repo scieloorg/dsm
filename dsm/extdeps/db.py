@@ -257,7 +257,7 @@ def _set_document_package_file_paths(article_files, data):
     for item in data["assets"]:
         assets.append(
             create_remote_and_local_file(
-                item['uri'], 
+                item['uri'],
                 item['name']
             )
         )
