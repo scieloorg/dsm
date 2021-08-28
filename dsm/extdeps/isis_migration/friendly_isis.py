@@ -455,6 +455,48 @@ def complete_uri(text, website_url):
     return text.replace("/img/revistas", f"{website_url}/img/revistas")
 
 
+class FriendlyISISParagraphs:
+    """
+    Interface amigável para obter os dados da base isis
+    que estão no formato JSON
+    """
+    def __init__(self, _id, records):
+        self._id = _id
+        self._records = records
+        self.set_paragraphs()
+
+    @property
+    def before_references(self):
+        return self._before_refs
+
+    @property
+    def references(self):
+        return self._refs
+
+    @property
+    def after_references(self):
+        return self._before_refs
+
+    def set_paragraphs(self):
+        self._before_refs = []
+        self._refs = []
+        self._after_refs = []
+        _list = self._before_refs
+        for rec in self._records:
+            rec_type = _get_value(rec, "v706")
+            if rec_type != "p":
+                continue
+            text = _get_value(rec, "v704").get("_") or ""
+            ref_id = _get_value(rec, "v888")
+            if ref_id:
+                _list = self._refs
+            elif _refs:
+                _list = self._after_refs
+            else:
+                _list = self._before_refs
+            _list.append(text)
+
+
 class FriendlyISISJournal:
     """
     Interface amigável para obter os dados da base isis
