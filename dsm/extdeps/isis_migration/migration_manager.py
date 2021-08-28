@@ -341,7 +341,7 @@ class MigrationManager:
         return docs
 
 
-def _get_document_files(f_doc, main_language, issn):
+def _get_document_files(isis_doc, main_language, issn):
     """
     BASES_XML_PATH,
     BASES_PDF_PATH,
@@ -349,26 +349,26 @@ def _get_document_files(f_doc, main_language, issn):
     HTDOCS_IMG_REVISTAS_PATH,
     """
     subdir_acron_issue = os.path.join(
-        f_doc.acron, f_doc.issue_folder)
+        isis_doc.acron, isis_doc.issue_folder)
 
     pdf_locations = _get_pdf_files_locations(
-        subdir_acron_issue, f_doc.file_name, main_language)
-    _set_pdfs(f_doc, pdf_locations)
+        subdir_acron_issue, isis_doc.file_name, main_language)
+    _set_pdfs(isis_doc, pdf_locations)
 
     asset_locations = _get_asset_files_locations(
-        subdir_acron_issue, f_doc.file_name)
-    _set_assets(f_doc, asset_locations)
+        subdir_acron_issue, isis_doc.file_name)
+    _set_assets(isis_doc, asset_locations)
 
     # TODO
-    # f_doc.translations = DictField()
+    # isis_doc.translations = DictField()
     translations_locations = []
     xml_location = []
-    if f_doc.file_type == "xml":
+    if isis_doc.file_type == "xml":
         xml = _get_xml_location(
-            subdir_acron_issue, f_doc.file_name)
+            subdir_acron_issue, isis_doc.file_name)
         if xml:
             xml_location.append(xml)
-    f_doc.status = "2"
+    isis_doc.status = "2"
     return (
         list(pdf_locations.values()) +
         asset_locations +
@@ -378,7 +378,7 @@ def _get_document_files(f_doc, main_language, issn):
 
 
 def _register_migrated_document_files_zipfile(
-        files_storage, files_storage_folder, f_doc, zip_file_path):
+        files_storage, files_storage_folder, isis_doc, zip_file_path):
     try:
         uri_and_name = files_storage_register(
             files_storage,
@@ -386,9 +386,9 @@ def _register_migrated_document_files_zipfile(
             zip_file_path,
             os.path.basename(zip_file_path),
             preserve_name=True)
-        f_doc.zipfile = db.create_remote_and_local_file(
+        isis_doc.zipfile = db.create_remote_and_local_file(
             remote=uri_and_name["uri"], local=uri_and_name["name"])
-        f_doc.status = "3"
+        isis_doc.status = "3"
     except Exception as e:
         # TODO melhorar retorno sobre registro de pacote zip
         print(e)
@@ -406,11 +406,11 @@ def _get_xml_location(subdir_acron_issue, file_name):
         raise FileNotFoundError("Not found %s" % xml_file_path)
 
 
-def _set_pdfs(f_doc, pdf_locations):
+def _set_pdfs(isis_doc, pdf_locations):
     pdfs = {}
     for lang, pdf_path in pdf_locations.items():
         pdfs[lang] = os.path.basename(pdf_path)
-    f_doc.pdfs = pdfs
+    isis_doc.pdfs = pdfs
 
 
 def _get_pdf_files_locations(subdir_acron_issue, file_name, main_lang):
@@ -437,8 +437,8 @@ def _get_pdf_files_locations(subdir_acron_issue, file_name, main_lang):
     return files
 
 
-def _set_assets(f_doc, asset_locations):
-    f_doc.assets = [
+def _set_assets(isis_doc, asset_locations):
+    isis_doc.assets = [
         os.path.basename(asset_path)
         for asset_path in asset_locations
     ]
