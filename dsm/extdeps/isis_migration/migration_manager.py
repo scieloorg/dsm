@@ -348,15 +348,15 @@ def _get_document_files(f_doc, main_language, issn):
     BASES_TRANSLATION_PATH,
     HTDOCS_IMG_REVISTAS_PATH,
     """
-    subdir_acron_issue_folder = os.path.join(
+    subdir_acron_issue = os.path.join(
         f_doc.acron, f_doc.issue_folder)
 
     pdf_locations = _get_pdf_files_locations(
-        subdir_acron_issue_folder, f_doc.file_name, main_language)
+        subdir_acron_issue, f_doc.file_name, main_language)
     _set_pdfs(f_doc, pdf_locations)
 
     asset_locations = _get_asset_files_locations(
-        subdir_acron_issue_folder, f_doc.file_name)
+        subdir_acron_issue, f_doc.file_name)
     _set_assets(f_doc, asset_locations)
 
     # TODO
@@ -365,7 +365,7 @@ def _get_document_files(f_doc, main_language, issn):
     xml_location = []
     if f_doc.file_type == "xml":
         xml = _get_xml_location(
-            subdir_acron_issue_folder, f_doc.file_name)
+            subdir_acron_issue, f_doc.file_name)
         if xml:
             xml_location.append(xml)
     f_doc.status = "2"
@@ -394,11 +394,11 @@ def _register_migrated_document_files_zipfile(
         print(e)
 
 
-def _get_xml_location(subdir_acron_issue_folder, file_name):
+def _get_xml_location(subdir_acron_issue, file_name):
     try:
         xml_file_path = os.path.join(
             BASES_XML_PATH,
-            subdir_acron_issue_folder,
+            subdir_acron_issue,
             f"{file_name}.xml"
         )
         return glob.glob(xml_file_path)[0]
@@ -413,13 +413,13 @@ def _set_pdfs(f_doc, pdf_locations):
     f_doc.pdfs = pdfs
 
 
-def _get_pdf_files_locations(subdir_acron_issue_folder, file_name, main_lang):
+def _get_pdf_files_locations(subdir_acron_issue, file_name, main_lang):
     files = {}
     for pattern in (f"{file_name}.pdf", f"??_{file_name}.pdf"):
         paths = glob.glob(
             os.path.join(
                 BASES_PDF_PATH,
-                subdir_acron_issue_folder,
+                subdir_acron_issue,
                 pattern
             )
         )
@@ -444,11 +444,11 @@ def _set_assets(f_doc, asset_locations):
     ]
 
 
-def _get_asset_files_locations(subdir_acron_issue_folder, file_name):
+def _get_asset_files_locations(subdir_acron_issue, file_name):
     return glob.glob(
         os.path.join(
             HTDOCS_IMG_REVISTAS_PATH,
-            subdir_acron_issue_folder,
+            subdir_acron_issue,
             f"{file_name}*.*"
         )
     )
