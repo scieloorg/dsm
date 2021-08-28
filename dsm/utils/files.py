@@ -36,6 +36,11 @@ def read_file(path, encoding="utf-8"):
     return text
 
 
+def read_from_zipfile(zip_path, filename):
+    with ZipFile(zip_path) as zf:
+        return zf.read(filename)
+
+
 def xml_files_list_from_zipfile(zip_path):
     with ZipFile(zip_path) as zf:
         xmls_filenames = [
@@ -104,3 +109,11 @@ def date_now_as_folder_name():
     # >>> datetime.now().isoformat()
     # >>> '2021-08-11T17:54:50.556715'
     return datetime.now().isoformat().replace(":", "")
+
+
+def create_temp_file(filename, content):
+    file_path = tempfile.mkdtemp()
+    file_path = os.path.join(file_path, filename)
+    write_file(file_path, content)
+    return file_path
+
