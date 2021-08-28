@@ -238,3 +238,9 @@ def id2json_file(input_file_path, output_file_path, get_id_function,
                  get_file_path_function):
     for records in get_json_records(input_file_path, get_id_function):
         save_json_files(records, output_file_path, get_file_path_function)
+
+
+def get_paragraphs_records(paragraphs_id_file_path):
+    if os.path.isfile(paragraphs_id_file_path):
+        _id, p_records = get_json_records(paragraphs_id_file_path, article_id)
+        return p_records
