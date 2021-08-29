@@ -28,6 +28,10 @@ BASES_TRANSLATION_PATH = os.environ.get("BASES_TRANSLATION_PATH")
 HTDOCS_IMG_REVISTAS_PATH = os.environ.get("HTDOCS_IMG_REVISTAS_PATH")
 
 
+def get_files_storage_folder_for_pdfs(issn, issue_folder):
+    return os.path.join("pdfs", issn, issue_folder)
+
+
 def get_http_client():
     if not MINIO_TIMEOUT:
         raise ValueError(
