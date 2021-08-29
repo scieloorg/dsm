@@ -328,7 +328,7 @@ class MigrationManager:
                     file_path, folder, text["filename"], preserve_name=True
                 )
                 # atualiza com a uri o valor de htmls
-                html.update({"uri": uri})
+                html.update({"url": uri})
             except:
                 pass
             htmls.append(html)
