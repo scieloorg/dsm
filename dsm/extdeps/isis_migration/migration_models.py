@@ -65,6 +65,10 @@ class ISISDocument(Document):
         ],
     }
 
+    @property
+    def journal_pid(self):
+        return self.id[1:10]
+
     def save(self, *args, **kwargs):
         if not self.created:
             self.created = datetime.now()
