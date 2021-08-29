@@ -127,6 +127,8 @@ def issue_id(data):
 
 def article_id(data):
     record_type = _get_value(data, 'v706')
+    if not record_type:
+        return
     if record_type == "i":
         return issue_id(data)
     try:
@@ -215,6 +217,7 @@ def get_json_records(input_file_path, get_id_function):
             _id = get_id_function(data)
             items.setdefault(_id, [])
             items[_id].append(data)
+
         except:
             raise
     return ((k, v) for k, v in items.items())
@@ -242,5 +245,7 @@ def id2json_file(input_file_path, output_file_path, get_id_function,
 
 def get_paragraphs_records(paragraphs_id_file_path):
     if os.path.isfile(paragraphs_id_file_path):
-        _id, p_records = get_json_records(paragraphs_id_file_path, article_id)
-        return p_records
+        for _id, records in get_json_records(paragraphs_id_file_path, article_id):
+            if not _id:
+                continue
+            return records
