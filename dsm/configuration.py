@@ -1,5 +1,6 @@
 import os
 import urllib3
+import glob
 
 # collection
 MINIO_SCIELO_COLLECTION = os.environ.get("MINIO_SCIELO_COLLECTION")
@@ -102,12 +103,15 @@ def get_cisis_path():
 
 
 def check_migration_sources():
+
     if not HTDOCS_IMG_REVISTAS_PATH:
         raise ValueError("Missing configuration: HTDOCS_IMG_REVISTAS_PATH")
     if not BASES_PDF_PATH:
         raise ValueError("Missing configuration: BASES_PDF_PATH")
     if not BASES_XML_PATH:
         raise ValueError("Missing configuration: BASES_XML_PATH")
+    if not BASES_TRANSLATION_PATH:
+        raise ValueError("Missing configuration: BASES_TRANSLATION_PATH")
     if not os.path.isdir(HTDOCS_IMG_REVISTAS_PATH):
         raise ValueError("HTDOCS_IMG_REVISTAS_PATH must be a directory")
     if not os.path.isdir(BASES_PDF_PATH):
@@ -149,3 +153,7 @@ def get_translation_files_paths(subdir_acron_issue, file_name):
             files.setdefault(lang, [])
             files[lang].append(path)
     return files
+
+
+def get_files_storage_folder_for_htmls(issn, issue_folder):
+    return os.path.join("htmls", issn, issue_folder)
