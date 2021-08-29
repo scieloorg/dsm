@@ -58,6 +58,7 @@ def register_documents(pub_year=None, updated_from=None, updated_to=None):
         try:
             zip_file_path = _migration_manager.register_old_website_document_files(
                 doc._id)
+            print(zip_file_path)
         except Exception as e:
             print("Unable to create document files zip for %s" % doc._id)
             print(e)
@@ -68,6 +69,7 @@ def register_documents(pub_year=None, updated_from=None, updated_to=None):
             registered_xml += 1
         else:
             _migration_manager.update_website_document_metadata(doc._id)
+            _migration_manager.update_website_document_pdfs(doc._id)
             registered_metadata += 1
             print("Document %s was published using metadata" % doc._id)
     print("Published with XML: ", registered_xml)

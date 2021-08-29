@@ -3,7 +3,10 @@ import glob
 
 from scielo_v3_manager.v3_gen import generates
 
-from dsm.utils.files import create_zip_file
+from dsm.utils.async_download import download_files
+from dsm.utils.files import (
+    create_zip_file, read_from_zipfile, create_temp_file,
+)
 from dsm.configuration import (
     BASES_XML_PATH,
     BASES_PDF_PATH,
@@ -12,6 +15,7 @@ from dsm.configuration import (
     check_migration_sources,
     get_files_storage,
     get_db_url,
+    get_files_storage_folder_for_pdfs,
 )
 from dsm.core.issue import get_bundle_id
 from dsm.core.document import (
@@ -339,6 +343,63 @@ class MigrationManager:
                 updated_from, updated_to)
             print(len(docs))
         return docs
+
+    def update_website_document_pdfs(self, article_pid):
+        """
+        Update the website document pdfs
+
+        Get texts from paragraphs records and from translations files
+            registered in `isis_doc`
+        Build the HTML files and register them in the files storage
+        Update the `document.pdfs` with lang and uri
+
+        Parameters
+        ----------
+        article_pid : str
+
+        Returns
+        -------
+        dict
+        """
+        # obtém os dados de artigo
+        migrated = MigratedDocument(article_pid)
+
+        # cria ou recupera o registro de documento do website
+        document = db.fetch_document(article_pid)
+        if not document:
+            raise exceptions.DocumentDoesNotExistError(
+                "Document %s does not exist" % article_pid
+            )
+
+        # cria arquivos html com o conteúdo obtido dos arquivos html e
+        # dos registros de parágrafos
+        pdfs = []
+        for pdf in migrated.pdfs:
+            # obtém os conteúdos de html registrados em `isis_doc`
+            file_path = create_temp_file(pdf["filename"], pdf["content"], "wb")
+            # obtém a localização do arquivo no `files storage`
+            folder = get_files_storage_folder_for_pdfs(
+                migrated.journal_pid, migrated.issue_folder,
+            )
+            _pdf = {
+                "lang": pdf["lang"],
+                "type": "pdf",
+                "filename": pdf["filename"],
+            }
+            try:
+                # registra no files storage
+                uri = self._files_storage.register(
+                    file_path, folder, pdf["filename"], preserve_name=True
+                )
+                # atualiza com a uri o valor de pdfs
+                _pdf.update({"url": uri})
+            except:
+                pass
+            pdfs.append(_pdf)
+        document.pdfs = pdfs
+
+        # salva os dados
+        return db.save_data(document)
 
 
 def _get_document_files(f_doc, main_language, issn):
@@ -763,3 +824,152 @@ def _update_journal_with_isis_data(journal, f_journal):
     journal.unpublish_reason = f_journal.unpublish_reason
 
     # journal.url_segment = f_journal.url_segment
+
+
+class MigratedDocument:
+
+    def __init__(self, _id):
+        self._id = _id
+        self._isis_document = db.fetch_isis_document(_id)
+        if not self._isis_document:
+            raise exceptions.DBFetchDocumentError("%s is not migrated" % _id)
+        self._f_doc = friendly_isis.FriendlyISISDocument(
+            _id, self._isis_document.records)
+        self._zipfile_path = None
+        try:
+            if self._isis_document.zipfile:
+                self._zipfile_path = download_files(
+                    [self._isis_document.zipfile])[0]
+                print(self._zipfile_path)
+        except:
+            print("Unable to get %s" % self._isis_document.zipfile)
+            raise
+
+    @property
+    def file_name(self):
+        return self._isis_document.file_name
+
+    @property
+    def issue_folder(self):
+        return self._isis_document.issue_folder
+
+    @property
+    def acron(self):
+        return self._isis_document.acron
+
+    @property
+    def journal_pid(self):
+        return self._id[1:10]
+
+    @property
+    def html_paragraphs(self):
+        return friendly_isis.FriendlyISISParagraphs(
+            self._isis_document._id,
+            self._isis_document.records)
+
+    @html_paragraphs.setter
+    def html_paragraphs(self, p_records):
+        """
+        Register migrated document html paragraphs, if apply
+
+        Parameters
+        ----------
+        _id: str
+
+        Returns
+        -------
+        str
+            _id
+
+        Raises
+        ------
+            TypeError
+            PermissionError
+        """
+        if self._isis_document.file_type == "xml":
+            raise TypeError("XML does not have HTML paragraphs")
+        if not p_records:
+            raise ValueError(
+                "Unable to set html_paragraphs: paragraph records not found")
+        doc_paragraphs = friendly_isis.FriendlyISISParagraphs(
+            self._isis_document._id,
+            self._isis_document.records)
+        doc_paragraphs.replace_paragraphs(p_records)
+
+    @property
+    def pdfs(self):
+        _pdfs = []
+        if self._zipfile_path:
+            for lang, file in self._isis_document.pdfs.items():
+                _pdf = {}
+                _pdf["lang"] = lang
+                _pdf["filename"] = file
+                _pdf["type"] = "pdf"
+                _pdf["content"] = read_from_zipfile(self._zipfile_path, file)
+                _pdfs.append(_pdf)
+        return _pdfs
+
+    @property
+    def translations(self):
+        return self._isis_document.translations
+
+    @translations.setter
+    def translations(self, translations_paths):
+        _translations = {}
+        for lang, translation_path in translations_paths.items():
+            _translations[lang] = [
+                os.path.basename(path) for path in translation_path]
+        self._isis_document.translations = _translations
+
+    @property
+    def html_texts(self):
+        if self._isis_document.file_type == "xml":
+            return []
+        texts = []
+        paragraphs = self.html_paragraphs
+        text = {
+            "lang": self._f_doc.language,
+            "filename": self._isis_document.file_name + ".html",
+            "text": paragraphs.text,
+        }
+        texts.append(text)
+
+        for transl_text in self.translated_texts:
+            text = {
+                "lang": transl_text["lang"],
+                "filename": transl_text["filename"],
+            }
+            text["text"] = transl_text["text"][0]
+            if paragraphs.references:
+                text["text"] += "".join(paragraphs.references)
+            if len(transl_text["text"]) > 1:
+                text["text"] += transl_text["text"][1]
+            texts.append(text)
+        return texts
+
+    @property
+    def translated_texts(self):
+        texts = []
+        if self._isis_document.translations and self._isis_document.zipfile:
+            try:
+                zipfile_path = download_files([self._isis_document.zipfile])[0]
+            except:
+                print("Unable to get %s" % zipfile_path)
+            else:
+                for lang, files in self._isis_document.translations.items():
+                    text = {}
+                    text["lang"] = lang
+                    text["filename"] = files[0] + ".html"
+                    text["text"] = []
+                    for file in files:
+                        text["text"].append(
+                            read_from_zipfile(
+                                zipfile_path, file
+                            ).decode("iso-8859-1")
+                        )
+                    texts.append(text)
+        return texts
+
+    def save(self):
+        # salva o documento
+        return db.save_data(self._isis_document)
