@@ -6,15 +6,11 @@ from scielo_v3_manager.v3_gen import generates
 from dsm.utils.async_download import download_files
 from dsm.utils.files import create_zip_file, create_temp_file, read_from_zipfile
 from dsm.configuration import (
-    BASES_XML_PATH,
-    BASES_PDF_PATH,
-    BASES_TRANSLATION_PATH,
-    HTDOCS_IMG_REVISTAS_PATH,
     check_migration_sources,
     get_files_storage,
     get_db_url,
     get_paragraphs_id_file_path,
-    get_translation_files_paths,
+    DocumentFilesAtOldWebsite,
     get_files_storage_folder_for_htmls,
 )
 from dsm.core.issue import get_bundle_id
@@ -105,7 +101,7 @@ class MigrationManager:
     def register_isis_document_html_paragraphs(self, _id):
         migrated = MigratedDocument(_id)
         migrated.translations = (
-            get_translation_files_paths(
+            get_bases_translation_files_paths(
                 os.path.join(migrated.acron, migrated.issue_folder),
                 migrated.file_name
             )
@@ -424,27 +420,24 @@ def _get_document_files(isis_doc, main_language, issn):
     subdir_acron_issue = os.path.join(
         isis_doc.acron, isis_doc.issue_folder)
 
-    pdf_locations = _get_pdf_files_locations(
+    old_website_files = DocumentFilesAtOldWebsite(
         subdir_acron_issue, isis_doc.file_name, main_language)
-    _set_pdfs(isis_doc, pdf_locations)
 
-    asset_locations = _get_asset_files_locations(
-        subdir_acron_issue, isis_doc.file_name)
-    _set_assets(isis_doc, asset_locations)
+    _set_pdfs(isis_doc, old_website_files.pdf_locations)
+
+    _set_assets(isis_doc, old_website_files.htdocs_img_revistas_files_paths)
 
     # TODO
     # isis_doc.translations = DictField()
     translations_locations = []
     xml_location = []
     if isis_doc.file_type == "xml":
-        xml = _get_xml_location(
-            subdir_acron_issue, isis_doc.file_name)
+        xml = old_website_files.bases_xml_file_path
         if xml:
             xml_location.append(xml)
     else:
         # HTML Traduções
-        translations_paths = get_translation_files_paths(
-            subdir_acron_issue, isis_doc.file_name)
+        translations_paths = old_website_files.bases_translation_files_paths
         translations_locations = []
         for lang, paths in translations_paths.items():
             translations_locations.extend(paths)
@@ -475,18 +468,6 @@ def _register_migrated_document_files_zipfile(
         print(e)
 
 
-def _get_xml_location(subdir_acron_issue, file_name):
-    try:
-        xml_file_path = os.path.join(
-            BASES_XML_PATH,
-            subdir_acron_issue,
-            f"{file_name}.xml"
-        )
-        return glob.glob(xml_file_path)[0]
-    except IndexError:
-        raise FileNotFoundError("Not found %s" % xml_file_path)
-
-
 def _set_pdfs(isis_doc, pdf_locations):
     pdfs = {}
     for lang, pdf_path in pdf_locations.items():
@@ -494,45 +475,11 @@ def _set_pdfs(isis_doc, pdf_locations):
     isis_doc.pdfs = pdfs
 
 
-def _get_pdf_files_locations(subdir_acron_issue, file_name, main_lang):
-    files = {}
-    for pattern in (f"{file_name}.pdf", f"??_{file_name}.pdf"):
-        paths = glob.glob(
-            os.path.join(
-                BASES_PDF_PATH,
-                subdir_acron_issue,
-                pattern
-            )
-        )
-        if not paths:
-            continue
-        if "_" in pattern:
-            # translations
-            for path in paths:
-                basename = os.path.basename(path)
-                lang = basename[:2]
-                files[lang] = path
-        else:
-            # main pdf
-            files[main_lang] = paths[0]
-    return files
-
-
 def _set_assets(isis_doc, asset_locations):
     isis_doc.assets = [
         os.path.basename(asset_path)
         for asset_path in asset_locations
     ]
-
-
-def _get_asset_files_locations(subdir_acron_issue, file_name):
-    return glob.glob(
-        os.path.join(
-            HTDOCS_IMG_REVISTAS_PATH,
-            subdir_acron_issue,
-            f"{file_name}*.*"
-        )
-    )
 
 
 def _update_document_with_isis_data(document, f_document, issue):

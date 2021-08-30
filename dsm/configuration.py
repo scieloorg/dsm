@@ -128,31 +128,118 @@ def get_paragraphs_id_file_path(article_pid):
     )
 
 
-def get_translation_files_paths(subdir_acron_issue, file_name):
-    """
-    Obtém os arquivos HTML de bases/translation/acron/volnum/*filename*
+class DocumentFilesAtOldWebsite:
 
-    Returns
-    -------
-    dict
-    {"en": ["en_a01.html", "en_ba01.html"],
-     "es": ["es_a01.html", "es_ba01.html"]}
-    """
-    files = {}
-    patterns = (f"??_{file_name}.htm*", f"??_b{file_name}.htm*")
-    for pattern in patterns:
-        paths = glob.glob(
-            os.path.join(BASES_TRANSLATION_PATH, subdir_acron_issue, pattern)
-        )
-        if not paths:
-            continue
-        # translations
-        for path in paths:
-            basename = os.path.basename(path)
-            lang = basename[:2]
-            files.setdefault(lang, [])
-            files[lang].append(path)
-    return files
+    def __init__(self, subdir_acron_issue, file_name, main_lang):
+        self._subdir_acron_issue = subdir_acron_issue
+        self._file_name = file_name
+        self._main_lang = main_lang
+        self._htdocs_img_revistas_files_paths = None
+        self._bases_translation_files_paths = None
+        self._bases_pdf_files_paths = None
+        self._bases_xml_file_path = None
+
+    @property
+    def bases_translation_files_paths(self):
+        """
+        Obtém os arquivos HTML de bases/translation/acron/volnum/*filename*
+
+        Returns
+        -------
+        dict
+        {"en": ["en_a01.html", "en_ba01.html"],
+         "es": ["es_a01.html", "es_ba01.html"]}
+        """
+        if self._bases_translation_files_paths is None:
+
+            files = {}
+            patterns = (f"??_{self._file_name}.htm*", f"??_b{self._file_name}.htm*")
+            for pattern in patterns:
+                paths = glob.glob(
+                    os.path.join(
+                        BASES_TRANSLATION_PATH, self._subdir_acron_issue, pattern)
+                )
+                if not paths:
+                    continue
+                # translations
+                for path in paths:
+                    basename = os.path.basename(path)
+                    lang = basename[:2]
+                    files.setdefault(lang, [])
+                    files[lang].append(path)
+            self._bases_translation_files_paths = files
+        return self._bases_translation_files_paths
+
+    @property
+    def bases_pdf_files_paths(self):
+        """
+        Obtém os arquivos PDFs de bases/pdf/acron/volnum/*filename*.pdf
+
+        Returns
+        -------
+        dict
+        {"pt": "a01.pdf",
+         "en": "en_a01.pdf",
+         "es": "es_a01.pdf"}
+        """
+        if self._bases_pdf_files_paths is None:
+            files = {}
+            for pattern in (f"{self._file_name}.pdf", f"??_{self._file_name}.pdf"):
+                paths = glob.glob(
+                    os.path.join(
+                        BASES_PDF_PATH,
+                        self._subdir_acron_issue,
+                        pattern
+                    )
+                )
+                if not paths:
+                    continue
+                if "_" in pattern:
+                    # translations
+                    for path in paths:
+                        basename = os.path.basename(path)
+                        lang = basename[:2]
+                        files[lang] = path
+                else:
+                    # main pdf
+                    files[self._main_lang] = paths[0]
+            self._bases_pdf_files_paths = files
+        return self._bases_pdf_files_paths
+
+    @property
+    def htdocs_img_revistas_files_paths(self):
+        """
+        Obtém os arquivos de imagens de
+        htdocs/img/revistas/acron/volnum/*filename*
+
+        Returns
+        -------
+        list
+            ["a01f01.jpg", "a01f02.jpg"],
+        """
+        if self._htdocs_img_revistas_files_paths is None:
+            self._htdocs_img_revistas_files_paths = glob.glob(
+                os.path.join(
+                    HTDOCS_IMG_REVISTAS_PATH,
+                    self._subdir_acron_issue,
+                    f"{self._file_name}*.*"
+                )
+            )
+        return self._htdocs_img_revistas_files_paths
+
+    @property
+    def bases_xml_file_path(self):
+        if self._bases_xml_file_path is None:
+            try:
+                xml_file_path = os.path.join(
+                    BASES_XML_PATH,
+                    self._subdir_acron_issue,
+                    f"{self._file_name}.xml"
+                )
+                self._bases_xml_file_path = glob.glob(xml_file_path)[0]
+            except IndexError:
+                raise FileNotFoundError("Not found %s" % xml_file_path)
+        return self._bases_xml_file_path
 
 
 def get_files_storage_folder_for_htmls(issn, issue_folder):
