@@ -337,7 +337,7 @@ class MigrationManager:
         # salva os dados
         return db.save_data(document)
 
-    def register_old_website_document_files(self, document_id):
+    def migrate_document_files(self, document_id):
         """
         Migrate document files
 

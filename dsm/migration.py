@@ -57,8 +57,7 @@ def register_documents(pub_year=None, updated_from=None, updated_to=None):
         zip_file_path = None
         try:
             # obtém os arquivos do site antigo (xml, pdf, html, imagens)
-            zip_file_path = _migration_manager.register_old_website_document_files(
-                doc._id)
+            zip_file_path = _migration_manager.migrate_document_files(doc._id)
             if doc.file_type != "xml":
                 # registra os textos completos marcados em HTML
                 # que provém de registros do tipo `p` e
