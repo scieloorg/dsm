@@ -44,6 +44,12 @@ class ISISDocument(Document):
     assets = ListField()
     translations = DictField()
     pdfs = DictField()
+
+    asset_files = EmbeddedDocumentListField(RemoteAndLocalFile)
+    html_files = EmbeddedDocumentListField(RemoteAndLocalFile)
+    pdf_files = EmbeddedDocumentListField(RemoteAndLocalFile)
+    xml_files = EmbeddedDocumentListField(RemoteAndLocalFile)
+
     zipfile = EmbeddedDocumentField(RemoteAndLocalFile)
 
     meta = {
