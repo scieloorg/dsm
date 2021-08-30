@@ -431,13 +431,14 @@ class FriendlyISISDocument:
 
     @property
     def abstract(self):
-        # TODO
-        return None
+        return self.abstracts.get(self.language)
 
     @property
     def abstracts(self):
-        # TODO
-        return {}
+        _abstracts = {}
+        for abstract in self._get_article_meta_items_("v083", formatted=True):
+            _abstracts[abstract.get("l")] = abstract.get("a")
+        return _abstracts
 
 
 def contrib_xref(xrefs):
