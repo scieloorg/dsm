@@ -238,9 +238,13 @@ class DocumentFilesAtOldWebsite:
                 )
                 self._bases_xml_file_path = glob.glob(xml_file_path)[0]
             except IndexError:
-                raise FileNotFoundError("Not found %s" % xml_file_path)
+                return None
         return self._bases_xml_file_path
 
 
 def get_files_storage_folder_for_htmls(issn, issue_folder):
     return os.path.join("htmls", issn, issue_folder)
+
+
+def get_files_storage_folder_for_migration(issn, issue_folder):
+    return os.path.join("migration", issn, issue_folder)
