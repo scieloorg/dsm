@@ -345,7 +345,7 @@ class FriendlyISISDocument:
     def contrib_group(self):
         for item in self._get_article_meta_items_("v010"):
             aff = None
-            xref_items = contrib_xref(item.get("1"))
+            xref_items = contrib_xref(item.get("1")) or []
             for xref_type, xref in xref_items:
                 if xref_type == "aff":
                     aff = self.affiliations.get(xref)
@@ -441,7 +441,7 @@ class FriendlyISISDocument:
 
 
 def contrib_xref(xrefs):
-    for xref in xrefs.split():
+    for xref in (xrefs or "").split():
         if xref.startswith("aff") or xref.startswith("a0"):
             xref_type = "aff"
         elif xref.startswith("fn"):
@@ -453,6 +453,72 @@ def contrib_xref(xrefs):
 
 def complete_uri(text, website_url):
     return text.replace("/img/revistas", f"{website_url}/img/revistas")
+
+
+class FriendlyISISParagraphs:
+    """
+    Interface amigável para obter os dados da base isis
+    que estão no formato JSON
+    """
+    def __init__(self, _id, doc_records):
+        self._id = _id
+        self._doc_records = doc_records
+        self._select_paragraph_records()
+
+    def _del_paragraphs(self):
+        for rec in self._before_refs:
+            self._doc_records.remove(rec)
+        for rec in self._refs:
+            self._doc_records.remove(rec)
+        for rec in self._after_refs:
+            self._doc_records.remove(rec)
+
+    def replace_paragraphs(self, p_records):
+        self._del_paragraphs()
+        self._doc_records.extend(p_records)
+        self._select_paragraph_records()
+
+    @property
+    def references(self):
+        return "".join([
+            _get_value(record, "v704").get("_")
+            for record in self._refs
+        ])
+
+    def _select_paragraph_records(self):
+        self._before_refs = []
+        self._refs = []
+        self._after_refs = []
+        _list = self._before_refs
+        for rec in self._doc_records:
+            rec_type = _get_value(rec, "v706")
+            if rec_type != "p":
+                continue
+            ref_id = _get_value(rec, "v888")
+            if ref_id:
+                _list = self._refs
+            elif self._refs:
+                _list = self._after_refs
+            else:
+                _list = self._before_refs
+            _list.append(rec)
+
+    @property
+    def paragraphs(self):
+        return (
+            self._before_refs or [] +
+            self._refs or [] +
+            self._after_refs or []
+        )
+
+    @property
+    def text(self):
+        return "".join(
+            [
+                _get_value(record, "v704").get("_")
+                for record in self.paragraphs
+            ]
+        )
 
 
 class FriendlyISISJournal:

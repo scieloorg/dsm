@@ -1,5 +1,6 @@
 import os
 import urllib3
+import glob
 
 # collection
 MINIO_SCIELO_COLLECTION = os.environ.get("MINIO_SCIELO_COLLECTION")
@@ -102,15 +103,57 @@ def get_cisis_path():
 
 
 def check_migration_sources():
+
     if not HTDOCS_IMG_REVISTAS_PATH:
         raise ValueError("Missing configuration: HTDOCS_IMG_REVISTAS_PATH")
     if not BASES_PDF_PATH:
         raise ValueError("Missing configuration: BASES_PDF_PATH")
     if not BASES_XML_PATH:
         raise ValueError("Missing configuration: BASES_XML_PATH")
+    if not BASES_TRANSLATION_PATH:
+        raise ValueError("Missing configuration: BASES_TRANSLATION_PATH")
     if not os.path.isdir(HTDOCS_IMG_REVISTAS_PATH):
         raise ValueError("HTDOCS_IMG_REVISTAS_PATH must be a directory")
     if not os.path.isdir(BASES_PDF_PATH):
         raise ValueError("BASES_PDF_PATH must be a directory")
     if not os.path.isdir(BASES_XML_PATH):
         raise ValueError("BASES_XML_PATH must be a directory")
+
+
+def get_paragraphs_id_file_path(article_pid):
+    return os.path.join(
+        os.path.dirname(BASES_PDF_PATH), "artigo", "p",
+        article_pid[1:10], article_pid[10:14],
+        article_pid[14:18], article_pid[-5:] + ".id",
+    )
+
+
+def get_translation_files_paths(subdir_acron_issue, file_name):
+    """
+    Obtém os arquivos HTML de bases/translation/acron/volnum/*filename*
+
+    Returns
+    -------
+    dict
+    {"en": ["en_a01.html", "en_ba01.html"],
+     "es": ["es_a01.html", "es_ba01.html"]}
+    """
+    files = {}
+    patterns = (f"??_{file_name}.htm*", f"??_b{file_name}.htm*")
+    for pattern in patterns:
+        paths = glob.glob(
+            os.path.join(BASES_TRANSLATION_PATH, subdir_acron_issue, pattern)
+        )
+        if not paths:
+            continue
+        # translations
+        for path in paths:
+            basename = os.path.basename(path)
+            lang = basename[:2]
+            files.setdefault(lang, [])
+            files[lang].append(path)
+    return files
+
+
+def get_files_storage_folder_for_htmls(issn, issue_folder):
+    return os.path.join("htmls", issn, issue_folder)

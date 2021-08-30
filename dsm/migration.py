@@ -56,20 +56,29 @@ def register_documents(pub_year=None, updated_from=None, updated_to=None):
     for doc in _select_docs(pub_year, updated_from, updated_to):
         zip_file_path = None
         try:
+            # obtém os arquivos do site antigo (xml, pdf, html, imagens)
             zip_file_path = _migration_manager.register_old_website_document_files(
                 doc._id)
+            if doc.file_type != "xml":
+                # registra os textos completos marcados em HTML
+                # que provém de registros do tipo `p` e
+                # de arquivos HTML localizados na pasta `bases/translation`
+                _migration_manager.register_isis_document_html_paragraphs(doc._id)
+            if doc.file_type == "xml" and zip_file_path and os.path.isfile(zip_file_path):
+                # em caso de marcação XML, faz o registro do documento
+                # usando o pacote XML
+                _register_package(_docs_manager, zip_file_path, doc)
+                registered_xml += 1
+            else:
+                # registra os metadados do documento a partir do registro isis
+                _migration_manager.update_website_document_metadata(doc._id)
+                # registra os textos completos provenientes dos arquivos HTML e
+                # dos registros do tipo `p`
+                _migration_manager.update_website_document_htmls(doc._id)
+                registered_metadata += 1
         except Exception as e:
-            print("Unable to create document files zip for %s" % doc._id)
-            print(e)
+            print("Error registering %s: %s" % (doc._id, e))
 
-        if doc.file_type == "xml" and zip_file_path and os.path.isfile(zip_file_path):
-            _register_package(_docs_manager, zip_file_path, doc)
-            print("Document %s was published using XML data" % doc._id)
-            registered_xml += 1
-        else:
-            _migration_manager.update_website_document_metadata(doc._id)
-            registered_metadata += 1
-            print("Document %s was published using metadata" % doc._id)
     print("Published with XML: ", registered_xml)
     print("Published with metadata: ", registered_metadata)
 
