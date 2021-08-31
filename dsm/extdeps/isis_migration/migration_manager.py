@@ -102,12 +102,6 @@ class MigrationManager:
 
     def register_isis_document_html_paragraphs(self, _id):
         migrated = MigratedDocument(_id)
-        migrated.translations = (
-            get_bases_translation_files_paths(
-                os.path.join(migrated.acron, migrated.issue_folder),
-                migrated.file_name
-            )
-        )
         try:
             migrated.html_paragraphs = (
                 get_paragraphs_records(get_paragraphs_id_file_path(_id))
@@ -242,42 +236,36 @@ class MigrationManager:
         # salva os dados
         return db.save_data(issue)
 
-    def update_website_document_metadata(self, document_id):
+    def update_website_document_metadata(self, article_id):
         """
         Update the website document
 
         Parameters
         ----------
-        document_id : str
+        article_id : str
 
         Returns
         -------
         dict
         """
-        # obtém os dados de artigo
-        i_doc = db.fetch_isis_document(document_id)
-        fi_doc = friendly_isis.FriendlyISISDocument(i_doc._id, i_doc.records)
-
-        # obtém os dados de issue
-        i_issue = db.fetch_isis_issue(fi_doc.issue_pid)
-        fi_issue = friendly_isis.FriendlyISISIssue(i_issue._id, i_issue.record)
-        fi_doc.issue = fi_issue
+        # obtém os dados de artigo migrado
+        migrated_document = MigratedDocument(article_id)
 
         # cria ou recupera o registro de documento do website
-        document = db.fetch_document(document_id) or db.create_document()
+        document = db.fetch_document(article_id) or db.create_document()
 
         # cria ou recupera o registro de issue do website
         bundle_id = get_bundle_id(
-            fi_doc.journal_pid,
-            fi_doc.collection_pubdate[:4],
-            fi_doc.volume,
-            fi_doc.number,
-            fi_doc.suppl,
+            migrated_document.journal_pid,
+            migrated_document.pub_year,
+            migrated_document.volume,
+            migrated_document.number,
+            migrated_document.suppl,
         )
         issue = db.fetch_issue(bundle_id) or db.create_issue()
 
         # atualiza os dados
-        _update_document_with_isis_data(document, fi_doc, issue)
+        _update_document_with_isis_data(document, migrated_document, issue)
 
         # salva os dados
         return db.save_data(document)
@@ -397,7 +385,7 @@ class MigrationManager:
         return docs
 
 
-def _update_document_with_isis_data(document, f_document, issue):
+def _update_document_with_isis_data(document, migrated_document, issue):
     """
     Update the `document` attributes with `f_document` attributes
 
@@ -409,6 +397,8 @@ def _update_document_with_isis_data(document, f_document, issue):
     # usa a data de criação do registro no isis como data de criação
     # do registro no site
     # TODO save_data sobrescreve estes comandos, refatorar
+    f_document = migrated_document._f_doc
+
     document.created = db.convert_date(f_document.isis_created_date)
     document.updated = db.convert_date(f_document.isis_updated_date)
 
@@ -712,10 +702,15 @@ class MigratedDocument:
     def __init__(self, _id):
         self._id = _id
         self._isis_document = db.fetch_isis_document(_id)
+        self._isis_issue = db.fetch_isis_issue(_id[1:18])
+
         if not self._isis_document:
             raise exceptions.DBFetchDocumentError("%s is not migrated" % _id)
         self._f_doc = friendly_isis.FriendlyISISDocument(
             _id, self._isis_document.records)
+        self._f_doc.issue = friendly_isis.FriendlyISISIssue(
+            self._isis_issue._id, self._isis_issue.record)
+
         self._document_files = DocumentFilesAtOldWebsite(
             os.path.join(
                 self._isis_document.acron, self._isis_document.issue_folder),
@@ -723,6 +718,22 @@ class MigratedDocument:
         self._files_storage_folder = get_files_storage_folder_for_migration(
             self.journal_pid, self._isis_document.issue_folder
         )
+
+    @property
+    def pub_year(self):
+        return self._f_doc.collection_pubdate[:4]
+
+    @property
+    def volume(self):
+        return self._f_doc.volume
+
+    @property
+    def number(self):
+        return self._f_doc.number
+
+    @property
+    def suppl(self):
+        return self._f_doc.suppl
 
     @property
     def file_name(self):
@@ -859,6 +870,25 @@ class MigratedDocument:
             )
         self._isis_document.pdfs = pdfs
         self._isis_document.pdf_files = _pdf_uris_and_names
+
+    @property
+    def pdfs(self):
+        # url, filename, type, lang
+        _pdfs = []
+        uris = {
+            item.name: item.uri
+            for item in self._isis_document.pdf_files
+        }
+        for lang, name in self._isis_document.pdfs.items():
+            _pdfs.append(
+                {
+                    "lang": lang,
+                    "filename": name,
+                    "url": uris.get(name),
+                    "type": "pdf",
+                }
+            )
+        return _pdfs
 
     def migrate_images(self, files_storage):
         """
