@@ -71,6 +71,7 @@ class FriendlyISISDocument:
         if self._pages is None:
             raise ValueError("missing v014: %s" % str(records[1]))
         self._set_file_name()
+        self._paragraphs = FriendlyISISParagraphs(self._records)
 
     def _get_article_meta_item_(self, tag, formatted=False):
         if formatted:
@@ -126,6 +127,18 @@ class FriendlyISISDocument:
             self._get_article_meta_item_("v131") or
             self._get_article_meta_item_("v132")
         )
+
+    @property
+    def issue_folder(self):
+        if self.number == "ahead":
+            return self.year + "nahead"
+
+        pairs = (
+            ("v", remove_leading_zeros(self.volume)),
+            ("n", remove_leading_zeros(self.number)),
+            ("s", remove_leading_zeros(self.suppl)),
+        )
+        return "".join([prefix + value for prefix, value in pairs if value])
 
     @property
     def document_pubdate(self):
@@ -439,6 +452,14 @@ class FriendlyISISDocument:
         for abstract in self._get_article_meta_items_("v083", formatted=True):
             _abstracts[abstract.get("l")] = abstract.get("a")
         return _abstracts
+
+    @property
+    def p_records(self):
+        return self._paragraphs.paragraphs
+
+    @p_records.setter
+    def p_records(self, _p_records):
+        self._paragraphs.replace_paragraphs(_p_records)
 
 
 def contrib_xref(xrefs):

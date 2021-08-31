@@ -83,7 +83,14 @@ class MigrationManager:
         """
         # recupera `isis_document` ou cria se não existir
 
-        doc = friendly_isis.FriendlyISISDocument(_id, records)
+        # se existirem osregistros de parágrafos que estejam externos à
+        # base artigo, ou seja, em artigo/p/ISSN/ANO/ISSUE_ORDER/...,
+        # os recupera e os ingressa junto aos registros da base artigo
+        p_records = (
+            get_paragraphs_records(get_paragraphs_id_file_path(_id)) or []
+        )
+
+        doc = friendly_isis.FriendlyISISDocument(_id, records + p_records)
         isis_document = (
                 db.fetch_isis_document(_id) or
                 db.create_isis_document()
@@ -97,18 +104,62 @@ class MigrationManager:
         isis_document.records = doc.records
         isis_document.status = "1"
 
+        isis_document.file_name = doc.file_name
+        isis_document.file_type = doc.file_type
+        isis_document.issue_folder = doc.issue_folder
+
+        journal = db.fetch_isis_journal(doc.journal_pid)
+        _journal = friendly_isis.FriendlyISISJournal(
+            journal._id, journal.record)
+        isis_document.acron = _journal.acronym
+
         # salva o documento
         return db.save_data(isis_document)
 
-    def register_isis_document_html_paragraphs(self, _id):
-        migrated = MigratedDocument(_id)
-        try:
-            migrated.html_paragraphs = (
-                get_paragraphs_records(get_paragraphs_id_file_path(_id))
+    def register_isis_document_external_p_records(self, _id):
+        """
+        Register migrated document data
+
+        Parameters
+        ----------
+        _id: str
+        records : list of dict
+
+        Returns
+        -------
+        str
+            _id
+
+        Raises
+        ------
+            dsm.storage.db.DBSaveDataError
+            dsm.storage.db.DBCreateDocumentError
+        """
+        # recupera `isis_document` ou cria se não existir
+
+        # se existirem osregistros de parágrafos que estejam externos à
+        # base artigo, ou seja, em artigo/p/ISSN/ANO/ISSUE_ORDER/...,
+        # os recupera e os ingressa junto aos registros da base artigo
+        p_records = (
+            get_paragraphs_records(get_paragraphs_id_file_path(_id)) or []
+        )
+        if not p_records:
+            return
+        isis_document = db.fetch_isis_document(_id)
+        if not isis_document:
+            raise exceptions.DocumentDoesNotExistError(
+                "isis_document %s does not exist" % article_pid
             )
-        except (TypeError, ValueError) as e:
-            print(e)
-        migrated.save()
+        doc = friendly_isis.FriendlyISISDocument(_id, isis_document.records)
+
+        # atualiza p_records
+        doc.p_records = p_records
+
+        # atualiza registros
+        isis_document.records = doc.records
+
+        # salva o documento
+        return db.save_data(isis_document)
 
     def register_isis_journal(self, _id, record):
         """
@@ -354,7 +405,6 @@ class MigrationManager:
                 self._files_storage
             )
         )
-
         # salva os dados
         db.save_data(migrated_document._isis_document)
         return zip_file_path
@@ -752,41 +802,6 @@ class MigratedDocument:
         return self._isis_document.journal_pid
 
     @property
-    def html_paragraphs(self):
-        return friendly_isis.FriendlyISISParagraphs(
-            self._isis_document._id,
-            self._isis_document.records)
-
-    @html_paragraphs.setter
-    def html_paragraphs(self, p_records):
-        """
-        Register migrated document html paragraphs, if apply
-
-        Parameters
-        ----------
-        _id: str
-
-        Returns
-        -------
-        str
-            _id
-
-        Raises
-        ------
-            TypeError
-            PermissionError
-        """
-        if self._isis_document.file_type == "xml":
-            raise TypeError("XML does not have HTML paragraphs")
-        if not p_records:
-            raise ValueError(
-                "Unable to set html_paragraphs: paragraph records not found")
-        doc_paragraphs = friendly_isis.FriendlyISISParagraphs(
-            self._isis_document._id,
-            self._isis_document.records)
-        doc_paragraphs.replace_paragraphs(p_records)
-
-    @property
     def translations(self):
         return self._isis_document.translations
 
@@ -803,7 +818,7 @@ class MigratedDocument:
         if self._isis_document.file_type == "xml":
             return []
         texts = []
-        paragraphs = self.html_paragraphs
+        paragraphs = self._f_doc.p_records
         text = {
             "lang": self._f_doc.language,
             "filename": self._isis_document.file_name + ".html",
