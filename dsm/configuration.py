@@ -222,7 +222,7 @@ class DocumentFilesAtOldWebsite:
                 os.path.join(
                     HTDOCS_IMG_REVISTAS_PATH,
                     self._subdir_acron_issue,
-                    f"{self._file_name}*.*"
+                    f"*{self._file_name}*.*"
                 )
             )
         return self._htdocs_img_revistas_files_paths
