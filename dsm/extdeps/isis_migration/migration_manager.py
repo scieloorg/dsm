@@ -461,7 +461,7 @@ def _update_document_with_isis_data(document, migrated_document, issue):
     _set_issue_data(document, issue)
     _set_order(document, f_document)
     _set_renditions(document, f_document)
-    # _set_xml_url(document, registered_xml)
+    _set_xml_url(document, migrated_document)
     _set_ids(document, f_document)
     _set_is_public(document, is_public=True)
     _set_languages(document, f_document, migrated_document)
@@ -482,9 +482,9 @@ def _set_renditions(article, f_document):
     article.pdfs = f_document.pdfs
 
 
-def _set_xml_url(article, xml_url):
-    # TODO
-    article.xml = xml_url
+def _set_xml_url(article, migrated_document):
+    if migrated_document.xml_files:
+        article.xml = migrated_document.xml_files[0].uri
 
 
 def _set_issue_data(article, issue):
