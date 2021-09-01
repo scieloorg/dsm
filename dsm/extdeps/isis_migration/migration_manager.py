@@ -3,8 +3,14 @@ import glob
 
 from scielo_v3_manager.v3_gen import generates
 
+from dsm.utils.html_utils import change_images_location
 from dsm.utils.async_download import download_files
-from dsm.utils.files import create_zip_file, create_temp_file, read_from_zipfile
+from dsm.utils.reqs import requests_get
+from dsm.utils.files import (
+    create_zip_file,
+    create_temp_file,
+    read_from_zipfile,
+)
 from dsm.configuration import (
     check_migration_sources,
     get_files_storage,
@@ -822,8 +828,12 @@ class MigratedDocument:
         text = {
             "lang": self._f_doc.language,
             "filename": self._isis_document.file_name + ".html",
-            "text": paragraphs.text,
+            "text": "",
         }
+        if paragraphs.text:
+            text["text"] = change_images_location(
+                paragraphs.text, self._isis_document.asset_files
+            )
         texts.append(text)
 
         for transl_text in self.translated_texts:
@@ -832,34 +842,36 @@ class MigratedDocument:
                 "filename": transl_text["filename"],
             }
             text["text"] = transl_text["text"][0]
-            if paragraphs.references:
-                text["text"] += "".join(paragraphs.references)
+            text["text"] += paragraphs.references
             if len(transl_text["text"]) > 1:
                 text["text"] += transl_text["text"][1]
+            if text["text"]:
+                text["text"] = change_images_location(
+                    text["text"], self._isis_document.asset_files
+                )
             texts.append(text)
         return texts
 
     @property
     def translated_texts(self):
         texts = []
-        if self._isis_document.translations and self._isis_document.zipfile:
-            try:
-                zipfile_path = download_files([self._isis_document.zipfile])[0]
-            except:
-                print("Unable to get %s" % zipfile_path)
-            else:
-                for lang, files in self._isis_document.translations.items():
-                    text = {}
-                    text["lang"] = lang
-                    text["filename"] = files[0] + ".html"
-                    text["text"] = []
-                    for file in files:
-                        text["text"].append(
-                            read_from_zipfile(
-                                zipfile_path, file
-                            ).decode("iso-8859-1")
-                        )
-                    texts.append(text)
+        uris = {
+            item["name"]: item["uri"]
+            for item in self._isis_document.html_files
+        }
+        for lang, files in self._isis_document.translations.items():
+            text = {}
+            text["lang"] = lang
+            text["text"] = []
+            text["filename"] = files[0]
+            for file in files:
+                uri = uris.get(file)
+                try:
+                    content = uri and requests_get(uri).decode("iso-8859-1")
+                except:
+                    content = ''
+                text["text"].append(content or '')
+            texts.append(text)
         return texts
 
     def save(self):
@@ -950,11 +962,14 @@ class MigratedDocument:
         else:
             # HTML Traduções
             translations_locations = []
+            _translations = {}
             _uris_and_names = []
             for lang, paths in self._document_files.bases_translation_files_paths.items():
                 translations_locations.extend(paths)
+                _translations[lang] = []
                 for path in paths:
                     name = os.path.basename(path)
+                    _translations[lang].append(name)
                     remote = files_storage.register(
                         path, self._files_storage_folder,
                         name, preserve_name=True)
@@ -962,13 +977,14 @@ class MigratedDocument:
                         db.create_remote_and_local_file(remote, name)
                     )
             self._isis_document.html_files = _uris_and_names
-            self._isis_document.translations = (
-                self._document_files.bases_translation_files_paths
-            )
+            self._isis_document.translations = _translations
 
     def register_migrated_document_files_zipfile(self, files_storage):
         xml = self._document_files.bases_xml_file_path or []
-        html = self._document_files.bases_translation_files_paths or []
+        html = []
+        if self._document_files.bases_translation_files_paths:
+            for item in self._document_files.bases_translation_files_paths.values():
+                html.extend(item)
         files = (
             list(self._document_files.bases_pdf_files_paths.values()) +
             self._document_files.htdocs_img_revistas_files_paths +
@@ -978,7 +994,6 @@ class MigratedDocument:
             # create zip file with document files
             zip_file_path = create_zip_file(
                 files, self._isis_document.file_name + ".zip")
-
             remote = files_storage.register(
                 zip_file_path,
                 self._files_storage_folder,
