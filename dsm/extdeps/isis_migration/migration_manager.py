@@ -464,7 +464,7 @@ def _update_document_with_isis_data(document, migrated_document, issue):
     # _set_xml_url(document, registered_xml)
     _set_ids(document, f_document)
     _set_is_public(document, is_public=True)
-    _set_languages(document, f_document)
+    _set_languages(document, f_document, migrated_document)
     _set_article_abstracts(document, f_document)
     _set_article_authors(document, f_document)
     _set_article_pages(document, f_document)
@@ -531,10 +531,11 @@ def _set_article_type(article, f_document):
     article.type = f_document.article_type
 
 
-def _set_languages(article, f_document):
+def _set_languages(article, f_document, isis_doc):
     article.original_language = f_document.language
-    article.languages = f_document.languages
-    article.htmls = [{"lang": lang} for lang in f_document.languages]
+    article.languages = list(set(
+        f_document.languages + list(isis_doc.translations.keys())
+    ))
 
 
 def _set_article_titles(article, f_document):
