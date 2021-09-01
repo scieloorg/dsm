@@ -61,20 +61,15 @@ def register_documents(pub_year=None, updated_from=None, updated_to=None):
             print(doc._id)
             print("type:", doc.file_type)
             zip_file_path = _migration_manager.migrate_document_files(doc._id)
-            if doc.file_type == "xml" and zip_file_path and os.path.isfile(zip_file_path):
-                # em caso de marcação XML, faz o registro do documento
-                # usando o pacote XML
-                print("_register_package")
-                _register_package(_docs_manager, zip_file_path, doc)
-                registered_xml += 1
-            else:
-                # registra os metadados do documento a partir do registro isis
-                print("update_website_document_metadata")
-                _migration_manager.update_website_document_metadata(doc._id)
-                # registra os textos completos provenientes dos arquivos HTML e
-                # dos registros do tipo `p`
+
+            # registra os metadados do documento a partir do registro isis
+            print("update_website_document_metadata")
+            _migration_manager.update_website_document_metadata(doc._id)
+            # registra os textos completos provenientes dos arquivos HTML e
+            # dos registros do tipo `p`
+            if doc.html_files:
                 _migration_manager.update_website_document_htmls(doc._id)
-                registered_metadata += 1
+            registered_metadata += 1
         except Exception as e:
             print("Error registering %s: %s" % (doc._id, e))
             raise
