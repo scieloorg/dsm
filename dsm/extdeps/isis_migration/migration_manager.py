@@ -4,8 +4,13 @@ import glob
 from scielo_v3_manager.v3_gen import generates
 
 from dsm.utils.html_utils import change_images_location
+from dsm.utils.xml_utils import get_xml_tree, tostring
+
 from dsm.utils.async_download import download_files
-from dsm.utils.reqs import requests_get
+from dsm.utils.reqs import (
+    requests_get,
+    requests_get_content,
+)
 from dsm.utils.files import (
     create_zip_file,
     create_temp_file,
@@ -18,6 +23,7 @@ from dsm.configuration import (
     get_paragraphs_id_file_path,
     DocumentFilesAtOldWebsite,
     get_files_storage_folder_for_htmls,
+    get_files_storage_folder_for_xmls,
     get_files_storage_folder_for_migration,
 
 )
@@ -33,6 +39,7 @@ from dsm.core.document import (
 from dsm.core.document_files import (
     files_storage_register,
 )
+from dsm.core.sps_package import SPS_Package
 from dsm.extdeps.isis_migration import friendly_isis
 from dsm.extdeps import db
 from dsm.extdeps.isis_migration.id2json import get_paragraphs_records
@@ -376,6 +383,55 @@ class MigrationManager:
                 pass
             htmls.append(html)
         document.htmls = htmls
+
+        # salva os dados
+        return db.save_data(document)
+
+    def update_website_document_xmls(self, article_pid):
+        """
+        Update the website document xmls
+
+        Get texts from paragraphs records and from translations files
+            registered in `isis_doc`
+        Build the HTML files and register them in the files storage
+        Update the `document.xmls` with lang and uri
+
+        Parameters
+        ----------
+        article_pid : str
+
+        Returns
+        -------
+        dict
+        """
+        # obtém os dados de artigo
+        migrated = MigratedDocument(article_pid)
+
+        # cria ou recupera o registro de documento do website
+        document = db.fetch_document(article_pid)
+        if not document:
+            raise exceptions.DocumentDoesNotExistError(
+                "Document %s does not exist" % article_pid
+            )
+
+        # cria arquivos xml com o conteúdo obtido dos arquivos xml e
+        # dos registros de parágrafos
+        
+        for text in migrated.xml_texts:
+            # obtém os conteúdos de xml registrados em `isis_doc`
+            file_path = create_temp_file(text["filename"], text["text"])
+            # obtém a localização do arquivo no `files storage`
+            folder = get_files_storage_folder_for_xmls(
+                migrated.journal_pid, migrated.issue_folder
+            )
+            try:
+                # registra no files storage
+                uri = self._files_storage.register(
+                    file_path, folder, text["filename"], preserve_name=True
+                )
+            except:
+                pass
+        document.xml = uri
 
         # salva os dados
         return db.save_data(document)
@@ -855,6 +911,27 @@ class MigratedDocument:
                     text["text"], self.isis_doc.asset_files
                 )
             texts.append(text)
+        return texts
+
+    @property
+    def xml_texts(self):
+        if self.isis_doc.file_type == "html":
+            return []
+        texts = []
+        content = requests_get_content(self.isis_doc.xml_files[0].uri)
+        try:
+            sps_pkg = SPS_Package(content)
+            sps_pkg.local_to_remote(self.isis_doc.asset_files)
+            content = sps_pkg.xml_content
+        except Exception as e:
+            # TODO melhorar o tratamento de excecao
+            raise
+        text = {
+            "lang": self._f_doc.language,
+            "filename": self.isis_doc.file_name + ".xml",
+            "text": content,
+        }
+        texts.append(text)
         return texts
 
     @property
