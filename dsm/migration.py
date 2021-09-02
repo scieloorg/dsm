@@ -69,6 +69,8 @@ def register_documents(pub_year=None, updated_from=None, updated_to=None):
             # dos registros do tipo `p`
             if doc.html_files:
                 _migration_manager.update_website_document_htmls(doc._id)
+            elif doc.xml_files:
+                _migration_manager.update_website_document_xmls(doc._id)
             registered_metadata += 1
         except Exception as e:
             print("Error registering %s: %s" % (doc._id, e))
