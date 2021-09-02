@@ -243,8 +243,16 @@ class DocumentFilesAtOldWebsite:
 
 
 def get_files_storage_folder_for_htmls(issn, issue_folder):
-    return os.path.join("htmls", issn, issue_folder)
+    return os.path.join(
+        "migration", "assets_with_remote_location", "htmls",
+        issn, issue_folder)
+
+
+def get_files_storage_folder_for_xmls(issn, issue_folder):
+    return os.path.join(
+        "migration", "assets_with_remote_location", "xmls",
+        issn, issue_folder)
 
 
 def get_files_storage_folder_for_migration(issn, issue_folder):
-    return os.path.join("migration", issn, issue_folder)
+    return os.path.join("migration", "original", issn, issue_folder)
