@@ -118,6 +118,9 @@ def check_migration_sources():
         raise ValueError("BASES_PDF_PATH must be a directory")
     if not os.path.isdir(BASES_XML_PATH):
         raise ValueError("BASES_XML_PATH must be a directory")
+    BASES_PATH = os.path.dirname(BASES_PDF_PATH)
+    APP_PATH = os.path.dirname(BASES_PATH)
+    BASES_WORK_PATH = os.path.join(APP_PATH, "bases-work")
 
 
 def get_paragraphs_id_file_path(article_pid):
@@ -256,3 +259,7 @@ def get_files_storage_folder_for_xmls(issn, issue_folder):
 
 def get_files_storage_folder_for_migration(issn, issue_folder):
     return os.path.join("migration", "original", issn, issue_folder)
+
+
+def get_bases_acron(acron):
+    return os.path.join(BASES_WORK_PATH, acron, acron)
