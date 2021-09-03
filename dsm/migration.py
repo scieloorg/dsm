@@ -186,13 +186,14 @@ def create_id_file(db_file_path, id_file_path):
 
 
 def register_acron(acron, id_folder_path=None):
+    configuration.check_migration_sources()
     if id_folder_path and not os.path.isdir(id_folder_path):
         os.makedirs(id_folder_path)
     if id_folder_path:
         id_file_path = os.path.join(id_folder_path, f"{acron}.id")
     else:
         id_file_path = create_temp_file(f"{acron}.id", '')
-    db_path = get_bases_acron(acron)
+    db_path = configuration.get_bases_acron(acron)
     if os.path.isfile(db_path + ".mst"):
         create_id_file(db_path, id_file_path)
         print()
