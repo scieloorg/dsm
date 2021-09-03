@@ -127,9 +127,7 @@ def match_file_by_prefix(prefix, file_path):
         True - file belongs to the package
     """
     basename = os.path.basename(file_path)
-    if basename.startswith(prefix + "-"):
-        return True
-    if basename.startswith(prefix + "."):
+    if prefix in basename:
         return True
     return False
 
