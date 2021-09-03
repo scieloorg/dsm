@@ -71,6 +71,7 @@ class FriendlyISISDocument:
         if self._pages is None:
             raise ValueError("missing v014: %s" % str(records[1]))
         self._set_file_name()
+        self._paragraphs = FriendlyISISParagraphs(_id, self._records)
 
     def _get_article_meta_item_(self, tag, formatted=False):
         if formatted:
@@ -126,6 +127,18 @@ class FriendlyISISDocument:
             self._get_article_meta_item_("v131") or
             self._get_article_meta_item_("v132")
         )
+
+    @property
+    def issue_folder(self):
+        if self.number == "ahead":
+            return self.year + "nahead"
+
+        pairs = (
+            ("v", remove_leading_zeros(self.volume)),
+            ("n", remove_leading_zeros(self.number)),
+            ("s", remove_leading_zeros(self.suppl)),
+        )
+        return "".join([prefix + value for prefix, value in pairs if value])
 
     @property
     def document_pubdate(self):
@@ -440,6 +453,14 @@ class FriendlyISISDocument:
             _abstracts[abstract.get("l")] = abstract.get("a")
         return _abstracts
 
+    @property
+    def p_records(self):
+        return self._paragraphs
+
+    @p_records.setter
+    def p_records(self, _p_records):
+        self._paragraphs.replace_paragraphs(_p_records)
+
 
 def contrib_xref(xrefs):
     for xref in (xrefs or "").split():
@@ -490,26 +511,37 @@ class FriendlyISISParagraphs:
         self._before_refs = []
         self._refs = []
         self._after_refs = []
-        _list = self._before_refs
-        for rec in self._doc_records:
+
+        _before = None
+        _ref_start = None
+        _ref_end = None
+        for i, rec in enumerate(self._doc_records):
             rec_type = _get_value(rec, "v706")
             if rec_type != "p":
                 continue
+            if not _before:
+                _before = i
             ref_id = _get_value(rec, "v888")
             if ref_id:
-                _list = self._refs
-            elif self._refs:
-                _list = self._after_refs
-            else:
-                _list = self._before_refs
-            _list.append(rec)
+                if _ref_start:
+                    _ref_end = i
+                else:
+                    _ref_start = i
+            _ref_end
+
+        if _before:
+            self._before_refs = self._doc_records[_before:_ref_start]
+        if _ref_start:
+            self._refs = self._doc_records[_ref_start:_ref_end+1]
+        if _ref_end:
+            self._after_refs = self._doc_records[_ref_end+1:]
 
     @property
     def paragraphs(self):
         return (
-            self._before_refs or [] +
-            self._refs or [] +
-            self._after_refs or []
+            (self._before_refs or []) +
+            (self._refs or []) +
+            (self._after_refs or [])
         )
 
     @property

@@ -57,20 +57,19 @@ def register_documents(pub_year=None, updated_from=None, updated_to=None):
         zip_file_path = None
         try:
             # obtém os arquivos do site antigo (xml, pdf, html, imagens)
-            zip_file_path = _migration_manager.register_old_website_document_files(
-                doc._id)
-            if doc.file_type != "xml":
-                # registra os textos completos marcados em HTML
-                # que provém de registros do tipo `p` e
-                # de arquivos HTML localizados na pasta `bases/translation`
-                _migration_manager.register_isis_document_html_paragraphs(doc._id)
+            print("")
+            print(doc._id)
+            print("type:", doc.file_type)
+            zip_file_path = _migration_manager.migrate_document_files(doc._id)
             if doc.file_type == "xml" and zip_file_path and os.path.isfile(zip_file_path):
                 # em caso de marcação XML, faz o registro do documento
                 # usando o pacote XML
+                print("_register_package")
                 _register_package(_docs_manager, zip_file_path, doc)
                 registered_xml += 1
             else:
                 # registra os metadados do documento a partir do registro isis
+                print("update_website_document_metadata")
                 _migration_manager.update_website_document_metadata(doc._id)
                 # registra os textos completos provenientes dos arquivos HTML e
                 # dos registros do tipo `p`
@@ -78,9 +77,34 @@ def register_documents(pub_year=None, updated_from=None, updated_to=None):
                 registered_metadata += 1
         except Exception as e:
             print("Error registering %s: %s" % (doc._id, e))
+            raise
 
     print("Published with XML: ", registered_xml)
     print("Published with metadata: ", registered_metadata)
+
+
+def register_external_p_records(pub_year=None, updated_from=None, updated_to=None):
+    _files_storage = configuration.get_files_storage()
+    _db_url = configuration.get_db_url()
+    _v3_manager = configuration.get_pid_manager()
+
+    _docs_manager = DocsManager(_files_storage, _db_url, _v3_manager)
+
+    _migration_manager.db_connect()
+
+    for doc in _select_docs(pub_year, updated_from, updated_to):
+        try:
+            # obtém os arquivos do site antigo (xml, pdf, html, imagens)
+            print("")
+            print(doc._id)
+            print("type:", doc.file_type)
+            if doc.file_type != "xml":
+                # registra os registros do tipo `p` externos na base artigo
+                print("register_isis_document_external_p_records")
+                _migration_manager.register_isis_document_external_p_records(
+                    doc._id)
+        except Exception as e:
+            print("Error registering p_records %s: %s" % (doc._id, e))
 
 
 def _register_package(_docs_manager, zip_file_path, doc):
@@ -255,6 +279,25 @@ def main():
         help="Updated to"
     )
 
+    register_external_p_records_parser = subparsers.add_parser(
+        "register_external_p_records",
+        help=(
+            "Update the website with documents (text available only for XML)"
+        ),
+    )
+    register_external_p_records_parser.add_argument(
+        "--pub_year",
+        help="Publication year",
+    )
+    register_external_p_records_parser.add_argument(
+        "--updated_from",
+        help="Updated from"
+    )
+    register_external_p_records_parser.add_argument(
+        "--updated_to",
+        help="Updated to"
+    )
+
     args = parser.parse_args()
 
     if args.command == "migrate_title":
@@ -265,6 +308,9 @@ def main():
         register_artigo_id_file_data(args.id_file_path)
     elif args.command == "register_documents":
         register_documents(args.pub_year, args.updated_from, args.updated_to)
+    elif args.command == "register_external_p_records":
+        register_external_p_records(
+            args.pub_year, args.updated_from, args.updated_to)
     # elif args.command == "update_website_with_documents_metadata":
     #     update_website_with_documents_metadata(
     #         args.pub_year, args.updated_from, args.updated_to)
