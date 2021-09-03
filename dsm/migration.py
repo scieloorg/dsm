@@ -61,20 +61,17 @@ def register_documents(pub_year=None, updated_from=None, updated_to=None):
             print(doc._id)
             print("type:", doc.file_type)
             zip_file_path = _migration_manager.migrate_document_files(doc._id)
-            if doc.file_type == "xml" and zip_file_path and os.path.isfile(zip_file_path):
-                # em caso de marcação XML, faz o registro do documento
-                # usando o pacote XML
-                print("_register_package")
-                _register_package(_docs_manager, zip_file_path, doc)
-                registered_xml += 1
-            else:
-                # registra os metadados do documento a partir do registro isis
-                print("update_website_document_metadata")
-                _migration_manager.update_website_document_metadata(doc._id)
-                # registra os textos completos provenientes dos arquivos HTML e
-                # dos registros do tipo `p`
+
+            # registra os metadados do documento a partir do registro isis
+            print("update_website_document_metadata")
+            _migration_manager.update_website_document_metadata(doc._id)
+            # registra os textos completos provenientes dos arquivos HTML e
+            # dos registros do tipo `p`
+            if doc.html_files:
                 _migration_manager.update_website_document_htmls(doc._id)
-                registered_metadata += 1
+            elif doc.xml_files:
+                _migration_manager.update_website_document_xmls(doc._id)
+            registered_metadata += 1
         except Exception as e:
             print("Error registering %s: %s" % (doc._id, e))
             raise
@@ -172,7 +169,8 @@ def migrate_issue(id_file_path):
             raise
 
 
-def create_id_file_path(db_file_path, id_file_path):
+def create_id_file(db_file_path, id_file_path):
+    cisis_path = configuration.get_cisis_path()
     dirname = os.path.dirname(id_file_path)
     if not os.path.isdir(dirname):
         os.makedirs(dirname)
@@ -181,7 +179,6 @@ def create_id_file_path(db_file_path, id_file_path):
             os.unlink(id_file_path)
         except:
             raise OSError(f"Unable to delete {id_file_path}")
-    cisis_path = configuration.get_cisis_path()
     i2id_cmd = os.path.join(cisis_path, "i2id")
     os.system(f"{i2id_cmd} {db_file_path} > {id_file_path}")
     return os.path.isfile(id_file_path)
@@ -192,6 +189,27 @@ def main():
         description="ISIS database migration tool")
     subparsers = parser.add_subparsers(
         title="Commands", metavar="", dest="command")
+
+    create_id_file_parser = subparsers.add_parser(
+        "create_id_file",
+        help=(
+            "Create the id file of a database"
+        )
+    )
+    create_id_file_parser.add_argument(
+        "db_file_path",
+        help=(
+            "Path of the file master without extension. "
+            "E.g.: /home/scielo/bases/title/title"
+        )
+    )
+    create_id_file_parser.add_argument(
+        "id_file_path",
+        help=(
+            "Path of the file master without extension. "
+            "E.g.: /tmp/title.id"
+        )
+    )
 
     migrate_title_parser = subparsers.add_parser(
         "migrate_title",
@@ -225,40 +243,6 @@ def main():
         "id_file_path",
         help="Path of ID file that will be imported"
     )
-
-    # update_website_with_documents_metadata_parser = subparsers.add_parser(
-    #     "update_website_with_documents_metadata",
-    #     help="Migrate JSON to MongoDB (site)",
-    # )
-    # update_website_with_documents_metadata_parser.add_argument(
-    #     "--pub_year",
-    #     help="Publication year",
-    # )
-    # update_website_with_documents_metadata_parser.add_argument(
-    #     "--updated_from",
-    #     help="Updated from"
-    # )
-    # update_website_with_documents_metadata_parser.add_argument(
-    #     "--updated_to",
-    #     help="Updated to"
-    # )
-
-    # register_old_website_files_parser = subparsers.add_parser(
-    #     "register_old_website_files",
-    #     help="Migrate XML packages",
-    # )
-    # register_old_website_files_parser.add_argument(
-    #     "--pub_year",
-    #     help="Publication year",
-    # )
-    # register_old_website_files_parser.add_argument(
-    #     "--updated_from",
-    #     help="Updated from"
-    # )
-    # register_old_website_files_parser.add_argument(
-    #     "--updated_to",
-    #     help="Updated to"
-    # )
 
     register_documents_parser = subparsers.add_parser(
         "register_documents",
@@ -311,12 +295,8 @@ def main():
     elif args.command == "register_external_p_records":
         register_external_p_records(
             args.pub_year, args.updated_from, args.updated_to)
-    # elif args.command == "update_website_with_documents_metadata":
-    #     update_website_with_documents_metadata(
-    #         args.pub_year, args.updated_from, args.updated_to)
-    # elif args.command == "register_old_website_files":
-    #     register_old_website_files(
-    #         args.pub_year, args.updated_from, args.updated_to)
+    elif args.command == "create_id_file":
+        create_id_file(args.db_file_path, args.id_file_path)
     else:
         parser.print_help()
 

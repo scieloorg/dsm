@@ -35,6 +35,31 @@ class SPS_Package:
         )
         self._assets = SPS_Assets(self._xmltree, self.scielo_pid_v3)
 
+    def local_to_remote(self, uris_and_names):
+        """
+        URI assets from remote to local
+
+        Example:
+        from
+        <graphic xlink:href="1234-0987-abc-09-01-gf01.tiff"/>
+
+        to
+        <graphic xlink:href="https://minio.scielo.br/v3/xmljdfoae.tiff"/>
+        """
+        _image_files = {
+            item["name"]: item["uri"]
+            for item in uris_and_names
+        }
+        for node in self._xmltree.xpath(
+                ".//*[@xlink:href]",
+                namespaces={"xlink": "http://www.w3.org/1999/xlink"}):
+            href = node.get('{http://www.w3.org/1999/xlink}href')
+            if ":" in href:
+                continue
+            remote = _image_files.get(href)
+            if remote:
+                node.set('{http://www.w3.org/1999/xlink}href', remote)
+
     @property
     def xml_content(self):
         return xml_utils.tostring(self._xmltree)
