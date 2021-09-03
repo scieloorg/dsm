@@ -332,7 +332,7 @@ def main():
     elif args.command == "create_id_file":
         create_id_file(args.db_file_path, args.id_file_path)
     elif args.command == "register_acron":
-        register_acron(args.acron)
+        register_acron(args.acron, args.id_folder_path)
     else:
         parser.print_help()
 
