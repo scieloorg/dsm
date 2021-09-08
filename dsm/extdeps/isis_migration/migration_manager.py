@@ -334,6 +334,60 @@ class MigrationManager:
         # salva os dados
         return db.save_data(document)
 
+    def update_website_document_pdfs(self, article_pid):
+        """
+        Update the website document pdfs
+        Get texts from paragraphs records and from translations files
+            registered in `isis_doc`
+        Build the HTML files and register them in the files storage
+        Update the `document.pdfs` with lang and uri
+        Parameters
+        ----------
+        article_pid : str
+        Returns
+        -------
+        dict
+        """
+        # obtém os dados de artigo
+        migrated = MigratedDocument(article_pid)
+
+        # cria ou recupera o registro de documento do website
+        document = db.fetch_document(article_pid)
+        if not document:
+            raise exceptions.DocumentDoesNotExistError(
+                "Document %s does not exist" % article_pid
+            )
+
+        # obtém os dados de `isis_doc.pdfs` e `isis_doc.pdf_files`
+        # e os organiza para registrar em `document.pdfs`
+        pdfs = []
+        for pdf in migrated.pdfs:
+            # obtém os conteúdos de html registrados em `isis_doc`
+            file_path = create_temp_file(pdf["filename"], pdf["content"], "wb")
+            # obtém a localização do arquivo no `files storage`
+            folder = get_files_storage_folder_for_migration(
+                migrated.journal_pid, migrated.issue_folder,
+            )
+            _pdf = {
+                "lang": pdf["lang"],
+                "type": "pdf",
+                "filename": pdf["filename"],
+            }
+            try:
+                # registra no files storage
+                uri = self._files_storage.register(
+                    file_path, folder, pdf["filename"], preserve_name=True
+                )
+                # atualiza com a uri o valor de pdfs
+                _pdf.update({"url": uri})
+            except:
+                pass
+            pdfs.append(_pdf)
+        document.pdfs = pdfs
+
+        # salva os dados
+        return db.save_data(document)
+
     def update_website_document_htmls(self, article_pid):
         """
         Update the website document htmls

@@ -66,6 +66,10 @@ def register_documents(pub_year=None, updated_from=None, updated_to=None):
             # registra os metadados do documento a partir do registro isis
             print("update_website_document_metadata")
             _migration_manager.update_website_document_metadata(doc._id)
+
+            # registra os pdfs no website
+            _migration_manager.update_website_document_pdfs(doc._id)
+
             # registra os textos completos provenientes dos arquivos HTML e
             # dos registros do tipo `p`
             if doc.html_files:
