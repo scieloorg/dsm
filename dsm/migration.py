@@ -125,7 +125,7 @@ def _register_package(_docs_manager, zip_file_path, doc):
     print(res)
 
 
-def register_artigo_id_file_data(id_file_path):
+def register_artigo_id(id_file_path):
     _migration_manager.db_connect()
     for _id, records in id2json.get_json_records(
             id_file_path, id2json.article_id):
@@ -198,7 +198,7 @@ def register_acron(acron, id_folder_path=None):
         create_id_file(db_path, id_file_path)
         print()
         print(f"{id_file_path} - size: {size(id_file_path)} bytes")
-        register_artigo_id_file_data(id_file_path)
+        register_artigo_id(id_file_path)
         print("finished\n")
 
 
@@ -269,11 +269,11 @@ def main():
         help="Output folder"
     )
 
-    register_artigo_id_file_data_parser = subparsers.add_parser(
-        "register_artigo_id_file_data",
+    register_artigo_id_parser = subparsers.add_parser(
+        "register_artigo_id",
         help="Register the content of artigo.id in MongoDB",
     )
-    register_artigo_id_file_data_parser.add_argument(
+    register_artigo_id_parser.add_argument(
         "id_file_path",
         help="Path of ID file that will be imported"
     )
@@ -322,8 +322,8 @@ def main():
         migrate_title(args.id_file_path)
     elif args.command == "migrate_issue":
         migrate_issue(args.id_file_path)
-    elif args.command == "register_artigo_id_file_data":
-        register_artigo_id_file_data(args.id_file_path)
+    elif args.command == "register_artigo_id":
+        register_artigo_id(args.id_file_path)
     elif args.command == "register_documents":
         register_documents(args.pub_year, args.updated_from, args.updated_to)
     elif args.command == "register_external_p_records":
