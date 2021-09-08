@@ -360,30 +360,8 @@ class MigrationManager:
 
         # obtém os dados de `isis_doc.pdfs` e `isis_doc.pdf_files`
         # e os organiza para registrar em `document.pdfs`
-        pdfs = []
-        for pdf in migrated.pdfs:
-            # obtém os conteúdos de html registrados em `isis_doc`
-            file_path = create_temp_file(pdf["filename"], pdf["content"], "wb")
-            # obtém a localização do arquivo no `files storage`
-            folder = get_files_storage_folder_for_migration(
-                migrated.journal_pid, migrated.issue_folder,
-            )
-            _pdf = {
-                "lang": pdf["lang"],
-                "type": "pdf",
-                "filename": pdf["filename"],
-            }
-            try:
-                # registra no files storage
-                uri = self._files_storage.register(
-                    file_path, folder, pdf["filename"], preserve_name=True
-                )
-                # atualiza com a uri o valor de pdfs
-                _pdf.update({"url": uri})
-            except:
-                pass
-            pdfs.append(_pdf)
-        document.pdfs = pdfs
+        
+        document.pdfs = migrated.pdfs
 
         # salva os dados
         return db.save_data(document)
