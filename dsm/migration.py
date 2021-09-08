@@ -13,6 +13,7 @@ from dsm.extdeps.isis_migration import (
 from dsm import configuration
 from dsm.core.issue import get_bundle_id
 from dsm.core.document import DocsManager
+from dsm.utils.files import create_temp_file, size
 
 _migration_manager = migration_manager.MigrationManager()
 
@@ -184,6 +185,23 @@ def create_id_file(db_file_path, id_file_path):
     return os.path.isfile(id_file_path)
 
 
+def register_acron(acron, id_folder_path=None):
+    configuration.check_migration_sources()
+    if id_folder_path and not os.path.isdir(id_folder_path):
+        os.makedirs(id_folder_path)
+    if id_folder_path:
+        id_file_path = os.path.join(id_folder_path, f"{acron}.id")
+    else:
+        id_file_path = create_temp_file(f"{acron}.id", '')
+    db_path = configuration.get_bases_acron(acron)
+    if os.path.isfile(db_path + ".mst"):
+        create_id_file(db_path, id_file_path)
+        print()
+        print(f"{id_file_path} - size: {size(id_file_path)} bytes")
+        register_artigo_id_file_data(id_file_path)
+        print("finished\n")
+
+
 def main():
     parser = argparse.ArgumentParser(
         description="ISIS database migration tool")
@@ -233,6 +251,22 @@ def main():
     migrate_issue_parser.add_argument(
         "id_file_path",
         help="Path of ID file that will be imported"
+    )
+
+    register_acron_parser = subparsers.add_parser(
+        "register_acron",
+        help=(
+            "Register the content of acron.id in MongoDB and"
+            " update the website with acrons data"
+        )
+    )
+    register_acron_parser.add_argument(
+        "acron",
+        help="Journal acronym"
+    )
+    register_acron_parser.add_argument(
+        "--id_folder_path",
+        help="Output folder"
     )
 
     register_artigo_id_file_data_parser = subparsers.add_parser(
@@ -297,6 +331,8 @@ def main():
             args.pub_year, args.updated_from, args.updated_to)
     elif args.command == "create_id_file":
         create_id_file(args.db_file_path, args.id_file_path)
+    elif args.command == "register_acron":
+        register_acron(args.acron, args.id_folder_path)
     else:
         parser.print_help()
 

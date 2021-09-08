@@ -117,3 +117,7 @@ def create_temp_file(filename, content):
     write_file(file_path, content)
     return file_path
 
+
+def size(file_path):
+    return os.path.getsize(file_path)
+
