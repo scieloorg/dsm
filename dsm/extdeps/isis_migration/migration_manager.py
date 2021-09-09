@@ -43,6 +43,7 @@ from dsm.core.sps_package import SPS_Package
 from dsm.extdeps.isis_migration import friendly_isis
 from dsm.extdeps import db
 from dsm.extdeps.isis_migration.id2json import get_paragraphs_records
+from dsm import exceptions
 
 
 class MigrationManager:
