@@ -43,6 +43,7 @@ from dsm.core.sps_package import SPS_Package
 from dsm.extdeps.isis_migration import friendly_isis
 from dsm.extdeps import db
 from dsm.extdeps.isis_migration.id2json import get_paragraphs_records
+from dsm import exceptions
 
 
 class MigrationManager:
@@ -330,6 +331,38 @@ class MigrationManager:
 
         # atualiza os dados
         _update_document_with_isis_data(document, migrated_document, issue)
+
+        # salva os dados
+        return db.save_data(document)
+
+    def update_website_document_pdfs(self, article_pid):
+        """
+        Update the website document pdfs
+        Get texts from paragraphs records and from translations files
+            registered in `isis_doc`
+        Build the HTML files and register them in the files storage
+        Update the `document.pdfs` with lang and uri
+        Parameters
+        ----------
+        article_pid : str
+        Returns
+        -------
+        dict
+        """
+        # obtém os dados de artigo
+        migrated = MigratedDocument(article_pid)
+
+        # cria ou recupera o registro de documento do website
+        document = db.fetch_document(article_pid)
+        if not document:
+            raise exceptions.DocumentDoesNotExistError(
+                "Document %s does not exist" % article_pid
+            )
+
+        # obtém os dados de `isis_doc.pdfs` e `isis_doc.pdf_files`
+        # e os organiza para registrar em `document.pdfs`
+        
+        document.pdfs = migrated.pdfs
 
         # salva os dados
         return db.save_data(document)
