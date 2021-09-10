@@ -18,31 +18,31 @@ from dsm.utils.files import create_temp_file, size
 _migration_manager = migration_manager.MigrationManager()
 
 
-def _select_docs(pub_year=None, updated_from=None, updated_to=None):
-    if any((pub_year, updated_from, updated_to)):
+def _select_docs(acron=None, issue_folder=None, pub_year=None, updated_from=None, updated_to=None):
+    if any((acron, issue_folder, pub_year, updated_from, updated_to)):
         yield from _migration_manager.list_documents(
-                    pub_year, updated_from, updated_to)
+                    acron, issue_folder, pub_year, updated_from, updated_to)
     else:
         for y in range(1900, datetime.now().year):
             y = str(y).zfill(4)
             yield from _migration_manager.list_documents(
-                        pub_year, f"{y}0000", f"{y}9999")
+                        acron, issue_folder, pub_year, f"{y}0000", f"{y}9999")
 
 
-def update_website_with_documents_metadata(pub_year=None, updated_from=None, updated_to=None):
+def update_website_with_documents_metadata(acron=None, issue_folder=None, pub_year=None, updated_from=None, updated_to=None):
     _migration_manager.db_connect()
-    for doc in _select_docs(pub_year, updated_from, updated_to):
+    for doc in _select_docs(acron, issue_folder, pub_year, updated_from, updated_to):
         _migration_manager.update_website_document_metadata(doc._id)
 
 
-def register_old_website_files(pub_year=None, updated_from=None, updated_to=None):
+def register_old_website_files(acron=None, issue_folder=None, pub_year=None, updated_from=None, updated_to=None):
     _migration_manager.db_connect()
-    for doc in _select_docs(pub_year, updated_from, updated_to):
+    for doc in _select_docs(acron, issue_folder, pub_year, updated_from, updated_to):
         zip_file_path = _migration_manager.register_old_website_document_files(
             doc._id)
 
 
-def register_documents(pub_year=None, updated_from=None, updated_to=None):
+def register_documents(acron=None, issue_folder=None, pub_year=None, updated_from=None, updated_to=None):
     _files_storage = configuration.get_files_storage()
     _db_url = configuration.get_db_url()
     _v3_manager = configuration.get_pid_manager()
@@ -54,7 +54,7 @@ def register_documents(pub_year=None, updated_from=None, updated_to=None):
     registered_xml = 0
     registered_metadata = 0
 
-    for doc in _select_docs(pub_year, updated_from, updated_to):
+    for doc in _select_docs(acron, issue_folder, pub_year, updated_from, updated_to):
         zip_file_path = None
         try:
             # obtém os arquivos do site antigo (xml, pdf, html, imagens)
@@ -85,7 +85,7 @@ def register_documents(pub_year=None, updated_from=None, updated_to=None):
     print("Published with metadata: ", registered_metadata)
 
 
-def register_external_p_records(pub_year=None, updated_from=None, updated_to=None):
+def register_external_p_records(acron=None, issue_folder=None, pub_year=None, updated_from=None, updated_to=None):
     _files_storage = configuration.get_files_storage()
     _db_url = configuration.get_db_url()
     _v3_manager = configuration.get_pid_manager()
@@ -94,7 +94,7 @@ def register_external_p_records(pub_year=None, updated_from=None, updated_to=Non
 
     _migration_manager.db_connect()
 
-    for doc in _select_docs(pub_year, updated_from, updated_to):
+    for doc in _select_docs(acron, issue_folder, pub_year, updated_from, updated_to):
         try:
             # obtém os arquivos do site antigo (xml, pdf, html, imagens)
             print("")
@@ -289,6 +289,14 @@ def main():
         ),
     )
     register_documents_parser.add_argument(
+        "--acron",
+        help="Journal acronym",
+    )
+    register_documents_parser.add_argument(
+        "--issue_folder",
+        help="Issue folder (e.g.: v20n1)",
+    )
+    register_documents_parser.add_argument(
         "--pub_year",
         help="Publication year",
     )
@@ -329,10 +337,13 @@ def main():
     elif args.command == "register_artigo_id":
         register_artigo_id(args.id_file_path)
     elif args.command == "register_documents":
-        register_documents(args.pub_year, args.updated_from, args.updated_to)
+        register_documents(
+            args.acron, args.issue_folder, args.pub_year,
+            args.updated_from, args.updated_to)
     elif args.command == "register_external_p_records":
         register_external_p_records(
-            args.pub_year, args.updated_from, args.updated_to)
+            args.acron, args.issue_folder, args.pub_year,
+            args.updated_from, args.updated_to)
     elif args.command == "create_id_file":
         create_id_file(args.db_file_path, args.id_file_path)
     elif args.command == "register_acron":
