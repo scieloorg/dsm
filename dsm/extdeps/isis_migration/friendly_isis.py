@@ -68,8 +68,6 @@ class FriendlyISISDocument:
         self._id = _id
         self._records = records
         self._pages = self._get_article_meta_item_("v014")
-        if self._pages is None:
-            raise ValueError("missing v014: %s" % str(records[1]))
         self._set_file_name()
         self._paragraphs = FriendlyISISParagraphs(_id, self._records)
 
@@ -423,19 +421,19 @@ class FriendlyISISDocument:
 
     @property
     def elocation_id(self):
-        return self._pages.get("e")
+        return self._pages and self._pages.get("e")
 
     @property
     def fpage(self):
-        return self._pages.get("f")
+        return self._pages and self._pages.get("f")
 
     @property
     def fpage_seq(self):
-        return self._pages.get("s")
+        return self._pages and self._pages.get("s")
 
     @property
     def lpage(self):
-        return self._pages.get("l")
+        return self._pages and self._pages.get("l")
 
     @property
     def body(self):
