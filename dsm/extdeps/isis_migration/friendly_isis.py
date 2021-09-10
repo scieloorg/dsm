@@ -530,7 +530,7 @@ class FriendlyISISParagraphs:
             self._after_refs = self._doc_records[_ref_end+1:]
 
     @property
-    def paragraphs(self):
+    def p_records(self):
         return (
             (self._before_refs or []) +
             (self._refs or []) +
@@ -542,7 +542,7 @@ class FriendlyISISParagraphs:
         return "".join(
             [
                 _get_value(record, "v704").get("_")
-                for record in self.paragraphs
+                for record in self.p_records
             ]
         )
 
