@@ -26,14 +26,26 @@ class InvalidValueForOrderError(Exception):
 
 class SPS_Package:
     def __init__(self, xml, original_filename=None):
-        self._xmltree = xml_utils.get_xml_tree(xml)
-        self._identity = Identity(self._xmltree)
-
+        self.xmltree = xml_utils.get_xml_tree(xml)
         self._original_filename = original_filename
-        self._subart_translations = self._nodes_with_lang(
+
+    @property
+    def xmltree(self):
+        return self._xmltree
+
+    @xmltree.setter
+    def xmltree(self, value):
+        self._xmltree = value
+
+    @property
+    def identity(self):
+        return Identity(self.xmltree)
+
+    @property
+    def subart_translations(self):
+        return self._nodes_with_lang(
             './/sub-article[@article-type="translation"]'
         )
-        self._assets = SPS_Assets(self._xmltree, self.scielo_pid_v3)
 
     def local_to_remote(self, uris_and_names):
         """
@@ -50,7 +62,7 @@ class SPS_Package:
             item["name"]: item["uri"]
             for item in uris_and_names
         }
-        for node in self._xmltree.xpath(
+        for node in self.xmltree.xpath(
                 ".//*[@xlink:href]",
                 namespaces={"xlink": "http://www.w3.org/1999/xlink"}):
             href = node.get('{http://www.w3.org/1999/xlink}href')
@@ -62,77 +74,77 @@ class SPS_Package:
 
     @property
     def xml_content(self):
-        return xml_utils.tostring(self._xmltree)
+        return xml_utils.tostring(self.xmltree)
 
     @property
     def issn(self):
-        return self._identity.issn
+        return self.identity.issn
 
     @property
     def acron(self):
-        return self._identity.issn
+        return self.identity.acron
 
     @property
     def order(self):
-        return self._identity.order
+        return self.identity.order
 
     @property
     def scielo_pid_v1(self):
-        return self._identity.scielo_pid_v1
+        return self.identity.scielo_pid_v1
 
     @scielo_pid_v1.setter
     def scielo_pid_v1(self, value):
-        self._identity.scielo_pid_v1 = value
+        self.identity.scielo_pid_v1 = value
 
     @property
     def scielo_pid_v2(self):
-        return self._identity.scielo_pid_v2
+        return self.identity.scielo_pid_v2
 
     @scielo_pid_v2.setter
     def scielo_pid_v2(self, value):
-        self._identity.scielo_pid_v2 = value
+        self.identity.scielo_pid_v2 = value
 
     @property
     def scielo_pid_v3(self):
-        return self._identity.scielo_pid_v3
+        return self.identity.scielo_pid_v3
 
     @scielo_pid_v3.setter
     def scielo_pid_v3(self, value):
-        self._identity.scielo_pid_v3 = value
+        self.identity.scielo_pid_v3 = value
 
     @property
     def aop_pid(self):
-        return self._identity.aop_pid
+        return self.identity.aop_pid
 
     @aop_pid.setter
     def aop_pid(self, value):
-        self._identity.aop_pid = value
+        self.identity.aop_pid = value
 
     @property
     def doi(self):
-        return self._identity.doi
+        return self.identity.doi
 
     @doi.setter
     def doi(self, value):
-        self._identity.doi = value
+        self.identity.doi = value
 
     @property
     def assets(self):
-        return self._assets
+        return SPS_Assets(self.xmltree, self.scielo_pid_v3)
 
     @property
     def lang(self):
-        return self._xmltree.find(".").get(
+        return self.xmltree.find(".").get(
             "{http://www.w3.org/XML/1998/namespace}lang")
 
     @property
     def article_type(self):
-        return self._xmltree.find(".").get("article-type")
+        return self.xmltree.find(".").get("article-type")
 
     @property
     def article_title(self):
         return formatted_text(
-            self._xmltree.find(".//article-meta//article-title"))
+            self.xmltree.find(".//article-meta//article-title"))
 
     @property
     def article_titles(self):
@@ -152,7 +164,7 @@ class SPS_Package:
 
     def get_regular_abstract(self, xpath=".//article-meta//abstract"):
         regular_abstract = None
-        for _abstract in self._xmltree.findall(xpath):
+        for _abstract in self.xmltree.findall(xpath):
             if not _abstract.get("abstract-type"):
                 regular_abstract = _abstract
                 break
@@ -200,7 +212,7 @@ class SPS_Package:
         </article-categories>
         """
         return formatted_text(
-            self._xmltree.find(
+            self.xmltree.find(
                 './/subj-group[@subj-group-type="heading"]/subject'
             )
         )
@@ -228,7 +240,7 @@ class SPS_Package:
 
     @property
     def article_ids(self):
-        return self._identity.article_ids
+        return self.identity.article_ids
 
     @property
     def authors(self):
@@ -255,7 +267,7 @@ class SPS_Package:
         </contrib-group>
         """
         affiliations = self.affiliations
-        for node in self._xmltree.findall(
+        for node in self.xmltree.findall(
                 './/contrib[@contrib-type="author"]'):
             xref = node.find(".//xref[@ref-type='aff']")
             aff = None
@@ -291,7 +303,7 @@ class SPS_Package:
                     node.findtext('.//institution[@content-type="orgname"]') or
                     node.findtext('.//institution')
                 )
-                for node in self._xmltree.findall(".//aff")
+                for node in self.xmltree.findall(".//aff")
             }
         return self._affiliations
 
@@ -301,47 +313,47 @@ class SPS_Package:
 
     @property
     def elocation_id(self):
-        return self._identity.elocation_id
+        return self.identity.elocation_id
 
     @property
     def fpage(self):
-        return self._identity.fpage
+        return self.identity.fpage
 
     @property
     def fpage_seq(self):
-        return self._identity.fpage_seq
+        return self.identity.fpage_seq
 
     @property
     def lpage(self):
-        return self._identity.lpage
+        return self.identity.lpage
 
     @property
     def volume(self):
-        return self._identity.volume
+        return self.identity.volume
 
     @property
     def number(self):
-        return self._identity.number
+        return self.identity.number
 
     @property
     def supplement(self):
-        return self._identity.supplement
+        return self.identity.supplement
 
     @property
     def document_pubdate(self):
-        return self._identity.document_pubdate
+        return self.identity.document_pubdate
 
     @property
     def documents_bundle_pubdate(self):
-        return self._identity.documents_bundle_pubdate
+        return self.identity.documents_bundle_pubdate
 
     @property
     def year(self):
-        return self._identity.year
+        return self.identity.year
 
     @property
     def documents_bundle_id(self):
-        return self._identity.documents_bundle_id
+        return self.identity.documents_bundle_id
 
     def _nodes_with_lang(self, lang_xpath, child_xpath=None):
         return (
@@ -349,12 +361,12 @@ class SPS_Package:
                 child_xpath and node.find(child_xpath) or node,
                 node.get('{http://www.w3.org/XML/1998/namespace}lang'),
             )
-            for node in self._xmltree.findall(lang_xpath)
+            for node in self.xmltree.findall(lang_xpath)
         )
 
     @property
     def package_name(self):
-        return self._identity.package_name
+        return self.identity.package_name
 
     # def asset_name(self, img_filename):
     #     if self._original_asset_name_prefix is None:
@@ -370,20 +382,34 @@ class SPS_Package:
 
 class Identity:
     def __init__(self, xml_tree):
-        self._xmltree = xml_tree
-        self._jm = xml_tree.find(".//journal-meta")
-        self._am = xml_tree.find(".//article-meta")
+        self.xmltree = xml_tree
+
+    @property
+    def xmltree(self):
+        return self._xmltree
+
+    @xmltree.setter
+    def xmltree(self, value):
+        self._xmltree = value
+
+    @property
+    def journal_meta(self):
+        return self.xmltree.find(".//journal-meta")
+
+    @property
+    def article_meta(self):
+        return self.xmltree.find(".//article-meta")
 
     @property
     def order(self):
-        _order = self._am.findtext('.//article-id[@pub-id-type="other"]')
+        _order = self.article_meta.findtext('.//article-id[@pub-id-type="other"]')
         if _order is None:
             _order = self.scielo_pid_v2[-5:]
         return int(_order)
 
     def _get_scielo_pid(self, specific_use):
         try:
-            return self._am.xpath(
+            return self.article_meta.xpath(
                 f'.//article-id[@specific-use="{specific_use}"]/text()'
             )[0]
         except (IndexError, AttributeError):
@@ -395,9 +421,9 @@ class Identity:
             pid_node.set("pub-id-type", "publisher-id")
             pid_node.set("specific-use", specific_use)
             pid_node.text = value
-            self._am.insert(0, pid_node)
+            self.article_meta.insert(0, pid_node)
         else:
-            pid_node = self._am.xpath(
+            pid_node = self.article_meta.xpath(
                 f'.//article-id[@specific-use="{specific_use}"]'
             )[0]
             pid_node.text = value
@@ -431,7 +457,7 @@ class Identity:
     @property
     def aop_pid(self):
         try:
-            return self._am.xpath(
+            return self.article_meta.xpath(
                 './/article-id[@specific-use="previous-pid" and '
                 '@pub-id-type="publisher-id"]/text()'
             )[0]
@@ -447,9 +473,9 @@ class Identity:
             pid_node.set("pub-id-type", "publisher-id")
             pid_node.set("specific-use", "previous-pid")
             pid_node.text = value
-            self._am.insert(1, pid_node)
+            self.article_meta.insert(1, pid_node)
         else:
-            pid_node = self._am.xpath(
+            pid_node = self.article_meta.xpath(
                 './/article-id[@specific-use="previous-pid" and '
                 '@pub-id-type="publisher-id"]'
             )[0]
@@ -458,35 +484,35 @@ class Identity:
     @property
     def doi(self):
         try:
-            return self._am.xpath(
+            return self.article_meta.xpath(
                 "article-id[@pub-id-type='doi']")[0].text
         except (AttributeError, IndexError):
             return None
 
     @doi.setter
     def doi(self, value):
-        node = self._am.find(
+        node = self.article_meta.find(
             './/article-id[@pub-id-type="doi"]'
         )
         if node is None:
             node = etree.Element("article-id")
             node.set("pub-id-type", "doi")
             node.text = value
-            self._am.insert(0, node)
+            self.article_meta.insert(0, node)
         else:
             node.text = value
 
     @property
     def issn(self):
         return (
-            self._jm.findtext('.//issn[@pub-type="epub"]') or
-            self._jm.findtext('.//issn[@pub-type="ppub"]') or
-            self._jm.findtext(".//issn")
+            self.journal_meta.findtext('.//issn[@pub-type="epub"]') or
+            self.journal_meta.findtext('.//issn[@pub-type="ppub"]') or
+            self.journal_meta.findtext(".//issn")
         )
 
     @property
     def acron(self):
-        return self._jm.findtext(
+        return self.journal_meta.findtext(
             './/journal-id[@journal-id-type="publisher-id"]')
 
     @property
@@ -510,7 +536,7 @@ class Identity:
             ```
         """
         data = {}
-        for node in self._am.findall(
+        for node in self.article_meta.findall(
                 './/article-id[@pub-id-type="publisher-id"]'):
             use = node.get("specific-use") or "other"
             use = use.replace("scielo-", "")
@@ -530,7 +556,7 @@ class Identity:
             ...
         </article-meta>
         """
-        return self._am.findtext("elocation-id")
+        return self.article_meta.findtext("elocation-id")
 
     @property
     def fpage(self):
@@ -543,7 +569,7 @@ class Identity:
             ...
         </article-meta>
         """
-        return self._am.findtext("fpage")
+        return self.article_meta.findtext("fpage")
 
     @property
     def fpage_seq(self):
@@ -556,7 +582,7 @@ class Identity:
             ...
         </article-meta>
         """
-        fpage = self._am.find("fpage")
+        fpage = self.article_meta.find("fpage")
         if fpage is not None:
             return fpage.get("seq")
 
@@ -571,23 +597,23 @@ class Identity:
             ...
         </article-meta>
         """
-        return self._am.findtext("lpage")
+        return self.article_meta.findtext("lpage")
 
     @property
     def volume(self):
-        return self._am.findtext("volume")
+        return self.article_meta.findtext("volume")
 
     @property
     def number(self):
         n, s = extract_number_and_supplment_from_issue_element(
-            self._am.findtext("issue")
+            self.article_meta.findtext("issue")
         )
         return n
 
     @property
     def supplement(self):
         n, s = extract_number_and_supplment_from_issue_element(
-            self._am.findtext("issue")
+            self.article_meta.findtext("issue")
         )
         return s
 
@@ -621,14 +647,14 @@ class Identity:
             self.number
         )
         data = (
-            self._jm.eissn or self._jm.print_issn or self._jm.issn,
+            self.journal_meta.issn,
             (
-                (self._am.volume or self._am.number) and
-                self._am.documents_bundle_pubdate[0]
+                (self.article_meta.volume or self.article_meta.number) and
+                self.article_meta.documents_bundle_pubdate[0]
             ),
-            self._am.volume,
+            self.article_meta.volume,
             issue,
-            not self._am.volume and not self._am.number and "aop",
+            not self.article_meta.volume and not self.article_meta.number and "aop",
         )
         return "-".join([item for item in items if item])
 
