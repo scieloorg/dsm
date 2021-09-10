@@ -457,7 +457,7 @@ class FriendlyISISDocument:
 
     @p_records.setter
     def p_records(self, _p_records):
-        self._paragraphs.replace_paragraphs(_p_records)
+        self._paragraphs.replace_p_records(_p_records)
 
 
 def contrib_xref(xrefs):
@@ -493,7 +493,7 @@ class FriendlyISISParagraphs:
         for rec in self._after_refs:
             self._doc_records.remove(rec)
 
-    def replace_paragraphs(self, p_records):
+    def replace_p_records(self, p_records):
         self._del_paragraphs()
         self._doc_records.extend(p_records)
         self._select_paragraph_records()
