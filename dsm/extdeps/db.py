@@ -293,3 +293,17 @@ def get_isis_documents_by_date_range(
 
 def get_isis_documents_by_publication_year(year):
     return ISISDocument.objects(pub_year=year)
+
+
+def get_isis_documents(acron=None, issue_folder=None, pub_year=None):
+    params = {}
+    if acron:
+        params['acron'] = acron
+    if pub_year:
+        params['pub_year'] = pub_year
+    if issue_folder:
+        params['issue_folder'] = issue_folder
+
+    if params:
+        return ISISDocument.objects(**params)
+    return []
