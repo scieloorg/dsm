@@ -449,10 +449,16 @@ class MigrationManager:
 
         # cria arquivos xml com o conteúdo obtido dos arquivos xml e
         # dos registros de parágrafos
-        
         for text in migrated.xml_texts:
+            # inclui v3 no XML
+            sps_pkg = SPS_Package(text["text"])
+            sps_pkg.scielo_pid_v3 = document._id
+            sps_pkg.scielo_pid_v2 = document.pid
+            if document.aop_pid:
+                sps_pkg.aop_pid = document.aop_pid
+
             # obtém os conteúdos de xml registrados em `isis_doc`
-            file_path = create_temp_file(text["filename"], text["text"])
+            file_path = create_temp_file(text["filename"], sps_pkg.xml_content)
             # obtém a localização do arquivo no `files storage`
             folder = get_files_storage_folder_for_xmls(
                 migrated.journal_pid, migrated.issue_folder
