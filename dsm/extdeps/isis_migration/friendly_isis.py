@@ -485,16 +485,13 @@ class FriendlyISISParagraphs:
         self._doc_records = doc_records
         self.identify_the_groups_of_p_records()
 
-    def _del_paragraphs(self):
-        for rec in self._before_refs:
-            self._doc_records.remove(rec)
-        for rec in self._refs:
-            self._doc_records.remove(rec)
-        for rec in self._after_refs:
-            self._doc_records.remove(rec)
-
     def replace_p_records(self, p_records):
-        self._del_paragraphs()
+        if not p_records:
+            return
+        for rec in self._doc_records:
+            rec_type = _get_value(rec, "v706")
+            if rec_type == "p":
+                self._doc_records.remove(rec)
         self._doc_records.extend(p_records)
         self.identify_the_groups_of_p_records()
 
@@ -525,8 +522,6 @@ class FriendlyISISParagraphs:
                     _ref_end = i
                 else:
                     _ref_start = i
-            _ref_end
-
         if _before:
             self._before_refs = self._doc_records[_before:_ref_start]
         if _ref_start:
