@@ -483,7 +483,7 @@ class FriendlyISISParagraphs:
     def __init__(self, _id, doc_records):
         self._id = _id
         self._doc_records = doc_records
-        self.identify_the_groups_of_p_records()
+        self._identify_the_groups_of_p_records()
 
     def replace_p_records(self, p_records):
         if not p_records:
@@ -493,7 +493,7 @@ class FriendlyISISParagraphs:
             if rec_type == "p":
                 self._doc_records.remove(rec)
         self._doc_records.extend(p_records)
-        self.identify_the_groups_of_p_records()
+        self._identify_the_groups_of_p_records()
 
     @property
     def references(self):
@@ -502,7 +502,7 @@ class FriendlyISISParagraphs:
             for record in self._refs
         ])
 
-    def identify_the_groups_of_p_records(self):
+    def _identify_the_groups_of_p_records(self):
         self._before_refs = []
         self._refs = []
         self._after_refs = []
