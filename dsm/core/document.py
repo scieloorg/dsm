@@ -448,6 +448,9 @@ def set_translated_sections(article, langs_and_sections):
     article: opac_schema.v1.models.Article
     langs_and_sections: dict
     """
+    if not langs_and_sections:
+        # documento não tem seção de sumário
+        return
     sections = []
     for lang, section in langs_and_sections.items():
         sections.append(
