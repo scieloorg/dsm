@@ -452,12 +452,12 @@ class FriendlyISISDocument:
         return _abstracts
 
     @property
-    def p_records(self):
-        return self._paragraphs
+    def paragraphs(self):
+        return FriendlyISISParagraphs(self._id, self._records)
 
-    @p_records.setter
-    def p_records(self, _p_records):
-        self._paragraphs.replace_p_records(_p_records)
+    def add_p_records(self, _p_records):
+        paragraphs = FriendlyISISParagraphs(self._id, self._records)
+        paragraphs.replace_p_records(_p_records)
 
 
 def contrib_xref(xrefs):
@@ -495,12 +495,21 @@ class FriendlyISISParagraphs:
         self._doc_records.extend(p_records)
         self._identify_the_groups_of_p_records()
 
+    def records_texts(self, records):
+        texts = []
+        for rec in records:
+            text = _get_value(rec, "v704")
+            if not text:
+                continue
+            try:
+                texts.append(text["_"])
+            except (KeyError, TypeError):
+                texts.append(text)
+        return "".join(texts)
+
     @property
     def references(self):
-        return "".join([
-            _get_value(record, "v704").get("_")
-            for record in self._refs
-        ])
+        return self.records_texts(self._refs)
 
     def _identify_the_groups_of_p_records(self):
         self._before_refs = []
@@ -539,12 +548,7 @@ class FriendlyISISParagraphs:
 
     @property
     def text(self):
-        return "".join(
-            [
-                _get_value(record, "v704").get("_")
-                for record in self.p_records
-            ]
-        )
+        return self.records_texts(self.p_records)
 
 
 class FriendlyISISJournal:

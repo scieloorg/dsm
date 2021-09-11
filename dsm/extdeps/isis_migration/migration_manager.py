@@ -924,7 +924,7 @@ class MigratedDocument:
         if self.isis_doc.file_type == "xml":
             return []
         texts = []
-        paragraphs = self._f_doc.p_records
+        paragraphs = self._f_doc.paragraphs
         text = {
             "lang": self._f_doc.language,
             "filename": self.isis_doc.file_name + ".html",
@@ -935,7 +935,6 @@ class MigratedDocument:
                 paragraphs.text, self.isis_doc.asset_files
             )
         texts.append(text)
-
         for transl_text in self.translated_texts:
             text = {
                 "lang": transl_text["lang"],
