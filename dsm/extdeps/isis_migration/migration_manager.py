@@ -457,6 +457,8 @@ class MigrationManager:
             if document.aop_pid:
                 sps_pkg.aop_pid = document.aop_pid
 
+            document.htmls = [{"lang": lang} for lang in sps_pkg.languages]
+
             # obtém os conteúdos de xml registrados em `isis_doc`
             file_path = create_temp_file(text["filename"], sps_pkg.xml_content)
             # obtém a localização do arquivo no `files storage`
