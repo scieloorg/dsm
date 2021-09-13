@@ -72,9 +72,9 @@ def register_documents(acron=None, issue_folder=None, pub_year=None, updated_fro
 
             # registra os textos completos provenientes dos arquivos HTML e
             # dos registros do tipo `p`
-            if doc.html_files:
+            if doc.file_type == "html":
                 _migration_manager.update_website_document_htmls(doc._id)
-            elif doc.xml_files:
+            elif doc.file_type == "xml":
                 _migration_manager.update_website_document_xmls(doc._id)
             registered_metadata += 1
         except Exception as e:

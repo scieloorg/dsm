@@ -162,7 +162,7 @@ class MigrationManager:
         isis_document = db.fetch_isis_document(_id)
         if not isis_document:
             raise exceptions.DocumentDoesNotExistError(
-                "isis_document %s does not exist" % article_pid
+                "isis_document %s does not exist" % _id
             )
         doc = friendly_isis.FriendlyISISDocument(_id, isis_document.records)
 
@@ -456,6 +456,8 @@ class MigrationManager:
             sps_pkg.scielo_pid_v2 = document.pid
             if document.aop_pid:
                 sps_pkg.aop_pid = document.aop_pid
+
+            document.htmls = [{"lang": lang} for lang in sps_pkg.languages]
 
             # obtém os conteúdos de xml registrados em `isis_doc`
             file_path = create_temp_file(text["filename"], sps_pkg.xml_content)
@@ -923,7 +925,7 @@ class MigratedDocument:
         if self.isis_doc.file_type == "xml":
             return []
         texts = []
-        paragraphs = self._f_doc.p_records
+        paragraphs = self._f_doc.paragraphs
         text = {
             "lang": self._f_doc.language,
             "filename": self.isis_doc.file_name + ".html",
@@ -934,7 +936,6 @@ class MigratedDocument:
                 paragraphs.text, self.isis_doc.asset_files
             )
         texts.append(text)
-
         for transl_text in self.translated_texts:
             text = {
                 "lang": transl_text["lang"],
@@ -956,20 +957,23 @@ class MigratedDocument:
         if self.isis_doc.file_type == "html":
             return []
         texts = []
-        content = requests_get_content(self.isis_doc.xml_files[0].uri)
         try:
+            content = requests_get_content(self.isis_doc.xml_files[0].uri)
             sps_pkg = SPS_Package(content)
             sps_pkg.local_to_remote(self.isis_doc.asset_files)
             content = sps_pkg.xml_content
+        except IndexError as e:
+            pass
         except Exception as e:
             # TODO melhorar o tratamento de excecao
             raise
-        text = {
-            "lang": self._f_doc.language,
-            "filename": self.isis_doc.file_name + ".xml",
-            "text": content,
-        }
-        texts.append(text)
+        else:
+            text = {
+                "lang": self._f_doc.language,
+                "filename": self.isis_doc.file_name + ".xml",
+                "text": content,
+            }
+            texts.append(text)
         return texts
 
     @property

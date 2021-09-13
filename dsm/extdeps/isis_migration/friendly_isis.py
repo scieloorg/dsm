@@ -452,12 +452,12 @@ class FriendlyISISDocument:
         return _abstracts
 
     @property
-    def p_records(self):
-        return self._paragraphs
+    def paragraphs(self):
+        return FriendlyISISParagraphs(self._id, self._records)
 
-    @p_records.setter
-    def p_records(self, _p_records):
-        self._paragraphs.replace_paragraphs(_p_records)
+    def add_p_records(self, _p_records):
+        paragraphs = FriendlyISISParagraphs(self._id, self._records)
+        paragraphs.replace_p_records(_p_records)
 
 
 def contrib_xref(xrefs):
@@ -483,29 +483,35 @@ class FriendlyISISParagraphs:
     def __init__(self, _id, doc_records):
         self._id = _id
         self._doc_records = doc_records
-        self._select_paragraph_records()
+        self._identify_the_groups_of_p_records()
 
-    def _del_paragraphs(self):
-        for rec in self._before_refs:
-            self._doc_records.remove(rec)
-        for rec in self._refs:
-            self._doc_records.remove(rec)
-        for rec in self._after_refs:
-            self._doc_records.remove(rec)
-
-    def replace_paragraphs(self, p_records):
-        self._del_paragraphs()
+    def replace_p_records(self, p_records):
+        if not p_records:
+            return
+        for rec in self._doc_records:
+            rec_type = _get_value(rec, "v706")
+            if rec_type == "p":
+                self._doc_records.remove(rec)
         self._doc_records.extend(p_records)
-        self._select_paragraph_records()
+        self._identify_the_groups_of_p_records()
+
+    def records_texts(self, records):
+        texts = []
+        for rec in records:
+            text = _get_value(rec, "v704")
+            if not text:
+                continue
+            try:
+                texts.append(text["_"])
+            except (KeyError, TypeError):
+                texts.append(text)
+        return "".join(texts)
 
     @property
     def references(self):
-        return "".join([
-            _get_value(record, "v704").get("_")
-            for record in self._refs
-        ])
+        return self.records_texts(self._refs)
 
-    def _select_paragraph_records(self):
+    def _identify_the_groups_of_p_records(self):
         self._before_refs = []
         self._refs = []
         self._after_refs = []
@@ -525,8 +531,6 @@ class FriendlyISISParagraphs:
                     _ref_end = i
                 else:
                     _ref_start = i
-            _ref_end
-
         if _before:
             self._before_refs = self._doc_records[_before:_ref_start]
         if _ref_start:
@@ -535,7 +539,7 @@ class FriendlyISISParagraphs:
             self._after_refs = self._doc_records[_ref_end+1:]
 
     @property
-    def paragraphs(self):
+    def p_records(self):
         return (
             (self._before_refs or []) +
             (self._refs or []) +
@@ -544,12 +548,7 @@ class FriendlyISISParagraphs:
 
     @property
     def text(self):
-        return "".join(
-            [
-                _get_value(record, "v704").get("_")
-                for record in self.paragraphs
-            ]
-        )
+        return self.records_texts(self.p_records)
 
 
 class FriendlyISISJournal:
