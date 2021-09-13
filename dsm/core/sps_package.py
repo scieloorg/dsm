@@ -309,7 +309,7 @@ class SPS_Package:
 
     @property
     def languages(self):
-        return [self.lang] + [lang for node, lang in self._subart_translations]
+        return [self.lang] + [lang for node, lang in self.subart_translations]
 
     @property
     def elocation_id(self):
