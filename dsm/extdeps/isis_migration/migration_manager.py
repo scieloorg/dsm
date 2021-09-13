@@ -162,7 +162,7 @@ class MigrationManager:
         isis_document = db.fetch_isis_document(_id)
         if not isis_document:
             raise exceptions.DocumentDoesNotExistError(
-                "isis_document %s does not exist" % article_pid
+                "isis_document %s does not exist" % _id
             )
         doc = friendly_isis.FriendlyISISDocument(_id, isis_document.records)
 
@@ -956,20 +956,23 @@ class MigratedDocument:
         if self.isis_doc.file_type == "html":
             return []
         texts = []
-        content = requests_get_content(self.isis_doc.xml_files[0].uri)
         try:
+            content = requests_get_content(self.isis_doc.xml_files[0].uri)
             sps_pkg = SPS_Package(content)
             sps_pkg.local_to_remote(self.isis_doc.asset_files)
             content = sps_pkg.xml_content
+        except IndexError as e:
+            pass
         except Exception as e:
             # TODO melhorar o tratamento de excecao
             raise
-        text = {
-            "lang": self._f_doc.language,
-            "filename": self.isis_doc.file_name + ".xml",
-            "text": content,
-        }
-        texts.append(text)
+        else:
+            text = {
+                "lang": self._f_doc.language,
+                "filename": self.isis_doc.file_name + ".xml",
+                "text": content,
+            }
+            texts.append(text)
         return texts
 
     @property
