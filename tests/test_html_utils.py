@@ -93,3 +93,37 @@ class TestHTMLUtils(TestCase):
             html_text, asset_uris_and_names)
         self.assertEqual(expected.strip(), result.strip())
 
+
+class TestGetPath(TestCase):
+
+    def setUp(self):
+        self.url = "www.scielo.br"
+
+    def test__get_path_returns_none_if_link_is_website_url(self):
+        result = html_utils._get_path("www.scielo.br", self.url)
+        self.assertIsNone(result)
+
+    def test__get_path_returns_none_if_link_is_external(self):
+        result = html_utils._get_path("http://www.othersite.br/home", self.url)
+        self.assertIsNone(result)
+
+    def test__get_path_returns_none_if_link_is_not_http(self):
+        result = html_utils._get_path("mailto:a@scielo.org", self.url)
+        self.assertIsNone(result)
+
+    def test__get_path_returns_home_if_link_startswith_website_url(self):
+        expected = "/home"
+        result = html_utils._get_path("www.scielo.br/home", self.url)
+        self.assertEqual(expected, result)
+
+    def test__get_path_returns_path_if_link_is_correct(self):
+        expected = "/img/revistas/acron/volun/a1.gif"
+        result = html_utils._get_path(
+            "/img/revistas/acron/volun/a1.gif", self.url)
+        self.assertEqual(expected, result)
+
+    def test__get_path_returns_path_if_link_has_no_slash_at_the_begin(self):
+        expected = "top.gif"
+        result = html_utils._get_path("top.gif", self.url)
+        self.assertEqual(expected, result)
+
