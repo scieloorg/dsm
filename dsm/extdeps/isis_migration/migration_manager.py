@@ -512,7 +512,7 @@ class MigrationManager:
         db.save_data(migrated_document.isis_doc)
         return zip_file_path
 
-    def list_documents(self, acron, issue_folder, pub_year, updated_from, updated_to):
+    def list_documents(self, acron, issue_folder, pub_year, updated_from, updated_to, pid):
         """
         Migrate isis document data to website
 
@@ -529,6 +529,10 @@ class MigrationManager:
         # registro migrado formato json
         print(f"{acron}, {issue_folder}, {pub_year}, {updated_from}, {updated_to}")
         docs = []
+        if pid:
+            docs = db.fetch_isis_document(pid)
+            if docs:
+                return [docs]
         if acron or issue_folder or pub_year:
             docs = db.get_isis_documents(acron, issue_folder, pub_year)
         elif updated_from or updated_to:
