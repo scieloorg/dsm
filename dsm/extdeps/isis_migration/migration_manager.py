@@ -933,12 +933,8 @@ class MigratedDocument:
         text = {
             "lang": self._f_doc.language,
             "filename": self.isis_doc.file_name + ".html",
-            "text": "",
+            "text": paragraphs.text or "",
         }
-        if paragraphs.text:
-            text["text"] = change_images_location(
-                paragraphs.text, self.isis_doc.asset_files
-            )
         texts.append(text)
         for transl_text in self.translated_texts:
             text = {
@@ -949,10 +945,6 @@ class MigratedDocument:
             text["text"] += paragraphs.references
             if len(transl_text["text"]) > 1:
                 text["text"] += transl_text["text"][1]
-            if text["text"]:
-                text["text"] = change_images_location(
-                    text["text"], self.isis_doc.asset_files
-                )
             texts.append(text)
         return texts
 
