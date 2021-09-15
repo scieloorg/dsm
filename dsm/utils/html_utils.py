@@ -69,3 +69,20 @@ def _get_path(link, website_url):
         return parsed.path[parsed.path.find(website_url)+len(website_url):]
     if parsed.path and not parsed.netloc and not parsed.scheme:
         return parsed.path
+
+
+def adapt_html_text_to_website(html_text, assets):
+    html = fromstring(html_text)
+
+    for asset in assets:
+        elem = asset["elem"]
+        attr = asset["attr"]
+        original = asset["original"]
+
+        for node in html.xpath(f"//{elem}[@{attr}='{original}']"):
+            new = asset["new"]
+            if "#" in original:
+                new += original[original.find("#"):]
+            node.set(attr, new)
+    return tostring(html).decode("utf-8")
+

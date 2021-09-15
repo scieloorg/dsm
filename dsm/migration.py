@@ -316,12 +316,20 @@ def main():
     register_external_p_records_parser = subparsers.add_parser(
         "register_external_p_records",
         help=(
-            "Update the website with documents (text available only for XML)"
+            "Update the p records using external records"
         ),
     )
     register_external_p_records_parser.add_argument(
         "--pub_year",
         help="Publication year",
+    )
+    register_external_p_records_parser.add_argument(
+        "--acron",
+        help="Journal acronym",
+    )
+    register_external_p_records_parser.add_argument(
+        "--issue_folder",
+        help="Issue folder (e.g.: v20n1)",
     )
     register_external_p_records_parser.add_argument(
         "--updated_from",
