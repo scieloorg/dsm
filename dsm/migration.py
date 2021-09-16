@@ -187,6 +187,60 @@ def migrate_issue(id_file_path):
             raise
 
 
+def _migrate_one_isis_record(pid, record,
+                             custom_id_function,
+                             custom_register_isis_function,
+                             custom_register_isis_event_name,
+                             custom_register_website_function,
+                             custom_register_website_event_name,
+                             ):
+    """
+    Migrate one ISIS record (title or issue)
+
+    Parameters
+    ----------
+    pid: str
+    record: str
+
+    Returns
+    -------
+    dict
+        {
+            "pid": "",
+            "events": [],
+        }
+    """
+    result = {
+        "pid": pid,
+    }
+    events = []
+    try:
+        saved = custom_register_isis_function(pid, record)
+        events.append({
+            "_id": saved._id,
+            "event": custom_register_isis_event_name,
+            "isis_created": saved.isis_created_date,
+            "isis_updated": saved.isis_updated_date,
+            "created": saved.created,
+            "updated": saved.updated,
+        })
+
+        saved = custom_register_website_function(pid)
+        events.append({
+            "_id": saved._id,
+            "event": custom_register_website_event_name,
+            "created": saved.created,
+            "updated": saved.updated,
+        })
+    except Exception as e:
+        events.append({
+            "error": str(e),
+            "timestamp": datetime.utcnow().isoformat(),
+        })
+    result["events"] = events
+    return result
+
+
 def create_id_file(db_file_path, id_file_path=None):
     """
     Generates ID file `id_file_path` of a ISIS database `db_file_path`
