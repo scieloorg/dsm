@@ -161,32 +161,6 @@ def register_artigo_id(id_file_path):
             raise
 
 
-def migrate_title(id_file_path):
-
-    for _id, records in id2json.get_json_records(
-            id_file_path, id2json.journal_id):
-        try:
-            if _migration_manager.register_isis_journal(_id, records[0]):
-                _migration_manager.update_website_journal_data(_id)
-        except:
-            print(_id)
-            print(f"Algum problema com {_id}")
-            raise
-
-
-def migrate_issue(id_file_path):
-
-    for _id, records in id2json.get_json_records(
-            id_file_path, id2json.issue_id):
-        try:
-            if _migration_manager.register_isis_issue(_id, records[0]):
-                _migration_manager.update_website_issue_data(_id)
-        except:
-            print(_id)
-            print(f"Algum problema com {_id}")
-            raise
-
-
 def migrate_isis_db(db_type, source_file_path=None, records_content=None):
     """
     Migrate ISIS database content from `source_file_path` or `records_content`
@@ -610,9 +584,9 @@ def main():
     args = parser.parse_args()
     result = None
     if args.command == "migrate_title":
-        result = migrate_title(args.source_file_path)
+        result = migrate_isis_db("title", args.source_file_path)
     elif args.command == "migrate_issue":
-        result = migrate_issue(args.source_file_path)
+        result = migrate_isis_db("issue", args.source_file_path)
     elif args.command == "register_artigo_id":
         register_artigo_id(args.id_file_path)
     elif args.command == "register_documents":
@@ -630,7 +604,9 @@ def main():
     else:
         parser.print_help()
 
-    print(result)
+    if result:
+        for res in result:
+            print(res)
 
 
 if __name__ == '__main__':
