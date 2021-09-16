@@ -111,10 +111,10 @@ def date_now_as_folder_name():
     return datetime.now().isoformat().replace(":", "")
 
 
-def create_temp_file(filename, content):
+def create_temp_file(filename, content=None):
     file_path = tempfile.mkdtemp()
     file_path = os.path.join(file_path, filename)
-    write_file(file_path, content)
+    write_file(file_path, content or '')
     return file_path
 
 
