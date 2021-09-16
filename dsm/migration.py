@@ -236,25 +236,29 @@ def main():
     migrate_title_parser = subparsers.add_parser(
         "migrate_title",
         help=(
-            "Register the content of title.id in MongoDB and"
-            " update the website with journals data"
+            "Migrate journal data from ISIS database to MongoDB."
         )
     )
     migrate_title_parser.add_argument(
-        "id_file_path",
-        help="Path of ID file that will be imported"
+        "source_file_path",
+        help=(
+            "/path/title/title (ISIS database path) or "
+            "/path/title/title.id (ID file path)"
+        )
     )
 
     migrate_issue_parser = subparsers.add_parser(
         "migrate_issue",
         help=(
-            "Register the content of issue.id in MongoDB and"
-            " update the website with issues data"
+            "Migrate issue data from ISIS database to MongoDB."
         )
     )
     migrate_issue_parser.add_argument(
-        "id_file_path",
-        help="Path of ID file that will be imported"
+        "source_file_path",
+        help=(
+            "/path/issue/issue (ISIS database path) or "
+            "/path/issue/issue.id (ID file path)"
+        )
     )
 
     register_acron_parser = subparsers.add_parser(
@@ -341,11 +345,11 @@ def main():
     )
 
     args = parser.parse_args()
-
+    result = None
     if args.command == "migrate_title":
-        migrate_title(args.id_file_path)
+        result = migrate_title(args.source_file_path)
     elif args.command == "migrate_issue":
-        migrate_issue(args.id_file_path)
+        result = migrate_issue(args.source_file_path)
     elif args.command == "register_artigo_id":
         register_artigo_id(args.id_file_path)
     elif args.command == "register_documents":
@@ -362,6 +366,8 @@ def main():
         register_acron(args.acron, args.id_folder_path)
     else:
         parser.print_help()
+
+    print(result)
 
 
 if __name__ == '__main__':
