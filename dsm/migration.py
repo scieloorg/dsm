@@ -18,10 +18,10 @@ from dsm.utils.files import create_temp_file, size
 _migration_manager = migration_manager.MigrationManager()
 
 
-def _select_docs(acron=None, issue_folder=None, pub_year=None, updated_from=None, updated_to=None):
-    if any((acron, issue_folder, pub_year, updated_from, updated_to)):
+def _select_docs(acron=None, issue_folder=None, pub_year=None, updated_from=None, updated_to=None, pid=None):
+    if any((acron, issue_folder, pub_year, updated_from, updated_to, pid)):
         yield from _migration_manager.list_documents(
-                    acron, issue_folder, pub_year, updated_from, updated_to)
+                    acron, issue_folder, pub_year, updated_from, updated_to, pid)
     else:
         for y in range(1900, datetime.now().year):
             y = str(y).zfill(4)
@@ -42,7 +42,7 @@ def register_old_website_files(acron=None, issue_folder=None, pub_year=None, upd
             doc._id)
 
 
-def register_documents(acron=None, issue_folder=None, pub_year=None, updated_from=None, updated_to=None):
+def register_documents(pid=None, acron=None, issue_folder=None, pub_year=None, updated_from=None, updated_to=None):
     _files_storage = configuration.get_files_storage()
     _db_url = configuration.get_db_url()
     _v3_manager = configuration.get_pid_manager()
@@ -54,7 +54,7 @@ def register_documents(acron=None, issue_folder=None, pub_year=None, updated_fro
     registered_xml = 0
     registered_metadata = 0
 
-    for doc in _select_docs(acron, issue_folder, pub_year, updated_from, updated_to):
+    for doc in _select_docs(acron, issue_folder, pub_year, updated_from, updated_to, pid):
         zip_file_path = None
         try:
             # obtém os arquivos do site antigo (xml, pdf, html, imagens)
@@ -289,6 +289,10 @@ def main():
         ),
     )
     register_documents_parser.add_argument(
+        "--pid",
+        help="pid",
+    )
+    register_documents_parser.add_argument(
         "--acron",
         help="Journal acronym",
     )
@@ -312,12 +316,20 @@ def main():
     register_external_p_records_parser = subparsers.add_parser(
         "register_external_p_records",
         help=(
-            "Update the website with documents (text available only for XML)"
+            "Update the p records using external records"
         ),
     )
     register_external_p_records_parser.add_argument(
         "--pub_year",
         help="Publication year",
+    )
+    register_external_p_records_parser.add_argument(
+        "--acron",
+        help="Journal acronym",
+    )
+    register_external_p_records_parser.add_argument(
+        "--issue_folder",
+        help="Issue folder (e.g.: v20n1)",
     )
     register_external_p_records_parser.add_argument(
         "--updated_from",
@@ -338,7 +350,7 @@ def main():
         register_artigo_id(args.id_file_path)
     elif args.command == "register_documents":
         register_documents(
-            args.acron, args.issue_folder, args.pub_year,
+            args.pid, args.acron, args.issue_folder, args.pub_year,
             args.updated_from, args.updated_to)
     elif args.command == "register_external_p_records":
         register_external_p_records(

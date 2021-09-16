@@ -3,7 +3,7 @@ import glob
 
 from scielo_v3_manager.v3_gen import generates
 
-from dsm.utils.html_utils import change_images_location
+from dsm.utils.html_utils import adapt_html_text_to_website, get_assets_locations
 from dsm.utils.xml_utils import get_xml_tree, tostring
 
 from dsm.utils.async_download import download_files
@@ -25,7 +25,7 @@ from dsm.configuration import (
     get_files_storage_folder_for_htmls,
     get_files_storage_folder_for_xmls,
     get_files_storage_folder_for_migration,
-
+    get_htdocs_path,
 )
 from dsm.core.issue import get_bundle_id
 from dsm.core.document import (
@@ -397,7 +397,7 @@ class MigrationManager:
         # cria arquivos html com o conteúdo obtido dos arquivos html e
         # dos registros de parágrafos
         htmls = []
-        for text in migrated.html_texts:
+        for text in migrated.html_texts_adapted_for_the_website:
             # obtém os conteúdos de html registrados em `isis_doc`
             file_path = create_temp_file(text["filename"], text["text"])
             # obtém a localização do arquivo no `files storage`
@@ -501,8 +501,9 @@ class MigrationManager:
         # registro migrado formato json
         migrated_document = MigratedDocument(article_pid)
         migrated_document.migrate_pdfs(self._files_storage)
-        migrated_document.migrate_images(self._files_storage)
         migrated_document.migrate_text_files(self._files_storage)
+        migrated_document.migrate_images(self._files_storage)
+        migrated_document.migrate_images_from_html(self._files_storage)
         zip_file_path = (
             migrated_document.register_migrated_document_files_zipfile(
                 self._files_storage
@@ -512,7 +513,7 @@ class MigrationManager:
         db.save_data(migrated_document.isis_doc)
         return zip_file_path
 
-    def list_documents(self, acron, issue_folder, pub_year, updated_from, updated_to):
+    def list_documents(self, acron, issue_folder, pub_year, updated_from, updated_to, pid):
         """
         Migrate isis document data to website
 
@@ -529,6 +530,10 @@ class MigrationManager:
         # registro migrado formato json
         print(f"{acron}, {issue_folder}, {pub_year}, {updated_from}, {updated_to}")
         docs = []
+        if pid:
+            docs = db.fetch_isis_document(pid)
+            if docs:
+                return [docs]
         if acron or issue_folder or pub_year:
             docs = db.get_isis_documents(acron, issue_folder, pub_year)
         elif updated_from or updated_to:
@@ -929,12 +934,8 @@ class MigratedDocument:
         text = {
             "lang": self._f_doc.language,
             "filename": self.isis_doc.file_name + ".html",
-            "text": "",
+            "text": paragraphs.text or "",
         }
-        if paragraphs.text:
-            text["text"] = change_images_location(
-                paragraphs.text, self.isis_doc.asset_files
-            )
         texts.append(text)
         for transl_text in self.translated_texts:
             text = {
@@ -945,12 +946,36 @@ class MigratedDocument:
             text["text"] += paragraphs.references
             if len(transl_text["text"]) > 1:
                 text["text"] += transl_text["text"][1]
-            if text["text"]:
-                text["text"] = change_images_location(
-                    text["text"], self.isis_doc.asset_files
-                )
             texts.append(text)
         return texts
+
+    @property
+    def html_texts_adapted_for_the_website(self):
+        if self.isis_doc.file_type == "xml":
+            return []
+        assets_by_lang = {}
+        for asset in self.isis_doc.asset_files:
+            lang = asset["annotation"]["lang"]
+            assets_by_lang.setdefault(lang, [])
+            assets_by_lang[lang].append(
+                {
+                    "elem": asset["annotation"]["elem"],
+                    "attr": asset["annotation"]["attr"],
+                    "original": asset["annotation"]["original"],
+                    "new": asset["uri"],
+                }
+            )
+
+        for html_text in self.html_texts:
+            assets = assets_by_lang.get(html_text["lang"])
+            yield {
+                "lang": html_text["lang"],
+                "text": adapt_html_text_to_website(
+                    html_text["text"],
+                    assets
+                ),
+                "filename": html_text["filename"],
+            }
 
     @property
     def xml_texts(self):
@@ -1047,6 +1072,8 @@ class MigratedDocument:
         Registra os arquivos na nuvem
         Atualiza os dados de imagens de `isis_document`
         """
+        if self.isis_doc.file_type != "xml":
+            return
         _files = []
         _uris_and_names = []
         for file_path in self._document_files.htdocs_img_revistas_files_paths:
@@ -1058,6 +1085,63 @@ class MigratedDocument:
             _uris_and_names.append(
                 db.create_remote_and_local_file(remote, name)
             )
+        self.isis_doc.assets = _files
+        self.isis_doc.asset_files = _uris_and_names
+
+    def migrate_images_from_html(self, files_storage):
+        """
+        Parse HTML content to get src / href
+        Obtém os arquivos de imagens do documento da pasta HTDOCS_IMG_REVISTAS_PATH
+        Registra os arquivos na nuvem
+        Atualiza os dados de imagens de `isis_document`
+
+        Some images in html content might be located in an unexpected path,
+        such as, /img/revista/acron/nahead/, althouth the document is not aop
+        anymore.
+        Some images might have not same preffix name as the main html file,
+        for instance, main file name is a01.htm, their images can be named as
+        a1f1.
+        This attribute have to parse the HTML and recover the images from
+        /img/revista/ located in unexpected folders and with unexpected file
+        names.
+
+        Returns
+        -------
+        dict
+        """
+        if self.isis_doc.file_type != "html":
+            return
+        htmls = []
+        _files = []
+        _uris_and_names = []
+        HTDOCS_PATH = get_htdocs_path()
+        for text in self.html_texts:
+            for asset in get_assets_locations(text["text"]):
+                # fullpath
+                subdir = asset["path"]
+                if subdir.startswith("/"):
+                    subdir = subdir[1:]
+                file_path = os.path.join(HTDOCS_PATH, subdir)
+                if not os.path.isfile(file_path):
+                    continue
+
+                # basename
+                name = os.path.basename(file_path)
+                _files.append(name)
+
+                # register in minio
+                remote = files_storage.register(
+                    file_path, self._files_storage_folder,
+                    name, preserve_name=True)
+                annotation = {
+                    "original": asset["link"],
+                    "elem": asset["elem"].tag,
+                    "attr": asset["attr"],
+                    "lang": text["lang"],
+                }
+                _uris_and_names.append(
+                    db.create_remote_and_local_file(remote, name, annotation)
+                )
         self.isis_doc.assets = _files
         self.isis_doc.asset_files = _uris_and_names
 

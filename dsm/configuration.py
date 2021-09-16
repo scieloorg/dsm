@@ -265,3 +265,7 @@ def get_files_storage_folder_for_migration(issn, issue_folder):
 
 def get_bases_acron(acron):
     return os.path.join(BASES_WORK_PATH, acron, acron)
+
+
+def get_htdocs_path():
+    return os.path.dirname(os.path.dirname(HTDOCS_IMG_REVISTAS_PATH))
