@@ -30,8 +30,8 @@ def files_list(path):
     return os.listdir(path)
 
 
-def read_file(path, encoding="utf-8"):
-    with open(path, "r", encoding=encoding) as f:
+def read_file(path, encoding="utf-8", mode="r"):
+    with open(path, mode=mode, encoding=encoding) as f:
         text = f.read()
     return text
 
