@@ -13,10 +13,30 @@ from dsm.extdeps.isis_migration import (
 from dsm import configuration
 from dsm.core.issue import get_bundle_id
 from dsm.core.document import DocsManager
-from dsm.utils.files import create_temp_file, size
+from dsm.utils.files import create_temp_file, size, read_file
+from dsm import exceptions
+
 
 _migration_manager = migration_manager.MigrationManager()
+_migration_manager.db_connect()
 
+
+_MIGRATION_PARAMETERS = {
+    "title": dict(
+        custom_id_function=id2json.journal_id,
+        custom_register_isis_function=_migration_manager.register_isis_journal,
+        custom_register_isis_event_name="REGISTERED_ISIS_JOURNAL",
+        custom_register_website_function=_migration_manager.update_website_journal_data,
+        custom_register_website_event_name="REGISTERED_WEBSITE_JOURNAL",
+    ),
+    "issue": dict(
+        custom_id_function=id2json.issue_id,
+        custom_register_isis_function=_migration_manager.register_isis_issue,
+        custom_register_isis_event_name="REGISTERED_ISIS_ISSUE",
+        custom_register_website_function=_migration_manager.update_website_issue_data,
+        custom_register_website_event_name="REGISTERED_WEBSITE_ISSUE",
+    )
+}
 
 def _select_docs(acron=None, issue_folder=None, pub_year=None, updated_from=None, updated_to=None, pid=None):
     if any((acron, issue_folder, pub_year, updated_from, updated_to, pid)):
@@ -30,13 +50,11 @@ def _select_docs(acron=None, issue_folder=None, pub_year=None, updated_from=None
 
 
 def update_website_with_documents_metadata(acron=None, issue_folder=None, pub_year=None, updated_from=None, updated_to=None):
-    _migration_manager.db_connect()
     for doc in _select_docs(acron, issue_folder, pub_year, updated_from, updated_to):
         _migration_manager.update_website_document_metadata(doc._id)
 
 
 def register_old_website_files(acron=None, issue_folder=None, pub_year=None, updated_from=None, updated_to=None):
-    _migration_manager.db_connect()
     for doc in _select_docs(acron, issue_folder, pub_year, updated_from, updated_to):
         zip_file_path = _migration_manager.register_old_website_document_files(
             doc._id)
@@ -49,7 +67,6 @@ def register_documents(pid=None, acron=None, issue_folder=None, pub_year=None, u
 
     _docs_manager = DocsManager(_files_storage, _db_url, _v3_manager)
 
-    _migration_manager.db_connect()
 
     registered_xml = 0
     registered_metadata = 0
@@ -92,7 +109,6 @@ def register_external_p_records(acron=None, issue_folder=None, pub_year=None, up
 
     _docs_manager = DocsManager(_files_storage, _db_url, _v3_manager)
 
-    _migration_manager.db_connect()
 
     for doc in _select_docs(acron, issue_folder, pub_year, updated_from, updated_to):
         try:
@@ -130,7 +146,6 @@ def _register_package(_docs_manager, zip_file_path, doc):
 
 
 def register_artigo_id(id_file_path):
-    _migration_manager.db_connect()
     for _id, records in id2json.get_json_records(
             id_file_path, id2json.article_id):
         try:
@@ -147,7 +162,6 @@ def register_artigo_id(id_file_path):
 
 
 def migrate_title(id_file_path):
-    _migration_manager.db_connect()
 
     for _id, records in id2json.get_json_records(
             id_file_path, id2json.journal_id):
@@ -161,7 +175,6 @@ def migrate_title(id_file_path):
 
 
 def migrate_issue(id_file_path):
-    _migration_manager.db_connect()
 
     for _id, records in id2json.get_json_records(
             id_file_path, id2json.issue_id):
