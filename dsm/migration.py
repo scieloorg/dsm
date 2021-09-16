@@ -187,6 +187,75 @@ def migrate_issue(id_file_path):
             raise
 
 
+def _migrate_isis_records(id_file_records, db_type):
+    """
+    Migrate data from `source_file_path` which is ISIS database or ID file
+
+    Parameters
+    ----------
+    id_file_records: generator or list of strings
+        list of ID records
+    db_type: str
+        "title" or "issue"
+
+    Returns
+    -------
+    generator
+
+    ```
+        {
+            "pid": "pid",
+            "events": [
+                {
+                    "_id": "",
+                    "event": "",
+                    "isis_created": "",
+                    "isis_updated": "",
+                    "created": "",
+                    "updated": "",
+                },
+                {
+                    "_id": "",
+                    "event": "",
+                    "created": "",
+                    "updated": "",
+                }
+            ]
+        }
+        ``` 
+        or 
+    ```
+        {
+            "pid": "pid",
+            "error": ""
+        }
+    ```
+
+    Raises
+    ------
+        ValueError
+
+    """
+    # get the migration parameters according to db_type: title or issue
+    migration_parameters = _MIGRATION_PARAMETERS.get(db_type)
+    if not migration_parameters:
+        raise ValueError(
+            "Invalid value for `db_type`. "
+            "Expected values: title, issue"
+        )
+
+    for pid, records in id2json.get_id_and_json_records(
+            id_file_records, migration_parameters["custom_id_function"]):
+        item_result = {"pid": pid}
+        try:
+            _result = _migrate_one_isis_record(
+                pid, records[0], **migration_parameters)
+            item_result.update(_result)
+        except Exception as e:
+            item_result["error"] = str(e)
+        yield item_result
+
+
 def _migrate_one_isis_record(pid, record,
                              custom_id_function,
                              custom_register_isis_function,
