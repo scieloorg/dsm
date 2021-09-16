@@ -187,6 +187,46 @@ def migrate_issue(id_file_path):
             raise
 
 
+def migrate_isis_db(db_type, source_file_path=None, records_content=None):
+    """
+    Migrate ISIS database content from `source_file_path` or `records_content`
+    which is ISIS database or ID file
+
+    Parameters
+    ----------
+    db_type: str
+        "title" or "issue"
+    source_file_path: str
+        ISIS database or ID file path
+    records_content: str
+        ID records
+
+    Returns
+    -------
+    generator
+        results of the migration
+    """
+    if source_file_path:
+        # get id_file_path
+        id_file_path = get_id_file_path(source_file_path)
+
+        # get id file rows
+        rows = id2json.get_id_file_rows(id_file_path)
+    elif records_content:
+        rows = records_content.splitlines()
+    else:
+        raise ValueError(
+            "Unable to migrate ISIS DB. "
+            "Expected `source_file_path` or `records_content`."
+        )
+
+    # migrate
+    for result in _migrate_isis_records(
+            id2json.join_id_file_rows_and_return_records(rows),
+            db_type):
+        yield result
+
+
 def _migrate_isis_records(id_file_records, db_type):
     """
     Migrate data from `source_file_path` which is ISIS database or ID file

@@ -208,7 +208,7 @@ def get_id_file_rows(id_file_path):
             yield item
 
 
-def _get_records(id_file_rows):
+def join_id_file_rows_and_return_records(id_file_rows):
     """
     Junta linhas `id_file_rows` que formam registros (str) e os retorna
 
