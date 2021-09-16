@@ -44,3 +44,25 @@ class FilesStorageRegisterError(Exception):
 
 class DBFetchMigratedDocError(Exception):
     ...
+
+
+class MissingCisisPathEnvVarError(Exception):
+    ...
+
+
+class CisisPathNotFoundMigrationError(Exception):
+    ...
+
+
+class MissingI2IdCommandPathEnvVarError(Exception):
+    ...
+
+
+class IsisDBNotFoundError(Exception):
+    ...
+
+
+class IdFileNotFoundError(Exception):
+    ...
+
+
