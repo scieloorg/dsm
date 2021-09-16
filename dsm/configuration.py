@@ -2,6 +2,9 @@ import os
 import urllib3
 import glob
 
+from dsm import exceptions
+
+
 # collection
 MINIO_SCIELO_COLLECTION = os.environ.get("MINIO_SCIELO_COLLECTION")
 
@@ -94,11 +97,17 @@ def get_db_url():
 
 
 def get_cisis_path():
-    # mongodb://my_user:my_password@127.0.0.1:27017/my_db
+    """
+    Get CISIS_PATH
+    """
     if not CISIS_PATH:
-        raise ValueError(
-            f"Missing value for environment variable CISIS_PATH. "
+        raise exceptions.MissingCisisPathEnvVarError(
+            "Missing value for environment variable CISIS_PATH. "
             "CISIS_PATH=/var/www/scielo/proc/cisis"
+        )
+    if not os.path.isdir(CISIS_PATH):
+        raise exceptions.CisisPathNotFoundMigrationError(
+            f"{CISIS_PATH} not found."
         )
     return CISIS_PATH
 
