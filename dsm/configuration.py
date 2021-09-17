@@ -130,7 +130,7 @@ def check_migration_sources():
     for path, name in zip(paths, names):
         if not path:
             raise ValueError(f"Missing configuration: {name}")
-        if not os.path.isdir(HTDOCS_IMG_REVISTAS_PATH):
+        if not os.path.isdir(path):
             raise ValueError(f"{name} must be a directory")
 
 
