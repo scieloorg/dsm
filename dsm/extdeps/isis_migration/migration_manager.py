@@ -128,7 +128,8 @@ class MigrationManager:
         isis_document.acron = _journal.acronym
 
         # salva o documento
-        return db.save_data(isis_document)
+        db.save_data(isis_document)
+        return isis_document
 
     def register_isis_document_external_p_records(self, _id):
         """
@@ -173,7 +174,8 @@ class MigrationManager:
         isis_document.records = doc.records
 
         # salva o documento
-        return db.save_data(isis_document)
+        db.save_data(isis_document)
+        return isis_document
 
     def register_isis_journal(self, _id, record):
         """
@@ -207,7 +209,8 @@ class MigrationManager:
         isis_journal.record = journal.record
 
         # salva o journal
-        return db.save_data(isis_journal)
+        db.save_data(isis_journal)
+        return isis_journal
 
     def register_isis_issue(self, _id, record):
         """
@@ -241,7 +244,8 @@ class MigrationManager:
         isis_issue.record = issue.record
 
         # salva o issue
-        return db.save_data(isis_issue)
+        db.save_data(isis_issue)
+        return isis_issue
 
     def update_website_journal_data(self, journal_id):
         """
@@ -271,7 +275,8 @@ class MigrationManager:
         _update_journal_with_isis_data(journal, fi_journal)
 
         # salva os dados
-        return db.save_data(journal)
+        db.save_data(journal)
+        return journal
 
     def update_website_issue_data(self, issue_id):
         """
@@ -299,7 +304,8 @@ class MigrationManager:
         _update_issue_with_isis_data(issue, fi_issue)
 
         # salva os dados
-        return db.save_data(issue)
+        db.save_data(issue)
+        return issue
 
     def update_website_document_metadata(self, article_id):
         """
@@ -333,7 +339,8 @@ class MigrationManager:
         _update_document_with_isis_data(document, migrated_document, issue)
 
         # salva os dados
-        return db.save_data(document)
+        db.save_data(document)
+        return document
 
     def update_website_document_pdfs(self, article_pid):
         """
@@ -365,7 +372,8 @@ class MigrationManager:
         document.pdfs = migrated.pdfs
 
         # salva os dados
-        return db.save_data(document)
+        db.save_data(document)
+        return document
 
     def update_website_document_htmls(self, article_pid):
         """
@@ -387,6 +395,10 @@ class MigrationManager:
         # obtém os dados de artigo
         migrated = MigratedDocument(article_pid)
 
+        if migrated.isis_doc.file_type != "html":
+            raise exceptions.NotApplicableInfo(
+                f"Document file type: {migrated.isis_doc.file_type}")
+
         # cria ou recupera o registro de documento do website
         document = db.fetch_document(article_pid)
         if not document:
@@ -405,20 +417,19 @@ class MigrationManager:
                 migrated.journal_pid, migrated.issue_folder
             )
             html = {"lang": text["lang"]}
-            try:
-                # registra no files storage
-                uri = self._files_storage.register(
-                    file_path, folder, text["filename"], preserve_name=True
-                )
-                # atualiza com a uri o valor de htmls
-                html.update({"url": uri})
-            except:
-                pass
+            # registra no files storage
+            uri = self._files_storage.register(
+                file_path, folder, text["filename"], preserve_name=True
+            )
+            # atualiza com a uri o valor de htmls
+            html.update({"url": uri})
+
             htmls.append(html)
         document.htmls = htmls
 
         # salva os dados
-        return db.save_data(document)
+        db.save_data(document)
+        return document
 
     def update_website_document_xmls(self, article_pid):
         """
@@ -439,6 +450,10 @@ class MigrationManager:
         """
         # obtém os dados de artigo
         migrated = MigratedDocument(article_pid)
+
+        if migrated.isis_doc.file_type != "xml":
+            raise exceptions.NotApplicableInfo(
+                f"Document file type: {migrated.isis_doc.file_type}")
 
         # cria ou recupera o registro de documento do website
         document = db.fetch_document(article_pid)
@@ -465,17 +480,14 @@ class MigrationManager:
             folder = get_files_storage_folder_for_xmls(
                 migrated.journal_pid, migrated.issue_folder
             )
-            try:
-                # registra no files storage
-                uri = self._files_storage.register(
-                    file_path, folder, text["filename"], preserve_name=True
-                )
-            except:
-                pass
-        document.xml = uri
+            # registra no files storage
+            document.xml = self._files_storage.register(
+                file_path, folder, text["filename"], preserve_name=True
+            )
 
         # salva os dados
-        return db.save_data(document)
+        db.save_data(document)
+        return document
 
     def migrate_document_files(self, article_pid):
         """
@@ -511,7 +523,7 @@ class MigrationManager:
         )
         # salva os dados
         db.save_data(migrated_document.isis_doc)
-        return zip_file_path
+        return migrated_document.isis_doc
 
     def list_documents(self, acron, issue_folder, pub_year, updated_from, updated_to, pid):
         """

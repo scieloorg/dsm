@@ -24,19 +24,71 @@ _migration_manager.db_connect()
 _MIGRATION_PARAMETERS = {
     "title": dict(
         custom_id_function=id2json.journal_id,
-        custom_register_isis_function=_migration_manager.register_isis_journal,
-        custom_register_isis_event_name="REGISTERED_ISIS_JOURNAL",
-        custom_register_website_function=_migration_manager.update_website_journal_data,
-        custom_register_website_event_name="REGISTERED_WEBSITE_JOURNAL",
+        operations_sequence=[
+            dict(
+                name="REGISTER_ISIS",
+                result="REGISTERED_ISIS_JOURNAL",
+                action=_migration_manager.register_isis_journal,
+            ),
+            dict(
+                name="PUBLISH",
+                result="PUBLISHED_JOURNAL",
+                action=_migration_manager.update_website_journal_data,
+            )
+        ]
     ),
     "issue": dict(
         custom_id_function=id2json.issue_id,
-        custom_register_isis_function=_migration_manager.register_isis_issue,
-        custom_register_isis_event_name="REGISTERED_ISIS_ISSUE",
-        custom_register_website_function=_migration_manager.update_website_issue_data,
-        custom_register_website_event_name="REGISTERED_WEBSITE_ISSUE",
+        operations_sequence=[
+            dict(
+                name="REGISTER_ISIS",
+                result="REGISTERED_ISIS_ISSUE",
+                action=_migration_manager.register_isis_issue,
+            ),
+            dict(
+                name="PUBLISH",
+                result="PUBLISHED_ISSUE",
+                action=_migration_manager.update_website_issue_data,
+            )
+        ]
+    ),
+    "artigo": dict(
+        custom_id_function=id2json.article_id,
+        operations_sequence=[
+            dict(
+                name="REGISTER_ISIS",
+                result="REGISTERED_ISIS_DOCUMENT",
+                action=_migration_manager.register_isis_document,
+            ),
+            dict(
+                name="MIGRATE_DOCUMENT_FILES",
+                result="MIGRATED_DOCUMENT_FILES",
+                action=_migration_manager.migrate_document_files,
+            ),
+            dict(
+                name="PUBLISH",
+                result="PUBLISHED_DOCUMENT",
+                action=_migration_manager.update_website_document_metadata,
+            ),
+            dict(
+                name="PUBLISH_PDFS",
+                result="PUBLISHED_PDFS",
+                action=_migration_manager.update_website_document_pdfs,
+            ),
+            dict(
+                name="PUBLISH_XMLS",
+                result="PUBLISHED_XMLS",
+                action=_migration_manager.update_website_document_xmls,
+            ),
+            dict(
+                name="PUBLISH_HTMLS",
+                result="PUBLISHED_HTMLS",
+                action=_migration_manager.update_website_document_htmls,
+            ),
+        ]
     )
 }
+
 
 def _select_docs(acron=None, issue_folder=None, pub_year=None, updated_from=None, updated_to=None, pid=None):
     if any((acron, issue_folder, pub_year, updated_from, updated_to, pid)):
@@ -47,17 +99,6 @@ def _select_docs(acron=None, issue_folder=None, pub_year=None, updated_from=None
             y = str(y).zfill(4)
             yield from _migration_manager.list_documents(
                         acron, issue_folder, pub_year, f"{y}0000", f"{y}9999")
-
-
-def update_website_with_documents_metadata(acron=None, issue_folder=None, pub_year=None, updated_from=None, updated_to=None):
-    for doc in _select_docs(acron, issue_folder, pub_year, updated_from, updated_to):
-        _migration_manager.update_website_document_metadata(doc._id)
-
-
-def register_old_website_files(acron=None, issue_folder=None, pub_year=None, updated_from=None, updated_to=None):
-    for doc in _select_docs(acron, issue_folder, pub_year, updated_from, updated_to):
-        zip_file_path = _migration_manager.register_old_website_document_files(
-            doc._id)
 
 
 def register_documents(pid=None, acron=None, issue_folder=None, pub_year=None, updated_from=None, updated_to=None):
@@ -125,26 +166,6 @@ def register_external_p_records(acron=None, issue_folder=None, pub_year=None, up
             print("Error registering p_records %s: %s" % (doc._id, e))
 
 
-def _register_package(_docs_manager, zip_file_path, doc):
-    fi_doc = friendly_isis.FriendlyISISDocument(doc._id, doc.records)
-    issue_id = get_bundle_id(
-        doc._id[1:10],
-        doc.pub_year,
-        fi_doc.volume,
-        fi_doc.number,
-        fi_doc.suppl,
-    )
-    packages = _docs_manager.get_doc_packages(zip_file_path)
-    doc_pkg = list(packages.values())[0]
-    res = _docs_manager.register_document(
-        doc_pkg,
-        doc._id,
-        doc.file_name,
-        issue_id,
-    )
-    print(res)
-
-
 def register_artigo_id(id_file_path):
     for _id, records in id2json.get_json_records(
             id_file_path, id2json.article_id):
@@ -169,7 +190,7 @@ def migrate_isis_db(db_type, source_file_path=None, records_content=None):
     Parameters
     ----------
     db_type: str
-        "title" or "issue"
+        "title" or "issue" or "artigo"
     source_file_path: str
         ISIS database or ID file path
     records_content: str
@@ -196,8 +217,7 @@ def migrate_isis_db(db_type, source_file_path=None, records_content=None):
 
     # migrate
     for result in _migrate_isis_records(
-            id2json.join_id_file_rows_and_return_records(rows),
-            db_type):
+            id2json.join_id_file_rows_and_return_records(rows), db_type):
         yield result
 
 
@@ -210,7 +230,7 @@ def _migrate_isis_records(id_file_records, db_type):
     id_file_records: generator or list of strings
         list of ID records
     db_type: str
-        "title" or "issue"
+        "title" or "issue" or "artigo"
 
     Returns
     -------
@@ -250,40 +270,48 @@ def _migrate_isis_records(id_file_records, db_type):
         ValueError
 
     """
-    # get the migration parameters according to db_type: title or issue
+    # get the migration parameters according to db_type:
+    # title or issue or artigo
     migration_parameters = _MIGRATION_PARAMETERS.get(db_type)
     if not migration_parameters:
         raise ValueError(
             "Invalid value for `db_type`. "
-            "Expected values: title, issue"
+            "Expected values: title, issue, artigo"
         )
 
     for pid, records in id2json.get_id_and_json_records(
             id_file_records, migration_parameters["custom_id_function"]):
         item_result = {"pid": pid}
         try:
-            _result = _migrate_one_isis_record(
-                pid, records[0], **migration_parameters)
+            isis_data = records[0]
+            operations_sequence = migration_parameters["operations_sequence"]
+            if db_type == "artigo":
+                # base artigo
+                if len(records) == 1:
+                    # registro de issue na base artigo
+                    operations_sequence = (
+                        _MIGRATION_PARAMETERS["issue"]["operations_sequence"]
+                    )
+                else:
+                    # registros do artigo na base artigo
+                    isis_data = records
+            _result = _migrate_one_isis_item(
+                pid, isis_data, operations_sequence,
+            )
             item_result.update(_result)
         except Exception as e:
             item_result["error"] = str(e)
         yield item_result
 
 
-def _migrate_one_isis_record(pid, record,
-                             custom_id_function,
-                             custom_register_isis_function,
-                             custom_register_isis_event_name,
-                             custom_register_website_function,
-                             custom_register_website_event_name,
-                             ):
+def _migrate_one_isis_item(pid, isis_data, operations):
     """
-    Migrate one ISIS record (title or issue)
+    Migrate one ISIS item (title or issue or artigo)
 
     Parameters
     ----------
     pid: str
-    record: str
+    isis_data: str
 
     Returns
     -------
@@ -298,30 +326,44 @@ def _migrate_one_isis_record(pid, record,
     }
     events = []
     try:
-        saved = custom_register_isis_function(pid, record)
+        saved = operations[0]['action'](pid, isis_data)
+        events.append(
+            _get_event(operations[0], saved,
+                       saved.isis_created_date, saved.isis_updated_date)
+        )
+        for op in operations[1:]:
+            saved = op['action'](pid)
+            events.append(_get_event(op, saved))
+    except exceptions.NotApplicableInfo as e:
         events.append({
-            "_id": saved._id,
-            "event": custom_register_isis_event_name,
-            "isis_created": saved.isis_created_date,
-            "isis_updated": saved.isis_updated_date,
-            "created": saved.created,
-            "updated": saved.updated,
-        })
-
-        saved = custom_register_website_function(pid)
-        events.append({
-            "_id": saved._id,
-            "event": custom_register_website_event_name,
-            "created": saved.created,
-            "updated": saved.updated,
+            "op": op,
+            "info": str(e),
+            "timestamp": datetime.utcnow().isoformat(),
         })
     except Exception as e:
         events.append({
+            "op": op,
             "error": str(e),
             "timestamp": datetime.utcnow().isoformat(),
         })
     result["events"] = events
     return result
+
+
+def _get_event(operation, record_data, isis_created_date=None, isis_updated_date=None):
+    event = {
+        "_id": record_data._id,
+        "event_name": operation["name"],
+        "event_result": operation["result"],
+        "created": record_data.created,
+        "updated": record_data.updated,
+    }
+    if isis_created_date and isis_updated_date:
+        event.update({
+            "isis_created": isis_created_date,
+            "isis_updated": isis_updated_date,
+        })
+    return event
 
 
 def create_id_file(db_file_path, id_file_path=None):
@@ -498,6 +540,20 @@ def main():
         )
     )
 
+    migrate_artigo_parser = subparsers.add_parser(
+        "migrate_artigo",
+        help=(
+            "Migrate artigo data from ISIS database to MongoDB."
+        )
+    )
+    migrate_artigo_parser.add_argument(
+        "source_file_path",
+        help=(
+            "/path/artigo/artigo (ISIS database path) or "
+            "/path/artigo/artigo.id (ID file path)"
+        )
+    )
+
     register_acron_parser = subparsers.add_parser(
         "register_acron",
         help=(
@@ -584,9 +640,17 @@ def main():
     args = parser.parse_args()
     result = None
     if args.command == "migrate_title":
-        result = migrate_isis_db("title", args.source_file_path)
+        result = migrate_isis_db(
+            "title", args.source_file_path
+        )
     elif args.command == "migrate_issue":
-        result = migrate_isis_db("issue", args.source_file_path)
+        result = migrate_isis_db(
+            "issue", args.source_file_path
+        )
+    elif args.command == "migrate_artigo":
+        result = migrate_isis_db(
+            "artigo", args.source_file_path
+        )
     elif args.command == "register_artigo_id":
         register_artigo_id(args.id_file_path)
     elif args.command == "register_documents":

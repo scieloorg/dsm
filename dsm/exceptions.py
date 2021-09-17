@@ -66,3 +66,7 @@ class IdFileNotFoundError(Exception):
     ...
 
 
+class NotApplicableInfo(Exception):
+    ...
+
+
