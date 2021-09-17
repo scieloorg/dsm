@@ -101,17 +101,6 @@ def _select_docs(acron=None, issue_folder=None, pub_year=None, updated_from=None
                         acron, issue_folder, pub_year, f"{y}0000", f"{y}9999")
 
 
-def update_website_with_documents_metadata(acron=None, issue_folder=None, pub_year=None, updated_from=None, updated_to=None):
-    for doc in _select_docs(acron, issue_folder, pub_year, updated_from, updated_to):
-        _migration_manager.update_website_document_metadata(doc._id)
-
-
-def register_old_website_files(acron=None, issue_folder=None, pub_year=None, updated_from=None, updated_to=None):
-    for doc in _select_docs(acron, issue_folder, pub_year, updated_from, updated_to):
-        zip_file_path = _migration_manager.register_old_website_document_files(
-            doc._id)
-
-
 def register_documents(pid=None, acron=None, issue_folder=None, pub_year=None, updated_from=None, updated_to=None):
     _files_storage = configuration.get_files_storage()
     _db_url = configuration.get_db_url()
@@ -175,26 +164,6 @@ def register_external_p_records(acron=None, issue_folder=None, pub_year=None, up
                     doc._id)
         except Exception as e:
             print("Error registering p_records %s: %s" % (doc._id, e))
-
-
-def _register_package(_docs_manager, zip_file_path, doc):
-    fi_doc = friendly_isis.FriendlyISISDocument(doc._id, doc.records)
-    issue_id = get_bundle_id(
-        doc._id[1:10],
-        doc.pub_year,
-        fi_doc.volume,
-        fi_doc.number,
-        fi_doc.suppl,
-    )
-    packages = _docs_manager.get_doc_packages(zip_file_path)
-    doc_pkg = list(packages.values())[0]
-    res = _docs_manager.register_document(
-        doc_pkg,
-        doc._id,
-        doc.file_name,
-        issue_id,
-    )
-    print(res)
 
 
 def register_artigo_id(id_file_path):
