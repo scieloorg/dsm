@@ -624,7 +624,7 @@ class Identity:
             'pub-date[@date-type="pub"]',
             "pub-date",
         )
-        return get_year_month_day(_match_pubdate(self._am, xpaths))
+        return get_year_month_day(_match_pubdate(self.article_meta, xpaths))
 
     @property
     def documents_bundle_pubdate(self):
@@ -634,7 +634,7 @@ class Identity:
             'pub-date[@date-type="collection"]',
             "pub-date",
         )
-        return get_year_month_day(_match_pubdate(self._am, xpaths))
+        return get_year_month_day(_match_pubdate(self.article_meta, xpaths))
 
     @property
     def year(self):
