@@ -13,10 +13,30 @@ from dsm.extdeps.isis_migration import (
 from dsm import configuration
 from dsm.core.issue import get_bundle_id
 from dsm.core.document import DocsManager
-from dsm.utils.files import create_temp_file, size
+from dsm.utils.files import create_temp_file, size, read_file
+from dsm import exceptions
+
 
 _migration_manager = migration_manager.MigrationManager()
+_migration_manager.db_connect()
 
+
+_MIGRATION_PARAMETERS = {
+    "title": dict(
+        custom_id_function=id2json.journal_id,
+        custom_register_isis_function=_migration_manager.register_isis_journal,
+        custom_register_isis_event_name="REGISTERED_ISIS_JOURNAL",
+        custom_register_website_function=_migration_manager.update_website_journal_data,
+        custom_register_website_event_name="REGISTERED_WEBSITE_JOURNAL",
+    ),
+    "issue": dict(
+        custom_id_function=id2json.issue_id,
+        custom_register_isis_function=_migration_manager.register_isis_issue,
+        custom_register_isis_event_name="REGISTERED_ISIS_ISSUE",
+        custom_register_website_function=_migration_manager.update_website_issue_data,
+        custom_register_website_event_name="REGISTERED_WEBSITE_ISSUE",
+    )
+}
 
 def _select_docs(acron=None, issue_folder=None, pub_year=None, updated_from=None, updated_to=None, pid=None):
     if any((acron, issue_folder, pub_year, updated_from, updated_to, pid)):
@@ -30,13 +50,11 @@ def _select_docs(acron=None, issue_folder=None, pub_year=None, updated_from=None
 
 
 def update_website_with_documents_metadata(acron=None, issue_folder=None, pub_year=None, updated_from=None, updated_to=None):
-    _migration_manager.db_connect()
     for doc in _select_docs(acron, issue_folder, pub_year, updated_from, updated_to):
         _migration_manager.update_website_document_metadata(doc._id)
 
 
 def register_old_website_files(acron=None, issue_folder=None, pub_year=None, updated_from=None, updated_to=None):
-    _migration_manager.db_connect()
     for doc in _select_docs(acron, issue_folder, pub_year, updated_from, updated_to):
         zip_file_path = _migration_manager.register_old_website_document_files(
             doc._id)
@@ -49,7 +67,6 @@ def register_documents(pid=None, acron=None, issue_folder=None, pub_year=None, u
 
     _docs_manager = DocsManager(_files_storage, _db_url, _v3_manager)
 
-    _migration_manager.db_connect()
 
     registered_xml = 0
     registered_metadata = 0
@@ -92,7 +109,6 @@ def register_external_p_records(acron=None, issue_folder=None, pub_year=None, up
 
     _docs_manager = DocsManager(_files_storage, _db_url, _v3_manager)
 
-    _migration_manager.db_connect()
 
     for doc in _select_docs(acron, issue_folder, pub_year, updated_from, updated_to):
         try:
@@ -130,7 +146,6 @@ def _register_package(_docs_manager, zip_file_path, doc):
 
 
 def register_artigo_id(id_file_path):
-    _migration_manager.db_connect()
     for _id, records in id2json.get_json_records(
             id_file_path, id2json.article_id):
         try:
@@ -146,47 +161,269 @@ def register_artigo_id(id_file_path):
             raise
 
 
-def migrate_title(id_file_path):
-    _migration_manager.db_connect()
+def migrate_isis_db(db_type, source_file_path=None, records_content=None):
+    """
+    Migrate ISIS database content from `source_file_path` or `records_content`
+    which is ISIS database or ID file
 
-    for _id, records in id2json.get_json_records(
-            id_file_path, id2json.journal_id):
+    Parameters
+    ----------
+    db_type: str
+        "title" or "issue"
+    source_file_path: str
+        ISIS database or ID file path
+    records_content: str
+        ID records
+
+    Returns
+    -------
+    generator
+        results of the migration
+    """
+    if source_file_path:
+        # get id_file_path
+        id_file_path = get_id_file_path(source_file_path)
+
+        # get id file rows
+        rows = id2json.get_id_file_rows(id_file_path)
+    elif records_content:
+        rows = records_content.splitlines()
+    else:
+        raise ValueError(
+            "Unable to migrate ISIS DB. "
+            "Expected `source_file_path` or `records_content`."
+        )
+
+    # migrate
+    for result in _migrate_isis_records(
+            id2json.join_id_file_rows_and_return_records(rows),
+            db_type):
+        yield result
+
+
+def _migrate_isis_records(id_file_records, db_type):
+    """
+    Migrate data from `source_file_path` which is ISIS database or ID file
+
+    Parameters
+    ----------
+    id_file_records: generator or list of strings
+        list of ID records
+    db_type: str
+        "title" or "issue"
+
+    Returns
+    -------
+    generator
+
+    ```
+        {
+            "pid": "pid",
+            "events": [
+                {
+                    "_id": "",
+                    "event": "",
+                    "isis_created": "",
+                    "isis_updated": "",
+                    "created": "",
+                    "updated": "",
+                },
+                {
+                    "_id": "",
+                    "event": "",
+                    "created": "",
+                    "updated": "",
+                }
+            ]
+        }
+        ``` 
+        or 
+    ```
+        {
+            "pid": "pid",
+            "error": ""
+        }
+    ```
+
+    Raises
+    ------
+        ValueError
+
+    """
+    # get the migration parameters according to db_type: title or issue
+    migration_parameters = _MIGRATION_PARAMETERS.get(db_type)
+    if not migration_parameters:
+        raise ValueError(
+            "Invalid value for `db_type`. "
+            "Expected values: title, issue"
+        )
+
+    for pid, records in id2json.get_id_and_json_records(
+            id_file_records, migration_parameters["custom_id_function"]):
+        item_result = {"pid": pid}
         try:
-            if _migration_manager.register_isis_journal(_id, records[0]):
-                _migration_manager.update_website_journal_data(_id)
-        except:
-            print(_id)
-            print(f"Algum problema com {_id}")
-            raise
+            _result = _migrate_one_isis_record(
+                pid, records[0], **migration_parameters)
+            item_result.update(_result)
+        except Exception as e:
+            item_result["error"] = str(e)
+        yield item_result
 
 
-def migrate_issue(id_file_path):
-    _migration_manager.db_connect()
+def _migrate_one_isis_record(pid, record,
+                             custom_id_function,
+                             custom_register_isis_function,
+                             custom_register_isis_event_name,
+                             custom_register_website_function,
+                             custom_register_website_event_name,
+                             ):
+    """
+    Migrate one ISIS record (title or issue)
 
-    for _id, records in id2json.get_json_records(
-            id_file_path, id2json.issue_id):
-        try:
-            if _migration_manager.register_isis_issue(_id, records[0]):
-                _migration_manager.update_website_issue_data(_id)
-        except:
-            print(_id)
-            print(f"Algum problema com {_id}")
-            raise
+    Parameters
+    ----------
+    pid: str
+    record: str
+
+    Returns
+    -------
+    dict
+        {
+            "pid": "",
+            "events": [],
+        }
+    """
+    result = {
+        "pid": pid,
+    }
+    events = []
+    try:
+        saved = custom_register_isis_function(pid, record)
+        events.append({
+            "_id": saved._id,
+            "event": custom_register_isis_event_name,
+            "isis_created": saved.isis_created_date,
+            "isis_updated": saved.isis_updated_date,
+            "created": saved.created,
+            "updated": saved.updated,
+        })
+
+        saved = custom_register_website_function(pid)
+        events.append({
+            "_id": saved._id,
+            "event": custom_register_website_event_name,
+            "created": saved.created,
+            "updated": saved.updated,
+        })
+    except Exception as e:
+        events.append({
+            "error": str(e),
+            "timestamp": datetime.utcnow().isoformat(),
+        })
+    result["events"] = events
+    return result
 
 
-def create_id_file(db_file_path, id_file_path):
+def create_id_file(db_file_path, id_file_path=None):
+    """
+    Generates ID file `id_file_path` of a ISIS database `db_file_path`
+
+    Parameters
+    ----------
+    db_file_path: str
+        path of an ISIS database without extension
+    id_file_path: str
+        path of the ID file to be created
+
+    Returns
+    -------
+    str
+        id_file_path
+
+    Raises
+    ------
+    exceptions.MissingCisisPathEnvVarError
+    exceptions.CisisPathNotFoundMigrationError
+    exceptions.MissingI2IdCommandPathEnvVarError
+    exceptions.IsisDBNotFoundError
+    PermissionError
+    FileNotFoundError
+    """
+    # obtém CISIS_PATH
     cisis_path = configuration.get_cisis_path()
-    dirname = os.path.dirname(id_file_path)
-    if not os.path.isdir(dirname):
-        os.makedirs(dirname)
-    if os.path.isfile(id_file_path):
-        try:
-            os.unlink(id_file_path)
-        except:
-            raise OSError(f"Unable to delete {id_file_path}")
+
+    # check if the utilitary i2id exists
     i2id_cmd = os.path.join(cisis_path, "i2id")
+    if not os.path.isfile(i2id_cmd):
+        raise exceptions.MissingI2IdCommandPathEnvVarError(
+            f"Not found: {i2id_cmd}"
+        )
+
+    # check if the isis database exists
+    if not os.path.isfile(db_file_path + ".mst"):
+        raise exceptions.IsisDBNotFoundError(f"Not found {db_file_path}.mst")
+
+    if id_file_path is None:
+        # create id_file in a temp folder
+        id_file_path = create_temp_file(os.path.basename(db_file_path))
+    else:
+        # create the destination folder
+        dirname = os.path.dirname(id_file_path)
+        if not os.path.isdir(dirname):
+            os.makedirs(dirname)
+
+        # delete the id_file_path
+        write_file(id_file_path, "")
+
+    # execute i2id db > id_file_path
     os.system(f"{i2id_cmd} {db_file_path} > {id_file_path}")
-    return os.path.isfile(id_file_path)
+
+    # check if id_file_path is valid
+    try:
+        content = read_file(id_file_path, encoding="iso-8859-1")
+    except FileNotFoundError:
+        return None
+    else:
+        return id_file_path
+
+
+def get_id_file_path(source_file_path):
+    """
+    Evaluate `source_file_path` and returns `source_file_path` if it is ID file
+    or create its ID file
+
+    Parameters
+    ----------
+    source_file_path: str
+        path of a ISIS Database or ID file
+
+    Returns
+    -------
+    str
+
+    Raises
+    ------
+        exceptions.IdFileNotFoundError
+        exceptions.IsisDBNotFoundError
+
+    """
+    name, ext = os.path.splitext(source_file_path)
+    if ext == ".id":
+        # `source_file_path` is an ID file
+        if not os.path.isfile(source_file_path):
+            raise exceptions.IdFileNotFoundError(
+                f"Unable to `get_id_file_path` from {source_file_path}. "
+                f"Not found {source_file_path}"
+            )
+        return source_file_path
+    elif ext == "":
+        # `source_file_path` is an ISIS databse, so create its ID file
+        if not os.path.isfile(source_file_path + ".mst"):
+            raise exceptions.IsisDBNotFoundError(
+                f"Unable to `get_id_file_path` from {source_file_path}. "
+                f"Not found {source_file_path}.mst"
+            )
+        return create_id_file(source_file_path)
 
 
 def register_acron(acron, id_folder_path=None):
@@ -236,25 +473,29 @@ def main():
     migrate_title_parser = subparsers.add_parser(
         "migrate_title",
         help=(
-            "Register the content of title.id in MongoDB and"
-            " update the website with journals data"
+            "Migrate journal data from ISIS database to MongoDB."
         )
     )
     migrate_title_parser.add_argument(
-        "id_file_path",
-        help="Path of ID file that will be imported"
+        "source_file_path",
+        help=(
+            "/path/title/title (ISIS database path) or "
+            "/path/title/title.id (ID file path)"
+        )
     )
 
     migrate_issue_parser = subparsers.add_parser(
         "migrate_issue",
         help=(
-            "Register the content of issue.id in MongoDB and"
-            " update the website with issues data"
+            "Migrate issue data from ISIS database to MongoDB."
         )
     )
     migrate_issue_parser.add_argument(
-        "id_file_path",
-        help="Path of ID file that will be imported"
+        "source_file_path",
+        help=(
+            "/path/issue/issue (ISIS database path) or "
+            "/path/issue/issue.id (ID file path)"
+        )
     )
 
     register_acron_parser = subparsers.add_parser(
@@ -341,11 +582,11 @@ def main():
     )
 
     args = parser.parse_args()
-
+    result = None
     if args.command == "migrate_title":
-        migrate_title(args.id_file_path)
+        result = migrate_isis_db("title", args.source_file_path)
     elif args.command == "migrate_issue":
-        migrate_issue(args.id_file_path)
+        result = migrate_isis_db("issue", args.source_file_path)
     elif args.command == "register_artigo_id":
         register_artigo_id(args.id_file_path)
     elif args.command == "register_documents":
@@ -362,6 +603,10 @@ def main():
         register_acron(args.acron, args.id_folder_path)
     else:
         parser.print_help()
+
+    if result:
+        for res in result:
+            print(res)
 
 
 if __name__ == '__main__':

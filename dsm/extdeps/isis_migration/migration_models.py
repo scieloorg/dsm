@@ -76,9 +76,9 @@ class ISISDocument(Document):
         return self.id[1:10]
 
     def save(self, *args, **kwargs):
+        self.updated = datetime.utcnow()
         if not self.created:
-            self.created = datetime.now()
-        self.updated = datetime.now()
+            self.created = self.updated
         return super(ISISDocument, self).save(*args, **kwargs)
 
     def __unicode__(self):
@@ -112,9 +112,9 @@ class ISISJournal(Document):
     }
 
     def save(self, *args, **kwargs):
+        self.updated = datetime.utcnow()
         if not self.created:
-            self.created = datetime.now()
-        self.updated = datetime.now()
+            self.created = self.updated
         return super(ISISJournal, self).save(*args, **kwargs)
 
     def __unicode__(self):
@@ -148,9 +148,9 @@ class ISISIssue(Document):
     }
 
     def save(self, *args, **kwargs):
+        self.updated = datetime.utcnow()
         if not self.created:
-            self.created = datetime.now()
-        self.updated = datetime.now()
+            self.created = self.updated
         return super(ISISIssue, self).save(*args, **kwargs)
 
     def __unicode__(self):

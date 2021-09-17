@@ -185,9 +185,11 @@ def save_data(data):
     if not hasattr(data, 'created'):
         data.created = None
     try:
-        data.created = data.created or datetime.utcnow().isoformat()
-        data.updated = datetime.utcnow().isoformat()
-        return data.save()
+        data.updated = datetime.utcnow()
+        if not data.created:
+            data.created = data.updated
+        data.save()
+        return data
     except Exception as e:
         raise
         # exceptions.DBSaveDataError(e)

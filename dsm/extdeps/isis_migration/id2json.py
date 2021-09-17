@@ -190,6 +190,97 @@ def _save_records(records, curr_filename, prev_filename, output_file_path):
     return records
 
 
+def get_id_file_rows(id_file_path):
+    """
+    Obtém uma lista de linhas do arquivo `id_file_path`
+
+    Parameters
+    ----------
+    id_file_path: str
+        arquivo ID de uma base de dados ISIS
+
+    Returns
+    -------
+    list of strings
+    """
+    with open(id_file_path, "r", encoding="iso-8859-1") as fp:
+        for item in fp:
+            yield item
+
+
+def join_id_file_rows_and_return_records(id_file_rows):
+    """
+    Junta linhas `id_file_rows` que formam registros (str) e os retorna
+
+    Parameters
+    ----------
+    id_file_rows: list of str
+        linhas do arquivo ID
+
+    Returns
+    -------
+    list of strings
+    """
+    record_rows = []
+    for row in id_file_rows:
+        if row.startswith("!ID "):
+            if len(record_rows):
+                # junta linhas que formam uma string
+                # que corresponde a um registro e o retorna
+                yield "\n".join(record_rows)
+
+                # inicia um novo grupo de linhas de registro
+                record_rows = []
+        else:
+            # adiciona linhas ao registro
+            record_rows.append(row.strip())
+    # junta linhas que formam uma string
+    # que corresponde a um registro e o retorna
+    yield "\n".join(record_rows)
+
+
+def get_id_and_json_records(records, get_id_function):
+    """
+    Given `records` e `get_id_function`, returns `_id` and `json_records`
+
+    Parameters
+    ----------
+    records: list of str
+        linhas do arquivo ID
+    get_id_function: callable
+        função que gera o ID do registro
+
+    Returns
+    -------
+    list of strings
+    """
+    _id = None
+    _id_records = []
+    for record_content in records:
+        if not record_content:
+            continue
+        fields = _get_fields_and_their_content(record_content)
+        data = _build_record(fields)
+        if not data:
+            continue
+        _next_id = get_id_function(data)
+        if _next_id != _id and _id:
+            # _id changed
+
+            # returns current _id, _id_records
+            yield (_id, _id_records)
+
+            # init a new group of records
+            _id_records = []
+
+        # update `_id` with `_next_id`
+        _id = _next_id
+        # add `data` to `_id_records`
+        _id_records.append(data)
+    # returns current _id, _id_records
+    yield (_id, _id_records)
+
+
 def read_id_file(input_file_path):
     rows = []
     with open(input_file_path, "r", encoding="iso-8859-1") as fp:
