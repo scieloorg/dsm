@@ -181,7 +181,7 @@ class MigrationManager:
         """
         # recupera `isis_document` ou cria se não existir
 
-        # se existirem osregistros de parágrafos que estejam externos à
+        # se existirem os registros de parágrafos que estejam externos à
         # base artigo, ou seja, em artigo/p/ISSN/ANO/ISSUE_ORDER/...,
         # os recupera e os ingressa junto aos registros da base artigo
         p_records = (
@@ -399,10 +399,10 @@ class MigrationManager:
 
         # obtém os dados de `isis_doc.pdfs` e `isis_doc.pdf_files`
         # e os organiza para registrar em `document.pdfs`
-        document.pdfs = migrated.pdfs
+        document.pdfs = migrated.migrated_pdfs
 
         # rastreia pdfs migrados
-        tracker.info(f"migrated pdfs: {migrated.pdfs}")
+        tracker.info(f"migrated pdfs: {document.pdfs}")
 
         # salva os dados
         db.save_data(document)
@@ -504,10 +504,9 @@ class MigrationManager:
                 "Document %s does not exist" % article_pid
             )
 
-        tracker = Tracker("update_website_document_htmls")
+        tracker = Tracker("update_website_document_xmls")
 
-        # cria arquivos xml com o conteúdo obtido dos arquivos xml e
-        # dos registros de parágrafos
+        # publica arquivos xml com o conteúdo obtido dos arquivos xml
         for text in migrated.xml_texts:
 
             try:
@@ -565,8 +564,6 @@ class MigrationManager:
         -------
         dict
         """
-        # registro migrado formato json
-        done = []
         migrated_document = MigratedDocument(article_pid)
 
         migrated_document.tracker = Tracker("migrate_document_files")
@@ -989,14 +986,6 @@ class MigratedDocument:
     def translations(self):
         return self.isis_doc.translations
 
-    @translations.setter
-    def translations(self, translations_paths):
-        _translations = {}
-        for lang, translation_path in translations_paths.items():
-            _translations[lang] = [
-                os.path.basename(path) for path in translation_path]
-        self.isis_doc.translations = _translations
-
     @property
     def html_texts(self):
         if self.isis_doc.file_type == "xml":
@@ -1093,6 +1082,38 @@ class MigratedDocument:
         # salva o documento
         return db.save_data(self.isis_doc)
 
+    @property
+    def original_pdf_paths(self):
+        """
+        Obtém os arquivos PDFs do documento da pasta BASES_PDF_PATH
+        """
+        for lang, pdf_path in self._document_files.bases_pdf_files_paths.items():
+            yield {
+                "path": pdf_path,
+                "lang": lang,
+                "basename": os.path.basename(pdf_path)
+            }
+
+    def _migrate_document_file(self, files_storage, file_path):
+        basename = os.path.basename(file_path)
+
+        self.tracker.info(f"migrate {file_path}")
+
+        # identificar para inserir no zip do pacote
+        self.files_to_zip.append(file_path)
+
+        try:
+            # registra o arquivo na nuvem
+            remote = files_storage.register(
+                file_path, self._files_storage_folder,
+                basename, preserve_name=True)
+
+            self.tracker.info(f"migrated {remote}")
+        except Exception as e:
+            self.tracker.error(e)
+        else:
+            return db.create_remote_and_local_file(remote, basename)
+
     def migrate_pdfs(self, files_storage):
         """
         Obtém os arquivos PDFs do documento da pasta BASES_PDF_PATH
@@ -1100,31 +1121,22 @@ class MigratedDocument:
         Atualiza os dados de PDF de `isis_document`
         """
         pdfs = {}
-        _pdf_uris_and_names = []
+        _uris_and_names = []
 
-        items = self._document_files.bases_pdf_files_paths.items()
+        for pdf in self.original_pdf_paths:
+            file_path = pdf["path"]
+            lang = pdf["lang"]
 
-        for lang, pdf_path in items:
-            self.tracker.info(f"migrate {pdf_path} ({lang})")
+            pdfs[lang] = pdf["basename"]
+            migrated = self._migrate_document_file(files_storage, file_path)
+            if migrated:
+                _uris_and_names.append(migrated)
 
-            pdfs[lang] = os.path.basename(pdf_path)
-
-            # identificar para inserir no zip do pacote
-            self.files_to_zip.append(pdf_path)
-
-            # registra o arquivo na nuvem
-            remote = files_storage.register(
-                pdf_path, self._files_storage_folder,
-                pdfs[lang], preserve_name=True)
-            _pdf_uris_and_names.append(
-                db.create_remote_and_local_file(remote, pdfs[lang])
-            )
-            self.tracker.info(f"migrated {remote}")
         self.isis_doc.pdfs = pdfs
-        self.isis_doc.pdf_files = _pdf_uris_and_names
+        self.isis_doc.pdf_files = _uris_and_names
 
     @property
-    def pdfs(self):
+    def migrated_pdfs(self):
         # url, filename, type, lang
         _pdfs = []
         uris = {
