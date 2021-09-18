@@ -329,7 +329,7 @@ def _migrate_one_isis_item(pid, isis_data, operations):
         saved = operations[0]['action'](pid, isis_data)
         events.append(
             _get_event(operations[0], saved,
-                       saved.isis_created_date, saved.isis_updated_date)
+                       saved[0].isis_created_date, saved[0].isis_updated_date)
         )
         for op in operations[1:]:
             saved = op['action'](pid)
@@ -341,6 +341,7 @@ def _migrate_one_isis_item(pid, isis_data, operations):
             "timestamp": datetime.utcnow().isoformat(),
         })
     except Exception as e:
+        raise
         events.append({
             "op": op,
             "error": str(e),
@@ -350,7 +351,14 @@ def _migrate_one_isis_item(pid, isis_data, operations):
     return result
 
 
-def _get_event(operation, record_data, isis_created_date=None, isis_updated_date=None):
+def _get_event(operation, saved, isis_created_date=None, isis_updated_date=None):
+    if not saved:
+        return {
+            "event_name": operation["name"],
+            "event_result": operation["result"],
+        }
+
+    record_data, tracker = saved
     event = {
         "_id": record_data._id,
         "event_name": operation["name"],
@@ -358,6 +366,8 @@ def _get_event(operation, record_data, isis_created_date=None, isis_updated_date
         "created": record_data.created,
         "updated": record_data.updated,
     }
+    if tracker:
+        event.update({"detail": tracker.detail})
     if isis_created_date and isis_updated_date:
         event.update({
             "isis_created": isis_created_date,
