@@ -1094,8 +1094,7 @@ class MigratedDocument:
                 "basename": os.path.basename(pdf_path)
             }
 
-    def _migrate_document_file(self, files_storage, file_path):
-        basename = os.path.basename(file_path)
+    def _migrate_document_file(self, files_storage, file_path, basename):
 
         self.tracker.info(f"migrate {file_path}")
 
@@ -1128,7 +1127,7 @@ class MigratedDocument:
             lang = pdf["lang"]
 
             pdfs[lang] = pdf["basename"]
-            migrated = self._migrate_document_file(files_storage, file_path)
+            migrated = self._migrate_document_file(files_storage, file_path, pdf["basename"])
             if migrated:
                 _uris_and_names.append(migrated)
 
@@ -1263,6 +1262,14 @@ class MigratedDocument:
         self.isis_doc.assets = _files
         self.isis_doc.asset_files = _uris_and_names
 
+    @property
+    def original_htmls(self):
+        for lang, paths in self._document_files.bases_translation_files_paths.items():
+            for path, part in zip(paths, ("front", "back")):
+                yield {"lang": lang, "path": path, "part": part,
+                       "basename": os.path.basename(path),
+                       "content": read_file(html["path"])}
+
     def migrate_text_files(self, files_storage):
         """
         Obtém os arquivos que correspondem aos textos completos das pastas
@@ -1271,8 +1278,6 @@ class MigratedDocument:
         Registra os arquivos na nuvem
         Atualiza os dados de texto completo de `isis_document`
         """
-        translations_locations = []
-        xml_location = []
         _uris_and_names = []
 
         self.isis_doc.translations = {}
@@ -1280,50 +1285,31 @@ class MigratedDocument:
         self.isis_doc.html_files = []
 
         if self.isis_doc.file_type == "xml":
-            xml = self._document_files.bases_xml_file_path
-            self.tracker.info(f"migrate {xml}")
-            if xml:
-                xml_location.append(xml)
-                name = os.path.basename(xml)
-
-                # identificar para inserir no zip do pacote
-                self.files_to_zip.append(xml)
-
-                # registra no files storage
-                remote = files_storage.register(
-                    xml, self._files_storage_folder,
-                    name, preserve_name=True)
-                _uris_and_names.append(
-                    db.create_remote_and_local_file(remote, name)
-                )
-                self.isis_doc.xml_files = _uris_and_names
-                self.tracker.info(f"migrated {xml}")
+            file_path = self._document_files.bases_xml_file_path
+            self.tracker.info(f"migrate {file_path}")
+            if file_path:
+                migrated = self._migrate_document_file(
+                    files_storage, file_path, os.path.basename(file_path))
+                if migrated:
+                    _uris_and_names.append(migrated)
             else:
-                self.tracker.error(f"Not found {xml}")
+                self.tracker.error(f"Not found {file_path}")
         else:
             # HTML Traduções
-            translations_locations = []
             _translations = {}
-            translations_files = self._document_files.bases_translation_files_paths.items()
-            for lang, paths in translations_files:
-                translations_locations.extend(paths)
-                _translations[lang] = []
-                for path in paths:
-                    self.tracker.info(f"migrate {path} ({lang})")
-                    name = os.path.basename(path)
-                    _translations[lang].append(name)
+            for html in self.original_htmls:
+                lang = html["lang"]
+                path = html["path"]
+                name = html["basename"]
 
-                    # identificar para inserir no zip do pacote
-                    self.files_to_zip.append(path)
+                _translations.setdefault(lang, [])
+                _translations[lang].append(name)
 
-                    # registra no files storage
-                    remote = files_storage.register(
-                        path, self._files_storage_folder,
-                        name, preserve_name=True)
-                    _uris_and_names.append(
-                        db.create_remote_and_local_file(remote, name)
-                    )
-                    self.tracker.info(f"migrated {path} ({lang})")
+                migrated = self._migrate_document_file(
+                    files_storage, path, name)
+                if migrated:
+                    _uris_and_names.append(migrated)
+
             self.isis_doc.html_files = _uris_and_names
             self.isis_doc.translations = _translations
 
