@@ -571,7 +571,7 @@ class MigrationManager:
 
         migrated_document.migrate_pdfs(self._files_storage)
         migrated_document.migrate_text_files(self._files_storage)
-        migrated_document.migrate_images(self._files_storage)
+        migrated_document.migrate_images_from_folder(self._files_storage)
         migrated_document.migrate_images_from_html(self._files_storage)
         migrated_document.register_migrated_document_files_zipfile(
             self._files_storage
@@ -1153,7 +1153,7 @@ class MigratedDocument:
             )
         return _pdfs
 
-    def migrate_images(self, files_storage):
+    def migrate_images_from_folder(self, files_storage):
         """
         Obtém os arquivos de imagens do documento da pasta HTDOCS_IMG_REVISTAS_PATH
         Registra os arquivos na nuvem
@@ -1163,24 +1163,13 @@ class MigratedDocument:
             return
         _files = []
         _uris_and_names = []
-        images = self._document_files.htdocs_img_revistas_files_paths
-        for file_path in images:
-            self.tracker.info(f"migrate {file_path}")
-
+        for file_path in self._document_files.htdocs_img_revistas_files_paths:
             name = os.path.basename(file_path)
+            migrated = self._migrate_document_file(
+                files_storage, file_path, name)
+            if migrated:
+                _uris_and_names.append(migrated)
             _files.append(name)
-
-            # identificar para inserir no zip do pacote
-            self.files_to_zip.append(file_path)
-
-            # registra no files storage
-            remote = files_storage.register(
-                file_path, self._files_storage_folder,
-                name, preserve_name=True)
-            _uris_and_names.append(
-                db.create_remote_and_local_file(remote, name)
-            )
-            self.tracker.info(f"migrated {remote}")
         self.isis_doc.assets = _files
         self.isis_doc.asset_files = _uris_and_names
 
