@@ -468,21 +468,18 @@ def get_id_file_path(source_file_path):
         return create_id_file(source_file_path)
 
 
-def register_acron(acron, id_folder_path=None):
+def migrate_acron(acron, id_folder_path=None):
     configuration.check_migration_sources()
-    if id_folder_path and not os.path.isdir(id_folder_path):
-        os.makedirs(id_folder_path)
+
+    db_path = configuration.get_bases_acron(acron)
+    print("db:", db_path)
     if id_folder_path:
         id_file_path = os.path.join(id_folder_path, f"{acron}.id")
-    else:
-        id_file_path = create_temp_file(f"{acron}.id", '')
-    db_path = configuration.get_bases_acron(acron)
-    if os.path.isfile(db_path + ".mst"):
-        create_id_file(db_path, id_file_path)
-        print()
+        id_file_path = create_id_file(db_path, id_file_path)
+        db_path = id_file_path
         print(f"{id_file_path} - size: {size(id_file_path)} bytes")
-        register_artigo_id(id_file_path)
-        print("finished\n")
+    for res in migrate_isis_db("artigo", db_path):
+        yield res
 
 
 def main():
@@ -554,18 +551,18 @@ def main():
         )
     )
 
-    register_acron_parser = subparsers.add_parser(
-        "register_acron",
+    migrate_acron_parser = subparsers.add_parser(
+        "migrate_acron",
         help=(
             "Register the content of acron.id in MongoDB and"
             " update the website with acrons data"
         )
     )
-    register_acron_parser.add_argument(
+    migrate_acron_parser.add_argument(
         "acron",
         help="Journal acronym"
     )
-    register_acron_parser.add_argument(
+    migrate_acron_parser.add_argument(
         "--id_folder_path",
         help="Output folder"
     )
@@ -663,8 +660,8 @@ def main():
             args.updated_from, args.updated_to)
     elif args.command == "create_id_file":
         create_id_file(args.db_file_path, args.id_file_path)
-    elif args.command == "register_acron":
-        register_acron(args.acron, args.id_folder_path)
+    elif args.command == "migrate_acron":
+        result = migrate_acron(args.acron, args.id_folder_path)
     else:
         parser.print_help()
 
