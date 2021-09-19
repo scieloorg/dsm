@@ -72,6 +72,15 @@ class Tracker:
     def detail(self):
         return self._tracks
 
+    @property
+    def total_errors(self):
+        _errors = [event for event in self._tracks if event.get("error")]
+        return len(_errors)
+
+    @property
+    def status(self):
+        return {"status": "failed" if self.total_errors > 0 else "success"}
+
 
 class MigrationManager:
     """
@@ -444,14 +453,14 @@ class MigrationManager:
         # dos registros de parágrafos
         htmls = []
         for text in migrated.html_texts_to_publish:
-            tracker.info(f"publish {file_path}")
 
             if not text["text"]:
-                tracker.error(f"Not found HTML text ({text["lang"]})")
+                tracker.error(f"Not found HTML text ({text['lang']})")
                 continue
 
             # obtém os conteúdos de html registrados em `isis_doc`
             file_path = create_temp_file(text["filename"], text["text"])
+            tracker.info(f"publish {file_path}")
 
             # obtém a localização do arquivo no `files storage`
             folder = get_files_storage_folder_for_htmls(
@@ -469,8 +478,7 @@ class MigrationManager:
             else:
                 # atualiza com a uri o valor de htmls
                 html.update({"url": uri})
-
-            htmls.append(html)
+                htmls.append(html)
         document.htmls = htmls
         tracker.info(f"published: {htmls}")
 
@@ -511,40 +519,39 @@ class MigrationManager:
         tracker = Tracker("publish_document_xmls")
 
         # publica arquivos xml com o conteúdo obtido dos arquivos xml
-        for text in migrated.xml_texts:
+        for text in migrated.xml_texts_to_publish(document):
 
+            if text.get("error"):
+                tracker.error(text.get("error"))
+                continue
+
+            # obtém os idiomas do texto completo
+            # é usado no sumário para apresentar links para o texto completo
+            document.htmls = text["languages"]
+
+            tracker.info(f"publish {text['filename']}")
             try:
-                # inclui v3 no XML
-                sps_pkg = SPS_Package(text["text"])
-                sps_pkg.scielo_pid_v3 = document._id
-                sps_pkg.scielo_pid_v2 = document.pid
-                if document.aop_pid:
-                    sps_pkg.aop_pid = document.aop_pid
-
-                # obtém os idiomas do texto completo
-                document.htmls = [{"lang": lang} for lang in sps_pkg.languages]
-
                 # obtém os conteúdos de xml registrados em `isis_doc`
-                file_path = create_temp_file(
-                    text["filename"], sps_pkg.xml_content)
+                file_path = create_temp_file(text["filename"], text["text"])
 
                 # obtém a localização do arquivo no `files storage`
                 folder = get_files_storage_folder_for_xmls(
                     migrated.journal_pid, migrated.issue_folder
                 )
 
-                tracker.info(f"publish {file_path}")
-
                 # registra no files storage
                 document.xml = self._files_storage.register(
                     file_path, folder, text["filename"], preserve_name=True
                 )
             except Exception as e:
-                tracker.error(e)
+                tracker.error(
+                    f"Unable to register {file_path} in files storage: {e}"
+                )
+            else:
+                tracker.info(f"published {document.xml}")
 
         # salva os dados
         db.save_data(document)
-        tracker.info(f"published {document.htmls}")
         return document, tracker
 
     def migrate_document_files(self, article_pid):
@@ -1055,28 +1062,36 @@ class MigratedDocument:
                 "filename": html_text["filename"],
             }
 
-    @property
-    def xml_texts(self):
+    def xml_texts_to_publish(self, document):
         if self.isis_doc.file_type == "html":
             return []
         texts = []
         try:
-            content = requests_get_content(self.isis_doc.xml_files[0].uri)
+            content = read_file(self.xml_file_path)
             sps_pkg = SPS_Package(content)
             sps_pkg.local_to_remote(self.isis_doc.asset_files)
+            sps_pkg.scielo_pid_v3 = document._id
+            sps_pkg.scielo_pid_v2 = document.pid
+            if document.aop_pid:
+                sps_pkg.aop_pid = document.aop_pid
             content = sps_pkg.xml_content
-        except IndexError as e:
-            pass
         except Exception as e:
             # TODO melhorar o tratamento de excecao
-            raise
+            text = {
+                "lang": self._f_doc.language,
+                "filename": self.isis_doc.file_name + ".xml",
+                "error": (
+                    f"Unable to get XML to publish {self.xml_file_path}: {e}"
+                ),
+            }
         else:
             text = {
                 "lang": self._f_doc.language,
                 "filename": self.isis_doc.file_name + ".xml",
                 "text": content,
+                "languages": [{"lang": lang} for lang in sps_pkg.languages],
             }
-            texts.append(text)
+        texts.append(text)
         return texts
 
     def save(self):
@@ -1110,7 +1125,9 @@ class MigratedDocument:
 
             self.tracker.info(f"migrated {remote}")
         except Exception as e:
-            self.tracker.error(e)
+            self.tracker.error(
+                f"Unable to register {file_path} in files storage: {e}"
+            )
         else:
             return db.create_remote_and_local_file(
                 remote, basename, annotation)
@@ -1237,7 +1254,7 @@ class MigratedDocument:
                 self.tracker.info(f"migrate html ({lang}): {image}")
                 file_path = image["file_path"]
                 if not os.path.isfile(file_path):
-                    self.tracker.error(f"Unable to find {file_path}")
+                    self.tracker.error(f"Not found {file_path}")
                     continue
 
                 # basename
@@ -1268,6 +1285,10 @@ class MigratedDocument:
                        "basename": os.path.basename(path),
                        "content": read_file(path, encoding="iso-8859-1")}
 
+    @property
+    def xml_file_path(self):
+        return self._document_files.bases_xml_file_path
+
     def migrate_text_files(self, files_storage):
         """
         Obtém os arquivos que correspondem aos textos completos das pastas
@@ -1283,7 +1304,7 @@ class MigratedDocument:
         self.isis_doc.html_files = []
 
         if self.isis_doc.file_type == "xml":
-            file_path = self._document_files.bases_xml_file_path
+            file_path = self.xml_file_path
             self.tracker.info(f"migrate {file_path}")
             if file_path:
                 migrated = self._migrate_document_file(

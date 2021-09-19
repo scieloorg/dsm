@@ -360,7 +360,11 @@ def _get_event(operation, saved, isis_created_date=None, isis_updated_date=None)
         "updated": record_data.updated,
     }
     if tracker:
-        event.update({"detail": tracker.detail})
+        event.update({
+            "detail": tracker.detail,
+            "total errors": tracker.total_errors,
+        })
+        event.update(tracker.status)
     if isis_created_date and isis_updated_date:
         event.update({
             "isis_created": isis_created_date,
@@ -673,6 +677,7 @@ def main():
 
     if result:
         for res in result:
+            print("")
             print(res)
 
 
