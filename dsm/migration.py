@@ -468,8 +468,8 @@ def migrate_acron(acron, id_folder_path=None):
         yield res
 
 
-def identify_documents_to_migrate():
-    for doc in get_document_pids_to_migrate():
+def identify_documents_to_migrate(from_date=None, to_date=None):
+    for doc in get_document_pids_to_migrate(from_date, to_date):
         yield _migration_manager.create_mininum_record_in_isis_doc(
             doc["pid"], doc["updated"]
         )
@@ -569,6 +569,19 @@ def main():
         help="Path of ID file that will be imported"
     )
 
+    identify_documents_to_migrate_parser = subparsers.add_parser(
+        "identify_documents_to_migrate",
+        help="Register the pid and isis_updated_date in isis_doc",
+    )
+    identify_documents_to_migrate_parser.add_argument(
+        "--from_date",
+        help="from date",
+    )
+    identify_documents_to_migrate_parser.add_argument(
+        "--to_date",
+        help="to date",
+    )
+
     register_documents_parser = subparsers.add_parser(
         "register_documents",
         help=(
@@ -624,6 +637,8 @@ def main():
         create_id_file(args.db_file_path, args.id_file_path)
     elif args.command == "migrate_acron":
         result = migrate_acron(args.acron, args.id_folder_path)
+    elif args.command == "identify_documents_to_migrate":
+        result = identify_documents_to_migrate(args.from_date, args.to_date)
     else:
         parser.print_help()
 
