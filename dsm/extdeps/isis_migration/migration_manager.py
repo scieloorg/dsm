@@ -17,6 +17,7 @@ from dsm.utils.files import (
     create_temp_file,
     read_from_zipfile,
     read_file,
+    date_now_as_folder_name,
 )
 from dsm.configuration import (
     check_migration_sources,
@@ -28,6 +29,8 @@ from dsm.configuration import (
     get_files_storage_folder_for_published_xmls,
     get_files_storage_folder_for_migration,
     get_htdocs_path,
+    get_cisis_path,
+    get_bases_artigo_path,
 )
 from dsm.core.issue import get_bundle_id
 from dsm.core.document import (
@@ -1300,3 +1303,45 @@ class MigratedDocument:
             remote=remote, local=os.path.basename(zip_file_path))
         self.tracker.info(f"total of zipped files: {len(self.files_to_zip)}")
         return zip_file_path
+
+
+def get_document_pids_to_migrate(from_date=None, to_date=None):
+    """
+    Consulta a base de dados ISIS artigo e retorna os pids atualizados
+    em um intervalo de datas (data de processamento do converter)
+
+    """
+    BASES_ARTIGO_PATH = get_bases_artigo_path()
+    name = date_now_as_folder_name()
+    finished_file_path = create_temp_file(f"{name}_finished.out")
+    output_file_path = create_temp_file(f"{name}_output.csv")
+    from_date = from_date or '0'*8
+    to_date = to_date or '9'*8
+    cmd = (
+        f'''{get_cisis_path()}/ifkeys {BASES_ARTIGO_PATH} '''
+        f'''from=OAITS={from_date} to=OAITS={to_date} > '''
+        f'''{output_file_path};'''
+        f'''echo finished> {finished_file_path}'''
+    )
+
+    while "finished" not in read_file(finished_file_path):
+        pass
+
+    with open(output_file_path, "r") as fp:
+        """
+        output_file content
+
+         1|OAITS=20210917=2352-22912021005005225
+         1|OAITS=20210917=2352-22912021005005226
+         1|OAITS=20210917=2352-22912021005005227
+         1|OAITS=20210917=2352-22912021005005228
+         1|OAITS=20210917=2675-54752021000300400
+         1|OAITS=20210917=2675-54752021000300401
+         1|OAITS=20210917=2675-54752021000300402
+         1|OAITS=20210917=2675-54752021000300700
+
+        """
+        for row in fp:
+            # 1|OAITS=20210917=2675-54752021000300700
+            parts = row.split("=")
+            yield {"updated": row[1], "pid": "S" + row[-1]}

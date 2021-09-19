@@ -14,6 +14,7 @@ from dsm import configuration
 from dsm.core.issue import get_bundle_id
 from dsm.core.document import DocsManager
 from dsm.utils.files import create_temp_file, size, read_file
+
 from dsm import exceptions
 
 
