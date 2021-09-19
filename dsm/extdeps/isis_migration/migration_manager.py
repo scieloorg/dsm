@@ -464,7 +464,7 @@ class MigrationManager:
 
             # obtém a localização do arquivo no `files storage`
             folder = get_files_storage_folder_for_htmls(
-                migrated.journal_pid, migrated.issue_folder
+                migrated.journal_pid, migrated.issue_folder, migrated.file_name
             )
             html = {"lang": text["lang"]}
 
@@ -536,7 +536,7 @@ class MigrationManager:
 
                 # obtém a localização do arquivo no `files storage`
                 folder = get_files_storage_folder_for_xmls(
-                    migrated.journal_pid, migrated.issue_folder
+                    migrated.journal_pid, migrated.issue_folder, migrated.file_name
                 )
 
                 # registra no files storage
@@ -952,7 +952,7 @@ class MigratedDocument:
                 self.isis_doc.acron, self.isis_doc.issue_folder),
             self.isis_doc.file_name, self._f_doc.language)
         self._files_storage_folder = get_files_storage_folder_for_migration(
-            self.journal_pid, self.isis_doc.issue_folder
+            self.journal_pid, self.isis_doc.issue_folder, self.file_name
         )
         self.tracker = None
         self.files_to_zip = []
