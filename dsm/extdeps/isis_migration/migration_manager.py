@@ -115,6 +115,25 @@ class MigrationManager:
     def db_connect(self):
         db.mk_connection(self._db_url)
 
+    def create_mininum_record_in_isis_doc(self, pid, isis_updated_date):
+        """
+        Create a record in isis_doc only with pid, isis_updated_date and
+        status == "pending_migration"
+        """
+        isis_document = (
+            db.fetch_isis_document(pid) or
+            db.create_isis_document()
+        )
+        tracker = None
+        if isis_document.isis_updated_date != isis_updated_date:
+            tracker = Tracker("create_mininum_record_in_isis_doc")
+            tracker.info("created minimum record")
+            isis_document._id = pid
+            isis_document.isis_updated_date = isis_updated_date
+            isis_document.status = "pending_migration"
+            db.save_data(isis_document)
+        return isis_document, tracker
+
     def register_isis_document(self, _id, records):
         """
         Register migrated document data

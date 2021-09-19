@@ -9,6 +9,7 @@ from dsm.extdeps.isis_migration import (
     id2json,
     migration_manager,
     friendly_isis,
+    get_document_pids_to_migrate,
 )
 from dsm import configuration
 from dsm.core.issue import get_bundle_id
@@ -467,6 +468,13 @@ def migrate_acron(acron, id_folder_path=None):
         yield res
 
 
+def identify_documents_to_migrate():
+    for doc in get_document_pids_to_migrate():
+        yield _migration_manager.create_mininum_record_in_isis_doc(
+            doc["pid"], doc["updated"]
+        )
+
+
 def main():
     parser = argparse.ArgumentParser(
         description="ISIS database migration tool")
@@ -588,33 +596,6 @@ def main():
         help="Updated from"
     )
     register_documents_parser.add_argument(
-        "--updated_to",
-        help="Updated to"
-    )
-
-    register_external_p_records_parser = subparsers.add_parser(
-        "register_external_p_records",
-        help=(
-            "Update the p records using external records"
-        ),
-    )
-    register_external_p_records_parser.add_argument(
-        "--pub_year",
-        help="Publication year",
-    )
-    register_external_p_records_parser.add_argument(
-        "--acron",
-        help="Journal acronym",
-    )
-    register_external_p_records_parser.add_argument(
-        "--issue_folder",
-        help="Issue folder (e.g.: v20n1)",
-    )
-    register_external_p_records_parser.add_argument(
-        "--updated_from",
-        help="Updated from"
-    )
-    register_external_p_records_parser.add_argument(
         "--updated_to",
         help="Updated to"
     )
