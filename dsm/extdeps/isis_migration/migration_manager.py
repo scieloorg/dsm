@@ -987,28 +987,41 @@ class MigratedDocument:
         return self.isis_doc.translations
 
     @property
+    def html_translation_texts(self):
+        paragraphs = self._f_doc.paragraphs
+        translations = {}
+        for html_file in self.html_translations_files:
+            lang = html_file["lang"]
+            translations.setdefault(lang, {})
+            translations[lang].update(
+                {"lang": lang, "parts": []}
+            )
+            if html_file["part"] == "front":
+                translations[lang]["filename"] = html_file["basename"]
+                translations[lang]["parts"].append(html_file["content"])
+                translations[lang]["parts"].append(paragraphs.references)
+            elif html_file["part"] == "back":
+                translations[lang]["parts"].append(html_file["content"])
+        for lang, data in translations.items():
+            yield {
+                "lang": lang,
+                "filename": data["filename"],
+                "text": "".join(data["parts"])
+            }
+
+    @property
     def html_texts(self):
         if self.isis_doc.file_type == "xml":
             return []
-        texts = []
+
         paragraphs = self._f_doc.paragraphs
-        text = {
+        yield {
             "lang": self._f_doc.language,
             "filename": self.isis_doc.file_name + ".html",
             "text": paragraphs.text or "",
         }
-        texts.append(text)
-        for transl_text in self.translated_texts:
-            text = {
-                "lang": transl_text["lang"],
-                "filename": transl_text["filename"],
-            }
-            text["text"] = transl_text["text"][0]
-            text["text"] += paragraphs.references
-            if len(transl_text["text"]) > 1:
-                text["text"] += transl_text["text"][1]
-            texts.append(text)
-        return texts
+        for text in self.html_translation_texts:
+            yield text
 
     @property
     def html_texts_adapted_for_the_website(self):
@@ -1059,22 +1072,6 @@ class MigratedDocument:
                 "filename": self.isis_doc.file_name + ".xml",
                 "text": content,
             }
-            texts.append(text)
-        return texts
-
-    @property
-    def translated_texts(self):
-        texts = []
-        translations_files = self._document_files.bases_translation_files_paths.items()
-        for lang, paths in translations_files:
-            text = {}
-            text["lang"] = lang
-            text["text"] = []
-            text["filename"] = paths[0]
-            for path in paths:
-                print("path", path)
-                content = read_file(path, encoding="iso-8859-1")
-                text["text"].append(content or '')
             texts.append(text)
         return texts
 
@@ -1252,12 +1249,15 @@ class MigratedDocument:
         self.isis_doc.asset_files = _uris_and_names
 
     @property
-    def original_htmls(self):
-        for lang, paths in self._document_files.bases_translation_files_paths.items():
+    def html_translations_files(self):
+        items = self._document_files.bases_translation_files_paths.items()
+        if not items:
+            return []
+        for lang, paths in items:
             for path, part in zip(paths, ("front", "back")):
                 yield {"lang": lang, "path": path, "part": part,
                        "basename": os.path.basename(path),
-                       "content": read_file(html["path"])}
+                       "content": read_file(path, encoding="iso-8859-1")}
 
     def migrate_text_files(self, files_storage):
         """
@@ -1286,7 +1286,7 @@ class MigratedDocument:
         else:
             # HTML Traduções
             _translations = {}
-            for html in self.original_htmls:
+            for html in self.html_translations_files:
                 lang = html["lang"]
                 path = html["path"]
                 name = html["basename"]
