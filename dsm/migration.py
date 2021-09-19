@@ -11,8 +11,11 @@ from dsm.extdeps.isis_migration import (
 )
 from dsm import configuration
 from dsm.core.document import DocsManager
-from dsm.utils.files import create_temp_file, size, read_file, write_file
-
+from dsm.utils.files import (
+    create_temp_file, size, read_file, write_file,
+    date_now_as_folder_name,
+)
+from dsm.extdeps.isis_migration import isis_cmds
 from dsm import exceptions
 
 
@@ -156,6 +159,24 @@ def register_artigo_id(id_file_path):
             print(f"Algum problema com {_id}")
             print(records)
             raise
+
+
+def migrate_document(pid):
+    """
+    Migrate ISIS database content of a given `pid`
+
+    Parameters
+    ----------
+    pid: str
+        identifier in ISIS database
+
+    Returns
+    -------
+    generator
+        results of the migration
+    """
+    _document_isis_db_file_path = isis_cmds._get_document_isis_db(pid)
+    return migrate_isis_db("artigo", _document_isis_db_file_path)
 
 
 def migrate_isis_db(db_type, source_file_path=None, records_content=None):
