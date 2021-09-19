@@ -1342,7 +1342,7 @@ def get_document_pids_to_migrate(from_date=None, to_date=None):
         f'''{output_file_path};'''
         f'''echo finished> {finished_file_path}'''
     )
-
+    os.system(cmd)
     while "finished" not in read_file(finished_file_path):
         pass
 
