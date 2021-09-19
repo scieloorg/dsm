@@ -3,7 +3,7 @@ import urllib3
 import glob
 
 from dsm import exceptions
-
+from dsm.utils import files
 
 # collection
 MINIO_SCIELO_COLLECTION = os.environ.get("MINIO_SCIELO_COLLECTION")
@@ -306,7 +306,9 @@ def get_files_storage_folder_for_zipped_packages(issn, scielo_pid_v3):
     str
         folder at files storage
     """
-    return os.path.join("ingress", "download", issn, scielo_pid_v3)
+    date_now_as_folder_name = files.date_now_as_folder_name()
+    return os.path.join(
+        "ingress", "download", issn, scielo_pid_v3, date_now_as_folder_name)
 
 
 def get_files_storage_folder_for_received_packages(name, date_now_as_folder_name=None):
