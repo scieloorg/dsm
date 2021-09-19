@@ -140,7 +140,7 @@ class MigrationManager:
             get_paragraphs_records(get_paragraphs_id_file_path(_id)) or []
         )
         tracker = Tracker("register_isis_document")
-        tracker.info("total of external p records: {len(p_records)}")
+        tracker.info(f"total of external p records: {len(p_records)}")
 
         doc = friendly_isis.FriendlyISISDocument(_id, records + p_records)
         isis_document = (
