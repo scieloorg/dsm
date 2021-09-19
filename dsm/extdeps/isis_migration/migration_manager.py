@@ -1091,7 +1091,7 @@ class MigratedDocument:
                 "basename": os.path.basename(pdf_path)
             }
 
-    def _migrate_document_file(self, files_storage, file_path, basename):
+    def _migrate_document_file(self, files_storage, file_path, basename, annotation=None):
 
         self.tracker.info(f"migrate {file_path}")
 
@@ -1108,7 +1108,8 @@ class MigratedDocument:
         except Exception as e:
             self.tracker.error(e)
         else:
-            return db.create_remote_and_local_file(remote, basename)
+            return db.create_remote_and_local_file(
+                remote, basename, annotation)
 
     def migrate_pdfs(self, files_storage):
         """
@@ -1170,6 +1171,35 @@ class MigratedDocument:
         self.isis_doc.assets = _files
         self.isis_doc.asset_files = _uris_and_names
 
+    @property
+    def get_html_images_paths(self):
+        images = {}
+        HTDOCS_PATH = get_htdocs_path()
+        for text in self.html_texts:
+            if not text["text"]:
+                self.tracker.error(
+                    f"html {text['filename']} ({text['lang']}) is empty")
+                continue
+
+            assets_in_html = get_assets_locations(text["text"])
+            images[text['lang']] = []
+            for asset in assets_in_html:
+                # fullpath
+                subdir = asset["path"]
+                if subdir.startswith("/"):
+                    subdir = subdir[1:]
+                file_path = os.path.join(HTDOCS_PATH, subdir)
+                images[text['lang']].append(
+                    {
+                        "original": asset["link"],
+                        "elem": asset["elem"].tag,
+                        "attr": asset["attr"],
+                        "file_path": file_path,
+                        "basename": os.path.basename(file_path),
+                    }
+                )
+        return images
+
     def migrate_images_from_html(self, files_storage):
         """
         Parse HTML content to get src / href
@@ -1197,53 +1227,28 @@ class MigratedDocument:
         _files = []
         _uris_and_names = []
 
-        expected_file_paths = []
-        not_found_file_paths = []
+        for lang, images in self.get_html_images_paths.items():
 
-        HTDOCS_PATH = get_htdocs_path()
-        for text in self.html_texts:
-            if not text["text"]:
-                self.tracker.error(
-                    f"html {text['filename']} ({text['lang']}) is empty")
-                continue
-
-            assets_in_html = get_assets_locations(text["text"])
-            for asset in assets_in_html:
-                # fullpath
-                subdir = asset["path"]
-                if subdir.startswith("/"):
-                    subdir = subdir[1:]
-                file_path = os.path.join(HTDOCS_PATH, subdir)
-
-                self.tracker.info(f"migrate {file_path}")
-
-                expected_file_paths.append(file_path)
+            for image in images:
+                self.tracker.info(f"migrate html ({lang}): {image}")
+                file_path = image["file_path"]
                 if not os.path.isfile(file_path):
-                    not_found_file_paths.append(file_path)
                     self.tracker.error(f"Unable to find {file_path}")
                     continue
 
                 # basename
-                name = os.path.basename(file_path)
-                _files.append(name)
+                _files.append(image["basename"])
 
-                # identificar para inserir no zip do pacote
-                self.files_to_zip.append(file_path)
-
-                # registra no files storage
-                remote = files_storage.register(
-                    file_path, self._files_storage_folder,
-                    name, preserve_name=True)
                 annotation = {
-                    "original": asset["link"],
-                    "elem": asset["elem"].tag,
-                    "attr": asset["attr"],
-                    "lang": text["lang"],
+                    "original": image["original"],
+                    "elem": image["elem"],
+                    "attr": image["attr"],
+                    "lang": lang,
                 }
-                _uris_and_names.append(
-                    db.create_remote_and_local_file(remote, name, annotation)
-                )
-                self.tracker.info(f"migrated {remote}")
+                migrated = self._migrate_document_file(
+                    files_storage, file_path, image["basename"], annotation)
+                if migrated:
+                    _uris_and_names.append(migrated)
 
         self.isis_doc.assets = _files
         self.isis_doc.asset_files = _uris_and_names

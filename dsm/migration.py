@@ -334,14 +334,7 @@ def _migrate_one_isis_item(pid, isis_data, operations):
         for op in operations[1:]:
             saved = op['action'](pid)
             events.append(_get_event(op, saved))
-    except exceptions.NotApplicableInfo as e:
-        events.append({
-            "op": op,
-            "info": str(e),
-            "timestamp": datetime.utcnow().isoformat(),
-        })
     except Exception as e:
-        raise
         events.append({
             "op": op,
             "error": str(e),
