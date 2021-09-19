@@ -443,7 +443,13 @@ class MigrationManager:
         # cria arquivos html com o conteúdo obtido dos arquivos html e
         # dos registros de parágrafos
         htmls = []
-        for text in migrated.html_texts_adapted_for_the_website:
+        for text in migrated.html_texts_to_publish:
+            tracker.info(f"publish {file_path}")
+
+            if not text["text"]:
+                tracker.error(f"Not found HTML text ({text["lang"]})")
+                continue
+
             # obtém os conteúdos de html registrados em `isis_doc`
             file_path = create_temp_file(text["filename"], text["text"])
 
@@ -454,17 +460,15 @@ class MigrationManager:
             html = {"lang": text["lang"]}
 
             try:
-                tracker.info(f"publish {file_path}")
-
                 # registra no files storage
                 uri = self._files_storage.register(
                     file_path, folder, text["filename"], preserve_name=True
                 )
             except Exception as e:
-                tracker.error(f"Unable to register {file_path} ({e})")
-
-            # atualiza com a uri o valor de htmls
-            html.update({"url": uri})
+                tracker.error(f"Unable to publish {file_path} ({e})")
+            else:
+                # atualiza com a uri o valor de htmls
+                html.update({"url": uri})
 
             htmls.append(html)
         document.htmls = htmls
@@ -1024,7 +1028,7 @@ class MigratedDocument:
             yield text
 
     @property
-    def html_texts_adapted_for_the_website(self):
+    def html_texts_to_publish(self):
         if self.isis_doc.file_type == "xml":
             return []
         assets_by_lang = {}
