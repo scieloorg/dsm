@@ -33,7 +33,7 @@ _MIGRATION_PARAMETERS = {
             dict(
                 name="PUBLISH",
                 result="PUBLISHED_JOURNAL",
-                action=_migration_manager.update_website_journal_data,
+                action=_migration_manager.publish_journal_data,
             )
         ]
     ),
@@ -48,7 +48,7 @@ _MIGRATION_PARAMETERS = {
             dict(
                 name="PUBLISH",
                 result="PUBLISHED_ISSUE",
-                action=_migration_manager.update_website_issue_data,
+                action=_migration_manager.publish_issue_data,
             )
         ]
     ),
@@ -68,22 +68,22 @@ _MIGRATION_PARAMETERS = {
             dict(
                 name="PUBLISH",
                 result="PUBLISHED_DOCUMENT",
-                action=_migration_manager.update_website_document_metadata,
+                action=_migration_manager.publish_document_metadata,
             ),
             dict(
                 name="PUBLISH_PDFS",
                 result="PUBLISHED_PDFS",
-                action=_migration_manager.update_website_document_pdfs,
+                action=_migration_manager.publish_document_pdfs,
             ),
             dict(
                 name="PUBLISH_XMLS",
                 result="PUBLISHED_XMLS",
-                action=_migration_manager.update_website_document_xmls,
+                action=_migration_manager.publish_document_xmls,
             ),
             dict(
                 name="PUBLISH_HTMLS",
                 result="PUBLISHED_HTMLS",
-                action=_migration_manager.update_website_document_htmls,
+                action=_migration_manager.publish_document_htmls,
             ),
         ]
     )
@@ -122,18 +122,18 @@ def register_documents(pid=None, acron=None, issue_folder=None, pub_year=None, u
             zip_file_path = _migration_manager.migrate_document_files(doc._id)
 
             # registra os metadados do documento a partir do registro isis
-            print("update_website_document_metadata")
-            _migration_manager.update_website_document_metadata(doc._id)
+            print("publish_document_metadata")
+            _migration_manager.publish_document_metadata(doc._id)
 
             # registra os pdfs no website
-            _migration_manager.update_website_document_pdfs(doc._id)
+            _migration_manager.publish_document_pdfs(doc._id)
 
             # registra os textos completos provenientes dos arquivos HTML e
             # dos registros do tipo `p`
             if doc.file_type == "html":
-                _migration_manager.update_website_document_htmls(doc._id)
+                _migration_manager.publish_document_htmls(doc._id)
             elif doc.file_type == "xml":
-                _migration_manager.update_website_document_xmls(doc._id)
+                _migration_manager.publish_document_xmls(doc._id)
             registered_metadata += 1
         except Exception as e:
             print("Error registering %s: %s" % (doc._id, e))
@@ -172,7 +172,7 @@ def register_artigo_id(id_file_path):
         try:
             if len(records) == 1:
                 if _migration_manager.register_isis_issue(_id, records[0]):
-                    _migration_manager.update_website_issue_data(_id)
+                    _migration_manager.publish_issue_data(_id)
             else:
                 _migration_manager.register_isis_document(_id, records)
         except:

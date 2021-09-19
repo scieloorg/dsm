@@ -276,7 +276,7 @@ class MigrationManager:
         db.save_data(isis_issue)
         return isis_issue, None
 
-    def update_website_journal_data(self, journal_id):
+    def publish_journal_data(self, journal_id):
         """
         Migrate isis journal data to website
 
@@ -307,7 +307,7 @@ class MigrationManager:
         db.save_data(journal)
         return journal, None
 
-    def update_website_issue_data(self, issue_id):
+    def publish_issue_data(self, issue_id):
         """
         Migrate isis issue data to website
 
@@ -336,7 +336,7 @@ class MigrationManager:
         db.save_data(issue)
         return issue, None
 
-    def update_website_document_metadata(self, article_id):
+    def publish_document_metadata(self, article_id):
         """
         Update the website document
 
@@ -371,7 +371,7 @@ class MigrationManager:
         db.save_data(document)
         return document, None
 
-    def update_website_document_pdfs(self, article_pid):
+    def publish_document_pdfs(self, article_pid):
         """
         Update the website document pdfs
         Get texts from paragraphs records and from translations files
@@ -388,7 +388,7 @@ class MigrationManager:
         # obtém os dados de artigo
         migrated = MigratedDocument(article_pid)
 
-        tracker = Tracker("update_website_document_pdfs")
+        tracker = Tracker("publish_document_pdfs")
 
         # cria ou recupera o registro de documento do website
         document = db.fetch_document(article_pid)
@@ -408,7 +408,7 @@ class MigrationManager:
         db.save_data(document)
         return document, tracker
 
-    def update_website_document_htmls(self, article_pid):
+    def publish_document_htmls(self, article_pid):
         """
         Update the website document htmls
 
@@ -438,7 +438,7 @@ class MigrationManager:
                 "Document %s does not exist" % article_pid
             )
 
-        tracker = Tracker("update_website_document_htmls")
+        tracker = Tracker("publish_document_htmls")
 
         # cria arquivos html com o conteúdo obtido dos arquivos html e
         # dos registros de parágrafos
@@ -474,7 +474,7 @@ class MigrationManager:
         db.save_data(document)
         return document, tracker
 
-    def update_website_document_xmls(self, article_pid):
+    def publish_document_xmls(self, article_pid):
         """
         Update the website document xmls
 
@@ -504,7 +504,7 @@ class MigrationManager:
                 "Document %s does not exist" % article_pid
             )
 
-        tracker = Tracker("update_website_document_xmls")
+        tracker = Tracker("publish_document_xmls")
 
         # publica arquivos xml com o conteúdo obtido dos arquivos xml
         for text in migrated.xml_texts:
