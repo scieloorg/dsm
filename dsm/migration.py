@@ -143,29 +143,6 @@ def register_documents(pid=None, acron=None, issue_folder=None, pub_year=None, u
     print("Published with metadata: ", registered_metadata)
 
 
-def register_external_p_records(acron=None, issue_folder=None, pub_year=None, updated_from=None, updated_to=None):
-    _files_storage = configuration.get_files_storage()
-    _db_url = configuration.get_db_url()
-    _v3_manager = configuration.get_pid_manager()
-
-    _docs_manager = DocsManager(_files_storage, _db_url, _v3_manager)
-
-
-    for doc in _select_docs(acron, issue_folder, pub_year, updated_from, updated_to):
-        try:
-            # obtém os arquivos do site antigo (xml, pdf, html, imagens)
-            print("")
-            print(doc._id)
-            print("type:", doc.file_type)
-            if doc.file_type != "xml":
-                # registra os registros do tipo `p` externos na base artigo
-                print("register_isis_document_external_p_records")
-                _migration_manager.register_isis_document_external_p_records(
-                    doc._id)
-        except Exception as e:
-            print("Error registering p_records %s: %s" % (doc._id, e))
-
-
 def register_artigo_id(id_file_path):
     for _id, records in id2json.get_json_records(
             id_file_path, id2json.article_id):
@@ -663,10 +640,6 @@ def main():
     elif args.command == "register_documents":
         register_documents(
             args.pid, args.acron, args.issue_folder, args.pub_year,
-            args.updated_from, args.updated_to)
-    elif args.command == "register_external_p_records":
-        register_external_p_records(
-            args.acron, args.issue_folder, args.pub_year,
             args.updated_from, args.updated_to)
     elif args.command == "create_id_file":
         create_id_file(args.db_file_path, args.id_file_path)

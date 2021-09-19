@@ -169,52 +169,6 @@ class MigrationManager:
         db.save_data(isis_document)
         return isis_document, tracker
 
-    def register_isis_document_external_p_records(self, _id):
-        """
-        Register migrated document data
-
-        Parameters
-        ----------
-        _id: str
-        records : list of dict
-
-        Returns
-        -------
-        str
-            _id
-
-        Raises
-        ------
-            dsm.storage.db.DBSaveDataError
-            dsm.storage.db.DBCreateDocumentError
-        """
-        # recupera `isis_document` ou cria se não existir
-
-        # se existirem os registros de parágrafos que estejam externos à
-        # base artigo, ou seja, em artigo/p/ISSN/ANO/ISSUE_ORDER/...,
-        # os recupera e os ingressa junto aos registros da base artigo
-        p_records = (
-            get_paragraphs_records(get_paragraphs_id_file_path(_id)) or []
-        )
-        if not p_records:
-            return
-        isis_document = db.fetch_isis_document(_id)
-        if not isis_document:
-            raise exceptions.DocumentDoesNotExistError(
-                "isis_document %s does not exist" % _id
-            )
-        doc = friendly_isis.FriendlyISISDocument(_id, isis_document.records)
-
-        # atualiza p_records
-        doc.p_records = p_records
-
-        # atualiza registros
-        isis_document.records = doc.records
-
-        # salva o documento
-        db.save_data(isis_document)
-        return isis_document, None
-
     def register_isis_journal(self, _id, record):
         """
         Register migrated journal data
