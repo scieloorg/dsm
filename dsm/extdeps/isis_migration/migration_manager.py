@@ -24,8 +24,8 @@ from dsm.configuration import (
     get_db_url,
     get_paragraphs_id_file_path,
     DocumentFilesAtOldWebsite,
-    get_files_storage_folder_for_htmls,
-    get_files_storage_folder_for_xmls,
+    get_files_storage_folder_for_published_htmls,
+    get_files_storage_folder_for_published_xmls,
     get_files_storage_folder_for_migration,
     get_htdocs_path,
 )
@@ -417,7 +417,7 @@ class MigrationManager:
             tracker.info(f"publish {file_path}")
 
             # obtém a localização do arquivo no `files storage`
-            folder = get_files_storage_folder_for_htmls(
+            folder = get_files_storage_folder_for_published_htmls(
                 migrated.journal_pid, migrated.issue_folder, migrated.file_name
             )
             html = {"lang": text["lang"]}
@@ -489,7 +489,7 @@ class MigrationManager:
                 file_path = create_temp_file(text["filename"], text["text"])
 
                 # obtém a localização do arquivo no `files storage`
-                folder = get_files_storage_folder_for_xmls(
+                folder = get_files_storage_folder_for_published_xmls(
                     migrated.journal_pid, migrated.issue_folder, migrated.file_name
                 )
 
