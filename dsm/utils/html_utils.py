@@ -72,6 +72,10 @@ def _get_path(link, website_url):
 
 
 def adapt_html_text_to_website(html_text, assets):
+    if not html_text:
+        return html_text
+    if not assets:
+        return html_text
     html = fromstring(html_text)
 
     for asset in assets:

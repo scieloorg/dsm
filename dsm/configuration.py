@@ -256,20 +256,19 @@ class DocumentFilesAtOldWebsite:
         return self._bases_xml_file_path
 
 
-def get_files_storage_folder_for_htmls(issn, issue_folder):
+def get_files_storage_folder_for_published_htmls(issn, issue_folder, file_name):
     return os.path.join(
-        "migration", "assets_with_remote_location", "htmls",
-        issn, issue_folder)
+        "migrated", "published", "htmls", issn, issue_folder, file_name)
 
 
-def get_files_storage_folder_for_xmls(issn, issue_folder):
+def get_files_storage_folder_for_published_xmls(issn, issue_folder, file_name):
     return os.path.join(
-        "migration", "assets_with_remote_location", "xmls",
-        issn, issue_folder)
+        "migrated", "published", "xmls", issn, issue_folder, file_name)
 
 
-def get_files_storage_folder_for_migration(issn, issue_folder):
-    return os.path.join("migration", "original", issn, issue_folder)
+def get_files_storage_folder_for_migration(issn, issue_folder, file_name):
+    return os.path.join(
+        "migrated", "original", issn, issue_folder, file_name)
 
 
 def get_bases_acron(acron):

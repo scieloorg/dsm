@@ -33,7 +33,7 @@ _MIGRATION_PARAMETERS = {
             dict(
                 name="PUBLISH",
                 result="PUBLISHED_JOURNAL",
-                action=_migration_manager.update_website_journal_data,
+                action=_migration_manager.publish_journal_data,
             )
         ]
     ),
@@ -48,7 +48,7 @@ _MIGRATION_PARAMETERS = {
             dict(
                 name="PUBLISH",
                 result="PUBLISHED_ISSUE",
-                action=_migration_manager.update_website_issue_data,
+                action=_migration_manager.publish_issue_data,
             )
         ]
     ),
@@ -68,22 +68,22 @@ _MIGRATION_PARAMETERS = {
             dict(
                 name="PUBLISH",
                 result="PUBLISHED_DOCUMENT",
-                action=_migration_manager.update_website_document_metadata,
+                action=_migration_manager.publish_document_metadata,
             ),
             dict(
                 name="PUBLISH_PDFS",
                 result="PUBLISHED_PDFS",
-                action=_migration_manager.update_website_document_pdfs,
+                action=_migration_manager.publish_document_pdfs,
             ),
             dict(
                 name="PUBLISH_XMLS",
                 result="PUBLISHED_XMLS",
-                action=_migration_manager.update_website_document_xmls,
+                action=_migration_manager.publish_document_xmls,
             ),
             dict(
                 name="PUBLISH_HTMLS",
                 result="PUBLISHED_HTMLS",
-                action=_migration_manager.update_website_document_htmls,
+                action=_migration_manager.publish_document_htmls,
             ),
         ]
     )
@@ -122,18 +122,18 @@ def register_documents(pid=None, acron=None, issue_folder=None, pub_year=None, u
             zip_file_path = _migration_manager.migrate_document_files(doc._id)
 
             # registra os metadados do documento a partir do registro isis
-            print("update_website_document_metadata")
-            _migration_manager.update_website_document_metadata(doc._id)
+            print("publish_document_metadata")
+            _migration_manager.publish_document_metadata(doc._id)
 
             # registra os pdfs no website
-            _migration_manager.update_website_document_pdfs(doc._id)
+            _migration_manager.publish_document_pdfs(doc._id)
 
             # registra os textos completos provenientes dos arquivos HTML e
             # dos registros do tipo `p`
             if doc.file_type == "html":
-                _migration_manager.update_website_document_htmls(doc._id)
+                _migration_manager.publish_document_htmls(doc._id)
             elif doc.file_type == "xml":
-                _migration_manager.update_website_document_xmls(doc._id)
+                _migration_manager.publish_document_xmls(doc._id)
             registered_metadata += 1
         except Exception as e:
             print("Error registering %s: %s" % (doc._id, e))
@@ -143,36 +143,13 @@ def register_documents(pid=None, acron=None, issue_folder=None, pub_year=None, u
     print("Published with metadata: ", registered_metadata)
 
 
-def register_external_p_records(acron=None, issue_folder=None, pub_year=None, updated_from=None, updated_to=None):
-    _files_storage = configuration.get_files_storage()
-    _db_url = configuration.get_db_url()
-    _v3_manager = configuration.get_pid_manager()
-
-    _docs_manager = DocsManager(_files_storage, _db_url, _v3_manager)
-
-
-    for doc in _select_docs(acron, issue_folder, pub_year, updated_from, updated_to):
-        try:
-            # obtém os arquivos do site antigo (xml, pdf, html, imagens)
-            print("")
-            print(doc._id)
-            print("type:", doc.file_type)
-            if doc.file_type != "xml":
-                # registra os registros do tipo `p` externos na base artigo
-                print("register_isis_document_external_p_records")
-                _migration_manager.register_isis_document_external_p_records(
-                    doc._id)
-        except Exception as e:
-            print("Error registering p_records %s: %s" % (doc._id, e))
-
-
 def register_artigo_id(id_file_path):
     for _id, records in id2json.get_json_records(
             id_file_path, id2json.article_id):
         try:
             if len(records) == 1:
                 if _migration_manager.register_isis_issue(_id, records[0]):
-                    _migration_manager.update_website_issue_data(_id)
+                    _migration_manager.publish_issue_data(_id)
             else:
                 _migration_manager.register_isis_document(_id, records)
         except:
@@ -329,17 +306,11 @@ def _migrate_one_isis_item(pid, isis_data, operations):
         saved = operations[0]['action'](pid, isis_data)
         events.append(
             _get_event(operations[0], saved,
-                       saved.isis_created_date, saved.isis_updated_date)
+                       saved[0].isis_created_date, saved[0].isis_updated_date)
         )
         for op in operations[1:]:
             saved = op['action'](pid)
             events.append(_get_event(op, saved))
-    except exceptions.NotApplicableInfo as e:
-        events.append({
-            "op": op,
-            "info": str(e),
-            "timestamp": datetime.utcnow().isoformat(),
-        })
     except Exception as e:
         events.append({
             "op": op,
@@ -350,7 +321,14 @@ def _migrate_one_isis_item(pid, isis_data, operations):
     return result
 
 
-def _get_event(operation, record_data, isis_created_date=None, isis_updated_date=None):
+def _get_event(operation, saved, isis_created_date=None, isis_updated_date=None):
+    if not saved:
+        return {
+            "event_name": operation["name"],
+            "event_result": operation["result"],
+        }
+
+    record_data, tracker = saved
     event = {
         "_id": record_data._id,
         "event_name": operation["name"],
@@ -358,6 +336,12 @@ def _get_event(operation, record_data, isis_created_date=None, isis_updated_date
         "created": record_data.created,
         "updated": record_data.updated,
     }
+    if tracker:
+        event.update({
+            "detail": tracker.detail,
+            "total errors": tracker.total_errors,
+        })
+        event.update(tracker.status)
     if isis_created_date and isis_updated_date:
         event.update({
             "isis_created": isis_created_date,
@@ -654,10 +638,6 @@ def main():
         register_documents(
             args.pid, args.acron, args.issue_folder, args.pub_year,
             args.updated_from, args.updated_to)
-    elif args.command == "register_external_p_records":
-        register_external_p_records(
-            args.acron, args.issue_folder, args.pub_year,
-            args.updated_from, args.updated_to)
     elif args.command == "create_id_file":
         create_id_file(args.db_file_path, args.id_file_path)
     elif args.command == "migrate_acron":
@@ -667,6 +647,7 @@ def main():
 
     if result:
         for res in result:
+            print("")
             print(res)
 
 
