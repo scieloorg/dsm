@@ -22,8 +22,6 @@ def get_document_isis_db(pid):
     name = date_now_as_folder_name()
     finished_file_path = create_temp_file(f"{name}_finished.out")
     output_file_path = create_temp_file(f"{name}_output")
-    from_date = from_date or '0'*8
-    to_date = to_date or '9'*8
 
     cisis_path = configuration.get_cisis_path()
     cmds = []
