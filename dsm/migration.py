@@ -163,7 +163,7 @@ def register_artigo_id(id_file_path):
 
 def migrate_document(pid):
     """
-    Migrate ISIS database content of a given `pid`
+    Migrate ISIS records of a document
 
     Parameters
     ----------
@@ -562,6 +562,19 @@ def main():
         )
     )
 
+    migrate_document_parser = subparsers.add_parser(
+        "migrate_document",
+        help=(
+            "Migrate document data from ISIS database to MongoDB."
+        )
+    )
+    migrate_document_parser.add_argument(
+        "pid",
+        help=(
+            "PID v2"
+        )
+    )
+
     migrate_acron_parser = subparsers.add_parser(
         "migrate_acron",
         help=(
@@ -644,6 +657,10 @@ def main():
     elif args.command == "migrate_artigo":
         result = migrate_isis_db(
             "artigo", args.source_file_path
+        )
+    elif args.command == "migrate_document":
+        result = migrate_document(
+            args.pid
         )
     elif args.command == "register_artigo_id":
         register_artigo_id(args.id_file_path)
