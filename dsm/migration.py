@@ -218,6 +218,7 @@ def _migrate_isis_records(id_file_records, db_type):
         ValueError
 
     """
+    print(id_file_records)
     # get the migration parameters according to db_type:
     # title or issue or artigo
     migration_parameters = _MIGRATION_PARAMETERS.get(db_type)
@@ -229,6 +230,7 @@ def _migrate_isis_records(id_file_records, db_type):
 
     for pid, records in id2json.get_id_and_json_records(
             id_file_records, migration_parameters["custom_id_function"]):
+        print(pid, len(records))
         item_result = {"pid": pid}
         try:
             isis_data = records[0]
@@ -274,8 +276,10 @@ def _migrate_one_isis_item(pid, isis_data, operations):
     }
     events = []
     try:
+        print(".......")
         op = operations[0]
         saved = op['action'](pid, isis_data)
+        print(saved)
         events.append(
             _get_event(op, saved,
                        saved[0].isis_created_date, saved[0].isis_updated_date)
@@ -521,7 +525,7 @@ def main():
     else:
         parser.print_help()
 
-    if result:
+    if result and args.command != "list_documents_to_migrate":
         for res in result:
             print("")
             print(res)

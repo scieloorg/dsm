@@ -17,6 +17,17 @@ from mongoengine import (
 from opac_schema.v2.models import RemoteAndLocalFile
 
 
+def _get_value(data, tag):
+    """
+    Returns first value of field `tag`
+    """
+    # data['v880'][0]['_']
+    try:
+        return data[tag][0]['_']
+    except (KeyError, IndexError):
+        return None
+
+
 class ISISDocument(Document):
     """
     Armazena documento (artigo) migrado
@@ -39,18 +50,23 @@ class ISISDocument(Document):
 
     # status do registro quanto aos metadados
     status = StringField()
+
     # status do documento quanto aos arquivos
-    files_quality = DecimalField()
+    files_to_migrate = DictField()
+    files_migration_progress = DecimalField()
+    files_to_publish = DictField()
+    published_files_progress = DecimalField()
+
     # status do documento quanto ao registro parágrafos, se aplicável
-    p_records_quality = DecimalField()
-    # detailed status
-    detailed_status = DictField()
+    p_records_status = DictField()
+    refs_in_p_records = DecimalField()
 
     # dados dos arquivos do documento
     file_name = StringField()
     file_type = StringField()
     acron = StringField()
     issue_folder = StringField()
+
     assets = ListField()
     translations = DictField()
     pdfs = DictField()
@@ -78,30 +94,30 @@ class ISISDocument(Document):
             'assets',
             'translations',
             'status',
-        ],
+            'files_migration_progress',
+            'published_files_progress',
+            'p_records_status',
+            'refs_in_p_records',
+        ]
     }
 
     @property
     def journal_pid(self):
         return self.id[1:10]
 
-    def set_detailed_status(self):
-        status = {"metadata": self.status}
-        status.update(self.files_status)
-        status.update(self.records_status)
-        self.detailed_status = status
-
-    @property
-    def files_status(self):
+    def update_files_to_migrate(self):
         status = {}
         status.update(self.pdfs_status)
         status.update(self.assets_status)
         status.update(self.xml_status or {})
         status.update(self.translations_status or {})
-        return status
+        self.files_to_migrate = status
 
     @property
     def xml_status(self):
+        """
+        Status of XML file to migrate
+        """
         if self.file_type != "xml":
             return None
         if self.xml_files and self.xml_files[0].uri:
@@ -112,6 +128,9 @@ class ISISDocument(Document):
 
     @property
     def pdfs_status(self):
+        """
+        Status of pdfs files to migrate
+        """
         items = {}
         for lang, filename in self.pdfs.items():
             items[filename] = False
@@ -122,6 +141,9 @@ class ISISDocument(Document):
 
     @property
     def assets_status(self):
+        """
+        Status of assets files to migrate
+        """
         items = {
             k: 0
             for k in self.assets
@@ -133,6 +155,9 @@ class ISISDocument(Document):
 
     @property
     def translations_status(self):
+        """
+        Status of translations files to migrate
+        """
         if self.file_type != "html":
             return None
         if not self.translations:
@@ -146,44 +171,89 @@ class ISISDocument(Document):
                 items[html["name"]] = 1
         return items
 
-    @property
-    def records_status(self):
+    def update_p_records_status(self):
+        """
+        Status of translations files to migrate
+        """
+        if self.file_type != "html":
+            self.refs_in_p_records = 1.0
+            self.p_records_status = {}
+            return
+
         total_p = 0
         total_ref_in_p = 0
         total_c = 0
         items = {}
         for record in self.records:
-            rec_type = record.get("v706")
+            rec_type = _get_value(record, "v706")
             if rec_type == "p":
                 total_p += 1
-                if record.get("v888"):
+                if _get_value(record, "v888"):
                     total_ref_in_p += 1
             elif rec_type == "c":
                 total_c += 1
-        items["p_records"] = total_p
+
+        self.refs_in_p_records = 0
         if total_c:
-            items["ref_in_p_records"] = total_ref_in_p
-            items["c_records"] = total_c
-            items["ref_in_p_records / c_records"] = total_ref_in_p / total_c
-        return items
+            self.refs_in_p_records = total_ref_in_p / total_c
 
-    def eval_status(self):
-        expected = len(self.files_status)
-        done = sum(self.files_status.values())
-        self.files_quality = done / expected
+        items["p_records"] = total_p
+        items["c_records"] = total_c
+        items["ref_in_p_records"] = total_ref_in_p
+        self.p_records_status = items
 
-        if self.file_type == "html":
-            records_status = self.records_status
-            expected = 1
-            done = 1 if records_status["p_records"] else 0
-            if records_status.get("c_records"):
-                expected += records_status.get("c_records")
-                done += records_status.get("ref_in_p_records")
-            self.p_records_quality = done / expected
+    def get_language(self):
+        for record in self.records:
+            rec_type = _get_value(record, "v706")
+            if rec_type == "h":
+                return _get_value(record, "v040")
+
+    def mark_as_published(self, file_type, data):
+        """
+        Documentos de texto completo que devem ser publicados
+        """
+        # xml
+        if not self.files_to_publish:
+            self.files_to_publish = {}
+        if file_type == "xml":
+            self.files_to_publish.update({"published xml": 1 if data else 0})
+        elif file_type == "html":
+            published_htmls = {}
+            for lang in list(self.translations.keys()) + [self.get_language()]:
+                if lang:
+                    published_htmls[f"published html ({lang})"] = 0
+            for item in data:
+                if item["url"]:
+                    published_htmls[f"published html ({item['lang']})"] = 1
+            self.files_to_publish.update(published_htmls)
 
     def save(self, *args, **kwargs):
-        self.eval_status()
-        self.set_detailed_status()
+        # arquivos para migrar
+        self.update_files_to_migrate()
+        # percentagem migrada
+        self.files_migration_progress = 0
+        if self.files_to_migrate:
+            self.files_migration_progress = (
+                sum(self.files_to_migrate.values()) /
+                len(self.files_to_migrate)
+            )
+        # arquivos XML e HTML publicados contendo textos completos
+        published_files_expected = 1
+        if self.file_type == "html":
+            published_files_expected += 1 + len(self.translations)
+        # percentagem publicada
+        self.published_files_progress = (
+            sum(self.files_to_publish.values()) / published_files_expected
+        )
+
+        # update record status
+        self.update_p_records_status()
+
+        if (self.files_migration_progress == 1.0 and
+                self.published_files_progress == 1.0):
+            self.status = "published_complete"
+
+        # dates
         self.updated = datetime.utcnow()
         if not self.created:
             self.created = self.updated

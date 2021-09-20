@@ -356,8 +356,8 @@ class MigrationManager:
         # salva os dados
         db.save_data(document)
 
-        migrated_document._isis_document.status = "published"
-        db.save(migrated_document._isis_document)
+        migrated_document._isis_document.status = "published_incomplete"
+        db.save_data(migrated_document._isis_document)
         return document, None
 
     def publish_document_pdfs(self, article_pid):
@@ -465,6 +465,10 @@ class MigrationManager:
 
         # salva os dados
         db.save_data(document)
+
+        if htmls:
+            migrated._isis_document.mark_as_published("html", htmls)
+            db.save_data(migrated._isis_document)
         return document, tracker
 
     def publish_document_xmls(self, article_pid):
@@ -533,6 +537,11 @@ class MigrationManager:
 
         # salva os dados
         db.save_data(document)
+
+        if document.xml:
+            migrated._isis_document.mark_as_published("xml", document.xml)
+            db.save_data(migrated._isis_document)
+
         return document, tracker
 
     def migrate_document_files(self, article_pid):
@@ -1324,6 +1333,7 @@ class MigratedDocument:
                     files_storage, file_path, os.path.basename(file_path))
                 if migrated:
                     _uris_and_names.append(migrated)
+                    self.isis_doc.xml_files = _uris_and_names
             else:
                 self.tracker.error(f"Not found {file_path}")
         else:
