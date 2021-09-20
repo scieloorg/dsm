@@ -8,12 +8,10 @@ from datetime import datetime
 from dsm.extdeps.isis_migration import (
     id2json,
     migration_manager,
-    friendly_isis,
 )
 from dsm import configuration
-from dsm.core.issue import get_bundle_id
 from dsm.core.document import DocsManager
-from dsm.utils.files import create_temp_file, size, read_file
+from dsm.utils.files import create_temp_file, size, read_file, write_file
 
 from dsm import exceptions
 

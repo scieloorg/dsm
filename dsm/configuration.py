@@ -31,7 +31,7 @@ BASES_XML_PATH = os.environ.get("BASES_XML_PATH")
 BASES_PDF_PATH = os.environ.get("BASES_PDF_PATH")
 BASES_TRANSLATION_PATH = os.environ.get("BASES_TRANSLATION_PATH")
 HTDOCS_IMG_REVISTAS_PATH = os.environ.get("HTDOCS_IMG_REVISTAS_PATH")
-BASES_PATH = os.path.dirname(BASES_PDF_PATH)
+BASES_PATH = os.environ.get("BASES_PATH")
 
 
 def get_http_client():

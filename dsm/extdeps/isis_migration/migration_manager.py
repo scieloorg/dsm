@@ -1362,5 +1362,5 @@ def get_document_pids_to_migrate(from_date=None, to_date=None):
         """
         for row in fp:
             # 1|OAITS=20210917=2675-54752021000300700
-            parts = row.split("=")
-            yield {"updated": row[1], "pid": "S" + row[-1]}
+            parts = row.strip().split("=")
+            yield {"updated": parts[1], "pid": "S" + parts[-1]}
