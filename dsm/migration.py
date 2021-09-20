@@ -165,9 +165,8 @@ def migrate_isis_db(db_type, source_file_path=None, records_content=None):
         )
 
     # migrate
-    for result in _migrate_isis_records(
-            id2json.join_id_file_rows_and_return_records(rows), db_type):
-        yield result
+    return _migrate_isis_records(
+        id2json.join_id_file_rows_and_return_records(rows), db_type)
 
 
 def _migrate_isis_records(id_file_records, db_type):
@@ -332,8 +331,7 @@ def migrate_acron(acron, id_folder_path=None):
         id_file_path = create_id_file(db_path, id_file_path)
         db_path = id_file_path
         print(f"{id_file_path} - size: {size(id_file_path)} bytes")
-    for res in migrate_isis_db("artigo", db_path):
-        yield res
+    return migrate_isis_db("artigo", db_path)
 
 
 def identify_documents_to_migrate(from_date=None, to_date=None):
