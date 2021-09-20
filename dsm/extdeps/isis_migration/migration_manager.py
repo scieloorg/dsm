@@ -177,7 +177,7 @@ class MigrationManager:
         isis_document.isis_updated_date = doc.isis_updated_date
         isis_document.isis_created_date = doc.isis_created_date
         isis_document.records = doc.records
-        isis_document.status = "1"
+        isis_document.status = "isis_metadata_migrated"
 
         isis_document.file_name = doc.file_name
         isis_document.file_type = doc.file_type
@@ -355,6 +355,9 @@ class MigrationManager:
 
         # salva os dados
         db.save_data(document)
+
+        migrated_document._isis_document.status = "published"
+        db.save(migrated_document._isis_document)
         return document, None
 
     def publish_document_pdfs(self, article_pid):
@@ -392,6 +395,7 @@ class MigrationManager:
 
         # salva os dados
         db.save_data(document)
+
         return document, tracker
 
     def publish_document_htmls(self, article_pid):
@@ -1261,12 +1265,13 @@ class MigratedDocument:
             for image in images:
                 self.tracker.info(f"migrate html ({lang}): {image}")
                 file_path = image["file_path"]
-                if not os.path.isfile(file_path):
-                    self.tracker.error(f"Not found {file_path}")
-                    continue
 
                 # basename
                 _files.append(image["basename"])
+
+                if not os.path.isfile(file_path):
+                    self.tracker.error(f"Not found {file_path}")
+                    continue
 
                 annotation = {
                     "original": image["original"],

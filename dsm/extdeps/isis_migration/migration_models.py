@@ -12,6 +12,7 @@ from mongoengine import (
     DictField,
     ListField,
     Q,
+    DecimalField,
 )
 from opac_schema.v2.models import RemoteAndLocalFile
 
@@ -35,7 +36,15 @@ class ISISDocument(Document):
     # data de criação e atualização da migração
     created = DateTimeField()
     updated = DateTimeField()
+
+    # status do registro quanto aos metadados
     status = StringField()
+    # status do documento quanto aos arquivos
+    files_quality = DecimalField()
+    # status do documento quanto ao registro parágrafos, se aplicável
+    p_records_quality = DecimalField()
+    # detailed status
+    detailed_status = DictField()
 
     # dados dos arquivos do documento
     file_name = StringField()
@@ -76,7 +85,105 @@ class ISISDocument(Document):
     def journal_pid(self):
         return self.id[1:10]
 
+    def set_detailed_status(self):
+        status = {"metadata": self.status}
+        status.update(self.files_status)
+        status.update(self.records_status)
+        self.detailed_status = status
+
+    @property
+    def files_status(self):
+        status = {}
+        status.update(self.pdfs_status)
+        status.update(self.assets_status)
+        status.update(self.xml_status or {})
+        status.update(self.translations_status or {})
+        return status
+
+    @property
+    def xml_status(self):
+        if self.file_type != "xml":
+            return None
+        if self.xml_files and self.xml_files[0].uri:
+            found = 1
+        else:
+            found = 0
+        return {self.file_name + ".xml": found}
+
+    @property
+    def pdfs_status(self):
+        items = {}
+        for lang, filename in self.pdfs.items():
+            items[filename] = False
+        for pdf in self.pdf_files:
+            if pdf["uri"]:
+                items[pdf["name"]] = 1
+        return items
+
+    @property
+    def assets_status(self):
+        items = {
+            k: 0
+            for k in self.assets
+        }
+        for asset in self.asset_files:
+            if asset["uri"]:
+                items[asset["name"]] = 1
+        return items
+
+    @property
+    def translations_status(self):
+        if self.file_type != "html":
+            return None
+        if not self.translations:
+            return None
+        items = {}
+        for lang, filename in self.translations.items():
+            for part in filename:
+                items[part] = 0
+        for html in self.html_files:
+            if html["uri"]:
+                items[html["name"]] = 1
+        return items
+
+    @property
+    def records_status(self):
+        total_p = 0
+        total_ref_in_p = 0
+        total_c = 0
+        items = {}
+        for record in self.records:
+            rec_type = record.get("v706")
+            if rec_type == "p":
+                total_p += 1
+                if record.get("v888"):
+                    total_ref_in_p += 1
+            elif rec_type == "c":
+                total_c += 1
+        items["p_records"] = total_p
+        if total_c:
+            items["ref_in_p_records"] = total_ref_in_p
+            items["c_records"] = total_c
+            items["ref_in_p_records / c_records"] = total_ref_in_p / total_c
+        return items
+
+    def eval_status(self):
+        expected = len(self.files_status)
+        done = sum(self.files_status.values())
+        self.files_quality = done / expected
+
+        if self.file_type == "html":
+            records_status = self.records_status
+            expected = 1
+            done = 1 if records_status["p_records"] else 0
+            if records_status.get("c_records"):
+                expected += records_status.get("c_records")
+                done += records_status.get("ref_in_p_records")
+            self.p_records_quality = done / expected
+
     def save(self, *args, **kwargs):
+        self.eval_status()
+        self.set_detailed_status()
         self.updated = datetime.utcnow()
         if not self.created:
             self.created = self.updated
