@@ -478,7 +478,7 @@ def get_id_file_path(source_file_path):
                 f"Not found {source_file_path}"
             )
         return source_file_path
-    elif ext == "":
+    else:
         # `source_file_path` is an ISIS databse, so create its ID file
         if not os.path.isfile(source_file_path + ".mst"):
             raise exceptions.IsisDBNotFoundError(
