@@ -161,6 +161,22 @@ def register_artigo_id(id_file_path):
             raise
 
 
+def list_documents_to_migrate(
+        acron, issue_folder, pub_year, isis_updated_from, isis_updated_to,
+        status=None,
+        descending=None,
+        page_number=None,
+        items_per_page=None,
+        ):
+    return _migration_manager.list_documents_to_migrate(
+        acron, issue_folder, pub_year, isis_updated_from, isis_updated_to,
+        status=status,
+        descending=descending,
+        page_number=page_number,
+        items_per_page=items_per_page,
+    )
+
+
 def migrate_document(pid):
     """
     Migrate ISIS records of a document
@@ -487,7 +503,8 @@ def migrate_acron(acron, id_folder_path=None):
 
 
 def identify_documents_to_migrate(from_date=None, to_date=None):
-    for doc in migration_manager.get_document_pids_to_migrate(from_date, to_date):
+    for doc in migration_manager.get_document_pids_to_migrate(
+            from_date, to_date):
         yield _migration_manager.create_mininum_record_in_isis_doc(
             doc["pid"], doc["updated"]
         )
@@ -644,6 +661,51 @@ def main():
         help="Updated to"
     )
 
+    list_documents_to_migrate_parser = subparsers.add_parser(
+        "list_documents_to_migrate",
+        help=(
+            "Update the website with documents (text available only for XML)"
+        ),
+    )
+    list_documents_to_migrate_parser.add_argument(
+        "--acron",
+        help="Journal acronym",
+    )
+    list_documents_to_migrate_parser.add_argument(
+        "--issue_folder",
+        help="Issue folder (e.g.: v20n1)",
+    )
+    list_documents_to_migrate_parser.add_argument(
+        "--pub_year",
+        help="Publication year",
+    )
+    list_documents_to_migrate_parser.add_argument(
+        "--isis_updated_from",
+        help="Updated from"
+    )
+    list_documents_to_migrate_parser.add_argument(
+        "--isis_updated_to",
+        help="Updated to"
+    )
+    list_documents_to_migrate_parser.add_argument(
+        "--status",
+        help="status",
+    )
+    list_documents_to_migrate_parser.add_argument(
+        "--descending",
+        help="descending",
+    )
+    list_documents_to_migrate_parser.add_argument(
+        "--page_number",
+        help="page_number",
+        type=int,
+    )
+    list_documents_to_migrate_parser.add_argument(
+        "--items_per_page",
+        help="items_per_page",
+        type=int,
+    )
+
     args = parser.parse_args()
     result = None
     if args.command == "migrate_title":
@@ -674,6 +736,17 @@ def main():
         result = migrate_acron(args.acron, args.id_folder_path)
     elif args.command == "identify_documents_to_migrate":
         result = identify_documents_to_migrate(args.from_date, args.to_date)
+    elif args.command == "list_documents_to_migrate":
+        result = list_documents_to_migrate(
+            args.acron, args.issue_folder, args.pub_year,
+            args.isis_updated_from, args.isis_updated_to,
+            args.status,
+            args.descending,
+            args.page_number,
+            args.items_per_page,
+        )
+        for i in result:
+            print(i.isis_updated_date, i._id)
     else:
         parser.print_help()
 
