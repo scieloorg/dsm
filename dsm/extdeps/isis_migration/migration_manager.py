@@ -47,6 +47,7 @@ from dsm.core.document_files import (
 from dsm.core.sps_package import SPS_Package
 from dsm.extdeps.isis_migration import friendly_isis
 from dsm.extdeps import db
+from dsm.extdeps.isis_migration import migration_models
 from dsm.extdeps.isis_migration.id2json import get_paragraphs_records
 from dsm import exceptions
 
@@ -569,7 +570,7 @@ class MigrationManager:
 
     def list_documents(self, acron, issue_folder, pub_year, updated_from, updated_to, pid):
         """
-        Migrate isis document data to website
+        List documents
 
         Parameters
         ----------
@@ -594,6 +595,37 @@ class MigrationManager:
             docs = db.get_isis_documents_by_date_range(
                 updated_from, updated_to)
         return docs
+
+    def list_documents_to_migrate(
+            self, acron, issue_folder, pub_year,
+            isis_updated_from, isis_updated_to,
+            status=None,
+            descending=None,
+            page_number=None,
+            items_per_page=None,
+            ):
+        """
+        list documents to migrate
+
+        Parameters
+        ----------
+        pub_year: str
+        updated_from: str
+        update_to: str
+
+        Returns
+        -------
+        dict
+        """
+        # registro migrado formato json
+        return migration_models.get_isis_documents_to_migrate(
+            acron, issue_folder, pub_year,
+            isis_updated_from, isis_updated_to,
+            status=status,
+            descending=descending,
+            page_number=page_number,
+            items_per_page=items_per_page,
+        )
 
 
 def _update_document_with_isis_data(document, migrated_document, issue):

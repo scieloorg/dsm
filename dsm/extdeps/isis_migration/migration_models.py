@@ -11,6 +11,7 @@ from mongoengine import (
     URLField,
     DictField,
     ListField,
+    Q,
 )
 from opac_schema.v2.models import RemoteAndLocalFile
 
@@ -155,3 +156,48 @@ class ISISIssue(Document):
 
     def __unicode__(self):
         return '%s' % self._id
+
+
+def get_isis_documents_to_migrate(
+        acron, issue_folder, pub_year, isis_updated_from, isis_updated_to,
+        status=None, descending=None, page_number=None, items_per_page=None
+        ):
+
+    names = ('acron', 'issue_folder', 'pub_year', 'status')
+    values = (acron, issue_folder, pub_year, status)
+
+    descending = descending or True
+    items_per_page = items_per_page or 50
+    page_number = page_number or 1
+
+    skip = ((page_number - 1) * items_per_page)
+    limit = items_per_page
+
+    order_by = '-isis_updated_date' if descending else '+isis_updated_date'
+
+    q = {
+        name: value
+        for name, value in zip(names, values)
+        if value
+    }
+
+    if isis_updated_from and isis_updated_to:
+        return ISISDocument.objects(
+            Q(isis_updated_date__gte=isis_updated_from) &
+            Q(isis_updated_date__lte=isis_updated_to),
+            **q
+        ).order_by(order_by).skip(skip).limit(limit)
+    if isis_updated_from:
+        return ISISDocument.objects(
+            Q(isis_updated_date__gte=isis_updated_from),
+            **q
+        ).order_by(order_by).skip(skip).limit(limit)
+    if isis_updated_to:
+        return ISISDocument.objects(
+            Q(isis_updated_date__lte=isis_updated_to),
+            **q
+        ).order_by(order_by).skip(skip).limit(limit)
+
+    return ISISDocument.objects(
+            **q
+        ).order_by(order_by).skip(skip).limit(limit)
