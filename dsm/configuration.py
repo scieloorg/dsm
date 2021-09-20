@@ -31,6 +31,7 @@ BASES_XML_PATH = os.environ.get("BASES_XML_PATH")
 BASES_PDF_PATH = os.environ.get("BASES_PDF_PATH")
 BASES_TRANSLATION_PATH = os.environ.get("BASES_TRANSLATION_PATH")
 HTDOCS_IMG_REVISTAS_PATH = os.environ.get("HTDOCS_IMG_REVISTAS_PATH")
+BASES_PATH = os.environ.get("BASES_PATH")
 
 
 def get_http_client():
@@ -319,6 +320,10 @@ def get_files_storage_folder_for_received_packages(name, date_now_as_folder_name
 
 def get_bases_acron(acron):
     return os.path.join(BASES_WORK_PATH, acron, acron)
+
+
+def get_bases_artigo_path():
+    return os.path.join(BASES_PATH, "artigo", "artigo")
 
 
 def get_htdocs_path():

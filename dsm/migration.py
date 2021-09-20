@@ -8,12 +8,11 @@ from datetime import datetime
 from dsm.extdeps.isis_migration import (
     id2json,
     migration_manager,
-    friendly_isis,
 )
 from dsm import configuration
-from dsm.core.issue import get_bundle_id
 from dsm.core.document import DocsManager
-from dsm.utils.files import create_temp_file, size, read_file
+from dsm.utils.files import create_temp_file, size, read_file, write_file
+
 from dsm import exceptions
 
 
@@ -466,6 +465,13 @@ def migrate_acron(acron, id_folder_path=None):
         yield res
 
 
+def identify_documents_to_migrate(from_date=None, to_date=None):
+    for doc in migration_manager.get_document_pids_to_migrate(from_date, to_date):
+        yield _migration_manager.create_mininum_record_in_isis_doc(
+            doc["pid"], doc["updated"]
+        )
+
+
 def main():
     parser = argparse.ArgumentParser(
         description="ISIS database migration tool")
@@ -560,6 +566,19 @@ def main():
         help="Path of ID file that will be imported"
     )
 
+    identify_documents_to_migrate_parser = subparsers.add_parser(
+        "identify_documents_to_migrate",
+        help="Register the pid and isis_updated_date in isis_doc",
+    )
+    identify_documents_to_migrate_parser.add_argument(
+        "--from_date",
+        help="from date",
+    )
+    identify_documents_to_migrate_parser.add_argument(
+        "--to_date",
+        help="to date",
+    )
+
     register_documents_parser = subparsers.add_parser(
         "register_documents",
         help=(
@@ -591,33 +610,6 @@ def main():
         help="Updated to"
     )
 
-    register_external_p_records_parser = subparsers.add_parser(
-        "register_external_p_records",
-        help=(
-            "Update the p records using external records"
-        ),
-    )
-    register_external_p_records_parser.add_argument(
-        "--pub_year",
-        help="Publication year",
-    )
-    register_external_p_records_parser.add_argument(
-        "--acron",
-        help="Journal acronym",
-    )
-    register_external_p_records_parser.add_argument(
-        "--issue_folder",
-        help="Issue folder (e.g.: v20n1)",
-    )
-    register_external_p_records_parser.add_argument(
-        "--updated_from",
-        help="Updated from"
-    )
-    register_external_p_records_parser.add_argument(
-        "--updated_to",
-        help="Updated to"
-    )
-
     args = parser.parse_args()
     result = None
     if args.command == "migrate_title":
@@ -642,6 +634,8 @@ def main():
         create_id_file(args.db_file_path, args.id_file_path)
     elif args.command == "migrate_acron":
         result = migrate_acron(args.acron, args.id_folder_path)
+    elif args.command == "identify_documents_to_migrate":
+        result = identify_documents_to_migrate(args.from_date, args.to_date)
     else:
         parser.print_help()
 
