@@ -3,7 +3,7 @@ import urllib3
 import glob
 
 from dsm import exceptions
-
+from dsm.utils import files
 
 # collection
 MINIO_SCIELO_COLLECTION = os.environ.get("MINIO_SCIELO_COLLECTION")
@@ -271,9 +271,56 @@ def get_files_storage_folder_for_migration(issn, issue_folder, file_name):
         "migrated", "original", issn, issue_folder, file_name)
 
 
+def get_files_storage_folder_for_ingress(issn, scielo_pid_v3):
+    """
+    Get files storage folder for documents ingressed by ingression module
+
+    Parameters
+    ----------
+    issn : str
+        document's issn
+    scielo_pid_v3: str
+        document's identifier
+
+    Returns
+    -------
+    str
+        folder at files storage
+    """
+    return os.path.join("ingress", "docs", issn, scielo_pid_v3)
+
+
+def get_files_storage_folder_for_zipped_packages(issn, scielo_pid_v3):
+    """
+    Get files storage folder for documents ingressed by ingression module
+
+    Parameters
+    ----------
+    issn : str
+        document's issn
+    scielo_pid_v3: str
+        document's identifier
+
+    Returns
+    -------
+    str
+        folder at files storage
+    """
+    date_now_as_folder_name = files.date_now_as_folder_name()
+    return os.path.join(
+        "ingress", "download", issn, scielo_pid_v3, date_now_as_folder_name)
+
+
+def get_files_storage_folder_for_received_packages(name, date_now_as_folder_name=None):
+    return os.path.join(
+        "ingress", "upload", date_now_as_folder_name[:10],
+        name, date_now_as_folder_name)
+
+
 def get_bases_acron(acron):
     return os.path.join(BASES_WORK_PATH, acron, acron)
 
 
 def get_htdocs_path():
     return os.path.dirname(os.path.dirname(HTDOCS_IMG_REVISTAS_PATH))
+

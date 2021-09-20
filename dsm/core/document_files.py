@@ -27,10 +27,10 @@ def build_zip_package(files_storage, record):
 
     renditions = _get_renditions_to_zip(record)
 
-    files_storage_folder = _get_files_storage_folder(
+    files_storage_folder = configuration.get_files_storage_folder_for_zipped_packages(
         issn=xml_sps.issn,
         scielo_pid_v3=xml_sps.scielo_pid_v3,
-        prefix=configuration.MINIO_SPF_DIR)
+    )
 
     xml_uri_and_name = register_xml(
         files_storage,
@@ -66,30 +66,6 @@ def build_zip_package(files_storage, record):
     data['file'] = uri_and_name
 
     return data
-
-
-def _get_files_storage_folder(issn, scielo_pid_v3, prefix=''):
-    """
-    Get files storage folder
-
-    Parameters
-    ----------
-    issn : str
-        document's issn
-    scielo_pid_v3: str
-        document's identifier
-    prefix: str
-        root folder at files storage
-
-    Returns
-    -------
-    str
-        folder at files storage
-    """
-    if prefix:
-        return f"{prefix}/{issn}/{scielo_pid_v3}"
-
-    return f"{issn}/{scielo_pid_v3}"
 
 
 def _get_xml_to_zip(document):
@@ -207,10 +183,10 @@ def register_document_files(files_storage, doc_package, xml_sps,
         assets_registration_result
             resultado do registro dos ativos digitais
     """
-    files_storage_folder = _get_files_storage_folder(
+    files_storage_folder = configuration.get_files_storage_folder_for_ingress(
         issn=xml_sps.issn,
         scielo_pid_v3=xml_sps.scielo_pid_v3,
-        prefix=configuration.MINIO_SPF_DIR)
+    )
 
     assets_registration_result = register_assets(
         files_storage, files_storage_folder,
@@ -382,7 +358,7 @@ def _register_file(files_storage, files_storage_folder, file_path, zip_file_path
 
 
 def files_storage_register(files_storage, files_storage_folder,
-                           file_path, filename, preserve_name=False):
+                           file_path, filename, preserve_name=True):
     try:
         uri = files_storage.register(
             file_path, files_storage_folder, filename, preserve_name
@@ -419,7 +395,9 @@ def register_received_package(files_storage, pkg_path, _id, annotation=None):
 
         zip_path = files.create_zip_file(zip_content, zip_name)
     if zip_path:
-        files_storage_folder = os.path.join(configuration.MINIO_SPF_DIR, name, files.date_now_as_folder_name())
+        files_storage_folder = configuration.get_files_storage_folder_for_received_packages(
+            name, files.date_now_as_folder_name()
+        )
         uri_and_name = files_storage_register(
             files_storage,
             files_storage_folder,

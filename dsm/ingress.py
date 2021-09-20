@@ -136,25 +136,23 @@ def main():
     download_package_parser = subparsers.add_parser(
         "download_package",
         help=(
-            "Register the content of title.id in MongoDB and"
-            " update the website with journals data"
+            "Download a document package (zip file)"
         )
     )
     download_package_parser.add_argument(
         "v3",
-        help="Path of ID file that will be imported"
+        help="PID v3"
     )
 
     upload_package_parser = subparsers.add_parser(
         "upload_package",
         help=(
-            "Register the content of issue.id in MongoDB and"
-            " update the website with issues data"
+            "Upload a document package (zip file)"
         )
     )
     upload_package_parser.add_argument(
         "source_path",
-        help="Path of ID file that will be imported"
+        help="zip file path"
     )
 
     args = parser.parse_args()
