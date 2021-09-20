@@ -9,7 +9,6 @@ from dsm.extdeps.isis_migration import (
     id2json,
     migration_manager,
     friendly_isis,
-    get_document_pids_to_migrate,
 )
 from dsm import configuration
 from dsm.core.issue import get_bundle_id
@@ -469,7 +468,7 @@ def migrate_acron(acron, id_folder_path=None):
 
 
 def identify_documents_to_migrate(from_date=None, to_date=None):
-    for doc in get_document_pids_to_migrate(from_date, to_date):
+    for doc in migration_manager.get_document_pids_to_migrate(from_date, to_date):
         yield _migration_manager.create_mininum_record_in_isis_doc(
             doc["pid"], doc["updated"]
         )

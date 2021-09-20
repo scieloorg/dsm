@@ -322,7 +322,7 @@ def get_bases_acron(acron):
     return os.path.join(BASES_WORK_PATH, acron, acron)
 
 
-def get_bases_artigo_path(acron):
+def get_bases_artigo_path():
     return os.path.join(BASES_PATH, "artigo", "artigo")
 
 
