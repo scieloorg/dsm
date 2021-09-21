@@ -9,6 +9,9 @@ from dsm.extdeps.isis_migration import (
     id2json,
     migration_manager,
 )
+from dsm.extdeps.isis_migration.migration_models import (
+    get_list_documents_status_arg_help,
+)
 from dsm import configuration
 from dsm.core.document import DocsManager
 from dsm.utils.files import (
@@ -469,7 +472,7 @@ def main():
     )
     list_documents_to_migrate_parser.add_argument(
         "--status",
-        help="status",
+        help=(get_list_documents_status_arg_help())
     )
     list_documents_to_migrate_parser.add_argument(
         "--descending",

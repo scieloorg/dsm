@@ -17,6 +17,41 @@ from mongoengine import (
 from opac_schema.v2.models import RemoteAndLocalFile
 
 
+_MIGRATION_STATUS = dict(
+    PENDING_MIGRATION={
+        "value": 'pending_migration',
+        'help': 'only pid was registered',
+    },
+    ISIS_METADATA_MIGRATED={
+        "value": 'isis_metadata_migrated',
+        'help': 'isis metadata registered',
+    },
+    PUBLISHED_INCOMPLETE={
+        "value": 'published_incomplete',
+        'help': 'published but missing any files',
+    },
+    PUBLISHED_COMPLETE={
+        "value": 'published_complete',
+        'help': 'totally migrated and published',
+    },
+)
+
+
+def get_migration_status(STATUS):
+    try:
+        return _MIGRATION_STATUS[STATUS]['value']
+    except KeyError:
+        raise ValueError("Invalid value for MIGRATION STATUS")
+
+
+def get_list_documents_status_arg_help():
+    help = " | ".join([
+        f"{item['value']} ({item['help']})"
+        for item in _MIGRATION_STATUS.values()
+    ])
+    return f'status: {help}'
+
+
 def _get_value(data, tag):
     """
     Returns first value of field `tag`
@@ -104,6 +139,9 @@ class ISISDocument(Document):
     @property
     def journal_pid(self):
         return self.id[1:10]
+
+    def update_status(self, STATUS):
+        self.status = get_migration_status(STATUS)
 
     def update_tracked_files_to_migrate(self):
         status = {}
@@ -263,7 +301,7 @@ class ISISDocument(Document):
         # update migration status
         if (self.tracked_files_migration_progress == 1.0 and
                 self.tracked_files_publication_progress == 1.0):
-            self.status = "published_complete"
+            self.update_status("PUBLISHED_COMPLETE")
 
         # dates
         self.updated = datetime.utcnow()

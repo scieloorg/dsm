@@ -131,7 +131,7 @@ class MigrationManager:
             tracker.info("created minimum record")
             isis_document._id = pid
             isis_document.isis_updated_date = isis_updated_date
-            isis_document.status = "pending_migration"
+            isis_document.update_status("PENDING_MIGRATION")
             db.save_data(isis_document)
         return isis_document, tracker
 
@@ -177,7 +177,7 @@ class MigrationManager:
         isis_document.isis_updated_date = doc.isis_updated_date
         isis_document.isis_created_date = doc.isis_created_date
         isis_document.records = doc.records
-        isis_document.status = "isis_metadata_migrated"
+        isis_document.update_status("ISIS_METADATA_MIGRATED")
 
         isis_document.file_name = doc.file_name
         isis_document.file_type = doc.file_type
@@ -357,7 +357,7 @@ class MigrationManager:
         db.save_data(document)
 
         # indica status de `published_incomplete`
-        migrated_document._isis_document.status = "published_incomplete"
+        migrated_document._isis_document.update_status("PUBLISHED_INCOMPLETE")
 
         # mas ao salvar o documento, este será avaliado se os arquivos que
         # deveriam ser publicados estão publicados, então o status muda
