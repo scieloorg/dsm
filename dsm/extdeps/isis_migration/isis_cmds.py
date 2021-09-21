@@ -103,3 +103,41 @@ def create_id_file(db_file_path, id_file_path=None):
     else:
         return id_file_path
 
+
+def get_id_file_path(source_file_path):
+    """
+    Evaluate `source_file_path` and returns `source_file_path` if it is ID file
+    or create its ID file
+
+    Parameters
+    ----------
+    source_file_path: str
+        path of a ISIS Database or ID file
+
+    Returns
+    -------
+    str
+
+    Raises
+    ------
+        exceptions.IdFileNotFoundError
+        exceptions.IsisDBNotFoundError
+
+    """
+    name, ext = os.path.splitext(source_file_path)
+    if ext == ".id":
+        # `source_file_path` is an ID file
+        if not os.path.isfile(source_file_path):
+            raise exceptions.IdFileNotFoundError(
+                f"Unable to `get_id_file_path` from {source_file_path}. "
+                f"Not found {source_file_path}"
+            )
+        return source_file_path
+    else:
+        # `source_file_path` is an ISIS databse, so create its ID file
+        if not os.path.isfile(source_file_path + ".mst"):
+            raise exceptions.IsisDBNotFoundError(
+                f"Unable to `get_id_file_path` from {source_file_path}. "
+                f"Not found {source_file_path}.mst"
+            )
+        return create_id_file(source_file_path)
