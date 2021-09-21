@@ -19,7 +19,9 @@ from dsm.extdeps.isis_migration.isis_cmds import (
     create_id_file,
     get_id_file_path,
     get_document_isis_db,
+    get_document_pids_to_migrate,
 )
+
 from dsm import exceptions
 
 
@@ -96,75 +98,6 @@ _MIGRATION_PARAMETERS = {
 }
 
 
-def _select_docs(acron=None, issue_folder=None, pub_year=None, updated_from=None, updated_to=None, pid=None):
-    if any((acron, issue_folder, pub_year, updated_from, updated_to, pid)):
-        yield from _migration_manager.list_documents(
-                    acron, issue_folder, pub_year, updated_from, updated_to, pid)
-    else:
-        for y in range(1900, datetime.now().year):
-            y = str(y).zfill(4)
-            yield from _migration_manager.list_documents(
-                        acron, issue_folder, pub_year, f"{y}0000", f"{y}9999")
-
-
-def register_documents(pid=None, acron=None, issue_folder=None, pub_year=None, updated_from=None, updated_to=None):
-    _files_storage = configuration.get_files_storage()
-    _db_url = configuration.get_db_url()
-    _v3_manager = configuration.get_pid_manager()
-
-    _docs_manager = DocsManager(_files_storage, _db_url, _v3_manager)
-
-
-    registered_xml = 0
-    registered_metadata = 0
-
-    for doc in _select_docs(acron, issue_folder, pub_year, updated_from, updated_to, pid):
-        zip_file_path = None
-        try:
-            # obtém os arquivos do site antigo (xml, pdf, html, imagens)
-            print("")
-            print(doc._id)
-            print("type:", doc.file_type)
-            zip_file_path = _migration_manager.migrate_document_files(doc._id)
-
-            # registra os metadados do documento a partir do registro isis
-            print("publish_document_metadata")
-            _migration_manager.publish_document_metadata(doc._id)
-
-            # registra os pdfs no website
-            _migration_manager.publish_document_pdfs(doc._id)
-
-            # registra os textos completos provenientes dos arquivos HTML e
-            # dos registros do tipo `p`
-            if doc.file_type == "html":
-                _migration_manager.publish_document_htmls(doc._id)
-            elif doc.file_type == "xml":
-                _migration_manager.publish_document_xmls(doc._id)
-            registered_metadata += 1
-        except Exception as e:
-            print("Error registering %s: %s" % (doc._id, e))
-            raise
-
-    print("Published with XML: ", registered_xml)
-    print("Published with metadata: ", registered_metadata)
-
-
-def register_artigo_id(id_file_path):
-    for _id, records in id2json.get_json_records(
-            id_file_path, id2json.article_id):
-        try:
-            if len(records) == 1:
-                if _migration_manager.register_isis_issue(_id, records[0]):
-                    _migration_manager.publish_issue_data(_id)
-            else:
-                _migration_manager.register_isis_document(_id, records)
-        except:
-            print(_id)
-            print(f"Algum problema com {_id}")
-            print(records)
-            raise
-
-
 def list_documents_to_migrate(
         acron, issue_folder, pub_year, isis_updated_from, isis_updated_to,
         status=None,
@@ -233,9 +166,8 @@ def migrate_isis_db(db_type, source_file_path=None, records_content=None):
         )
 
     # migrate
-    for result in _migrate_isis_records(
-            id2json.join_id_file_rows_and_return_records(rows), db_type):
-        yield result
+    return _migrate_isis_records(
+        id2json.join_id_file_rows_and_return_records(rows), db_type)
 
 
 def _migrate_isis_records(id_file_records, db_type):
@@ -343,10 +275,8 @@ def _migrate_one_isis_item(pid, isis_data, operations):
     }
     events = []
     try:
-        print(".......")
         op = operations[0]
         saved = op['action'](pid, isis_data)
-        print(saved)
         events.append(
             _get_event(op, saved,
                        saved[0].isis_created_date, saved[0].isis_updated_date)
@@ -411,12 +341,11 @@ def migrate_acron(acron, id_folder_path=None):
         id_file_path = create_id_file(db_path, id_file_path)
         db_path = id_file_path
         print(f"{id_file_path} - size: {size(id_file_path)} bytes")
-    for res in migrate_isis_db("artigo", db_path):
-        yield res
+    return migrate_isis_db("artigo", db_path)
 
 
 def identify_documents_to_migrate(from_date=None, to_date=None):
-    for doc in migration_manager.get_document_pids_to_migrate(
+    for doc in get_document_pids_to_migrate(
             from_date, to_date):
         yield _migration_manager.create_mininum_record_in_isis_doc(
             doc["pid"], doc["updated"]
@@ -428,27 +357,6 @@ def main():
         description="ISIS database migration tool")
     subparsers = parser.add_subparsers(
         title="Commands", metavar="", dest="command")
-
-    create_id_file_parser = subparsers.add_parser(
-        "create_id_file",
-        help=(
-            "Create the id file of a database"
-        )
-    )
-    create_id_file_parser.add_argument(
-        "db_file_path",
-        help=(
-            "Path of the file master without extension. "
-            "E.g.: /home/scielo/bases/title/title"
-        )
-    )
-    create_id_file_parser.add_argument(
-        "id_file_path",
-        help=(
-            "Path of the file master without extension. "
-            "E.g.: /tmp/title.id"
-        )
-    )
 
     migrate_title_parser = subparsers.add_parser(
         "migrate_title",
@@ -508,8 +416,7 @@ def main():
     migrate_acron_parser = subparsers.add_parser(
         "migrate_acron",
         help=(
-            "Register the content of acron.id in MongoDB and"
-            " update the website with acrons data"
+            "Migrate `acron` data from ISIS database to MongoDB."
         )
     )
     migrate_acron_parser.add_argument(
@@ -519,15 +426,6 @@ def main():
     migrate_acron_parser.add_argument(
         "--id_folder_path",
         help="Output folder"
-    )
-
-    register_artigo_id_parser = subparsers.add_parser(
-        "register_artigo_id",
-        help="Register the content of artigo.id in MongoDB",
-    )
-    register_artigo_id_parser.add_argument(
-        "id_file_path",
-        help="Path of ID file that will be imported"
     )
 
     identify_documents_to_migrate_parser = subparsers.add_parser(
@@ -541,37 +439,6 @@ def main():
     identify_documents_to_migrate_parser.add_argument(
         "--to_date",
         help="to date",
-    )
-
-    register_documents_parser = subparsers.add_parser(
-        "register_documents",
-        help=(
-            "Update the website with documents (text available only for XML)"
-        ),
-    )
-    register_documents_parser.add_argument(
-        "--pid",
-        help="pid",
-    )
-    register_documents_parser.add_argument(
-        "--acron",
-        help="Journal acronym",
-    )
-    register_documents_parser.add_argument(
-        "--issue_folder",
-        help="Issue folder (e.g.: v20n1)",
-    )
-    register_documents_parser.add_argument(
-        "--pub_year",
-        help="Publication year",
-    )
-    register_documents_parser.add_argument(
-        "--updated_from",
-        help="Updated from"
-    )
-    register_documents_parser.add_argument(
-        "--updated_to",
-        help="Updated to"
     )
 
     list_documents_to_migrate_parser = subparsers.add_parser(
@@ -637,14 +504,6 @@ def main():
         result = migrate_document(
             args.pid
         )
-    elif args.command == "register_artigo_id":
-        register_artigo_id(args.id_file_path)
-    elif args.command == "register_documents":
-        register_documents(
-            args.pid, args.acron, args.issue_folder, args.pub_year,
-            args.updated_from, args.updated_to)
-    elif args.command == "create_id_file":
-        create_id_file(args.db_file_path, args.id_file_path)
     elif args.command == "migrate_acron":
         result = migrate_acron(args.acron, args.id_folder_path)
     elif args.command == "identify_documents_to_migrate":
@@ -663,7 +522,7 @@ def main():
     else:
         parser.print_help()
 
-    if result:
+    if result and args.command != "list_documents_to_migrate":
         for res in result:
             print("")
             print(res)
