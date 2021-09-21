@@ -15,10 +15,10 @@ from dsm.utils.files import (
     create_temp_file, size, read_file, write_file,
     date_now_as_folder_name,
 )
-from dsm.extdeps.isis_migration import isis_cmds
 from dsm.extdeps.isis_migration.isis_cmds import (
     create_id_file,
     get_id_file_path,
+    get_document_isis_db,
 )
 from dsm import exceptions
 
@@ -195,7 +195,7 @@ def migrate_document(pid):
     generator
         results of the migration
     """
-    _document_isis_db_file_path = isis_cmds._get_document_isis_db(pid)
+    _document_isis_db_file_path = get_document_isis_db(pid)
     return migrate_isis_db("artigo", _document_isis_db_file_path)
 
 

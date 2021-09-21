@@ -12,7 +12,7 @@ from dsm.utils.files import (
 from dsm import exceptions
 
 
-def _get_document_isis_db(pid):
+def get_document_isis_db(pid):
     """
     Consulta a base de dados ISIS artigo e retorna os pids atualizados
     em um intervalo de datas (data de processamento do converter)
