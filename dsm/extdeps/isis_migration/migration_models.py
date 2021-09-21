@@ -12,8 +12,20 @@ from mongoengine import (
     DictField,
     ListField,
     Q,
+    DecimalField,
 )
 from opac_schema.v2.models import RemoteAndLocalFile
+
+
+def _get_value(data, tag):
+    """
+    Returns first value of field `tag`
+    """
+    # data['v880'][0]['_']
+    try:
+        return data[tag][0]['_']
+    except (KeyError, IndexError):
+        return None
 
 
 class ISISDocument(Document):
@@ -35,13 +47,26 @@ class ISISDocument(Document):
     # data de criação e atualização da migração
     created = DateTimeField()
     updated = DateTimeField()
+
+    # status do registro quanto aos metadados
     status = StringField()
+
+    # status do documento quanto aos arquivos
+    tracked_files_to_migrate = DictField()
+    tracked_files_migration_progress = DecimalField()
+    tracked_files_to_publish = DictField()
+    tracked_files_publication_progress = DecimalField()
+
+    # status do documento quanto ao registro parágrafos, se aplicável
+    tracked_p_records = DictField()
+    tracked_refs_in_p_records = DecimalField()
 
     # dados dos arquivos do documento
     file_name = StringField()
     file_type = StringField()
     acron = StringField()
     issue_folder = StringField()
+
     assets = ListField()
     translations = DictField()
     pdfs = DictField()
@@ -69,14 +94,178 @@ class ISISDocument(Document):
             'assets',
             'translations',
             'status',
-        ],
+            'tracked_files_migration_progress',
+            'tracked_files_publication_progress',
+            'tracked_p_records',
+            'tracked_refs_in_p_records',
+        ]
     }
 
     @property
     def journal_pid(self):
         return self.id[1:10]
 
+    def update_tracked_files_to_migrate(self):
+        status = {}
+        status.update(self.pdfs_status)
+        status.update(self.assets_status)
+        status.update(self.xml_status or {})
+        status.update(self.translations_status or {})
+        self.tracked_files_to_migrate = status
+
+        # percentagem migrada
+        self.tracked_files_migration_progress = 0
+        if self.tracked_files_to_migrate:
+            self.tracked_files_migration_progress = (
+                sum(self.tracked_files_to_migrate.values()) /
+                len(self.tracked_files_to_migrate)
+            )
+
+    def update_tracked_files_to_publish(self):
+        # 1 pelo menos porque todos os documentos deveriam ter o XML
+        published_files_expected = 1
+
+        if self.file_type == "html":
+            # 1 para o idioma do texto original em registro tipo p
+            # mais quantidade de traduções
+            published_files_expected += 1 + len(self.translations)
+
+        # percentagem publicada
+        self.tracked_files_publication_progress = (
+            sum(self.tracked_files_to_publish.values()) /
+            published_files_expected
+        )
+
+    @property
+    def xml_status(self):
+        """
+        Status of XML file to migrate
+        """
+        if self.file_type != "xml":
+            return None
+        if self.xml_files and self.xml_files[0].uri:
+            found = 1
+        else:
+            found = 0
+        return {self.file_name + ".xml": found}
+
+    @property
+    def pdfs_status(self):
+        """
+        Status of pdfs files to migrate
+        """
+        items = {}
+        for lang, filename in self.pdfs.items():
+            items[filename] = False
+        for pdf in self.pdf_files:
+            if pdf["uri"]:
+                items[pdf["name"]] = 1
+        return items
+
+    @property
+    def assets_status(self):
+        """
+        Status of assets files to migrate
+        """
+        items = {
+            k: 0
+            for k in self.assets
+        }
+        for asset in self.asset_files:
+            if asset["uri"]:
+                items[asset["name"]] = 1
+        return items
+
+    @property
+    def translations_status(self):
+        """
+        Status of translations files to migrate
+        """
+        if self.file_type != "html":
+            return None
+        if not self.translations:
+            return None
+        items = {}
+        for lang, filename in self.translations.items():
+            for part in filename:
+                items[part] = 0
+        for html in self.html_files:
+            if html["uri"]:
+                items[html["name"]] = 1
+        return items
+
+    def update_tracked_p_records(self):
+        """
+        Status of translations files to migrate
+        """
+        if self.file_type != "html":
+            self.tracked_refs_in_p_records = 1.0
+            self.tracked_p_records = {}
+            return
+
+        total_p = 0
+        total_ref_in_p = 0
+        total_c = 0
+        items = {}
+        for record in self.records:
+            rec_type = _get_value(record, "v706")
+            if rec_type == "p":
+                total_p += 1
+                if _get_value(record, "v888"):
+                    total_ref_in_p += 1
+            elif rec_type == "c":
+                total_c += 1
+
+        self.tracked_refs_in_p_records = 0
+        if total_c:
+            self.tracked_refs_in_p_records = total_ref_in_p / total_c
+
+        items["p_records"] = total_p
+        items["c_records"] = total_c
+        items["ref_in_p_records"] = total_ref_in_p
+        self.tracked_p_records = items
+
+    def get_language(self):
+        for record in self.records:
+            rec_type = _get_value(record, "v706")
+            if rec_type == "h":
+                return _get_value(record, "v040")
+
+    def mark_as_published(self, file_type, data):
+        """
+        Documentos de texto completo que devem ser publicados
+        """
+        # xml
+        if not self.tracked_files_to_publish:
+            self.tracked_files_to_publish = {}
+        if file_type == "xml":
+            self.tracked_files_to_publish.update({"published xml": 1 if data else 0})
+        elif file_type == "html":
+            published_htmls = {}
+            for lang in list(self.translations.keys()) + [self.get_language()]:
+                if lang:
+                    published_htmls[f"published html ({lang})"] = 0
+            for item in data:
+                if item["url"]:
+                    published_htmls[f"published html ({item['lang']})"] = 1
+            self.tracked_files_to_publish.update(published_htmls)
+
     def save(self, *args, **kwargs):
+        # update files migration status
+        self.update_tracked_files_to_migrate()
+
+        # update files migration status
+        self.update_tracked_files_to_publish()
+
+        # update p records status
+        self.update_tracked_p_records()
+
+        # update migration status
+        if (self.tracked_files_migration_progress == 1.0 and
+                self.tracked_files_publication_progress == 1.0):
+            self.status = "published_complete"
+
+        # dates
         self.updated = datetime.utcnow()
         if not self.created:
             self.created = self.updated
