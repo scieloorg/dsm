@@ -1366,6 +1366,11 @@ class MigratedDocument:
             os.path.basename(zip_file_path),
             preserve_name=True)
         self.isis_doc.zipfile = db.create_remote_and_local_file(
-            remote=remote, local=os.path.basename(zip_file_path))
+            remote=remote, local=os.path.basename(zip_file_path),
+            annotation={
+                "files": [
+                    os.path.basename(f) for f in self.files_to_zip
+                ]
+            })
         self.tracker.info(f"total of zipped files: {len(self.files_to_zip)}")
         return zip_file_path
