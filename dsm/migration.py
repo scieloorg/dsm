@@ -343,22 +343,33 @@ def _migrate_one_isis_item(pid, isis_data, operations):
     }
     events = []
     try:
-        saved = operations[0]['action'](pid, isis_data)
+        print(".......")
+        op = operations[0]
+        saved = op['action'](pid, isis_data)
+        print(saved)
         events.append(
-            _get_event(operations[0], saved,
+            _get_event(op, saved,
                        saved[0].isis_created_date, saved[0].isis_updated_date)
         )
-        for op in operations[1:]:
+    except Exception as e:
+        events.append(_get_error(op, e))
+
+    for op in operations[1:]:
+        try:
             saved = op['action'](pid)
             events.append(_get_event(op, saved))
-    except Exception as e:
-        events.append({
-            "op": op,
-            "error": str(e),
-            "timestamp": datetime.utcnow().isoformat(),
-        })
+        except Exception as e:
+            events.append(_get_error(op, e))
     result["events"] = events
     return result
+
+
+def _get_error(operation, error):
+    return {
+        "op": operation,
+        "error": str(error),
+        "timestamp": datetime.utcnow().isoformat(),
+    }
 
 
 def _get_event(operation, saved, isis_created_date=None, isis_updated_date=None):
