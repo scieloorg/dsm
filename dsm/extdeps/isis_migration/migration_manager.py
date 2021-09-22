@@ -131,7 +131,7 @@ class MigrationManager:
             tracker.info("created minimum record")
             isis_document._id = pid
             isis_document.isis_updated_date = isis_updated_date
-            isis_document.status = "pending_migration"
+            isis_document.update_status("PENDING_MIGRATION")
             db.save_data(isis_document)
         return isis_document, tracker
 
@@ -177,7 +177,7 @@ class MigrationManager:
         isis_document.isis_updated_date = doc.isis_updated_date
         isis_document.isis_created_date = doc.isis_created_date
         isis_document.records = doc.records
-        isis_document.status = "1"
+        isis_document.update_status("ISIS_METADATA_MIGRATED")
 
         isis_document.file_name = doc.file_name
         isis_document.file_type = doc.file_type
@@ -355,6 +355,14 @@ class MigrationManager:
 
         # salva os dados
         db.save_data(document)
+
+        # indica status de `published_incomplete`
+        migrated_document._isis_document.update_status("PUBLISHED_INCOMPLETE")
+
+        # mas ao salvar o documento, este será avaliado se os arquivos que
+        # deveriam ser publicados estão publicados, então o status muda
+        # para `published_complete`
+        db.save_data(migrated_document._isis_document)
         return document, None
 
     def publish_document_pdfs(self, article_pid):
@@ -392,6 +400,7 @@ class MigrationManager:
 
         # salva os dados
         db.save_data(document)
+
         return document, tracker
 
     def publish_document_htmls(self, article_pid):
@@ -461,6 +470,10 @@ class MigrationManager:
 
         # salva os dados
         db.save_data(document)
+
+        if htmls:
+            migrated._isis_document.mark_as_published("html", htmls)
+            db.save_data(migrated._isis_document)
         return document, tracker
 
     def publish_document_xmls(self, article_pid):
@@ -529,6 +542,11 @@ class MigrationManager:
 
         # salva os dados
         db.save_data(document)
+
+        if document.xml:
+            migrated._isis_document.mark_as_published("xml", document.xml)
+            db.save_data(migrated._isis_document)
+
         return document, tracker
 
     def migrate_document_files(self, article_pid):
@@ -1261,12 +1279,13 @@ class MigratedDocument:
             for image in images:
                 self.tracker.info(f"migrate html ({lang}): {image}")
                 file_path = image["file_path"]
-                if not os.path.isfile(file_path):
-                    self.tracker.error(f"Not found {file_path}")
-                    continue
 
                 # basename
                 _files.append(image["basename"])
+
+                if not os.path.isfile(file_path):
+                    self.tracker.error(f"Not found {file_path}")
+                    continue
 
                 annotation = {
                     "original": image["original"],
@@ -1319,6 +1338,7 @@ class MigratedDocument:
                     files_storage, file_path, os.path.basename(file_path))
                 if migrated:
                     _uris_and_names.append(migrated)
+                    self.isis_doc.xml_files = _uris_and_names
             else:
                 self.tracker.error(f"Not found {file_path}")
         else:
@@ -1351,48 +1371,11 @@ class MigratedDocument:
             os.path.basename(zip_file_path),
             preserve_name=True)
         self.isis_doc.zipfile = db.create_remote_and_local_file(
-            remote=remote, local=os.path.basename(zip_file_path))
+            remote=remote, local=os.path.basename(zip_file_path),
+            annotation={
+                "files": [
+                    os.path.basename(f) for f in self.files_to_zip
+                ]
+            })
         self.tracker.info(f"total of zipped files: {len(self.files_to_zip)}")
         return zip_file_path
-
-
-def get_document_pids_to_migrate(from_date=None, to_date=None):
-    """
-    Consulta a base de dados ISIS artigo e retorna os pids atualizados
-    em um intervalo de datas (data de processamento do converter)
-
-    """
-    BASES_ARTIGO_PATH = get_bases_artigo_path()
-    name = date_now_as_folder_name()
-    finished_file_path = create_temp_file(f"{name}_finished.out")
-    output_file_path = create_temp_file(f"{name}_output.csv")
-    from_date = from_date or '0'*8
-    to_date = to_date or '9'*8
-    cmd = (
-        f'''{get_cisis_path()}/ifkeys {BASES_ARTIGO_PATH} '''
-        f'''from=OAITS={from_date} to=OAITS={to_date} > '''
-        f'''{output_file_path};'''
-        f'''echo finished> {finished_file_path}'''
-    )
-    os.system(cmd)
-    while "finished" not in read_file(finished_file_path):
-        pass
-
-    with open(output_file_path, "r") as fp:
-        """
-        output_file content
-
-         1|OAITS=20210917=2352-22912021005005225
-         1|OAITS=20210917=2352-22912021005005226
-         1|OAITS=20210917=2352-22912021005005227
-         1|OAITS=20210917=2352-22912021005005228
-         1|OAITS=20210917=2675-54752021000300400
-         1|OAITS=20210917=2675-54752021000300401
-         1|OAITS=20210917=2675-54752021000300402
-         1|OAITS=20210917=2675-54752021000300700
-
-        """
-        for row in fp:
-            # 1|OAITS=20210917=2675-54752021000300700
-            parts = row.strip().split("=")
-            yield {"updated": parts[1], "pid": "S" + parts[-1]}
