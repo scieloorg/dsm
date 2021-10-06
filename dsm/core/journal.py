@@ -35,7 +35,7 @@ class JournalsManager:
         """
         return db.fetch_journal(_id)
 
-    def get_journals(self):
+    def get_journals(self, **kwargs):
         """
         Get journals
 
@@ -45,4 +45,4 @@ class JournalsManager:
             journals
 
         """
-        return db.fetch_journals()
+        return db.fetch_journals(**kwargs)

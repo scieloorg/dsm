@@ -39,11 +39,8 @@ class DocsManager:
     def db_connect(self):
         db.mk_connection(self._db_url)
 
-    def get_documents_by_issue(self, issue):
-        return db.fetch_documents_by_issue(issue)
-
-    def get_documents_by_issn(self, issn, only_aop=False):
-        return db.fetch_documents_by_issn(issn, only_aop)
+    def get_documents(self, **kwargs):
+        return db.fetch_documents(**kwargs)
 
     def get_document(self, id):
         return db.fetch_document(id)
@@ -63,8 +60,8 @@ class DocsManager:
     def get_article_files(self, id):
         return db.fetch_article_files(id)
 
-    def get_articles_files(self):
-        return db.fetch_articles_files()
+    def get_articles_files(self, **kwargs):
+        return db.fetch_articles_files(**kwargs)
 
     def get_zip_document_package(self, v3):
         """
