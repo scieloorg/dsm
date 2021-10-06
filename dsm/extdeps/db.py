@@ -130,8 +130,18 @@ def _fetch_records(model, **kwargs):
         return objs
 
 
+def fetch_article_files(pid):
+    return _fetch_record(pid, v2_models.ArticleFiles)
+
+
+def fetch_articles_files():
+    return _fetch_records(v2_models.ArticleFiles)
+
+
 def fetch_journals():
     return _fetch_records(models.Journal)
+
+
 def fetch_issues_by_issn(journal_issn, only_aop=False):
     if not only_aop:
         return _fetch_records(models.Issue, journal=journal_issn)
