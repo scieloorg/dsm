@@ -1,7 +1,4 @@
-import logging
-
 from dsm.extdeps import db
-from dsm import exceptions
 
 
 class JournalsManager:
@@ -38,4 +35,14 @@ class JournalsManager:
         """
         return db.fetch_journal(_id)
 
+    def get_journals(self, **kwargs):
+        """
+        Get journals
 
+        Returns
+        -------
+        QuerySet
+            journals
+
+        """
+        return db.fetch_journals(**kwargs)

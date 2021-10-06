@@ -2,13 +2,11 @@
 from datetime import datetime
 from mongoengine import (
     Document,
-    EmbeddedDocument,
     # campos:
     StringField,
     DateTimeField,
     EmbeddedDocumentField,
     EmbeddedDocumentListField,
-    URLField,
     DictField,
     ListField,
     Q,

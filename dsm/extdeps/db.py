@@ -119,6 +119,37 @@ def _fetch_record(_id, model, **kwargs):
         return obj
 
 
+def _fetch_records(model, **kwargs):
+    try:
+        objs = model.objects(**kwargs)
+    except IndexError:
+        return None
+    except Exception as e:
+        raise exceptions.DBFetchMigratedDocError(e)
+    else:
+        return objs
+
+
+def fetch_article_files(pid, **kwargs):
+    return _fetch_record(pid, v2_models.ArticleFiles, **kwargs)
+
+
+def fetch_articles_files(**kwargs):
+    return _fetch_records(v2_models.ArticleFiles, **kwargs)
+
+
+def fetch_journals(**kwargs):
+    return _fetch_records(models.Journal, **kwargs)
+
+
+def fetch_issues(**kwargs):
+    return _fetch_records(models.Issue, **kwargs)
+
+
+def fetch_documents(**kwargs):
+    return _fetch_records(models.Article, **kwargs)
+
+
 def fetch_journal(_id, **kwargs):
     return _fetch_record(_id, models.Journal, **kwargs)
 
@@ -223,6 +254,18 @@ def fetch_document_package(v3):
     article_files = v2_models.ArticleFiles.objects(_id=v3)
     if len(article_files) > 0:
         return article_files[0]
+
+
+def remove_document_package(v3):
+    try:
+        doc_pkg = v2_models.ArticleFiles.objects.get(_id=v3)
+        doc_pkg.delete()
+    except Exception as e:
+        raise exceptions.DBFetchDocumentPackageError(
+            "Unable to delete document package %s, which does not exists: %s" %
+            (v3, e)
+        )
+    return True
 
 
 def register_document_package(v3, data):

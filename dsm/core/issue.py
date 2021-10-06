@@ -1,7 +1,5 @@
-import logging
-
 from dsm.extdeps import db
-from dsm import exceptions
+
 
 
 class IssuesManager:
@@ -38,6 +36,26 @@ class IssuesManager:
         """
         return db.fetch_issue(_id)
 
+    def get_issues_by_issn(self, issn, only_aop=False):
+        """
+        Get issues
+
+        Parameters
+        ----------
+        issn : str
+            ISSN
+        only_aop : boolean
+            Fetch issues containing only documents at the 'ahead of print' stage
+
+        Returns
+        -------
+        QuerySet
+            issues
+
+        """
+        if only_aop:
+            return db.fetch_issues(journal=issn, type='ahead')
+        return db.fetch_issues(journal=issn)
 
 def get_bundle_id(issn_id, year, volume=None, number=None, supplement=None):
     """

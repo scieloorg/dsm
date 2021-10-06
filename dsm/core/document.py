@@ -39,6 +39,30 @@ class DocsManager:
     def db_connect(self):
         db.mk_connection(self._db_url)
 
+    def get_documents(self, **kwargs):
+        return db.fetch_documents(**kwargs)
+
+    def get_document(self, id):
+        return db.fetch_document(id)
+
+    def update_document_issue(self, document, destiny_issue):
+        current_issue = document.issue
+
+        # atualiza o fascículo do documento
+        if destiny_issue != current_issue:
+            document.issue = destiny_issue
+
+        return db.save_data(document)
+
+    def remove_document_package(self, document_package_id):
+        return db.remove_document_package(document_package_id)
+
+    def get_article_files(self, id):
+        return db.fetch_article_files(id)
+
+    def get_articles_files(self, **kwargs):
+        return db.fetch_articles_files(**kwargs)
+
     def get_zip_document_package(self, v3):
         """
         Get uri of zip document package or
