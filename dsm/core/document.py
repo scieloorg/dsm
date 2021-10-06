@@ -48,6 +48,15 @@ class DocsManager:
     def get_document(self, id):
         return db.fetch_document(id)
 
+    def update_document_issue(self, document, destiny_issue):
+        current_issue = document.issue
+
+        # atualiza o fascículo do documento
+        if destiny_issue != current_issue:
+            document.issue = destiny_issue
+
+        return db.save_data(document)
+
     def remove_document_package(self, document_package_id):
         return db.remove_document_package(document_package_id)
 
