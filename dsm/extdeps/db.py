@@ -130,34 +130,24 @@ def _fetch_records(model, **kwargs):
         return objs
 
 
-def fetch_article_files(pid):
-    return _fetch_record(pid, v2_models.ArticleFiles)
+def fetch_article_files(pid, **kwargs):
+    return _fetch_record(pid, v2_models.ArticleFiles, **kwargs)
 
 
-def fetch_articles_files():
-    return _fetch_records(v2_models.ArticleFiles)
+def fetch_articles_files(**kwargs):
+    return _fetch_records(v2_models.ArticleFiles, **kwargs)
 
 
-def fetch_journals():
-    return _fetch_records(models.Journal)
+def fetch_journals(**kwargs):
+    return _fetch_records(models.Journal, **kwargs)
 
 
-def fetch_issues_by_issn(journal_issn, only_aop=False):
-    if not only_aop:
-        return _fetch_records(models.Issue, journal=journal_issn)
-    else:
-       return _fetch_records(models.Issue, journal=journal_issn, type='ahead')
+def fetch_issues(**kwargs):
+    return _fetch_records(models.Issue, **kwargs)
 
 
-def fetch_documents_by_issue(issue):
-    return _fetch_records(models.Article, issue=issue)
-
-
-def fetch_documents_by_issn(issn, only_aop=True):
-    if not only_aop:
-        return _fetch_records(models.Article, issn=issn)
-    else:
-        return _fetch_records(models.Article, issn=issn, issue__iendswith='-aop')
+def fetch_documents(**kwargs):
+    return _fetch_records(models.Article, **kwargs)
 
 
 def fetch_journal(_id, **kwargs):
