@@ -21,10 +21,7 @@ _docs_manager = DocsManager(_files_storage, _db_url, _v3_manager)
 _docs_manager.db_connect()
 
 _journals_manager = JournalsManager(_db_url)
-_journals_manager.db_connect()
-
 _issues_manager = IssuesManager(_db_url)
-_issues_manager.db_connect()
 
 
 def get_package_uri_by_pid(scielo_pid_v3):
