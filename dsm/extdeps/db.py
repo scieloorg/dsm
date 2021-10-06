@@ -149,6 +149,17 @@ def fetch_issues_by_issn(journal_issn, only_aop=False):
        return _fetch_records(models.Issue, journal=journal_issn, type='ahead')
 
 
+def fetch_documents_by_issue(issue):
+    return _fetch_records(models.Article, issue=issue)
+
+
+def fetch_documents_by_issn(issn, only_aop=True):
+    if not only_aop:
+        return _fetch_records(models.Article, issn=issn)
+    else:
+        return _fetch_records(models.Article, issn=issn, issue__iendswith='-aop')
+
+
 def fetch_journal(_id, **kwargs):
     return _fetch_record(_id, models.Journal, **kwargs)
 

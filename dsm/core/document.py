@@ -39,6 +39,15 @@ class DocsManager:
     def db_connect(self):
         db.mk_connection(self._db_url)
 
+    def get_documents_by_issue(self, issue):
+        return db.fetch_documents_by_issue(issue)
+
+    def get_documents_by_issn(self, issn, only_aop=False):
+        return db.fetch_documents_by_issn(issn, only_aop)
+
+    def get_document(self, id):
+        return db.fetch_document(id)
+
     def get_article_files(self, id):
         return db.fetch_article_files(id)
 
