@@ -1,7 +1,4 @@
-import logging
-
 from dsm.extdeps import db
-from dsm import exceptions
 
 
 class IssuesManager:

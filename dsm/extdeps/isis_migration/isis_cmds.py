@@ -2,11 +2,10 @@
 CISIS COMMANDS
 """
 import os
-from datetime import datetime
 
 from dsm import configuration
 from dsm.utils.files import (
-    create_temp_file, size, read_file, write_file,
+    create_temp_file, read_file, write_file,
     date_now_as_folder_name,
 )
 from dsm import exceptions

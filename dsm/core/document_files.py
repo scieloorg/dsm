@@ -1,11 +1,9 @@
 import os
 import tempfile
-from copy import deepcopy
 from mimetypes import MimeTypes
 from zipfile import ZipFile
 
 from dsm.utils import (
-    xml_utils,
     files,
     reqs,
     async_download,
