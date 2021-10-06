@@ -1,9 +1,8 @@
 import logging
 import re
-from io import BytesIO, StringIO
 from lxml import etree
 
-from dsm.utils.files import write_file, read_file
+from dsm.utils.files import read_file
 
 
 logger = logging.getLogger(__name__)

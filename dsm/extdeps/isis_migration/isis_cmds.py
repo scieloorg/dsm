@@ -146,14 +146,14 @@ def get_document_pids_to_migrate(from_date=None, to_date=None):
     em um intervalo de datas (data de processamento do converter)
 
     """
-    BASES_ARTIGO_PATH = get_bases_artigo_path()
+    BASES_ARTIGO_PATH = configuration.get_bases_artigo_path()
     name = date_now_as_folder_name()
     finished_file_path = create_temp_file(f"{name}_finished.out")
     output_file_path = create_temp_file(f"{name}_output.csv")
     from_date = from_date or '0'*8
     to_date = to_date or '9'*8
     cmd = (
-        f'''{get_cisis_path()}/ifkeys {BASES_ARTIGO_PATH} '''
+        f'''{configuration.get_cisis_path()}/ifkeys {BASES_ARTIGO_PATH} '''
         f'''from=OAITS={from_date} to=OAITS={to_date} > '''
         f'''{output_file_path};'''
         f'''echo finished> {finished_file_path}'''

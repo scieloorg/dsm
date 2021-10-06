@@ -13,19 +13,13 @@ from dsm.extdeps.isis_migration.migration_models import (
     get_list_documents_status_arg_help,
 )
 from dsm import configuration
-from dsm.core.document import DocsManager
-from dsm.utils.files import (
-    create_temp_file, size, read_file, write_file,
-    date_now_as_folder_name,
-)
+from dsm.utils.files import size
 from dsm.extdeps.isis_migration.isis_cmds import (
     create_id_file,
     get_id_file_path,
     get_document_isis_db,
     get_document_pids_to_migrate,
 )
-
-from dsm import exceptions
 
 
 _migration_manager = migration_manager.MigrationManager()

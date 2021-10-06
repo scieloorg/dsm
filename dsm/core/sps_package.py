@@ -656,7 +656,7 @@ class Identity:
             issue,
             not self.article_meta.volume and not self.article_meta.number and "aop",
         )
-        return "-".join([item for item in items if item])
+        return "-".join([item for item in data if item])
 
     @property
     def package_name(self):
@@ -914,8 +914,8 @@ def create_alternatives(node, assets_data):
     if parent is None:
         return
     if len(assets_data) == 1:
-        node.set("{http://www.w3.org/1999/xlink}href", uri)
         for extension, uri in assets_data.items():
+            node.set("{http://www.w3.org/1999/xlink}href", uri)
             if extension in [".tif", ".tiff"]:
                 pass
             elif extension in [".png"]:
