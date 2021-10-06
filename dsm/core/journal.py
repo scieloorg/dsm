@@ -35,4 +35,14 @@ class JournalsManager:
         """
         return db.fetch_journal(_id)
 
+    def get_journals(self):
+        """
+        Get journals
 
+        Returns
+        -------
+        QuerySet
+            journals
+
+        """
+        return db.fetch_journals()

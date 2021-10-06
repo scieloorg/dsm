@@ -119,6 +119,19 @@ def _fetch_record(_id, model, **kwargs):
         return obj
 
 
+def _fetch_records(model, **kwargs):
+    try:
+        objs = model.objects(**kwargs)
+    except IndexError:
+        return None
+    except Exception as e:
+        raise exceptions.DBFetchMigratedDocError(e)
+    else:
+        return objs
+
+
+def fetch_journals():
+    return _fetch_records(models.Journal)
 def fetch_journal(_id, **kwargs):
     return _fetch_record(_id, models.Journal, **kwargs)
 
