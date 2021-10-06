@@ -132,6 +132,13 @@ def _fetch_records(model, **kwargs):
 
 def fetch_journals():
     return _fetch_records(models.Journal)
+def fetch_issues_by_issn(journal_issn, only_aop=False):
+    if not only_aop:
+        return _fetch_records(models.Issue, journal=journal_issn)
+    else:
+       return _fetch_records(models.Issue, journal=journal_issn, type='ahead')
+
+
 def fetch_journal(_id, **kwargs):
     return _fetch_record(_id, models.Journal, **kwargs)
 

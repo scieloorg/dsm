@@ -1,6 +1,7 @@
 from dsm.extdeps import db
 
 
+
 class IssuesManager:
 
     def __init__(self, db_url):
@@ -35,6 +36,24 @@ class IssuesManager:
         """
         return db.fetch_issue(_id)
 
+    def get_issues_by_issn(self, issn, only_aop=False):
+        """
+        Get issues
+
+        Parameters
+        ----------
+        issn : str
+            ISSN
+        only_aop : boolean
+            Fetch issues containing only documents at the 'ahead of print' stage
+
+        Returns
+        -------
+        QuerySet
+            issues
+
+        """
+        return db.fetch_issues_by_issn(issn, only_aop)
 
 def get_bundle_id(issn_id, year, volume=None, number=None, supplement=None):
     """
