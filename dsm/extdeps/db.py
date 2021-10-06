@@ -266,6 +266,18 @@ def fetch_document_package(v3):
         return article_files[0]
 
 
+def remove_document_package(v3):
+    try:
+        doc_pkg = v2_models.ArticleFiles.objects.get(_id=v3)
+        doc_pkg.delete()
+    except Exception as e:
+        raise exceptions.DBFetchDocumentPackageError(
+            "Unable to delete document package %s, which does not exists: %s" %
+            (v3, e)
+        )
+    return True
+
+
 def register_document_package(v3, data):
     """
     data = {}

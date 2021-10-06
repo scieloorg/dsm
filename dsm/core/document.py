@@ -48,6 +48,9 @@ class DocsManager:
     def get_document(self, id):
         return db.fetch_document(id)
 
+    def remove_document_package(self, document_package_id):
+        return db.remove_document_package(document_package_id)
+
     def get_article_files(self, id):
         return db.fetch_article_files(id)
 
