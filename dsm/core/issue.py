@@ -53,7 +53,9 @@ class IssuesManager:
             issues
 
         """
-        return db.fetch_issues_by_issn(issn, only_aop)
+        if only_aop:
+            return db.fetch_issues(journal=issn, type='ahead')
+        return db.fetch_issues(journal=issn)
 
 def get_bundle_id(issn_id, year, volume=None, number=None, supplement=None):
     """
