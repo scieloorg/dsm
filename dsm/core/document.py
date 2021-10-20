@@ -63,9 +63,9 @@ class DocsManager:
     def get_articles_files(self, **kwargs):
         return db.fetch_articles_files(**kwargs)
 
-    def get_zip_document_package(self, v3):
+    def get_zip_document_packages(self, v3):
         """
-        Get uri of zip document package or
+        Get uri of zip document packages or
         Build the zip document package and return uri
 
         Parameters
@@ -75,8 +75,8 @@ class DocsManager:
 
         Returns
         -------
-        str
-            URI of the zip file
+        list
+            URIs of the zip files
 
         Raises
         ------
@@ -84,19 +84,13 @@ class DocsManager:
             dsm.exceptions.FetchDocumentError
             dsm.exceptions.DBConnectError
         """
-        document_package = db.fetch_document_package(v3)
+        doc_package_list = db.fetch_document_packages(v3)
 
-        if not document_package:
+        if not doc_package_list:
             document_package = self.update_document_package(v3)
+            return [_convert_to_doc_pkg_uri_detail(document_package)]
 
-        if document_package:
-            if document_package.file:
-                return {
-                    "uri": document_package.file.uri,
-                    "name": document_package.file.name,
-                    "created": document_package.created,
-                    "updated": document_package.updated
-                }
+        return [_convert_to_doc_pkg_uri_detail(dp) for dp in doc_package_list]
 
     def update_document_package(self, v3):
         doc = db.fetch_document(v3)
@@ -572,3 +566,11 @@ def _get_order(xml_sps, document_order):
 #             return True
 #     return False
 
+def _convert_to_doc_pkg_uri_detail(document_package):
+    if document_package.file:
+        return {
+            "uri": document_package.file.uri,
+            "name": document_package.file.name,
+            "created": document_package.created,
+            "updated": document_package.updated,
+        }

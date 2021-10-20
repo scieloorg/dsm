@@ -250,10 +250,8 @@ def register_received_package(_id, uri, name, annotation=None):
     return save_data(received)
 
 
-def fetch_document_package(v3):
-    article_files = v2_models.ArticleFiles.objects(_id=v3)
-    if len(article_files) > 0:
-        return article_files[0]
+def fetch_document_packages(v3):
+    return v2_models.ArticleFiles.objects(aid=v3).order_by('-updated')
 
 
 def remove_document_package(v3):
@@ -276,10 +274,9 @@ def register_document_package(v3, data):
     data['renditions'] = renditions
     data['file'] = file
     """
-    article_files = fetch_document_package(v3)
-    if not article_files:
-        article_files = v2_models.ArticleFiles()
-        article_files._id = v3
+    article_files = v2_models.ArticleFiles()
+    article_files.aid = v3
+    article_files.scielo_pids = {'v3': v3}
 
     _set_document_package_file_paths(article_files, data)
     save_data(article_files)
