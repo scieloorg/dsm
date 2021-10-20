@@ -251,9 +251,7 @@ def register_received_package(_id, uri, name, annotation=None):
 
 
 def fetch_document_packages(v3):
-    article_files_list = v2_models.ArticleFiles.objects(aid=v3)
-    if len(article_files_list) > 0:
-        return article_files_list.order_by('-updated')
+    return v2_models.ArticleFiles.objects(aid=v3).order_by('-updated')
 
 
 def remove_document_package(v3):
