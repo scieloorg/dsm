@@ -276,10 +276,9 @@ def register_document_package(v3, data):
     data['renditions'] = renditions
     data['file'] = file
     """
-    article_files = fetch_document_package(v3)
-    if not article_files:
-        article_files = v2_models.ArticleFiles()
-        article_files._id = v3
+    article_files = v2_models.ArticleFiles()
+    article_files.aid = v3
+    article_files.scielo_pids = {'v3': v3}
 
     _set_document_package_file_paths(article_files, data)
     save_data(article_files)
