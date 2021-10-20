@@ -45,11 +45,11 @@ def get_package_uri_by_pid(scielo_pid_v3):
         dsm.exceptions.FetchDocumentError
         dsm.exceptions.DBConnectError
     """
-    results = {'doc_pkg': [], 'errors': []}
+    results = {'doc_pkgs': [], 'errors': []}
     try:
-        doc_pkg = _docs_manager.get_zip_document_package(scielo_pid_v3)
-        if doc_pkg:
-            results['doc_pkg'].append(doc_pkg)
+        doc_pkgs = _docs_manager.get_zip_document_packages(scielo_pid_v3)
+        if doc_pkgs:
+            results['doc_pkgs'].extend(doc_pkgs)
     except Exception as e:
         results['errors'].append(str(e))
 
