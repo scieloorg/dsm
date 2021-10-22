@@ -4,7 +4,12 @@ from datetime import datetime
 
 from scielo_v3_manager.v3_gen import generates
 
-from dsm.utils.html_utils import adapt_html_text_to_website, get_assets_locations
+from dsm.utils.html_utils import (
+    adapt_html_text_to_website,
+    get_assets_locations,
+    build_translation_html_text,
+)
+
 from dsm.utils.xml_utils import get_xml_tree, tostring
 
 from dsm.utils.async_download import download_files
@@ -982,6 +987,7 @@ class MigratedDocument:
         )
         self.tracker = None
         self.files_to_zip = []
+        self._assets_location = {}
 
     @property
     def isis_doc(self):
@@ -1056,8 +1062,14 @@ class MigratedDocument:
 
     @property
     def html_texts_to_publish(self):
+        """
+        Obtém lang, filename e text de cada idioma do HTML adequado para
+        publicação no site, ou seja, os ativos digitais localizados no Files
+        Storage
+        """
         if self.isis_doc.file_type == "xml":
             return []
+        # ativos digitais agrupado pelo idioma do HTML
         assets_by_lang = {}
         for asset in self.isis_doc.asset_files:
             lang = asset["annotation"]["lang"]
@@ -1070,9 +1082,13 @@ class MigratedDocument:
                     "new": asset["uri"],
                 }
             )
-
+        # para cada artigo no formato de HTML
         for html_text in self.html_texts:
+            # obtém os ativos digitais no texto HTML do idioma correspondente
             assets = assets_by_lang.get(html_text["lang"])
+
+            # retorna o HTML com os caminhos das imagens conforme
+            # registrados no Files Storage
             yield {
                 "lang": html_text["lang"],
                 "text": adapt_html_text_to_website(
@@ -1194,9 +1210,9 @@ class MigratedDocument:
 
     def migrate_images_from_folder(self, files_storage):
         """
-        Obtém os arquivos de imagens do documento da pasta HTDOCS_IMG_REVISTAS_PATH
+        Obtém os arquivos de ativos digitais da pasta HTDOCS_IMG_REVISTAS_PATH
         Registra os arquivos na nuvem
-        Atualiza os dados de imagens de `isis_document`
+        Atualiza os dados dos ativos digitais em `isis_document`
         """
         if self.isis_doc.file_type != "xml":
             return
@@ -1213,40 +1229,43 @@ class MigratedDocument:
         self.isis_doc.asset_files = _uris_and_names
 
     @property
-    def get_html_images_paths(self):
-        images = {}
-        HTDOCS_PATH = get_htdocs_path()
-        for text in self.html_texts:
-            if not text["text"]:
-                self.tracker.error(
-                    f"html {text['filename']} ({text['lang']}) is empty")
-                continue
+    def assets_location(self):
+        """
+        A partir dos ativos digitais encontrados no HTML, localiza-os
+        no sistema de arquivos
+        """
+        if not self._assets_location:
+            self._assets_location = {}
+            HTDOCS_PATH = get_htdocs_path()
+            for text in self.html_texts:
+                if not text["text"]:
+                    self.tracker.error(
+                        f"html {text['filename']} ({text['lang']}) is empty")
+                    continue
 
-            assets_in_html = get_assets_locations(text["text"])
-            images[text['lang']] = []
-            for asset in assets_in_html:
-                # fullpath
-                subdir = asset["path"]
-                if subdir.startswith("/"):
-                    subdir = subdir[1:]
-                file_path = os.path.join(HTDOCS_PATH, subdir)
-                images[text['lang']].append(
-                    {
-                        "original": asset["link"],
-                        "elem": asset["elem"].tag,
-                        "attr": asset["attr"],
-                        "file_path": file_path,
-                        "basename": os.path.basename(file_path),
-                    }
-                )
-        return images
+                self._assets_location[text['lang']] = []
+                for asset in get_assets_locations(text["text"]):
+                    # fullpath
+                    subdir = asset["path"]
+                    if subdir.startswith("/"):
+                        subdir = subdir[1:]
+                    file_path = os.path.join(HTDOCS_PATH, subdir)
+                    self._assets_location[text['lang']].append(
+                        {
+                            "original": asset["link"],
+                            "elem": asset["elem"].tag,
+                            "attr": asset["attr"],
+                            "file_path": file_path,
+                        }
+                    )
+        return self._assets_location
 
     def migrate_images_from_html(self, files_storage):
         """
         Parse HTML content to get src / href
-        Obtém os arquivos de imagens do documento da pasta HTDOCS_IMG_REVISTAS_PATH
+        Obtém os arquivos de ativos digitais da pasta HTDOCS_IMG_REVISTAS_PATH
         Registra os arquivos na nuvem
-        Atualiza os dados de imagens de `isis_document`
+        Atualiza os dados dos ativos digitais em `isis_document`
 
         Some images in html content might be located in an unexpected path,
         such as, /img/revista/acron/nahead/, althouth the document is not aop
@@ -1268,27 +1287,28 @@ class MigratedDocument:
         _files = []
         _uris_and_names = []
 
-        for lang, images in self.get_html_images_paths.items():
+        for lang, assets in self.assets_location.items():
 
-            for image in images:
-                self.tracker.info(f"migrate html ({lang}): {image}")
-                file_path = image["file_path"]
+            for asset in assets:
+                self.tracker.info(f"migrate html ({lang}): {asset}")
+                file_path = asset["file_path"]
 
                 # basename
-                _files.append(image["basename"])
+                basename = os.path.basename(file_path)
+                _files.append(basename)
 
                 if not os.path.isfile(file_path):
                     self.tracker.error(f"Not found {file_path}")
                     continue
 
                 annotation = {
-                    "original": image["original"],
-                    "elem": image["elem"],
-                    "attr": image["attr"],
+                    "original": asset["original"],
+                    "elem": asset["elem"],
+                    "attr": asset["attr"],
                     "lang": lang,
                 }
                 migrated = self._migrate_document_file(
-                    files_storage, file_path, image["basename"], annotation)
+                    files_storage, file_path, basename, annotation)
                 if migrated:
                     _uris_and_names.append(migrated)
 
