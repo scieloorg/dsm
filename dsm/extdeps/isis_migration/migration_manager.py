@@ -1025,25 +1025,19 @@ class MigratedDocument:
 
     @property
     def html_translation_texts(self):
+        """
+        Obtém lang, filename e text (front, reference, back) de cada idioma
+        do arquivo HTML de tradução
+        """
         paragraphs = self._f_doc.paragraphs
         translations = {}
-        for html_file in self.html_translations_files:
-            lang = html_file["lang"]
-            translations.setdefault(lang, {})
-            translations[lang].update(
-                {"lang": lang, "parts": []}
-            )
-            if html_file["part"] == "front":
-                translations[lang]["filename"] = html_file["basename"]
-                translations[lang]["parts"].append(html_file["content"])
-                translations[lang]["parts"].append(paragraphs.references)
-            elif html_file["part"] == "back":
-                translations[lang]["parts"].append(html_file["content"])
-        for lang, data in translations.items():
+        for lang, front_and_back_files in self.html_translations_files.items():
             yield {
                 "lang": lang,
-                "filename": data["filename"],
-                "text": "".join(data["parts"])
+                "filename": os.path.basename(front_and_back_files["front"]),
+                "text": build_translation_html_text(
+                    front_and_back_files, paragraphs.references,
+                ),
             }
 
     @property
@@ -1303,14 +1297,7 @@ class MigratedDocument:
 
     @property
     def html_translations_files(self):
-        items = self._document_files.bases_translation_files_paths.items()
-        if not items:
-            return []
-        for lang, paths in items:
-            for path, part in zip(paths, ("front", "back")):
-                yield {"lang": lang, "path": path, "part": part,
-                       "basename": os.path.basename(path),
-                       "content": read_file(path, encoding="iso-8859-1")}
+        return self._document_files.bases_translation_files_paths.items()
 
     @property
     def xml_file_path(self):
@@ -1344,19 +1331,18 @@ class MigratedDocument:
         else:
             # HTML Traduções
             _translations = {}
-            for html in self.html_translations_files:
-                lang = html["lang"]
-                path = html["path"]
-                name = html["basename"]
-
-                _translations.setdefault(lang, [])
-                _translations[lang].append(name)
-
-                migrated = self._migrate_document_file(
-                    files_storage, path, name)
-                if migrated:
-                    _uris_and_names.append(migrated)
-
+            for lang, front_and_back in self.html_translations_files.items():
+                _translations[lang] = {}
+                for label, file_path in front_and_back.items():
+                    # HTML front or back filename
+                    _translations[lang][label] = os.path.basename(file_path)
+                    # upload to the cloud
+                    self.tracker.info(f"migrate {file_path}")
+                    # armazena o original
+                    migrated = self._migrate_document_file(
+                        files_storage, file_path, _translations[lang][label])
+                    if migrated:
+                        _uris_and_names.append(migrated)
             self.isis_doc.html_files = _uris_and_names
             self.isis_doc.translations = _translations
 
