@@ -1249,7 +1249,10 @@ class MigratedDocument:
                     subdir = asset["path"]
                     if subdir.startswith("/"):
                         subdir = subdir[1:]
-                    file_path = os.path.join(HTDOCS_PATH, subdir)
+                    if "img/revistas" in subdir and not subdir.startswith("img"):
+                        subdir = subdir[subdir.find("img"):]
+                    file_path = os.path.realpath(
+                        os.path.join(HTDOCS_PATH, subdir))
                     self._assets_location[text['lang']].append(
                         {
                             "original": asset["link"],
@@ -1317,7 +1320,7 @@ class MigratedDocument:
 
     @property
     def html_translations_files(self):
-        return self._document_files.bases_translation_files_paths.items()
+        return self._document_files.bases_translation_files_paths
 
     @property
     def xml_file_path(self):
