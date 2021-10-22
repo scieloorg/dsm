@@ -3,6 +3,7 @@ import logging
 import os
 import json
 import hashlib
+from mimetypes import read_mime_types, guess_type
 
 from minio import Minio
 from minio.error import S3Error
@@ -10,6 +11,10 @@ from minio.error import S3Error
 from dsm.utils import files
 
 logger = logging.getLogger(__name__)
+
+
+def get_mimetype(file_path):
+    return read_mime_types(file_path) or guess_type(file_path)
 
 
 class SHA1Error(Exception):
@@ -136,6 +141,7 @@ class MinioStorage:
                 self.bucket_name,
                 object_name=object_name,
                 file_path=file_path,
+                content_type=get_mimetype(file_path),
             )
 
         except S3Error as err:
