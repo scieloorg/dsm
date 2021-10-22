@@ -162,14 +162,15 @@ class DocumentFilesAtOldWebsite:
         Returns
         -------
         dict
-        {"en": ["en_a01.html", "en_ba01.html"],
-         "es": ["es_a01.html", "es_ba01.html"]}
+        {"en": {"front": "en_a01.html", "back": "en_ba01.html"},
+         "es": {"front": "es_a01.html", "back": "es_ba01.html"}}
         """
         if self._bases_translation_files_paths is None:
 
             files = {}
             patterns = (f"??_{self._file_name}.htm*", f"??_b{self._file_name}.htm*")
-            for pattern in patterns:
+            labels = ("front", "back")
+            for label, pattern in zip(labels, patterns):
                 paths = glob.glob(
                     os.path.join(
                         BASES_TRANSLATION_PATH, self._subdir_acron_issue, pattern)
@@ -180,8 +181,8 @@ class DocumentFilesAtOldWebsite:
                 for path in paths:
                     basename = os.path.basename(path)
                     lang = basename[:2]
-                    files.setdefault(lang, [])
-                    files[lang].append(path)
+                    files.setdefault(lang, {})
+                    files[lang][label] = path
             self._bases_translation_files_paths = files
         return self._bases_translation_files_paths
 
