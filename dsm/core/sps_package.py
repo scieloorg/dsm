@@ -881,9 +881,13 @@ def get_assets_uri_and_node(xmltree, v3):
             ".//*[@xlink:href]",
             namespaces={"xlink": "http://www.w3.org/1999/xlink"}):
         href = node.attrib["{http://www.w3.org/1999/xlink}href"]
-        if "/" not in href or (v3 and f"/{v3}/" in href):
+        if _is_valid_sps_asset_uri(href, v3):
             nodes.append((href, node))
     return nodes
+
+
+def _is_valid_sps_asset_uri(href, v3):
+    return "/" not in href or (v3 and f"/{v3}/" in href)
 
 
 def get_year_month_day(node):
