@@ -841,9 +841,7 @@ class SPS_Asset:
 
     @property
     def uri(self):
-        return (
-            self._uri or
-            self.xlink_href)
+        return self._uri
 
     @uri.setter
     def uri(self, value):
@@ -852,9 +850,7 @@ class SPS_Asset:
 
     @property
     def filename(self):
-        return (
-            self._filename or
-            self.xlink_href)
+        return self._filename
 
     @filename.setter
     def filename(self, value):
