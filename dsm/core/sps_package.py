@@ -703,12 +703,11 @@ class SPS_Assets:
     def __init__(self, xml_tree, v3):
         self._xml_tree = xml_tree
         self._v3 = v3
-        self._assets_uri_and_node = get_assets_uri_and_node(
-            self._xml_tree, self._v3)
+        self._assets_uri_and_node = self.get_assets_uri_and_node()
         self._get_assets_which_have_id()
         self._get_assets_which_have_no_id()
 
-    def get_assets_uri_and_node(self, xmltree, v3):
+    def get_assets_uri_and_node(self, node=None):
         """
         Get a list of tuples (uri, node).
 
@@ -720,16 +719,17 @@ class SPS_Assets:
             lista de uri dos ativos digitais no XML
         """
         nodes = []
+        xmltree = self._xmltree or node
         for node in xmltree.xpath(
                 ".//*[@xlink:href]",
                 namespaces={"xlink": "http://www.w3.org/1999/xlink"}):
             href = node.attrib["{http://www.w3.org/1999/xlink}href"]
-            if _is_valid_sps_asset_uri(href, v3):
+            if self._is_valid_sps_asset_uri(href):
                 nodes.append((href, node))
         return nodes
 
-    def _is_valid_sps_asset_uri(self, href, v3):
-        return "/" not in href or (v3 and f"/{v3}/" in href)
+    def _is_valid_sps_asset_uri(self, href):
+        return "/" not in href or f"/{self._v3}/" in href
 
     @property
     def assets_uri_and_node(self):
@@ -746,7 +746,7 @@ class SPS_Assets:
     def _get_assets_which_have_id(self):
         self._assets_which_have_id = []
         for node in self._xml_tree.xpath(".//*[@id]"):
-            for uri, child_node in get_assets_uri_and_node(node, self._v3):
+            for uri, child_node in self.get_assets_uri_and_node(node):
                 self._assets_which_have_id.append(
                     SPS_Asset(child_node, node)
                 )
