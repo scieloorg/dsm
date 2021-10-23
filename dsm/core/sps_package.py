@@ -719,6 +719,7 @@ class SPS_Assets:
             lista de uri dos ativos digitais no XML
         """
         nodes = []
+        # obtém os assets da árvore inteira ou a partir de um node
         xmltree = self._xmltree or node
         for node in xmltree.xpath(
                 ".//*[@xlink:href]",
@@ -760,7 +761,7 @@ class SPS_Assets:
         return self._assets_which_have_no_id
 
     def _get_assets_which_have_no_id(self):
-        has_id = [item._child for item in self.assets_which_have_id]
+        has_id = [item.asset_node for item in self.assets_which_have_id]
 
         i = 0
         self._assets_which_have_no_id = []
@@ -806,6 +807,10 @@ class SPS_Asset:
         if self._parent_node_with_id is not None:
             return self._parent_node_with_id.tag
         return ""
+
+    @property
+    def asset_node(self):
+        return self._asset_node
 
     @property
     def id(self):
