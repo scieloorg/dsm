@@ -827,15 +827,16 @@ class SPS_Asset:
     def xlink_href(self, value):
         # obtém o valor atual de xlink_href
         current = self.xlink_href
-        if "/" in current:
-            self._uri = current
-        else:
-            self._filename = current
 
-        if "/" in value:
-            self._uri = value
-        else:
-            self._filename = value
+        # guarda valor de `current` em uri ou filename
+        self.uri = current
+        self.filename = current
+
+        # guarda valor de `value` (novo) em uri ou filename
+        self.uri = value
+        self.filename = value
+
+        # atualiza o valor de xlink href
         self._asset_node.set("{http://www.w3.org/1999/xlink}href", value)
 
     @property
