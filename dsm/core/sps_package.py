@@ -825,11 +825,13 @@ class SPS_Asset:
 
     @xlink_href.setter
     def xlink_href(self, value):
-        current = self._asset_node.get("{http://www.w3.org/1999/xlink}href")
+        # obtém o valor atual de xlink_href
+        current = self.xlink_href
         if "/" in current:
             self._uri = current
         else:
             self._filename = current
+
         if "/" in value:
             self._uri = value
         else:
@@ -840,13 +842,13 @@ class SPS_Asset:
     def uri(self):
         return (
             self._uri or
-            self._asset_node.get("{http://www.w3.org/1999/xlink}href"))
+            self.xlink_href)
 
     @property
     def filename(self):
         return (
             self._filename or
-            self._asset_node.get("{http://www.w3.org/1999/xlink}href"))
+            self.xlink_href)
 
     def remote_to_local(self, package_name):
         self.xlink_href = self.get_name(package_name)
