@@ -28,6 +28,7 @@ class SPS_Package:
     def __init__(self, xml, original_filename=None):
         self.xmltree = xml_utils.get_xml_tree(xml)
         self._original_filename = original_filename
+        self._assets = SPS_Assets(self.xmltree, self.scielo_pid_v3)
 
     @property
     def xmltree(self):
@@ -130,7 +131,7 @@ class SPS_Package:
 
     @property
     def assets(self):
-        return SPS_Assets(self.xmltree, self.scielo_pid_v3)
+        return self._assets
 
     @property
     def lang(self):
@@ -367,6 +368,19 @@ class SPS_Package:
     @property
     def package_name(self):
         return self.identity.package_name
+
+    def remote_to_local(self, package_name):
+        """
+        URI assets from remote to local
+
+        Example:
+        from
+        <graphic xlink:href="https://minio.scielo.br/v3/xmljdfoae.tiff"/>
+
+        to
+        <graphic xlink:href="1234-0987-abc-09-01-gf01.tiff"/>
+        """
+        self.assets.remote_to_local(package_name)
 
     # def asset_name(self, img_filename):
     #     if self._original_asset_name_prefix is None:
