@@ -708,6 +708,29 @@ class SPS_Assets:
         self._get_assets_which_have_id()
         self._get_assets_which_have_no_id()
 
+    def get_assets_uri_and_node(self, xmltree, v3):
+        """
+        Get a list of tuples (uri, node).
+
+        Retorna uma lista de tuplas (uri, node).
+
+        Returns
+        -------
+        list of strings
+            lista de uri dos ativos digitais no XML
+        """
+        nodes = []
+        for node in xmltree.xpath(
+                ".//*[@xlink:href]",
+                namespaces={"xlink": "http://www.w3.org/1999/xlink"}):
+            href = node.attrib["{http://www.w3.org/1999/xlink}href"]
+            if _is_valid_sps_asset_uri(href, v3):
+                nodes.append((href, node))
+        return nodes
+
+    def _is_valid_sps_asset_uri(self, href, v3):
+        return "/" not in href or (v3 and f"/{v3}/" in href)
+
     @property
     def assets_uri_and_node(self):
         """
@@ -865,29 +888,7 @@ class SPS_Asset:
 
 
 # Funções
-def get_assets_uri_and_node(xmltree, v3):
-    """
-    Get a list of tuples (uri, node).
 
-    Retorna uma lista de tuplas (uri, node).
-
-    Returns
-    -------
-    list of strings
-        lista de uri dos ativos digitais no XML
-    """
-    nodes = []
-    for node in xmltree.xpath(
-            ".//*[@xlink:href]",
-            namespaces={"xlink": "http://www.w3.org/1999/xlink"}):
-        href = node.attrib["{http://www.w3.org/1999/xlink}href"]
-        if _is_valid_sps_asset_uri(href, v3):
-            nodes.append((href, node))
-    return nodes
-
-
-def _is_valid_sps_asset_uri(href, v3):
-    return "/" not in href or (v3 and f"/{v3}/" in href)
 
 
 def get_year_month_day(node):
