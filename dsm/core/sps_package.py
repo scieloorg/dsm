@@ -768,20 +768,20 @@ class SPS_Assets:
 
 
 class SPS_Asset:
-    def __init__(self, child, parent=None, _id=None):
-        self._parent = parent
-        self._child = child
-        self._id = _id or self._parent.get("id")
+    def __init__(self, asset_node, parent_node_with_id=None, _id=None):
+        self._parent_node_with_id = parent_node_with_id
+        self._asset_node = asset_node
+        self._id = _id or self._parent_node_with_id.get("id")
         self._uri = None
         self._filename = None
 
     def __str__(self):
-        return xml_utils.tostring(self._child)
+        return xml_utils.tostring(self._asset_node)
 
     @property
     def tag(self):
-        if self._parent is not None:
-            return self._parent.tag
+        if self._parent_node_with_id is not None:
+            return self._parent_node_with_id.tag
         return ""
 
     @property
@@ -790,8 +790,8 @@ class SPS_Asset:
 
     @property
     def content_type(self):
-        if self._child.get("content-type"):
-            return "-" + self._child.get("content-type")
+        if self._asset_node.get("content-type"):
+            return "-" + self._asset_node.get("content-type")
         return ""
 
     @property
@@ -821,11 +821,11 @@ class SPS_Asset:
 
     @property
     def xlink_href(self):
-        return self._child.get("{http://www.w3.org/1999/xlink}href")
+        return self._asset_node.get("{http://www.w3.org/1999/xlink}href")
 
     @xlink_href.setter
     def xlink_href(self, value):
-        current = self._child.get("{http://www.w3.org/1999/xlink}href")
+        current = self._asset_node.get("{http://www.w3.org/1999/xlink}href")
         if "/" in current:
             self._uri = current
         else:
@@ -834,19 +834,19 @@ class SPS_Asset:
             self._uri = value
         else:
             self._filename = value
-        self._child.set("{http://www.w3.org/1999/xlink}href", value)
+        self._asset_node.set("{http://www.w3.org/1999/xlink}href", value)
 
     @property
     def uri(self):
         return (
             self._uri or
-            self._child.get("{http://www.w3.org/1999/xlink}href"))
+            self._asset_node.get("{http://www.w3.org/1999/xlink}href"))
 
     @property
     def filename(self):
         return (
             self._filename or
-            self._child.get("{http://www.w3.org/1999/xlink}href"))
+            self._asset_node.get("{http://www.w3.org/1999/xlink}href"))
 
     def remote_to_local(self, package_name):
         self.xlink_href = self.get_name(package_name)
