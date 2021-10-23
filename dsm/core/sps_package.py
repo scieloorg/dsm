@@ -844,11 +844,21 @@ class SPS_Asset:
             self._uri or
             self.xlink_href)
 
+    @uri.setter
+    def uri(self, value):
+        if "/" in value:
+            self._uri = value
+
     @property
     def filename(self):
         return (
             self._filename or
             self.xlink_href)
+
+    @filename.setter
+    def filename(self, value):
+        if "/" not in value:
+            self._filename = value
 
     def remote_to_local(self, package_name):
         self.xlink_href = self.get_name(package_name)
