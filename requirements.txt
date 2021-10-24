@@ -6,7 +6,7 @@ lxml==4.6.3
 minio==7.1.0
 mongoengine==0.19.1
 mongomock==3.23.0
--e git+https://github.com/scieloorg/opac_schema.git@f6127cbb7644cfd06ff70bc2a261dab498919eb3#egg=Opac_Schema
+-e git+https://github.com/scieloorg/opac_schema.git#egg=Opac_Schema
 psycopg2-binary==2.9.1
 pymongo==3.12.0
 python-dateutil==2.8.2
