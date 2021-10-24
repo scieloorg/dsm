@@ -720,7 +720,7 @@ class SPS_Assets:
         """
         nodes = []
         # obtém os assets da árvore inteira ou a partir de um node
-        xmltree = self._xmltree or node
+        xmltree = node or self._xmltree
         for node in xmltree.xpath(
                 ".//*[@xlink:href]",
                 namespaces={"xlink": "http://www.w3.org/1999/xlink"}):
