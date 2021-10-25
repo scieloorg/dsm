@@ -3,6 +3,8 @@ from urllib.parse import urlparse
 
 from lxml.html import rewrite_links, iterlinks, fromstring, tostring
 
+from dsm.utils.files import read_file
+
 
 class URI_Changer:
 
@@ -88,5 +90,36 @@ def adapt_html_text_to_website(html_text, assets):
             if "#" in original:
                 new += original[original.find("#"):]
             node.set(attr, new)
+
     return tostring(html).decode("utf-8")
 
+
+def _get_body(html):
+    b = html[html.find("<body"):]
+    b = b[b.find(">")+1:]
+    b = b[:b.find("</body>")]
+    return b
+
+
+def _wrap_body(body):
+    return f"<html><body>{body}</body></html>"
+
+
+def build_translation_html_text(translation_paths, references):
+    """
+    Junta as traduções que estão em formato HTML divididas nos arquivos
+    correspondentes a front e back, e as referências nos registros `p`.
+    O arquivo "back" é opcional.
+    """
+    text = []
+
+    text.append(
+        _get_body(read_file(translation_paths["front"], encoding="iso-8859-1")))
+    text.append(references or '')
+
+    try:
+        content = read_file(translation_paths["back"], encoding="iso-8859-1")
+        text.append(_get_body(content))
+    except (KeyError, FileNotFoundError):
+        pass
+    return _wrap_body("".join(text))

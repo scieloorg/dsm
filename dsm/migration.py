@@ -358,7 +358,8 @@ def main():
     migrate_title_parser = subparsers.add_parser(
         "migrate_title",
         help=(
-            "Migrate journal data from ISIS database to MongoDB."
+            "Migrate `title` ISIS database to MongoDB. "
+            "Migra `title` de ISIS para MongoDB. "
         )
     )
     migrate_title_parser.add_argument(
@@ -372,7 +373,8 @@ def main():
     migrate_issue_parser = subparsers.add_parser(
         "migrate_issue",
         help=(
-            "Migrate issue data from ISIS database to MongoDB."
+            "Migrate `issue` ISIS database to MongoDB. "
+            "Migra `issue` de ISIS para MongoDB. "
         )
     )
     migrate_issue_parser.add_argument(
@@ -386,7 +388,8 @@ def main():
     migrate_artigo_parser = subparsers.add_parser(
         "migrate_artigo",
         help=(
-            "Migrate artigo data from ISIS database to MongoDB."
+            "Migrate `artigo` ISIS database to MongoDB. "
+            "Migra `artigo` de ISIS para MongoDB."
         )
     )
     migrate_artigo_parser.add_argument(
@@ -400,7 +403,8 @@ def main():
     migrate_document_parser = subparsers.add_parser(
         "migrate_document",
         help=(
-            "Migrate document data from ISIS database to MongoDB."
+            "Migrate one record of `artigo` ISIS database to MongoDB. "
+            "Migra un registro de `artigo` de ISIS para MongoDB. "
         )
     )
     migrate_document_parser.add_argument(
@@ -413,7 +417,8 @@ def main():
     migrate_acron_parser = subparsers.add_parser(
         "migrate_acron",
         help=(
-            "Migrate `acron` data from ISIS database to MongoDB."
+            "Migrate `acron` ISIS database to MongoDB. "
+            "Migra `acron` de ISIS para MongoDB. "
         )
     )
     migrate_acron_parser.add_argument(
@@ -427,7 +432,10 @@ def main():
 
     identify_documents_to_migrate_parser = subparsers.add_parser(
         "identify_documents_to_migrate",
-        help="Register the pid and isis_updated_date in isis_doc",
+        help=(
+            "Register the `pid` and `isis_updated_date` in `isis_doc`. "
+            "Registra el `pid` y `isis_updated_date` en `isis_doc`. "
+        ),
     )
     identify_documents_to_migrate_parser.add_argument(
         "--from_date",
@@ -441,7 +449,8 @@ def main():
     list_documents_to_migrate_parser = subparsers.add_parser(
         "list_documents_to_migrate",
         help=(
-            "Update the website with documents (text available only for XML)"
+            "List documents registered in `isis_doc` collection. "
+            "Lista los documentos registrados en `isis_doc`. "
         ),
     )
     list_documents_to_migrate_parser.add_argument(
@@ -522,7 +531,13 @@ def main():
     if result and args.command != "list_documents_to_migrate":
         for res in result:
             print("")
-            print(res)
+            for k, v in res.items():
+                if k == "events":
+                    for ev in v:
+                        print()
+                        print(ev)
+                else:
+                    print(v)
 
 
 if __name__ == '__main__':
