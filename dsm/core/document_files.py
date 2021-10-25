@@ -84,7 +84,7 @@ def _get_xml_to_zip(document):
     xml_sps = SPS_Package(content)
 
     # change assets uri
-    xml_sps.assets.remote_to_local(xml_sps.package_name)
+    xml_sps.remote_to_local(xml_sps.package_name)
     return xml_sps
 
 
