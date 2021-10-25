@@ -3,7 +3,7 @@ import logging
 import os
 import json
 import hashlib
-from mimetypes import read_mime_types, guess_type
+from mimetypes import guess_type
 
 from minio import Minio
 from minio.error import S3Error
@@ -14,7 +14,7 @@ logger = logging.getLogger(__name__)
 
 
 def get_mimetype(file_path):
-    return read_mime_types(file_path) or guess_type(file_path)
+    return guess_type(file_path)[0]
 
 
 class SHA1Error(Exception):
