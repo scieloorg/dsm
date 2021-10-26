@@ -294,9 +294,9 @@ def get_files_storage_folder_for_document_site_content(issn, scielo_pid_v3):
     )
 
 
-def get_files_storage_folder_for_zipped_packages(issn, scielo_pid_v3):
+def get_files_storage_folder_for_document_packages(issn, scielo_pid_v3):
     """
-    Get files storage folder for documents ingressed by ingression module
+    Get files storage folder for document's packages (individual zip packages)
 
     Parameters
     ----------
@@ -312,7 +312,8 @@ def get_files_storage_folder_for_zipped_packages(issn, scielo_pid_v3):
     """
     date_now_as_folder_name = files.date_now_as_folder_name()
     return os.path.join(
-        "ingress", "download", issn, scielo_pid_v3, date_now_as_folder_name)
+        "ingress", "packages", issn, scielo_pid_v3, date_now_as_folder_name
+    )
 
 
 def get_files_storage_folder_for_received_packages(name, date_now_as_folder_name=None):
