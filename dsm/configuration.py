@@ -273,9 +273,9 @@ def get_files_storage_folder_for_migration(issn, issue_folder, file_name):
         "migrated", "original", issn, issue_folder, file_name)
 
 
-def get_files_storage_folder_for_ingress(issn, scielo_pid_v3):
+def get_files_storage_folder_for_document_site_content(issn, scielo_pid_v3):
     """
-    Get files storage folder for documents ingressed by ingression module
+    Get files storage folder for document's site content (xml, pdf, jpg, tiff, png)
 
     Parameters
     ----------
@@ -289,7 +289,9 @@ def get_files_storage_folder_for_ingress(issn, scielo_pid_v3):
     str
         folder at files storage
     """
-    return os.path.join("ingress", "docs", issn, scielo_pid_v3)
+    return os.path.join(
+        "documents", issn, scielo_pid_v3
+    )
 
 
 def get_files_storage_folder_for_zipped_packages(issn, scielo_pid_v3):
