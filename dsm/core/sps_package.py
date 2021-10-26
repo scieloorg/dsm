@@ -749,10 +749,12 @@ class SPS_Assets:
         for node in self._xml_tree.xpath(".//*[@id]"):
             if node.tag == "sub-article":
                 continue
+            i = 0
             for uri, child_node in self.get_assets_uri_and_node(node):
                 self._assets_which_have_id.append(
-                    SPS_Asset(child_node, node)
+                    SPS_Asset(child_node, node, _id=i)
                 )
+                i += 1
 
     @property
     def assets_which_have_id(self):
@@ -771,7 +773,7 @@ class SPS_Assets:
             if node not in has_id:
                 i += 1
                 self._assets_which_have_no_id.append(
-                    SPS_Asset(node, _id=str(i))
+                    SPS_Asset(node, _id=i)
                 )
 
     @property
@@ -797,7 +799,9 @@ class SPS_Asset:
     def __init__(self, asset_node, parent_node_with_id=None, _id=None):
         self._parent_node_with_id = parent_node_with_id
         self._asset_node = asset_node
-        self._id = _id or self._parent_node_with_id.get("id")
+        # _id é o índice para img dentro de um elemento que tenha `@id` ou
+        # no contexto do artigo inteiro
+        self._id = _id
         self.uri = self.xlink_href
         self.filename = self.xlink_href
 
@@ -820,9 +824,7 @@ class SPS_Asset:
 
     @property
     def content_type(self):
-        if self._asset_node.get("content-type"):
-            return "-" + self._asset_node.get("content-type")
-        return ""
+        return self._asset_node.get("content-type") or ""
 
     @property
     def type(self):
@@ -842,7 +844,11 @@ class SPS_Asset:
 
     @property
     def suffix(self):
-        return f"-{self.type}{self._id}{self.content_type}"
+        if self.content_type:
+            alternative_id = f"-{self.content_type}"
+        else:
+            alternative_id = self.id or ""
+        return f"-{self.type}{alternative_id}"
 
     @property
     def ext(self):
