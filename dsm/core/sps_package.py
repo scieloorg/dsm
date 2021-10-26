@@ -747,6 +747,8 @@ class SPS_Assets:
     def _get_assets_which_have_id(self):
         self._assets_which_have_id = []
         for node in self._xml_tree.xpath(".//*[@id]"):
+            if node.tag == "sub-article":
+                continue
             for uri, child_node in self.get_assets_uri_and_node(node):
                 self._assets_which_have_id.append(
                     SPS_Asset(child_node, node)
