@@ -316,10 +316,25 @@ def get_files_storage_folder_for_document_packages(issn, scielo_pid_v3):
     )
 
 
-def get_files_storage_folder_for_received_packages(name, date_now_as_folder_name=None):
+def get_files_storage_folder_for_received_packages(name, date_now_as_folder_name):
+    """
+    Get files storage folder for documents ingressed by ingression module
+
+    Parameters
+    ----------
+    name : str
+        package's name
+    date_now_as_folder_name: str
+        str of a timestamp
+
+    Returns
+    -------
+    str
+        folder at files storage
+    """
     return os.path.join(
-        "ingress", "upload", date_now_as_folder_name[:10],
-        name, date_now_as_folder_name)
+        "ingress", "upload", date_now_as_folder_name, name
+    )
 
 
 def get_bases_acron(acron):
