@@ -55,6 +55,8 @@ class DocsManager:
 
         return db.save_data(document)
 
+    def get_document_package_by_pid_and_version(self, pid, version):
+        return db.fetch_document_package_by_pid_and_version(pid, version)
 
 
 

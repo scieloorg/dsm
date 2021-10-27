@@ -131,7 +131,7 @@ def _fetch_records(model, **kwargs):
 
 
 def fetch_articles_files(**kwargs):
-    return _fetch_records(v2_models.ArticleFiles, **kwargs)
+    return v2_models.ArticleFiles.objects(**kwargs)
 
 
 def fetch_journals(**kwargs):
@@ -250,6 +250,11 @@ def fetch_document_packages(v3):
     return v2_models.ArticleFiles.objects(aid=v3).order_by('-updated')
 
 
+def fetch_document_package_by_pid_and_version(pid, version):
+    return v2_models.ArticleFiles.objects.get(
+        aid = pid,
+        version = version
+    )
 
 
 def register_document_package(v3, data):
