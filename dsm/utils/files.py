@@ -2,6 +2,7 @@ import os
 import shutil
 import logging
 import tempfile
+import re
 from datetime import datetime
 from zipfile import ZipFile
 
@@ -121,3 +122,18 @@ def create_temp_file(filename, content=None, mode='w'):
 def size(file_path):
     return os.path.getsize(file_path)
 
+
+def get_file_type(file_path):
+    file_ext = os.path.splitext(file_path)[-1]
+    if file_ext == '.xml':
+        return 'xml'
+    elif file_ext == '.pdf':
+        return 'renditions'
+    else:
+        return 'assets'
+
+
+def extract_issn_from_zip_uri(zip_uri):
+    match = re.search(r'.*/ingress/packages/(\d{4}-\d{4})/.*.zip', zip_uri)
+    if match:
+        return match.group(1)
