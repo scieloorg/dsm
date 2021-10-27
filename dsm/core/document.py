@@ -2,14 +2,15 @@
 # Module does the same as ArticleFactory from opac-airflow
 
 import logging
-
+from posixpath import basename
 from opac_schema.v1 import models
-
-from dsm.utils import packages
-
+from dsm.utils import (
+    packages,
+    reqs,
+    files
+)
 from dsm.core.sps_package import SPS_Package
 from dsm.core import document_files as docfiles
-
 from dsm.extdeps.doc_ids_manager import add_pids_to_xml
 from dsm.extdeps import db
 from dsm import exceptions
