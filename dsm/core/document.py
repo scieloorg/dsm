@@ -58,6 +58,38 @@ class DocsManager:
     def get_document_package_by_pid_and_version(self, pid, version):
         return db.fetch_document_package_by_pid_and_version(pid, version)
 
+    def change_document_package(self, pid_v3, article_files):
+        zip_file_uri = article_files.file['uri']
+        issn = files.extract_issn_from_zip_uri(zip_file_uri)
+
+        # obtém pacote
+        zip_file_content = reqs.requests_get(zip_file_uri)
+        zip_file_path = files.create_temp_file(
+            filename=basename(zip_file_uri),
+            content=zip_file_content,
+            mode='wb'
+        )
+
+        # envia dados para file storage
+        uris_and_names = docfiles.send_doc_package_to_site(
+            self._files_storage,
+            zip_file_path,
+            issn,
+            pid_v3
+        )
+
+        article = db.fetch_document(pid_v3)
+        xml_sps = docfiles._get_xml_sps(article)
+
+        update_document_data(
+            article,
+            xml_sps,
+            uris_and_names['xml'],
+            uris_and_names['renditions'],
+            None,
+        )
+
+        return article
 
 
     def get_zip_document_packages(self, v3):
