@@ -62,6 +62,36 @@ def build_zip_package(files_storage, record):
     return data
 
 
+def send_doc_package_to_site(files_storage, zip_file, issn, pid_v3):
+    # obtém pasta destino visível ao opac
+    files_storage_folder_site_content = configuration.get_files_storage_folder_for_document_site_content(
+        issn=issn,
+        scielo_pid_v3=pid_v3,
+    )
+
+    files_paths = {'xml': '', 'assets': [], 'renditions': []}
+
+    # descompacta zip e envia conteúdo ao files storage
+    for fi in files.files_list_from_zipfile(zip_file):
+        fi_read = files.read_from_zipfile(zip_file, fi)
+        fi_path = files.create_temp_file(fi, fi_read, 'wb')
+
+        file_type = files.get_file_type(fi)
+
+        fi_result = files_storage_register(
+            files_storage,
+            files_storage_folder_site_content,
+            fi_path,
+            os.path.basename(fi_path))
+
+        if file_type == 'xml':
+            files_paths[file_type] = fi_result
+        else:
+            files_paths[file_type].append(fi_result)
+
+    return files_paths
+
+
 def _get_xml_sps(document):
     """
     Download XML file and instantiate a `SPS_Package`
