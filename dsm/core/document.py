@@ -55,14 +55,8 @@ class DocsManager:
 
         return db.save_data(document)
 
-    def remove_document_package(self, document_package_id):
-        return db.remove_document_package(document_package_id)
 
-    def get_article_files(self, id):
-        return db.fetch_article_files(id)
 
-    def get_articles_files(self, **kwargs):
-        return db.fetch_articles_files(**kwargs)
 
     def get_zip_document_packages(self, v3):
         """
