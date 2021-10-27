@@ -273,9 +273,9 @@ def get_files_storage_folder_for_migration(issn, issue_folder, file_name):
         "migrated", "original", issn, issue_folder, file_name)
 
 
-def get_files_storage_folder_for_ingress(issn, scielo_pid_v3):
+def get_files_storage_folder_for_document_site_content(issn, scielo_pid_v3):
     """
-    Get files storage folder for documents ingressed by ingression module
+    Get files storage folder for document's site content (xml, pdf, jpg, tiff, png)
 
     Parameters
     ----------
@@ -289,12 +289,14 @@ def get_files_storage_folder_for_ingress(issn, scielo_pid_v3):
     str
         folder at files storage
     """
-    return os.path.join("ingress", "docs", issn, scielo_pid_v3)
+    return os.path.join(
+        "documents", issn, scielo_pid_v3
+    )
 
 
-def get_files_storage_folder_for_zipped_packages(issn, scielo_pid_v3):
+def get_files_storage_folder_for_document_packages(issn, scielo_pid_v3):
     """
-    Get files storage folder for documents ingressed by ingression module
+    Get files storage folder for document's packages (individual zip packages)
 
     Parameters
     ----------
@@ -310,13 +312,29 @@ def get_files_storage_folder_for_zipped_packages(issn, scielo_pid_v3):
     """
     date_now_as_folder_name = files.date_now_as_folder_name()
     return os.path.join(
-        "ingress", "download", issn, scielo_pid_v3, date_now_as_folder_name)
+        "ingress", "packages", issn, scielo_pid_v3, date_now_as_folder_name
+    )
 
 
-def get_files_storage_folder_for_received_packages(name, date_now_as_folder_name=None):
+def get_files_storage_folder_for_received_packages(name, date_now_as_folder_name):
+    """
+    Get files storage folder for documents ingressed by ingression module
+
+    Parameters
+    ----------
+    name : str
+        package's name
+    date_now_as_folder_name: str
+        str of a timestamp
+
+    Returns
+    -------
+    str
+        folder at files storage
+    """
     return os.path.join(
-        "ingress", "upload", date_now_as_folder_name[:10],
-        name, date_now_as_folder_name)
+        "ingress", "upload", date_now_as_folder_name, name
+    )
 
 
 def get_bases_acron(acron):

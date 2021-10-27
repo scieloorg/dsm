@@ -276,12 +276,18 @@ def register_document_package(v3, data):
     """
     article_files = v2_models.ArticleFiles()
     article_files.aid = v3
+    article_files.version = _get_article_files_new_version(v3)
     article_files.scielo_pids = {'v3': v3}
 
     _set_document_package_file_paths(article_files, data)
     save_data(article_files)
 
     return article_files
+
+
+def _get_article_files_new_version(v3):
+    current_version = fetch_document_packages(v3).count() or 0
+    return current_version + 1
 
 
 def _set_document_package_file_paths(article_files, data):

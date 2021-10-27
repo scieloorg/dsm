@@ -17,23 +17,17 @@ from dsm import configuration
 
 
 def build_zip_package(files_storage, record):
-    # get XML file
-    xml_sps = _get_xml_to_zip(record)
+    # download XML and instantiate a SPS_Package
+    xml_sps = _get_xml_sps(record)
 
-    # get uri and filename of assets and renditions
+    # get uri and filename of assets
     assets = _get_assets_to_zip(xml_sps)
 
+    # get uri and filename of renditions
     renditions = _get_renditions_to_zip(record)
 
-    files_storage_folder = configuration.get_files_storage_folder_for_zipped_packages(
-        issn=xml_sps.issn,
-        scielo_pid_v3=xml_sps.scielo_pid_v3,
-    )
-
-    xml_uri_and_name = register_xml(
-        files_storage,
-        files_storage_folder,
-        xml_sps)
+    # get uri and filename of xml
+    xml_uri_and_name = _get_xml_to_zip(xml_sps, record)
 
     uris_and_names = (
         [xml_uri_and_name] + assets + renditions
@@ -42,10 +36,16 @@ def build_zip_package(files_storage, record):
     # create zip file
     zip_file_path = _zip_files(f"{xml_sps.package_name}.zip", uris_and_names)
 
+    # get files storage folder (individual document package folder)
+    files_storage_folder_document_package = configuration.get_files_storage_folder_for_document_packages(
+        issn=xml_sps.issn,
+        scielo_pid_v3=xml_sps.scielo_pid_v3,
+    )
+
     # publish zip file in the files storage
-    uri_and_name = files_storage_register(
+    zip_uri_and_name = files_storage_register(
         files_storage,
-        files_storage_folder,
+        files_storage_folder_document_package,
         zip_file_path,
         os.path.basename(zip_file_path))
 
@@ -54,21 +54,17 @@ def build_zip_package(files_storage, record):
 
     data = {}
     data['xml'] = xml_uri_and_name
-
-    # FIXME - alguns valores que deveriam ser uri são nome de arquivos
-    # isso dá erro ao salvar o registro
     assets = [a for a in assets if a["uri"].startswith("http")]
     data['assets'] = assets
-
     data['renditions'] = renditions
-    data['file'] = uri_and_name
+    data['file'] = zip_uri_and_name
 
     return data
 
 
-def _get_xml_to_zip(document):
+def _get_xml_sps(document):
     """
-    Get document files, build zip file and publish it at files storage
+    Download XML file and instantiate a `SPS_Package`
 
     Parameters
     ----------
@@ -78,7 +74,7 @@ def _get_xml_to_zip(document):
     -------
     dsm.data.sps_package.SPS_Package
     """
-    # get XML file
+    # download XML file
     content = reqs.requests_get_content(document.xml)
 
     xml_sps = SPS_Package(content)
@@ -101,7 +97,7 @@ def _get_assets_to_zip(xml_sps):
     list
         list of uris and files
     """
-    # get uri and filename of assets and renditions
+    # get uri and filename of assets
     uris_and_filenames = []
     for asset in xml_sps.assets.items:
         uris_and_filenames.append({
@@ -131,6 +127,13 @@ def _get_renditions_to_zip(document):
             "name": rendition["filename"],
         })
     return uris_and_filenames
+
+
+def _get_xml_to_zip(xml_sps, record):
+    return {
+        'name': f"{xml_sps.package_name}.xml",
+        "uri": record.xml.replace('https://kernel.scielo.br', 'http://0.0.0.0:6543')
+    }
 
 
 def _zip_files(zip_name, uris_and_names):
@@ -181,7 +184,7 @@ def register_document_files(files_storage, doc_package, xml_sps,
         assets_registration_result
             resultado do registro dos ativos digitais
     """
-    files_storage_folder = configuration.get_files_storage_folder_for_ingress(
+    files_storage_folder = configuration.get_files_storage_folder_for_document_site_content(
         issn=xml_sps.issn,
         scielo_pid_v3=xml_sps.scielo_pid_v3,
     )
