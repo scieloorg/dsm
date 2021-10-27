@@ -703,10 +703,34 @@ class SPS_Assets:
     def __init__(self, xml_tree, v3):
         self._xml_tree = xml_tree
         self._v3 = v3
-        self._assets_uri_and_node = get_assets_uri_and_node(
-            self._xml_tree, self._v3)
+        self._assets_uri_and_node = self.get_assets_uri_and_node()
         self._get_assets_which_have_id()
         self._get_assets_which_have_no_id()
+
+    def get_assets_uri_and_node(self, node=None):
+        """
+        Get a list of tuples (uri, node).
+
+        Retorna uma lista de tuplas (uri, node).
+
+        Returns
+        -------
+        list of strings
+            lista de uri dos ativos digitais no XML
+        """
+        nodes = []
+        # obtém os assets da árvore inteira ou a partir de um node
+        xmltree = node or self._xml_tree
+        for node in xmltree.xpath(
+                ".//*[@xlink:href]",
+                namespaces={"xlink": "http://www.w3.org/1999/xlink"}):
+            href = node.attrib["{http://www.w3.org/1999/xlink}href"]
+            if self._is_valid_sps_asset_uri(href):
+                nodes.append((href, node))
+        return nodes
+
+    def _is_valid_sps_asset_uri(self, href):
+        return "/" not in href or f"/{self._v3}/" in href
 
     @property
     def assets_uri_and_node(self):
@@ -723,10 +747,14 @@ class SPS_Assets:
     def _get_assets_which_have_id(self):
         self._assets_which_have_id = []
         for node in self._xml_tree.xpath(".//*[@id]"):
-            for uri, child_node in get_assets_uri_and_node(node, self._v3):
+            if node.tag == "sub-article":
+                continue
+            i = 0
+            for uri, child_node in self.get_assets_uri_and_node(node):
                 self._assets_which_have_id.append(
-                    SPS_Asset(child_node, node)
+                    SPS_Asset(child_node, node, _id=i)
                 )
+                i += 1
 
     @property
     def assets_which_have_id(self):
@@ -737,7 +765,7 @@ class SPS_Assets:
         return self._assets_which_have_no_id
 
     def _get_assets_which_have_no_id(self):
-        has_id = [item._child for item in self.assets_which_have_id]
+        has_id = [item.asset_node for item in self.assets_which_have_id]
 
         i = 0
         self._assets_which_have_no_id = []
@@ -745,7 +773,7 @@ class SPS_Assets:
             if node not in has_id:
                 i += 1
                 self._assets_which_have_no_id.append(
-                    SPS_Asset(node, _id=str(i))
+                    SPS_Asset(node, _id=i)
                 )
 
     @property
@@ -768,21 +796,27 @@ class SPS_Assets:
 
 
 class SPS_Asset:
-    def __init__(self, child, parent=None, _id=None):
-        self._parent = parent
-        self._child = child
-        self._id = _id or self._parent.get("id")
-        self._uri = None
-        self._filename = None
+    def __init__(self, asset_node, parent_node_with_id=None, _id=None):
+        self._parent_node_with_id = parent_node_with_id
+        self._asset_node = asset_node
+        # _id é o índice para img dentro de um elemento que tenha `@id` ou
+        # no contexto do artigo inteiro
+        self._id = _id
+        self.uri = self.xlink_href
+        self.filename = self.xlink_href
 
     def __str__(self):
-        return xml_utils.tostring(self._child)
+        return xml_utils.tostring(self._asset_node)
 
     @property
     def tag(self):
-        if self._parent is not None:
-            return self._parent.tag
+        if self._parent_node_with_id is not None:
+            return self._parent_node_with_id.tag
         return ""
+
+    @property
+    def asset_node(self):
+        return self._asset_node
 
     @property
     def id(self):
@@ -790,9 +824,7 @@ class SPS_Asset:
 
     @property
     def content_type(self):
-        if self._child.get("content-type"):
-            return "-" + self._child.get("content-type")
-        return ""
+        return self._asset_node.get("content-type") or ""
 
     @property
     def type(self):
@@ -812,7 +844,11 @@ class SPS_Asset:
 
     @property
     def suffix(self):
-        return f"-{self.type}{self._id}{self.content_type}"
+        if self.content_type:
+            alternative_id = f"-{self.content_type}"
+        else:
+            alternative_id = self.id or ""
+        return f"-{self.type}{alternative_id}"
 
     @property
     def ext(self):
@@ -821,32 +857,41 @@ class SPS_Asset:
 
     @property
     def xlink_href(self):
-        return self._child.get("{http://www.w3.org/1999/xlink}href")
+        return self._asset_node.get("{http://www.w3.org/1999/xlink}href")
 
     @xlink_href.setter
     def xlink_href(self, value):
-        current = self._child.get("{http://www.w3.org/1999/xlink}href")
-        if "/" in current:
-            self._uri = current
-        else:
-            self._filename = current
-        if "/" in value:
-            self._uri = value
-        else:
-            self._filename = value
-        self._child.set("{http://www.w3.org/1999/xlink}href", value)
+        # obtém o valor atual de xlink_href
+        current = self.xlink_href
+
+        # guarda valor de `current` em uri ou filename
+        self.uri = current
+        self.filename = current
+
+        # guarda valor de `value` (novo) em uri ou filename
+        self.uri = value
+        self.filename = value
+
+        # atualiza o valor de xlink href
+        self._asset_node.set("{http://www.w3.org/1999/xlink}href", value)
 
     @property
     def uri(self):
-        return (
-            self._uri or
-            self._child.get("{http://www.w3.org/1999/xlink}href"))
+        return self._uri
+
+    @uri.setter
+    def uri(self, value):
+        if "/" in value:
+            self._uri = value
 
     @property
     def filename(self):
-        return (
-            self._filename or
-            self._child.get("{http://www.w3.org/1999/xlink}href"))
+        return self._filename
+
+    @filename.setter
+    def filename(self, value):
+        if "/" not in value:
+            self._filename = value
 
     def remote_to_local(self, package_name):
         self.xlink_href = self.get_name(package_name)
@@ -856,25 +901,7 @@ class SPS_Asset:
 
 
 # Funções
-def get_assets_uri_and_node(xmltree, v3):
-    """
-    Get a list of tuples (uri, node).
 
-    Retorna uma lista de tuplas (uri, node).
-
-    Returns
-    -------
-    list of strings
-        lista de uri dos ativos digitais no XML
-    """
-    nodes = []
-    for node in xmltree.xpath(
-            ".//*[@xlink:href]",
-            namespaces={"xlink": "http://www.w3.org/1999/xlink"}):
-        href = node.attrib["{http://www.w3.org/1999/xlink}href"]
-        if "/" not in href or (v3 and f"/{v3}/" in href):
-            nodes.append((href, node))
-    return nodes
 
 
 def get_year_month_day(node):
