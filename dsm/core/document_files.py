@@ -62,7 +62,7 @@ def build_zip_package(files_storage, record):
     return data
 
 
-def send_doc_package_to_site(files_storage, zip_file, issn, pid_v3):
+def send_doc_package_to_site(files_storage, zip_file, issn, pid_v3, prefix):
     # obtém pasta destino visível ao opac
     files_storage_folder_site_content = configuration.get_files_storage_folder_for_document_site_content(
         issn=issn,
@@ -76,7 +76,7 @@ def send_doc_package_to_site(files_storage, zip_file, issn, pid_v3):
         fi_read = files.read_from_zipfile(zip_file, fi)
         fi_path = files.create_temp_file(fi, fi_read, 'wb')
 
-        file_type = files.get_file_type(fi)
+        file_type = files.get_file_type(fi, prefix)
 
         fi_result = files_storage_register(
             files_storage,

@@ -123,12 +123,14 @@ def size(file_path):
     return os.path.getsize(file_path)
 
 
-def get_file_type(file_path):
-    file_ext = os.path.splitext(file_path)[-1]
-    if file_ext == '.xml':
+def get_file_type(file_path, prefix):
+    file, ext = os.path.splitext(file_path)
+
+    if ext == '.xml':
         return 'xml'
-    elif file_ext == '.pdf':
-        return 'renditions'
+    elif ext == '.pdf':
+        if prefix in file:
+            return 'renditions'
     else:
         return 'assets'
 

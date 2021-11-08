@@ -62,6 +62,8 @@ class DocsManager:
         zip_file_uri = article_files.file['uri']
         issn = files.extract_issn_from_zip_uri(zip_file_uri)
 
+        prefix_name = files.get_prefix_by_xml_filename(article_files.xml.name)
+
         # obtém pacote
         zip_file_content = reqs.requests_get(zip_file_uri)
         zip_file_path = files.create_temp_file(
@@ -75,7 +77,8 @@ class DocsManager:
             self._files_storage,
             zip_file_path,
             issn,
-            pid_v3
+            pid_v3,
+            prefix_name
         )
 
         article = db.fetch_document(pid_v3)
