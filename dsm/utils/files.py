@@ -123,6 +123,24 @@ def size(file_path):
     return os.path.getsize(file_path)
 
 
+def get_prefix_by_xml_filename(xml_filename):
+    """
+    Obtém o prefixo associado a um arquivo xml
+
+    Parameters
+    ----------
+    xml_filename : str
+        Nome de arquivo xml
+
+    Returns
+    -------
+    str
+        Prefixo associado ao arquivo xml
+    """
+    file, ext = os.path.splitext(xml_filename)
+    return file
+
+
 def get_file_type(file_path, prefix):
     """
     Obtém o tipo de um arquivo (xml, renditions ou assets)
