@@ -124,6 +124,21 @@ def size(file_path):
 
 
 def get_file_type(file_path, prefix):
+    """
+    Obtém o tipo de um arquivo (xml, renditions ou assets)
+
+    Parameters
+    ----------
+    file_path : str
+        Nome de um arquivo
+    prefix: str
+        Prefixo associado ao arquivo
+
+    Returns
+    -------
+    str
+        Tipo de arquivo (xml, rendition ou assets)
+    """
     file, ext = os.path.splitext(file_path)
 
     if ext == '.xml':
@@ -136,6 +151,19 @@ def get_file_type(file_path, prefix):
 
 
 def extract_issn_from_zip_uri(zip_uri):
+    """
+    Extrai código ISSN a partir do endereço de um arquivo zip
+
+    Parameters
+    ----------
+    zip_uri : str
+        Endereço de um arquivo zip
+
+    Returns
+    -------
+    str
+        ISSN
+    """
     match = re.search(r'.*/ingress/packages/(\d{4}-\d{4})/.*.zip', zip_uri)
     if match:
         return match.group(1)

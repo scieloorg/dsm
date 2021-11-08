@@ -56,15 +56,44 @@ class DocsManager:
         return db.save_data(document)
 
     def get_document_package_by_pid_and_version(self, pid, version):
+        """
+        Obtém um objeto ArticleFile a partir de um valor PID e versão
+
+        Parameters
+        ----------
+        pid : str
+            Identificador PID v3
+        version : int
+            Número da versão do pacote
+
+        Returns
+        -------
+        opac_schema.v2.models.ArticleFiles
+            Um objeto ArticleFiles
+        """
         return db.fetch_document_package_by_pid_and_version(pid, version)
 
     def change_document_package(self, pid_v3, article_files):
+        """
+        Altera um documento no site para a versão representada por `article_files`
+
+        Parameters
+        ----------
+        pid : str
+            Identificador PID v3
+        article_files : opac_schema.v2.models.ArticleFiles
+            Pacote (ArticleFiles) que substituirá a versão no site
+        """
+        # obtém endereço do zip associado ao ArticleFiles
         zip_file_uri = article_files.file['uri']
+
+        # extrai ISSN tendo como base o nome do arquivo Zip
         issn = files.extract_issn_from_zip_uri(zip_file_uri)
 
+        # extrai o prefixo associado ao documento
         prefix_name = files.get_prefix_by_xml_filename(article_files.xml.name)
 
-        # obtém pacote
+        # baixa o pacote Zip e cria um arquivo local temporário
         zip_file_content = reqs.requests_get(zip_file_uri)
         zip_file_path = files.create_temp_file(
             filename=basename(zip_file_uri),
@@ -72,7 +101,7 @@ class DocsManager:
             mode='wb'
         )
 
-        # envia dados para file storage
+        # envia dados descompactados do pacote Zip para o file storage
         uris_and_names = docfiles.send_doc_package_to_site(
             self._files_storage,
             zip_file_path,

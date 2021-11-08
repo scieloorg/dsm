@@ -63,6 +63,27 @@ def build_zip_package(files_storage, record):
 
 
 def send_doc_package_to_site(files_storage, zip_file, issn, pid_v3, prefix):
+    """
+    Envia para o file storage os dados descompactados de um zip
+
+    Parameters
+    ----------
+    files_storage : dsm.storage.minio.MinioStorage
+        Objeto files storage
+    zip_file: str
+        Caminho do arquivo zip
+    issn: string
+        ISSN do periódico
+    pid_v3: str
+        Identificador PID v3
+    prefix: str
+        Prefixo associado ao documento
+
+    Returns
+    -------
+    list
+        Uma lista contendo os caminhos dos arquivos associados ao documento
+    """
     # obtém pasta destino visível ao opac
     files_storage_folder_site_content = configuration.get_files_storage_folder_for_document_site_content(
         issn=issn,
