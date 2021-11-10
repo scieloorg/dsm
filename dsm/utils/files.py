@@ -170,8 +170,7 @@ def get_file_role(file_path, prefix, pdf_langs):
         for lang in pdf_langs:
             if file == f'{prefix}-{lang}':
                 return 'renditions'
-    else:
-        return 'assets'
+    return 'assets'
 
 
 def extract_issn_from_zip_uri(zip_uri):
