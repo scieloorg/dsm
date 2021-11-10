@@ -62,7 +62,7 @@ def build_zip_package(files_storage, record):
     return data
 
 
-def send_doc_package_to_site(files_storage, zip_file, issn, pid_v3, prefix):
+def send_doc_package_to_site(files_storage, zip_file, issn, pid_v3, prefix, pdf_langs):
     """
     Envia para o file storage os dados descompactados de um zip
 
@@ -78,6 +78,8 @@ def send_doc_package_to_site(files_storage, zip_file, issn, pid_v3, prefix):
         Identificador PID v3
     prefix: str
         Prefixo associado ao documento
+    pdf_langs: list
+        Idiomas dos PDFs do documento
 
     Returns
     -------
@@ -97,7 +99,7 @@ def send_doc_package_to_site(files_storage, zip_file, issn, pid_v3, prefix):
         fi_read = files.read_from_zipfile(zip_file, fi)
         fi_path = files.create_temp_file(fi, fi_read, 'wb')
 
-        file_type = files.get_file_type(fi, prefix)
+        file_type = files.get_file_type(fi, prefix, pdf_langs)
 
         fi_result = files_storage_register(
             files_storage,

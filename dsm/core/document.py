@@ -101,16 +101,21 @@ class DocsManager:
             mode='wb'
         )
 
+        article = db.fetch_document(pid_v3)
+
+        # obtém idiomas dos PDFs do artigo
+        pdf_langs = _extract_pdf_langs(article)
+
         # envia dados descompactados do pacote Zip para o file storage
         uris_and_names = docfiles.send_doc_package_to_site(
             self._files_storage,
             zip_file_path,
             issn,
             pid_v3,
-            prefix_name
+            prefix_name,
+            pdf_langs,
         )
 
-        article = db.fetch_document(pid_v3)
         xml_sps = docfiles._get_xml_sps(article)
 
         update_document_data(
@@ -635,3 +640,7 @@ def _convert_to_doc_pkg_uri_detail(document_package):
             "created": document_package.created,
             "updated": document_package.updated,
         }
+
+
+def _extract_pdf_langs(article):
+    return [i.get('lang') for i in article.pdfs]
