@@ -141,7 +141,7 @@ def get_prefix_by_xml_filename(xml_filename):
     return file
 
 
-def get_file_type(file_path, prefix):
+def get_file_type(file_path, prefix, pdf_langs):
     """
     Obtém o tipo de um arquivo (xml, renditions ou assets)
 
@@ -151,6 +151,8 @@ def get_file_type(file_path, prefix):
         Nome de um arquivo
     prefix: str
         Prefixo associado ao arquivo
+    pdf_langs: list
+        Idiomas dos PDFs do documento
 
     Returns
     -------
@@ -162,8 +164,12 @@ def get_file_type(file_path, prefix):
     if ext == '.xml':
         return 'xml'
     elif ext == '.pdf':
-        if prefix in file:
+        if file == prefix:
             return 'renditions'
+
+        for lang in pdf_langs:
+            if file == f'{prefix}-{lang}':
+                return 'renditions'
     else:
         return 'assets'
 
