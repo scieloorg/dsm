@@ -141,9 +141,9 @@ def get_prefix_by_xml_filename(xml_filename):
     return file
 
 
-def get_file_type(file_path, prefix, pdf_langs):
+def get_file_role(file_path, prefix, pdf_langs):
     """
-    Obtém o tipo de um arquivo (xml, renditions ou assets)
+    Obtém o papel/função de um arquivo (xml, renditions ou assets) no contexto de um documento
 
     Parameters
     ----------
@@ -157,7 +157,7 @@ def get_file_type(file_path, prefix, pdf_langs):
     Returns
     -------
     str
-        Tipo de arquivo (xml, rendition ou assets)
+        Papel/função de arquivo (xml, rendition ou assets) no contexto de um documento
     """
     file, ext = os.path.splitext(file_path)
 

@@ -99,7 +99,7 @@ def send_doc_package_to_site(files_storage, zip_file, issn, pid_v3, prefix, pdf_
         fi_read = files.read_from_zipfile(zip_file, fi)
         fi_path = files.create_temp_file(fi, fi_read, 'wb')
 
-        file_type = files.get_file_type(fi, prefix, pdf_langs)
+        file_role = files.get_file_role(fi, prefix, pdf_langs)
 
         fi_result = files_storage_register(
             files_storage,
@@ -107,10 +107,10 @@ def send_doc_package_to_site(files_storage, zip_file, issn, pid_v3, prefix, pdf_
             fi_path,
             os.path.basename(fi_path))
 
-        if file_type == 'xml':
-            files_paths[file_type] = fi_result
+        if file_role == 'xml':
+            files_paths[file_role] = fi_result
         else:
-            files_paths[file_type].append(fi_result)
+            files_paths[file_role].append(fi_result)
 
     return files_paths
 
