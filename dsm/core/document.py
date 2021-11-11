@@ -2,14 +2,15 @@
 # Module does the same as ArticleFactory from opac-airflow
 
 import logging
-
+from posixpath import basename
 from opac_schema.v1 import models
-
-from dsm.utils import packages
-
+from dsm.utils import (
+    packages,
+    reqs,
+    files
+)
 from dsm.core.sps_package import SPS_Package
 from dsm.core import document_files as docfiles
-
 from dsm.extdeps.doc_ids_manager import add_pids_to_xml
 from dsm.extdeps import db
 from dsm import exceptions
@@ -54,14 +55,79 @@ class DocsManager:
 
         return db.save_data(document)
 
-    def remove_document_package(self, document_package_id):
-        return db.remove_document_package(document_package_id)
+    def get_document_package_by_pid_and_version(self, pid, version):
+        """
+        Obtém um objeto ArticleFile a partir de um valor PID e versão
 
-    def get_article_files(self, id):
-        return db.fetch_article_files(id)
+        Parameters
+        ----------
+        pid : str
+            Identificador PID v3
+        version : int
+            Número da versão do pacote
 
-    def get_articles_files(self, **kwargs):
-        return db.fetch_articles_files(**kwargs)
+        Returns
+        -------
+        opac_schema.v2.models.ArticleFiles
+            Um objeto ArticleFiles
+        """
+        return db.fetch_document_package_by_pid_and_version(pid, version)
+
+    def change_document_package(self, pid_v3, article_files):
+        """
+        Altera um documento no site para a versão representada por `article_files`
+
+        Parameters
+        ----------
+        pid : str
+            Identificador PID v3
+        article_files : opac_schema.v2.models.ArticleFiles
+            Pacote (ArticleFiles) que substituirá a versão no site
+        """
+        # obtém endereço do zip associado ao ArticleFiles
+        zip_file_uri = article_files.file['uri']
+
+        # extrai ISSN tendo como base o nome do arquivo Zip
+        issn = files.extract_issn_from_zip_uri(zip_file_uri)
+
+        # extrai o prefixo associado ao documento
+        prefix_name = files.get_prefix_by_xml_filename(article_files.xml.name)
+
+        # baixa o pacote Zip e cria um arquivo local temporário
+        zip_file_content = reqs.requests_get(zip_file_uri)
+        zip_file_path = files.create_temp_file(
+            filename=basename(zip_file_uri),
+            content=zip_file_content,
+            mode='wb'
+        )
+
+        article = db.fetch_document(pid_v3)
+
+        # obtém idiomas dos PDFs do artigo
+        pdf_langs = _extract_pdf_langs(article)
+
+        # envia dados descompactados do pacote Zip para o file storage
+        uris_and_names = docfiles.send_doc_package_to_site(
+            self._files_storage,
+            zip_file_path,
+            issn,
+            pid_v3,
+            prefix_name,
+            pdf_langs,
+        )
+
+        xml_sps = docfiles._get_xml_sps(article)
+
+        update_document_data(
+            article,
+            xml_sps,
+            uris_and_names['xml'],
+            uris_and_names['renditions'],
+            None,
+        )
+
+        return article
+
 
     def get_zip_document_packages(self, v3):
         """
@@ -574,3 +640,7 @@ def _convert_to_doc_pkg_uri_detail(document_package):
             "created": document_package.created,
             "updated": document_package.updated,
         }
+
+
+def _extract_pdf_langs(article):
+    return [i.get('lang') for i in article.pdfs]

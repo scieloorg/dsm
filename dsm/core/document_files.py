@@ -62,6 +62,59 @@ def build_zip_package(files_storage, record):
     return data
 
 
+def send_doc_package_to_site(files_storage, zip_file, issn, pid_v3, prefix, pdf_langs):
+    """
+    Envia para o file storage os dados descompactados de um zip
+
+    Parameters
+    ----------
+    files_storage : dsm.storage.minio.MinioStorage
+        Objeto files storage
+    zip_file: str
+        Caminho do arquivo zip
+    issn: string
+        ISSN do periódico
+    pid_v3: str
+        Identificador PID v3
+    prefix: str
+        Prefixo associado ao documento
+    pdf_langs: list
+        Idiomas dos PDFs do documento
+
+    Returns
+    -------
+    list
+        Uma lista contendo os caminhos dos arquivos associados ao documento
+    """
+    # obtém pasta destino visível ao opac
+    files_storage_folder_site_content = configuration.get_files_storage_folder_for_document_site_content(
+        issn=issn,
+        scielo_pid_v3=pid_v3,
+    )
+
+    files_paths = {'xml': '', 'assets': [], 'renditions': []}
+
+    # descompacta zip e envia conteúdo ao files storage
+    for fi in files.files_list_from_zipfile(zip_file):
+        fi_read = files.read_from_zipfile(zip_file, fi)
+        fi_path = files.create_temp_file(fi, fi_read, 'wb')
+
+        file_role = files.get_file_role(fi, prefix, pdf_langs)
+
+        fi_result = files_storage_register(
+            files_storage,
+            files_storage_folder_site_content,
+            fi_path,
+            os.path.basename(fi_path))
+
+        if file_role == 'xml':
+            files_paths[file_role] = fi_result
+        else:
+            files_paths[file_role].append(fi_result)
+
+    return files_paths
+
+
 def _get_xml_sps(document):
     """
     Download XML file and instantiate a `SPS_Package`

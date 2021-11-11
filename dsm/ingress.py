@@ -2,8 +2,8 @@
 API to ingress documents
 """
 import argparse
-from datetime import datetime
 
+from datetime import datetime
 from dsm.core.document import DocsManager
 from dsm.core.issue import IssuesManager
 from dsm.core.journal import JournalsManager
@@ -54,6 +54,26 @@ def get_package_uri_by_pid(scielo_pid_v3):
         results['errors'].append(str(e))
 
     return results
+
+
+def change_document_to_package_version(scielo_pid_v3, package_version):
+    """
+    Altera os dados de um documento para uma versão específica de pacote
+
+    Parameters
+    ----------
+    scielo_pid_v3 : str
+        document's identifier version 3
+    package_version: int
+        documente package (article_files) version
+    """
+    # obtém article_files do pacote relacionado à versão `package_version`
+    article_files = _docs_manager.get_document_package_by_pid_and_version(pid=scielo_pid_v3, version=package_version)
+
+    # altera dados de article para conteúdo de article files
+    article = _docs_manager.change_document_package(scielo_pid_v3, article_files)
+
+    return article
 
 
 def upload_package(source, receipt_id=None, pid_v2_items={}, old_filenames={},
@@ -118,17 +138,16 @@ def upload_package(source, receipt_id=None, pid_v2_items={}, old_filenames={},
     return results
 
 
-def list_documents(**kwargs):
-    # TODO
-    return []
-
-
 def _download_package(v3):
     print(get_package_uri_by_pid(v3))
 
 
 def _upload_package(path):
     print(upload_package(path))
+
+
+def _change_document_version(v3, version):
+    print(change_document_to_package_version(v3, version))
 
 
 def main():
@@ -159,12 +178,29 @@ def main():
         help="zip file path"
     )
 
+    change_document_version_parser = subparsers.add_parser(
+        "change_document_version",
+        help=(
+            "Change document version"
+        )
+    )
+    change_document_version_parser.add_argument(
+        "v3",
+        help="PID v3"
+    )
+    change_document_version_parser.add_argument(
+        "version",
+        help="Document package version (integer)"
+    )
+
     args = parser.parse_args()
 
     if args.command == "download_package":
         _download_package(args.v3)
     elif args.command == "upload_package":
         _upload_package(args.source_path)
+    elif args.command == "change_document_version":
+        _change_document_version(args.v3, args.version)
     else:
         parser.print_help()
 

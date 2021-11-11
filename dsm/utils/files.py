@@ -2,6 +2,7 @@ import os
 import shutil
 import logging
 import tempfile
+import re
 from datetime import datetime
 from zipfile import ZipFile
 
@@ -111,13 +112,81 @@ def date_now_as_folder_name():
     return datetime.utcnow().isoformat().replace(":", "")
 
 
-def create_temp_file(filename, content=None):
+def create_temp_file(filename, content=None, mode='w'):
     file_path = tempfile.mkdtemp()
     file_path = os.path.join(file_path, filename)
-    write_file(file_path, content or '')
+    write_file(file_path, content or '', mode)
     return file_path
 
 
 def size(file_path):
     return os.path.getsize(file_path)
 
+
+def get_prefix_by_xml_filename(xml_filename):
+    """
+    Obtém o prefixo associado a um arquivo xml
+
+    Parameters
+    ----------
+    xml_filename : str
+        Nome de arquivo xml
+
+    Returns
+    -------
+    str
+        Prefixo associado ao arquivo xml
+    """
+    file, ext = os.path.splitext(xml_filename)
+    return file
+
+
+def get_file_role(file_path, prefix, pdf_langs):
+    """
+    Obtém o papel/função de um arquivo (xml, renditions ou assets) no contexto de um documento
+
+    Parameters
+    ----------
+    file_path : str
+        Nome de um arquivo
+    prefix: str
+        Prefixo associado ao arquivo
+    pdf_langs: list
+        Idiomas dos PDFs do documento
+
+    Returns
+    -------
+    str
+        Papel/função de arquivo (xml, rendition ou assets) no contexto de um documento
+    """
+    file, ext = os.path.splitext(file_path)
+
+    if ext == '.xml':
+        return 'xml'
+    elif ext == '.pdf':
+        if file == prefix:
+            return 'renditions'
+
+        for lang in pdf_langs:
+            if file == f'{prefix}-{lang}':
+                return 'renditions'
+    return 'assets'
+
+
+def extract_issn_from_zip_uri(zip_uri):
+    """
+    Extrai código ISSN a partir do endereço de um arquivo zip
+
+    Parameters
+    ----------
+    zip_uri : str
+        Endereço de um arquivo zip
+
+    Returns
+    -------
+    str
+        ISSN
+    """
+    match = re.search(r'.*/ingress/packages/(\d{4}-\d{4})/.*.zip', zip_uri)
+    if match:
+        return match.group(1)

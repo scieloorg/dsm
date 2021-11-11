@@ -130,12 +130,8 @@ def _fetch_records(model, **kwargs):
         return objs
 
 
-def fetch_article_files(pid, **kwargs):
-    return _fetch_record(pid, v2_models.ArticleFiles, **kwargs)
-
-
 def fetch_articles_files(**kwargs):
-    return _fetch_records(v2_models.ArticleFiles, **kwargs)
+    return v2_models.ArticleFiles.objects(**kwargs)
 
 
 def fetch_journals(**kwargs):
@@ -254,16 +250,11 @@ def fetch_document_packages(v3):
     return v2_models.ArticleFiles.objects(aid=v3).order_by('-updated')
 
 
-def remove_document_package(v3):
-    try:
-        doc_pkg = v2_models.ArticleFiles.objects.get(_id=v3)
-        doc_pkg.delete()
-    except Exception as e:
-        raise exceptions.DBFetchDocumentPackageError(
-            "Unable to delete document package %s, which does not exists: %s" %
-            (v3, e)
-        )
-    return True
+def fetch_document_package_by_pid_and_version(pid, version):
+    return v2_models.ArticleFiles.objects.get(
+        aid = pid,
+        version = version
+    )
 
 
 def register_document_package(v3, data):
