@@ -185,7 +185,7 @@ def _get_renditions_to_zip(document):
 def _get_xml_to_zip(xml_sps, record):
     return {
         'name': f"{xml_sps.package_name}.xml",
-        "uri": record.xml.replace('https://kernel.scielo.br', 'http://0.0.0.0:6543')
+        "uri": record.xml
     }
 
 
